@@ -1,0 +1,37 @@
+Head:     master chore: avoid `Name.quickLt`
+Merge:    origin/master fix: do not validate local eq theorems
+Tag:      cade2021 (2298)
+
+Untracked files (11)
+buid/
+tests/lean/run/262.lean
+tests/lean/run/coeNotation.lean
+tests/lean/run/eqIssue.lean
+tests/lean/run/out.txt
+tests/lean/run/out1.txt
+tests/lean/run/out2.txt
+tests/lean/run/wfSum.lean
+tests/leanpkg/Foo/
+tests/leanpkg/GAP/
+tmp/
+
+Stashes (15)
+stash@{0} WIP on master: fb57b73e1f fix: Nix: compatibility with standard build
+stash@{1} WIP on master: c53efbdf3c chore: prepare to remove `coe` definitions
+stash@{2} WIP on master: 873a2ba8a6 feat: unfold `namedPattern` applications at equation theorems
+stash@{3} WIP on master: 42d8c333a6 chore: update Lake
+stash@{4} WIP on master: 9b5b81aad9 chore: auxiliary matcher definitions should be treated as abbreviations
+stash@{5} WIP on master: c42196440f fix: give preference to non-indices at `findRecArg`
+stash@{6} WIP on master: 05c9819338 fix: `insert_mpz`
+stash@{7} WIP on master: 0a3a8d2d3d feat: add `mpn` module
+stash@{8} WIP on master: 53cee4df08 chore: typo
+stash@{9} WIP on master: 6fce0788ee chore: update stage0
+stash@{10} WIP on master: 6fce0788ee chore: update stage0
+stash@{11} WIP on master: 28d81ee456 fix: do not extract closed terms containing constants being defined
+stash@{12} WIP on master: 922d7067a6 feat: add `termination_by` parser
+stash@{13} WIP on master: fe55205105 test: equational theorem test
+stash@{14} WIP on master: 130eac1b77 chore: reintroduce lean.cpp in separate commit so Git doesn't freak out
+
+Unmerged into origin/master (2)
+3db640e770 master chore: avoid `Name.quickLt`
+e5ef61225b fix: missing condition at lpo case 3
