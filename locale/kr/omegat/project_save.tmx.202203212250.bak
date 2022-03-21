@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.2" segtype="sentence" srclang="en-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="en-US">
+        <seg>&lt;g1&gt;Automated theorem proving&lt;/g1&gt; focuses on the "finding" aspect.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131300Z" creationid="tlqk35" creationdate="20220321T131300Z">
+        <seg>&lt;g1&gt;자동화된 정리 증명&lt;/g1&gt;은 '찾기'에 초점을 둡니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>&lt;g1&gt;Formal verification&lt;/g1&gt; involves the use of logical and computational methods to establish claims that are expressed in
+precise mathematical terms.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131125Z" creationid="tlqk35" creationdate="20220321T131125Z">
+        <seg>&lt;g1&gt;형식 증명&lt;/g1&gt;은 정밀한 수학적 항들로 표현된 주장을 세우는데 논리적이고 계산과학적 방법의 사용을 수반합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>A calculation can be viewed as a proof as well, and these systems,
+too, help establish mathematical claims.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131354Z" creationid="tlqk35" creationdate="20220321T131354Z">
+        <seg>계산도 증명의 관점으로 볼 수 있으며 이런 시스템들도 수학적 진술을 세우는데 도움을 줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>About Lean</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131709Z" creationid="tlqk35" creationdate="20220321T131709Z">
+        <seg>린에 대해서</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>About this Book</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131959Z" creationid="tlqk35" creationdate="20220321T131959Z">
+        <seg>이 책에 대하여</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Acknowledgments</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T135000Z" creationid="tlqk35" creationdate="20220321T135000Z">
+        <seg>감사의 말</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Architectures like SMT ("satisfiability
+modulo theories") combine domain-general search methods with domain-specific procedures.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131338Z" creationid="tlqk35" creationdate="20220321T131338Z">
+        <seg>SMT(Satisfiability Modulo Theories)같은 구조는 영역-일반 탐색법을 영역-특정 절차와 결합했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Automated reasoning systems strive for power and efficiency, often at the expense of guaranteed soundness.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131401Z" creationid="tlqk35" creationdate="20220321T131401Z">
+        <seg>자동화된 추론 시스템은 종종 건전성 보장을 희생해서라도 성능과 효율성을 끌어올리기 위해 애쓰고 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Because fully detailed axiomatic proofs are so complicated, the challenge of theorem proving is to have the computer
+fill in as many of the details as possible.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132211Z" creationid="tlqk35" creationdate="20220321T132211Z">
+        <seg>완전히 상세한 공리적 증명은 너무 복잡하기 때문에, 증명 보조기의 문제점은 컴퓨터에 가능한 많이 상세한 것들을 두어야 한다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Computer algebra systems and
+specialized mathematical software packages provide means of carrying out mathematical computations, establishing
+mathematical bounds, or finding mathematical objects.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131347Z" creationid="tlqk35" creationdate="20220321T131347Z">
+        <seg>컴퓨터 대수 시스템(CAS, Computer Algebra Systems)과 특정 수학 소프트웨어 패키지는 수학 계산을 수행하고 수학적 한계를 세우며, 수학적 대상을 찾는 수단을 줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Computers and Theorem Proving</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131055Z" creationid="tlqk35" creationdate="20220321T131055Z">
+        <seg>컴퓨터와 정리 증명</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Constructing such proofs typically requires much more input and interaction from users, but it
+allows you to obtain deeper and more complex proofs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131511Z" creationid="tlqk35" creationdate="20220321T131511Z">
+        <seg>전형적으로 이런 증명을 작성하는 것은 사용자에게 훨씬 많은 입력과 상호작용을 요구합니다. 그러나 이것은 우리가 더 깊고 복잡한 증명을 얻을 수 있게 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Conversely, the proof of a mathematical theorem may require a
+lengthy computation, in which case verifying the truth of the theorem requires verifying that the computation does what
+it is supposed to do.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131219Z" creationid="tlqk35" creationdate="20220321T131219Z">
+        <seg>반대로 수학적 정리의 증명은 긴 계산이 필요하는데 이 경우 정리의 참을 증명하는 건 계산한 것을 증명하는 걸 필요로 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Finally, you will learn about features that are specific to Lean, including the language you use to communicate
+with the system, and the mechanisms Lean offers for managing complex theories and data.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134710Z" creationid="tlqk35" creationdate="20220321T134710Z">
+        <seg>마지막으로 린에 여러분이 시스템과 소통하기 위해 사용하는 언어와 복잡한 이론과 자료를 관리하기 위해 린이 제공하는 메커니즘을 포함하는 구체적인 특징에 대해 배웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, term rewriting, and Lean's automated methods for simplifying terms and
+expressions automatically.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132252Z" creationid="tlqk35" creationdate="20220321T132252Z">
+        <seg>예를 들어, 항을 다시 쓰기(rewriting)와 Lean의 자동화된 항과 식의 단순화(simplifying) 기법</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If you are reading the book online, you will see a button that reads "try it!" Pressing the button opens up a tab with a
+Lean editor, and copies the example with enough surrounding context to make the code compile correctly.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134929Z" creationid="tlqk35" creationdate="20220321T134929Z">
+        <seg>여러분이 온라인으로 책을 읽는다면 "실행해보기"라 적힌 버튼을 볼 것입니다. 버튼을 누르면 린 편집기 탭이 열리면서 코드가 올바르게 컴파일되도록 주변 맥락을 포함해 예제를 복사합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In contrast, &lt;g1&gt;interactive
+theorem proving&lt;/g1&gt; focuses on the "verification" aspect of theorem proving, requiring that every claim is supported by a
+proof in a suitable axiomatic foundation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131435Z" creationid="tlqk35" creationdate="20220321T131435Z">
+        <seg>반대로 &lt;g1&gt;상호작용 증명기&lt;/g1&gt;는 모든 진술은 적절한 공리적 기초에 의한 증명으로 지지될 것을 요구하면서 정리 증명의 "식별" 측면에 초점을 둡니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In fact, most such systems provide fully elaborated "proof objects" that can be communicated to other systems and
+checked independently.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131457Z" creationid="tlqk35" creationdate="20220321T131457Z">
+        <seg>사실, 그런 시스템의 대부분은 증명 대상과의 완전한 협력을 제공합니다. 이 대상은 다른 시스템과 상호작용될 수 있고 독립적으로 검증될 수 있습니다.
+</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In practice, there is not a
+sharp distinction between verifying a piece of mathematics and verifying the correctness of a system: formal
+verification requires describing hardware and software systems in mathematical terms, at which point establishing claims
+as to their correctness becomes a form of theorem proving.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131208Z" creationid="tlqk35" creationdate="20220321T131208Z">
+        <seg>실제로 수학의 일부를 식별하는 것과 시스템의 명확성을 식별하는 것 사이에 명확한 구분이 없습니다. 형식 증명은 하드웨어와 소프트웨어 시스템을 수학적 항으로 묘사하기를 요구합니다. 그리고 그때 그들의 올바름에 대한 주장을 세우는 것은 정리 증명의 형태가 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Introduction</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131051Z" creationid="tlqk35" creationdate="20220321T131051Z">
+        <seg>소개(Introduction)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It is an ongoing, long-term
+effort, and much of the potential for automation will be realized only gradually over time.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131736Z" creationid="tlqk35" creationdate="20220321T131736Z">
+        <seg>이것은 장기적으로 현재진행 중이고 자동화에 대한 대부분의 잠재성은 시간이 지나면서 점차 실현될 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean also has mechanisms to serve as its own &lt;g1&gt;metaprogramming
+language&lt;/g1&gt;, which means that you can implement automation and extend the functionality of Lean using Lean itself.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131622Z" creationid="tlqk35" creationdate="20220321T131622Z">
+        <seg>또한 Lean은 그 자체로 &lt;g1&gt;메타프로그래밍 언어&lt;/g1&gt;로 기능하는 작동 원리가 있어 자동화의 수행 및 Lean 자체로 그 기능을 확장할 수 있음을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean can not only define mathematical objects and express
+mathematical assertions in dependent type theory, but it also can be used as a language for writing proofs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132153Z" creationid="tlqk35" creationdate="20220321T132120Z">
+        <seg>린은 수학적 대상들을 정의하고 수학적 주장을 의존 유형론으로 진술할 수 있고 증명을 작성하는 언어로써 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean is released under the
+&lt;g2&gt;Apache 2.0 license&lt;/g2&gt;, a permissive open source license that permits others to use and extend the code and
+mathematical libraries freely.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131805Z" creationid="tlqk35" creationdate="20220321T131805Z">
+        <seg>Lean은  &lt;g2&gt;Apache 2.0 라이센스&lt;/g2&gt;하에서 배포되었습니다. 이는 타인에게 자유롭게 사용하는 것과 수학 라이브러리 및 코드의 확장을 허락합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean's underlying logic has a computational interpretation, and Lean can be viewed equally well as a programming
+language.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131550Z" creationid="tlqk35" creationdate="20220321T131550Z">
+        <seg>Lean의 기본 논리는 컴퓨팅 해석기(interpretor)을 가지는데 있다. 그래서 Lean은 프로그래밍 언어와 마찬가지로 동등하게 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Many people have contributed to the effort, providing
+corrections, suggestions, examples, and text.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134821Z" creationid="tlqk35" creationdate="20220321T134821Z">
+        <seg>많은 사람들이 오타 정정, 제안, 예제, 본분을 제공하는 등의 노력으로 기여했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>More specifically, Lean is based on a version of a system
+known as the Calculus of Constructions with inductive types.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132056Z" creationid="tlqk35" creationdate="20220321T132056Z">
+        <seg>더 구체적으로 Lean은 유도형(inductive types)의 직관주의적 계산법(calculus of Construction)으로 알려진 시스템에 기반한 버전입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>More to the point, it can be viewed as a system for writing programs with a precise semantics, as well as
+reasoning about the functions that the programs compute.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131607Z" creationid="tlqk35" creationdate="20220321T131607Z">
+        <seg>더욱이 이것은 정밀한 의미를 갖는 편집프로그램이나 프로그램이 계산하는 함수에 대한 추론 프로그램으로도 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Much of the background information you will
+need in order to do this is not specific to Lean at all.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132021Z" creationid="tlqk35" creationdate="20220321T132021Z">
+        <seg>이를 배우기 위해 필요한 대부분의 배경지식은 Lean으로만 국한되어 있지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Other systems provide search procedures and decision procedures for specific languages and domains,
+such as linear or nonlinear expressions over the integers or the real numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131328Z" creationid="tlqk35" creationdate="20220321T131328Z">
+        <seg>다른 시스템들은 특정 언어와 영역에 대한 선형 혹은 비선형 식(가령 정수나 실수에 대해 정의된)들에 탐색 절차과 결정 절차를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Please see &lt;g1&gt;lean prover&lt;/g1&gt; and &lt;g2&gt;lean community&lt;/g2&gt; for an up to date list
+of our amazing contributors.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134918Z" creationid="tlqk35" creationdate="20220321T134918Z">
+        <seg>합&lt;g1&gt;린 증명보조기&lt;/g1&gt;와 &lt;g2&gt;린 커뮤니티&lt;/g2&gt;에서 놀라운 최신 기여자 명단을 확인할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Resolution theorem provers, tableau theorem provers, fast
+satisfiability solvers, and so on provide means of establishing the validity of formulas in propositional and
+first-order logic.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131315Z" creationid="tlqk35" creationdate="20220321T131315Z">
+        <seg>Resolution 증명 보조기, tableau 증명 보조기, fast satisfiability 솔버 등등은 명제 논리식와 1계 논리식의 유효성을 식별하는 세우는 수단을 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Similarly, methods of &lt;g2&gt;elaboration&lt;/g2&gt; and &lt;g3&gt;type inference&lt;/g3&gt;, which can be used to support
+flexible forms of algebraic reasoning.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134656Z" creationid="tlqk35" creationdate="20220321T134656Z">
+        <seg>비슷하게 대수 추론의 유연한 형태를 지원하는데 사용될 수 있는 &lt;g2&gt;협력법&lt;/g2&gt;과  &lt;g3&gt;유형 추론&lt;/g3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Special modes in Visual Studio Code (VS Code for short) and
+Emacs offer powerful support for writing and debugging proofs, and is much better suited for serious use.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131922Z" creationid="tlqk35" creationdate="20220321T131922Z">
+        <seg>비주얼 스튜디오 코드(짧게는 VS code)에서 특정 모드와 Emacs는 강력한 편집 기능과 증명 디버깅 기능을 지원합니다. 그리고 진지한 사용을 생각한다면 이게 훨씬 적합합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Such systems
+can have bugs, and it can be difficult to ensure that the results they deliver are correct.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131418Z" creationid="tlqk35" creationdate="20220321T131418Z">
+        <seg>이런 시스템들은 버그가 생길 수 있고, 그들이 올바르다고 도출한 결과를 확실히 보장하기가 어려울 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The &lt;g1&gt;Lean Theorem Prover&lt;/g1&gt; aims to bridge the gap between interactive and automated theorem proving, by situating
+automated tools and methods in a framework that supports user interaction and the construction of fully specified
+axiomatic proofs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131527Z" creationid="tlqk35" creationdate="20220321T131527Z">
+        <seg> &lt;g1&gt;Lean 증명 보조기&lt;/g1&gt;는 사용자의 상호작용과 완전히 구체화된 공리적 증명의 생성을 돕는 자동화된 도구와 방법들을 프레임워크에 둠으로써 상호작용과 자동화된 정리 증명 사이의 빈틈을 메우는 것을 목표로 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The &lt;g1&gt;Lean&lt;/g1&gt; project was launched by Leonardo de Moura at Microsoft Research Redmond in 2013.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131729Z" creationid="tlqk35" creationdate="20220321T131729Z">
+        <seg>&lt;g1&gt;Lean&lt;/g1&gt; 프로젝트는 마이크로소프트 연구소 Redmond의 Leonardo de Moura가 2013년 시작했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The first is to run it from the web: a Javascript version of Lean, a standard
+library of definitions and theorems, and an editor are actually downloaded to your browser and run there.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131828Z" creationid="tlqk35" creationdate="20220321T131828Z">
+        <seg>첫째는 웹으로부터 이것을 실행하는 것입니다.(Lean의 자바스크립트 버전, 정의와 정리들의 표준 라이브러리, 편집자는 실제로 여러분의 브라우저에 다운로드를 시키고 거기서 실행하는 것임)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The goal is to support both mathematical reasoning and reasoning about complex systems, and to verify
+claims in both domains.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131543Z" creationid="tlqk35" creationdate="20220321T131543Z">
+        <seg>목표는 수학적 추론과 복잡한 시스템에 대한 추론을 모두 지원하고 양쪽 영역의 주장을 식별하게 만드는 겁이다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The gold standard for supporting a mathematical claim is to provide a proof, and twentieth-century developments in logic
+show most if not all conventional proof methods can be reduced to a small set of axioms and rules in any of a number of
+foundational systems.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131234Z" creationid="tlqk35" creationdate="20220321T131234Z">
+        <seg>수학 진술을 지지하기 위한 황금률은 증명을 제공하는 것이며 20세기 논리학의 발전은 기존은 몇 가지의 공리의 모임과 기초계의 몇 가지 규칙으로 축소될 수 있음을 거의 보여주었습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The native version is much faster than
+the web version, and is more flexible in other ways, too.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131909Z" creationid="tlqk35" creationdate="20220321T131909Z">
+        <seg>원본 버전은 웹 버전보다 더 빠르고 다른 방식보다 유연합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The second way to use Lean is to install and run it natively on your computer.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131857Z" creationid="tlqk35" creationdate="20220321T131857Z">
+        <seg>Lean을 사용하는 두 번째 방법은 여러분의 컴퓨터에 설치하여 로컬로 실행하는 것 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The source
+code, and instructions for building Lean, are available at
+&lt;g1&gt;https://github.com/leanprover/lean4/&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131946Z" creationid="tlqk35" creationdate="20220321T131946Z">
+        <seg>Lean을 만든 소스코드와  명령어들은 &lt;g1&gt;https://github.com/leanprover/lean4/&lt;/g1&gt;에서 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>There are currently two ways to use Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131811Z" creationid="tlqk35" creationdate="20220321T131811Z">
+        <seg>현재 Lean을 사용하는 두 가지 방식이 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>These
+aspects of Lean are explored in a companion tutorial to this one, &lt;g2&gt;Programming in Lean 4&lt;/g2&gt;, though computational
+aspects of the system will make an appearance here.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131657Z" creationid="tlqk35" creationdate="20220321T131657Z">
+        <seg>Lean의 이러한 측면은 이 교재의 동반 교재인 &lt;g2&gt;Programming in Lean&lt;/g2&gt;에서 더 찾아볼 수 있다. 그렇지만 여기에서도 린의 계산적인 측면을 찾아봅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>These can include ordinary mathematical theorems, as well as claims that pieces of hardware
+or software, network protocols, and mechanical and hybrid systems meet their specifications.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131146Z" creationid="tlqk35" creationdate="20220321T131146Z">
+        <seg>이 주장들은 평범한 수학적 정리뿐만 아니라 하드웨어와 소프트웨어, 네트워크 프로토콜, 역학적 복합적 시스템이 그들의 명세를 만족하는지에 대한 주장도 포함될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This book is designed to teach you to develop and verify proofs in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132009Z" creationid="tlqk35" creationdate="20220321T132009Z">
+        <seg>이 책은 Lean에서 증명을 검증하고 세울 수 있도록 당신을 가르치게끔 설계되었습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This provides
+a quick and convenient way to begin experimenting with the system.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131839Z" creationid="tlqk35" creationdate="20220321T131839Z">
+        <seg>이는 실험적으로 시스템을 시작하는데 편리하고 빠른 방법을 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This sets a very high standard: every rule of inference and every step of a
+calculation has to be justified by appealing to prior definitions and theorems, all the way down to basic axioms and
+rules.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131444Z" creationid="tlqk35" creationdate="20220321T131444Z">
+        <seg>이것은 아주 높은 기준을 설정합니다. 모든 추론 규칙과 계산의 모든 계산 과정은 선행된(기초 공리와 규칙으로 거슬러 내려가는) 정의와 정리에 호소하여 정당화되어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This tutorial describes the current version of Lean, known as Lean 4.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131956Z" creationid="tlqk35" creationdate="20220321T131956Z">
+        <seg>이 튜토리얼은 린의 현재 버전(린 4)를 설명합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This tutorial is an open access project maintained on Github.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134813Z" creationid="tlqk35" creationdate="20220321T134813Z">
+        <seg>이 튜토리얼은 깃허브로 관리되어 누구나 접근할 수 있는 프로젝트입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Throughout the text you will find examples of Lean code like the one below:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134728Z" creationid="tlqk35" creationdate="20220321T134728Z">
+        <seg>이 교재에서 여러분은 아래와 같은 린 코드 예제를 보게 될 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To start with, you will learn the logical system that Lean is
+based on, a version of &lt;g1&gt;dependent type theory&lt;/g1&gt; that is powerful enough to prove almost any conventional mathematical
+theorem, and expressive enough to do it in a natural way.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132047Z" creationid="tlqk35" creationdate="20220321T132047Z">
+        <seg>먼저 여러분은 Lean이 기초하고 있는 논리 체계 즉 거의 모든 기존의 수학적 정리를 증명할 수 있을 만큼 강력하고 그것을 자연스럽게 할 수 있을 만큼 충분히 표현력이 뛰어난 &lt;g1&gt;의존유형론&lt;/g1&gt; 버전을 배웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We are grateful to Ulrik Buchholz, Kevin Buzzard, Mario Carneiro, Nathan
+Carter, Eduardo Cavazos, Amine Chaieb, Joe Corneli, William DeMeo, Marcus Klaas de Vries, Ben Dyer, Gabriel Ebner,
+Anthony Hart, Simon Hudon, Sean Leather, Assia Mahboubi, Gihan Marasingha, Patrick Massot, Christopher John Mazey,
+Sebastian Ullrich, Floris van Doorn, Daniel Velleman, Théo Zimmerman, Paul Chisholm, and Chris Lovett for their contributions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134840Z" creationid="tlqk35" creationdate="20220321T134840Z">
+        <seg>우리는 Ulrik Buchholz, Kevin Buzzard, Mario Carneiro, Nathan Carter, Eduardo Cavazos, Amine Chaieb, Joe Corneli, William DeMeo, Marcus Klaas de Vries, Ben Dyer, Gabriel Ebner, Anthony Hart, Simon Hudon, Sean Leather, Assia Mahboubi, Gihan Marasingha, Patrick Massot, Christopher John Mazey, Sebastian Ullrich, Floris van Doorn, Daniel Velleman, Théo Zimmerman, Paul Chisholm, and Chris Lovett에게 그들의 공헌에 대해 감사드립니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We recommend running the examples and experimenting with the code on your own as you work through the chapters
+that follow.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134950Z" creationid="tlqk35" creationdate="20220321T134950Z">
+        <seg>우리는 여러분이 장을 따라 공부하면서 스스로 예제를 실행해보고 코드를 실험해보는 것을 추천합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>With this reduction, there are two ways that a computer can help establish a claim: it can help
+find a proof in the first place, and it can help verify that a purported proof is correct.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T131244Z" creationid="tlqk35" creationdate="20220321T131244Z">
+        <seg>이러한 축소로부터 컴퓨터가 진술을 만드는데 도움을 주는 두 가지 방법이 있습니다. 처음부터 증명을 찾는 걸 돕는 것과 다른 하나는 제시한 증명이 옳은지 식별하도록 돕게 하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can type
+things into the editor and modify the examples, and Lean will check the results and provide feedback continuously as you
+type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T134940Z" creationid="tlqk35" creationdate="20220321T134940Z">
+        <seg>여러분은 편집기에 무언가를 치거나 예제를 수정할 수 있습니다. 그리고 린은 여러분이 치는 동안 지속적으로 결과를 확인하고 피드백을 제공할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You will learn various methods to support this in &lt;g1&gt;dependent type
+theory&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132230Z" creationid="tlqk35" creationdate="20220321T132230Z">
+        <seg>여러분은 &lt;g1&gt;의존 유형론&lt;/g1&gt;에서 이를 지원하는 다양한 방법에 대해 배웁니다.</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+  </body>
+</tmx>
