@@ -63,16 +63,13 @@ theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
     ⊢ q ∧ p
 ```
 
-The first goal is met with the command ``exact hp``. The ``exact``
-command is just a variant of ``apply`` which signals that the
-expression given should fill the goal exactly. It is good form to use
-it in a tactic proof, since its failure signals that something has
-gone wrong. It is also more robust than ``apply``, since the
-elaborator takes the expected type, given by the target of the goal,
-into account when processing the expression that is being applied. In
-this case, however, ``apply`` would work just as well.
+첫 번째 목표는 ``exact hp``명령으로 달성할 수 있습니다. ``exact``
+명령은 목표와 동일한 표현식임을 알리는 ``apply``의 변형일 뿐입니다. 전략 증명모드에서 이것은 사용하기에 좋은 형태입니다.
+왜냐하면 그것의 실패는 무언가 잘못되었음을 알려주기 때문입니다. 이것은 ``apply``보다 더 강건합니다. 왜냐하면
+협력기는 적용될 표현식을 처리할 때 목표의 대상에 의해
+제시된 예상 유형을 받기를 기대하기 때문입니다. 하지만 이 경우 ``apply``도 마찬가지로 잘 작동할 것입니다.
 
-You can see the resulting proof term with the ``#print`` command:
+여러분은 ``#print`` 명령으로 증명항의 결과를 볼 수 있습니다.
 
 ```lean
 # theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -84,19 +81,12 @@ You can see the resulting proof term with the ``#print`` command:
 #print test
 ```
 
-You can write a tactic script incrementally. In VS Code, you can open
-a window to display messages by pressing ``Ctrl-Shift-Enter``, and
-that window will then show you the current goal whenever the cursor is
-in a tactic block. In Emacs, you can see the goal at the end of any
-line by pressing ``C-c C-g``, or see the remaining goal in an
-incomplete proof by putting the cursor after the first character of
-the last tactic. If the proof is incomplete, the token ``by`` is
-decorated with a red squiggly line, and the error message contains the
-remaining goals.
+여러분은 점진적으로 전략 스크립트를 쓸 수도 있습니다. VS Code에서 여러분은  ``Ctrl-Shift-Enter``을 눌러 메시지을 보고자 창을 열 수 있습니다.
+그러면 이 창은 전략 블록 속의 커서가 어디에 있든지 간에 현재 목표를 여러분에게 보여줄 것입니다. Emacs에서 여러분은 임의의 줄의 끝에서 ``C-c C-g``을 눌러 목표를 볼 수 있습니다.
+아니면 마지막 전략의 첫 문자 뒤에 커서를 놓으면 불완전한 증명에 대한 나머지 목표를 볼 수 있습니다. 만일 증명이 불완전하다면, 토큰 ``by``은 빨간색 구불구불한 선으로 장식됩니다.
+그리고 오류 메시지가 남은 목표에 포함됩니다.
 
-Tactic commands can take compound expressions, not just single
-identifiers. The following is a shorter version of the preceding
-proof:
+전략 명령은 하나의 식별자 뿐만 아니라 복합된 식을 받을 수 있습니다. 다음은 이전의 증명보다 더 짧은 버전의 증명입니다.
 
 ```lean
 theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -104,7 +94,7 @@ theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
   exact And.intro hq hp
 ```
 
-Unsurprisingly, it produces exactly the same proof term.
+놀랄 것 없이, 이것은 정확히 동일한 증명항을 만듭니다.
 
 ```lean
 # theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -113,20 +103,15 @@ Unsurprisingly, it produces exactly the same proof term.
 #print test
 ```
 
-Multiple tactic applications can be written in a single line by concatenating with a semicolon.
+복수의 전략들은 세미콜론으로 연결한 한 줄에 작성될 수 있습니다.
 
 ```lean
 theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
   apply And.intro hp; exact And.intro hq hp
 ```
 
-Tactics that may produce multiple subgoals often tag them. For
-example, the tactic ``apply And.intro`` tagged the first sugoal as
-``left``, and the second as ``right``. In the case of the ``apply``
-tactic, the tags are inferred from the parameters names used in the
-``And.intro`` declaration. You can structure your tactics using the
-notation ``case <tag> => <tactics>``. The following is a structured
-version of our first tactic proof in this chapter.
+다수의 하위 목표를 생성할 수 있는 전략은 이들에 표식을 붙입니다. 예를 들어, 전략  ``apply And.intro``는 첫번째 목표를 ``left``으로
+두번째 목표를 ``right``으로 표식을 붙입니다. ``apply`` 전략의 경우 표식은 ``And.intro``에서 사용된 매개변수의 이름으로부터 추론됩니다. 여러분은 여러분의 전략을 ``case <tag> => <tactics>``기호를 사용해 구조화할 수 있습니다. 다음은 이 장의 첫번째 우리의 전략 증명의 구조화된 버전입니다.
 
 ```lean
 theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -138,8 +123,7 @@ theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
     case right => exact hp
 ```
 
-You can solve the subgoal ``right`` before ``left`` using the ``case``
-notation
+여러분은 ``case``기호를 사용해서 하위목표 ``left``보다 먼저 ``right``을 풀 수 있습니다.
 
 ```lean
 theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -151,15 +135,10 @@ theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
   case left => exact hp
 ```
 
-Note that Lean hides the other goals inside the ``case`` block. We say
-it is "focusing" on the selected goal.  Moreover, Lean flags an error
-if the selected goal is not fully solved at the end of the ``case``
-block.
+린은 ``case``블록 안에 다른 목표를 숨긴 것을 주목하세요. 우리는 이를 선택한 목표에 "초점을 맞췄다"고 합니다.  게다가 린은 선택된 목표가 ``case`` 블록의 끝에서 완전히 풀리지 않았다면 오류를 표시합니다.
 
-For simple sugoals, it may not be worth selecting a subgoal using its
-tag, but you may still want to structure the proof. Lean also provides
-the "bullet" notation ``. <tactics>`` (or ``· <tactics>``) for
-structuring proof.
+간단한 하위목표에 대해 그것의 표식을 이용해 하위목표를 선택하는 것은 불필요할 수 있지만
+그래도 여러분은 여전히 증명을 구조화하길 원할지도 모릅니다. 린은 또 구조화한 증명에 대해 "bullet" 기호를 제공합니다.`` <tactics>`` (혹은 ``· <tactics>``)
 
 ```lean
 theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
@@ -170,13 +149,10 @@ theorem test (p q : Prop) (hp : p) (hq : q) : p ∧ q ∧ p := by
     . exact hp
 ```
 
-Basic Tactics
+기본 전략들
 -------------
 
-In addition to ``apply`` and ``exact``, another useful tactic is
-``intro``, which introduces a hypothesis. What follows is an example
-of an identity from propositional logic that we proved in a previous
-chapter, now proved using tactics.
+``apply``과 ``exact``에 더해 또 다른 유용한 전략은 가정을 도입하는 ``intro``입니다. 다음의 것은 전략을 사용해 증명할 이전 장에서 증명한 명제논리의 항등식의 예시들입니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -207,7 +183,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
         exact And.right hpr
 ```
 
-The ``intro`` command can more generally be used to introduce a variable of any type:
+``intro``명령은 폭넓게로는 임의 유형의 변수를 도입하는데 사용됩니다.
 
 ```lean
 example (α : Type) : α → α := by
@@ -219,7 +195,7 @@ example (α : Type) : ∀ x : α, x = x := by
   exact Eq.refl x
 ```
 
-You can use it to introduce several variables:
+여러분은 몇 개의 변수들을 도입하는데 사용할 수 있습니다.
 
 ```lean
 example : ∀ a b c : Nat, a = b → a = c → c = b := by
@@ -227,11 +203,9 @@ example : ∀ a b c : Nat, a = b → a = c → c = b := by
   exact Eq.trans (Eq.symm h₂) h₁
 ```
 
-As the ``apply`` tactic is a command for constructing function
-applications interactively, the ``intro`` tactic is a command for
-constructing function abstractions interactively (i.e., terms of the
-form ``fun x => e``).  As with lambda abstraction notation, the
-``intro`` tactic allows us to use an implicit ``match``.
+ ``apply`` 전략이 함수의 활용을 상호작용으로 만드는 명령인 것처럼
+``intro`` 전략은 상호작용 방식으로 함수 추상화를 만드는 명령입니다.
+(예, ``fun x => e``꼴의 항들).  람다 추상화 기호처럼 ``intro`` 전략은 암시적인 ``match``를 쓸 수 있도록 해줍니다.
 
 ```lean
 example (α : Type) (p q : α → Prop) : (∃ x, p x ∧ q x) → ∃ x, q x ∧ p x := by
@@ -239,7 +213,7 @@ example (α : Type) (p q : α → Prop) : (∃ x, p x ∧ q x) → ∃ x, q x �
   exact ⟨w, hqw, hpw⟩
 ```
 
-You can also provide multiple alternatives like in the ``match`` expression.
+여러분은 ``match`` 표현식에서처럼 여러 가지 변형들을 제공할 수도 있습니다.
 
 ```lean
 example (α : Type) (p q : α → Prop) : (∃ x, p x ∨ q x) → ∃ x, q x ∨ p x := by
@@ -248,13 +222,11 @@ example (α : Type) (p q : α → Prop) : (∃ x, p x ∨ q x) → ∃ x, q x �
     | ⟨w, Or.inr h⟩ => exact ⟨w, Or.inl h⟩
 ```
 
-The ``intros`` tactic can be used without any arguments, in which
-case, it chooses names and introduces as many variables as it can. You
-will see an example of this in a moment.
+``intros`` 전략은 어떠한 인수 없이도 사용될 수 있습니다.
+가령, 그것은 이름을 선택할 수 있고, 원하는 한 많이 많은 변수를 도입할 수 있습니다. 어느 때에 여러분은 이에 대한 예를 볼 것입니다.
 
-The ``assumption`` tactic looks through the assumptions in context of
-the current goal, and if there is one matching the conclusion, it
-applies it.
+``assumption`` 전략은 현재 목표의 맥락 속 가정을 훝어 봅니다.
+그리고 결론과 대응되는 가정이 있다면 그것을 목표에 적용합니다.
 
 ```lean
 example (x y z w : Nat) (h₁ : x = y) (h₂ : y = z) (h₃ : z = w) : x = w := by
@@ -263,7 +235,7 @@ example (x y z w : Nat) (h₁ : x = y) (h₂ : y = z) (h₃ : z = w) : x = w := 
   assumption   -- applied h₃
 ```
 
-It will unify metavariables in the conclusion if necessary:
+이것은 필요하다면 결론의 메타변수들을 통합할 것 입니다.
 
 ```lean
 example (x y z w : Nat) (h₁ : x = y) (h₂ : y = z) (h₃ : z = w) : x = w := by
@@ -274,7 +246,7 @@ example (x y z w : Nat) (h₁ : x = y) (h₂ : y = z) (h₃ : z = w) : x = w := 
   assumption      -- solves z = w with h₃
 ```
 
-The following example uses the ``intros`` command to introduce the three variables and two hypotheses automatically:
+다음 예제는 ``intros`` 명령을 사용해 세 개의 변수와 두 개의 가정을 자동으로 도입합니다.
 
 ```lean
 example : ∀ a b c : Nat, a = b → a = c → c = b := by
@@ -285,9 +257,8 @@ example : ∀ a b c : Nat, a = b → a = c → c = b := by
   assumption
 ```
 
-Note that names automatically generated by Lean are inaccessible by default. The motivation is to
-ensure your tactic proofs do not rely on automatically generated names, and are consequently more robust.
-However, you can use the combinator ``unhygienic`` to disable this restriction.
+린에 의해 자동으로 생성된 이름들은 기본적으로 접근할 수 없습니다. 그 이유는 여러분의 전략 증명이 자동으로 생성된 이름에 의존하지 않도록 보장하기 위함입니다. 그리고 그 결과로 증명은 더 튼튼하게 됩니다.
+하지만 여러분은 ``unhygienic`` 조합자를 사용해서 이 제한을 해제할 수 있습니다.
 
 ```lean
 example : ∀ a b c : Nat, a = b → a = c → c = b := by unhygienic
@@ -298,9 +269,8 @@ example : ∀ a b c : Nat, a = b → a = c → c = b := by unhygienic
   exact a_1
 ```
 
-You can also use the ``rename_i`` tactic to rename the most recent inaccessible names in your context.
-In the following example, the tactic ``rename_i h1 _ h2`` renames two of the last three hypotheses in
-your context.
+혹은 ``rename_i`` 전략으로 여러분의 상황에 가장 최근에 접속불가한 이름을 바꿀 수 있습니다.
+다음 예제에서는 ``rename_i h1 _ h2`` 전략이 여러분의 상황 속 세 가정 중 마지막 두 개의 이름을 바꿉니다.
 
 ```lean
 example : ∀ a b c d : Nat, a = b → a = d → a = c → c = b := by
@@ -312,13 +282,13 @@ example : ∀ a b c d : Nat, a = b → a = d → a = c → c = b := by
   exact h1
 ```
 
-The ``rfl`` tactic is syntax sugar for ``exact rfl``.
+``rfl``은 ``exact rfl``에 대한 문법 설탕입니다.
 ```lean
 example (y : Nat) : (fun x : Nat => 0) y = 0 :=
   by rfl
 ```
 
-The ``repeat`` combinator can be used to apply a tactic several times.
+조합자  ``repeat``는 한 전략을 여러 차례 적용하는데 사용될 수 있습니다.
 
 ```lean
 example : ∀ a b c : Nat, a = b → a = c → c = b := by
@@ -328,8 +298,7 @@ example : ∀ a b c : Nat, a = b → a = c → c = b := by
   repeat assumption
 ```
 
-Another tactic that is sometimes useful is the ``revert`` tactic,
-which is, in a sense, an inverse to ``intro``.
+때떄로 유용한 또 다른 전략은 ``revert``는 ``intro``의 역방향 전략입니다.
 
 ```lean
 example (x : Nat) : x = x := by
@@ -340,7 +309,7 @@ example (x : Nat) : x = x := by
   rfl
 ```
 
-Moving a hypothesis into the goal yields an implication:
+가정을 목표 속으로 옮김으로써 함의를 얻습니다.
 
 ```lean
 example (x y : Nat) (h : x = y) : y = x := by
@@ -352,10 +321,7 @@ example (x y : Nat) (h : x = y) : y = x := by
   assumption
 ```
 
-But ``revert`` is even more clever, in that it will revert not only an
-element of the context but also all the subsequent elements of the
-context that depend on it. For example, reverting ``x`` in the example
-above brings ``h`` along with it:
+그러나 ``revert``는 맥락 속 요소들 뿐만 아니라 그에 의존하는 맥락의 뒤에 올 모든 요소를 되돌려 놓는 다는 점에서 아주 영리합니다. 예를 들어 위의 예제에서 ``x``를 되돌려 놓는 것은 그것과 붙은 ``h``를 가져옵니다.
 
 ```lean
 example (x y : Nat) (h : x = y) : y = x := by
@@ -366,7 +332,7 @@ example (x y : Nat) (h : x = y) : y = x := by
   assumption
 ```
 
-You can also revert multiple elements of the context at once:
+여러분은 맥락 속 다수의 요소들을 한번에 되돌려 놓을 수 있습니다.
 ```lean
 example (x y : Nat) (h : x = y) : y = x := by
   revert x y
@@ -376,10 +342,7 @@ example (x y : Nat) (h : x = y) : y = x := by
   assumption
 ```
 
-You can only ``revert`` an element of the local context, that is, a
-local variable or hypothesis. But you can replace an arbitrary
-expression in the goal by a fresh variable using the ``generalize``
-tactic.
+여러분은 국부적인 상황 속 요소 즉, 지역변수나 가정을 ``revert`` 할 수 있습니다. 하지만 여러분은 목표 속 임의의 표현식을 ``generalize`` 전략을 사용해 새 변수로 대체할 수 있습니다.
 
 ```lean
 example : 3 = 3 := by
@@ -392,11 +355,8 @@ example : 3 = 3 := by
   rfl
 ```
 
-The mnemonic in the notation above is that you are generalizing the
-goal by setting ``3`` to an arbitrary variable ``x``. Be careful: not
-every generalization preserves the validity of the goal. Here,
-``generalize`` replaces a goal that could be proved using
-``rfl`` with one that is not provable:
+위의 표기에 대한 기억법은 여러분이 ``3``으로 설정한 목표을 임의의 변수 ``x``로 일반화시키는 것입니다. 조심하세요. 모든 일반화가 목표의 유효성을 보존하지는 않습니다. 여기서 ``generalize``는 ``rfl``을 사용해 증명할 수 있는 목표를
+증명가능하지 않은 것으로 바꿉니다.
 
 ```lean
 example : 2 + 3 = 5 := by
@@ -405,13 +365,8 @@ example : 2 + 3 = 5 := by
   admit
 ```
 
-In this example, the ``admit`` tactic is the analogue of the ``sorry``
-proof term. It closes the current goal, producing the usual warning
-that ``sorry`` has been used. To preserve the validity of the previous
-goal, the ``generalize`` tactic allows us to record the fact that
-``3`` has been replaced by ``x``. All you need to do is to provide a
-label, and ``generalize`` uses it to store the assignment in the local
-context:
+이 예제에서 ``admit`` 전략은 증명항 ``sorry``와 유사합니다. 이것은 현재 목표를 마무리 짓고, ``sorry``를 사용했을 때처럼 경고를 만듭니다. 앞선 목표의 유효성을 보존하기 위해 ``generalize`` 전략은 ``3``이
+``x``로 대체되었음에 대한 사실을 기록하게 해줍니다. 여러분이 해야할 것은 레이블을 제공하는 것과 ``generalize``가 그 레이블을 지역 상황에 할당물을 저장하는데 사용하도록 하는 것입니다.
 
 ```lean
 example : 2 + 3 = 5 := by
@@ -420,18 +375,14 @@ example : 2 + 3 = 5 := by
   rw [← h]
 ```
 
-Here the ``rewrite`` tactic, abbreviated ``rw``, uses ``h`` to replace
-``x`` by ``3`` again. The ``rewrite`` tactic will be discussed below.
+여기 ``rewrite`` 전략은 ``rw``로 축약되었고, ``h``를 써서 ``x``가 다시 ``3``으로 바뀌게 했습니다. ``rewrite``전략은 아래에서 더 논의할 것 입니다.
 
 
-More Tactics
+이 외의 전략들
 ------------
 
-Some additional tactics are useful for constructing and destructing
-propositions and data. For example, when applied to a goal of the form
-``p ∨ q``, you use tactics such as ``apply Or.inl`` and ``apply
-Or.inr``.  Conversely, the ``cases`` tactic can be used to decompose a
-disjunction.
+몇 가지 추가적인 전략들은 명제와 데이터를 생성하고 파괴하는데 유용합니다. 예를 들어, ``p ∨ q``꼴의 목표에 적용했을 때, 여러분은 ``apply Or.inl``과 ``apply
+Or.inr`` 같은 전략들을 사용합니다.  반대로 ``cases`` 전략은 분리자를 분해하는데 사용할 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∨ q → q ∨ p := by
@@ -441,8 +392,8 @@ example (p q : Prop) : p ∨ q → q ∨ p := by
   | inr hq => apply Or.inl; exact hq
 ```
 
-Note that the syntax is similar to the one used in `match` expressions.
-The new subgoals can be solved in any order.
+문법이 `match` 표현식에서의 것과 비슷함에 주목하세요.
+새로운 하위 목표는 임의의 순서로 풀릴 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∨ q → q ∨ p := by
@@ -452,8 +403,7 @@ example (p q : Prop) : p ∨ q → q ∨ p := by
   | inl hp => apply Or.inr; exact hp
 ```
 
-You can also use a (unstructured) ``cases`` without the ``with`` and a tactic
-for each alternative.
+여러분은 (비구조화된)``cases``를 각각의 변형과 전략에 대해 ``with`` 없이 사용할 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∨ q → q ∨ p := by
@@ -465,8 +415,7 @@ example (p q : Prop) : p ∨ q → q ∨ p := by
   assumption
 ```
 
-The (unstructured) ``cases`` is particularly useful when you can close several
-subgoals using the same tactic.
+(비구조화된)``cases``는 여러분이 여러 개의 하위목표를 같은 전략을 사용해 끝낼 때 특히 유용합니다.
 
 ```lean
 example (p : Prop) : p ∨ p → p := by
@@ -475,8 +424,8 @@ example (p : Prop) : p ∨ p → p := by
   repeat assumption
 ```
 
-You can also use the combinator ``tac1 <;> tac2`` to apply ``tac2`` to each
-subgoal produced by tactic ``tac1``
+또 여러분은 조합자  ``tac1 <;> tac2``를 각각의 하위 목표가 만든
+ ``tac2``에 ``tac1``의 전략을 적용하여 사용할 수 있습니다.
 
 ```lean
 example (p : Prop) : p ∨ p → p := by
@@ -484,7 +433,7 @@ example (p : Prop) : p ∨ p → p := by
   cases h <;> assumption
 ```
 
-You can combine the unstructured ``cases`` tactic with the ``case`` and ``.`` notation.
+여러분은 비구조화된 ``cases`` 전략을  ``case``와 ``.`` 기호와 결합할 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∨ q → q ∨ p := by
@@ -516,8 +465,7 @@ example (p q : Prop) : p ∨ q → q ∨ p := by
 ```
 
 
-The ``cases`` tactic can also be used to
-decompose a conjunction.
+``cases`` 전략은 결합자를 분해하는데 사용될 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∧ q → q ∧ p := by
@@ -526,11 +474,8 @@ example (p q : Prop) : p ∧ q → q ∧ p := by
   | intro hp hq => constructor; exact hq; exact hp
 ```
 
-In this example, there is only one goal after the ``cases`` tactic is
-applied, with ``h : p ∧ q`` replaced by a pair of assumptions,
-``hp : p`` and ``hq : q``. The ``constructor`` tactic applies the unique
-constructor for conjunction, ``And.intro``. With these tactics, an
-example from the previous section can be rewritten as follows:
+이 예제에서,``cases`` 전략이 ``h : p ∧ q``에서 가정
+``hp : p``과 ``hq : q``을 적용한  이후에는 한 목표만 남습니다. ``constructor`` 전략은 결합자 ``And.intro``에 대한 단일 생성자를 적용합니다. 이 전략으로 이전 섹션의 예제를 다음과 같이 다시 쓸 수 있습니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -551,11 +496,9 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
       | intro hp hr => constructor; exact hp; apply Or.inr; exact hr
 ```
 
-You will see in [Chapter Inductive Types](./inductive_types.md) that
-these tactics are quite general. The ``cases`` tactic can be used to
-decompose any element of an inductively defined type; ``constructor``
-always applies the first applicable constructor of an inductively defined type.
-For example, you can use ``cases`` and ``constructor`` with an existential quantifier:
+[유도형 장](./inductive_types.md)에서 이 전략들은 꽤나 일반적임을 볼 것입니다. ``cases`` 전략은 유도적으로 정의된 유형의 임의의 원소를 분해하는데 사용될 수 있습니다.
+``constructor``는 항상 유도적으로 정의된 유형의 처음으로 활용할 수 있는 생성자에 적용할 수 있습니다.
+예를 들어, 여러분은``cases``와 ``constructor``을 존재 정량자와 사용할 수 있습니다.
 
 ```lean
 example (p q : Nat → Prop) : (∃ x, p x) → ∃ x, p x ∨ q x := by
@@ -564,13 +507,9 @@ example (p q : Nat → Prop) : (∃ x, p x) → ∃ x, p x ∨ q x := by
   | intro x px => constructor; apply Or.inl; exact px
 ```
 
-Here, the ``constructor`` tactic leaves the first component of the
-existential assertion, the value of ``x``, implicit. It is represented
-by a metavariable, which should be instantiated later on. In the
-previous example, the proper value of the metavariable is determined
-by the tactic ``exact px``, since ``px`` has type ``p x``. If you want
-to specify a witness to the existential quantifier explicitly, you can
-use the ``exists`` tactic instead:
+여기서  ``constructor`` 전략은 존재 가정의 첫 요소 암시적으로 ``x``의 값으로 남깁니다. 이는 메타변수로 표현되며 나중에 반드시 개체화되어야 합니다. 이전 예제에서 메타변수의 적절한 값은``exact px`` 전략에 의해 결정됩니다.
+그 이유는 ``px``가 ``p x``형을 갖기 때문입니다. 여러분이 명시적으로 존재정량자를 나타내 보도록하길 원한다면,
+대신``exists`` 전략을 사용하면 됩니다.
 
 ```lean
 example (p q : Nat → Prop) : (∃ x, p x) → ∃ x, p x ∨ q x := by
@@ -579,7 +518,7 @@ example (p q : Nat → Prop) : (∃ x, p x) → ∃ x, p x ∨ q x := by
   | intro x px => exists x; apply Or.inl; exact px
 ```
 
-Here is another example:
+여기 또 다른 예제가 있습니다.
 
 ```lean
 example (p q : Nat → Prop) : (∃ x, p x ∧ q x) → ∃ x, q x ∧ p x := by
@@ -592,9 +531,7 @@ example (p q : Nat → Prop) : (∃ x, p x ∧ q x) → ∃ x, q x ∧ p x := by
       constructor <;> assumption
 ```
 
-These tactics can be used on data just as well as propositions. In the
-next two examples, they are used to define functions which swap the
-components of the product and sum types:
+이 전략들은 명제와 마찬가지로 데이터에 사용될 수 있습니다. 다음 두 예제에서, 이들은 곱과 합 유형의 요소를 바꾸는 함수를 정의하는데 사용됩니다.
 
 ```lean
 def swap_pair : α × β → β × α := by
@@ -1228,7 +1165,7 @@ example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 :=
   simp [*]
 ```
 
-Here is another example:
+여기 또 다른 예제가 있습니다.
 
 ```lean
 example (u w x y z : Nat) (h₁ : x = y + z) (h₂ : w = u + x)

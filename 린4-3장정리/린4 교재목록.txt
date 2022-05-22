@@ -1,0 +1,19 @@
+린 4의 주 교재 
+
+소프트웨어 기초 1
+https://alashworth.github.io/sf-lean/index.html
+린 4로 하는 증명 
+https://leanprover.github.io/theorem_proving_in_lean4/
+
+부교재
+깃프로
+https://git-scm.com/book/en/v2
+리눅스명령행
+https://linuxcommand.org/tlcl.php
+
+프로깃 2장
++소프트웨어 기초
++린4 증명
+
+다음주 목요일 23일, 20일 화상회의 번역검토
+오메가 T 

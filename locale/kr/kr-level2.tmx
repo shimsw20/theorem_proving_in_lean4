@@ -369,6 +369,15 @@ an abbreviation for <bpt i="9" x="9">&lt;g9&gt;</bpt>Type 0<ept i="9">&lt;/g9&gt
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>&lt;tactics&gt;<it pos="end" x="1">&lt;/g1&gt;</it> (or <bpt i="2" x="2">&lt;g2&gt;</bpt>· &lt;tactics&gt;<ept i="2">&lt;/g2&gt;</ept>) for
+structuring proof.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061833Z" creationid="tlqk35" creationdate="20220522T061810Z">
+        <seg>&lt;tactics&gt;<it pos="end" x="1">&lt;/g1&gt;</it> (혹은 <bpt i="2" x="2">&lt;g2&gt;</bpt>· &lt;tactics&gt;<ept i="2">&lt;/g2&gt;</ept>)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>A calculation can be viewed as a proof as well, and these systems,
 too, help establish mathematical claims.</seg>
       </tuv>
@@ -478,6 +487,16 @@ declaration of the variables.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>All you need to do is to provide a
+label, and <bpt i="7" x="7">&lt;g7&gt;</bpt>generalize<ept i="7">&lt;/g7&gt;</ept> uses it to store the assignment in the local
+context:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065819Z" creationid="tlqk35" creationdate="20220522T065819Z">
+        <seg>여러분이 해야할 것은 레이블을 제공하는 것과 <bpt i="7" x="7">&lt;g7&gt;</bpt>generalize<ept i="7">&lt;/g7&gt;</ept>가 그 레이블을 지역 상황에 할당물을 저장하는데 사용하도록 하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>An "axiom" would be a
 constant of such a type.</seg>
       </tuv>
@@ -509,6 +528,15 @@ different contexts.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T143641Z" creationid="tlqk35" creationdate="20220321T143641Z">
         <seg>그리고 당연히 그럽니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Another tactic that is sometimes useful is the <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept> tactic,
+which is, in a sense, an inverse to <bpt i="2" x="2">&lt;g2&gt;</bpt>intro<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063942Z" creationid="tlqk35" creationdate="20220522T063942Z">
+        <seg>때떄로 유용한 또 다른 전략은 <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept>는 <bpt i="2" x="2">&lt;g2&gt;</bpt>intro<ept i="2">&lt;/g2&gt;</ept>의 역방향 전략입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -670,6 +698,19 @@ in the last chapter, now with propositions instead of types.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>As the <bpt i="1" x="1">&lt;g1&gt;</bpt>apply<ept i="1">&lt;/g1&gt;</ept> tactic is a command for constructing function
+applications interactively, the <bpt i="2" x="2">&lt;g2&gt;</bpt>intro<ept i="2">&lt;/g2&gt;</ept> tactic is a command for
+constructing function abstractions interactively (i.e., terms of the
+form <bpt i="3" x="3">&lt;g3&gt;</bpt>fun x =&gt; e<ept i="3">&lt;/g3&gt;</ept>).</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062425Z" creationid="tlqk35" creationdate="20220522T062425Z">
+        <seg> <bpt i="1" x="1">&lt;g1&gt;</bpt>apply<ept i="1">&lt;/g1&gt;</ept> 전략이 함수의 활용을 상호작용으로 만드는 명령인 것처럼 
+<bpt i="2" x="2">&lt;g2&gt;</bpt>intro<ept i="2">&lt;/g2&gt;</ept> 전략은 상호작용 방식으로 함수 추상화를 만드는 명령입니다. 
+(예, <bpt i="3" x="3">&lt;g3&gt;</bpt>fun x =&gt; e<ept i="3">&lt;/g3&gt;</ept>꼴의 항들).</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>As the example above suggests, you have already seen an example of a function of type
 <bpt i="1" x="1">&lt;g1&gt;</bpt>Type → Type → Type<ept i="1">&lt;/g1&gt;</ept>, namely, the Cartesian product <bpt i="2" x="2">&lt;g2&gt;</bpt>Prod<ept i="2">&lt;/g2&gt;</ept>:</seg>
       </tuv>
@@ -693,6 +734,15 @@ a theorem.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161013Z" creationid="tlqk35" creationdate="20220321T161013Z">
         <seg>정의와 마찬가지로 <bpt i="1" x="1">&lt;g1&gt;</bpt>#print<ept i="1">&lt;/g1&gt;</ept>명령은 정리의 증명을 여러분에게 보여줄 것 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>As with lambda abstraction notation, the
+<bpt i="4" x="4">&lt;g4&gt;</bpt>intro<ept i="4">&lt;/g4&gt;</ept> tactic allows us to use an implicit <bpt i="5" x="5">&lt;g5&gt;</bpt>match<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062521Z" creationid="tlqk35" creationdate="20220522T062511Z">
+        <seg>람다 추상화 기호처럼 <bpt i="4" x="4">&lt;g4&gt;</bpt>intro<ept i="4">&lt;/g4&gt;</ept> 전략은 암시적인 <bpt i="5" x="5">&lt;g5&gt;</bpt>match<ept i="5">&lt;/g5&gt;</ept>를 쓸 수 있도록 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -745,6 +795,23 @@ rule and an elimination rule.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T131401Z" creationid="tlqk35" creationdate="20220321T131401Z">
         <seg>자동화된 추론 시스템은 종종 건전성 보장을 희생해서라도 성능과 효율성을 끌어올리기 위해 애쓰고 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Basic Tactics</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061845Z" creationid="tlqk35" creationdate="20220522T061845Z">
+        <seg>기본 전략들</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Be careful: not
+every generalization preserves the validity of the goal.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065050Z" creationid="tlqk35" creationdate="20220522T065050Z">
+        <seg>조심하세요. 모든 일반화가 목표의 유효성을 보존하지는 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -827,6 +894,16 @@ separated by semicolons or line breaks.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>But <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept> is even more clever, in that it will revert not only an
+element of the context but also all the subsequent elements of the
+context that depend on it.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064249Z" creationid="tlqk35" creationdate="20220522T064249Z">
+        <seg>그러나 <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept>는 맥락 속 요소들 뿐만 아니라 그에 의존하는 맥락의 뒤에 올 모든 요소를 되돌려 놓는 다는 점에서 아주 영리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>But it is very useful for building long proofs
 incrementally.</seg>
       </tuv>
@@ -900,6 +977,16 @@ and can help catch and debug errors.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T151314Z" creationid="tlqk35" creationdate="20220321T151314Z">
         <seg>그러나  <bpt i="3" x="3">&lt;g3&gt;</bpt>cons<ept i="3">&lt;/g3&gt;</ept>는 어떤 유형을 가져야 할까요?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>But you can replace an arbitrary
+expression in the goal by a fresh variable using the <bpt i="2" x="2">&lt;g2&gt;</bpt>generalize<ept i="2">&lt;/g2&gt;</ept>
+tactic.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064654Z" creationid="tlqk35" creationdate="20220522T064654Z">
+        <seg>하지만 여러분은 목표 속 임의의 표현식을 <bpt i="2" x="2">&lt;g2&gt;</bpt>generalize<ept i="2">&lt;/g2&gt;</ept> 전략을 사용해 새 변수로 대체할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1034,6 +1121,15 @@ allows you to obtain deeper and more complex proofs.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T141208Z" creationid="tlqk35" creationdate="20220321T141208Z">
         <seg>반대로 여러분이 <bpt i="7" x="7">&lt;g7&gt;</bpt>p : Nat × Nat<ept i="7">&lt;/g7&gt;</ept>을 갖고 있다면 <bpt i="8" x="8">&lt;g8&gt;</bpt>p.1 : Nat<ept i="8">&lt;/g8&gt;</ept>과 <bpt i="9" x="9">&lt;g9&gt;</bpt>p.2 : Nat<ept i="9">&lt;/g9&gt;</ept>처럼 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Conversely, the <bpt i="4" x="4">&lt;g4&gt;</bpt>cases<ept i="4">&lt;/g4&gt;</ept> tactic can be used to decompose a
+disjunction.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070342Z" creationid="tlqk35" creationdate="20220522T070342Z">
+        <seg>반대로 <bpt i="4" x="4">&lt;g4&gt;</bpt>cases<ept i="4">&lt;/g4&gt;</ept> 전략은 분리자를 분해하는데 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1333,6 +1429,17 @@ instruction.</seg>
     <tu>
       <tuv xml:lang="en-US">
         <seg>For
+example, the tactic <bpt i="1" x="1">&lt;g1&gt;</bpt>apply And.intro<ept i="1">&lt;/g1&gt;</ept> tagged the first sugoal as
+<bpt i="2" x="2">&lt;g2&gt;</bpt>left<ept i="2">&lt;/g2&gt;</ept>, and the second as <bpt i="3" x="3">&lt;g3&gt;</bpt>right<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061050Z" creationid="tlqk35" creationdate="20220522T061050Z">
+        <seg>예를 들어, 전략  <bpt i="1" x="1">&lt;g1&gt;</bpt>apply And.intro<ept i="1">&lt;/g1&gt;</ept>는 첫번째 목표를 <bpt i="2" x="2">&lt;g2&gt;</bpt>left<ept i="2">&lt;/g2&gt;</ept>으로
+두번째 목표를 <bpt i="3" x="3">&lt;g3&gt;</bpt>right<ept i="3">&lt;/g3&gt;</ept>으로 표식을 붙입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For
 example, the variable <bpt i="4" x="4">&lt;g4&gt;</bpt>b<ept i="4">&lt;/g4&gt;</ept> in the expression <bpt i="5" x="5">&lt;g5&gt;</bpt>fun (b : β) (x : α) =&gt; b<ept i="5">&lt;/g5&gt;</ept>
 has nothing to do with the constant <bpt i="6" x="6">&lt;g6&gt;</bpt>b<ept i="6">&lt;/g6&gt;</ept> declared earlier.</seg>
       </tuv>
@@ -1450,6 +1557,15 @@ carry out a proof by cases:</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>For example, reverting <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept> in the example
+above brings <bpt i="3" x="3">&lt;g3&gt;</bpt>h<ept i="3">&lt;/g3&gt;</ept> along with it:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064343Z" creationid="tlqk35" creationdate="20220522T064343Z">
+        <seg>예를 들어 위의 예제에서 <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>를 되돌려 놓는 것은 그것과 붙은 <bpt i="3" x="3">&lt;g3&gt;</bpt>h<ept i="3">&lt;/g3&gt;</ept>를 가져옵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>For example, term rewriting, and Lean's automated methods for simplifying terms and
 expressions automatically.</seg>
       </tuv>
@@ -1509,12 +1625,31 @@ from others.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>For example, when applied to a goal of the form
+<bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ q<ept i="1">&lt;/g1&gt;</ept>, you use tactics such as <bpt i="2" x="2">&lt;g2&gt;</bpt>apply Or.inl<ept i="2">&lt;/g2&gt;</ept> and <bpt i="3" x="3">&lt;g3&gt;</bpt>apply
+Or.inr<ept i="3">&lt;/g3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070256Z" creationid="tlqk35" creationdate="20220522T070256Z">
+        <seg>예를 들어, <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ q<ept i="1">&lt;/g1&gt;</ept>꼴의 목표에 적용했을 때, 여러분은 <bpt i="2" x="2">&lt;g2&gt;</bpt>apply Or.inl<ept i="2">&lt;/g2&gt;</ept>과 <bpt i="3" x="3">&lt;g3&gt;</bpt>apply
+Or.inr<ept i="3">&lt;/g3&gt;</ept> 같은 전략들을 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>For example, you can say that there are infinitely many
 primes by asserting that for every natural number <bpt i="4" x="4">&lt;g4&gt;</bpt>n<ept i="4">&lt;/g4&gt;</ept>, there is a
 prime number greater than <bpt i="5" x="5">&lt;g5&gt;</bpt>n<ept i="5">&lt;/g5&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T183935Z" creationid="tlqk35" creationdate="20220321T183935Z">
         <seg>예를 들어, 여러분은 모든 자연수 <bpt i="4" x="4">&lt;g4&gt;</bpt>n<ept i="4">&lt;/g4&gt;</ept>에 대해 <bpt i="5" x="5">&lt;g5&gt;</bpt>n<ept i="5">&lt;/g5&gt;</ept>보다 큰 소수가 있다고 주장하여 무한히 많은 소수가 있다고 말할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For example, you can use <bpt i="4" x="4">&lt;g4&gt;</bpt>cases<ept i="4">&lt;/g4&gt;</ept> and <bpt i="5" x="5">&lt;g5&gt;</bpt>constructor<ept i="5">&lt;/g5&gt;</ept> with an existential quantifier:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071910Z" creationid="tlqk35" creationdate="20220522T071910Z">
+        <seg>예를 들어, 여러분은<bpt i="4" x="4">&lt;g4&gt;</bpt>cases<ept i="4">&lt;/g4&gt;</ept>와 <bpt i="5" x="5">&lt;g5&gt;</bpt>constructor<ept i="5">&lt;/g5&gt;</ept>을 존재 정량자와 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1542,6 +1677,16 @@ list above.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170519Z" creationid="tlqk35" creationdate="20220321T170519Z">
         <seg>참고로 여기 위쪽의 리스트에서 가져온 유효성의 증명 예시가 두 개 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>For simple sugoals, it may not be worth selecting a subgoal using its
+tag, but you may still want to structure the proof.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061653Z" creationid="tlqk35" creationdate="20220522T061653Z">
+        <seg>간단한 하위목표에 대해 그것의 표식을 이용해 하위목표를 선택하는 것은 불필요할 수 있지만
+그래도 여러분은 여전히 증명을 구조화하길 원할지도 모릅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1801,6 +1946,14 @@ distributivity.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Here is another example:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072437Z" creationid="tlqk35" creationdate="20220522T072437Z">
+        <seg>여기 또 다른 예제가 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Here is another example: given any type <bpt i="1" x="1">&lt;g1&gt;</bpt>α<ept i="1">&lt;/g1&gt;</ept>, the type <bpt i="2" x="2">&lt;g2&gt;</bpt>List α<ept i="2">&lt;/g2&gt;</ept>
 denotes the type of lists of elements of type <bpt i="3" x="3">&lt;g3&gt;</bpt>α<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
@@ -1818,11 +1971,31 @@ denotes the type of lists of elements of type <bpt i="3" x="3">&lt;g3&gt;</bpt>�
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Here the <bpt i="1" x="1">&lt;g1&gt;</bpt>rewrite<ept i="1">&lt;/g1&gt;</ept> tactic, abbreviated <bpt i="2" x="2">&lt;g2&gt;</bpt>rw<ept i="2">&lt;/g2&gt;</ept>, uses <bpt i="3" x="3">&lt;g3&gt;</bpt>h<ept i="3">&lt;/g3&gt;</ept> to replace
+<bpt i="4" x="4">&lt;g4&gt;</bpt>x<ept i="4">&lt;/g4&gt;</ept> by <bpt i="5" x="5">&lt;g5&gt;</bpt>3<ept i="5">&lt;/g5&gt;</ept> again.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070102Z" creationid="tlqk35" creationdate="20220522T070016Z">
+        <seg>여기 <bpt i="1" x="1">&lt;g1&gt;</bpt>rewrite<ept i="1">&lt;/g1&gt;</ept> 전략은 <bpt i="2" x="2">&lt;g2&gt;</bpt>rw<ept i="2">&lt;/g2&gt;</ept>로 축약되었고, <bpt i="3" x="3">&lt;g3&gt;</bpt>h<ept i="3">&lt;/g3&gt;</ept>를 써서 <bpt i="4" x="4">&lt;g4&gt;</bpt>x<ept i="4">&lt;/g4&gt;</ept>가 다시 <bpt i="5" x="5">&lt;g5&gt;</bpt>3<ept i="5">&lt;/g5&gt;</ept>으로 바뀌게 했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Here the left arrow before <bpt i="1" x="1">&lt;g1&gt;</bpt>Nat.add_assoc<ept i="1">&lt;/g1&gt;</ept> tells rewrite to use the
 identity in the opposite direction.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T180724Z" creationid="tlqk35" creationdate="20220321T180724Z">
         <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Nat.add_assoc<ept i="1">&lt;/g1&gt;</ept> 앞의 왼쪽 화살표는 항등식을 반대 방향으로 사용해 다시쓰라고 말합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Here,
+<bpt i="3" x="3">&lt;g3&gt;</bpt>generalize<ept i="3">&lt;/g3&gt;</ept> replaces a goal that could be proved using
+<bpt i="4" x="4">&lt;g4&gt;</bpt>rfl<ept i="4">&lt;/g4&gt;</ept> with one that is not provable:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065254Z" creationid="tlqk35" creationdate="20220522T065254Z">
+        <seg>여기서 <bpt i="3" x="3">&lt;g3&gt;</bpt>generalize<ept i="3">&lt;/g3&gt;</ept>는 <bpt i="4" x="4">&lt;g4&gt;</bpt>rfl<ept i="4">&lt;/g4&gt;</ept>을 사용해 증명할 수 있는 목표를 
+증명가능하지 않은 것으로 바꿉니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1852,10 +2025,27 @@ element of the given type and may compromise logical consistency.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Here, the <bpt i="1" x="1">&lt;g1&gt;</bpt>constructor<ept i="1">&lt;/g1&gt;</ept> tactic leaves the first component of the
+existential assertion, the value of <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>, implicit.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072049Z" creationid="tlqk35" creationdate="20220522T072049Z">
+        <seg>여기서  <bpt i="1" x="1">&lt;g1&gt;</bpt>constructor<ept i="1">&lt;/g1&gt;</ept> 전략은 존재 가정의 첫 요소 암시적으로 <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>의 값으로 남깁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>How to deploy</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T172355Z" creationid="tlqk35" creationdate="20220321T172355Z">
         <seg>작동시키는 법</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>However, you can use the combinator <bpt i="1" x="1">&lt;g1&gt;</bpt>unhygienic<ept i="1">&lt;/g1&gt;</ept> to disable this restriction.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063341Z" creationid="tlqk35" creationdate="20220522T063253Z">
+        <seg>하지만 여러분은 <bpt i="1" x="1">&lt;g1&gt;</bpt>unhygienic<ept i="1">&lt;/g1&gt;</ept> 조합자를 사용해서 이 제한을 해제할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1940,6 +2130,17 @@ tactic applies reflexivity to prove it.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>If the proof is incomplete, the token <bpt i="3" x="3">&lt;g3&gt;</bpt>by<ept i="3">&lt;/g3&gt;</ept> is
+decorated with a red squiggly line, and the error message contains the
+remaining goals.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060519Z" creationid="tlqk35" creationdate="20220522T060519Z">
+        <seg>만일 증명이 불완전하다면, 토큰 <bpt i="3" x="3">&lt;g3&gt;</bpt>by<ept i="3">&lt;/g3&gt;</ept>은 빨간색 구불구불한 선으로 장식됩니다.
+그리고 오류 메시지가 남은 목표에 포함됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>If you are not used to thinking constructively, it may take some time
 for you to get a sense of where classical reasoning is used.</seg>
       </tuv>
@@ -1967,6 +2168,17 @@ have to close it using the same name.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>If you want
+to specify a witness to the existential quantifier explicitly, you can
+use the <bpt i="6" x="6">&lt;g6&gt;</bpt>exists<ept i="6">&lt;/g6&gt;</ept> tactic instead:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072410Z" creationid="tlqk35" creationdate="20220522T072410Z">
+        <seg>여러분이 명시적으로 존재정량자를 나타내 보도록하길 원한다면,
+대신<bpt i="6" x="6">&lt;g6&gt;</bpt>exists<ept i="6">&lt;/g6&gt;</ept> 전략을 사용하면 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Implicit Arguments</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T152413Z" creationid="tlqk35" creationdate="20220321T152413Z">
@@ -1985,11 +2197,32 @@ principle, two terms that reduce to the same value are called
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>In
+this case, however, <bpt i="5" x="5">&lt;g5&gt;</bpt>apply<ept i="5">&lt;/g5&gt;</ept> would work just as well.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055358Z" creationid="tlqk35" creationdate="20220522T055358Z">
+        <seg>하지만 이 경우 <bpt i="5" x="5">&lt;g5&gt;</bpt>apply<ept i="5">&lt;/g5&gt;</ept>도 마찬가지로 잘 작동할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>In <bpt i="1" x="1">&lt;g1&gt;</bpt>Chapter Inductive Types<ept i="1">&lt;/g1&gt;</ept>,
 we will explain <bpt i="2" x="2">&lt;g2&gt;</bpt>how<ept i="2">&lt;/g2&gt;</ept> equality is defined from the primitives of Lean's logical framework.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T175415Z" creationid="tlqk35" creationdate="20220321T175415Z">
         <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>유도형 장<ept i="1">&lt;/g1&gt;</ept>에서 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>어떻게<ept i="2">&lt;/g2&gt;</ept> 동등이 린의 기초적인 논리 프레임워크로부터 정의되는지 설명할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In Emacs, you can see the goal at the end of any
+line by pressing <bpt i="2" x="2">&lt;g2&gt;</bpt>C-c C-g<ept i="2">&lt;/g2&gt;</ept>, or see the remaining goal in an
+incomplete proof by putting the cursor after the first character of
+the last tactic.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055948Z" creationid="tlqk35" creationdate="20220522T055823Z">
+        <seg>Emacs에서 여러분은 임의의 줄의 끝에서 <bpt i="2" x="2">&lt;g2&gt;</bpt>C-c C-g<ept i="2">&lt;/g2&gt;</ept>을 눌러 목표를 볼 수 있습니다. 
+아니면 마지막 전략의 첫 문자 뒤에 커서를 놓으면 불완전한 증명에 대한 나머지 목표를 볼 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2017,6 +2250,27 @@ that the system should fill in the information automatically.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160647Z" creationid="tlqk35" creationdate="20220321T160647Z">
         <seg>린에서 <bpt i="2" x="2">&lt;g2&gt;</bpt>theorem<ept i="2">&lt;/g2&gt;</ept> 명령은 새로운 정리를 도입합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In VS Code, you can open
+a window to display messages by pressing <bpt i="1" x="1">&lt;g1&gt;</bpt>Ctrl-Shift-Enter<ept i="1">&lt;/g1&gt;</ept>, and
+that window will then show you the current goal whenever the cursor is
+in a tactic block.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055738Z" creationid="tlqk35" creationdate="20220522T055738Z">
+        <seg>VS Code에서 여러분은  <bpt i="1" x="1">&lt;g1&gt;</bpt>Ctrl-Shift-Enter<ept i="1">&lt;/g1&gt;</ept>을 눌러 메시지을 보고자 창을 열 수 있습니다. 
+그러면 이 창은 전략 블록 속의 커서가 어디에 있든지 간에 현재 목표를 여러분에게 보여줄 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In addition to <bpt i="1" x="1">&lt;g1&gt;</bpt>apply<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>exact<ept i="2">&lt;/g2&gt;</ept>, another useful tactic is
+<bpt i="3" x="3">&lt;g3&gt;</bpt>intro<ept i="3">&lt;/g3&gt;</ept>, which introduces a hypothesis.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062004Z" creationid="tlqk35" creationdate="20220522T062004Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>apply<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>exact<ept i="2">&lt;/g2&gt;</ept>에 더해 또 다른 유용한 전략은 가정을 도입하는 <bpt i="3" x="3">&lt;g3&gt;</bpt>intro<ept i="3">&lt;/g3&gt;</ept>입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2408,11 +2662,42 @@ and the Unicode symbol <bpt i="11" x="11">&lt;g11&gt;</bpt>→<ept i="11">&lt;/g
     <tu>
       <tuv xml:lang="en-US">
         <seg>In the
+next two examples, they are used to define functions which swap the
+components of the product and sum types:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072556Z" creationid="tlqk35" creationdate="20220522T072556Z">
+        <seg>다음 두 예제에서, 이들은 곱과 합 유형의 요소를 바꾸는 함수를 정의하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the
+previous example, the proper value of the metavariable is determined
+by the tactic <bpt i="3" x="3">&lt;g3&gt;</bpt>exact px<ept i="3">&lt;/g3&gt;</ept>, since <bpt i="4" x="4">&lt;g4&gt;</bpt>px<ept i="4">&lt;/g4&gt;</ept> has type <bpt i="5" x="5">&lt;g5&gt;</bpt>p x<ept i="5">&lt;/g5&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072240Z" creationid="tlqk35" creationdate="20220522T072240Z">
+        <seg>이전 예제에서 메타변수의 적절한 값은<bpt i="3" x="3">&lt;g3&gt;</bpt>exact px<ept i="3">&lt;/g3&gt;</ept> 전략에 의해 결정됩니다. 
+그 이유는 <bpt i="4" x="4">&lt;g4&gt;</bpt>px<ept i="4">&lt;/g4&gt;</ept>가 <bpt i="5" x="5">&lt;g5&gt;</bpt>p x<ept i="5">&lt;/g5&gt;</ept>형을 갖기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the
 second expression, <bpt i="6" x="6">&lt;g6&gt;</bpt>a<ept i="6">&lt;/g6&gt;</ept> is a variable, and the expression
 <bpt i="7" x="7">&lt;g7&gt;</bpt>fun a =&gt; t2<ept i="7">&lt;/g7&gt;</ept> has to make sense independently of the value of <bpt i="8" x="8">&lt;g8&gt;</bpt>a<ept i="8">&lt;/g8&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T145013Z" creationid="tlqk35" creationdate="20220321T145013Z">
         <seg>두 번째 표현식에서 <bpt i="6" x="6">&lt;g6&gt;</bpt>a<ept i="6">&lt;/g6&gt;</ept>는 변수이고 표현식 <bpt i="7" x="7">&lt;g7&gt;</bpt>fun a =&gt; t2<ept i="7">&lt;/g7&gt;</ept>는  <bpt i="8" x="8">&lt;g8&gt;</bpt>a<ept i="8">&lt;/g8&gt;</ept>의 값과 별개로 의미를 가져야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the case of the <bpt i="4" x="4">&lt;g4&gt;</bpt>apply<ept i="4">&lt;/g4&gt;</ept>
+tactic, the tags are inferred from the parameters names used in the
+<bpt i="5" x="5">&lt;g5&gt;</bpt>And.intro<ept i="5">&lt;/g5&gt;</ept> declaration.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061147Z" creationid="tlqk35" creationdate="20220522T061147Z">
+        <seg><bpt i="4" x="4">&lt;g4&gt;</bpt>apply<ept i="4">&lt;/g4&gt;</ept> 전략의 경우 표식은 <bpt i="5" x="5">&lt;g5&gt;</bpt>And.intro<ept i="5">&lt;/g5&gt;</ept>에서 사용된 매개변수의 이름으로부터 추론됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2489,6 +2774,15 @@ of <bpt i="3" x="3">&lt;g3&gt;</bpt>a<ept i="3">&lt;/g3&gt;</ept> in <bpt i="4" 
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T144938Z" creationid="tlqk35" creationdate="20220321T144938Z">
         <seg>첫 번째 표현식에서, 여러분은 <bpt i="4" x="4">&lt;g4&gt;</bpt>t2<ept i="4">&lt;/g4&gt;</ept>속 <bpt i="3" x="3">&lt;g3&gt;</bpt>a<ept i="3">&lt;/g3&gt;</ept>의 모든 개체를 <bpt i="5" x="5">&lt;g5&gt;</bpt>t1<ept i="5">&lt;/g5&gt;</ept>에 대한 문법적 약어로 생각해야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In the following example, the tactic <bpt i="2" x="2">&lt;g2&gt;</bpt>rename_i h1 _ h2<ept i="2">&lt;/g2&gt;</ept> renames two of the last three hypotheses in
+your context.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063649Z" creationid="tlqk35" creationdate="20220522T063649Z">
+        <seg>다음 예제에서는 <bpt i="2" x="2">&lt;g2&gt;</bpt>rename_i h1 _ h2<ept i="2">&lt;/g2&gt;</ept> 전략이 여러분의 상황 속 세 가정 중 마지막 두 개의 이름을 바꿉니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2598,6 +2892,26 @@ theory as well.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154806Z" creationid="tlqk35" creationdate="20220321T154806Z">
         <seg>지금까지, 여러분들은 린에서 객체와 함수를 정의하는 몇가지 방법을 배웠습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In this example, the <bpt i="1" x="1">&lt;g1&gt;</bpt>admit<ept i="1">&lt;/g1&gt;</ept> tactic is the analogue of the <bpt i="2" x="2">&lt;g2&gt;</bpt>sorry<ept i="2">&lt;/g2&gt;</ept>
+proof term.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065339Z" creationid="tlqk35" creationdate="20220522T065339Z">
+        <seg>이 예제에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>admit<ept i="1">&lt;/g1&gt;</ept> 전략은 증명항 <bpt i="2" x="2">&lt;g2&gt;</bpt>sorry<ept i="2">&lt;/g2&gt;</ept>와 유사합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>In this example, there is only one goal after the <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> tactic is
+applied, with <bpt i="2" x="2">&lt;g2&gt;</bpt>h : p ∧ q<ept i="2">&lt;/g2&gt;</ept> replaced by a pair of assumptions,
+<bpt i="3" x="3">&lt;g3&gt;</bpt>hp : p<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>hq : q<ept i="4">&lt;/g4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071237Z" creationid="tlqk35" creationdate="20220522T071237Z">
+        <seg>이 예제에서,<bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> 전략이 <bpt i="2" x="2">&lt;g2&gt;</bpt>h : p ∧ q<ept i="2">&lt;/g2&gt;</ept>에서 가정 
+<bpt i="3" x="3">&lt;g3&gt;</bpt>hp : p<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>hq : q<ept i="4">&lt;/g4&gt;</ept>을 적용한  이후에는 한 목표만 남습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2781,6 +3095,15 @@ the system, and applies commutativity wisely to avoid looping.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>It closes the current goal, producing the usual warning
+that <bpt i="3" x="3">&lt;g3&gt;</bpt>sorry<ept i="3">&lt;/g3&gt;</ept> has been used.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065446Z" creationid="tlqk35" creationdate="20220522T065446Z">
+        <seg>이것은 현재 목표를 마무리 짓고, <bpt i="3" x="3">&lt;g3&gt;</bpt>sorry<ept i="3">&lt;/g3&gt;</ept>를 사용했을 때처럼 경고를 만듭니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>It has
 the important property that every assertion respects the equivalence,
 in the sense that we can substitute equal expressions without changing
@@ -2808,6 +3131,18 @@ necessarily tell you which one is false:</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170025Z" creationid="tlqk35" creationdate="20220321T170025Z">
         <seg>다음 예제에서 이게 필요한데 왜냐하면 직관주의적 관점에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept> 둘 다 참이 아니라는 것을 아는 것은 여러분에게 반드시 어떤 것이 거짓이라는 것을 말해줄 필요는 없기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>It is also more robust than <bpt i="4" x="4">&lt;g4&gt;</bpt>apply<ept i="4">&lt;/g4&gt;</ept>, since the
+elaborator takes the expected type, given by the target of the goal,
+into account when processing the expression that is being applied.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055322Z" creationid="tlqk35" creationdate="20220522T055322Z">
+        <seg>이것은 <bpt i="4" x="4">&lt;g4&gt;</bpt>apply<ept i="4">&lt;/g4&gt;</ept>보다 더 강건합니다. 왜냐하면 
+협력기는 적용될 표현식을 처리할 때 목표의 대상에 의해 
+제시된 예상 유형을 받기를 기대하기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2857,12 +3192,32 @@ and we will use it often.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>It is good form to use
+it in a tactic proof, since its failure signals that something has
+gone wrong.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055131Z" creationid="tlqk35" creationdate="20220522T055131Z">
+        <seg>전략 증명모드에서 이것은 사용하기에 좋은 형태입니다. 
+왜냐하면 그것의 실패는 무언가 잘못되었음을 알려주기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>It is often possible to bring a component of a formula outside a
 universal quantifier, when it does not depend on the quantified
 variable.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T183811Z" creationid="tlqk35" creationdate="20220321T183811Z">
         <seg>식이 정량화된 변수에 의존하지 않을 때 종종 전칭 한정기호를 식의 바깥 쪽으로 가져올 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>It is represented
+by a metavariable, which should be instantiated later on.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072123Z" creationid="tlqk35" creationdate="20220522T072123Z">
+        <seg>이는 메타변수로 표현되며 나중에 반드시 개체화되어야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2924,6 +3279,14 @@ them.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T184630Z" creationid="tlqk35" creationdate="20220321T184630Z">
         <seg>결론을 현재 목표의 표현식과 통합하고 이후 인수가 종속되지 않는 한 나머지 인수에 대한 새 목표를 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>It will unify metavariables in the conclusion if necessary:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063004Z" creationid="tlqk35" creationdate="20220522T063004Z">
+        <seg>이것은 필요하다면 결론의 메타변수들을 통합할 것 입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3020,6 +3383,15 @@ language<ept i="1">&lt;/g1&gt;</ept>, which means that you can implement automat
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T131622Z" creationid="tlqk35" creationdate="20220321T131622Z">
         <seg>또한 Lean은 그 자체로 <bpt i="1" x="1">&lt;g1&gt;</bpt>메타프로그래밍 언어<ept i="1">&lt;/g1&gt;</ept>로 기능하는 작동 원리가 있어 자동화의 수행 및 Lean 자체로 그 기능을 확장할 수 있음을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Lean also provides
+the "bullet" notation <it pos="begin" x="1">&lt;g1&gt;</it>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061823Z" creationid="tlqk35" creationdate="20220522T061751Z">
+        <seg>린은 또 구조화한 증명에 대해 "bullet" 기호를 제공합니다.<it pos="begin" x="1">&lt;g1&gt;</it></seg>
       </tuv>
     </tu>
     <tu>
@@ -3330,6 +3702,14 @@ corrections, suggestions, examples, and text.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>More Tactics</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070126Z" creationid="tlqk35" creationdate="20220522T070126Z">
+        <seg>이 외의 전략들</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>More on the Proof Language</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T183223Z" creationid="tlqk35" creationdate="20220321T183223Z">
@@ -3365,6 +3745,16 @@ syntactic sugar for <bpt i="6" x="6">&lt;g6&gt;</bpt>Sort (u+1)<ept i="6">&lt;/g
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Moreover, Lean flags an error
+if the selected goal is not fully solved at the end of the <bpt i="2" x="2">&lt;g2&gt;</bpt>case<ept i="2">&lt;/g2&gt;</ept>
+block.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061544Z" creationid="tlqk35" creationdate="20220522T061544Z">
+        <seg>게다가 린은 선택된 목표가 <bpt i="2" x="2">&lt;g2&gt;</bpt>case<ept i="2">&lt;/g2&gt;</ept> 블록의 끝에서 완전히 풀리지 않았다면 오류를 표시합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Moreover, once we make this identification, the rules for implication
 show that we can pass back and forth between <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept> and
 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → q<ept i="2">&lt;/g2&gt;</ept>.</seg>
@@ -3393,11 +3783,27 @@ output indicates that the first argument is implicit.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Moving a hypothesis into the goal yields an implication:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064037Z" creationid="tlqk35" creationdate="20220522T064037Z">
+        <seg>가정을 목표 속으로 옮김으로써 함의를 얻습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Much of the background information you will
 need in order to do this is not specific to Lean at all.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T132021Z" creationid="tlqk35" creationdate="20220321T132021Z">
         <seg>이를 배우기 위해 필요한 대부분의 배경지식은 Lean으로만 국한되어 있지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Multiple tactic applications can be written in a single line by concatenating with a semicolon.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060802Z" creationid="tlqk35" creationdate="20220522T060802Z">
+        <seg>복수의 전략들은 세미콜론으로 연결한 한 줄에 작성될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3500,12 +3906,28 @@ for <bpt i="3" x="3">&lt;g3&gt;</bpt>Nat.left_distrib<ept i="3">&lt;/g3&gt;</ept
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Note that Lean hides the other goals inside the <bpt i="1" x="1">&lt;g1&gt;</bpt>case<ept i="1">&lt;/g1&gt;</ept> block.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061427Z" creationid="tlqk35" creationdate="20220522T061427Z">
+        <seg>린은 <bpt i="1" x="1">&lt;g1&gt;</bpt>case<ept i="1">&lt;/g1&gt;</ept>블록 안에 다른 목표를 숨긴 것을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Note that it is often useful to use numeric unicode subscripts,
 entered as <bpt i="1" x="1">&lt;g1&gt;</bpt>\0<ept i="1">&lt;/g1&gt;</ept>, <bpt i="2" x="2">&lt;g2&gt;</bpt>\1<ept i="2">&lt;/g2&gt;</ept>, <bpt i="3" x="3">&lt;g3&gt;</bpt>\2<ept i="3">&lt;/g3&gt;</ept>, ..., for hypotheses, as we did in
 this example.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161817Z" creationid="tlqk35" creationdate="20220321T161817Z">
         <seg>수치 유니코드 밑첨자를 사용하는 것은 종종 유용합니다. 이 예제에서 그런 것처럼 가정에 대해 <bpt i="1" x="1">&lt;g1&gt;</bpt>\0<ept i="1">&lt;/g1&gt;</ept>, <bpt i="2" x="2">&lt;g2&gt;</bpt>\1<ept i="2">&lt;/g2&gt;</ept>, <bpt i="3" x="3">&lt;g3&gt;</bpt>\2<ept i="3">&lt;/g3&gt;</ept>, ..., 으로 쳐서 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Note that names automatically generated by Lean are inaccessible by default.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063146Z" creationid="tlqk35" creationdate="20220522T063146Z">
+        <seg>린에 의해 자동으로 생성된 이름들은 기본적으로 접근할 수 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3527,6 +3949,14 @@ application; we could equally well have written <bpt i="6" x="6">&lt;g6&gt;</bpt
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T181633Z" creationid="tlqk35" creationdate="20220321T181633Z">
         <seg>익명 생성자 기호 <bpt i="5" x="5">&lt;g5&gt;</bpt>⟨w, hw.right, hw.left⟩<ept i="5">&lt;/g5&gt;</ept>가 중첩된 생성자 활용을 간략히 한다는 것을 주목하세요. 우리는 이를 <bpt i="6" x="6">&lt;g6&gt;</bpt>⟨w, ⟨hw.right, hw.left⟩⟩<ept i="6">&lt;/g6&gt;</ept>로 동등한 의미를 갖게 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Note that the syntax is similar to the one used in <bpt i="1" x="1">&lt;g1&gt;</bpt>match<ept i="1">&lt;/g1&gt;</ept> expressions.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070416Z" creationid="tlqk35" creationdate="20220522T070416Z">
+        <seg>문법이 <bpt i="1" x="1">&lt;g1&gt;</bpt>match<ept i="1">&lt;/g1&gt;</ept> 표현식에서의 것과 비슷함에 주목하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4355,6 +4785,15 @@ can write <bpt i="8" x="8">&lt;g8&gt;</bpt>fun x =&gt; g (f x)<ept i="8">&lt;/g8
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Some additional tactics are useful for constructing and destructing
+propositions and data.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070154Z" creationid="tlqk35" creationdate="20220522T070154Z">
+        <seg>몇 가지 추가적인 전략들은 명제와 데이터를 생성하고 파괴하는데 유용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Some mathematically common examples of operations of functions can be
 described in terms of lambda abstraction:</seg>
       </tuv>
@@ -4510,10 +4949,27 @@ is of <bpt i="10" x="10">&lt;g10&gt;</bpt>Sort 0<ept i="10">&lt;/g10&gt;</ept>, 
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Tactic commands can take compound expressions, not just single
+identifiers.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060558Z" creationid="tlqk35" creationdate="20220522T060558Z">
+        <seg>전략 명령은 하나의 식별자 뿐만 아니라 복합된 식을 받을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Tactics</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T184229Z" creationid="tlqk35" creationdate="20220321T184229Z">
         <seg>전략</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Tactics that may produce multiple subgoals often tag them.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060948Z" creationid="tlqk35" creationdate="20220522T060948Z">
+        <seg>다수의 하위 목표를 생성할 수 있는 전략은 이들에 표식을 붙입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4567,6 +5023,15 @@ properties above are stated for the natural numbers (type <bpt i="5" x="5">&lt;g
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The (unstructured) <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> is particularly useful when you can close several
+subgoals using the same tactic.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070730Z" creationid="tlqk35" creationdate="20220522T070730Z">
+        <seg>(비구조화된)<bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept>는 여러분이 여러 개의 하위목표를 같은 전략을 사용해 끝낼 때 특히 유용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>;<ept i="1">&lt;/g1&gt;</ept> can be omitted when a line break is used.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T144853Z" creationid="tlqk35" creationdate="20220321T144853Z">
@@ -4602,11 +5067,31 @@ function with zero or more arguments.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>assumption<ept i="1">&lt;/g1&gt;</ept> tactic looks through the assumptions in context of
+the current goal, and if there is one matching the conclusion, it
+applies it.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062935Z" creationid="tlqk35" creationdate="20220522T062815Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>assumption<ept i="1">&lt;/g1&gt;</ept> 전략은 현재 목표의 맥락 속 가정을 훝어 봅니다. 
+그리고 결론과 대응되는 가정이 있다면 그것을 목표에 적용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>calc<ept i="1">&lt;/g1&gt;</ept> command can be configured for any relation that supports
 some form of transitivity.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T180640Z" creationid="tlqk35" creationdate="20220321T180640Z">
         <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>calc<ept i="1">&lt;/g1&gt;</ept> 명령은 전달성의 몇몇 형태를 지원하는 어떤 관계에 대해서 설정될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> tactic can also be used to
+decompose a conjunction.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071059Z" creationid="tlqk35" creationdate="20220522T071059Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> 전략은 결합자를 분해하는데 사용될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4625,6 +5110,24 @@ it in the permanent context.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162659Z" creationid="tlqk35" creationdate="20220321T162659Z">
         <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>example<ept i="1">&lt;/g1&gt;</ept> 명령은 이름이 없이 영구적인 맥락으로 저장하지 않는 정리를 기술합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>intro<ept i="1">&lt;/g1&gt;</ept> command can more generally be used to introduce a variable of any type:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062210Z" creationid="tlqk35" creationdate="20220522T062210Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>intro<ept i="1">&lt;/g1&gt;</ept>명령은 폭넓게로는 임의 유형의 변수를 도입하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>intros<ept i="1">&lt;/g1&gt;</ept> tactic can be used without any arguments, in which
+case, it chooses names and introduces as many variables as it can.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062749Z" creationid="tlqk35" creationdate="20220522T062749Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>intros<ept i="1">&lt;/g1&gt;</ept> 전략은 어떠한 인수 없이도 사용될 수 있습니다. 
+가령, 그것은 이름을 선택할 수 있고, 원하는 한 많이 많은 변수를 도입할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4653,6 +5156,22 @@ context.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163700Z" creationid="tlqk35" creationdate="20220321T163700Z">
         <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>or-제거<ept i="1">&lt;/g1&gt;</ept> 규칙은 약간 더 복잡합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>repeat<ept i="1">&lt;/g1&gt;</ept> combinator can be used to apply a tactic several times.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063805Z" creationid="tlqk35" creationdate="20220522T063805Z">
+        <seg>조합자  <bpt i="1" x="1">&lt;g1&gt;</bpt>repeat<ept i="1">&lt;/g1&gt;</ept>는 한 전략을 여러 차례 적용하는데 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>rfl<ept i="1">&lt;/g1&gt;</ept> tactic is syntax sugar for <bpt i="2" x="2">&lt;g2&gt;</bpt>exact rfl<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063726Z" creationid="tlqk35" creationdate="20220522T063726Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>rfl<ept i="1">&lt;/g1&gt;</ept>은 <bpt i="2" x="2">&lt;g2&gt;</bpt>exact rfl<ept i="2">&lt;/g2&gt;</ept>에 대한 문법 설탕입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4696,6 +5215,28 @@ name.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The <bpt i="2" x="2">&lt;g2&gt;</bpt>cases<ept i="2">&lt;/g2&gt;</ept> tactic can be used to
+decompose any element of an inductively defined type; <bpt i="3" x="3">&lt;g3&gt;</bpt>constructor<ept i="3">&lt;/g3&gt;</ept>
+always applies the first applicable constructor of an inductively defined type.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071936Z" creationid="tlqk35" creationdate="20220522T071828Z">
+        <seg><bpt i="2" x="2">&lt;g2&gt;</bpt>cases<ept i="2">&lt;/g2&gt;</ept> 전략은 유도적으로 정의된 유형의 임의의 원소를 분해하는데 사용될 수 있습니다.
+<bpt i="3" x="3">&lt;g3&gt;</bpt>constructor<ept i="3">&lt;/g3&gt;</ept>는 항상 유도적으로 정의된 유형의 처음으로 활용할 수 있는 생성자에 적용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="2" x="2">&lt;g2&gt;</bpt>exact<ept i="2">&lt;/g2&gt;</ept>
+command is just a variant of <bpt i="3" x="3">&lt;g3&gt;</bpt>apply<ept i="3">&lt;/g3&gt;</ept> which signals that the
+expression given should fill the goal exactly.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T054950Z" creationid="tlqk35" creationdate="20220522T054950Z">
+        <seg><bpt i="2" x="2">&lt;g2&gt;</bpt>exact<ept i="2">&lt;/g2&gt;</ept>
+명령은 목표와 동일한 표현식임을 알리는 <bpt i="3" x="3">&lt;g3&gt;</bpt>apply<ept i="3">&lt;/g3&gt;</ept>의 변형일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The <bpt i="2" x="2">&lt;g2&gt;</bpt>match<ept i="2">&lt;/g2&gt;</ept>
 statement "destructs" the existential assertion into the components
 <bpt i="3" x="3">&lt;g3&gt;</bpt>w<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>hw<ept i="4">&lt;/g4&gt;</ept>, which can then be used in the body of the statement
@@ -4717,12 +5258,29 @@ explained momentarily.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The <bpt i="5" x="5">&lt;g5&gt;</bpt>constructor<ept i="5">&lt;/g5&gt;</ept> tactic applies the unique
+constructor for conjunction, <bpt i="6" x="6">&lt;g6&gt;</bpt>And.intro<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071324Z" creationid="tlqk35" creationdate="20220522T071324Z">
+        <seg><bpt i="5" x="5">&lt;g5&gt;</bpt>constructor<ept i="5">&lt;/g5&gt;</ept> 전략은 결합자 <bpt i="6" x="6">&lt;g6&gt;</bpt>And.intro<ept i="6">&lt;/g6&gt;</ept>에 대한 단일 생성자를 적용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The <bpt i="6" x="6">&lt;g6&gt;</bpt>#check<ept i="6">&lt;/g6&gt;</ept> command asks Lean to report their
 types; in Lean, auxiliary commands that query the system for
 information typically begin with the hash (#) symbol.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T135833Z" creationid="tlqk35" creationdate="20220321T135833Z">
         <seg><bpt i="6" x="6">&lt;g6&gt;</bpt>#check<ept i="6">&lt;/g6&gt;</ept> 명령은 린에게 그것의 유형을 보고하도록 요청합니다. 린에서 시스템에게 정보를 불러오는 보조 명령은 주로 해시(#) 기호로 시작합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="6" x="6">&lt;g6&gt;</bpt>rewrite<ept i="6">&lt;/g6&gt;</ept> tactic will be discussed below.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070109Z" creationid="tlqk35" creationdate="20220522T070050Z">
+        <seg><bpt i="6" x="6">&lt;g6&gt;</bpt>rewrite<ept i="6">&lt;/g6&gt;</ept>전략은 아래에서 더 논의할 것 입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4943,6 +5501,14 @@ the <bpt i="1" x="1">&lt;g1&gt;</bpt>Curry-Howard isomorphism<ept i="1">&lt;/g1&
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The first goal is met with the command <bpt i="1" x="1">&lt;g1&gt;</bpt>exact hp<ept i="1">&lt;/g1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T054825Z" creationid="tlqk35" creationdate="20220522T054825Z">
+        <seg>첫 번째 목표는 <bpt i="1" x="1">&lt;g1&gt;</bpt>exact hp<ept i="1">&lt;/g1&gt;</ept>명령으로 달성할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The first is to run it from the web: a Javascript version of Lean, a standard
 library of definitions and theorems, and an editor are actually downloaded to your browser and run there.</seg>
       </tuv>
@@ -4967,6 +5533,32 @@ first invocation to the second:</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T144414Z" creationid="tlqk35" creationdate="20220321T144414Z">
         <seg>다음은 주어진 함수를 첫번째 호출의 출력을 두번째에 전달하는 것으로 두 번 호출합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The following example uses the <bpt i="1" x="1">&lt;g1&gt;</bpt>intros<ept i="1">&lt;/g1&gt;</ept> command to introduce the three variables and two hypotheses automatically:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063054Z" creationid="tlqk35" creationdate="20220522T063054Z">
+        <seg>다음 예제는 <bpt i="1" x="1">&lt;g1&gt;</bpt>intros<ept i="1">&lt;/g1&gt;</ept> 명령을 사용해 세 개의 변수와 두 개의 가정을 자동으로 도입합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The following is a shorter version of the preceding
+proof:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060622Z" creationid="tlqk35" creationdate="20220522T060622Z">
+        <seg>다음은 이전의 증명보다 더 짧은 버전의 증명입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The following is a structured
+version of our first tactic proof in this chapter.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061249Z" creationid="tlqk35" creationdate="20220522T061249Z">
+        <seg>다음은 이 장의 첫번째 우리의 전략 증명의 구조화된 버전입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5163,6 +5755,24 @@ applying <bpt i="6" x="6">&lt;g6&gt;</bpt>Eq.subst<ept i="6">&lt;/g6&gt;</ept> f
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The mnemonic in the notation above is that you are generalizing the
+goal by setting <bpt i="1" x="1">&lt;g1&gt;</bpt>3<ept i="1">&lt;/g1&gt;</ept> to an arbitrary variable <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065006Z" creationid="tlqk35" creationdate="20220522T065006Z">
+        <seg>위의 표기에 대한 기억법은 여러분이 <bpt i="1" x="1">&lt;g1&gt;</bpt>3<ept i="1">&lt;/g1&gt;</ept>으로 설정한 목표을 임의의 변수 <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept>로 일반화시키는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The motivation is to
+ensure your tactic proofs do not rely on automatically generated names, and are consequently more robust.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063300Z" creationid="tlqk35" creationdate="20220522T063247Z">
+        <seg>그 이유는 여러분의 전략 증명이 자동으로 생성된 이름에 의존하지 않도록 보장하기 위함입니다. 그리고 그 결과로 증명은 더 튼튼하게 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The name <bpt i="1" x="1">&lt;g1&gt;</bpt>double<ept i="1">&lt;/g1&gt;</ept> is defined as a
 function that takes an input parameter <bpt i="2" x="2">&lt;g2&gt;</bpt>x<ept i="2">&lt;/g2&gt;</ept> of type <bpt i="3" x="3">&lt;g3&gt;</bpt>Nat<ept i="3">&lt;/g3&gt;</ept>, where the
 result of the call is <bpt i="4" x="4">&lt;g4&gt;</bpt>x + x<ept i="4">&lt;/g4&gt;</ept>, so it is returning type <bpt i="5" x="5">&lt;g5&gt;</bpt>Nat<ept i="5">&lt;/g5&gt;</ept>.</seg>
@@ -5178,6 +5788,14 @@ the web version, and is more flexible in other ways, too.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T131909Z" creationid="tlqk35" creationdate="20220321T131909Z">
         <seg>원본 버전은 웹 버전보다 더 빠르고 다른 방식보다 유연합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The new subgoals can be solved in any order.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070437Z" creationid="tlqk35" creationdate="20220522T070437Z">
+        <seg>새로운 하위 목표는 임의의 순서로 풀릴 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5606,6 +6224,14 @@ or software, network protocols, and mechanical and hybrid systems meet their spe
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170211Z" creationid="tlqk35" creationdate="20220321T170211Z">
         <seg>이것은 고전 추론 규칙이 필요합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>These tactics can be used on data just as well as propositions.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T072519Z" creationid="tlqk35" creationdate="20220522T072519Z">
+        <seg>이 전략들은 명제와 마찬가지로 데이터에 사용될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6182,6 +6808,17 @@ exercises at the end of this section.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>To preserve the validity of the previous
+goal, the <bpt i="4" x="4">&lt;g4&gt;</bpt>generalize<ept i="4">&lt;/g4&gt;</ept> tactic allows us to record the fact that
+<bpt i="5" x="5">&lt;g5&gt;</bpt>3<ept i="5">&lt;/g5&gt;</ept> has been replaced by <bpt i="6" x="6">&lt;g6&gt;</bpt>x<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T065607Z" creationid="tlqk35" creationdate="20220522T065607Z">
+        <seg>앞선 목표의 유효성을 보존하기 위해 <bpt i="4" x="4">&lt;g4&gt;</bpt>generalize<ept i="4">&lt;/g4&gt;</ept> 전략은 <bpt i="5" x="5">&lt;g5&gt;</bpt>3<ept i="5">&lt;/g5&gt;</ept>이 
+<bpt i="6" x="6">&lt;g6&gt;</bpt>x<ept i="6">&lt;/g6&gt;</ept>로 대체되었음에 대한 사실을 기록하게 해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>To some who take a constructive view of logic and mathematics,
 this is a faithful rendering of what it means to be a proposition: a
 proposition <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept> represents a sort of data type, namely, a
@@ -6294,6 +6931,14 @@ will depend on <bpt i="6" x="6">&lt;g6&gt;</bpt>x : α<ept i="6">&lt;/g6&gt;</ep
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T150420Z" creationid="tlqk35" creationdate="20220321T150420Z">
         <seg><bpt i="3" x="3">&lt;g3&gt;</bpt>section<ept i="3">&lt;/g3&gt;</ept>과는 달리, 이름공간은 이름이 필요합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Unsurprisingly, it produces exactly the same proof term.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T060658Z" creationid="tlqk35" creationdate="20220522T060658Z">
+        <seg>놀랄 것 없이, 이것은 정확히 동일한 증명항을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6543,6 +7188,15 @@ that follow.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>We say
+it is "focusing" on the selected goal.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061457Z" creationid="tlqk35" creationdate="20220522T061457Z">
+        <seg>우리는 이를 선택한 목표에 "초점을 맞췄다"고 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>We will describe proofs that consist of sequences of tactics as
 "tactic-style" proofs, to contrast with the ways of writing proof
 terms we have seen so far, which we will call "term-style"
@@ -6607,6 +7261,16 @@ quantifier.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T183122Z" creationid="tlqk35" creationdate="20220321T183122Z">
         <seg>다음은 존재 한정기호를 포함한 몇 가지 흔한 항등식들 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>What follows is an example
+of an identity from propositional logic that we proved in a previous
+chapter, now proved using tactics.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062113Z" creationid="tlqk35" creationdate="20220522T062113Z">
+        <seg>다음의 것은 전략을 사용해 증명할 이전 장에서 증명한 명제논리의 항등식의 예시들입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6740,6 +7404,15 @@ is similar to a function that swaps the elements of a pair.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>With these tactics, an
+example from the previous section can be rewritten as follows:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071358Z" creationid="tlqk35" creationdate="20220522T071358Z">
+        <seg>이 전략으로 이전 섹션의 예제를 다음과 같이 다시 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>With this reduction, there are two ways that a computer can help establish a claim: it can help
 find a proof in the first place, and it can help verify that a purported proof is correct.</seg>
       </tuv>
@@ -6791,6 +7464,15 @@ on the argument <bpt i="2" x="2">&lt;g2&gt;</bpt>α<ept i="2">&lt;/g2&gt;</ept>,
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T150838Z" creationid="tlqk35" creationdate="20220321T150838Z">
         <seg>여러분은 이것에 대한 멋진 예제를 보았습니다. 유형  <bpt i="1" x="1">&lt;g1&gt;</bpt>List α<ept i="1">&lt;/g1&gt;</ept> 는 인수 <bpt i="2" x="2">&lt;g2&gt;</bpt>α<ept i="2">&lt;/g2&gt;</ept>에 의존합니다. 여기서  <bpt i="3" x="3">&lt;g3&gt;</bpt>List Nat<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>List Bool<ept i="4">&lt;/g4&gt;</ept>을 구분하는 것은 이 의존입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You
+will see an example of this in a moment.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062825Z" creationid="tlqk35" creationdate="20220522T062806Z">
+        <seg>어느 때에 여러분은 이에 대한 예를 볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6847,12 +7529,55 @@ preferred way of testing your functions.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>You can also provide multiple alternatives like in the <bpt i="1" x="1">&lt;g1&gt;</bpt>match<ept i="1">&lt;/g1&gt;</ept> expression.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062637Z" creationid="tlqk35" creationdate="20220522T062637Z">
+        <seg>여러분은 <bpt i="1" x="1">&lt;g1&gt;</bpt>match<ept i="1">&lt;/g1&gt;</ept> 표현식에서처럼 여러 가지 변형들을 제공할 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can also revert multiple elements of the context at once:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064409Z" creationid="tlqk35" creationdate="20220522T064409Z">
+        <seg>여러분은 맥락 속 다수의 요소들을 한번에 되돌려 놓을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can also use a (unstructured) <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> without the <bpt i="2" x="2">&lt;g2&gt;</bpt>with<ept i="2">&lt;/g2&gt;</ept> and a tactic
+for each alternative.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070650Z" creationid="tlqk35" creationdate="20220522T070650Z">
+        <seg>여러분은 (비구조화된)<bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept>를 각각의 변형과 전략에 대해 <bpt i="2" x="2">&lt;g2&gt;</bpt>with<ept i="2">&lt;/g2&gt;</ept> 없이 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>You can also use the
 ASCII alternative <bpt i="5" x="5">&lt;g5&gt;</bpt>-&gt;<ept i="5">&lt;/g5&gt;</ept>, so the expressions <bpt i="6" x="6">&lt;g6&gt;</bpt>Nat -&gt; Nat<ept i="6">&lt;/g6&gt;</ept> and <bpt i="7" x="7">&lt;g7&gt;</bpt>Nat →
 Nat<ept i="7">&lt;/g7&gt;</ept> mean the same thing.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T140458Z" creationid="tlqk35" creationdate="20220321T140458Z">
         <seg>여러분은 ASCII 대체 표현으로 <bpt i="5" x="5">&lt;g5&gt;</bpt>-&gt;<ept i="5">&lt;/g5&gt;</ept>을 사용할 수 있습니다. 그래서 표현식 <bpt i="6" x="6">&lt;g6&gt;</bpt>Nat -&gt; Nat<ept i="6">&lt;/g6&gt;</ept>과 <bpt i="7" x="7">&lt;g7&gt;</bpt>Nat → Nat<ept i="7">&lt;/g7&gt;</ept>은 같은 식을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can also use the <bpt i="1" x="1">&lt;g1&gt;</bpt>rename_i<ept i="1">&lt;/g1&gt;</ept> tactic to rename the most recent inaccessible names in your context.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T063523Z" creationid="tlqk35" creationdate="20220522T063523Z">
+        <seg>혹은 <bpt i="1" x="1">&lt;g1&gt;</bpt>rename_i<ept i="1">&lt;/g1&gt;</ept> 전략으로 여러분의 상황에 가장 최근에 접속불가한 이름을 바꿀 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can also use the combinator <bpt i="1" x="1">&lt;g1&gt;</bpt>tac1 &lt;;&gt; tac2<ept i="1">&lt;/g1&gt;</ept> to apply <bpt i="2" x="2">&lt;g2&gt;</bpt>tac2<ept i="2">&lt;/g2&gt;</ept> to each
+subgoal produced by tactic <bpt i="3" x="3">&lt;g3&gt;</bpt>tac1<ept i="3">&lt;/g3&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T070932Z" creationid="tlqk35" creationdate="20220522T070932Z">
+        <seg>또 여러분은 조합자  <bpt i="1" x="1">&lt;g1&gt;</bpt>tac1 &lt;;&gt; tac2<ept i="1">&lt;/g1&gt;</ept>를 각각의 하위 목표가 만든
+ <bpt i="2" x="2">&lt;g2&gt;</bpt>tac2<ept i="2">&lt;/g2&gt;</ept>에 <bpt i="3" x="3">&lt;g3&gt;</bpt>tac1<ept i="3">&lt;/g3&gt;</ept>의 전략을 적용하여 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6869,6 +7594,14 @@ Nat<ept i="7">&lt;/g7&gt;</ept> mean the same thing.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T144834Z" creationid="tlqk35" creationdate="20220321T144834Z">
         <seg>여러분은 다수의 할당을 <bpt i="1" x="1">&lt;g1&gt;</bpt>let<ept i="1">&lt;/g1&gt;</ept> 구문으로 연결함으로써 결합할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can combine the unstructured <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> tactic with the <bpt i="2" x="2">&lt;g2&gt;</bpt>case<ept i="2">&lt;/g2&gt;</ept> and <bpt i="3" x="3">&lt;g3&gt;</bpt>.<ept i="3">&lt;/g3&gt;</ept> notation.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071028Z" creationid="tlqk35" creationdate="20220522T071028Z">
+        <seg>여러분은 비구조화된 <bpt i="1" x="1">&lt;g1&gt;</bpt>cases<ept i="1">&lt;/g1&gt;</ept> 전략을  <bpt i="2" x="2">&lt;g2&gt;</bpt>case<ept i="2">&lt;/g2&gt;</ept>와 <bpt i="3" x="3">&lt;g3&gt;</bpt>.<ept i="3">&lt;/g3&gt;</ept> 기호와 결합할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6907,6 +7640,15 @@ infer it.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>You can only <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept> an element of the local context, that is, a
+local variable or hypothesis.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T064550Z" creationid="tlqk35" creationdate="20220522T064550Z">
+        <seg>여러분은 국부적인 상황 속 요소 즉, 지역변수나 가정을 <bpt i="1" x="1">&lt;g1&gt;</bpt>revert<ept i="1">&lt;/g1&gt;</ept> 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>You can pass functions as parameters and by giving them names <bpt i="1" x="1">&lt;g1&gt;</bpt>f<ept i="1">&lt;/g1&gt;</ept>
 and <bpt i="2" x="2">&lt;g2&gt;</bpt>g<ept i="2">&lt;/g2&gt;</ept> you can then use those functions in the implementation:</seg>
       </tuv>
@@ -6938,6 +7680,32 @@ type <bpt i="1" x="1">&lt;g1&gt;</bpt>Type<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T141344Z" creationid="tlqk35" creationdate="20220321T141344Z">
         <seg>여러분도 보다시피 위 각각의 표현식은 <bpt i="1" x="1">&lt;g1&gt;</bpt>Type<ept i="1">&lt;/g1&gt;</ept> 유형입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can see the resulting proof term with the <bpt i="1" x="1">&lt;g1&gt;</bpt>#print<ept i="1">&lt;/g1&gt;</ept> command:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055446Z" creationid="tlqk35" creationdate="20220522T055446Z">
+        <seg>여러분은 <bpt i="1" x="1">&lt;g1&gt;</bpt>#print<ept i="1">&lt;/g1&gt;</ept> 명령으로 증명항의 결과를 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can solve the subgoal <bpt i="1" x="1">&lt;g1&gt;</bpt>right<ept i="1">&lt;/g1&gt;</ept> before <bpt i="2" x="2">&lt;g2&gt;</bpt>left<ept i="2">&lt;/g2&gt;</ept> using the <bpt i="3" x="3">&lt;g3&gt;</bpt>case<ept i="3">&lt;/g3&gt;</ept>
+notation</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061342Z" creationid="tlqk35" creationdate="20220522T061342Z">
+        <seg>여러분은 <bpt i="3" x="3">&lt;g3&gt;</bpt>case<ept i="3">&lt;/g3&gt;</ept>기호를 사용해서 하위목표 <bpt i="2" x="2">&lt;g2&gt;</bpt>left<ept i="2">&lt;/g2&gt;</ept>보다 먼저 <bpt i="1" x="1">&lt;g1&gt;</bpt>right<ept i="1">&lt;/g1&gt;</ept>을 풀 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can structure your tactics using the
+notation <bpt i="6" x="6">&lt;g6&gt;</bpt>case &lt;tag&gt; =&gt; &lt;tactics&gt;<ept i="6">&lt;/g6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T061221Z" creationid="tlqk35" creationdate="20220522T061221Z">
+        <seg>여러분은 여러분의 전략을 <bpt i="6" x="6">&lt;g6&gt;</bpt>case &lt;tag&gt; =&gt; &lt;tactics&gt;<ept i="6">&lt;/g6&gt;</ept>기호를 사용해 구조화할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6992,10 +7760,26 @@ dependent pair.</seg>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>You can use it to introduce several variables:</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T062237Z" creationid="tlqk35" creationdate="20220522T062237Z">
+        <seg>여러분은 몇 개의 변수들을 도입하는데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>You can use other more interesting expressions inside a <bpt i="1" x="1">&lt;g1&gt;</bpt>def<ept i="1">&lt;/g1&gt;</ept>:</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T144344Z" creationid="tlqk35" creationdate="20220321T144344Z">
         <seg>여러분은 다른 더 흥미로운 식을 <bpt i="1" x="1">&lt;g1&gt;</bpt>def<ept i="1">&lt;/g1&gt;</ept> 안에 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You can write a tactic script incrementally.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T055516Z" creationid="tlqk35" creationdate="20220522T055516Z">
+        <seg>여러분은 점진적으로 전략 스크립트를 쓸 수도 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7076,6 +7860,15 @@ theory<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T132230Z" creationid="tlqk35" creationdate="20220321T132230Z">
         <seg>여러분은 <bpt i="1" x="1">&lt;g1&gt;</bpt>의존 유형론<ept i="1">&lt;/g1&gt;</ept>에서 이를 지원하는 다양한 방법에 대해 배웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>You will see in <bpt i="1" x="1">&lt;g1&gt;</bpt>Chapter Inductive Types<ept i="1">&lt;/g1&gt;</ept> that
+these tactics are quite general.</seg>
+      </tuv>
+      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220522T071625Z" creationid="tlqk35" creationdate="20220522T071625Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>유도형 장<ept i="1">&lt;/g1&gt;</ept>에서 이 전략들은 꽤나 일반적임을 볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
