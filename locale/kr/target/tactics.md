@@ -548,10 +548,10 @@ def swap_sum : Sum α β → Sum β α := by
   . apply Sum.inl; assumption
 ```
 
-Note that up to the names we have chosen for the variables, the
-definitions are identical to the proofs of the analogous propositions
-for conjunction and disjunction. The ``cases`` tactic will also do a
-case distinction on a natural number:
+우리가 변수에 대한 이름을 선택하는 한 정의들은
+결합자와 분리자에 대한 유사한 명제의 증명과
+동일할 것임을 주목하세요. ``cases`` 전략은 자연수에 대해 경우를
+나눌 수도 있습니다.
 
 ```lean
 open Nat
@@ -561,10 +561,10 @@ example (P : Nat → Prop) (h₀ : P 0) (h₁ : ∀ n, P (succ n)) (m : Nat) : P
  | succ m' => exact h₁ m'
 ```
 
-The ``cases`` tactic, and its companion, the ``induction`` tactic, are discussed in greater detail in
-the [Tactics for Inductive Types](./inductive_types.md#tactics_for_inductive_types) section.
+``cases`` 전략 그리고 그것의 동반자인 ``induction`` 전략은
+[Tactics for Inductive Types](./inductive_types.md#tactics_for_inductive_types)  섹션에서 더욱 상세히 논의될 예정입니다.
 
-The ``contradiction`` tactic searches for a contradiction among the hypotheses of the current goal:
+``contradiction`` 전략은 현재 목표의 가정 사이에 모순을 탐색합니다.
 
 ```lean
 example (p q : Prop) : p ∧ ¬ p → q := by
@@ -573,7 +573,7 @@ example (p q : Prop) : p ∧ ¬ p → q := by
   contradiction
 ```
 
-You can also use ``match`` in tactic blocks.
+여러분은 전략 블록에서 ``match`` 를 사용할 수 있습니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -588,7 +588,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
     | Or.inr ⟨hp, hr⟩ => constructor; exact hp; apply Or.inr; exact hr
 ```
 
-You can "combine" ``intro h`` with ``match h ...`` and write the previous examples as follows
+여러분은 ``intro h``에  ``match h ...``을 "결합"할 수 있고 이전 예제를 다음과 같이 썼습니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -602,22 +602,17 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
 
 ```
 
-Structuring Tactic Proofs
+전략 증명 구조화하기
 -------------------------
 
-Tactics often provide an efficient way of building a proof, but long
-sequences of instructions can obscure the structure of the
-argument. In this section, we describe some means that help provide
-structure to a tactic-style proof, making such proofs more readable
-and robust.
+전략들은 종종 증명을 세우는데 효율적인 방식을 제공합니다. 그러나
+지시사항들의 긴 나열은 인수(argument)의 구조를 모호하게 할 수 있습니다. 이 섹션에서 우리는 더욱 가독성있고 강건한 전략 스타일의 증명을 만들 구조를
+제공하도록 돕는 몇몇 수단을 설명할 것 입니다.
 
-One thing that is nice about Lean's proof-writing syntax is that it is
-possible to mix term-style and tactic-style proofs, and pass between
-the two freely. For example, the tactics ``apply`` and ``exact``
-expect arbitrary terms, which you can write using ``have``, ``show``,
-and so on. Conversely, when writing an arbitrary Lean term, you can
-always invoke the tactic mode by inserting a ``by``
-block. The following is a somewhat toy example:
+Lean의 증명 작성 문법에 대해 좋은 점은 항 스타일과 전략 스타일의 증명을 섞고,
+ 이들 사이를 자유로이 왕래할 수 있다는 것입니다. 예를 들어 ``apply`` 와``exact`` 전략은
+``have``, ``show`` 등등을 사용해 만든 임의의 항을 기대합니다. 반대로 임의의 Lean 항을 작성했다면 ``by`` 블럭을 삽입하는 것으로
+전략모드를 불러올 수 있습니다. 다음은 약간 간단한 예제입니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
@@ -631,7 +626,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
       | inr hr => exact Or.inr ⟨hp, hr⟩
 ```
 
-The following is a more natural example:
+다음은 더 자연스러운 예제입니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -646,10 +641,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
     | inr hpr => exact ⟨hpr.left, Or.inr hpr.right⟩
 ```
 
-In fact, there is a ``show`` tactic, which is similar to the
-``show`` expression in a proof term. It simply declares the type of the
-goal that is about to be solved, while remaining in tactic
-mode.
+사실 증명항에서 ``show`` 표현식과 비슷한 ``show`` 전략이 있습니다. 전략모드에 남아있는 동안 이것는 단순히 막 풀리려고 하는 목표의 유형을 선언합니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -672,7 +664,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
       exact ⟨hpr.left, Or.inr hpr.right⟩
 ```
 
-The ``show`` tactic can actually be used to rewrite a goal to something definitionally equivalent:
+``show`` 전략은 실제로 무언가 정의 상으로 동등한 목표를 다시 쓰는데 사용될 수 있습니다.
 
 ```lean
 example (n : Nat) : n + 1 = Nat.succ n := by
@@ -680,7 +672,7 @@ example (n : Nat) : n + 1 = Nat.succ n := by
   rfl
 ```
 
-There is also a ``have`` tactic, which introduces a new subgoal, just as when writing proof terms:
+증명항을 작성할 때처럼 ``have`` 전략은 새로운 하위목표를 도입합니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
@@ -697,8 +689,8 @@ example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
     exact hpr
 ```
 
-As with proof terms, you can omit the label in the ``have`` tactic, in
-which case, the default label ``this`` is used:
+증명항과 마찬가지로 여러분은  ``have`` 전략 속에 레이블을 생략할 수 있습니다. 그 경우
+기본 레이블로 ``this``가 사용됩니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
@@ -715,10 +707,9 @@ example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
     exact this
 ```
 
-The types in a ``have`` tactic can be omitted, so you can write ``have
-hp := h.left`` and ``have hqr := h.right``.  In fact, with this
-notation, you can even omit both the type and the label, in which case
-the new fact is introduced with the label ``this``.
+``have`` 전략에서 유형은 생략될 수 있습니다. 그래서 여러분은  ``have
+hp := h.left``과 ``have hqr := h.right``을 쓸 수 있습니다.  사실 이 기호와 관련해서 여러분은 심지어 유형과 레이블 모두 생략할 수 있습니다.
+그 경우 새로운 사실은 ``this`` 레이블로 도입됩니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
@@ -732,10 +723,8 @@ example (p q r : Prop) : p ∧ (q ∨ r) → (p ∧ q) ∨ (p ∧ r) := by
     apply Or.inr; exact this
 ```
 
-Lean also has a ``let`` tactic, which is similar to the ``have``
-tactic, but is used to introduce local definitions instead of
-auxiliary facts. It is the tactic analogue of a ``let`` in a proof
-term.
+Lean은 또 ``have``전략과 유사한 ``let`` 전략을 갖고 있습니다.
+그러나 이것은 부가적인 사실 대신 지역 정의를 도입하는데 사용됩니다. 이것은 증명항에서 ``let``과 유사한 전략입니다.
 
 ```lean
 example : ∃ x, x + 2 = 8 := by
@@ -744,18 +733,10 @@ example : ∃ x, x + 2 = 8 := by
   rfl
 ```
 
-As with ``have``, you can leave the type implicit by writing ``let a
-:= 3 * 2``. The difference between ``let`` and ``have`` is that
-``let`` introduces a local definition in the context, so that the
-definition of the local declaration can be unfolded in the proof.
+``have``처럼 여러분은  ``let a:= 3 * 2``와 같이 작성하여 유형을 암시적으로 정해지게 둘 수 있습니다.  ``let``과 ``have`` 사이의 차이는 ``let``은 맥락 속에 지역 정의를 도입하여
+지역 선언의 정의가 증명속에 접힌채로 될 수 있게 합니다.
 
-We have used ``.`` to create nested tactic blocks.  In a nested block,
-Lean focuses on the first goal, and generates an error if it has not
-been fully solved at the end of the block. This can be helpful in
-indicating the separate proofs of multiple subgoals introduced by a
-tactic. The notation ``.`` is whitespace sensitive and relies on the indentation
-to detect whether the tactic block ends. Alternatively, you can
-define tactic blocks usind curly braces and semicolons.
+우리는 중첩된 전략 블럭을 만드는데 ``.``를 사용해왔습니다.  중첩된 블럭 속에 Lean은 첫번째 목표에 집중하고 블록 끝에서도 완전히 풀리지 않는다면 오류를 발생시킵니다. 이는 전략에 의해 생긴 다수의 하위 목표를의 증명을 나누는 것을 지칭하는데 유용할 수 있습니다. ``.`` 표기는 화이트 스페이스(space key)에 민감하고 전략 블럭의 끝인지 감지하기 위해 인덴트(4개의 빈칸, tab key)에 의존합니다. 대신 여러분은 전략 블럭을 중괄호와 세미콜론을 사용해 전략 블록을 정의할 수 있습니다.
 
 ```lean
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
@@ -776,11 +757,9 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
       exact ⟨hpr.left, Or.inr hpr.right⟩ } }
 ```
 
-It useful to use indendation to structure proof: every time a tactic
-leaves more than one subgoal, we separate the remaining subgoals by
-enclosing them in blocks and indenting.  Thus if the application of
-theorem ``foo`` to a single goal produces four subgoals, one would
-expect the proof to look like this:
+구조화된 증명에 인덴트를 사용하는 것은 유용합니다. 매번 전략은 한 개 이상의 하위 목표를 남겨두므로
+우리는 블럭과 인덴트로 그들을 담아  남은 하위목표와 분리할 수 있습니다.  따라서 ``foo`` 정리를 한 목표에 적용하여 네 개의 하위 목표를 만들려고 한다면
+누군가는 이 같은 증명을 기대할 것입니다.
 
 ```
   apply foo
@@ -814,39 +793,36 @@ or
 Tactic Combinators
 ------------------
 
-*Tactic combinators* are operations that form new tactics from old
-ones. A sequencing combinator is already implicit in the ``by`` block:
+*Tactic combinators*은 이전의 전략으로부터 새로운 전략을 만드는 연산자들 입니다. 순차 조합자는 ``by`` 블럭에 이미 암시적으로 있습니다.
 
 ```lean
 example (p q : Prop) (hp : p) : p ∨ q :=
   by apply Or.inl; assumption
 ```
 
-Here, ``apply Or.inl; assumption`` is functionally equivalent to a
-single tactic which first applies ``apply Or.inl`` and then applies
-``assumption``.
+여기  ``apply Or.inl; assumption``는 기능적으로 ``apply Or.inl``을
+적용한 뒤 ``assumption``을 적용한 한 개의 전략과 동등합니다.
 
-In ``t₁ <;> t₂``, the ``<;>`` operator provides a *parallel* version of the sequencing operation:
-``t₁`` is applied to the current goal, and then ``t₂`` is applied to *all* the resulting subgoals:
+``t₁ <;> t₂``에서 ``<;>`` 연산자는 순차 연산의 버전에 대해 *parallel*을 제공합니다.
+``t₁``는 현재 목표에 적용되고 그 후  ``t₂``은 출력되는 하위목표 *all*에 적용됩니다.
 
 ```lean
 example (p q : Prop) (hp : p) (hq : q) : p ∧ q :=
   by constructor <;> assumption
 ```
 
-This is especially useful when the resulting goals can be finished off
-in a uniform way, or, at least, when it is possible to make progress
-on all of them uniformly.
+이는 특히 출력되는 목표가 균일한 방식으로 마무리 될 때 혹은 적어도
+출력목표가 모두를 균일한 방식으로 진전을 만드는게 가능할 때 유용합니다.
 
-The ``first | t₁ | t₂ | ... | tₙ`` applies each `tᵢ` until one succeeds, or else fails:
+ ``first | t₁ | t₂ | ... | tₙ``은 각각의  `tᵢ`에 대해 이 중 하나가 성공하거나 실패할 때까지 적용됩니다.
 
 ```lean
 example (p q : Prop) (hp : p) : p ∨ q := by
   first | apply Or.inl; assumption | apply Or.inr; assumption
 ```
 
-In the first example, the left branch succeeds, whereas in the second one, it is the right one that succeeds.
-In the next three examples, the same compound tactic succeeds in each case.
+첫 예제에서 왼쪽 분기는 성공했습니다. 반면 두번째에서 성공한 것은 오른쪽의 것입니다.
+다음 세 예제에서 동일한 복합 전략은 각 경우에서 성공합니다.
 
 ```lean
 example (p q r : Prop) (hp : p) : p ∨ q ∨ r :=
@@ -859,33 +835,24 @@ example (p q r : Prop) (hr : r) : p ∨ q ∨ r :=
   by repeat (first | apply Or.inl; assumption | apply Or.inr | assumption)
 ```
 
-The tactic tries to solve the left disjunct immediately by assumption;
-if that fails, it tries to focus on the right disjunct; and if that
-doesn't work, it invokes the assumption tactic.
+전략은 왼쪽의 분리자를 가정으로부터 즉시 풀려고 합니다.
+만약 실패하면 이것은 오른쪽 분리자에 초점을 맞춰 시도합니다. 그리고
+이게 성공하지 못하면, 가정 전략을 불러옵니다.
 
-You will have no doubt noticed by now that tactics can fail. Indeed,
-it is the "failure" state that causes the *first* combinator to
-backtrack and try the next tactic. The ``try`` combinator builds a
-tactic that always succeeds, though possibly in a trivial way:
-``try t`` executes ``t`` and reports success, even if ``t`` fails. It is
-equivalent to ``first | t | skip``, where ``skip`` is a tactic that does
-nothing (and succeeds in doing so). In the next example, the second
-``constructor`` succeeds on the right conjunct ``q ∧ r`` (remember that
-disjunction and conjunction associate to the right) but fails on the
-first. The ``try`` tactic ensures that the sequential composition
-succeeds.
+여러분은 이제 의심의 여지없이 전략은 실패할 것임을 눈치챌 것입니다. 당연히 *first* 조합자가 원래대로 돌아와 다음 전략을 시도하도록 하는 "실패" 상태입니다. 대개 명백한 방식일지라도 ``try`` 조합자는  항상 성공하는 전략을 만들고,
+``t``가 실패했음에도 ``try t``는 ``t``를 실행하고 성공을 보고합니다. 이는 ``first | t | skip``과 동일합니다. 여기서 ``skip``은
+아무것도 하지 않는(그리고 그것의 실행에서 성공하는) 전략입니다. 다음 예제에서 두 번째 ``constructor``는 오른쪽 결합자 ``q ∧ r``(분리자와
+결합자는 오른쪽 결합성을 가짐을 기억하세요.)에서 성공합니다. 그러나 첫 번째에서는 실패합니다. ``try`` 전략은 순차적인 함성 성공을 보장합니다.
 
 ```lean
 example (p q r : Prop) (hp : p) (hq : q) (hr : r) : p ∧ q ∧ r := by
   constructor <;> (try constructor) <;> assumption
 ```
 
-Be careful: ``repeat (try t)`` will loop forever, because the inner tactic never fails.
+조심하세요. ``repeat (try t)``는 내부 전략은 항상 실패하기 때문에 무한루프를 돌 것입니다.
 
-In a proof, there are often multiple goals outstanding. Parallel
-sequencing is one way to arrange it so that a single tactic is applied
-to multiple goals, but there are other ways to do this. For example,
-``all_goals t`` applies ``t`` to all open goals:
+증명에서 종종 두드러진 다수의 목표들이 있습니다. 병렬은 이를 배열하는 한 방법이므로 하나의 전략이 다수의 목표에 적용될 수 있습니다.
+그러나 이를 할 수 있는 다른 방식들이 있습니다. 예를 들어 ``all_goals t``는 모든 끝나지 않은 목표에 ``t``를 적용합니다.
 
 ```lean
 example (p q r : Prop) (hp : p) (hq : q) (hr : r) : p ∧ q ∧ r := by
@@ -894,9 +861,9 @@ example (p q r : Prop) (hp : p) (hq : q) (hr : r) : p ∧ q ∧ r := by
   all_goals assumption
 ```
 
-In this case, the ``any_goals`` tactic provides a more robust solution.
-It is similar to ``all_goals``, except it fails unless its argument
-succeeds on at least one goal.
+여기서 ``any_goals`` 전략은 더 강건한 답을 제공합니다.
+``any_goals``은 그것의 인자가 적어도 한 목표에 대해서도 성공하지 않는
+한 실패하는 경우를 제외하고 ``all_goals``과 유사합니다.
 
 ```lean
 example (p q r : Prop) (hp : p) (hq : q) (hr : r) : p ∧ q ∧ r := by
@@ -905,8 +872,7 @@ example (p q r : Prop) (hp : p) (hq : q) (hr : r) : p ∧ q ∧ r := by
   any_goals assumption
 ```
 
-The first tactic in the ``by`` block below repeatedly splits
-conjunctions:
+ ``by`` 블럭 아래에 첫 번째 전략은 반복적으로 결합자를 나눕니다.
 
 ```lean
 example (p q r : Prop) (hp : p) (hq : q) (hr : r) :
@@ -915,7 +881,7 @@ example (p q r : Prop) (hp : p) (hq : q) (hr : r) :
   all_goals assumption
 ```
 
-In fact, we can compress the full tactic down to one line:
+사실, 우리는 완전한 전략을 한 줄로 압축시킬 수 있습니다.
 
 ```lean
 example (p q r : Prop) (hp : p) (hq : q) (hr : r) :
@@ -923,28 +889,21 @@ example (p q r : Prop) (hp : p) (hq : q) (hr : r) :
   repeat (any_goals (first | constructor | assumption))
 ```
 
-The combinator ``focus t`` ensures that ``t`` only effects the current
-goal, temporarily hiding the others from the scope. So, if ``t``
-ordinarily only effects the current goal, ``focus (all_goals t)`` has
-the same effect as ``t``.
+결합자 ``focus t``은 일시적으로 범위로부터 다른 것들을 숨겨 ``t``가 오직 현재 목표에만 영향을 끼침을 보장합니다. 그래서 만약 ``t``이 똑같이 현재 목표에만 영향을 미친다면
+``focus (all_goals t)``은 ``t``와 같은 효과를 갖습니다.
 
-Rewriting
+다시쓰기
 ---------
 
-The ``rewrite`` tactic (abbreviated ``rw``) and the ``simp`` tactic
-were introduced briefly in [Calculational Proofs](./quantifiers_and_equality.md#calculational_proofs). In this
-section and the next, we discuss them in greater detail.
+ (``rw``로 축약되는)``rewrite`` 전략과 ``simp``전략은
+[Calculational Proofs](./quantifiers_and_equality.md#calculational_proofs)에 간략히 도입되었습니다. 이 섹션과 다음에서 우리는 이들에 대해 더 자세히 논의할 것입니다.
 
-The ``rewrite`` tactic provides a basic mechanism for applying
-substitutions to goals and hypotheses, providing a convenient and
-efficient way of working with equality. The most basic form of the
-tactic is ``rewrite [t]``, where ``t`` is a term whose type asserts an
-equality. For example, ``t`` can be a hypothesis ``h : x = y`` in the
-context; it can be a general lemma, like
-``add_comm : ∀ x y, x + y = y + x``, in which the rewrite tactic tries to find suitable
-instantiations of ``x`` and ``y``; or it can be any compound term
-asserting a concrete or general equation. In the following example, we
-use this basic form to rewrite the goal using a hypothesis.
+동등성에 대해 편리하고 효율적인 방식을 제공하면서
+``rewrite`` 전략은 목표와 가정에 치환을 적용하는 기본적인 작동원리를 제공합니다. 전략의 가장 기본적인 형태는 ``rewrite [t]``입니다.
+여기서 ``t``는 동등석을 주장하는 유형의 항입니다. 예를 들어 ``t``는 맥락 속에서 가정 ``h : x = y``이 될 수 있습니다.
+그것은 ``add_comm : ∀ x y, x + y = y + x``같은 일반적인 보조정리일 수 있고,
+여기서 다시쓰기 전략은 ``x``와 ``y`` 적절한 개체화를 발견하려고 노력합니다.
+아니면 이것은 일반적인 방정식 혹은 구체적인 방정식을 주장하는 임의의 복합적인 항이 될 수도 있습니다. 다음 예제에서 우리는 이 기본 형태를 가정을 사용하여 목표를 다시 쓰는데 사용합니다.
 
 ```lean
 example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 := by
@@ -952,10 +911,8 @@ example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 :=
   rw [h₁] -- replace f 0 with 0
 ```
 
-In the example above, the first use of ``rw`` replaces ``k`` with
-``0`` in the goal ``f k = 0``. Then, the second one replaces ``f 0``
-with ``0``. The tactic automatically closes any goal of the form
-``t = t``. Here is an example of rewriting using a compound expression:
+다음 예제에서 ``rw``의 첫 번째 사용은 목표 ``f k = 0``에서
+``k``를 ``0``으로 대체합니다. 그런 뒤 두 번째 것은 ``f 0``을 ``0``으로 대체합니다. 전략은 자동적으로 ``t = t``꼴의 임의의 목표를 자동적으로 마무리짓습니다. 여기서 복합 표현식을 사용하는 다시쓰기의 예제가 있습니다.
 
 ```lean
 example (x y : Nat) (p : Nat → Prop) (q : Prop) (h : q → x = y)
@@ -963,36 +920,28 @@ example (x y : Nat) (p : Nat → Prop) (q : Prop) (h : q → x = y)
   rw [h hq]; assumption
 ```
 
-Here, ``h hq`` establishes the equation ``x = y``. The parentheses
-around ``h hq`` are not necessary, but we have added them for clarity.
+여기서 ``h hq``가 방정식 ``x = y``을 세웁니다. ``h hq`` 주위의 괄호는 필요하지 않습니다만 우리는 명황성을 이해 이들을 추가했습니다.
 
-Multiple rewrites can be combined using the notation ``rw [t_1, ..., t_n]``,
-which is just shorthand for ``rw t_1; ...; rw t_n``. The previous example can be written as follows:
+다수의 다시쓰기는 ``rw [t_1, ..., t_n]`` 표기을 사용해 결합될 수 있습니다.
+이것은 ``rw t_1; ...; rw t_n``의 축약된 겁니다. 다음 예제는 다음과 같이 쓰일 수 있습니다.
 
 ```lean
 example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 := by
   rw [h₂, h₁]
 ```
 
-By default, ``rw`` uses an equation in the forward direction, matching
-the left-hand side with an expression, and replacing it with the
-right-hand side. The notation ``←t`` can be used to instruct the
-tactic to use the equality ``t`` in the reverse direction.
+기본적으로 ``rw``은 표현식의 좌변과 일치하면 좌변을 우변으로 대체하여 앞방향으로 방정식을 사용합니다. ``←t`` 기호는 역방향으로 등식 ``t``을 사용하도록 전략에게 지시하는데 사용될 수 있습니다.
 
 ```lean
 example (f : Nat → Nat) (a b : Nat) (h₁ : a = b) (h₂ : f a = 0) : f b = 0 := by
   rw [←h₁, h₂]
 ```
 
-In this example, the term ``←h₁`` instructs the rewriter to replace
-``b`` with ``a``. In the editors, you can type the backwards arrow as
-``\l``. You can also use the ascii equivalent, ``<-``.
+이 예제에서 항 ``←h₁``은 ``b``를 ``a``로 대체하도록 다시쓰기에게 지시합니다. 편집자에게 여러분은 뒷방향 화상표를 이와 같이 칠 수 있습니다.
+``\l`` 여러분은 아스키 등가 ``<-``를 사용하는데 사용될 수 있습니다.
 
-Sometimes the left-hand side of an identity can match more than one
-subterm in the pattern, in which case the ``rw`` tactic chooses the
-first match it finds when traversing the term. If that is not the one
-you want, you can use additional arguments to specify the appropriate
-subterm.
+때때로 항등식의 좌변은 패턴의 한개 이상의 부분항과 동일할 수 있습니다.
+그 경우 ``rw`` 전략은 항들을 가로지면서 처음 일치하는 것을 찾고 선택합니다. 만약 이게 여러분이 원한 것이 아니라면 여러분은 추가 인수를 사용해 적절한 부분항을 명시할 수 있습니다.
 
 ```lean
 example (a b c : Nat) : a + b + c = a + c + b := by
@@ -1005,19 +954,11 @@ example (a b c : Nat) : a + b + c = a + c + b := by
   rw [Nat.add_assoc, Nat.add_assoc, Nat.add_comm _ b]
 ```
 
-In the first example above, the first step rewrites ``a + b + c`` to
-``a + (b + c)``. Then next applies commutativity to the term
-``b + c``; without specifying the argument, the tactic would instead rewrite
-``a + (b + c)`` to ``(b + c) + a``. Finally, the last step applies
-associativity in the reverse direction rewriting ``a + (c + b)`` to
-``a + c + b``. The next two examples instead apply associativity to
-move the parenthesis to the right on both sides, and then switch ``b``
-and ``c``. Notice that the last example specifies that the rewrite
-should take place on the right-hand side by specifying the second
-argument to ``Nat.add_comm``.
+첫 예제에서 처음 절차는 ``a + b + c``을 ``a + (b + c)``으로 다시 씁니다. 그 뒤 항 ``b + c``에 교환성을 적용합니다 .
+인수의 명시 없이 전략은 ``a + (b + c)``에서 ``(b + c) + a``으로 다시 쓸 겁니다. 마침내 마지막 단계는 ``a + (c + b)``에서 ``a + c + b``으로 다시쓰기를 역방향으로 결합성을 적용합니다. 다음 두 예제는 결합성을 적용하는 대신 괄호를 오른쪽으로 옮깁니다. 그리고 ``b``와 ``c``를 교환합니다. 마지막 예제는  ``Nat.add_comm``의
+두 번째 인수를 명시함으로써 우변에 다시쓰기가 있어야 합니다.
 
-By default, the ``rewrite`` tactic affects only the goal. The notation
-``rw [t] at h`` applies the rewrite ``t`` at hypothesis ``h``.
+기본적으로 ``rewrite`` 전략은 목표에만 영향을 미칩니다. ``rw [t] at h`` 표기는 가정 ``h``에 ``t``에 다시쓰기를 적용합니다.
 
 ```lean
 example (f : Nat → Nat) (a : Nat) (h : a + 0 = 0) : f a = f 0 := by
@@ -1025,11 +966,11 @@ example (f : Nat → Nat) (a : Nat) (h : a + 0 = 0) : f a = f 0 := by
   rw [h]
 ```
 
-The first step, ``rw [Nat.add_zero] at h``, rewrites the hypothesis ``a + 0 = 0`` to ``a = 0``.
-Then the new hypothesis ``a = 0`` is used to rewrite the goal to ``f 0 = f 0``.
+첫 단계는 ``rw [Nat.add_zero] at h``는 가정 ``a + 0 = 0``을 ``a = 0``으로 다시 씁니다.
+그 뒤 새로운 가정 ``a = 0`` 가 목표를 ``f 0 = f 0``으로 다시 쓰도록 사용됩니다.
 
-The ``rewrite`` tactic is not restricted to propositions.
-In the following example, we use ``rw [h] at t`` to rewrite the hypothesis ``t : Tuple α n`` to ``t : Tuple α 0``.
+ ``rewrite`` 전략은 명제에만 국한되지 않습니다.
+다음 예제에서 우리는 가정 ``t : Tuple α n``을 ``t : Tuple α 0``으로 다시쓰도록 ``rw [h] at t``을 사용합니다.
 
 ```lean
 def Tuple (α : Type) (n : Nat) :=
@@ -1040,14 +981,12 @@ example (n : Nat) (h : n = 0) (t : Tuple α n) : Tuple α 0 := by
   exact t
 ```
 
-Using the Simplifier
+단순화기를 사용하기
 --------------------
 
-Whereas ``rewrite`` is designed as a surgical tool for manipulating a
-goal, the simplifier offers a more powerful form of automation. A
-number of identities in Lean's library have been tagged with the
-``[simp]`` attribute, and the ``simp`` tactic uses them to iteratively
-rewrite subterms in an expression.
+반면 ``rewrite``는 목표를 조작하기 위한 외과 수술 도구로써 고안되었습다.
+단순화기는 자동화의 더욱 강력한 형태를 제공합니다. Lean의 라이브러리 속 다수의 항등식은 ``[simp]`` 속성으로 표식되었습니다.
+그리고 ``simp`` 전략은 이들을 표현식에서 부분항 다시쓰기로 반복적으로 사용합니다.
 
 ```lean
 example (x y z : Nat) (p : Nat → Prop) (h : p (x * y))
@@ -1059,13 +998,9 @@ example (x y z : Nat) (p : Nat → Prop) (h : p (x * y))
   simp; assumption
 ```
 
-In the first example, the left-hand side of the equality in the goal
-is simplified using the usual identities involving 0 and 1, reducing
-the goal to ``x * y = x * y``. At that point, ``simp`` applies
-reflexivity to finish it off. In the second example, ``simp`` reduces
-the goal to ``p (x * y)``, at which point the assumption ``h``
-finishes it off. Here are some more examples
-with lists:
+첫 예제에서 목표 속 등식의 좌변은 0과 1을 포함한 평범한 항등식을
+사용해 단순화해 목표를  ``x * y = x * y``으로 축소합니다. 이점에서 ``simp``는 이를 끝내는데 반사성을 적용합니다. 두 번째 예제에서 ``simp``는 목표를 ``p (x * y)``으로 축약합니다.
+이점에서 가정 ``h``가 이를 끝냅니다. 여기 추가 예제가 리스트와 함께 있습니다.
 
 ```lean
 open List
@@ -1079,7 +1014,7 @@ example (xs ys : List α)
  simp [Nat.add_comm]
 ```
 
-As with ``rw``, you can use the keyword ``at`` to simplify a hypothesis:
+``rw``처럼 여러분은 키워드 ``at``으로 가정을 간단히 하는데 사용합니다.
 
 ```lean
 example (x y z : Nat) (p : Nat → Prop)
@@ -1087,7 +1022,7 @@ example (x y z : Nat) (p : Nat → Prop)
   simp at h; assumption
 ```
 
-Moreover, you can use a "wildcard" asterisk to simplify all the hypotheses and the goal:
+게다가 여러분은 "와일드카드" *로 모든 가정과 목표를 간단히 하는데 사용할 수 있습니다.
 
 ```lean
 attribute [local simp] Nat.mul_comm Nat.mul_assoc Nat.mul_left_comm
@@ -1103,24 +1038,13 @@ example (x y z : Nat) (p : Nat → Prop)
   simp at * <;> constructor <;> assumption
 ```
 
-For operations that are commutative and associative, like
-multiplication on the natural numbers, the simplifier uses these two
-facts to rewrite an expression, as well as *left commutativity*. In
-the case of multiplication the latter is expressed as follows:
-``x * (y * z) = y * (x * z)``. The ``local`` modifier tells the simplifier
-to use these rules in the current file (or section or namespace, as
-the case may be). It may seem that commutativity and
-left-commutativity are problematic, in that repeated application of
-either causes looping. But the simplifier detects identities that
-permute their arguments, and uses a technique known as *ordered
-rewriting*. This means that the system maintains an internal ordering
-of terms, and only applies the identity if doing so decreases the
-order. With the three identities mentioned above, this has the effect
-that all the parentheses in an expression are associated to the right,
-and the expressions are ordered in a canonical (though somewhat
-arbitrary) way. Two expressions that are equivalent up to
-associativity and commutativity are then rewritten to the same
-canonical form.
+자연수 곱셈 같은 교환성과 결합성 연산자와 왼쪽 교환성과
+마찬가지로 단순화기는 표현식을 다시 쓰는데 이 두 사실을 사용합니다. 곱셈의 경우 후자는 다음과 같이 표현됩니다. ``local`` 수정자는 단순화기에게 현재 파일(아마 경우에 따라 섹션, 이름공간)
+속 이 규칙을 사용하라고 말합니다. 둘 중 어떤 것의 반복적인 활용이 무한루프를 유발한다는 점에서
+교환성과 좌교환성은 문제가 있어 보입니다. 그러나 단순화기는 항등식들이 그들의 인자를 교환한다는 것을 감지합니다.
+그리고 *ordered rewriting*으로 알려진 기법을 사용합니다. 이는 시스템이 항들의 내부적인 순서를 유지한다는 의미일 뿐만 아니라
+만약 무한루프가 유발된다면 항등식들의 순위를 줄이도록 적용합니다. 세 항등식이 위에서 언급되었는데 이들은 표현식에서 모든 괄호가 오른쪽으로 결합된다는
+효과를 갖고 표현식들은 표준 방식(약간 임의적일지라도)에서 순서화됩니다. 그럼 결합성과 교환성에 한해 동등한 두 표현식은 같은 정식 형태로 다시쓰일 것입니다.
 
 ```lean
 # attribute [local simp] Nat.mul_comm Nat.mul_assoc Nat.mul_left_comm
@@ -1134,12 +1058,8 @@ example (w x y z : Nat) (p : Nat → Prop)
   simp; simp at h; assumption
 ```
 
-As with ``rewrite``, you can send ``simp`` a list of facts to use,
-including general lemmas, local hypotheses, definitions to unfold, and
-compound expressions. The ``simp`` tactic also recognizes the ``←t``
-syntax that ``rewrite`` does. In any case, the additional rules are
-added to the collection of identities that are used to simplify a
-term.
+``rewrite``처럼 여러분은 ``simp``를 일반적인 보조정리, 국부적인 가정,
+펼쳐지지 않은 정의와 복합 표현식을 포함한 사실들의 리스트를 사용하도록 보낼 수 있습니다. ``rewrite``가 그런 것처럼 ``simp`` 전략도 ``←t`` 문법을 인식할 수 있습니다.  어떤 경우에 항을 간단히 하는데 사용되는 항등식의 모임에 추가 규칙이 더해질 수 있습니다.
 
 ```lean
 def f (m n : Nat) : Nat :=
@@ -1149,7 +1069,7 @@ example {m n : Nat} (h : n = 1) (h' : 0 = m) : (f m n) = n := by
   simp [h, ←h', f]
 ```
 
-A common idiom is to simplify a goal using local hypotheses:
+흔한 관용구는 국부 가정을 사용해 목표를 단순화하는 것입니다.
 
 
 ```lean
@@ -1157,8 +1077,8 @@ example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 :=
   simp [h₁, h₂]
 ```
 
-To use all the hypotheses present in the local context when
-simplifying, we can use the wildcard symbol, ``*``:
+단순화할 때 지역 상황에 나타난 모든 가정을 사용하기 위해서
+우리는 와일드카드 기호 ``*``를 사용할 수 있습니다.
 
 ```lean
 example (f : Nat → Nat) (k : Nat) (h₁ : f 0 = 0) (h₂ : k = 0) : f k = 0 := by
@@ -1173,10 +1093,8 @@ example (u w x y z : Nat) (h₁ : x = y + z) (h₂ : w = u + x)
   simp [*, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm]
 ```
 
-The simplifier will also do propositional rewriting. For example,
-using the hypothesis ``p``, it rewrites ``p ∧ q`` to ``q`` and ``p ∨
-q`` to ``true``, which it then proves trivially. Iterating such
-rewrites produces nontrivial propositional reasoning.
+단순화기도 명제 다시쓰기를 할 것 입니다. 예를 들어 가정 ``p``를 사용하여 이것은 ``p ∧ q``을 ``q``으로 그리고 ``p ∨
+q``을 ``true``으로 다시 쓴다.  그럼 이를 명백하게 증명합니다. 이 다시쓰기를 반복하는 것은 명백하지 않은 명제논리적 추론을 만들어 냅니다.
 
 ```lean
 example (p q : Prop) (hp : p) : p ∧ q ↔ q := by
@@ -1189,7 +1107,7 @@ example (p q r : Prop) (hp : p) (hq : q) : p ∧ (q ∨ r) := by
   simp [*]
 ```
 
-The next example simplifies all the hypotheses, and then uses them to prove the goal.
+다음 예제는 모든 가정을 단순화하고 그 후 이들로 목표를 증명하는데 사용합니다.
 
 ```lean
 example (u w x x' y y' z : Nat) (p : Nat → Prop)
@@ -1199,18 +1117,17 @@ example (u w x x' y y' z : Nat) (p : Nat → Prop)
   simp [*]
 ```
 
-One thing that makes the simplifier especially useful is that its
-capabilities can grow as a library develops. For example, suppose we
-define a list operation that symmetrizes its input by appending its
-reversal:
+단순화기를 특히 유용하게 만드는 한 가지는 그것의 능력이
+라이브러리가 개발되어 감에 따라 증가한다는 것입니다. 예를 들어 우리가 그것의 입력을 그것의 거꾸로 추가하여
+대칭시키는 리스트 연산을 정의한다고 합시다.
 
 ```lean
 def mk_symm (xs : List α) :=
   xs ++ xs.reverse
 ```
 
-Then for any list ``xs``, ``reverse (mk_symm xs)`` is equal to ``mk_symm xs``,
-which can easily be proved by unfolding the definition:
+그럼 임의의 리스트  ``xs``에 대해 ``reverse (mk_symm xs)``은 ``mk_symm xs``과 같습니다.
+그리고 이는 정의를 펼쳐보는 것으로 쉽게 증명할 수 있습니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1220,7 +1137,7 @@ theorem reverse_mk_symm (xs : List α)
   simp [mk_symm]
 ```
 
-We can now use this theorem to prove new results:
+우리는 이 정리로 새로운 결과를 증명하는데 쓸 수 있습니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1238,10 +1155,9 @@ example (xs ys : List Nat) (p : List Nat → Prop)
   simp [reverse_mk_symm] at h; assumption
 ```
 
-But using ``reverse_mk_symm`` is generally the right thing to do, and
-it would be nice if users did not have to invoke it explicitly. You can
-achieve that by marking it as a simplification rule when the theorem
-is defined:
+하지만 ``reverse_mk_symm``을 사용하는 것은 일반적으로 해야 하는 것입니다. 그리고
+사용자가 이를 명시적으로 불러올 필요가 없다면 좋을 것입니다. 여러분은 그것을 정리가 정의되었을 때 단순화 규칙으로
+표시함으로써 달성할 수 있습니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1260,8 +1176,8 @@ example (xs ys : List Nat) (p : List Nat → Prop)
   simp at h; assumption
 ```
 
-The notation ``@[simp]`` declares ``reverse_mk_symm`` to have the
-``[simp]`` attribute, and can be spelled out more explicitly:
+ ``@[simp]``표기는 ``reverse_mk_symm``가 ``[simp]``
+특성을 갖고 더 명시적으로 쓸 수 있도록 선언합니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1282,7 +1198,7 @@ example (xs ys : List Nat) (p : List Nat → Prop)
   simp at h; assumption
 ```
 
-The attribute can also be applied any time after the theorem is declared:
+이 특성은 정리가 선언된 이후 언제든지 적용될 수 있습니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1303,11 +1219,9 @@ example (xs ys : List Nat) (p : List Nat → Prop)
   simp at h; assumption
 ```
 
-Once the attribute is applied, however, there is no way to permanently
-remove it; it persists in any file that imports the one where the
-attribute is assigned. As we will discuss further in
-[Attributes](TBD), one can limit the scope of an attribute to the
-current file or section using the ``local`` modifier:
+그러나 한 번 이 특성이 적용되면 그 특성이 부여된 정리를 불러온 어떤 파일이든
+지속되므로 영구적으로 이를 제거할 방법이 없습니다. [Attributes](TBD)에서 더 논의할 것이지만 누군가는 ``local`` 수정자를
+사용해 특성의 범위를 현재 파일이나 섹션으로 제한할 수 있습니다.
 
 ```lean
 # def mk_symm (xs : List α) :=
@@ -1330,21 +1244,15 @@ example (xs ys : List Nat) (p : List Nat → Prop)
 end
 ```
 
-Outside the section, the simplifier will no longer use
-``reverse_mk_symm`` by default.
+섹션 바깥 쪽에서 단순화기는 기본적으로 ``reverse_mk_symm``을 사용할 수 없게 될 것이다.
 
-Note that the various ``simp`` options we have discussed --- giving an
-explicit list of rules, and using ``at`` to specify the location --- can be combined,
-but the order they are listed is rigid. You can see the correct order
-in an editor by placing the cursor on the ``simp`` identifier to see
-the documentation string that is associated with it.
+논의한 다양한 ``simp`` 옵션은 규칙의 명시적인 리스트를 주고 ``at``을
+사용해 위치를 나타내는 것으로 결합될 수 있다. 그러나 나열된 순서는 변하지 않는다. 여려분은 이와 연관된 문서 끈을 보기 위해 ``simp`` 식별자에 커서를 놓아
+편집기에서 옳은 순서를 볼 수 있습니다.
 
-There are two additional modifiers that are useful. By default,
-``simp`` includes all theorems that have been marked with the
-attribute ``[simp]``. Writing ``simp only`` excludes these defaults,
-allowing you to use a more explicitly crafted list of
-rules. In the examples below, the minus sign and
-``only`` are used to block the application of ``reverse_mk_symm``.
+이외 유용한 두 수정자들이 더 있습니다. 기본적으로 ``simp``은 ``[simp]`` 특성으로 표시한 모든 정리를 포함합니다. ``simp only``를 쓰는 것은 여러분이 더 명시적으로 규칙 리스트를
+만들어 사용하도록 하여 이런 기본설정을 배제합니다, 아래 예제에서 음의 부호와 ``only``는 ``reverse_mk_symm``의
+활용을 막는데 사용됩니다.
 
 ```lean
 def mk_symm (xs : List α) :=
@@ -1372,10 +1280,10 @@ example (xs ys : List Nat) (p : List Nat → Prop)
 Extensible Tactics
 -----------------
 
-In the following example, we define the notation `triv` using the command `syntax`.
-Then, we use the command `macro_rules` to specify what should
-be done when `triv` is used. You can provide different expansions, and the tactic
-interpreter will try all of them until one succeeds.
+다음 에제에서 우리는`triv`기호를 `syntax` 명령을 사용해 정의한다.
+그러면 우리는  `triv`가 사용될 때 `macro_rules` 명령이
+무엇을 해야 하는지 명시하도록 사용할 수 있다. 여러분은 다른 확장을 제공할 수 있다. 그리고 전략
+해석기는 한 개가 성공할 때까지 그들 모두를 시도할 것이다.
 
 ```lean
 -- Define a new tactic notation
@@ -1387,13 +1295,12 @@ macro_rules
 example (h : p) : p := by
   triv
 
--- You cannot prove the following theorem using `triv`
+-- 여러분은 `triv` 사용해 다음 정리를 증명할 수 없습니다.
 -- example (x : α) : x = x := by
 --  triv
 
 -- Let's extend `triv`. The tactic interpreter
--- tries all possible macro extensions for `triv` until one succeeds
-macro_rules
+-- `triv`에 대한 가능한 모든 매크로 확장을 어떤 것이 macro_rules을 성공할 때까지 시도합니다.
   | `(tactic| triv) => `(tactic| rfl)
 
 example (x : α) : x = x := by
@@ -1402,7 +1309,7 @@ example (x : α) : x = x := by
 example (x : α) (h : p) : x = x ∧ p := by
   apply And.intro <;> triv
 
--- We now add a (recursive) extension
+-- 이제 우리는 (재귀적인) 확장을 추가합니다.
 macro_rules | `(tactic| triv) => `(tactic| apply And.intro <;> triv)
 
 example (x : α) (h : p) : x = x ∧ p := by
@@ -1412,13 +1319,11 @@ example (x : α) (h : p) : x = x ∧ p := by
 연습문제
 ---------
 
-1. Go back to the exercises in [Chapter Propositions and
-   Proofs](./propositions_and_proofs.md) and
-   [Chapter Quantifiers and Equality](./quantifiers_and_equality.md) and
-   redo as many as you can now with tactic proofs, using also ``rw``
-   and ``simp`` as appropriate.
+1. [명제와 증명](./propositions_and_proofs.md)과 [ 한정기호와 동등성](./quantifiers_and_equality.md)의 연습문제로 돌아가서
+   전략 증명으로 여러분이 할 수 있는 만큼 많이 다시 해보세요.
+   ``rw``와 ``simp``도 적절히 사용하세요..
 
-2. Use tactic combinators to obtain a one line proof of the following:
+2. 다음의 한 줄 증명을 얻도록 전략조합자를 사용하세요.
 
 ```lean
  example (p q r : Prop) (hp : p)

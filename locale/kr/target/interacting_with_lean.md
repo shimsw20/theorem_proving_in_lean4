@@ -1,61 +1,32 @@
-Interacting with Lean
+린과 상호작용하기
 =====================
 
-You are now familiar with the fundamentals of dependent type theory,
-both as a language for defining mathematical objects and a language
-for constructing proofs. The one thing you are missing is a mechanism
-for defining new data types. We will fill this gap in the next
-chapter, which introduces the notion of an *inductive data type*. But
-first, in this chapter, we take a break from the mechanics of type
-theory to explore some pragmatic aspects of interacting with Lean.
+정의한 수학적 대상과 증명을 만드는 언어 모두로써 여러분은 이제 기초적인 의존 유형론에 친숙합니다. 한 가지 여러분이 놓친 작동원리는 새로운 데이터 형을 정의하는 것에 대한 것입니다. 우리는 다음 장에서 *inductive data type*의 개념을 도입하여 이 간극을 메울 것입니다. 그러나 우선 이 장에서 우리는 유형론의 원리로부터 떨어져서 린과 상호작용하는 것에 대한 실용적인 면을 탐색해봅시다
 
-Not all of the information found here will be useful to you right
-away. We recommend skimming this section to get a sense of Lean's
-features, and then returning to it as necessary.
+여기서 찾은 모든 정보가 여러분에게 바로 유용하지 않을 수 있습니다. 우리는 린의 특징에 대한 감을 얻도록 건너뛰고 읽어보는 것을 추천합니다. 그리고 필요하다면 다시 여기로 돌아오세요.
 
-Importing Files
+파일 불러오기
 ---------------
 
-The goal of Lean's front end is to interpret user input, construct
-formal expressions, and check that they are well formed and type
-correct. Lean also supports the use of various editors, which provide
-continuous checking and feedback. More information can be found on the
-Lean [documentation pages](http://leanprover.github.io/documentation/).
+린의 프론트 엔드의 목표는 사용자의 입력을 해석하고 형식적인 표현을 만들고 그들이 잘 형성되었고 옳바른 유형인지 확인하는 것입니다. 또한 린은 다양한 끊임없는 확인과 피드백을 제공하는 편집기의 사용을 지원합니다. 린에 대한 더 많은 정보는 [documentation pages](http://leanprover.github.io/documentation/)에서 찾을 수 있습니다.
 
-The definitions and theorems in Lean's standard library are spread
-across multiple files. Users may also wish to make use of additional
-libraries, or develop their own projects across multiple files. When
-Lean starts, it automatically imports the contents of the library
-``Init`` folder, which includes a number of fundamental definitions
-and constructions. As a result, most of the examples we present here
-work "out of the box."
+린의 정의와 정리 표준 라이브러리는 다수의 파일에 걸쳐 펴져있습니다. 사용자는 아마 추가적인 라이브러리의 사용 혹은 다수의 파일에 걸쳐 자신만의 프로젝트를 개발하기를 원할지도 모릅니다. 린이 시작될 때, 이는 자동적으로 라이브러리 ``Init`` 폴더의 내용을 불러옵니다.
+여기에는 다수의 기초적인 정의와 구성이 포함되어 있습니다. 그 결과 우리가 여기에 소개하는 대부분의 예제는 상식 밖의 것입니다.
 
-If you want to use additional files, however, they need to be imported
-manually, via an ``import`` statement at the beginning of a file. The
-command
+그러나 여러분이 추가 파일을 사용하길 원한다면 파일의 시작에서 ``import`` 구문을 통해 수동으로 불러와야 합니다. 명령
 
 ```
 import Bar.Baz.Blah
 ```
-imports the file ``Bar/Baz/Blah.olean``, where the descriptions are
-interpreted relative to the Lean *search path*. Information as to how
-the search path is determined can be found on the
-[documentation pages](http://leanprover.github.io/documentation/).
-By default, it includes the standard library directory, and (in some contexts)
-the root of the user's local project. One can also specify imports relative to the current directory; for example,
-Importing is transitive. In other words, if you import ``Foo`` and ``Foo`` imports ``Bar``,
-then you also have access to the contents of ``Bar``, and do not need to import it explicitly.
+린의 파일 *search path*에 상대적인 주소로 설명된 곳에서 ``Bar/Baz/Blah.olean``을 불러옵니다. 어떻게 탐색경로가 결정되는지에 대한 정보는 [documentation pages](http://leanprover.github.io/documentation/)에서 찾아볼 수 있습니다.
+기본적으로 이는 표준 라이브러리 경로와 (같은 맥락에서) 사용자의 로컬 프로젝트의 루트 경로를 포함합니다. 어떤 이는 현재 경로에 상대적으로 불러오기를 명시할 수 있습니다. 예를 들어 불러오는 것은 전이적입니다. 다시 말하면, 여러분이 ``Foo``를 부르고 ``Foo``는 ``Bar``를 불러온다면
+여러분은 ``Bar``의 내용에도 접근할 수 있습니다. 그리고 명시적으로 불러올 필요가 없습니다.
 
-More on Sections
+섹션에 대해 더 알아보기
 ----------------
 
-Lean provides various sectioning mechanisms to help structure a
-theory. You saw in [Variables and Sections](./dependent_type_theory.md#variables_and_sections) that the
-``section`` command makes it possible not only to group together
-elements of a theory that go together, but also to declare variables
-that are inserted as arguments to theorems and definitions, as
-necessary. Remember that the point of the `variable` command is to
-declare variables for use in theorems, as in the following example:
+린은 이론을 구조화하는 것을 돕기 위해 구획을 나누는 다양한 메커니즘을 제공합니다. 여러분은 [Variables and Sections](./dependent_type_theory.md#variables_and_sections)에서 ``section`` 명령으로 필요하다면
+함께 할 이론의 요소를 한데 묶을 수 있을 뿐만 아니라 정리와 정의에 인수로 삽입될 변수를 선언할 수도 있습니다. `variable` 명령의 요점은 다음 예제에서 처럼 정리에서 사용하기 위한 변수를 선언하는 것임을 기억하세요.
 
 ```lean
 section
@@ -80,23 +51,15 @@ theorem t2 : double (x * y) = double x * y := by
 end
 ```
 
-The definition of ``double`` does not have to declare ``x`` as an
-argument; Lean detects the dependence and inserts it
-automatically. Similarly, Lean detects the occurrence of ``x`` in
-``t1`` and ``t2``, and inserts it automatically there, too.
-Note that double does *not* have ``y`` as argument. Variables are only
-included in declarations where they are actually used.
+``double``의 정의는 ``x``를 인수로서 정의할 필요가 없습니다.
+린은 종속성을 감지하고 그것을 자동적으로 삽입합니다. 마찬가지로 린은 ``t1``와 ``t2``에서 ``x``의 나타남을 감지하고
+거기에도 자동적으로 그것을 삽입합니다.
+double은 ``y``를 인수로서 갖지 *않음*을 주목하세요. 변수는 오직 그들이 실제로 사용되는 선언에만 포함됩니다.
 
-More on Namespaces
+이름공간에 대해 더 알아보기
 ------------------
 
-In Lean, identifiers are given by hierarchical *names* like
-``Foo.Bar.baz``. We saw in [Namespaces](./dependent_type_theory.md#namespaces) that Lean provides
-mechanisms for working with hierarchical names. The command
-``namespace foo`` causes ``foo`` to be prepended to the name of each
-definition and theorem until ``end foo`` is encountered. The command
-``open foo`` then creates temporary *aliases* to definitions and
-theorems that begin with prefix ``foo``.
+린에서 식별자는 ``Foo.Bar.baz``처럼 계층적인 *names*으로 제시됩니다. 우리는 [Namespaces](./dependent_type_theory.md#namespaces)에서 린이 계층적인 이름으로 작업하는 메커니즘을 제공하는 것을 보았습니다. ``namespace foo`` 명령은  ``end foo``와 마추치기 전까지 ``foo``가 각 정의와 정리의 이름에 앞에 붙게 합니다. ``open foo`` 명령은 접두사 ``foo``로 시작하는 정의와 정리에 일시적인 *별명*으로 만듭니다.
 
 ```lean
 namespace Foo
@@ -109,23 +72,19 @@ open Foo
 #check Foo.bar
 ```
 
-The following definition
+다음 정의  
 ```lean
 def Foo.bar : Nat := 1
 ```
-is treated as a macro, and expands to
+은 매크로로 간주되고
 ```lean
 namespace Foo
 def bar : Nat := 1
 end Foo
 ```
 
-Although the names of theorems and definitions have to be unique, the
-aliases that identify them do not. When we open a namespace, an
-identifier may be ambiguous. Lean tries to use type information to
-disambiguate the meaning in context, but you can always disambiguate
-by giving the full name. To that end, the string ``_root_`` is an
-explicit description of the empty prefix.
+로 확장됩니다. 정리와 정의의 이름은 고유하여야 함에도 별명은 그들을 식별하는 별명은 그렇지 않습니다. 우리가 이름공간을 열때, 식별자는 모호하다고 할 지 모릅니다. 린은 맥락에서 의미의 모호함을 해소하려고 유형 정보를 사용하려고 합니다.
+그러나 여러분은 이들의 완전한 이름을 주는 것으로 모호성을 항상 풀 수 있습니다. 이 끝에서 문자열 ``_root_``이 빈 접두사를 나타냅니다.
 
 ```lean
 def String.add (a b : String) : String :=
@@ -148,7 +107,7 @@ open String
 #check add Nat Nat          -- Type
 ```
 
-We can prevent the shorter alias from being created by using the ``protected`` keyword:
+우리느 더 짤은 별명이 생기는 것을 ``protected``  키워드를 사용하여 막을 수 있습니다.
 
 ```lean
 protected def Foo.bar : Nat := 1
@@ -159,10 +118,9 @@ open Foo
 #check Foo.bar
 ```
 
-This is often used for names like ``Nat.rec`` and ``Nat.recOn``, to prevent
-overloading of common names.
+흔한 이름들의 과부하를 막기 위해 ``Nat.rec``과 ``Nat.recOn`` 같은 이름들에 종종 사용됩니다.
 
-The ``open`` command admits variations. The command
+``open`` 명령은 변형을 허용합니다. The command
 
 ```lean
 open Nat (succ zero gcd)

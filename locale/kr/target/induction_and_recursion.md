@@ -196,7 +196,7 @@ def foo : Nat → Nat → Nat
   | m+1, n+1 => 2
 ```
 
-Here is another example:
+여기 또 다른 예제가 있습니다.
 
 ```lean
 def bar : List Nat → List Nat → Nat
@@ -1256,7 +1256,7 @@ def filter (p : α → Bool) : List α → List α
 example : filter isNotZero [1, 0, 0, 3, 0] = [1, 3] := rfl
 ```
 
-Here is another example:
+여기 또 다른 예제가 있습니다.
 
 ```lean
 def foo (n : Nat) (b c : Bool) :=
