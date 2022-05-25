@@ -52,7 +52,7 @@ end
 ```
 
 ``double``의 정의는 ``x``를 인수로서 정의할 필요가 없습니다.
-린은 종속성을 감지하고 그것을 자동적으로 삽입합니다. 마찬가지로 린은 ``t1``와 ``t2``에서 ``x``의 나타남을 감지하고
+린은 종속성을 감지하고 그것을 자동적으로 삽입합니다. 마찬가지로 린은 ``t1``와 ``t2``에서 ``x``의 나타남을 감지하고 
 거기에도 자동적으로 그것을 삽입합니다.
 double은 ``y``를 인수로서 갖지 *않음*을 주목하세요. 변수는 오직 그들이 실제로 사용되는 선언에만 포함됩니다.
 
@@ -76,14 +76,14 @@ open Foo
 ```lean
 def Foo.bar : Nat := 1
 ```
-은 매크로로 간주되고
+은 매크로로 간주되고 
 ```lean
 namespace Foo
 def bar : Nat := 1
 end Foo
 ```
 
-로 확장됩니다. 정리와 정의의 이름은 고유하여야 함에도 별명은 그들을 식별하는 별명은 그렇지 않습니다. 우리가 이름공간을 열때, 식별자는 모호하다고 할 지 모릅니다. 린은 맥락에서 의미의 모호함을 해소하려고 유형 정보를 사용하려고 합니다.
+로 확장됩니다. 정리와 정의의 이름은 고유하여야 함에도 별명은 그들을 식별하는 별명은 그렇지 않습니다. 우리가 이름공간을 열때, 식별자는 모호하다고 할 지 모릅니다. 린은 맥락에서 의미의 모호함을 해소하려고 유형 정보를 사용하려고 합니다. 
 그러나 여러분은 이들의 완전한 이름을 주는 것으로 모호성을 항상 풀 수 있습니다. 이 끝에서 문자열 ``_root_``이 빈 접두사를 나타냅니다.
 
 ```lean
@@ -128,7 +128,7 @@ open Nat (succ zero gcd)
 #eval gcd 15 6  -- 3
 ```
 
-creates aliases for only the identifiers listed. The command
+나열된 식별자들만을 위한 별명을 만드세요. The command
 
 ```lean
 open Nat hiding succ gcd
@@ -137,48 +137,31 @@ open Nat hiding succ gcd
 #eval Nat.gcd 15 6  -- 3
 ```
 
-creates aliases for everything in the ``Nat`` namespace *except* the identifiers listed.
+나열된 식별자를 *제외한* ``Nat`` 이름공간 속 모든 것에 대한 별명을 만듭니다.
 
 ```lean
 open Nat renaming mul → times, add → plus
 #eval plus (times 2 2) 3  -- 7
 ```
 
-creates aliases renaming ``Nat.mul`` to ``times`` and ``Nat.add`` to ``plus``.
+``Nat.mul``을 ``times`` 으로 그리고 ``Nat.add``을 ``plus``로 다시 이름지어 별명을 만드세요.
 
-It is sometimes useful to ``export`` aliases from one namespace to another, or to the top level. The command
+별명을 한 이름 공간에서 다른 곳 혹은 최상위 단계로 ``내보내기``하는 것은 때때로 유용합니다. The command
 
 ```lean
 export Nat (succ add sub)
 ```
 
-creates aliases for ``succ``, ``add``, and ``sub`` in the current
-namespace, so that whenever the namespace is open, these aliases are
-available. If this command is used outside a namespace, the aliases
-are exported to the top level.
+이 이름공간이 열리기만 하면 별명을 이용할 수 있도록 현재 이름공간에 ``succ``과 ``add``과 ``sub``에 대한 별명을 만듭니다. 이 명령이 이름공간 밖에서 사용된다면 별명은 최상위 단계로 내보내지게 됩니다.
 
 
-Attributes
+특성
 ----------
 
-The main function of Lean is to translate user input to formal
-expressions that are checked by the kernel for correctness and then
-stored in the environment for later use. But some commands have other
-effects on the environment, either assigning attributes to objects in
-the environment, defining notation, or declaring instances of type
-classes, as described in [Chapter Type Classes](./type_classes.md). Most of
-these commands have global effects, which is to say, that they remain
-in effect not only in the current file, but also in any file that
-imports it. However, such commands often support the ``local`` modifier,
-which indicates that they only have effect until
-the current ``section`` or ``namespace`` is closed, or until the end
-of the current file.
+린의 주요 기능은 사용자의 입력을 커널에 의해 올바름이 검증된 형식 표현식으로 번역하는 것과 나중에 사용할 수 있도록 환경에 저장해두는 것 입니다. 그러나 환경 속 대상에 특성을 할당하는 것이나  기호를 정의하는 것 또는[Chapter Type Classes](./type_classes.md)에서 설명할 유형 클래스의 개체를 선언하는 것으로 몇 가지 명령은 환경에 대해 다른 영향을 받습니다. 대개 이런 명령들은 전역 효과를 갖습니다. 그 말은 즉, 그들이 현재 파일 뿐 아니라 그것을 불러오는 모든 파일에 대해 영향이 남는다는 것입니다. 하지만 이런 명령은 종종 이들이 현재 ``section``이나 ``namespace``이 닫힐 때까지 혹은 현재 파일의 끝까지만 유효하다는 것을 가리키는 ``local`` 수정자를 제공합니다.
 
-In [Section Using the Simplifier](./tactics.md#_using_the_simp),
-we saw that theorems can be annotated with the ``[simp]`` attribute,
-which makes them available for use by the simplifier.
-The following example defines the prefix relation on lists,
-proves that this relation is reflexive, and assigns the ``[simp]`` attribute to that theorem.
+[Section Using the Simplifier](./tactics.md#_using_the_simp)에서 우리는 정리들이 단순화기에 의한 사용이 가능하도록 만드는 ``[simp]`` 특성이 붙는 것을 보았습니다.
+다음 예제에서는 리스트에 대한 접두사 관계를 정의하고, 이 관계는 반사적임을 증명하고, 그 정리에 ``[simp]`` 특성을 부여합니다.
 
 ```lean
 def isPrefix (l₁ : List α) (l₂ : List α) : Prop :=
@@ -191,9 +174,9 @@ example : isPrefix [1, 2, 3] [1, 2, 3] := by
   simp
 ```
 
-The simplifier then proves ``isPrefix [1, 2, 3] [1, 2, 3]`` by rewriting it to ``True``.
+그럼 단순화기는 ``isPrefix [1, 2, 3] [1, 2, 3]``을 그것이 ``True``라고 다시쓰기하여 증명합니다.
 
-One can also assign the attribute any time after the definition takes place:
+어떤 이는 이 정의를 만든 뒤 어느 때든지 특성을 부여할 수 있습니다.
 
 ```lean
 # def isPrefix (l₁ : List α) (l₂ : List α) : Prop :=
@@ -204,9 +187,7 @@ theorem List.isPrefix_self (as : List α) : isPrefix as as :=
 attribute [simp] List.isPrefix_self
 ```
 
-In all these cases, the attribute remains in effect in any file that
-imports the one in which the declaration occurs. Adding the ``local``
-modifier restricts the scope:
+모든 경우에 대해서, 특성은 선언이 있는 파일을 불러온 임의의 파일에 대해 영향을 미칩니다. 범위를 제한하기 위해 ``local`` 수정자를 추가하기
 
 ```lean
 # def isPrefix (l₁ : List α) (l₂ : List α) : Prop :=
@@ -228,10 +209,7 @@ end
 --  simp
 ```
 
-For another example, we can use the ``instance`` command to assign the
-notation ``≤`` to the `isPrefix` relation. That command, which will
-be explained in [Chapter Type Classes](./type_classes.md), works by
-assigning an ``[instance]`` attribute to the associated definition.
+다른 예제에서 우리는 ``instance`` 명령을 `isPrefix`관계에 ``≤``기호를 부여하는 데 사용할 수 있습니다.  [Chapter Type Classes](./type_classes.md)에서 설명할 그 명령은 연관된 정의에 ``[instance]`` 특성을 배정하는 것으로 동작합니다.
 
 ```lean
 def isPrefix (l₁ : List α) (l₂ : List α) : Prop :=
@@ -244,7 +222,7 @@ theorem List.isPrefix_self (as : List α) : as ≤ as :=
   ⟨[], by simp⟩
 ```
 
-That assignment can also be made local:
+그 배정는 지역적으로 만들어 질 수도 있습니다.
 
 ```lean
 # def isPrefix (l₁ : List α) (l₂ : List α) : Prop :=
@@ -265,39 +243,16 @@ end
 --  ⟨[], by simp⟩
 ```
 
-In [Section Notation](#notation) below, we will discuss Lean's
-mechanisms for defining notation, and see that they also support the
-``local`` modifier. However, in [Section Setting Options](#setting_options), we will
-discuss Lean's mechanisms for setting options, which does *not* follow
-this pattern: options can *only* be set locally, which is to say,
-their scope is always restricted to the current section or current
-file.
+아래 [Section Notation](#notation)에서 우리는 린의 기호를 정의하는 메커니즘에 대해 얘기하고 또 이들이 ``local`` 수정자를 지원함을 볼 예정입니다. 하지만 [Section Setting Options](#setting_options)에서 우리는 린의 이 패턴을 따르지 *않는* 옵션 설정에 대한 메커니즘에 대해서 얘기할 것입니다. 옵션은 지역적으로*만* 설정될 수 있습니다. 그 말은 즉, 그들의 범위는 항상 현재 섹션이나 현재 파일로 제한됩니다.
 
-More on Implicit Arguments
+암시적인 인수에 대해 더 알아보기
 --------------------------
 
-In [Section Implicit Arguments](./dependent_type_theory.md#implicit_arguments),
-we saw that if Lean displays the type
-of a term ``t`` as ``{x : α} → β x``, then the curly brackets
-indicate that ``x`` has been marked as an *implicit argument* to
-``t``. This means that whenever you write ``t``, a placeholder, or
-"hole," is inserted, so that ``t`` is replaced by ``@t _``. If you
-don't want that to happen, you have to write ``@t`` instead.
+[Section Implicit Arguments](./dependent_type_theory.md#implicit_arguments)에서 우리는 린은 항 ``t``의 유형을 ``{x : α} → β x``으로 표시하고 나서 중괄호는 ``x``가  *암시적인 인수*로써 ``t``로 표시되었음을 나타냄을 봤습니다. 이는 우리가 ``t``를 쓰는 언제든지 자리차지자 혹은 "구멍"이 삽입되고 ``t``는 ``@t _``로 대체됨을 의미합니다. 여러분이 이것이 일어나기 원하지 않는다면 대신 ``@t``를 써줘야 합니다.
 
-Notice that implicit arguments are inserted eagerly. Suppose we define
-a function ``f (x : Nat) {y : Nat} (z : Nat)`` with the arguments
-shown. Then, when we write the expression ``f 7`` without further
-arguments, it is parsed as ``f 7 _``. Lean offers a weaker annotation,
-``{{y : ℕ}}``, which specifies that a placeholder should only be added
-*before* a subsequent explicit argument. This annotation can also be
-written using as ``⦃y : Nat⦄``, where the unicode brackets are entered
-as ``\{{`` and ``\}}``, respectively. With this annotation, the
-expression ``f 7`` would be parsed as is, whereas ``f 7 3`` would be
-parsed as ``f 7 _ 3``, just as it would be with the strong annotation.
+암시적인 인수는 간절히 삽입됨을 주의하세요. 우리가 인수를 제시하여 함수 ``f (x : Nat) {y : Nat} (z : Nat)``을 정의했다고 합시다. 그럼, 우리가 표현식 ``f 7``을 추가 인수없이 슬때, 이는 ``f 7 _``와 같이 구문 분석 될 것입니다. 린은 종종 자리차지자가 이후의 명시적인 인수 *앞에* 추가되어야 함을 나타내는 약한 주석 ``{{y : ℕ}}``을 제공합니다. 이런 주석은 ``⦃y : Nat⦄``으로서 사용해 쓸 수도 있습니다. 여기서 유니코드 괄호는 각각 ``\{{``과 ``\}}``으로 쳐서 입력될 수 있습니다. 이 주석으로 표현식 ``f 7``은 이대로 구문분석 될 수 있습니다. 반면 ``f 7 3``은 강한 주석을 쓸 때처럼 ``f 7 _ 3``으로 구문분석될 것입니다.
 
-To illustrate the difference, consider the following example, which
-shows that a reflexive euclidean relation is both symmetric and
-transitive.
+차이를 설명하자면 유클리드 관계의 반사성은 모두 대칭적이고 추이적임을 보이는 다음 예제를 생각해보세요.
 
 ```lean
 def reflexive {α : Type u} (r : α → α → Prop) : Prop :=
@@ -337,13 +292,7 @@ variable (euclr : euclidean r)
 #check euclr  -- r ?m1 ?m2 → r ?m1 ?m3 → r ?m2 ?m3
 ```
 
-The results are broken down into small steps: ``th1`` shows that a
-relation that is reflexive and euclidean is symmetric, and ``th2``
-shows that a relation that is symmetric and euclidean is
-transitive. Then ``th3`` combines the two results. But notice that we
-have to manually disable the implicit arguments in ``th1``, ``th2``,
-and ``euclr``, because otherwise too many implicit arguments are
-inserted. The problem goes away if we use weak implicit arguments:
+결과는 작은 단계들로 나눠집니다. ``th1``은 반사적이고 유클리디안은 대칭적이다는 관계를 증명하고 ``th2``은 대칭적이고 유클리디언은 추이적이다는 관계를 증명합니다. 그런 뒤 ``th3``는 이 두 결과를 결합합니다. 하지만 ``th1``과 ``th2``, ``euclr``에서 암시적인 인수를 수동적으로 이 기능을 해제했음을 보세요. 그렇지 않으면 너무 많은 암시적인 인수가 삽입됩니다. 문제는 우리가 약한 암시적인 인수를 사용하면 사라집니다.
 
 ```lean
 def reflexive {α : Type u} (r : α → α → Prop) : Prop :=
@@ -383,20 +332,14 @@ variable (euclr : euclidean r)
 #check euclr  -- euclidean r
 ```
 
-There is a third kind of implicit argument that is denoted with square
-brackets, ``[`` and ``]``. These are used for type classes, as
-explained in [Chapter Type Classes](./type_classes.md).
+대괄호 ``[``과 ``]``로 표시된 세 번째 종류의 암시적인 매개변수가 있습니다. [Chapter Type Classes](./type_classes.md)에서 설명할 이들은 유형 클래스에 대해서 사용되었습니다.
 
-Notation
+기호
 --------
 
-Identifiers in Lean can include any alphanumeric characters, including
-Greek characters (other than ∀ , Σ , and λ , which, as we have seen,
-have a special meaning in the dependent type theory). They can also
-include subscripts, which can be entered by typing ``\_`` followed by
-the desired subscripted character.
+린의 식별자들은 임의의 그리스 문자를 포함해 (우리가 본 ∀ , Σ , λ 외에도  종속 유형론에서 특별한 의미를 갖습니다.) 알파벳과 수치 문자를 포함할 수 있습니다. 이들은 아래첨자를 넣고자 하는 문자 다음에  ``\_``을 쳐 넣음으로써 아래첨자도 포함할 수 있습니다.
 
-Lean's parser is extensible, which is to say, we can define new notation.
+린의 구문분석기는 확장가능성이 있습니다. 그 말은 우리가 새로운 기호를 정의할 수 있다는 뜻입니다.
 
 Lean's syntax can be extended and customized by users at every level,
 ranging from basic "mixfix" notations to custom elaborators.  In fact,

@@ -1,0 +1,65 @@
+example : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) :=
+Iff.intro
+    -- p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r)
+    (fun h : p ∧ (q ∨ r) => 
+      have hp : p := h.left
+        -- q ∨ r -> (p ∧ q) ∨ (p ∧ r)
+        Or.elim (h.right)
+        -- q -> (p ∧ q) ∨ (p ∧ r)
+        (fun hq : q => Or.inl ⟨ hp, hq ⟩ )
+        -- r -> (p ∧ q) ∨ (p ∧ r)
+        (fun hr : r => Or.inr ⟨ hp, hr ⟩ )
+    )
+    -- (p ∧ q) ∨ (p ∧ r) -> p ∧ (q ∨ r)
+    (fun h : (p ∧ q) ∨ (p ∧ r) => 
+      Or.elim h
+      -- (p ∧ q) -> p ∧ (q ∨ r)
+      (fun hpq : p ∧ q => 
+        have hp : p := hpq.left
+        have hq : q := hpq.right
+        show p ∧ (q ∨ r) from ⟨ hpq.left, Or.inl hq ⟩ 
+      )
+      -- (p ∧ r) -> p ∧ (q ∨ r)
+      (fun hpr : p ∧ r => 
+        have hp : p := hpr.left
+        have hr : r := hpr.right
+        show p ∧ (q ∨ r) from ⟨ hp, Or.inr hr ⟩
+      )
+    )
+
+-- distributivity 2
+example : p ∨ (q ∧ r) ↔ (p ∨ q) ∧ (p ∨ r) :=
+  Iff.intro
+  --p ∨ (q ∧ r) -> (p ∨ q) ∧ (p ∨ r)
+  (fun h: p ∨ (q ∧ r) => show (p ∨ q) ∧ (p ∨ r) from 
+    Or.elim h
+    -- p -> (p ∨ q) ∧ (p ∨ r)
+    (fun hp : p => show (p ∨ q) ∧ (p ∨ r) from ⟨ Or.inl hp, Or.inl hp ⟩ )
+    -- q ∧ r -> (p ∨ q) ∧ (p ∨ r)
+    (fun hqr : q ∧ r => 
+      have hq : q := hqr.left
+      have hr : r := hqr.right
+      show (p ∨ q) ∧ (p ∨ r) from ⟨ Or.inr hq, Or.inr hr ⟩ )
+  )
+  -- (p ∨ q) ∧ (p ∨ r) -> p ∨ (q ∧ r) 
+  (fun h: (p ∨ q) ∧ (p ∨ r) => show p ∨ (q ∧ r) from
+    have hpq : p ∨ q := h.left
+    have hpr : p ∨ r := h.right
+    And.intro 
+    -- (p ∨ q) -> p ∨ (q ∧ r)
+    (
+      Or.elim hpq
+      -- p -> p ∨ (q ∧ r)
+      (fun hp : p => show p ∨ (q ∧ r) from Or.inl hp)
+      -- q -> p ∨ (q ∧ r)
+      (fun hq : q => show p ∨ (q ∧ r) from Or.inl ⟨hq, r⟩ )
+    )
+    -- (p ∨ r) -> p ∨ (q ∧ r)
+    (
+      Or.elim hpr
+      -- p -> p ∨ (q ∧ r)
+      (fun hp : p => show p ∨ (q ∧ r) from Or.inl hp)
+      -- r -> p ∨ (q ∧ r)
+      (fun hr : r => show p ∨ (q ∧ r) from Or.inr ⟨q, hr⟩ )
+    )
+  )
