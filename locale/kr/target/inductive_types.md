@@ -1,21 +1,9 @@
-Inductive Types
+유도형
 ===============
 
-We have seen that Lean's formal foundation includes basic types,
-``Prop, Type 0, Type 1, Type 2, ...``, and allows for the formation of
-dependent function types, ``(x : α) → β``. In the examples, we have
-also made use of additional types like ``Bool``, ``Nat``, and ``Int``,
-and type constructors, like ``List``, and product, ``×``. In fact, in
-Lean's library, every concrete type other than the universes and every
-type constructor other than dependent arrows is an instance of a general family of
-type constructions known as *inductive types*. It is remarkable that
-it is possible to construct a substantial edifice of mathematics based
-on nothing more than the type universes, dependent arrow types, and inductive
-types; everything else follows from those.
+우리는 린의 형식적인 기초가 기본형 ``Prop, Type 0, Type 1, Type 2, ...``을 포합하고 의존 함수형 ``(x : α) → β``의 형성을 가능하게 함을 보았습니다. 예제에서 우리는 ``Bool``, ``Nat``, and ``Int`` 같은 추가 유형과 유형 생성자 ``List``과 product, ``×``의 사용을 보았습니다. 사실 린의 라이브러리에서 세계보다는 모든 구체적인 유형과 의존 화살표 외에 모든 형 생성자는 *inductive types*으로 알려진 일반적인 유형 생성의 일종의 개체입니다. 유형 세계, 의존 화살표 유형과 유도형과 그들로부터 나라 나온 모든 것 외에는 아무것도 기반으로 하지 않는 수학의 실질적인 구조를 구성하는 것이 가능하다는 것은 주목할 만합니다.
 
-Intuitively, an inductive type is built up from a specified list of
-constructors. In Lean, the syntax for specifying such a type is as
-follows:
+당연히 유도형은 생성자의 명시된 리스트로부터 만들어집니다. 린에서 그런 유형을 나타내는 문법은 다음과 같습니다.
 
 ```
     inductive Foo where
@@ -25,47 +13,20 @@ follows:
       | constructorₙ : ... → Foo
 ```
 
-The intuition is that each constructor specifies a way of building new
-objects of ``Foo``, possibly from previously constructed values. The
-type ``Foo`` consists of nothing more than the objects that are
-constructed in this way. The first character ``|`` in an inductive
-declaration is optional. We can also separate constructors using a
-comma instead of ``|``.
+직관적인 설명은 아마 이전에 구성된 값으로부터 각 생성자가 ``Foo``의 새로운 대상을 만드는 방식을 지정한다는 것입니다. ``Foo`` 유형은 이 방식으로 생성된 대상 외에 아무것도 갖고있지 않습니다. 유도 선언에서 첫 문자 ``|``은 선택적입니다. 또 우리는 ``|`` 대신 콤마를 사용해 생성자를 나눌 수 있습니다.
 
-We will see below that the arguments of the constructors can include
-objects of type ``Foo``, subject to a certain "positivity" constraint,
-which guarantees that elements of ``Foo`` are built from the bottom
-up. Roughly speaking, each ``...`` can be any arrow type constructed from
-``Foo`` and previously defined types, in which ``Foo`` appears, if at
-all, only as the "target" of the dependent arrow type.
+우리는 아래에서 생성자의 인자가 ``Foo`` 형의 대상을 특정 ``Foo``의 원소가 상향식으로 만들어졌음을 보장하는 "긍정성" 제약을 조건으로 하여 포함할 수 있음을 볼 것입니다. 대략적으로 말하자면 각 ``...``는 의존 화살표 형의 "대상"으로만 ``Foo``및 이전에 정의된 유형으로 구성된 모든 화살표 유형이 될 수 있습니다.
 
-We will provide a number of examples of inductive types. We will also
-consider slight generalizations of the scheme above, to mutually
-defined inductive types, and so-called *inductive families*.
+우리는 다수의 유도형의 예제를 제공합니다. 우리는 유도형과 일명 유도군을 동시에 정의하도록 위의 계획의 약간의 일반화를 고려할 것입니다.
 
-As with the logical connectives, every inductive type comes with
-introduction rules, which show how to construct an element of the
-type, and elimination rules, which show how to "use" an element of the
-type in another construction. The analogy to the logical connectives
-should not come as a surprise; as we will see below, they, too, are
-examples of inductive type constructions. You have already seen the
-introduction rules for an inductive type: they are just the
-constructors that are specified in the definition of the type. The
-elimination rules provide for a principle of recursion on the type,
-which includes, as a special case, a principle of induction as well.
+논리 연결사와 마찬가지로 모든 유도형은 유형의 원소를 어떻게 생성하는지 보여주는 도입 규칙과 또다른 생성에서 유형의 원소를 어떻게 "사용"하는지 보여주는 제거 규칙을 동반합니다. 논리 연결사와 유사점은 놀라움으로 오지 말아야 합니다. 우리가 아래에서 보듯이 그들도 유도형 생성의 예제입니다. 여러분은 유도형에 대한 도입규칙을 이미 봤었습니다. 그들은 그저 유형의 정의에서 명시된 생성자들일 뿐입니다. 제거 규칙은 유형의 재귀의 원리를 제공합니다. 이것은 특별한 경우로서 귀납의 원리도 포합합니다.
 
-In the next chapter, we will describe Lean's function definition
-package, which provides even more convenient ways to define functions
-on inductive types and carry out inductive proofs. But because the
-notion of an inductive type is so fundamental, we feel it is important
-to start with a low-level, hands-on understanding. We will start with
-some basic examples of inductive types, and work our way up to more
-elaborate and complex examples.
+다음 장에서 우리는 린의 정의 패키지를 설명합니다. 이 패키지는 함수와 유도형과 유도 증명을 수행하는 심지어 더 편리한 방법을 제공합니다. 그러나 유도형의 개념은 너무 근본적이라 우리는 저수준의 실습 이해부터 시작하는 것이 중요하다고 느낍니다. 우리는 유도형의 몇 가지 기본적인 예제로 시작할 것입니다. 그리고 우리의 작업을 더 정교하고 복잡한 예제로 옮겨갈 것입니다.
 
-Enumerated Types
+열거 유형
 ----------------
 
-The simplest kind of inductive type is simply a type with a finite, enumerated list of elements.
+가장 간단한 유도형은 원소의 리스트를 유한하게 열거한 유형입니다.
 
 ```lean
 inductive Weekday where
@@ -78,8 +39,7 @@ inductive Weekday where
   | saturday : Weekday
 ```
 
-The ``inductive`` command creates a new type, ``Weekday``. The
-constructors all live in the ``Weekday`` namespace.
+``inductive`` 명령은 새로운 유형 ``Weekday``를 만듭니다. 생성자는 모두 ``Weekday`` 이름공간에 살고 있습니다.
 
 ```lean
 # inductive Weekday where
@@ -99,7 +59,7 @@ open Weekday
 #check monday
 ```
 
-You can omit `: Weekday` when declaring the `Weekday` inductive type.
+여러분은  유도형 `Weekday`를 선언할 때 `: Weekday`을 생략할 수 있습니다.
 
 ```lean
 inductive Weekday where
@@ -112,18 +72,9 @@ inductive Weekday where
   | saturday
 ```
 
-Think of ``sunday``, ``monday``, ... , ``saturday`` as
-being distinct elements of ``Weekday``, with no other distinguishing
-properties. The elimination principle, ``Weekday.rec``, is defined
-along with the type ``Weekday`` and its constructors. It is also known
-as a *recursor*, and it is what makes the type "inductive": it allows
-us to define a function on ``Weekday`` by assigning values
-corresponding to each constructor. The intuition is that an inductive
-type is exhaustively generated by the constructors, and has no
-elements beyond those they construct.
+다른 성질을 구별할 것 없이 ``sunday``, ``monday``, ... , ``saturday``를 ``Weekday``의 구별되는 원소로서 생각해보세요. 제거 규칙  ``Weekday.rec``은 ``Weekday``형과 그것의 생성자를 따라 정의되었습니다. 이는 *recursor*로도 알려져 있고, 이게 유형을 "유도적"으로 만드는 것입니다. 이게 각 생성자에 대응하는 값을 할당함으로 ``Weekday``에 함수를 정의할 수 있게 허용합니다. 직관적인 설명은 유도형은 생성자에 의해 철저히 생성된다는 점입니다. 그래서 이들 없이 생긴 원소는 없습니다.
 
-We will use the `match` expression to define a function from ``Weekday``
-to the natural numbers:
+우리는 ``Weekday``로부터 자연수로의 함수를 정의하는데 `match` 표현식을 사용합니다.
 
 ```lean
 # inductive Weekday where
@@ -151,8 +102,7 @@ def numberOfDay (d : Weekday) : Nat :=
 #eval numberOfDay Weekday.tuesday -- 3
 ```
 
-Note that the `match` expression is compiled using the *recursor* `Weekday.rec` generated when
-you declare the inductive type.
+`match` 표현식은 여러분이 유도형을 선언할 때 생성한 *recursor* `Weekday.rec`을 사용하여 컴파일 됩니다.
 
 ```lean
 # inductive Weekday where
@@ -197,9 +147,8 @@ set_option pp.all true
 -/
 ```
 
-When declaring an inductive datatype, you can use `deriving Repr` to instruct
-Lean to generate a fuction that converts `Weekday` objects into text.
-This function is used by the `#eval` command to display `Weekday` objects.
+유도 데이터형을 선언할 때, 여러분은 린에게 `Weekday`의 대상을 텍스트로 바꾸는 함수를 생성하라고 지시하도록 `deriving Repr`을 사용할 수 있습니다.
+이 함수는 `Weekday`  대상을 표시하도록 `#eval` 명령으로 사용됩니다.
 
 ```lean
 inductive Weekday where
@@ -217,12 +166,9 @@ open Weekday
 #eval tuesday   -- Weekday.tuesday
 ```
 
-It is often useful to group definitions and theorems related to a
-structure in a namespace with the same name. For example, we can put
-the ``numberOfDay`` function in the ``Weekday`` namespace. We are
-then allowed to use the shorter name when we open the namespace.
+정의들과 정리들을 같은 이름인 이름공간에 구조체와 연관지어 모으는 것이 종종 유용합니다. 예를 들어, 우리는 ``Weekday`` 이름공간에 ``numberOfDay``함수를 넣을 수 있습니다. 그럼 우리는 우리가 이름공간을 열었을 때 더 짧은 이름을 사용할 수 있게 됩니다.
 
-We can define functions from ``Weekday`` to ``Weekday``:
+우리는 ``Weekday``에서 ``Weekday``까지 함수를 정의할 수 있습니다.
 
 ```lean
 # inductive Weekday where
@@ -265,9 +211,7 @@ example : next (previous tuesday) = tuesday :=
 end Weekday
 ```
 
-How can we prove the general theorem that ``next (previous d) = d``
-for any Weekday ``d``? You can use `match` to provide a proof of the claim for each
-constructor:
+임의의 Weekday ``d``에 대해 ``next (previous d) = d``이라는 일반적인 일반적인 정리를 어떻게 증명할 수 있을까요? 우리는 각 생성자에 대해 주장의 증명을 제공하기 위해 `match`를 사용할 수 있습니다.
 
 ```lean
 # inductive Weekday where
@@ -309,7 +253,7 @@ def next_previous (d : Weekday) : next (previous d) = d :=
   | saturday  => rfl
 ```
 
-Using a tactic proof, we can be even more concise:
+심지어 전략 증명을 사용하면 더 간결하게 됩니다.
 
 ```lean
 # inductive Weekday where
@@ -344,17 +288,11 @@ def next_previous (d : Weekday) : next (previous d) = d := by
   cases d <;> rfl
 ```
 
-[Tactics for Inductive Types](#tactics_for_inductive_types) below will introduce additional
-tactics that are specifically designed to make use of inductive types.
+[유도형을 위한 전략](#tactics_for_inductive_types) 아래에서 유도형의 사용을 위해 특별히 고안된 추가 전략들을 도입할 것입니다.
 
-Notice that, under the propositions-as-types correspondence, we can
-use ``match`` to prove theorems as well as define functions.  In other
-words, under the propositions-as-types correspondence, the proof by
-cases is a kind of definition by cases, where what is being "defined"
-is a proof instead of a piece of data.
+유형으로써 명제 대응 하에서 우리는 합수를 정의하는 것 뿐만 아니라 정리를 증명하는데 ``match``를 사용합니다.  다시 말하자면 유형으로써 명제 대응하에서 경우에 따른 증명은 경우에 따른 정의의 일종이고, 여기서 "정의되는" 것은 데이터의 조각 대신 증명입니다.
 
-The `Bool` type in the Lean library is an instance of
-enumerated type.
+린 라이브러리에서 `Bool`형은 열거 유형의 개체입니다.
 ```lean
 # namespace Hidden
 inductive Bool where
@@ -363,17 +301,9 @@ inductive Bool where
 # end Hidden
 ```
 
-(To run these examples, we put them in a namespace called ``Hidden``,
-so that a name like ``Bool`` does not conflict with the ``Bool`` in
-the standard library. This is necessary because these types are part
-of the Lean "prelude" that is automatically imported when the system
-is started.)
+(이 예제를 실행하려면 우리는 ``Hidden``이라는 이름공간에 이들을 두어서 ``Bool``같은 이름이 표준 라이브러리에서의 ``Bool``과 출돌하지 않게 해야 합니다. 이것은 이들 유형이 시스템이 시작할 때 자동적으로 불러와지는 린 "서막"의 일부이기 때문에 필요합니다.
 
-As an exercise, you should think about what the introduction and
-elimination rules for these types do. As a further exercise, we
-suggest defining boolean operations ``and``, ``or``, ``not`` on the
-``Bool`` type, and verifying common identities. Note that you can define a
-binary operation like ``and`` using `match`:
+연습으로 여러분은 이 유형들에 대한 도입과 제거 규칙이 하는 것에 대해 생각해봐야 합니다. 추가 연습으로 우리는 ``Bool``형에 불리언연산 ``and``, ``or``, ``not``을 정의하는 것을 제안합니다. 그리고 일반적인 항등식을 확인해보세요. 여러분이  ``and``같은 이항 연산을 `match`를 사용해 정의할 수 있다는 것을 보세요.
 
 ```lean
 # namespace Hidden
@@ -384,16 +314,12 @@ def and (a b : Bool) : Bool :=
 # end Hidden
 ```
 
-Similarly, most identities can be proved by introducing suitable `match`, and then using ``rfl``.
+마찬가지로 대부분의 항등식들은 적절한 `match`와 그 뒤 ``rfl``를 쓰는 것으로 증명될 수 있습니다.
 
-Constructors with Arguments
+인수를 가지는 생성자
 ---------------------------
 
-Enumerated types are a very special case of inductive types, in which
-the constructors take no arguments at all. In general, a
-"construction" can depend on data, which is then represented in the
-constructed argument. Consider the definitions of the product type and
-sum type in the library:
+열거 유형은 유도형의 아주 특별한 경우 입니다. 이들의 생성자는 인수를 전혀 받지 않습니다. 일반적으로 "생성"은 데이터에 의존할 수 있습니다. 그러면 그것은 생성된 인자에서 표현됩니다. 라이브러리에서 곱 유형의 정의와 합 유형의 정의를 고려해보세요.
 
 ```lean
 # namespace Hidden
@@ -406,15 +332,7 @@ inductive Sum (α : Type u) (β : Type v) where
 # end Hidden
 ```
 
-Notice that we do not include the types ``α`` and ``β`` in the target
-of the constructors. In the meanwhile, think about what is going on in
-these examples. The product type has one constructor, ``Prod.mk``,
-which takes two arguments. To define a function on ``Prod α β``, we
-can assume the input is of the form ``Prod.mk a b``, and we have to
-specify the output, in terms of ``a`` and ``b``. We can use this to
-define the two projections for ``Prod``. Remember that the standard
-library defines notation ``α × β`` for ``Prod α β`` and ``(a, b)`` for
-``Prod.mk a b``.
+우리가 생성자의 대상에 ``α``형과 ``β``형을 포함하지 않은 것을 주목하세요. 한편, 이 예제에서 무슨 일이 일어나는 건지 생각해보세요. 곱 유형은 하나의 생성자 ``Prod.mk``를 갖고 있습니다. 이것은 두 인수를 받습니다.  ``Prod α β``에서 함수를 정의하기 위해서 우리는 입력의 형태가 ``Prod.mk a b``이라 가정할 수 있습니다. 그리고 ``a``와 ``b``에 대해 출력을 명시해야 합니다. 우리는 이것을 ``Prod``에 대한 두 투영(projection)이라고 정의하는데 사용할 수있습니다. 표준 라이브러리는 ``Prod α β``에 대해 ``α × β`` 표기를 정의하고 ``Prod.mk a b``에 대해 ``(a, b)``를 정의합니다.
 
 ```lean
 # namespace Hidden
@@ -430,14 +348,10 @@ def snd {α : Type u} {β : Type v} (p : Prod α β) : β :=
 # end Hidden
 ```
 
-The function ``fst`` takes a pair, ``p``. The `match` interprets
-``p`` as a pair, ``Prod.mk a b``. Recall also from [Dependent Type Theory](./dependent_type_theory.md)
-that to give these definitions the greatest generality possible, we allow
-the types ``α`` and ``β`` to belong to any universe.
+``fst`` 함수는 쌍 ``p``를 받습니다. `match`는 ``p``를 쌍으로서 해석합니다. ``Prod.mk a b`` [종속 유형론](./dependent_type_theory.md)으로부터 이들 정의에 가능한 가장 큰 일반성을 준 것을 기억하세요. 우리는 ``α``형과 ``β``형이 임의의 세계에 속함을 허용합니다.
 
 
-Here is another example where we use the recursor `Prod.casesOn` instead
-of `match`.
+여기에 `match` 대신 재귀자 `Prod.casesOn`을 사용하는 또다른 예제가 있습니다.
 
 ```lean
 def prod_example (p : Bool × Nat) : Nat :=
@@ -447,21 +361,11 @@ def prod_example (p : Bool × Nat) : Nat :=
 #eval prod_example (false, 3)
 ```
 
-The argument `motive` is used to specify the type of the object you want to
-construct, and it is a function because it may depend on the pair.
-The ``cond`` function is a boolean conditional: ``cond b t1 t2``
-returns ``t1`` if ``b`` is true, and ``t2`` otherwise.
-The function ``prod_example`` takes a pair consisting of a boolean,
-``b``, and a number, ``n``, and returns either ``2 * n`` or ``2 * n + 1``
-according to whether ``b`` is true or false.
+인자 `motive`는 여러분이 생성하기 원하는 대상의 유형을 명시하는데 사용됩니다. 그리고 이것은 쌍에 의존할 수 있기에 함수입니다.
+``cond`` 함수는 조건 불리언입니다. ``cond b t1 t2``은 ``b``가 참이면 ``t1``을 그렇지 않으면 ``t2``를 반환합니다.
+함수 ``prod_example``은 불리언형 ``b``과 자연수형 ``n``을 받고 ``2 * n``나 ``2 * n + 1`` 둘 중의 하나를 ``b`` 가 참인지 거짓인지에 따라 출력하는 함수입니다.
 
-In contrast, the sum type has *two* constructors, ``inl`` and ``inr``
-(for "insert left" and "insert right"), each of which takes *one*
-(explicit) argument. To define a function on ``Sum α β``, we have to
-handle two cases: either the input is of the form ``inl a``, in which
-case we have to specify an output value in terms of ``a``, or the
-input is of the form ``inr b``, in which case we have to specify an
-output value in terms of ``b``.
+대조적으로 합 유형은 *두* 생성자 ``inl``과 ``inr``이 있습니다. ("왼쪽 삽입"과 "오른쪽 삽입" 의미) 각각은 *한*개의 (명시적인) 인수를 받습니다. ``Sum α β``에 함수를 정의하기 위해서 우리는 두 경우를 다뤄야 합니다. 입력이 ``inl a``의 꼴인 경우 우리는 출력값을 ``a``에 대해 나타내야 하고 혹은 입력이 ``inr b``꼴인 경우 우리는 출력값을 ``b``에 대해 나타내야 합니다.
 
 ```lean
 def sum_example (s : Sum Nat Nat) : Nat :=
@@ -473,32 +377,16 @@ Sum.casesOn (motive := fun _ => Nat) s
 #eval sum_example (Sum.inr 3)
 ```
 
-This example is similar to the previous one, but now an input to
-``sum_example`` is implicitly either of the form ``inl n`` or ``inr n``.
-In the first case, the function returns ``2 * n``, and the second
-case, it returns ``2 * n + 1``.
+이 예제는 이전의 것과 닮았다. 하지만 ``sum_example``의 입력이 이제 암시적으로 ``inl n``이나 ``inr n``의 꼴 둘 중의 하나이다.
+첫 번째 경우는 함수는 ``2 * n``을 반환하고 두 번째 경우는 ``2 * n + 1``을 반환한다.
 
-Notice that the product type depends on parameters ``α β : Type``
-which are arguments to the constructors as well as ``Prod``. Lean
-detects when these arguments can be inferred from later arguments to a
-constructor or the return type, and makes them implicit in that case.
+곱 유형은 생성자와 ``Prod``의 인수인 매개변수 ``α β : Type``에 의존하였음을 주목하세요. 린은 이 인수가 생성자의 나중 인수나 반환형으로부터 추론될 수 있을 때를 감지하고 그 경우 이들을 암시적이게 만듭니다.
 
-In the section after next we will see what happens when the
-constructor of an inductive type takes arguments from the inductive
-type itself. What characterizes the examples we consider in this
-section is that this is not the case: each constructor relies only on
-previously specified types.
+이 섹션 다음에 우리는 유도형의 생성자가 자기 자신의 유도형으로부터 인수를 받을 때 무슨 일이 생기는지 알아볼 것이다. 예제를 특징짓는 것은 이 섹션에서 우리는 이 경우만이 아니라 각 생성자가 이전에 명시된 유형에만 의존한다는 점이다.
 
-Notice that a type with multiple constructors is disjunctive: an
-element of ``Sum α β`` is either of the form ``inl a`` *or* of the
-form ``inl b``. A constructor with multiple arguments introduces
-conjunctive information: from an element ``Prod.mk a b`` of
-``Prod α β`` we can extract ``a`` *and* ``b``. An arbitrary inductive type can
-include both features, by having any number of constructors, each of
-which takes any number of arguments.
+다수의 생성자가 있는 유형은 분리적임을 주목하세요. ``Sum α β``의 원소는 ``inl a``의 형태 *또는* ``inl b``의 형태입니다. 다수의 인수들이 있는 생성자는 결합적인 정보를 가져옵니다. ``Prod α β``의 원소  ``Prod.mk a b``으로부터 우리는 ``a``*그리고*``b``를 뽑아낼 수 있다. 임의의 유도형은 다수의 생성자를 갖거나 각각이 다수의 인수를 받게 함으로써 양쪽의 특징을 모두 포함할 수 있다.
 
-As with function definitions, Lean's inductive definition syntax will
-let you put named arguments to the constructors before the colon:
+함수 정의에서 처럼 린의 유도 정의 문법은 여러분이 이름붙은 인수를 콜론 앞에 생성자에 놓게 할 것이다.
 
 ```lean
 # namespace Hidden
@@ -511,15 +399,9 @@ inductive Sum (α : Type u) (β : Type v) where
 # end Hidden
 ```
 
-The results of these definitions are essentially the same as the ones given earlier in this section.
+이 정의의 결과는 본질적으로 이전 섹션에서 제시된 것과 같습니다.
 
-A type, like ``Prod``, that has only one constructor is purely
-conjunctive: the constructor simply packs the list of arguments into a
-single piece of data, essentially a tuple where the type of subsequent
-arguments can depend on the type of the initial argument. We can also
-think of such a type as a "record" or a "structure". In Lean, the
-keyword ``structure`` can be used to define such an inductive type as
-well as its projections, at the same time.
+ ``Prod`` 같이 한 생성자만 갖고 있는 유형은 순수하게 결합적입니다. 생성자는 단순히 인수 리스트를 하나의 데이터 조각으로 뭉칩니다. 본질적으로 순차적인 인수들의 유형인 튜플은 초기 인수의 유형에 의존할 수 있습니다. 우리는 그런 유형으로써 "레코드" 혹은 "구조체"를 생각해볼 수도 있습니다. 린에에서 키워드 ``structure``는 그것의 투영 뿐만 아니라 유도형 같은 것을 동시에 정의하는데 사용될 수 있습니다.
 
 ```lean
 # namespace Hidden
@@ -528,14 +410,10 @@ structure Prod (α : Type u) (β : Type v) where
 # end Hidden
 ```
 
-This example simultaneously introduces the inductive type, ``Prod``,
-its constructor, ``mk``, the usual eliminators (``rec`` and
-``recOn``), as well as the projections, ``fst`` and ``snd``, as
-defined above.
+이 예제는 동시에 유도형 ``Prod``과 그것의 생성자 ``mk``, 평범한 제거자 (``rec``과
+``recOn``) 뿐만 아니라 위에서 정의한 대로 투영 ``fst``과 ``snd``을 도입합니다.
 
-If you do not name the constructor, Lean uses ``mk`` as a default. For
-example, the following defines a record to store a color as a triple
-of RGB values:
+여러분이 생성자의 이름을 지어주지 않는다면, 린은 ``mk``를 기본 이름으로 사용합니다. 예를 들어 다음은 RGB 3개의 값을 갖는 triple로서 색을 저장하는 레코드를 정의합니다.
 
 ```lean
 structure Color where
