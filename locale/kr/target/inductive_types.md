@@ -377,16 +377,16 @@ Sum.casesOn (motive := fun _ => Nat) s
 #eval sum_example (Sum.inr 3)
 ```
 
-이 예제는 이전의 것과 닮았다. 하지만 ``sum_example``의 입력이 이제 암시적으로 ``inl n``이나 ``inr n``의 꼴 둘 중의 하나이다.
-첫 번째 경우는 함수는 ``2 * n``을 반환하고 두 번째 경우는 ``2 * n + 1``을 반환한다.
+이 예제는 이전의 것과 닮았습니다. 하지만 ``sum_example``의 입력이 이제 암시적으로 ``inl n``이나 ``inr n``의 꼴 둘 중의 하나입니다.
+첫 번째 경우는 함수는 ``2 * n``을 반환하고 두 번째 경우는 ``2 * n + 1``을 반환합니다.
 
 곱 유형은 생성자와 ``Prod``의 인수인 매개변수 ``α β : Type``에 의존하였음을 주목하세요. 린은 이 인수가 생성자의 나중 인수나 반환형으로부터 추론될 수 있을 때를 감지하고 그 경우 이들을 암시적이게 만듭니다.
 
-이 섹션 다음에 우리는 유도형의 생성자가 자기 자신의 유도형으로부터 인수를 받을 때 무슨 일이 생기는지 알아볼 것이다. 예제를 특징짓는 것은 이 섹션에서 우리는 이 경우만이 아니라 각 생성자가 이전에 명시된 유형에만 의존한다는 점이다.
+이 섹션 다음에 우리는 유도형의 생성자가 자기 자신의 유도형으로부터 인수를 받을 때 무슨 일이 생기는지 알아볼 것입니다. 예제를 특징짓는 것은 이 섹션에서 우리는 이 경우만이 아니라 각 생성자가 이전에 명시된 유형에만 의존한다는 점입니다.
 
-다수의 생성자가 있는 유형은 분리적임을 주목하세요. ``Sum α β``의 원소는 ``inl a``의 형태 *또는* ``inl b``의 형태입니다. 다수의 인수들이 있는 생성자는 결합적인 정보를 가져옵니다. ``Prod α β``의 원소  ``Prod.mk a b``으로부터 우리는 ``a``*그리고*``b``를 뽑아낼 수 있다. 임의의 유도형은 다수의 생성자를 갖거나 각각이 다수의 인수를 받게 함으로써 양쪽의 특징을 모두 포함할 수 있다.
+다수의 생성자가 있는 유형은 분리적임을 주목하세요. ``Sum α β``의 원소는 ``inl a``의 형태 *또는* ``inl b``의 형태입니다. 다수의 인수들이 있는 생성자는 결합적인 정보를 가져옵니다. ``Prod α β``의 원소  ``Prod.mk a b``으로부터 우리는 ``a``*그리고*``b``를 뽑아낼 수 있습니다. 임의의 유도형은 다수의 생성자를 갖거나 각각이 다수의 인수를 받게 함으로써 양쪽의 특징을 모두 포함할 수 있습니다.
 
-함수 정의에서 처럼 린의 유도 정의 문법은 여러분이 이름붙은 인수를 콜론 앞에 생성자에 놓게 할 것이다.
+함수 정의에서 처럼 린의 유도 정의 문법은 여러분이 이름붙은 인수를 콜론 앞에 생성자에 놓게 할 겁니다.
 
 ```lean
 # namespace Hidden
@@ -425,10 +425,9 @@ def yellow := Color.mk 255 255 0
 #eval Color.red yellow
 ```
 
-The definition of ``yellow`` forms the record with the three values
-shown, and the projection ``Color.red`` returns the red component.
+``yellow``의 정의는 제시한 세 값의 레코드를 형성합니다. 그리고 투영 ``Color.red``은 빨간색 성분을 반환합니다.
 
-You can avoid the parentheses if you add a line break between each field.
+여러분은 각 필드 사이에 줄바꿈 문자를 추가하면 괄호를 생략할 수 있습니다.
 
 ```lean
 structure Color where
@@ -438,10 +437,7 @@ structure Color where
   deriving Repr
 ```
 
-The ``structure`` command is especially useful for defining algebraic
-structures, and Lean provides substantial infrastructure to support
-working with them. Here, for example, is the definition of a
-semigroup:
+``structure`` 명령은 대수적 구조를 정의하는데 특히 유용합니다. 그리고 린은 이들과 작업을 지원하는 중요한 기반구조를 제공합니다. 예를 들어 여기 반군(半群, semigroup)의 정의가 있습니다.
 
 ```lean
 structure Semigroup where
@@ -450,9 +446,9 @@ structure Semigroup where
   mul_assoc : ∀ a b c, mul (mul a b) c = mul a (mul b c)
 ```
 
-We will see more examples in [Chapter Structures and Records](./structures_and_records.md).
+우리는 [구조체와 레코드 장](./structures_and_records.md)에서 더 많은 예제를 볼 것입니다.
 
-We have already discussed the dependent product type `Sigma`:
+우리는 이미 의존 곱 유형 `Sigma`에 대해 얘기했습니다.
 
 ```lean
 # namespace Hidden
@@ -461,7 +457,7 @@ inductive Sigma {α : Type u} (β : α → Type v) where
 # end Hidden
 ```
 
-Two more examples of inductive types in the library are the following:
+라이브러리에서 유도형의 둘 이상의 예제가 다음에 있습니다.
 
 ```lean
 # namespace Hidden
@@ -474,35 +470,16 @@ inductive Inhabited (α : Type u) where
 # end Hidden
 ```
 
-In the semantics of dependent type theory, there is no built-in notion
-of a partial function. Every element of a function type ``α → β`` or a
-dependent function type ``(a : α) → β`` is assumed to have a value
-at every input. The ``Option`` type provides a way of representing partial functions. An
-element of ``Option β`` is either ``none`` or of the form ``some b``,
-for some value ``b : β``. Thus we can think of an element ``f`` of the
-type ``α → Option β`` as being a partial function from ``α`` to ``β``:
-for every ``a : α``, ``f a`` either returns ``none``, indicating the
-``f a`` is "undefined", or ``some b``.
+의존 유형론의 의미론에서 부분 함수의 내장 개념은 없습니다. ``α → β``형 함수나 ``(a : α) → β``형 의존 함수의 모든 원소는 매 입력에 대한 함숫값을 갖는다고 가정됩니다. ``Option`` 형은 부분 함수를 표현하는 한 방법을 제공합니다. ``Option β``의 원소는 ``none``이거나 어떤 값 ``b : β``에 대한 ``some b``꼴 입니다. 따라서 우리는 ``α → Option β``형의 원소 ``f``를 모든 ``a : α``에 대한 ``α``에서 ``β``까지의 부분함수인 것으로 생각할 수 있습니다. ``f a`` ``f a``가 "정의되지 않음"을 가리키는 ``none``을 반환하거나 ``some b``을 반환합니다.
 
-An element of ``Inhabited α`` is simply a witness to the fact that
-there is an element of ``α``. Later, we will see that ``Inhabited`` is
-an example of a *type class* in Lean: Lean can be instructed that
-suitable base types are inhabited, and can automatically infer that
-other constructed types are inhabited on that basis.
+``Inhabited α``의 원소는 단지 ``α``의 원소가 있다는 사실에 대한 증인입니다. 나중에 우리는 ``Inhabited``가 린에서 *type class*의 예임을 보게 될 것입니다. 린은 적절한 기반형이 내장됨을 알게 되면 자동적으로 다른 생성된 유형도 그 기저에 내장되었음을 추론할 수 있습니다.
 
-As exercises, we encourage you to develop a notion of composition for
-partial functions from ``α`` to ``β`` and ``β`` to ``γ``, and show
-that it behaves as expected. We also encourage you to show that
-``Bool`` and ``Nat`` are inhabited, that the product of two inhabited
-types is inhabited, and that the type of functions to an inhabited
-type is inhabited.
+연습으로 우리는 여러분이 ``α``에서``β``까지 그리고 ``β`` to ``γ``까지 부분 함수에 대한 합성의 개념을 만들도록 권장합니다. 그리고 그것이 기대한 바처럼 행동하는 것을 보여주세요. 또 우리는 여러분이 ``Bool``과 ``Nat``이 내장되었음을 보이길 권장합니다. 즉, 두 내장된 유형의 곱과 내장된 유형으로의 함수의 유형이 내장되었음을 보이길 원합니다.
 
-Inductively Defined Propositions
+귀납적으로 정의된 명제
 --------------------------------
 
-Inductively defined types can live in any type universe, including the
-bottom-most one, ``Prop``. In fact, this is exactly how the logical
-connectives are defined.
+귀납적으로 정의된 유형은 가장 바닥의 것인 ``Prop``을 포함하는 임의의 유형 세계에 살 수 있습니다. 사실 이것은 논리 결합자가 어떻게 정의되는가에 대한 것 입니다.
 
 ```lean
 # namespace Hidden
@@ -520,17 +497,9 @@ inductive Or (a b : Prop) : Prop where
 # end Hidden
 ```
 
-You should think about how these give rise to the introduction and
-elimination rules that you have already seen. There are rules that
-govern what the eliminator of an inductive type can eliminate *to*,
-that is, what kinds of types can be the target of a recursor. Roughly
-speaking, what characterizes inductive types in ``Prop`` is that one
-can only eliminate to other types in ``Prop``. This is consistent with
-the understanding that if ``p : Prop``, an element ``hp : p`` carries
-no data. There is a small exception to this rule, however, which we
-will discuss below, in the section on inductive families.
+여러분은 이것이 어떻게 여러분이 이미 봐온 도입과 제거 규칙을 제공하는지에 대해 생각해봐야 합니다. 유도형의 제거자가 제거할 수 있는 것, 즉 유형의 어느 종류가 재귀자의 대상이 될 수 있는가를 다루는 규칙이 있습니다. 대략적으로 말하면, ``Prop``에서 유도형을 특징짓는 것은 ``Prop``의 다른 유형으로만 제거할 수 있습니다. 이것은 ``p : Prop``이면 원소 ``hp : p``는 아무 데이터도 나르지 않는다는 것의 이해와 일관됩니다. 그러나 이 규칙에 우리가 아래에서 논의할 작은 예외가 유도군의 섹션에 있습니다.
 
-Even the existential quantifier is inductively defined:
+심지어 존재 한정기호도 유도적으로 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -539,18 +508,12 @@ inductive Exists {α : Type u} (q : α → Prop) : Prop where
 # end Hidden
 ```
 
-Keep in mind that the notation ``∃ x : α, p`` is syntactic sugar for ``Exists (fun x : α => p)``.
+``∃ x : α, p`` 기호는 ``Exists (fun x : α => p)``에 대한 문법적 설탕임을 기억하세요.
 
-The definitions of ``False``, ``True``, ``And``, and ``Or`` are
-perfectly analogous to the definitions of ``Empty``, ``Unit``,
-``Prod``, and ``Sum``. The difference is that the first group yields
-elements of ``Prop``, and the second yields elements of ``Type u`` for
-some ``u``. In a similar way, ``∃ x : α, p`` is a ``Prop``-valued
-variant of ``Σ x : α, p``.
+ ``False``, ``True``, ``And``그리고 ``Or``의 정의는 완전히 ``Empty``, ``Unit``,
+``Prod``과 ``Sum``의 정의와 유사합니다. 차이점은 첫 번째 그룹은 ``Prop``의 원소를 얻고 두 번째 그룹은 어떤 ``u``에 대한 ``Type u`` 의 원소를 얻는다는 점입니다. 마찬가지로 ``∃ x : α, p``은 ``Σ x : α, p``의 ``Prop`` 값이 매겨진 변형입니다.
 
-This is a good place to mention another inductive type, denoted
-``{x : α // p}``, which is sort of a hybrid between
-``∃ x : α, P`` and ``Σ x : α, P``.
+여기서 또 다른 유도형 ``∃ x : α, P``과 ``Σ x : α, P``이 섞인 ``{x : α // p}``으로 나타낸 유도형을 얘기하기 좋은 곳 같습니다.
 
 ```lean
 # namespace Hidden
@@ -559,21 +522,15 @@ inductive Subtype {α : Type u} (p : α → Prop) where
 # end Hidden
 ```
 
-In fact, in Lean, ``Subtype`` is defined using the structure command:
+사실 린에서 ``Subtype``은 구조체 명령을 사용해 정의됩니다.
 
-The notation ``{x : α // p x}`` is syntactic sugar for ``Subtype (fun x : α => p x)``.
-It is modeled after subset notation in set theory: the idea is that ``{x : α // p x}``
-denotes the collection of elements of ``α`` that have property ``p``.
+기호 ``{x : α // p x}``은 ``Subtype (fun x : α => p x)``에 대한 문법적 설탕입니다.
+집합론에서 부분집합 표기 이후에 모델되었습니다.
 
-Defining the Natural Numbers
+자연수를 정의하기
 ----------------------------
 
-The inductively defined types we have seen so far are "flat":
-constructors wrap data and insert it into a type, and the
-corresponding recursor unpacks the data and acts on it. Things get
-much more interesting when the constructors act on elements of the
-very type being defined. A canonical example is the type ``Nat`` of
-natural numbers:
+우리가 지금까지 본 재귀적으로 정의된 유형은 "평평"합니다. 생성자는 데이터를 변형해서 유형에 그것을 삽입하고, 그에 대응하는 재귀자는 데이터를 풀고 그것에 작용합니다. 생성자가 정의될 바로 그 유형의 원소들에 작용할 때 훨씬 더 흥미롭게 될 것입니다. 표준 예제는 자연수의 ``Nat``유형입니다.
 
 ```lean
 # namespace Hidden
@@ -583,25 +540,10 @@ inductive Nat where
 # end Hidden
 ```
 
-There are two constructors. We start with ``zero : Nat``; it takes
-no arguments, so we have it from the start. In contrast, the
-constructor ``succ`` can only be applied to a previously constructed
-``Nat``. Applying it to ``zero`` yields ``succ zero : Nat``. Applying
-it again yields ``succ (succ zero) : Nat``, and so on. Intuitively,
-``Nat`` is the "smallest" type with these constructors, meaning that
-it is exhaustively (and freely) generated by starting with ``zero``
-and applying ``succ`` repeatedly.
+두 생성자가 있습니다. ``zero : Nat``으로 시작합니다. 이것은 아무 인수를 받지 않습니다. 그래서 우리는 시작부터 이것을 갖습니다. 반대로 생성자 ``succ``은 이전에 생성된 ``Nat``에만 적용될 수 있습니다. 이를 ``zero``에 적용하여``succ zero : Nat``을 얻습니다. 이를 다시 적용하여 ``succ (succ zero) : Nat``을 얻습니다. 그리고 계속됩니다. 직관적으로 ``Nat``은 이 생성자에서 "가장 작은" 유형입니다. ``zero``으로 시작하여 ``succ``를 반복적으로 적용함으로 남김없이 (그리고 자유롭게) 생성됨을 의미합니다.
 
-As before, the recursor for ``Nat`` is designed to define a dependent
-function ``f`` from ``Nat`` to any domain, that is, an element ``f``
-of ``(n : nat) → motive n`` for some ``motive : Nat → Sort u``.
-It has to handle two cases: the case where the input is ``zero``, and the case where
-the input is of the form ``succ n`` for some ``n : Nat``. In the first
-case, we simply specify a target value with the appropriate type, as
-before. In the second case, however, the recursor can assume that a
-value of ``f`` at ``n`` has already been computed. As a result, the
-next argument to the recursor specifies a value for ``f (succ n)`` in
-terms of ``n`` and ``f n``. If we check the type of the recursor,
+전처럼 ``Nat``에 대한 재귀자는 의존함수 ``f``를 ``Nat``에서 임의의 영역으로 정의하도록 설계되었습니다. 즉,  어떤 ``motive : Nat → Sort u``에 대해 ``(n : nat) → motive n``의 원소가 ``f``입니다.
+이것은 입력이 ``zero``인 경우와  입력이 어떤 ``n : Nat``에 대해 ``succ n`` 꼴인 입력에 대한 경우 두가지를 다뤄야 합니다. 첫 번째 경우에서 우리는 단순히 이전처럼 적절한 유형으로 대상 값을 명시할 수 있습니다. 그러나 두 번째 경우에서 재귀자는 ``n``에서 ``f``의 값이 이미 계산되었음을 가정합니다. 그 결과 재귀자에 대한 다음 인수는 ``n``과 ``f n``에 대해서 ``f (succ n)``에 대한 값을 명시합니다. 우리가 재귀자의 유형을 확인해보면
 
 ```lean
 # namespace Hidden
@@ -612,7 +554,7 @@ terms of ``n`` and ``f n``. If we check the type of the recursor,
 # end Hidden
 ```
 
-you find the following:
+여러분은 다음을 발견합니다.
 
 ```
   {motive : Nat → Sort u}
@@ -621,14 +563,13 @@ you find the following:
   → (t : Nat) → motive t
 ```
 
-The implicit argument, ``motive``, is the codomain of the function being defined.
-In type theory it is common to say ``motive`` is the *motive* for the elimination/recursion,
-since it describes the kind of object we wish to construct.
-The next two arguments specify how to compute the zero and successor cases, as described above.
-They are also known as the ``minor premises``.
-Finally, the ``t : Nat``, is the input to the function. It is also known as the ``major premise``.
+암시적 인수 ``motive``는 정의될 함수와 공동 영역입니다.
+유형론에서 ``motive``가 제거/재귀에 대한 *motive*다 라고 흔히 말합니다. 왜냐하면 이는 우리가 생성하고자 하는 대산의 종류를 설명하기 때문입니다.
+다음 두 인수는 위에서 설명한 0과 계승자에 대한 경우를 어떻게 계산하는지를 보여줍니다.
+이들은 ``사소한 전제``라고도 알려져 있습니다.
+마침내 ``t : Nat``가 함수에 대한 입력입니다. 이것은 ``주요 전제``로 알려져 있습니다.
 
-The `Nat.recOn` is similar to `Nat.rec` but the major premise occurs before the minor premises.
+`Nat.recOn`은 `Nat.rec`과 비슷하지만 주요 전제는 사소한 전제보다 먼저 일어납니다.
 
 ```
 @Nat.recOn :
@@ -639,11 +580,7 @@ The `Nat.recOn` is similar to `Nat.rec` but the major premise occurs before the 
   → motive t
 ```
 
-Consider, for example, the addition function ``add m n`` on the
-natural numbers. Fixing ``m``, we can define addition by recursion on
-``n``. In the base case, we set ``add m zero`` to ``m``. In the
-successor step, assuming the value ``add m n`` is already determined,
-we define ``add m (succ n)`` to be ``succ (add m n)``.
+예를 들어 자연수에 대한 추가 함수 ``add m n``을 고려해보세요. ``m``을 고치면 우리는 ``n``에 대한 재귀로부터 덧셈을 정의할 수 있습니다. 기저의 경우에서 우리는 ``add m zero``를 ``m``으로 설정합니다. 계승자 단계에서 우리는 ``add m (succ n)``이 ``add m (succ n)``이 되도록 정의하여 값 ``add m n``의 추정은 이미 결정되었습니다.
 
 ```lean
 # namespace Hidden
@@ -663,9 +600,7 @@ open Nat
 # end Hidden
 ```
 
-It is useful to put such definitions into a namespace, ``Nat``. We can
-then go on to define familiar notation in that namespace. The two
-defining equations for addition now hold definitionally:
+``Nat`` 이름공간에 그런 정의를 넣는 것은 유용합니다. 그럼 그 이름공간에 친숙한 기호를 정의해 나갈 수 있습니다. 덧셈에 대해 정의한 두 방정식은 이제 정의상으로 성립합니다.
 
 ```lean
 # namespace Hidden
@@ -690,15 +625,10 @@ end Nat
 # end Hidden
 ```
 
-We will explain how the ``instance`` command works in
-[Chapter Type Classes](./type_classes.md). In the examples below, we will henceforth use
-Lean's version of the natural numbers.
+[유형 클래스 장](./type_classes.md)에서 ``instance`` 명령이 어떻게 동작하는지 설명할 것입니다. 아래 예제에서 우리는 이후부터 자연수의 린 버전을 사용할 것입니다.
 
-Proving a fact like ``zero + m = m``, however, requires a proof by induction.
-As observed above, the induction principle is just a special case of the recursion principle,
-when the codomain ``motive n`` is an element of ``Prop``. It represents the familiar
-pattern of an inductive proof: to prove ``∀ n, motive n``, first prove ``motive 0``,
-and then, for arbitrary ``n``, assume ``ih : motive n`` and prove ``motive (succ n)``.
+하지만 ``zero + m = m``같은 사실을 증명하는 것은 귀납에 의한 증명이 요구됩니다.
+위에서 봤듯이 공동역역 ``motive n``이 ``Prop``의 원소일 때 귀납 원리는 재귀 원리의 특별한 경우일 뿐입니다. 이는 귀납적 적의의 유사한 패턴을 보여줍니다. ``∀ n, motive n``을 증명하기 위해 우선 ``motive 0``을 증명하고 그 뒤 임의의 ``n``에 대해 ``ih : motive n``을 가정하고 ``motive (succ n)``를 증명합니다.
 
 ```lean
 # namespace Hidden
@@ -716,10 +646,7 @@ theorem zero_add (n : Nat) : 0 + n = n :=
 # end Hidden
 ```
 
-Notice that, once again, when ``Nat.recOn`` is used in the context of
-a proof, it is really the induction principle in disguise. The
-``rewrite`` and ``simp`` tactics tend to be very effective in proofs
-like these. In this case, each can be used to reduce the proof to:
+다시 한 번 ``Nat.recOn``은 증명의 맥락에서 사용됨을 주목하세요. 이는 정말로 귀납 원리가 위장한 것입니다. ``rewrite``와 ``simp`` 전략은 이 같은 증명에서 아주 효과적인 경향이 있습니다. 여기서 각각은 증명을 다음과 같이 간단히 하는데 사용됩니다.
 
 ```lean
 # namespace Hidden
@@ -732,11 +659,8 @@ theorem zero_add (n : Nat) : 0 + n = n :=
 # end Hidden
 ```
 
-For another example, let us prove the associativity of addition,
-``∀ m n k, m + n + k = m + (n + k)``.
-(The notation ``+``, as we have defined it, associates to the left, so ``m + n + k`` is really ``(m + n) + k``.)
-The hardest part is figuring out which variable to do the induction on. Since addition is defined by recursion on the second argument,
-``k`` is a good guess, and once we make that choice the proof almost writes itself:
+다른 예제에서 덧셈의 결합성 ``∀ m n k, m + n + k = m + (n + k)``을 증명해 봅시다.
+(``+`` 기호는 우리가 정의했다시피 왼쪽으로 결합됩니다. 그래서 ``m + n + k``은 사실 ``(m + n) + k``입니다.) 가장 어려운 부분은 어떤 변수에 귀납을 적용할 것인지 알아내는 것 입니다. 덧셈은 두 번째 인수에 대해 재귀적으로 정의되어 있기 때문에 ``k``는 좋은 추측입니다. 그리고 한번 우리가 그 선택을 하면 증명은 거의 술술 써집니다.
 
 ```lean
 # namespace Hidden
@@ -754,7 +678,7 @@ theorem add_assoc (m n k : Nat) : m + n + k = m + (n + k) :=
 # end Hidden
 ```
 
-One again, you can reduce the proof to:
+다시한번 여러분은 증명을 다음과 같이 줄일 수 있습니다.
 
 ```lean
 open Nat
@@ -764,7 +688,7 @@ theorem add_assoc (m n k : Nat) : m + n + k = m + (n + k) :=
     (fun k ih => by simp [Nat.add_succ, ih]; done)
 ```
 
-Suppose we try to prove the commutativity of addition. Choosing induction on the second argument, we might begin as follows:
+우리가 덧셈에 교환성을 증명하려고 한다 가정합시다. 두 번째 인수에 귀납을 선택하는 것으로 우리는 다음과 같이 시작할 수 있습니다.
 
 ```lean
 open Nat
@@ -778,8 +702,8 @@ theorem add_comm (m n : Nat) : m + n = n + m :=
                   _ = succ n +  m  := sorry)
 ```
 
-At this point, we see that we need another supporting fact, namely, that ``succ (n + m) = succ n + m``.
-You can prove this by induction on ``m``:
+이 시점에서 우리는 또다른 지지하는 사실 ``succ (n + m) = succ n + m``이 필요함을 알게 됩니다.
+여러분은 이것을 ``m``에 대한 귀납으로 증명할 수 있습니다.
 
 ```lean
 open Nat
@@ -794,7 +718,7 @@ theorem succ_add (n m : Nat) : succ n + m = succ (n + m) :=
            _  = succ (n + succ m)             := rfl)
 ```
 
-You can then replace the ``sorry`` in the previous proof with ``succ_add``. Yet again, the proofs can be compressed:
+그럼 여러분은 이전 증명에서 ``sorry``를 ``succ_add``으로 대체할 수 있습니다. 그러나 다시 이 증명은 간단히 될 수 있습니다.
 
 ```lean
 # namespace Hidden
@@ -811,12 +735,10 @@ theorem add_comm (m n : Nat) : m + n = n + m :=
 # end Hidden
 ```
 
-Other Recursive Data Types
+다른 재귀적인 데이터 유형
 --------------------------
 
-Let us consider some more examples of inductively defined types. For
-any type, ``α``, the type ``List α`` of lists of elements of ``α`` is
-defined in the library.
+재귀적으로 정의된 유형에 대해 몇 가지 예제를 더 고려해봅시다. 임의의 유형 ``α``에 대한 ``α`` 원소의 리스트 ``List α``형은 라이브러리에 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -842,12 +764,10 @@ end List
 # end Hidden
 ```
 
-A list of elements of type ``α`` is either the empty list, ``nil``, or
-an element ``h : α`` followed by a list ``t : List α``.
-The first element, ``h``, is commonly known as the "head" of the list,
-and the remainder, ``t``, is known as the "tail."
+``α``형 원소의 리스트는 빈 리스트 ``nil``이거나 리스트 ``t : List α``의 다음의 원소 ``h : α``입니다.
+첫 원소 ``h``는 흔히 리스트의 "헤드"로 알려져 있고 나머지 ``t``는 "테일"이라고 알려져 있습니다.
 
-As an exercise, prove the following:
+연습으로 다음을 증명하세요.
 
 ```lean
 # namespace Hidden
@@ -874,10 +794,9 @@ theorem append_assoc (as bs cs : List α)
 # end Hidden
 ```
 
-Try also defining the function ``length : {α : Type u} → List α → Nat`` that returns the length of a list,
-and prove that it behaves as expected (for example, ``length (append as bs) = length as + length bs``).
+리스트의 길이를 반환하는  함수 ``length : {α : Type u} → List α → Nat``도 정의해 보세요. 그리고 이것 예상대로 동작하는지 증명하세요. (예를 들어 ``length (append as bs) = length as + length bs``)
 
-For another example, we can define the type of binary trees:
+또 다른 예제로 우리는 이진 트리의 유형을 정의할 수 있습니다.
 
 ```lean
 inductive BinaryTree where
@@ -907,18 +826,12 @@ def omega : CBTree :=
 end CBTree
 ```
 
-Tactics for Inductive Types
+귀납형에 대한 전략
 ---------------------------
 
-Given the fundamental importance of inductive types in Lean, it should
-not be surprising that there are a number of tactics designed to work
-with them effectively. We describe some of them here.
+린의 귀납형의 근본적인 중요성이 제시되었을 때 이들과 효과적으로 동작하도록 설계된 다수의 전략이 있는 것은 놀라운 일이 아닙니다. 여기서 우리는 이들 중 몇 가지를 설명합니다.
 
-The ``cases`` tactic works on elements of an inductively defined type,
-and does what the name suggests: it decomposes the element according
-to each of the possible constructors. In its most basic form, it is
-applied to an element ``x`` in the local context. It then reduces the
-goal to cases in which ``x`` is replaced by each of the constructions.
+``cases`` 전략은 재귀적으로 정의된 유형의 원소와 이름이 제안하는 것에 작용합니다. 이것은 가능한 생성자들의 각각에 따라 원소를 분리한다. 그것의 가장 기본 형태에서 이것은 지역 맥락에서 원소 ``x``에 적용됩니다. 그 뒤 이것은 목표를 ``x``는 생성자의 각각으로 대체되는 경우로 바꿉니다.
 
 ```lean
 example (p : Nat → Prop) (hz : p 0) (hs : ∀ n, p (Nat.succ n)) : ∀ n, p n := by
@@ -928,15 +841,7 @@ example (p : Nat → Prop) (hz : p 0) (hs : ∀ n, p (Nat.succ n)) : ∀ n, p n 
   . apply hs  -- goal is a : ℕ ⊢ p (succ a)
 ```
 
-There are extra bells and whistles. For one thing, ``cases`` allows
-you to choose the names for each alternative using a
-``with`` clause. In the next example, for example, we choose the name
-``m`` for the argument to ``succ``, so that the second case refers to
-``succ m``. More importantly, the cases tactic will detect any items
-in the local context that depend on the target variable. It reverts
-these elements, does the split, and reintroduces them. In the example
-below, notice that the hypothesis ``h : n ≠ 0`` becomes ``h : 0 ≠ 0``
-in the first branch, and ``h : succ m ≠ 0`` in the second.
+여기 여분의 종과 호루라기가 있습니다. 한 가지에 대해, ``cases``는 여러분이 ``with`` 절을 사용하여 각 대안에 대한 이름을 선택할 수 있도록 허용합니다.  다음 예제에서 예를들어 우리는 이름``m``을 ``succ``에 대한 인수로 선택하여 두 번쨰 경우가 ``succ m``을 참조하도록 합니다. 더 중요하게 cases 전략은 대상 변수에 의존하는 지역 상황 속 임의의 항목을 감지할 수 있습니다. 이것은 이 원소를 되돌리고, 나누기를 하고, 그들을 다시 도입합니다. 아래 예제에서 가정 ``h : n ≠ 0``이  첫 분기에서 ``h : 0 ≠ 0``이 되고 두 번째 분기에서 ``h : succ m ≠ 0``이 됨을 주목하세요.
 
 ```lean
 open Nat
@@ -951,7 +856,7 @@ example (n : Nat) (h : n ≠ 0) : succ (pred n) = n := by
     rfl
 ```
 
-Notice that ``cases`` can be used to produce data as well as prove propositions.
+``cases``는 데이터를 만드는 것만 아니라 명제를 증명하는 데에도 사용될 수 있음을 주목하세요.
 
 ```lean
 def f (n : Nat) : Nat := by
@@ -961,7 +866,7 @@ example : f 0 = 3 := rfl
 example : f 5 = 7 := rfl
 ```
 
-Once again, cases will revert, split, and then reintroduce depedencies in the context.
+다시 한번, cases는 맥락의 종속물들을 되돌리고, 나누고, 재도입합니다.
 
 ```lean
 def Tuple (α : Type) (n : Nat) :=
@@ -977,7 +882,7 @@ example : f myTuple = 7 :=
   rfl
 ```
 
-Here is an example with multiple constructors with arguments.
+인자를 갖는 다수의 생성자 있는 예제가 있습니다.
 
 ```lean
 inductive Foo where
@@ -990,8 +895,7 @@ def silly (x : Foo) : Nat := by
   | bar2 c d e => exact e
 ```
 
-The alternatives for each constructor don't need to be solved
-in the order the constructors were declared.
+각 생성자에 대한 대안은 성성자가 선언된 순서대로 풀려야 할 필요는 없습니다.
 
 ```lean
 inductive Foo where
@@ -1004,9 +908,8 @@ def silly (x : Foo) : Nat := by
   | bar1 a b => exact b
 ```
 
-The syntax of the ``with`` is convenient for writing structured proofs.
-Lean also provides a complementary ``case`` tactic, which allows you to focus on goal
-assign variable names.
+``with``의 문법은 구조화된 증명을 작성하는데 편리합니다.
+린은 여러분이 목표에 변수 이름을 할당할 수 있게 하는 보완적인 ``case`` 전략도 제공합니다.
 
 ```lean
 inductive Foo where
@@ -1019,7 +922,7 @@ def silly (x : Foo) : Nat := by
   case bar1 a b => exact b
 ```
 
-The ``case`` tactic is clever, in that it will match the constructor to the appropriate goal. For example, we can fill the goals above in the opposite order:
+ ``case`` 전략은 적절한 목표에 대한 생성자를 짝지어준다는 점에서 영리합니다. 예를 들어 우리는 위의 목표를 반대 순서로 채울 수 있습니다.
 
 ```lean
 inductive Foo where
@@ -1032,10 +935,7 @@ def silly (x : Foo) : Nat := by
   case bar2 c d e => exact e
 ```
 
-You can also use ``cases`` with an arbitrary expression. Assuming that
-expression occurs in the goal, the cases tactic will generalize over
-the expression, introduce the resulting universally quantified
-variable, and case on that.
+여러분은 임의의 표현식에 ``cases``를 사용할 수도 있습니다. 표현식이 목표에서 나타남을 가정하면, cases 전략은 표현식을 일반화하고 결과적으로 보편적으로 정량화된 변수를 도입하고 이에 대한 경우를 나눕니다.
 
 ```lean
 open Nat
@@ -1047,9 +947,7 @@ example (p : Nat → Prop) (hz : p 0) (hs : ∀ n, p (succ n)) (m k : Nat)
   apply hs   -- goal is a : ℕ ⊢ p (succ a)
 ```
 
-Think of this as saying "split on cases as to whether ``m + 3 * k`` is
-zero or the successor of some number." The result is functionally
-equivalent to the following:
+이것을 "``m + 3 * k``이 0이거나 어떤 수의 계승자인지로 경우가 나뉜다"고 생각합시다. 이 결과는 다음과 기능적으로 동등합니다.
 
 ```lean
 open Nat
@@ -1062,16 +960,9 @@ example (p : Nat → Prop) (hz : p 0) (hs : ∀ n, p (succ n)) (m k : Nat)
   apply hs   -- goal is a : ℕ ⊢ p (succ a)
 ```
 
-Notice that the expression ``m + 3 * k`` is erased by ``generalize``; all
-that matters is whether it is of the form ``0`` or ``succ a``. This
-form of ``cases`` will *not* revert any hypotheses that also mention
-the expression in the equation (in this case, ``m + 3 * k``). If such a
-term appears in a hypothesis and you want to generalize over that as
-well, you need to ``revert`` it explicitly.
+표현식 ``m + 3 * k``은 ``generalize``에 의해 지워짐을 보세요. 중요한 것은 ``0`` 혹은 ``succ a``의 형태인지 아닌지 입니다. 이 ``cases``의 형태는 방정식(이 경우 ``m + 3 * k``)에서 표현식을 언급한 적 있는 어떤 가정도 되돌리지 *않을* 것입니다. 만약 그런 항이 가정에 나타나고 여러분이 그것에 대해서도 일반화하기 원한다다면 여러분은 그것을 명시적으로 ``revert`` 할 필요가 있습니다.
 
-If the expression you case on does not appear in the goal, the
-``cases`` tactic uses ``have`` to put the type of the expression into
-the context. 여기 예제가 있습니다.
+여러분이 경우를 나누려는 표현식이 목표에 나타나지 않는다면 ``cases`` 전략은 맥락에 표현식의 유형을 넣도록``have`` 를 사용합니다. 여기 예제가 있습니다.
 
 ```lean
 example (p : Prop) (m n : Nat)
@@ -1081,11 +972,7 @@ example (p : Prop) (m n : Nat)
   case inr hge => exact h₂ hge
 ```
 
-The theorem ``Nat.lt_or_ge m n`` says ``m < n ∨ m ≥ n``, and it is
-natural to think of the proof above as splitting on these two
-cases. In the first branch, we have the hypothesis ``h₁ : m < n``, and
-in the second we have the hypothesis ``h₂ : m ≥ n``. The proof above
-is functionally equivalent to the following:
+정리 ``Nat.lt_or_ge m n``은 ``m < n ∨ m ≥ n``을 말합니다. 그리고 이것은 이들 두 경우를 나눔으로써 위의 증명이 당연하다고 생각합니다. 첫 분기에서 우리는 가정 ``h₁ : m < n``을 갖고 두 번째에서 우리는 가정 ``h₂ : m ≥ n``을 갖습니다. 위의 증명은 다음과 기능적으로 동등합니다.
 
 ```lean
 example (p : Prop) (m n : Nat)
@@ -1096,11 +983,9 @@ example (p : Prop) (m n : Nat)
   case inr hge => exact h₂ hge
 ```
 
-After the first two lines, we have ``h : m < n ∨ m ≥ n`` as a
-hypothesis, and we simply do cases on that.
+첫 두 줄 이후에 우리는 ``h : m < n ∨ m ≥ n``을 가정으로 갖습니다. 그리고 우리는 단순히 이에 대해 경우를 나눕니다.
 
-Here is another example, where we use the decidability of equality on
-the natural numbers to split on the cases ``m = n`` and ``m ≠ n``.
+여기 또 다른 예제가 있습니다. 우리는 ``m = n``과 ``m ≠ n``으로 나누도록  자연수에 대한 동등성의 결정가능성을 사용합니다.
 
 ```lean
 #check Nat.sub_self
@@ -1111,16 +996,9 @@ example (m n : Nat) : m - n = 0 ∨ m ≠ n := by
   | inr hne => apply Or.inr; exact hne
 ```
 
-Remember that if you ``open Classical``, you can use the law of the
-excluded middle for any proposition at all. But using type class
-inference (see [Chapter Type Classes](./type_classes.md)), Lean can actually
-find the relevant decision procedure, which means that you can use the
-case split in a computable function.
+여러분이 ``open Classical``을 하면 여러분은 임의의 명제에 대해서 배중률을 사용할 수 있음을 기억하세요. 그러나 유형 클래스 추론을 사용하여 ([유형 클래스 장](./type_classes.md) 참조), 린이 실제로 연관된 결정 절차를 찾을 수 있다. 이 말은 여러분이 셀 수 있는 함수에 대해 경우를 나누는 것이 가능하다는 의미이다.
 
-Just as the ``cases`` tactic can be used to carry out proof by cases,
-the ``induction`` tactic can be used to carry out proofs by
-induction. The syntax is similar to that of ``cases``, except that the
-argument can only be a term in the local context. 여기 예제가 있습니다.
+``cases`` 전략은 경우에 따른 증명을 수행하는데 사용될 수 있다. ``induction`` 전략은 귀납으로 증명을 수행하는데 사용될 수 있다. 인수가 지역 상황에 대한 것이라는 점을 제외하고 문법은 ``cases``의 것과 비슷합니다. 여기 예제가 있습니다.
 
 ```lean
 # namespace Hidden
@@ -1142,7 +1020,7 @@ theorem zero_add (n : Nat) : 0 + n = n := by
 # end Hidden
 ```
 
-Here are some additional examples:
+여기 추가 예제가 있습니다.
 
 ```lean
 # namespace Hidden
@@ -1162,8 +1040,7 @@ theorem add_assoc (m n k : Nat) : m + n + k = m + (n + k) := by
 # end Hidden
 ```
 
-The `induction` tactic also supports user-defined induction principles with
-multiple targets (aka major premises).
+`induction` 전략은 (주요 전제라고도 하는) 다수의 타겟을 갖는 사용자 정의 귀납 원리도 지원합니다.
 
 
 ```lean
@@ -1191,7 +1068,7 @@ example (x : Nat) {y : Nat} (h : y > 0) : x % y < y := by
        assumption
 ```
 
-You can use the `match` notation in tactics too:
+여러분은 전략에서 `match` 기호도 사용할 수 있습니다.
 
 ```lean
 example : p ∨ q → q ∨ p := by
@@ -1201,7 +1078,7 @@ example : p ∨ q → q ∨ p := by
   | Or.inr h2 => apply Or.inl; exact h2
 ```
 
-As a convenience, pattern-matching has been integrated into tactics such as `intro` and `funext`.
+편리하기에 패턴 매칭은 `intro`와 `funext` 같은 전략에 합쳐졌습니다.
 
 ```lean
 example : s ∧ q ∧ r → p ∧ r → q ∧ p := by
@@ -1217,12 +1094,7 @@ example :
   rw [Nat.add_comm]
 ```
 
-We close this section with one last tactic that is designed to
-facilitate working with inductive types, namely, the ``injection``
-tactic. By design, the elements of an inductive type are freely
-generated, which is to say, the constructors are injective and have
-disjoint ranges. The ``injection`` tactic is designed to make use of
-this fact:
+ 귀납형과 동작하는 걸 가능하도록 설계된 즉, ``injection`` 전략으로 우리는 이 장을 이 마지막을 마칩니다. 설계하면서 유도형의 원소는 자유롭게 생성됩니다. 그말은 생성자는 주입적이고 분리된 범위를 갖습니다. ``injection`` 전략은 이 사실을 사용하도록 설계되었습니다.
 
 ```lean
 open Nat
@@ -1234,11 +1106,9 @@ example (m n k : Nat) (h : succ (succ m) = succ (succ n))
   rw [h'']
 ```
 
-The first instance of the tactic adds ``h' : succ m = succ n`` to the
-context, and the second adds ``h'' : m = n``.
+전략의 첫번째 개체는 ``h' : succ m = succ n``을 맥락에 추가합니다. 그리고 두번째 개체 ``h'' : m = n``을 추가합니다.
 
-The ``injection`` tactic also detects contradictions that arise when different constructors
-are set equal to one another, and uses them to close the goal.
+``injection`` 전략은 서로 다른 생성자들이 서로 같도록 설정되었을 때 일어나는 모순을 감지하고 이들로 목표를 종료하는데 사용합니다.
 
 ```lean
 open Nat
@@ -1254,9 +1124,9 @@ example (h : 7 = 4) : False := by
   contradiction
 ```
 
-As the second example shows, the ``contradiction`` tactic also detects contradictions of this form.
+두 번째 예제가 보여주다시피 ``contradiction`` 전략도 이 형태의 모순을 감지합니다.
 
-Inductive Families
+유도군
 ------------------
 
 We are almost done describing the full range of inductive definitions
