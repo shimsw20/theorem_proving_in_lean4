@@ -52,7 +52,7 @@ end
 ```
 
 ``double``의 정의는 ``x``를 인수로서 정의할 필요가 없습니다.
-린은 종속성을 감지하고 그것을 자동적으로 삽입합니다. 마찬가지로 린은 ``t1``와 ``t2``에서 ``x``의 나타남을 감지하고 
+린은 종속성을 감지하고 그것을 자동적으로 삽입합니다. 마찬가지로 린은 ``t1``와 ``t2``에서 ``x``의 나타남을 감지하고
 거기에도 자동적으로 그것을 삽입합니다.
 double은 ``y``를 인수로서 갖지 *않음*을 주목하세요. 변수는 오직 그들이 실제로 사용되는 선언에만 포함됩니다.
 
@@ -76,14 +76,14 @@ open Foo
 ```lean
 def Foo.bar : Nat := 1
 ```
-은 매크로로 간주되고 
+은 매크로로 간주되고
 ```lean
 namespace Foo
 def bar : Nat := 1
 end Foo
 ```
 
-로 확장됩니다. 정리와 정의의 이름은 고유하여야 함에도 별명은 그들을 식별하는 별명은 그렇지 않습니다. 우리가 이름공간을 열때, 식별자는 모호하다고 할 지 모릅니다. 린은 맥락에서 의미의 모호함을 해소하려고 유형 정보를 사용하려고 합니다. 
+로 확장됩니다. 정리와 정의의 이름은 고유하여야 함에도 별명은 그들을 식별하는 별명은 그렇지 않습니다. 우리가 이름공간을 열때, 식별자는 모호하다고 할 지 모릅니다. 린은 맥락에서 의미의 모호함을 해소하려고 유형 정보를 사용하려고 합니다.
 그러나 여러분은 이들의 완전한 이름을 주는 것으로 모호성을 항상 풀 수 있습니다. 이 끝에서 문자열 ``_root_``이 빈 접두사를 나타냅니다.
 
 ```lean
@@ -341,26 +341,13 @@ variable (euclr : euclidean r)
 
 린의 구문분석기는 확장가능성이 있습니다. 그 말은 우리가 새로운 기호를 정의할 수 있다는 뜻입니다.
 
-Lean's syntax can be extended and customized by users at every level,
-ranging from basic "mixfix" notations to custom elaborators.  In fact,
-all builtin syntax is parsed and processed using the same mechanisms
-and APIs open to users.  In this section, we will describe and explain
-the various extension points.
+린의 문법은 모든 수준에서 사용자에 의해 기본적인 "혼합 수정" 기호에서 관습적인 협력기에 이르기까지 확장되거나 사용자가 정의해 쓸 수 있습니다.  사실 모든 내장 문법은 같은 메커니즘과 사용자에게 개방된 API를 사용하여 구문분석되고 처리됩니다.  이 섹션에서 우리는 다양한 확장성에 대해 보여주고 설명할 예정입니다.
 
-While introducing new notations is a relatively rare feature in
-programming languages and sometimes even frowned upon because of its
-potential to obscure code, it is an invaluable tool in formalization
-for expressing established conventions and notations of the respective
-field succinctly in code.  Going beyond basic notations, Lean's
-ability to factor out common boilerplate code into (well-behaved)
-macros and to embed entire custom domain specific languages (DSLs) to
-textually encode subproblems efficiently and readably can be of great
-benefit to both programmers and proof engineers alike.
+새로운 기호를 도입하는 것은 프로그래밍 언어에서 상대적으로 흔치 않은 특징이고 때떄로는 그것이 잠재적으로 코드를 모호하게 하여 종종 난처하게 함에도 이는 세워진 관행들과 각 분야의 기호를 코드에서 간결하게 표현하는 것에 대한 형식화에 있어서 귀중한 도구입니다.  기본 기호를 넘어서 흔한 상용구 코드(잘 동작하는)를 매크로로 묶고 전체 사용자 정의 도메인 특정 언어(domain specific languages, DSLs)를 포함해 하위 문제를 효율적이고 가독성있게 텍스트로 인코딩하는 린의 능력은 프로그래머와 증명 엔지니어 같은 모든 이에게 큰 이득이 될 수 있습니다.
 
-### Notations and Precedence
+### 기호와 결합순서
 
-The most basic syntax extension commands allow introducing new (or
-overloading existing) prefix, infix, and postfix operators.
+가장 기본적인 문법 확장 명령은 새로운 (혹은 이미 있는 것을 오버로딩하는 것) 전위, 중위 그리고 후위 연산자를 도입하는 것을 허용합니다.
 
 ```lean
 infixl:65   " + " => HAdd.hAdd  -- left-associative
@@ -371,15 +358,9 @@ prefix:100  "-"   => Neg.neg
 postfix:max "⁻¹"  => Inv.inv
 ```
 
-After the initial command name describing the operator kind (its
-"fixity"), we give the *parsing precedence* of the operator preceded
-by a colon `:`, then a new or existing token surrounded by double
-quotes (the whitespace is used for pretty printing), then the function
-this operator should be translated to after the arrow `=>`.
+연산자 종류를 설명하는 초기 명령 이름 뒤에 (해당 "결합위치"), 콜론 `:`으로 앞서는 연산자의  *구문분석 우선순위*를 줍니다. 그 뒤 새로운 혹은 존재하는 토큰(깔끔한 출력을 위해 공백기호가 사용됨)은 큰 따옴표로 둘러쌓입니다. 그러면 이 연산자의 기능은 뒤따르는 화살표 `=>`로 번역되어야 합니다.
 
-The precedence is a natural number describing how "tightly" an
-operator binds to its arguments, encoding the order of operations.  We
-can make this more precise by looking at the commands the above unfold to:
+연산의 순서를 부호화하는 우선순위는 연산자가 그것의 인자와 얼마나 "강력하게" 묶여있는지를 설명하는 자연수입니다.  우리는 위의 명령을 다음으로 펼쳐보는 것으로 이를 더 정확하게 만들 수 있습니다.
 
 ```lean
 notation:65 lhs:65 " + " rhs:66 => HAdd.hAdd lhs rhs
@@ -390,36 +371,19 @@ notation:100 "-" arg:100 => Neg.neg arg
 notation:1024 arg:1024 "⁻¹" => Inv.inv arg  -- `max` is a shorthand for precedence 1024
 ```
 
-It turns out that all commands from the first code block are in fact
-command *macros* translating to the more general `notation` command.
-We will learn about writing such macros below.  Instead of a single
-token, the `notation` command accepts a mixed sequence of tokens and
-named term placeholders with precedences, which can be referenced on
-the right-hand side of `=>` and will be replaced by the respective
-term parsed at that position.  A placeholder with precedence `p`
-accepts only notations with precedence at least `p` in that place.
-Thus the string `a + b + c` cannot be parsed as the equivalent of
-`a + (b + c)` because the right-hand side operand of an `infixl` notation
-has precedence one greater than the notation itself.  In contrast,
-`infixr` reuses the notation's precedence for the right-hand side
-operand, so `a ^ b ^ c` *can* be parsed as `a ^ (b ^ c)`.  Note that
-if we used `notation` directly to introduce an infix notation like
+첫 번째 코드 블럭으로부터 모든 명령은 사실 *macros* 명령이 더 일반적인 `notation`명령으로 번역된 것임이 드러납니다.
+우리는 아래에서 그런 매크로를 쓰는 법에 대해 배울 예정입니다.  한 토큰 대신 `notation` 명령은 토큰의 혼합된 열과 이름이 붙고 우선순위가 있는 항 자리차지자를 받아들입니다. 그리고 이는`=>`의 우변을 참조할 수 있고 그 위치에서 구문 분석된 개별적인 항으로 대체될 것입니다.  우선순위가 `p`인 자리차지자는 오직 그 자리에 적어도 `p` 순위인 기호만을 받아들입니다.
+따라서 문자열 `a + b + c`는 `a + (b + c)`와 동등한 것으로 분석될 수 없습니다. 왜냐하면 `infixl`표기의 우변의 피연산자가 그 자체의 표기보다 하나 큰 우선순위를 갖기 때문입니다.  반대로, `infixr`은 우변의 피연산자 표기의 우선순위를 재사용합니다. 그래서 `a ^ b ^ c`은 `a ^ (b ^ c)`으로 구문분석 *될* 수 있습니다.  만약 우리가 이처럼 `notation`를 전위 표기를 바로 도입하도록 사용한다면
 
 ```lean
 # set_option quotPrecheck false
 notation:65 lhs:65 " ~ " rhs:65 => wobble lhs rhs
 ```
 
-where the precedences do not sufficiently determine associativity,
-Lean's parser will default to right associativity.  More precisely,
-Lean's parser follows a local *longest parse* rule in the presence of
-ambiguous grammars: when parsing the right-hand side of `a ~` in
-`a ~ b ~ c`, it will continue parsing as long as possible (as the current
-precedence allows), not stopping after `b` but parsing `~ c` as well.
-Thus the term is equivalent to `a ~ (b ~ c)`.
+여기서 우선순위는 결합성을 결정하기에 충분하지 않아서  린의 구문분석기는 오른쪽 결합성으로 기본설정을 할 것입니다.  더 정확히는 린의 구문분석기는 모호한 문법의 존재에 대해 지역의 *가장 긴 구문분석* 규칙을 따릅니다. `a ~ b ~ c`에서 `a ~`의 우변을 분석할 때 구문분석기는 (현재 우선순위가 허용하는 만큼) 가능한 최대한 분석을 지속할 것입니다. `b` 뒤에서 멈추지 않고  `~ c`에서도 분석을 멈추지 않습니다.
+따라서 항은 `a ~ (b ~ c)`과 동등합니다.
 
-As mentioned above, the `notation` command allows us to define
-arbitrary *mixfix* syntax freely mixing tokens and placeholders.
+위에서 언급한 대로, `notation` 명령은 우리가 임의의 자유롭게 토큰과 자리차지자를 혼합한 *mixfix* 문법을 정의하도록 합니다.
 
 ```lean
 # set_option quotPrecheck false
@@ -427,29 +391,21 @@ notation:max "(" e ")" => e
 notation:10 Γ " ⊢ " e " : " τ => Typing Γ e τ
 ```
 
-Placeholders without precedence default to `0`, i.e. they accept notations of any precedence in their place.
-If two notations overlap, we again apply the longest parse rule:
+우선순위가 없는 자리차지자는 `0`으로 설정됩니다. 예를 들어 이들은 그들의 자리에 임의의 우선순위의 기호든 받습니다.
+만약 두 기호가 겹치면, 우리는 다시 가장 긴 구문분석 규칙을 적용합니다.
 
 ```lean
 notation:65 a " + " b:66 " + " c:66 => a + b - c
 #eval 1 + 2 + 3  -- 0
 ```
 
-The new notation is preferred to the binary notation since the latter,
-before chaining, would stop parsing after `1 + 2`.  If there are
-multiple notations accepting the same longest parse, the choice will
-be delayed until elaboration, which will fail unless exactly one
-overload is type correct.
+새로운 기호는 이항기호로 정의되길 선호합니다. 왜냐면 뒤에 나올 것은 연결되기 전에 `1 + 2` 뒤에 분석을 멈춥니다.  동일한 가장 긴 구문분석을 받아들이는 다수의 기호가 있다면 협력할 때까지 선택은 미뤄집니다. 그리고 이것은 정확히 한 오버로드가 유형이 옳바르지 않는 한 실패할 것 입니다.
 
 
-Coercions
+강제 형 변환
 ---------
 
-In Lean, the type of natural numbers, ``Nat``, is different from the
-type of integers, ``Int``. But there is a function ``Int.ofNat`` that
-embeds the natural numbers in the integers, meaning that we can view
-any natural number as an integer, when needed. Lean has mechanisms to
-detect and insert *coercions* of this sort.
+린에서 자연수 유형 ``Nat``은 정수의 유형 ``Int``과는 다릅니다. 그러나 정수에 자연수가 내장되도록 하는 ``Int.ofNat`` 함수가 있어서 필요할 때 임의의 자연수를 정수로 볼 수 있게 합니다. 린은 이런 종류의 *coercions*의 감지와 삽입하는 메커니즘이 있습니다.
 
 ```lean
 variable (m n : Nat)
@@ -460,19 +416,10 @@ variable (i j : Int)
 #check i + m + n  -- i + Int.ofNat m + Int.ofNat n : Int
 ```
 
-Displaying Information
+정보 표시하기
 ----------------------
 
-There are a number of ways in which you can query Lean for information
-about its current state and the objects and theorems that are
-available in the current context. You have already seen two of the
-most common ones, ``#check`` and ``#eval``. Remember that ``#check``
-is often used in conjunction with the ``@`` operator, which makes all
-of the arguments to a theorem or definition explicit. In addition, you
-can use the ``#print`` command to get information about any
-identifier. If the identifier denotes a definition or theorem, Lean
-prints the type of the symbol, and its definition. If it is a constant
-or an axiom, Lean indicates that fact, and shows the type.
+여러분이 린에게 그것의 현재 상태와 현재 상황에서 사용할 수 있는 대상과 정리에 대한 정보를 요청하는 여러가지 방법이 있습니다. 여러분은 가장 흔한 것 중 두 개인 ``#check``과 ``#eval``를 봤습니다. ``#check``는  ``@`` 연산자와 결합하여 종종 사용됨을 기억하세요. 이는 정리나 정의의 모든 인수를 명시적이게 합니다. 게다가 여러분은 ``#print`` 명령을 사용해서 임의의 식별자에 대한 정보를 얻을 수 있습니다. 만약 식별자가 정의나 정리를 의미한다면 린은 기호의 유형과 그것의 정의를 출력합니다. 만약 그것이 상수나 공리라면 린은 그 사실을 가리키고 유형을 보여줍니다.
 
 ```lean
 -- examples with equality
@@ -496,17 +443,16 @@ def foo {α : Type u} (x : α) : α := x
 #print foo
 ```
 
-Setting Options
+옵션 설정하기
 ---------------
 
-Lean maintains a number of internal variables that can be set by users
-to control its behavior. The syntax for doing so is as follows:
+린은 사용자가 설정하여 그 행동을 제어하는 하는 다수의 내부 변수를 관리합니다. 그렇게 하는 문법은 다음과 같습니다.
 
 ```
 set_option <name> <value>
 ```
 
-One very useful family of options controls the way Lean's *pretty- printer* displays terms. The following options take an input of true or false:
+매우 유용한 옵션 모음 중 하나는 린의 *pretty- printer*가 항을 표시하는 방식을 제어합니다. 다음 옵션은 입력으로 참 혹은 거짓을 받습니다.
 
 ```
 pp.explicit  : display implicit arguments
@@ -514,7 +460,7 @@ pp.universes : display hidden universe parameters
 pp.notation  : display output using defined notations
 ```
 
-As an example, the following settings yield much longer output:
+예제로 다음 설정은 훨씬 더 긴 출력을 만듭니다.
 
 ```lean
 set_option pp.explicit true
@@ -526,12 +472,7 @@ set_option pp.notation false
 #check (fun x => x + 1) 1
 ```
 
-The command ``set_option pp.all true`` carries out these settings all
-at once, whereas ``set_option pp.all false`` reverts to the previous
-values. Pretty printing additional information is often very useful
-when you are debugging a proof, or trying to understand a cryptic
-error message. Too much information can be overwhelming, though, and
-Lean's defaults are generally sufficient for ordinary interactions.
+``set_option pp.all true`` 명령은 이 설정을 한번에 수행합니다. 반면 ``set_option pp.all false``은 이전의 값으로 되돌립니다. 깔끔한 출력하기의 추가 정보는 증명의 버그를 없앨때나 암호같은 오류 메시지를 이해하려고 할 때 아주 유용합니다. 너무 많은 정보에 압도할 수 있지만 린의 기본설정도 평범한 상호작용에 일반적으로 충분합니다.
 
 
 
@@ -569,42 +510,20 @@ Once again, these attributes can be assigned and reassigned after an object is d
 
 -->
 
-Using the Library
+라이브러리 사용하기
 -----------------
 
-To use Lean effectively you will inevitably need to make use of
-definitions and theorems in the library. Recall that the ``import``
-command at the beginning of a file imports previously compiled results
-from other files, and that importing is transitive; if you import
-``Foo`` and ``Foo`` imports ``Bar``, then the definitions and theorems
-from ``Bar`` are available to you as well. But the act of opening a
-namespace, which provides shorter names, does not carry over. In each
-file, you need to open the namespaces you wish to use.
+린을 효과적으로 사용하기 위해서 여러분은 라이브러리의 정의와 정리의 사용이 불가피하게 될 것입니다. 파일의 시작에서  ``import`` 명령은 다른 파일로부터 이전에 컴파일된 결과를 불러오고 그 불러오기는 추이적임을 기억하세요. 만약 여러분이 ``Foo``를 가져오고 ``Foo``가 ``Bar``를 가져오면 ``Bar``에서 이용가능한 정의와 정리도 여러분이 사용할 수 있습니다. 그러나 더 짧은 이름을 제공하는 이름공간을 여는 동작은 앞에서처럼 다른 파일에 영향을 주지 못합니다. 각 파일에서 여러분은 여러분이 사용하려는 이름공간을 열어야 합니다.
 
-In general, it is important for you to be familiar with the library
-and its contents, so you know what theorems, definitions, notations,
-and resources are available to you. Below we will see that Lean's
-editor modes can also help you find things you need, but studying the
-contents of the library directly is often unavoidable. Lean's standard
-library can be found online, on GitHub:
+일반적으로 여러분이 라이브러리와 그것의 내용물에 친숙해지는 것이 중요합니다. 그래야 여러분이 어떤 정리, 정의, 기호, 자원을 쓸 수 있는지 압니다. 아래에서 우리는 린의 편집기 모드는 여러분이 필요한 것을 찾도록 돕는 것을 봅니다. 그러나 라이브러리의 내용을 공부하는 것은 대게 불가피합니다. 린의 표준 라이브러리는 깃허브에서 찾을 수 있습니다.
 
 - [https://github.com/leanprover/lean4/tree/master/src/Init](https://github.com/leanprover/lean4/tree/master/src/Init)
 
 - [https://github.com/leanprover/lean4/tree/master/src/Std](https://github.com/leanprover/lean4/tree/master/src/Std)
 
-You can see the contents of these directories and files using GitHub's
-browser interface. If you have installed Lean on your own computer,
-you can find the library in the ``lean`` folder, and explore it with
-your file manager. Comment headers at the top of each file provide
-additional information.
+여러분은 깃허브 브라우저 인터페이스로 이 디렉토리와 파일의 내용물을 볼 수 있습니다. 여러분이 여러분 컴퓨터에 린을 설치했다면 여러분은 ``lean`` 폴더에서 라이브러리를 찾을 수 있습니다. 그리고 파일관리자로 그것을 탐색할 수 있습니다. 각 파일의 꼭대기에 도입부 주석은 추가 정보를 제공합니다.
 
-Lean's library developers follow general naming guidelines to make it
-easier to guess the name of a theorem you need, or to find it using
-tab completion in editors with a Lean mode that supports this, which
-is discussed in the next section. Identifiers are generally
-``camelCase``, and types are `CamelCase`. For theorem names,
-we rely on descriptive names where the different components are separated
-by `_`s. Often the name of theorem simply describes the conclusion:
+린의 라이브러리 개발자는 여러분이 필요한 정리의 이름을 추측하기 더 쉽게 일반적인 이름짓기 규칙을 따릅니다. 혹은 린 모드인 편집기의 탭 완성 지원 기능으로 그것을 찾도록 돕습니다. 탭 완성은 다음 섹션에서 얘기합니다. 식별자들은 보통 ``camelCase``이고 유형은 `CamelCase`입니다. 정리 이름에 대해, 우리는 다른 부분은 `_`들로 나뉜 설명하는 이름에 의존합니다. 정리의 이름은 종종 결론을 설명합니다.
 
 ```lean
 #check Nat.succ_ne_zero
@@ -613,16 +532,7 @@ by `_`s. Often the name of theorem simply describes the conclusion:
 #check Nat.le_of_succ_le_succ
 ```
 
-Remember that identifiers in Lean can be organized into hierarchical
-namespaces. For example, the theorem named ``le_of_succ_le_succ`` in the
-namespace ``Nat`` has full name ``Nat.le_of_succ_le_succ``, but the shorter
-name is made available by the command ``open Nat`` (for names not marked as
-`protected`). We will see in [Chapter Inductive Types](./inductive_types.md)
-and [Chapter Structures and Records](./structures_and_records.md)
-that defining structures and inductive data types in Lean generates
-associated operations, and these are stored in
-a namespace with the same name as the type under definition. For
-example, the product type comes with the following operations:
+린의 식별자들은 계층적인 이름공간 안에 정리될 수 있음을 기억하세요. 예를 들어, 정리는 이름공간 ``Nat`` 에서 ``le_of_succ_le_succ``으로 이름지어진 정리는 ``Nat.le_of_succ_le_succ``을 긴 이름으로 갖습니다. 그러나 더 짧은 이름은 ``open Nat`` 명령으로 사용할 수 있게 됩니다.(`protected`로 표시된 이름을 제외하고) 우리는 [Chapter Inductive Types](./inductive_types.md)와  [Chapter Structures and Records](./structures_and_records.md)에서 린에서 구조체와 유도 데이터 형을 정의하는 것은 연관된 연산을 생성함을 볼 예정입니다. 그리고 이들은 정의에 대해 유형으로써 같은 이름으로 이름공간에 저장됩니다. 예를들어 곱 유형은 다음 연산을 동반합니다.
 
 ```lean
 #check @Prod.mk
@@ -631,16 +541,9 @@ example, the product type comes with the following operations:
 #check @Prod.rec
 ```
 
-The first is used to construct a pair, whereas the next two,
-``Prod.fst`` and ``Prod.snd``, project the two elements. The last,
-``Prod.rec``, provides another mechanism for defining functions on a
-product in terms of a function on the two components. Names like
-``Prod.rec`` are *protected*, which means that one has to use the full
-name even when the ``Prod`` namespace is open.
+첫 째는 쌍을 구성하는데 사용되며 반면 다음 둘은``Prod.fst``과 ``Prod.snd``은 두 원소를 투영(project)합니다. 마지막으로 ``Prod.rec``은 두 원소에 대한 함수에 대한 관점으로 곱에 대한 함수를 정의하는 또다른 방법을 제공합니다. ``Prod.rec``같은 이름은 *protected*입니다. 그말은 누군가가 ``Prod`` 이름공간을 개방했더라도 완전한 이름을 사용해야만 함을 의미합니다.
 
-With the propositions as types correspondence, logical connectives are
-also instances of inductive types, and so we tend to use dot notation
-for them as well:
+유형으로써 명제 대응에서 논리 결합자도 유도형의 개체들입니다. 그리고 그들에 대해서도 점 표기를 사용하는 경향이 있습니다.
 
 ```lean
 #check @And.intro
@@ -656,12 +559,11 @@ for them as well:
 #check @Eq.subst
 ```
 
-Auto Bound Implicit Arguments
+자동적으로 구속된 암시적인 인자
 -----------------
 
-In the previous section, we have shown how implicit arguments make functions more convenient to use.
-However, functions such as `compose` are still quite verbose to define. Note that the universe
-polymorphic `compose` is even more verbose than the one previously defined.
+이전 섹션에서 우리는 어떻게 암시적인 인자가 함수를 쓰기 더 편리하게 만드는지 보았습니다.
+그러나 `compose`같은 함수들은 여전히 정의하기에 꽤 장황합니다. 심지어 세계 다형적 `compose`는 이전에 정의한 것보다 더 장황합니다.
 
 ```lean
 universe u v w
@@ -670,7 +572,7 @@ def compose {α : Type u} {β : Type v} {γ : Type w}
   g (f x)
 ```
 
-You can avoid the `universe` command by providing the universe parameters when defining `compose`.
+여러분은 `compose`를 정의할 때 세계 매개변수를 제공하여 `universe` 명령을 피할 수 있습니다.
 
 ```lean
 def compose.{u, v, w}
@@ -679,10 +581,7 @@ def compose.{u, v, w}
   g (f x)
 ```
 
-Lean 4 supports a new feature called *auto bound implicit arguments*. It makes functions such as
-`compose` much more convenient to write. When Lean processes the header of a declaration,
-any unbound identifier is automatically added as an implicit argument *if* it is a single lower case or
-greek letter. With this feature we can write `compose` as
+린 4는 *auto bound implicit arguments*라 하는 새로운 기능을 지원합니다. 이것은 `compose` 같은 함수를 쓰기에 훨씬 더 편리하게 만듭니다. 린이 선언의 헤더를 처리할 때 만약 이것이 한 글자의 소문자나 그리스 문자이면 임의의 구속되지 않은 식별자가 자동적으로 암시적인 매개변수로 추가됩니다. 이 기능으로 우리는 `compose`를 이와 같이 쓸 수 있습니다.
 
 ```lean
 def compose (g : β → γ) (f : α → β) (x : α) : γ :=
@@ -691,11 +590,9 @@ def compose (g : β → γ) (f : α → β) (x : α) : γ :=
 #check @compose
 -- {β : Sort u_1} → {γ : Sort u_2} → {α : Sort u_3} → (β → γ) → (α → β) → α → γ
 ```
-Note that Lean inferred a more general type using `Sort` instead of `Type`.
+린은 `Type`대신 `Sort`를 사용하여 더 일반적인 유형을 추론함을 보세요.
 
-Although we love this feature and use it extensively when implementing Lean,
-we realize some users may feel uncomfortable with it. Thus, you can disable it using
-the command `set_option autoImplicit false`.
+우리가 이 기능을 좋아하고 린을 구현할 때 광범위하게 이를 사용했지만 우리는 어떤 사용자들이 이것에 대해 불편하게 느끼는 것을 깨달았습니다. 따라서 여러분은 이것을 `set_option autoImplicit false` 명령을 써서 해제할 수 있습니다.
 ```lean
 set_option autoImplicit false
 /- The following definition produces `unknown identifier` errors -/
@@ -703,14 +600,11 @@ set_option autoImplicit false
 --   g (f x)
 ```
 
-Implicit Lambdas
+암시적인 람다
 ---------------
 
-In Lean 3 stdlib, we find many
-[instances](https://github.com/leanprover/lean/blob/master/library/init/category/reader.lean#L39) of the dreadful `@`+`_` idiom.
-It is often used when we the expected type is a function type with implicit arguments,
-and we have a constant (`reader_t.pure` in the example) which also takes implicit arguments. In Lean 4, the elaborator automatically introduces lambdas
-for consuming implicit arguments. We are still exploring this feature and analyzing its impact, but the experience so far has been very positive. Here is the example from the link above using Lean 4 implicit lambdas.
+린 3의 표준라이브러리에서 우리는 치명적인 `@`+`_` 구문의 수 많은 [instances](https://github.com/leanprover/lean/blob/master/library/init/category/reader.lean#L39)를 발견했습니다.
+이것은 우리가 기대하는 유형이 암시적인 인자를 갖는 함수 유형일 때 종종 사용합니다. 그리고 우리는 암시적인 인수를 받을 수 있는 상수(예제에서 `reader_t.pure`)를 갖습니다. 린 4에서 협력기는 자동적으로 암시적인 인자를 소모하기 위해 람다를 도입합니다. 우리는 여전히 이 기능을 탐색하고 있고, 그것의 영향을 분석합니다. 그러나 지금까지의 경험은 아주 긍정적입니다. 링크 위로부터 린 4의 암시적인 람다를 사용하는 에제가 있습니다.
 
 ```lean
 # variable (ρ : Type) (m : Type → Type) [Monad m]
@@ -719,9 +613,7 @@ instance : Monad (ReaderT ρ m) where
   bind := ReaderT.bind
 ```
 
-Users can disable the implicit lambda feature by using `@` or writing
-a lambda expression with `{}` or `[]` binder annotations.  Here are
-few examples
+사용자는 `@`을 사용하거나 `{}` 이나 `[]`의 결합 주석으로 람다 표현식을 쓰는 것으로 암시적인 람다 기능을 해제할 수 있습니다.  여기 몇 가지 예제가 있습니다.
 
 ```lean
 # namespace ex2
@@ -731,8 +623,8 @@ def id1 : {α : Type} → α → α :=
 def listId : List ({α : Type} → α → α) :=
   (fun x => x) :: []
 
--- In this example, implicit lambda introduction has been disabled because
--- we use `@` before `fun`
+-- 우리는 `fun` 앞에 `@`를 쓰기 때문에
+-- 이 예제에서 암시적인 람다의 도입은 해제되었습니다.
 def id2 : {α : Type} → α → α :=
   @fun α (x : α) => id1 x
 
@@ -742,20 +634,17 @@ def id3 : {α : Type} → α → α :=
 def id4 : {α : Type} → α → α :=
   fun x => id1 x
 
--- In this example, implicit lambda introduction has been disabled
--- because we used the binder annotation `{...}`
+-- 이 예제에서 암시적인 람다의 도입은 결합 주석 `{...}`을
+-- 사용했기 때문에 해제되었습니다.
 def id5 : {α : Type} → α → α :=
   fun {α} x => id1 x
 # end ex2
 ```
 
-Sugar for Simple Functions
+간단한 함수를 위한 설탕
 -------------------------
 
-In Lean 3, we can create simple functions from infix operators by
-using parentheses. For example, `(+1)` is sugar for `fun x, x + 1`. In
-Lean 4, we generalize this notation using `·` As a placeholder. Here
-are a few examples:
+린 3에서는 괄호를 사용해 전위 연산자로부터 간단한 함수를 만들 수 있습니다. 예를 들어 `(+1)`은 `fun x, x + 1`에 대한 설탕입니다. 린 4에서 우리는 `·`를 자리차지자로 사용하여  이 표기를 일반화합니다. 여기 몇 가지 예제가 있습니다.
 
 ```lean
 # namespace ex3
@@ -777,24 +666,18 @@ def f (x y z : Nat) :=
 # end ex3
 ```
 
-As in Lean 3, the notation is activated using parentheses, and the lambda abstraction is created by collecting the nested `·`s.
-The collection is interrupted by nested parentheses. In the following example, two different lambda expressions are created.
+린 3에서처럼 표기는 괄호를 사용해 활성화되고 람다 추상화는 중첩된 `·`의 모음으로 만들어집니다.
+모음은 중첩된 괄호에 의해 중단됩니다. 다음 예제에서 다른 두 가지 람다 표현식이 만들어집니다.
 
 ```lean
 #check (Prod.mk · (· + 1))
 -- fun a => (a, fun b => b + 1)
 ```
 
-Named Arguments
+이름 인자
 ---------------
 
-Named arguments enable you to specify an argument for a parameter by
-matching the argument with its name rather than with its position in
-the parameter list.  If you don't remember the order of the parameters
-but know their names, you can send the arguments in any order. You may
-also provide the value for an implicit parameter when Lean failed to
-infer it. Named arguments also improve the readability of your code by
-identifying what each argument represents.
+이름 인자는 여러분이 매개변수 리스트에 대한 그것의 위치보다는 그것의 이름으로 매개변수에 대한 인자를 명시하게 해줍니다.  여러분이 매개변수의 순서를 기억하지 못해도 그들의 이름을 알면 여러분은 임의의 순서로든 인자를 보낼 수 있습니다. 여러분은 린이 그것에 대해 추론을 실패했을 때 암시적인 매개변수에 대한 값을 제공할 수도 있습니다. 이름 지어진 인자들은 각 인자가 나타내는 것을 명시함으로써 여러분의 코드의 가독성을 개선합니다.
 
 ```lean
 def sum (xs : List Nat) :=
@@ -808,8 +691,7 @@ example {a b : Nat} {p : Nat → Nat → Nat → Prop} (h₁ : p a b b) (h₂ : 
   Eq.subst (motive := fun x => p a x b) h₂ h₁
 ```
 
-In the following examples, we illustrate the interaction between named
-and default arguments.
+다음 예제에서 우리는 이름 지어진 것과 기본 인자 사이의 상호작용을 설명합니다.
 
 ```lean
 def f (x : Nat) (y : Nat := 1) (w : Nat := 2) (z : Nat) :=
@@ -864,8 +746,7 @@ def getBinderType : Term → Option Term
   | _ => none
 ```
 
-Ellipses are also useful when explicit argument can be automatically
-inferred by Lean, and we want to avoid a sequence of `_`s.
+Ellipses도 명시적인 인자가 린으로부터 자동적으로 추론될 수 있을 때와 우리가  `_`들의 나열을 피하고자 할 때 유용합니다.
 
 ```lean
 example (f : Nat → Nat) (a b c : Nat) : f (a + b + c) = f (a + (b + c)) :=
