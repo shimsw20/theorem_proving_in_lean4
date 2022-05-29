@@ -87,34 +87,11 @@ associated &lt;g1&gt;type&lt;/g1&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>(Lean will tell you that &lt;g2&gt;sub2&lt;/g2&gt; has been defined in terms
-of an internal auxiliary function, &lt;g3&gt;sub2.match_1&lt;/g3&gt;, but you can print
-that out too.) Lean uses these auxiliary functions to compile &lt;g4&gt;match&lt;/g4&gt; expressions.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162747Z" creationid="tlqk3" creationdate="20220529T162747Z">
-        <seg>(린은 여러분에게 &lt;g2&gt;sub2&lt;/g2&gt;가 내부의 보조 함수 &lt;g3&gt;sub2.match_1&lt;/g3&gt;에 대해서 정의되었다고 말할 것입니다. 그러나 여러분은 그것도 출력해볼 수 있습니다.) 린은 이 보조 함수를 &lt;g4&gt;match&lt;/g4&gt; 표현식을 컴파일하는데 사용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>(Making sense of the type of this function requires an understanding
 of dependent products, which will be explained below.)</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143305Z" creationid="tlqk35" creationdate="20220321T143305Z">
         <seg>(이 함수의 유형들을 이해하는 것은 아래에서 설명할 의존 곱에 대한 이해가 필요합니다.)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>(Note that this description is somewhat
-misleading, in that the arguments to the constructor can appear in any
-order as long as the dependencies make sense.) The constraints on the
-universe level of &lt;g4&gt;C&lt;/g4&gt; fall into two cases, depending on whether or
-not the inductive type is specified to land in &lt;g5&gt;Prop&lt;/g5&gt; (that is,
-&lt;g6&gt;Sort 0&lt;/g6&gt;).</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161743Z" creationid="tlqk35" creationdate="20220528T161743Z">
-        <seg>(그들의 의존성이 성립되는 한 인자가 생성자에 임의의 순서로 나타날 수 있다는 점에서 이 설명은 약간 오해로 이끌 수 있습니다.) &lt;g4&gt;C&lt;/g4&gt;의 세계 수준에서 유도형이 &lt;g5&gt;Prop&lt;/g5&gt; (즉, &lt;g6&gt;Sort 0&lt;/g6&gt;)에 머무른다고 나타나져 있는지 아닌지에 따라 제약은 두 경우로 나누어 떨어집니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -322,16 +299,6 @@ precise mathematical terms.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>&lt;g1&gt;Record update&lt;/g1&gt; is another common operation which amounts to creating
-a new record object by modifying the value of one or more fields in an
-old one.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181016Z" creationid="tlqk35" creationdate="20220528T181016Z">
-        <seg>&lt;g1&gt;레코드 업데이트&lt;/g1&gt;는 이전 필드에서 하나 이상의 필드 값을 수정하여 새 레코드 개체를 만드는 것과 같은 또 다른 흔한 연산입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>&lt;g1&gt;Structures and Records&lt;/g1&gt;</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T171114Z" creationid="tlqk35" creationdate="20220321T171114Z">
@@ -432,16 +399,6 @@ which contains &lt;g5&gt;Type 1&lt;/g5&gt; as an element.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141659Z" creationid="tlqk35" creationdate="20220321T141659Z">
         <seg>&lt;g2&gt;Type 1&lt;/g2&gt;는  &lt;g3&gt;Type 0&lt;/g3&gt;를 원소로 갖는 유형들의 더 큰 세계이고 &lt;g4&gt;Type 2&lt;/g4&gt;는 &lt;g5&gt;Type 1&lt;/g5&gt;을 원소로 하는 유형들의 더욱 큰 세계입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>&lt;g4&gt;Section wildcards and overlapping patterns&lt;/g4&gt;
-expands on the notion of a wildcard, and &lt;g5&gt;Section Inaccessible Patterns&lt;/g5&gt; explains how
-you can use implicit arguments in patterns as well.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163535Z" creationid="tlqk3" creationdate="20220529T163535Z">
-        <seg>&lt;g4&gt;와일드카드와 중복된 패턴 섹션&lt;/g4&gt;은 와일드카드에 대한 개념을 넓히고 &lt;g5&gt;접근할 수 없는 패턴 섹션&lt;/g5&gt;은 여러분이 어떻게 패턴속에서도 암시적인 인수를 사용할 수 있는지 설명합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -562,31 +519,6 @@ an element &lt;g3&gt;h : α&lt;/g3&gt; followed by a list &lt;g4&gt;t : List α&
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>A more exotic example is given by the definition of the equality type in Lean:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153402Z" creationid="tlqk35" creationdate="20220528T153402Z">
-        <seg>더 특이한 예제는 린의 동등성 유형의 정의에 의해 제시됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>A more interesting example of structural recursion is given by the Fibonacci function &lt;g1&gt;fib&lt;/g1&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173634Z" creationid="tlqk3" creationdate="20220529T173634Z">
-        <seg>구조적 재귀의 더 흥미로운 예제는 피보나치 함수 &lt;g1&gt;fib&lt;/g1&gt;로부터 제시됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>A mutual inductive definition can also be used to define the notation
-of a finite tree with nodes labelled by elements of &lt;g1&gt;α&lt;/g1&gt;:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165627Z" creationid="tlqk35" creationdate="20220528T165627Z">
-        <seg>상호적 재귀 정의는 노드가 &lt;g1&gt;α&lt;/g1&gt;의 원소로 색인된 유한 트리의 기호를 정의하는데도 사용될 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>A placeholder with precedence &lt;g5&gt;p&lt;/g5&gt;
 accepts only notations with precedence at least &lt;g6&gt;p&lt;/g6&gt; in that place.</seg>
       </tuv>
@@ -650,37 +582,10 @@ arguments can depend on the type of the initial argument.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>According to
-its definition, &lt;g2&gt;Acc r x&lt;/g2&gt; is equivalent to
-&lt;g3&gt;∀ y, r y x → Acc r y&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174000Z" creationid="tlqk3" creationdate="20220529T174000Z">
-        <seg>이것의 정의에 따르면 &lt;g2&gt;Acc r x&lt;/g2&gt;는 &lt;g3&gt;∀ y, r y x → Acc r y&lt;/g3&gt;과 동등합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Acknowledgments</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135000Z" creationid="tlqk35" creationdate="20220321T135000Z">
         <seg>감사의 말</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Actually, Lean compiles the &lt;g1&gt;match&lt;/g1&gt; expressions using a definition based on
-&lt;g2&gt;Eq.rec&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154402Z" creationid="tlqk35" creationdate="20220528T154402Z">
-        <seg>실제로, 린은 &lt;g1&gt;match&lt;/g1&gt; 표현식을 &lt;g2&gt;Eq.rec&lt;/g2&gt;에 기반한 정의를 사용해 컴파일합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Actually, the definition above is expanded to</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162811Z" creationid="tlqk3" creationdate="20220529T162811Z">
-        <seg>실제로 위 정의는 다음과 같이 확장됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -826,29 +731,10 @@ different contexts.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>An inductive family is an indexed family of types defined by a
-simultaneous induction of the following form:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152742Z" creationid="tlqk35" creationdate="20220528T152723Z">
-        <seg>유도군은 다음 형태를 따르는 동시 재귀로 정의되는 유형의 색인된 군입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>And</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162058Z" creationid="tlqk35" creationdate="20220321T162058Z">
         <seg>논리곱</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>And, indeed,
-we do: the standard library defines &lt;g7&gt;WellFounded.fix&lt;/g7&gt;, which serves
-exactly that purpose.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T175108Z" creationid="tlqk3" creationdate="20220529T174953Z">
-        <seg>그리고 물론 우리는 이를 갖습니다. 표준 라이브러리는 바로 그 목적을 담당하는 &lt;g7&gt;WellFounded.fix&lt;/g7&gt;를 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1108,15 +994,6 @@ of &lt;g5&gt;(n : nat) → motive n&lt;/g5&gt; for some &lt;g6&gt;motive : Nat �
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>As described in &lt;g1&gt;Chapter Inductive Types&lt;/g1&gt;,
-inductive data types can depend on parameters.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163609Z" creationid="tlqk3" creationdate="20220529T163609Z">
-        <seg>&lt;g1&gt;재귀형 장&lt;/g1&gt;에서 설명했다시피 재귀 데이터형은 매개변수에 의존합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>As exercises, we encourage you to develop a notion of composition for
 partial functions from &lt;g1&gt;α&lt;/g1&gt; to &lt;g2&gt;β&lt;/g2&gt; and &lt;g3&gt;β&lt;/g3&gt; to &lt;g4&gt;γ&lt;/g4&gt;, and show
 that it behaves as expected.</seg>
@@ -1191,42 +1068,11 @@ form &lt;g3&gt;fun x =&gt; e&lt;/g3&gt;).</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>As usual, you can avoid the prefix &lt;g1&gt;Point&lt;/g1&gt; by using
-the command &lt;g2&gt;open Point&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174304Z" creationid="tlqk35" creationdate="20220528T174304Z">
-        <seg>평소처럼 여러분은 &lt;g2&gt;open Point&lt;/g2&gt;명령을 사용해 접두사 &lt;g1&gt;Point&lt;/g1&gt;를 생략할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>As was the case for implication, the propositions-as-types
 interpretation now comes into play.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T173005Z" creationid="tlqk35" creationdate="20220321T173005Z">
         <seg>함의의 경우 때와 같이 유형으로써 명제 해석은 이제 제 역할을 하기 시작했습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>As we
-have seen, a pattern is either a variable, a constructor applied to
-other patterns, or an expression that normalizes to something of that
-form (where the non-constructors are marked with the &lt;g7&gt;[matchPattern]&lt;/g7&gt;
-attribute).</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171023Z" creationid="tlqk3" creationdate="20220529T171023Z">
-        <seg>우리가 봤던 것처럼 패턴은 생성자가 다른 패턴을 적용한 변수이거나 그 형태를 무언가로 정규화한 표현식입니다. (여기서 비생성자는 &lt;g7&gt;[matchPattern]&lt;/g7&gt; 속성으로 표시되었습니다.)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>As we saw in the last section, the terms &lt;g1&gt;t₁, ..., tₙ&lt;/g1&gt; can make use
-of any of the parameters &lt;g2&gt;a&lt;/g2&gt;, as well as any of the variables that
-are introduced in the corresponding patterns.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171859Z" creationid="tlqk3" creationdate="20220529T171859Z">
-        <seg>우리가 지난 섹션에서 보았듯이, 항 &lt;g1&gt;t₁, ..., tₙ&lt;/g1&gt;은 대응되는 패턴에서 도입된 임의의 변수 뿐만 아니라 임의의 매개변수 &lt;g2&gt;a&lt;/g2&gt;를 사용할 수 있게 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1266,15 +1112,6 @@ compound expressions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171814Z" creationid="tlqk35" creationdate="20220524T161708Z">
         <seg>&lt;g1&gt;rw&lt;/g1&gt;처럼 여러분은 키워드 &lt;g2&gt;at&lt;/g2&gt;으로 가정을 간단히 하는데 사용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>As with definition by pattern matching, parameters to a structural
-recursion or induction may appear before the colon.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173445Z" creationid="tlqk3" creationdate="20220529T173445Z">
-        <seg>패턴 매칭의 정의에서처럼 구조적 재귀나 귀납에 대한 매개변수는 콜론 앞에 나타날 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1423,14 +1260,6 @@ reflexivity to finish it off.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Axiomatic Details</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155116Z" creationid="tlqk35" creationdate="20220528T155116Z">
-        <seg>공리적 세부사항</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Basic Tactics</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T061845Z" creationid="tlqk35" creationdate="20220522T061845Z">
@@ -1465,15 +1294,6 @@ constructor notation.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Because addition and the zero notation have been assigned the
-&lt;g1&gt;[matchPattern]&lt;/g1&gt; attribute, they can be used in pattern matching.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161406Z" creationid="tlqk3" creationdate="20220529T161406Z">
-        <seg>왜냐하면 덧셈과 0 기호는 &lt;g1&gt;[matchPattern]&lt;/g1&gt; 특성이 할당되어 있기에 그들은 패턴 매칭에 사용될 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Because equational reasoning is so common and important, Lean provides
 a number of mechanisms to carry it out more effectively.</seg>
       </tuv>
@@ -1497,18 +1317,6 @@ the type &lt;g1&gt;Nat&lt;/g1&gt; as an argument repeatedly.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T152448Z" creationid="tlqk35" creationdate="20220321T152448Z">
         <seg>생성자들이 유형에 대해 다형적이기 때문에, 우리는 유형 &lt;g1&gt;Nat&lt;/g1&gt;를 인수로써 반복적으로 삽입해야 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Behind the scenes, these descriptions are
-"compiled" down to primitive recursors, using a procedure that we
-refer to as the "equation compiler." The equation compiler is not part
-of the trusted code base; its output consists of terms that are
-checked independently by the kernel.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160547Z" creationid="tlqk3" creationdate="20220529T160547Z">
-        <seg>막의 뒤에서 이 설명은 "방정식 컴파일러"라고 부르는 절차를 사용하여 기초적인 재귀자로 "컴파일되어" 내려갑니다. 방정식 컴파일러는 신뢰받는 코드 기반의 일부가 아닙니다. 그것의 출력은 커널에 의해 독립적으로 검증된 항으로 구성됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1544,16 +1352,6 @@ expression, &lt;g3&gt;Exists (fun x : α =&gt; p x)&lt;/g3&gt;, defined in Lean'
     <tu>
       <tuv lang="en-US">
         <seg>But
-complicated definitions may use several nested &lt;g2&gt;casesOn&lt;/g2&gt;
-applications, and may be hard to read and understand.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160949Z" creationid="tlqk3" creationdate="20220529T160949Z">
-        <seg>그러나 복잡해진 정의는 몇 단계로 중첩하여 &lt;g2&gt;casesOn&lt;/g2&gt;를 사용할 수도 있습니다. 그리고 읽고 이해하기 어렵게 될 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>But
 first, in this chapter, we take a break from the mechanics of type
 theory to explore some pragmatic aspects of interacting with Lean.</seg>
       </tuv>
@@ -1575,16 +1373,6 @@ clean and effective.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>But
-these universe levels do have a bearing on the elimination
-rule.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162734Z" creationid="tlqk35" creationdate="20220528T162505Z">
-        <seg>그러나 이 세계 수준은 제거 규칙으로부터 영향을 받습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>But
 wherever a term is expected, Lean allows us to insert instead a &lt;g1&gt;by
 &lt;tactics&gt;&lt;/g1&gt; block, where &lt;g2&gt;&lt;tactics&gt;&lt;/g2&gt; is a sequence of commands,
 separated by semicolons or line breaks.</seg>
@@ -1601,16 +1389,6 @@ context that depend on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T064249Z" creationid="tlqk35" creationdate="20220522T064249Z">
         <seg>그러나 &lt;g1&gt;revert&lt;/g1&gt;는 맥락 속 요소들 뿐만 아니라 그에 의존하는 맥락의 뒤에 올 모든 요소를 되돌려 놓는 다는 점에서 아주 영리합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>But Lean handles
-the ambiguity by using the first applicable equation, so in this example
-the net result is the same.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164859Z" creationid="tlqk3" creationdate="20220529T164859Z">
-        <seg>그러나 린은 활용할 수 있는 첫 방정식을 사용하여 모호성을 해소합니다. 그래서 이 예제에서 최종 결과는 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1767,15 +1545,6 @@ case split in a computable function.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>But we will not need to use such inaccessible patterns
-before &lt;g9&gt;Section Dependent Pattern Matching&lt;/g9&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171645Z" creationid="tlqk3" creationdate="20220529T171645Z">
-        <seg>그러나 우리는 &lt;g9&gt;의존적인 패턴 매칭 섹션&lt;/g9&gt; 전까지 그런 접근할 수 없는 패턴을 사용할 필요는 없을 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>But what type should &lt;g3&gt;cons&lt;/g3&gt; have?</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151314Z" creationid="tlqk35" creationdate="20220321T151314Z">
@@ -1860,30 +1629,11 @@ Lean.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>By the above considerations, if &lt;g3&gt;r&lt;/g3&gt; is a well-founded
-relation on a type &lt;g4&gt;α&lt;/g4&gt;, we should have a principle of well-founded
-recursion on &lt;g5&gt;α&lt;/g5&gt;, with respect to the relation &lt;g6&gt;r&lt;/g6&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174959Z" creationid="tlqk3" creationdate="20220529T174926Z">
-        <seg>위의 고려로부터 만약 &lt;g3&gt;r&lt;/g3&gt;이 &lt;g4&gt;α&lt;/g4&gt;형에 대해 잘 세워진 관계이면, 우리는 관계 &lt;g6&gt;r&lt;/g6&gt;에 대해서 &lt;g5&gt;α&lt;/g5&gt;에 대해 잘 세워진 재귀의 원리를 가져야 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>By the end
 of this chapter, you will understand much of what this means.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135143Z" creationid="tlqk35" creationdate="20220321T135143Z">
         <seg>2장의 끝에서 여러분은 이것의 의미하는 바의 대부분을 이해하게 될 겁니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>By the propositions-as-types correspondence,
-this means that induction is the fundamental method of proof.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160040Z" creationid="tlqk3" creationdate="20220529T160040Z">
-        <seg>유형으로써 명제 대응에 따르면 이것은 귀납은 증명의 기초적인 방식임을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1983,14 +1733,6 @@ expected type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Consider one of the examples from the last section:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164710Z" creationid="tlqk3" creationdate="20220529T164705Z">
-        <seg>지난 섹션의 예제 중 하나를 고려해 봅시다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Consider the "barber paradox," that is, the claim that in a certain
 town there is a (male) barber that shaves all and only the men who
 do not shave themselves.</seg>
@@ -2014,14 +1756,6 @@ sum type in the library:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145126Z" creationid="tlqk35" creationdate="20220321T145126Z">
         <seg>다음 세 함수 정의를 생각해보세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Consider the inductively defined type of natural numbers.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161107Z" creationid="tlqk3" creationdate="20220529T161107Z">
-        <seg>자연수의 재귀적으로 정의된 유형을 고려해보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2100,14 +1834,6 @@ block.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Declaring Structures</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173333Z" creationid="tlqk35" creationdate="20220528T173333Z">
-        <seg>구조체 선언하기</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Declaring an "axiom" &lt;g1&gt;hp : p&lt;/g1&gt; is tantamount to declaring that &lt;g2&gt;p&lt;/g2&gt;
 is true, as witnessed by &lt;g3&gt;hp&lt;/g3&gt;.</seg>
       </tuv>
@@ -2122,23 +1848,6 @@ with the system.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135914Z" creationid="tlqk35" creationdate="20220321T135914Z">
         <seg>이처럼 새로운 대상을 선언하는 것은 시스템을 실험해보는 좋은 방식입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Define an inductive data type consisting of terms built up from the following constructors:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171429Z" creationid="tlqk35" creationdate="20220528T171429Z">
-        <seg>다음 생성자로부터 세워진 항으로 구성된 유도 데이터 형을 정의하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Define some operations on lists, like a &lt;g1&gt;length&lt;/g1&gt; function or the
-&lt;g2&gt;reverse&lt;/g2&gt; function.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171334Z" creationid="tlqk35" creationdate="20220528T171334Z">
-        <seg>리스트에 대한 &lt;g1&gt;length&lt;/g1&gt;함수나 &lt;g2&gt;reverse&lt;/g2&gt; 함수같은 몇 가지 연산을 정의하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2196,25 +1905,6 @@ natural and uniform way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Dependent type theory is powerful enough to encode and justify
-well-founded recursion.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173719Z" creationid="tlqk3" creationdate="20220529T173719Z">
-        <seg>종속 유형론은 잘 세워진 재귀를 부호화하고 정당화하기에 충분히 강력합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Despite the different placement of the parameter &lt;g1&gt;α&lt;/g1&gt; in these two
-examples, in both cases it treated in the same way, in that it does
-not participate in a case split.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164316Z" creationid="tlqk3" creationdate="20220529T164316Z">
-        <seg>이 두 예제에서 매개변수 &lt;g1&gt;α&lt;/g1&gt;의 다른 배치에도 불구하고 두 경우 모두 같은 방식으로 다뤄집니다. 그러므로 이것은 경우 분할에 참여하지 않습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Determining that an expression &lt;g1&gt;t&lt;/g1&gt; is a correct proof of assertion &lt;g2&gt;p&lt;/g2&gt; would then
 simply be a matter of checking that &lt;g3&gt;t&lt;/g3&gt; has type &lt;g4&gt;Proof p&lt;/g4&gt;.</seg>
       </tuv>
@@ -2262,44 +1952,6 @@ to proving &lt;g4&gt;¬¬p&lt;/g4&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180313Z" creationid="tlqk35" creationdate="20220321T180313Z">
         <seg>각  &lt;g1&gt;&lt;proof&gt;_i&lt;/g1&gt;는 &lt;g2&gt;&lt;expr&gt;_{i-1} op_i &lt;expr&gt;_i&lt;/g2&gt;에 대한 증명입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Each constructor &lt;g5&gt;c&lt;/g5&gt; in the definition of a family &lt;g6&gt;C&lt;/g6&gt; of
-inductive types is of the form</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160951Z" creationid="tlqk35" creationdate="20220528T160951Z">
-        <seg>유도형의 &lt;g6&gt;C&lt;/g6&gt; 군의 정의에서 각 생성자 &lt;g5&gt;c&lt;/g5&gt;는 다음 형태와 같습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Each constructor should have a type, where the
-argument types are built up from previously defined types, the
-parameter and index types, and the inductive family currently being
-defined.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160242Z" creationid="tlqk35" creationdate="20220528T160242Z">
-        <seg>각 생성자는 이전에 정의된 유형, 매개변수와 색인 유형, 현재 정의 중인 유도군으로 만들어져서 유형을 가져야만 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Each constructor then
-constructs an element of some member of the family.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153107Z" creationid="tlqk35" creationdate="20220528T153107Z">
-        <seg>그럼 각 생성자는 군의 일부 구성원의 원소를 생성합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Each line should
-contain the same number of patterns, one for each element of &lt;g6&gt;β&lt;/g6&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170842Z" creationid="tlqk3" creationdate="20220529T170842Z">
-        <seg>각 줄은 &lt;g6&gt;β&lt;/g6&gt;의 각 원소에 대해 한 개씩 같은 수의 패턴을 포함해야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2393,26 +2045,6 @@ goal.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T152715Z" creationid="tlqk3" creationdate="20220527T152715Z">
         <seg>심지어 존재 한정기호도 유도적으로 정의됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Every
-natural number is either &lt;g1&gt;zero&lt;/g1&gt; or &lt;g2&gt;succ x&lt;/g2&gt;, and so you can define
-a function from the natural numbers to an arbitrary type by specifying
-a value in each of those cases:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161213Z" creationid="tlqk3" creationdate="20220529T161213Z">
-        <seg>모든 자연수는 &lt;g1&gt;zero&lt;/g1&gt;이거나 &lt;g2&gt;succ x&lt;/g2&gt;입니다. 그래서 여러분은 각 경우에 대한 값을 나타내줌으로써 자연수에서 임의의 유형으로 가는 함수를 정의할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Every &lt;g1&gt;structure&lt;/g1&gt; declaration introduces a
-namespace with the same name.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173625Z" creationid="tlqk35" creationdate="20220528T173625Z">
-        <seg>모든 &lt;g1&gt;structure&lt;/g1&gt; 선언은 같은 이름을 가진 이름공간을 도입합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2515,14 +2147,6 @@ with the system, and the mechanisms Lean offers for managing complex theories an
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>First, Lean supports &lt;g1&gt;mutually defined&lt;/g1&gt; inductive types.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165028Z" creationid="tlqk35" creationdate="20220528T165028Z">
-        <seg>우선 린은 유도형의 &lt;g1&gt;상호적으로 정의됨(mutually defined)&lt;/g1&gt;을 지원합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>First, the application of
 a function &lt;g1&gt;f&lt;/g1&gt; to a value &lt;g2&gt;x&lt;/g2&gt; is denoted &lt;g3&gt;f x&lt;/g3&gt; (e.g., &lt;g4&gt;Nat.succ 2&lt;/g4&gt;).</seg>
       </tuv>
@@ -2567,16 +2191,6 @@ e))&lt;/g7&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162247Z" creationid="tlqk35" creationdate="20220321T162247Z">
         <seg>예를 들어 &lt;g6&gt;a ∧ b → c ∨ d ∧ e&lt;/g6&gt;은 &lt;g7&gt;(a ∧ b) → (c ∨ (d ∧ e))&lt;/g7&gt;을 의미합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>For
-example, it would be more natural to define the previous example as a
-function of two arguments:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162924Z" creationid="tlqk3" creationdate="20220529T162924Z">
-        <seg>예를 들어 이전 예제를 두 인수를 받는 함수로 정의하는 것이 더 자연스럽습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2674,23 +2288,6 @@ notation &lt;g2&gt;≤&lt;/g2&gt; to the &lt;g3&gt;isPrefix&lt;/g3&gt; relation.
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T183450Z" creationid="tlqk3" creationdate="20220525T183356Z">
         <seg>다른 예제에서 우리는 &lt;g1&gt;instance&lt;/g1&gt; 명령을 &lt;g3&gt;isPrefix&lt;/g3&gt;관계에 &lt;g2&gt;≤&lt;/g2&gt;기호를 부여하는 데 사용할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>For each constructor &lt;g1&gt;c&lt;/g1&gt; as above, and each &lt;g2&gt;βk[a]&lt;/g2&gt; in the sequence &lt;g3&gt;β[a]&lt;/g3&gt;, if &lt;g4&gt;βk[a] : Sort v&lt;/g4&gt;, we have &lt;g5&gt;u&lt;/g5&gt; ≥ &lt;g6&gt;v&lt;/g6&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162047Z" creationid="tlqk35" creationdate="20220528T162047Z">
-        <seg>위처럼 각 생성자 &lt;g1&gt;c&lt;/g1&gt;와 &lt;g3&gt;β[a]&lt;/g3&gt;열에서 각 &lt;g2&gt;βk[a]&lt;/g2&gt;에 대해 만약 &lt;g4&gt;βk[a] : Sort v&lt;/g4&gt;이면 &lt;g5&gt;u&lt;/g5&gt; ≥ &lt;g6&gt;v&lt;/g6&gt;이다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>For each fixed &lt;g1&gt;α : Sort u&lt;/g1&gt; and &lt;g2&gt;a : α&lt;/g2&gt;, this definition
-constructs a family of types &lt;g3&gt;Eq a x&lt;/g3&gt;, indexed by &lt;g4&gt;x : α&lt;/g4&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153521Z" creationid="tlqk35" creationdate="20220528T153521Z">
-        <seg>각 고정된  &lt;g1&gt;α : Sort u&lt;/g1&gt;와 &lt;g2&gt;a : α&lt;/g2&gt;에 대해 이 정의는 &lt;g4&gt;x : α&lt;/g4&gt;으로 색인된 &lt;g3&gt;Eq a x&lt;/g3&gt;형의 군을 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2855,15 +2452,6 @@ expressions automatically.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>For example, the definition of addition may also be written
-as follows:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173532Z" creationid="tlqk3" creationdate="20220529T173532Z">
-        <seg>예를 들어 덧셈의 정의는 다음과 같이 작성될 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>For example, the following creates the goal of
 constructing a term of type &lt;g2&gt;p ∧ q ∧ p&lt;/g2&gt;, in a context with constants
 &lt;g3&gt;p q : Prop&lt;/g3&gt;, &lt;g4&gt;hp : p&lt;/g4&gt; and &lt;g5&gt;hq : q&lt;/g5&gt;:</seg>
@@ -2926,17 +2514,6 @@ as follows:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>For example, we
-use this notation to define "points." The order that the fields are
-specified does not matter, so all the expressions below define the
-same point.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182304Z" creationid="tlqk35" creationdate="20220528T182304Z">
-        <seg>예를 들어 우리는 "점"을 정의하기 위해 이 기호를 사용합니다. 필드가 나타난 순서는 중요하지 않습니다. 그래서 아래의 모든 표현식들은 같은 점을 정의합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>For example, we can fill the goals above in the opposite order:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T165616Z" creationid="tlqk3" creationdate="20220527T165616Z">
@@ -2971,15 +2548,6 @@ Or.inr&lt;/g3&gt;.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T070256Z" creationid="tlqk35" creationdate="20220522T070256Z">
         <seg>예를 들어, &lt;g1&gt;p ∨ q&lt;/g1&gt;꼴의 목표에 적용했을 때, 여러분은 &lt;g2&gt;apply Or.inl&lt;/g2&gt;과 &lt;g3&gt;apply
 Or.inr&lt;/g3&gt; 같은 전략들을 사용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>For example, with the definition of scalar multiplication
-below, &lt;g6&gt;p.smul 3&lt;/g6&gt; is interpreted as &lt;g7&gt;Point.smul 3 p&lt;/g7&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181659Z" creationid="tlqk35" creationdate="20220528T180528Z">
-        <seg>예를 들어 아래의 스칼라 곱의 정의에서 &lt;g6&gt;p.smul 3&lt;/g6&gt;은 &lt;g7&gt;Point.smul 3 p&lt;/g7&gt;으로 해석됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3056,16 +2624,6 @@ tag, but you may still want to structure the proof.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T061653Z" creationid="tlqk35" creationdate="20220522T061653Z">
         <seg>간단한 하위목표에 대해 그것의 표식을 이용해 하위목표를 선택하는 것은 불필요할 수 있지만
 그래도 여러분은 여전히 증명을 구조화하길 원할지도 모릅니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>For structures containing many fields, this is often
-inconvenient, because we have to remember the order in which the
-fields were defined.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182011Z" creationid="tlqk35" creationdate="20220528T182011Z">
-        <seg>많은 필드를 포함한 구조체에 대해 우리는 필드가 정의된 순서를 기억해야만 하기 때문에 이것은 종종 불편합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3153,32 +2711,6 @@ theory.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Generally speaking, for an inductive type in &lt;g2&gt;Prop&lt;/g2&gt;, the
-motive of the elimination rule is required to be in &lt;g3&gt;Prop&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162615Z" creationid="tlqk35" creationdate="20220528T162615Z">
-        <seg>쉽게 말하자면 &lt;g2&gt;Prop&lt;/g2&gt;에 대한 유도형에 대해 제거 규칙의 동기는 &lt;g3&gt;Prop&lt;/g3&gt;에 있어야 함을 요구합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Generally speaking, the equation compiler processes input of the following form:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170517Z" creationid="tlqk3" creationdate="20220529T170517Z">
-        <seg>폭넓게 말하자면, 방정식 컴파일러는 다음 형태의 입력을 처리합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Given &lt;g1&gt;p : Point Nat&lt;/g1&gt;, the dot notation &lt;g2&gt;p.x&lt;/g2&gt; is shorthand for
-&lt;g3&gt;Point.x p&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174355Z" creationid="tlqk35" creationdate="20220528T174355Z">
-        <seg>&lt;g1&gt;p : Point Nat&lt;/g1&gt;에 대해서 점 기호 &lt;g2&gt;p.x&lt;/g2&gt;은 &lt;g3&gt;Point.x p&lt;/g3&gt;에 대한 축약 표현입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Given &lt;g3&gt;α : Type&lt;/g3&gt; and &lt;g4&gt;β : α → Type&lt;/g4&gt;, think of &lt;g5&gt;β&lt;/g5&gt;
 as a family of types over &lt;g6&gt;α&lt;/g6&gt;, that is, a type &lt;g7&gt;β a&lt;/g7&gt; for each
 &lt;g8&gt;a : α&lt;/g8&gt;.</seg>
@@ -3227,16 +2759,6 @@ arguments), the notation &lt;g3&gt;e.bar&lt;/g3&gt; is shorthand for &lt;g4&gt;F
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163400Z" creationid="tlqk35" creationdate="20220321T163400Z">
         <seg>(아마 몇 가지 인수를 적용한) 유도형이 &lt;g2&gt;Foo&lt;/g2&gt;인 표현식 &lt;g1&gt;e&lt;/g1&gt;에 대해 &lt;g3&gt;e.bar&lt;/g3&gt;과 같은 표기는 &lt;g4&gt;Foo.bar e&lt;/g4&gt;의 약식 표현입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Given any type &lt;g9&gt;α&lt;/g9&gt;,
-we should be able to assign a value to each accessible element of
-&lt;g10&gt;α&lt;/g10&gt;, recursively, by assigning values to all its predecessors first.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174522Z" creationid="tlqk3" creationdate="20220529T174522Z">
-        <seg>임의의 유형 &lt;g9&gt;α&lt;/g9&gt;에 대해서 우리는 그것의 모든 전임자들을 우선으로 값을 할당하여 &lt;g10&gt;α&lt;/g10&gt;의 각 접근 가능한 원소에 값을 재귀적으로 할당할 수 있어야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3314,16 +2836,6 @@ is an example:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Here &lt;g1&gt;(a : α)&lt;/g1&gt; is a sequence of parameters, &lt;g2&gt;(b : β)&lt;/g2&gt; is the
-sequence of arguments on which pattern matching takes place, and &lt;g3&gt;γ&lt;/g3&gt;
-is any type, which can depend on &lt;g4&gt;a&lt;/g4&gt; and &lt;g5&gt;b&lt;/g5&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170647Z" creationid="tlqk3" creationdate="20220529T170647Z">
-        <seg>여기서 &lt;g1&gt;(a : α)&lt;/g1&gt;는 매개변수의 나열입니다. 패턴 매칭이 일어나는 &lt;g2&gt;(b : β)&lt;/g2&gt;은 인수의 나열입니다. 그리고 &lt;g3&gt;γ&lt;/g3&gt;는 &lt;g4&gt;a&lt;/g4&gt;와 &lt;g5&gt;b&lt;/g5&gt;에 의존할 수 있는 임의의 유형입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Here &lt;g1&gt;u_1&lt;/g1&gt; is a variable ranging over type levels.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141951Z" creationid="tlqk35" creationdate="20220321T141951Z">
@@ -3366,16 +2878,6 @@ check their types.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Here are some examples of structural
-recursion from the last chapter, now defined using the equation
-compiler:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172301Z" creationid="tlqk3" creationdate="20220529T172301Z">
-        <seg>이제 방정식 컴파일러를 사용해 정의될 마지막 장의 구조적 재귀에 대한 몇 가지 예제가 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Here are some examples:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180921Z" creationid="tlqk35" creationdate="20220321T180921Z">
@@ -3397,32 +2899,6 @@ with lists:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T161527Z" creationid="tlqk35" creationdate="20220524T161430Z">
         <seg>여기 추가 예제가 리스트와 함께 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Here are some more examples of nested pattern matching:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162836Z" creationid="tlqk3" creationdate="20220529T162836Z">
-        <seg>여기 중첩된 패턴 매칭에 대한 몇 가지 추가 예제가 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Here are some of the constructions generated for the
-declaration above.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174003Z" creationid="tlqk35" creationdate="20220528T174003Z">
-        <seg>여기 생성자의 몇 가지가 위의 선언에 대해서 생성되었습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Here are some simple theorems and expressions that use the generated
-constructions.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174230Z" creationid="tlqk35" creationdate="20220528T174230Z">
-        <seg>여기 만들어진 생성자를 사용하는 몇 가지 간단한 정리와 표현식이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3569,15 +3045,6 @@ identity in the opposite direction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180724Z" creationid="tlqk35" creationdate="20220321T180724Z">
         <seg>&lt;g1&gt;Nat.add_assoc&lt;/g1&gt; 앞의 왼쪽 화살표는 항등식을 반대 방향으로 사용해 다시쓰라고 말합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Here we use it not only to define a function, but also to carry out a
-proof by cases:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161634Z" creationid="tlqk3" creationdate="20220529T161634Z">
-        <seg>여기서 우리는 이것을 함수를 정의하는 것과 경우에 따른 증명을 수행하는데에도 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3742,16 +3209,6 @@ in the context.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>If
-the unspecified fields cannot be inferred, Lean flags an error
-indicating the corresponding placeholder could not be synthesized.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182458Z" creationid="tlqk35" creationdate="20220528T182458Z">
-        <seg>만약 명시되지 않은 필드가 추론될 수 없다면 린은 대응하는 자리차지자를 합성할 수 없다고(the corresponding placeholder could not be synthesized) 나타내는 오류를 띄울 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>If &lt;g11&gt;q&lt;/g11&gt; does not mention
 &lt;g12&gt;w&lt;/g12&gt;, then showing that &lt;g13&gt;q&lt;/g13&gt; follows from &lt;g14&gt;p w&lt;/g14&gt; is tantamount to
 showing the &lt;g15&gt;q&lt;/g15&gt; follows from the existence of any such &lt;g16&gt;x&lt;/g16&gt;.</seg>
@@ -3829,16 +3286,6 @@ or an axiom, Lean indicates that fact, and shows the type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>If more than one record object is provided, then they are
-visited in order until Lean finds one that contains the unspecified
-field.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181508Z" creationid="tlqk35" creationdate="20220528T181508Z">
-        <seg>하나 이상의 레코드 개체가 제공되었다면 그럼 그들은 린이 명시되지 않은 필드를 포함하는 곳을 찾을 때까지 순서대로 방문될 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>If such a
 term appears in a hypothesis and you want to generalize over that as
 well, you need to &lt;g8&gt;revert&lt;/g8&gt; it explicitly.</seg>
@@ -3855,15 +3302,6 @@ subterm.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T172003Z" creationid="tlqk35" creationdate="20220524T155415Z">
         <seg>만약 이게 여러분이 원한 것이 아니라면 여러분은 추가 인수를 사용해 적절한 부분항을 명시할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>If the constructor name is not provided, then a constructor is named
-&lt;g1&gt;mk&lt;/g1&gt; by default.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174033Z" creationid="tlqk35" creationdate="20220528T174033Z">
-        <seg>만약 생성자 이름이 없다면 생성자는 기본적으로 &lt;g1&gt;mk&lt;/g1&gt;로 이름 붙습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3894,14 +3332,6 @@ remaining goals.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T060519Z" creationid="tlqk35" creationdate="20220522T060519Z">
         <seg>만일 증명이 불완전하다면, 토큰 &lt;g3&gt;by&lt;/g3&gt;은 빨간색 구불구불한 선으로 장식됩니다.
 그리고 오류 메시지가 남은 목표에 포함됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>If the value of a field is not specified, Lean tries to infer it.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182330Z" creationid="tlqk35" creationdate="20220528T182330Z">
-        <seg>만약 필드의 값이 명시되지 않았다면, 린은 그것을 추론하려고 할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4005,26 +3435,6 @@ your file manager.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>If you leave out any of the cases in
-the following definition, the error message will let you know what has
-not been covered.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170200Z" creationid="tlqk3" creationdate="20220529T170200Z">
-        <seg>여러분이 다음 정의에서 어떤 경우라도 빠트리면, 오류 메시지가 어떤 것이 다뤄지지 못했는지 알릴 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>If you think of &lt;g4&gt;r y x&lt;/g4&gt; as denoting a kind of order relation
-&lt;g5&gt;y ≺ x&lt;/g5&gt;, then &lt;g6&gt;Acc r x&lt;/g6&gt; says that &lt;g7&gt;x&lt;/g7&gt; is accessible from below,
-in the sense that all its predecessors are accessible.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174213Z" creationid="tlqk3" creationdate="20220529T174213Z">
-        <seg>여러분이 &lt;g4&gt;r y x&lt;/g4&gt;을 순서 관계 &lt;g5&gt;y ≺ x&lt;/g5&gt;의 일종으로 나타났다고 생각한다면 &lt;g6&gt;Acc r x&lt;/g6&gt;는 &lt;g7&gt;x&lt;/g7&gt;가 아래로부터 접근가능하다고 말합니다. 이 관점으로부터 그것의 모든 전임자들은 접근가능합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>If you want
 to specify a witness to the existential quantifier explicitly, you can
 use the &lt;g6&gt;exists&lt;/g6&gt; tactic instead:</seg>
@@ -4074,15 +3484,6 @@ Lean 4, we generalize this notation using &lt;g3&gt;·&lt;/g3&gt; As a placehold
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T140130Z" creationid="tlqk3" creationdate="20220526T140130Z">
         <seg>린 4에서 우리는 &lt;g3&gt;·&lt;/g3&gt;를 자리차지자로 사용하여  이 표기를 일반화합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In
-either case, the defining equations hold definitionally.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162526Z" creationid="tlqk3" creationdate="20220529T162516Z">
-        <seg>각 경우에서 정의한 방정식들은 정의로 인해 성립합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4163,17 +3564,6 @@ which makes them available for use by the simplifier.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T150229Z" creationid="tlqk35" creationdate="20220524T150229Z">
         <seg>&lt;g1&gt;t₁ &lt;;&gt; t₂&lt;/g1&gt;에서 &lt;g2&gt;&lt;;&gt;&lt;/g2&gt; 연산자는 순차 연산의 버전에 대해 &lt;g3&gt;parallel&lt;/g3&gt;을 제공합니다.
 &lt;g4&gt;t₁&lt;/g4&gt;는 현재 목표에 적용되고 그 후  &lt;g5&gt;t₂&lt;/g5&gt;은 출력되는 하위목표 &lt;g6&gt;all&lt;/g6&gt;에 적용됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In &lt;g8&gt;Section Dependent Pattern Matching&lt;/g8&gt;,
-we will see that it is sometimes necessary to include explicit terms in patterns that
-are needed to make an expression type check, though they do not play a
-role in pattern matching.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171529Z" creationid="tlqk3" creationdate="20220529T171529Z">
-        <seg>이들이 패턴 매칭에 핵심 역할을 하지 않더라도 &lt;g8&gt;의존적인 패턴 매칭 섹션&lt;/g8&gt;에서 우리는 이것이 때때로 표현식 유형 확인을 만드는데 필요한 패턴에 대해 명시적으로 포함될 필요가 있음을 볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4366,15 +3756,6 @@ imports the one in which the declaration occurs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In all these examples, pattern matching was used to carry out a single
-case distinction.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161820Z" creationid="tlqk3" creationdate="20220529T161820Z">
-        <seg>이 모든 에제에서 패턴 매칭은 한 경우의 구별을 수행하는데 사용됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In any case, all that really matters is the bottom line.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160455Z" creationid="tlqk35" creationdate="20220321T160455Z">
@@ -4389,27 +3770,6 @@ term.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171713Z" creationid="tlqk35" creationdate="20220524T163318Z">
         <seg>어떤 경우에 항을 간단히 하는데 사용되는 항등식의 모임에 추가 규칙이 더해질 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In contrast
-to usage outside the equation compiler, here the underscore does &lt;g3&gt;not&lt;/g3&gt;
-indicate an implicit argument.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163315Z" creationid="tlqk3" creationdate="20220529T163315Z">
-        <seg>방정식 컴파일러 밖에서의 사용과 대조적으로 여기서 밑줄 문자는 암시적인 인수를 지칭하지 &lt;g3&gt;않습니다.&lt;/g3&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In contrast to ordinary inductive definition, which constructs an
-element of some &lt;g1&gt;Sort u&lt;/g1&gt;, the more general version constructs a
-function &lt;g2&gt;... → Sort u&lt;/g2&gt;, where "&lt;g3&gt;...&lt;/g3&gt;" denotes a sequence of
-argument types, also known as &lt;g4&gt;indices&lt;/g4&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153033Z" creationid="tlqk35" creationdate="20220528T153033Z">
-        <seg>어떤 &lt;g1&gt;Sort u&lt;/g1&gt;의 원소를 생성하는 평범한 재귀적 정의와는 반대로 더 일반적인 형태는 함수 &lt;g2&gt;... → Sort u&lt;/g2&gt;을 생성합니다. 한편, "&lt;g3&gt;...&lt;/g3&gt;"은 &lt;g4&gt;indices&lt;/g4&gt;로도 알려진 인수 유형의 나열을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4473,16 +3833,6 @@ file, you need to open the namespaces you wish to use.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In each of the following examples, splitting occurs on only the first
-argument, even though the others are included among the list of
-patterns.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163048Z" creationid="tlqk3" creationdate="20220529T163048Z">
-        <seg>다른 인수들도 패턴의 리스트 사이에 포함되어 있음에도 다음의 각 예제에서 분할은 첫 번째 인수에만 일어납니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In fact,
 all builtin syntax is parsed and processed using the same mechanisms
 and APIs open to users.</seg>
@@ -4502,14 +3852,6 @@ the expression denotes the same function as &lt;g7&gt;fun (u : β) (z : α) =&gt
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In fact, Lean allows us to define the inductive type we really want:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170342Z" creationid="tlqk35" creationdate="20220528T170256Z">
-        <seg>사실 린은 우리가 원하는 유도형을 정의하도록 해줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In fact, Lean is generally
 able to process and check proofs in parallel, since assessing the
 correctness of one proof does not require knowing the details of
@@ -4517,15 +3859,6 @@ another.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161001Z" creationid="tlqk35" creationdate="20220321T161001Z">
         <seg>사실, 어떤 증명의 옳음에 접근하는 것은 다른 것의 상세를 알 필요가 없기 때문에 린은 일반적으로 증명의 검증과 처리를 병렬적으로 할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In fact, a single inductive definition can introduce an
-indexed &lt;g1&gt;family&lt;/g1&gt; of inductive types, in a manner we now describe.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152751Z" creationid="tlqk35" creationdate="20220528T152510Z">
-        <seg>사실 단일 재귀적 정의는 이제 우리가 설명할 방식으로 유도형의 색인된 &lt;g1&gt;family&lt;/g1&gt;를 도입할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4673,17 +4006,6 @@ and resources are available to you.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In general, whenever we define a structure &lt;g3&gt;S&lt;/g3&gt;, we usually
-define &lt;g4&gt;projection&lt;/g4&gt; functions that allow us to "destruct" each
-instance of &lt;g5&gt;S&lt;/g5&gt; and retrieve the values that are stored in its
-fields.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173030Z" creationid="tlqk35" creationdate="20220528T172918Z">
-        <seg>일반적으로 언제든 우리가 구조체 &lt;g3&gt;S&lt;/g3&gt;를 정의하면 우리는 보통 &lt;g5&gt;S&lt;/g5&gt;의 각 개체를 "파괴"할 수 있게 해주고 그 필드에 저장된 값을 인출할 수 있게 해주는 &lt;g4&gt;투영&lt;/g4&gt;함수를 정의합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In its most basic form, it is
 applied to an element &lt;g2&gt;x&lt;/g2&gt; in the local context.</seg>
       </tuv>
@@ -4753,32 +4075,11 @@ is a proof instead of a piece of data.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In other situations, however,
-reductions hold only &lt;g3&gt;propositionally&lt;/g3&gt;, which is to say, they are
-equational theorems that must be applied explicitly.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173048Z" creationid="tlqk3" creationdate="20220529T173048Z">
-        <seg>하지만 다른 상황에서 축약은 &lt;g3&gt;명제적으로&lt;/g3&gt;만 성립합니다. 즉, 명시적으로 적용해야 하는 등식 정리입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In other words,
 &lt;g4&gt;True&lt;/g4&gt; is simply true, and has a canonical proof, &lt;g5&gt;True.intro&lt;/g5&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164603Z" creationid="tlqk35" creationdate="20220321T164603Z">
         <seg>다시 말하자면 &lt;g4&gt;True&lt;/g4&gt;는 단순히 참이고, 정식 증명 &lt;g5&gt;True.intro&lt;/g5&gt;를 가집니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In other words,
-Lean parses the more general definitions, defines auxiliary inductive
-types based on them, and then uses the auxiliary types to define the
-ones we really want.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164744Z" creationid="tlqk35" creationdate="20220528T164744Z">
-        <seg>다시 말하면, 린은 더 일반적인 정의를 구문분석해 이들이 기반하는 부가적인 유도형을 정의하고, 그 뒤 부가적인 유형을 우리가 원하는 것을 정의하는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4889,30 +4190,11 @@ returned by &lt;g14&gt;f&lt;/g14&gt; depends on its input.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In other words, the universe level &lt;g1&gt;u&lt;/g1&gt; is required to be at least as
-large as the universe level of each type that represents an argument
-to a constructor.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162439Z" creationid="tlqk35" creationdate="20220528T162249Z">
-        <seg>다시 말하면,  세계 수준 &lt;g1&gt;u&lt;/g1&gt;는 적어도 생성자에 대한 인자로 나타난 각 유형의 세계 수준 만큼이나 클 필요가 있음을 요구합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In other words, whenever we have &lt;g4&gt;p : Prop&lt;/g4&gt;, we
 can interpret &lt;g5&gt;p&lt;/g5&gt; as a type, namely, the type of its proofs.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T155450Z" creationid="tlqk35" creationdate="20220321T155450Z">
         <seg>다시 말하자면, &lt;g4&gt;p : Prop&lt;/g4&gt;를 갖는한 우리는&lt;g5&gt;p&lt;/g5&gt;를 유형으로써 대게 그것의 증명형으로  해석할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In particular,
-if &lt;g8&gt;x&lt;/g8&gt; has no predecessors, it is accessible.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174242Z" creationid="tlqk3" creationdate="20220529T174242Z">
-        <seg>특히 &lt;g8&gt;x&lt;/g8&gt;의 전임자가 없다면 그것은 접근가능합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4934,15 +4216,6 @@ namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150731Z" creationid="tlqk35" creationdate="20220321T150731Z">
         <seg>특히, 이름공간 안에서 &lt;g3&gt;variable&lt;/g3&gt; 명령을 사용한다면 그것의 범위는 이름공간으로 제한될 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In particular, the following equations hold
-definitionally:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164916Z" creationid="tlqk3" creationdate="20220529T164916Z">
-        <seg>특히 다음 방정식은 정의로부터 성립합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5180,14 +4453,6 @@ as you can.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the exercises below, you are asked to spell out the details.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165514Z" creationid="tlqk35" creationdate="20220528T165514Z">
-        <seg>아래 연습에서 여러분은 세부 사항을 말하도록 요청받습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the exposition below, we will slip back and forth between these two
 ways of talking, at times saying that an expression "constructs" or
 "produces" or "returns" a proof of a proposition, and at other times
@@ -5317,14 +4582,6 @@ and then we show that the sum of two even numbers is an even number.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the following example, we prove &lt;g2&gt;symm&lt;/g2&gt; and leave as exercise the theorems &lt;g3&gt;trans&lt;/g3&gt; and &lt;g4&gt;congr&lt;/g4&gt; (congruence).</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154919Z" creationid="tlqk35" creationdate="20220528T154755Z">
-        <seg>다음 예제에서 우리는&lt;g2&gt;symm&lt;/g2&gt;을 증명합니다. 그리고 정리 &lt;g3&gt;trans&lt;/g3&gt;과 &lt;g4&gt;congr&lt;/g4&gt; (적합, congruence)을 연습으로 남겨놓겠습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the following example, we use
 &lt;g14&gt;Or.elim&lt;/g14&gt; to prove &lt;g15&gt;p ∨ q → q ∨ p&lt;/g15&gt;.</seg>
       </tuv>
@@ -5396,17 +4653,6 @@ on inductive types and carry out inductive proofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the next chapter, you will learn how to define a function like
-&lt;g1&gt;add&lt;/g1&gt; so that it works generically for elements of &lt;g2&gt;Point α&lt;/g2&gt;
-rather than just &lt;g3&gt;Point Nat&lt;/g3&gt;, assuming &lt;g4&gt;α&lt;/g4&gt; has an associated
-addition operation.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180228Z" creationid="tlqk35" creationdate="20220528T180228Z">
-        <seg>다음 장에서 여러분은 &lt;g1&gt;add&lt;/g1&gt;같은 함수를 어떻게 정의하는지 배울 것입니다. 그래서 그저 &lt;g3&gt;Point Nat&lt;/g3&gt;보다는 &lt;g2&gt;Point α&lt;/g2&gt;의 원소에 대해 일반적으로 동작하도록 할 것입니다. 여기서 &lt;g4&gt;α&lt;/g4&gt;는 덧셈 연산과 연관이 있다고 가정합시다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the next example we
 use &lt;g7&gt;And.intro&lt;/g7&gt; to create a proof of &lt;g8&gt;p → q → p ∧ q&lt;/g8&gt;.</seg>
       </tuv>
@@ -5438,37 +4684,10 @@ first.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the next example, we define a structure using multiple inheritance,
-and then define an object using objects of the parent structures.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180616Z" creationid="tlqk35" creationdate="20220528T180616Z">
-        <seg>다음 예제에서 우리는 다수의 상속을 사용한 구조체를 정의하고 그 후 부모 구조체의 대상을 사용하는 대상을 정의합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the next three examples, the same compound tactic succeeds in each case.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T150833Z" creationid="tlqk35" creationdate="20220524T150833Z">
         <seg>다음 세 예제에서 동일한 복합 전략은 각 경우에서 성공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In the next three sections, we will describe,
-respectively:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170420Z" creationid="tlqk3" creationdate="20220529T170420Z">
-        <seg>다음 세 섹션에서 우리는 개별적으로 설명할 예정입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In the previous chapter, we saw that inductive definitions provide a
-powerful means of introducing new types in Lean.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T155925Z" creationid="tlqk3" creationdate="20220529T155925Z">
-        <seg>이전 장에서 우리는 귀납적 정의가 린의 새 유형을 도입하는 강력한 수단을 제공함을 보았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5520,15 +4739,6 @@ used to specify the desired types of the expressions &lt;g6&gt;id&lt;/g6&gt; and
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In the second presentation, the patterns overlap; for example, the
-pair of arguments &lt;g1&gt;0 0&lt;/g1&gt; matches all three cases.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164755Z" creationid="tlqk3" creationdate="20220529T164755Z">
-        <seg>두 번째 나타남에서 패턴은 겹칩니다. 예를 들어 인수의 쌍 &lt;g1&gt;0 0&lt;/g1&gt;은 세 경우 모두 일치합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In the section after next we will see what happens when the
 constructor of an inductive type takes arguments from the inductive
 type itself.</seg>
@@ -5544,25 +4754,6 @@ of a partial function.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T150031Z" creationid="tlqk3" creationdate="20220527T150031Z">
         <seg>의존 유형론의 의미론에서 부분 함수의 내장 개념은 없습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In the type theory literature, there are further generalizations of
-inductive definitions, for example, the principles of
-&lt;g1&gt;induction-recursion&lt;/g1&gt; and &lt;g2&gt;induction-induction&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155053Z" creationid="tlqk35" creationdate="20220528T155053Z">
-        <seg>유형론 교재에서는 재귀적 정의의 더 일반화 예를 들어 &lt;g1&gt;induction-recursion&lt;/g1&gt;과 &lt;g2&gt;induction-induction&lt;/g2&gt;의 원리가 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In these languages, the interpreter produces an exception
-or returns an arbitrary value for incomplete cases.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165322Z" creationid="tlqk3" creationdate="20220529T165322Z">
-        <seg>이 언어들에서 인터프리터는 예외을 만들거나 불완전한 경우에 대한 임의의 값을 반환합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5658,16 +4849,6 @@ applied, with &lt;g2&gt;h : p ∧ q&lt;/g2&gt; replaced by a pair of assumptions
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>In this example, two types are defined simultaneously: a natural
-number &lt;g1&gt;n&lt;/g1&gt; is &lt;g2&gt;Even&lt;/g2&gt; if it is &lt;g3&gt;0&lt;/g3&gt; or one more than an &lt;g4&gt;Odd&lt;/g4&gt;
-number, and &lt;g5&gt;Odd&lt;/g5&gt; if it is one more than an &lt;g6&gt;Even&lt;/g6&gt; number.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165452Z" creationid="tlqk35" creationdate="20220528T165452Z">
-        <seg>이 예제에서 두 유형은 동시에 정의되었습니다.. 자연수 &lt;g1&gt;n&lt;/g1&gt;은 만약 이것이 &lt;g3&gt;0&lt;/g3&gt; 혹은 &lt;g4&gt;홀수(Odd)&lt;/g4&gt;보다 하나 크면&lt;g2&gt;짝수(Even)&lt;/g2&gt;입니다. 그리고 &lt;g5&gt;홀수(Odd)&lt;/g5&gt;는 &lt;g6&gt;짝수(Even)&lt;/g6&gt;보다 하나 큰 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>In this section, we describe some means that help provide
 structure to a tactic-style proof, making such proofs more readable
 and robust.</seg>
@@ -5684,16 +4865,6 @@ additional features of the proof language that are often convenient.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183301Z" creationid="tlqk35" creationdate="20220321T183301Z">
         <seg>이 섹션에서는 종종 편리한 증명 언어의 몇 가지 추가적인 기능에 대해 설명합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>In this section, we will deal with &lt;g4&gt;structural recursion&lt;/g4&gt;, in
-which the arguments to &lt;g5&gt;foo&lt;/g5&gt; occurring on the right-hand side of the
-&lt;g6&gt;:=&lt;/g6&gt; are subterms of the patterns on the left-hand side.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172050Z" creationid="tlqk3" creationdate="20220529T172050Z">
-        <seg>이 섹션에서 우리는 &lt;g4&gt;구조적 재귀&lt;/g4&gt;를 다룰 예정입니다. 여기서 &lt;g5&gt;foo&lt;/g5&gt;에 대한 인수는 좌변에 대한 패턴의 부분항인 &lt;g6&gt;:=&lt;/g6&gt;의 우변에서 나타납니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5775,14 +4946,6 @@ is just notation for &lt;g12&gt;(a : α) → β&lt;/g12&gt; when &lt;g13&gt;β&l
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Induction and Recursion</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T155833Z" creationid="tlqk3" creationdate="20220529T155833Z">
-        <seg>귀납과 재귀</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Inductive Families</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T173226Z" creationid="tlqk3" creationdate="20220527T173226Z">
@@ -5853,22 +5016,6 @@ the search path is determined can be found on the
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T174257Z" creationid="tlqk35" creationdate="20220524T174257Z">
         <seg>어떻게 탐색경로가 결정되는지에 대한 정보는 &lt;g3&gt;documentation pages&lt;/g3&gt;에서 찾아볼 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Inheritance</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180657Z" creationid="tlqk35" creationdate="20220528T180657Z">
-        <seg>상속(Inheritance)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Instead of &lt;g1&gt;zero&lt;/g1&gt; and &lt;g2&gt;succ&lt;/g2&gt;, we can use more familiar notation:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161323Z" creationid="tlqk3" creationdate="20220529T161323Z">
-        <seg>&lt;g1&gt;zero&lt;/g1&gt;과 &lt;g2&gt;succ&lt;/g2&gt; 대신 우리는 더 친숙한 기호를 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5967,15 +5114,6 @@ amounts to knowing which is the case.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Intuitively, the only way to construct a proof of &lt;g8&gt;Eq a x&lt;/g8&gt;
-is to use reflexivity, in the case where &lt;g9&gt;x&lt;/g9&gt; is &lt;g10&gt;a&lt;/g10&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153855Z" creationid="tlqk35" creationdate="20220528T153855Z">
-        <seg>직관적으로 &lt;g8&gt;Eq a x&lt;/g8&gt;의 증명을 생성하는 유일한 방법은 &lt;g9&gt;x&lt;/g9&gt;가 &lt;g10&gt;a&lt;/g10&gt;인 경우 반사성을 사용하는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>It
 allows us to prove a proposition &lt;g3&gt;q&lt;/g3&gt; from &lt;g4&gt;∃ x : α, p x&lt;/g4&gt;, by
 showing that &lt;g5&gt;q&lt;/g5&gt; follows from &lt;g6&gt;p w&lt;/g6&gt; for an arbitrary value
@@ -5983,17 +5121,6 @@ showing that &lt;g5&gt;q&lt;/g5&gt; follows from &lt;g6&gt;p w&lt;/g6&gt; for an
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T181249Z" creationid="tlqk35" creationdate="20220321T181249Z">
         <seg>임의의 값 &lt;g7&gt;w&lt;/g7&gt;에 대해 &lt;g6&gt;p w&lt;/g6&gt;로부터 &lt;g5&gt;q&lt;/g5&gt;임을 보임으로써 &lt;g4&gt;∃ x : α, p x&lt;/g4&gt;으로부터 명제 &lt;g3&gt;q&lt;/g3&gt;를 증명하게 해줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It allows you to
-define a function by specifying equations that it should satisfy, and
-it allows you to prove a theorem by specifying how to handle various
-cases that can arise.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160321Z" creationid="tlqk3" creationdate="20220529T160321Z">
-        <seg>이는 여러분이 그것이 만족해야 하는 방정식을 명시함으로써 함수를 정의하도록 해줍니다. 그리고 이것은 일어날 수 있는 다양한 경우를 어떻게 다뤄야 하는지 나타내줌으로써 여러분이 정리를 증명하게 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6028,28 +5155,6 @@ that &lt;g3&gt;sorry&lt;/g3&gt; has been used.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T065446Z" creationid="tlqk35" creationdate="20220522T065446Z">
         <seg>이것은 현재 목표를 마무리 짓고, &lt;g3&gt;sorry&lt;/g3&gt;를 사용했을 때처럼 경고를 만듭니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It determines
-the necessary case splits from the patterns that are presented to it,
-and raises an error if the patterns fail to exhaust the cases.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162407Z" creationid="tlqk3" creationdate="20220529T162226Z">
-        <seg>이것은 그것에 제시된 패턴에 필요한 경우를 나누는 것을 결정하고, 패턴이 경우를 처리하는데 실패하면 오류를 발생시킵니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It falls outside the
-strict specification of an inductive type given in the last section
-because &lt;g2&gt;Tree&lt;/g2&gt; does not occur strictly positively among the
-arguments to &lt;g3&gt;mk&lt;/g3&gt;, but, rather, nested inside the &lt;g4&gt;List&lt;/g4&gt; type
-constructor.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170602Z" creationid="tlqk35" creationdate="20220528T170602Z">
-        <seg>이것은 마지막 섹션에서 제시된 유도형의 엄격한 명세를 바깥으로 빠져나옵니다. 왜냐하면 &lt;g2&gt;Tree&lt;/g2&gt;는 &lt;g3&gt;mk&lt;/g3&gt;에 대한 인수 사이에서 엄격하게 긍정적으로 일어나지 않고 대신  &lt;g4&gt;List&lt;/g4&gt;형 생성자의 중첩된 안쪽에서 일어나기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6101,15 +5206,6 @@ necessarily tell you which one is false:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T170025Z" creationid="tlqk35" creationdate="20220321T170025Z">
         <seg>다음 예제에서 이게 필요한데 왜냐하면 직관주의적 관점에서 &lt;g1&gt;p&lt;/g1&gt;와 &lt;g2&gt;q&lt;/g2&gt; 둘 다 참이 아니라는 것을 아는 것은 여러분에게 반드시 어떤 것이 거짓이라는 것을 말해줄 필요는 없기 때문입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It is a remarkable fact that all the basic axioms for equality follow
-from the constructor, &lt;g1&gt;refl&lt;/g1&gt;, and the eliminator, &lt;g2&gt;Eq.rec&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154127Z" creationid="tlqk35" creationdate="20220528T154127Z">
-        <seg>동등성에 대한 모든 기본 공리는 생성자 &lt;g1&gt;refl&lt;/g1&gt;과 제거자 &lt;g2&gt;Eq.rec&lt;/g2&gt;로부터 따라 나온다는 사실은 주목할만 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6181,15 +5277,6 @@ these two proofs are equivalent:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>It is common to use a similar trick with the &lt;g1&gt;List.map&lt;/g1&gt; function,
-which takes a list as its second non-implicit argument:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181835Z" creationid="tlqk35" creationdate="20220528T181835Z">
-        <seg>두 번째 비암시적인 인자로써 리스트를 받는 &lt;g1&gt;List.map&lt;/g1&gt; 함수로 비슷한 트릭을 쓰는 것은 흔합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>It is convenient for illustration,
 and we will use it often.</seg>
       </tuv>
@@ -6215,14 +5302,6 @@ denotes the collection of elements of &lt;g4&gt;α&lt;/g4&gt; that have property
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T153639Z" creationid="tlqk3" creationdate="20220527T153639Z">
         <seg>집합론에서 부분집합 표기 이후에 모델되었습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It is not hard to prove that &lt;g1&gt;Eq&lt;/g1&gt; is symmetric and transitive.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154600Z" creationid="tlqk35" creationdate="20220528T154600Z">
-        <seg>&lt;g1&gt;Eq&lt;/g1&gt;가 대칭적이고 추이적임을 증명하는 것은 어렵지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6409,15 +5488,6 @@ mode.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>It then does a case split on
-whether &lt;g3&gt;x&lt;/g3&gt; is of the form &lt;g4&gt;zero&lt;/g4&gt; or &lt;g5&gt;succ x&lt;/g5&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162124Z" creationid="tlqk3" creationdate="20220529T162124Z">
-        <seg>그 뒤 &lt;g3&gt;x&lt;/g3&gt;가 &lt;g4&gt;zero&lt;/g4&gt;인지 &lt;g5&gt;succ x&lt;/g5&gt;의 꼴인지에 따라 경우를 나눕니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>It then reduces the
 goal to cases in which &lt;g3&gt;x&lt;/g3&gt; is replaced by each of the constructions.</seg>
       </tuv>
@@ -6458,29 +5528,10 @@ enclosing them in blocks and indenting.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>It will also use an "if ... then ... else" instead of a &lt;g1&gt;casesOn&lt;/g1&gt; in appropriate situations.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170258Z" creationid="tlqk3" creationdate="20220529T170258Z">
-        <seg>이것은 적절한 상황에서 &lt;g1&gt;casesOn&lt;/g1&gt; 대신  "if ... then ... else"을 사용할 수도 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>It will unify metavariables in the conclusion if necessary:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T063004Z" creationid="tlqk35" creationdate="20220522T063004Z">
         <seg>이것은 필요하다면 결론의 메타변수들을 통합할 것 입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>It would be
-much nicer if the list of subtrees were given by the type
-&lt;g1&gt;List (Tree α)&lt;/g1&gt;, especially since Lean's library contains a number of functions
-and theorems for working with lists.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170102Z" creationid="tlqk35" creationdate="20220528T170102Z">
-        <seg>만약 하위트리의 리스트가 &lt;g1&gt;List (Tree α)&lt;/g1&gt;형으로 제시된다면 훨씬 더 좋을 것입니다. 왜냐하면 특이 린의 라이브러리가 리스트와 작업할 수 있는 다수의 함수와 정리를 담고 있기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6582,16 +5633,6 @@ constructor or the return type, and makes them implicit in that case.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>Lean
-simply normalizes these expressions until the constructors &lt;g2&gt;zero&lt;/g2&gt;
-and &lt;g3&gt;succ&lt;/g3&gt; are exposed.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161455Z" creationid="tlqk3" creationdate="20220529T161455Z">
-        <seg>린은 단순히 이 표현식들을 생성자 &lt;g2&gt;zero&lt;/g2&gt;과 &lt;g3&gt;succ&lt;/g3&gt;이 드러날 때까지 정규화합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean
 therefore provides &lt;g3&gt;Or.inr&lt;/g3&gt; and &lt;g4&gt;Or.inl&lt;/g4&gt; which can be viewed as
 shorthand for &lt;g5&gt;Or.intro_right _&lt;/g5&gt; and &lt;g6&gt;Or.intro_left _&lt;/g6&gt;.</seg>
       </tuv>
@@ -6619,31 +5660,12 @@ inductive type and can be inferred from the context.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Lean allows you to specify that unassigned fields in the
-specification of a record should be taken from a previously defined
-structure object &lt;g2&gt;s&lt;/g2&gt; by adding the annotation &lt;g3&gt;s with&lt;/g3&gt; before the field
-assignments.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181355Z" creationid="tlqk35" creationdate="20220528T181355Z">
-        <seg>린은 여러분이 레코드의 명세에서 이전에 정의된 구조체 개체로부터 &lt;g3&gt;s&lt;/g3&gt;를 받아  필드 할당 전에 &lt;g3&gt;s가 있음&lt;/g3&gt; 주석을 추가하여 할당되지 않은 필드를 나타내도록 해줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Lean also
 allows us to specify the type of the final term &lt;g4&gt;hp&lt;/g4&gt;, explicitly,
 with a &lt;g5&gt;show&lt;/g5&gt; statement.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161051Z" creationid="tlqk35" creationdate="20220321T161051Z">
         <seg>린은 여러분에게 마지막 항 &lt;g4&gt;hp&lt;/g4&gt;을 명시적으로 &lt;g5&gt;show&lt;/g5&gt; 문장으로 유형을 명시하는 것을 허용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean also allows parameters to occur after &lt;g4&gt;:&lt;/g4&gt;, but it cannot pattern match on them.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163915Z" creationid="tlqk3" creationdate="20220529T163915Z">
-        <seg>린은 매개변수가 &lt;g4&gt;:&lt;/g4&gt; 뒤에서 나타나는 것도 허용합니다. 그러나 이들에 대해 패턴 매칭은 할 수 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6728,16 +5750,6 @@ explicitly.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T144144Z" creationid="tlqk35" creationdate="20220321T144144Z">
         <seg>Lean은 &lt;g4&gt;α&lt;/g4&gt;의 유형을 추론할 수 있습니다. 그러나 이를 명백히 적는 것이 좋습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean can also handle more complex forms of pattern matching, in which
-arguments to dependent types pose additional constraints on the
-various cases.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164517Z" creationid="tlqk3" creationdate="20220529T164517Z">
-        <seg>린은 인수가 다양한 경우에 대해 추가적인 제약을 의존 유형에 부여하는 것 같은 패턴 매칭의 더 복잡한 형태도 다룰 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6879,15 +5891,6 @@ quantifier with the &lt;g1&gt;match&lt;/g1&gt; expression:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Lean provides natural ways of defining recursive functions, performing
-pattern matching, and writing inductive proofs.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160113Z" creationid="tlqk3" creationdate="20220529T160113Z">
-        <seg>린은 재귀적인 함수를 정의하는 자연스러운 방법을 제공하고, 패턴 매치를 수행하고, 귀납적 정의를 작성합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Lean provides various sectioning mechanisms to help structure a
 theory.</seg>
       </tuv>
@@ -6911,34 +5914,6 @@ hierarchical &lt;g1&gt;namespaces&lt;/g1&gt;:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150219Z" creationid="tlqk35" creationdate="20220321T150219Z">
         <seg>Lean은 여러분에게 정의를 중첩되고 계층적인 &lt;g1&gt;namespaces&lt;/g1&gt;에 묶을 수 있는 능력을 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean raises an error if any of the field names remain
-unspecified after all the objects are visited.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181620Z" creationid="tlqk35" creationdate="20220528T181620Z">
-        <seg>린은 모든 개체들이 방문된 이후에도 어떤 필드 이름이라도 명시되지 않고 남아있다면 오류를 발생시킵니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean then automatically builds the
-isomorphism between &lt;g5&gt;TreeList α&lt;/g5&gt; and &lt;g6&gt;List (Tree α)&lt;/g6&gt; in its kernel,
-and defines the constructors for &lt;g7&gt;Tree&lt;/g7&gt; in terms of the isomorphism.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170807Z" creationid="tlqk35" creationdate="20220528T170807Z">
-        <seg>그 후 린은 자동적으로 그것의 커널에서 &lt;g5&gt;TreeList α&lt;/g5&gt;과&lt;g6&gt;List (Tree α)&lt;/g6&gt; 사이의 동형을 만듭니다. 그리고 동형에 대해서 &lt;g7&gt;Tree&lt;/g7&gt;에 대한 생성자를 정의합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean therefore provides the following alternative
-notations for defining elements of a structure type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182051Z" creationid="tlqk35" creationdate="20220528T182051Z">
-        <seg>그래서 린은 구조체의 원소를 정의하는데 다음의 대안 기호를 제공합니다</seg>
       </tuv>
     </tu>
     <tu>
@@ -6968,16 +5943,6 @@ in the &lt;g3&gt;fun&lt;/g3&gt; expression:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182848Z" creationid="tlqk35" creationdate="20220321T182848Z">
         <seg>더욱이 린은 우리에게 &lt;g3&gt;fun&lt;/g3&gt; 표현식에서 암시적인 &lt;g2&gt;match&lt;/g2&gt;를 사용할 수 있게 해줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Lean's equation compiler, described in the next
-chapter, is needed to make use of these types
-effectively.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164830Z" creationid="tlqk35" creationdate="20220528T164830Z">
-        <seg>다음 장에서 설명할 린의 방정식 컴파일러는 이 유형의 사용을 효과적으로 만들기 위해 필요합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7028,16 +5993,6 @@ your own.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Lean's standard library defines two predicates, &lt;g1&gt;Acc r a&lt;/g1&gt; and
-&lt;g2&gt;WellFounded r&lt;/g2&gt;, where &lt;g3&gt;r&lt;/g3&gt; is a binary relation on a type &lt;g4&gt;α&lt;/g4&gt;,
-and &lt;g5&gt;a&lt;/g5&gt; is an element of type &lt;g6&gt;α&lt;/g6&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173905Z" creationid="tlqk3" creationdate="20220529T173905Z">
-        <seg>린의 표준 라이브러리는 두 술어 &lt;g1&gt;Acc r a&lt;/g1&gt;과 &lt;g2&gt;WellFounded r&lt;/g2&gt;을 정의합니다. 여기서 &lt;g3&gt;r&lt;/g3&gt;은 &lt;g4&gt;α&lt;/g4&gt;형에 대한 이항 관계이고 &lt;g5&gt;a&lt;/g5&gt;는 &lt;g6&gt;α&lt;/g6&gt;형 원소입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Lean's syntax can be extended and customized by users at every level,
 ranging from basic "mixfix" notations to custom elaborators.</seg>
       </tuv>
@@ -7083,29 +6038,11 @@ language.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Let us first consider the case where the inductive type is &lt;g1&gt;not&lt;/g1&gt;
-specified to land in &lt;g2&gt;Prop&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161836Z" creationid="tlqk35" creationdate="20220528T161836Z">
-        <seg>우선 유도형이 &lt;g2&gt;Prop&lt;/g2&gt;에 머무른다고 명시되지&lt;g1&gt;않은&lt;/g1&gt;경우를 생각해봅시다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Let us now turn to one of the most fundamental relations defined in
 Lean's library, namely, the equality relation.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175313Z" creationid="tlqk35" creationdate="20220321T175313Z">
         <seg>이제 주로 동등 관계라고 하는 린의 라이브러리에 정의된 가장 기초적인 관계 중 하나로 가봅시다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Let us start with the logical background that
-is needed to understand how it works.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173742Z" creationid="tlqk3" creationdate="20220529T173742Z">
-        <seg>우선 이것이 어떻게 동작하는지 이해하는데 필요한 논리적 배경으로 시작합시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7196,16 +6133,6 @@ corrections, suggestions, examples, and text.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>More generally, given an expression &lt;g1&gt;p.foo x y z&lt;/g1&gt; where &lt;g2&gt;p : Point&lt;/g2&gt;,
-Lean will insert &lt;g3&gt;p&lt;/g3&gt; at the first argument to &lt;g4&gt;Point.foo&lt;/g4&gt; of type
-&lt;g5&gt;Point&lt;/g5&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180508Z" creationid="tlqk35" creationdate="20220528T180508Z">
-        <seg>더 일반적으로 &lt;g2&gt;p : Point&lt;/g2&gt;일 때 제시된 표현식 &lt;g1&gt;p.foo x y z&lt;/g1&gt;에 대해, 린은 &lt;g5&gt;Point&lt;/g5&gt;형의 첫 번째 인수로 &lt;g4&gt;Point.foo&lt;/g4&gt;에  &lt;g3&gt;p&lt;/g3&gt;를 삽입할 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>More importantly, the cases tactic will detect any items
 in the local context that depend on the target variable.</seg>
       </tuv>
@@ -7220,15 +6147,6 @@ Lean &lt;g1&gt;documentation pages&lt;/g1&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T173553Z" creationid="tlqk35" creationdate="20220524T173553Z">
         <seg>린에 대한 더 많은 정보는 &lt;g1&gt;documentation pages&lt;/g1&gt;에서 찾을 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>More interestingly, patterns can involve nested
-constructors, as in the following examples.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161918Z" creationid="tlqk3" creationdate="20220529T161905Z">
-        <seg>더 흥미롭게도 패턴은 다음 예제에 있는 중첩된 생성자에도 관여할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7314,15 +6232,6 @@ block.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Moreover, Lean provides convenient notation
-for defining instances of a given structure.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173328Z" creationid="tlqk35" creationdate="20220528T173328Z">
-        <seg>게다가 린은 주어진 구조체의 개체를 정의하는데 편리한 기호를 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Moreover, once we make this identification, the rules for implication
 show that we can pass back and forth between &lt;g1&gt;Implies p q&lt;/g1&gt; and
 &lt;g2&gt;p → q&lt;/g2&gt;.</seg>
@@ -7338,16 +6247,6 @@ since automated procedures are themselves tactics.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184343Z" creationid="tlqk35" creationdate="20220321T184343Z">
         <seg>게다가 자동화된 절차 자체가 전략이기 때문에 전략은 Lean의 자동화를 사용하기 위한 관문을 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Moreover, the
-constructors and the recursors provide the only means of defining
-functions on these types.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160006Z" creationid="tlqk3" creationdate="20220529T160006Z">
-        <seg>게다가 생성자와 재귀자는 이 유형에 대한 함수 정의의 유일한 수단을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7376,14 +6275,6 @@ imports it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T182353Z" creationid="tlqk3" creationdate="20220525T182353Z">
         <seg>대개 이런 명령들은 전역 효과를 갖습니다. 그 말은 즉, 그들이 현재 파일 뿐 아니라 그것을 불러오는 모든 파일에 대해 영향이 남는다는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Most parts are optional.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173656Z" creationid="tlqk35" creationdate="20220528T173656Z">
-        <seg>대부분은 선택적입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7419,14 +6310,6 @@ which is just shorthand for &lt;g2&gt;rw t_1; ...; rw t_n&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T060802Z" creationid="tlqk35" creationdate="20220522T060802Z">
         <seg>복수의 전략들은 세미콜론으로 연결한 한 줄에 작성될 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Mutual and Nested Inductive Types</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164349Z" creationid="tlqk35" creationdate="20220528T164349Z">
-        <seg>상호적이고 중첩된 유도형</seg>
       </tuv>
     </tu>
     <tu>
@@ -7511,16 +6394,6 @@ obtain &lt;g3&gt;¬p&lt;/g3&gt; by deriving a contradiction from &lt;g4&gt;p&lt;
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Nonetheless, it makes sense to describe the declarations
-here, because they are straightforward variations on ordinary
-inductive definitions.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164955Z" creationid="tlqk35" creationdate="20220528T164955Z">
-        <seg>그래도 여전히 여기에 선언을 설명하는 것이 이치에 맞는 것 같습니다.왜냐하면 그들은 평범한 재귀적 정의에 직관적인 변형이기 때문입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Nor do you have
 to name a section, which is to say, you can use an anonymous
 &lt;g1&gt;section&lt;/g1&gt; / &lt;g2&gt;end&lt;/g2&gt; pair.</seg>
@@ -7544,17 +6417,6 @@ away.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T173159Z" creationid="tlqk35" creationdate="20220524T173146Z">
         <seg>여기서 찾은 모든 정보가 여러분에게 바로 유용하지 않을 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Notably, however, there is only one constructor, &lt;g5&gt;refl&lt;/g5&gt;, which
-is an element of &lt;g6&gt;Eq a a&lt;/g6&gt;, and the curly braces after the
-constructor tell Lean to make the argument to &lt;g7&gt;refl&lt;/g7&gt;
-explicit.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153747Z" creationid="tlqk35" creationdate="20220528T153747Z">
-        <seg>하지만 주목할 점은 오직 &lt;g6&gt;Eq a a&lt;/g6&gt;의 원소인 한 생성자 &lt;g5&gt;refl&lt;/g5&gt;있습니다. 그리고 생성자 뒤의 중괄호는 린에게 &lt;g7&gt;refl&lt;/g7&gt;을 명시적인 인수로 만들게 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7599,15 +6461,6 @@ if we used &lt;g14&gt;notation&lt;/g14&gt; directly to introduce an infix notati
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T123211Z" creationid="tlqk3" creationdate="20220526T123211Z">
         <seg>만약 우리가 이처럼 &lt;g14&gt;notation&lt;/g14&gt;를 전위 표기를 바로 도입하도록 사용한다면</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Note that &lt;g11&gt;Eq a a&lt;/g11&gt; is the only inhabited type in the family of types
-&lt;g12&gt;Eq a x&lt;/g12&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153941Z" creationid="tlqk35" creationdate="20220528T153941Z">
-        <seg>&lt;g11&gt;Eq a a&lt;/g11&gt;는 &lt;g12&gt;Eq a x&lt;/g12&gt;형의 군에서 유일한 내장 유형임을 주목하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7702,14 +6555,6 @@ application; we could equally well have written &lt;g6&gt;⟨w, ⟨hw.right, hw.
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Note that the patterns are separated by commas.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162942Z" creationid="tlqk3" creationdate="20220529T162942Z">
-        <seg>패턴이 콤마로 나뉜 것에 주목하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Note that the syntax is similar to the one used in &lt;g1&gt;match&lt;/g1&gt; expressions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T070416Z" creationid="tlqk35" creationdate="20220522T070416Z">
@@ -7755,15 +6600,6 @@ binary operation like &lt;g5&gt;and&lt;/g5&gt; using &lt;g6&gt;match&lt;/g6&gt;:
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T152449Z" creationid="tlqk3" creationdate="20220526T152449Z">
         <seg>여러분이  &lt;g5&gt;and&lt;/g5&gt;같은 이항 연산을 &lt;g6&gt;match&lt;/g6&gt;를 사용해 정의할 수 있다는 것을 보세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Notice also that, when the value of an argument is not needed in the
-definition, you can use an underscore instead.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163136Z" creationid="tlqk3" creationdate="20220529T163136Z">
-        <seg>인수의 값은 정의에서 필요하지 않음도 주목하세요. 여러분은 대신 밑줄 문자를 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7863,16 +6699,6 @@ identifier, &lt;g2&gt;id&lt;/g2&gt;, without inserting any placeholders.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T153754Z" creationid="tlqk35" creationdate="20220321T153754Z">
         <seg>현재 첫 번째 &lt;g1&gt;#check&lt;/g1&gt; 명령은 식별자 &lt;g2&gt;id&lt;/g2&gt;의 유형을 어떤 플레이스 홀더도 삽입하지 않고 주는 것을 보세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Notice that the &lt;g1&gt;cons&lt;/g1&gt; constructor takes an element of
-&lt;g2&gt;Vector α n&lt;/g2&gt; and returns an element of &lt;g3&gt;Vector α (n+1)&lt;/g3&gt;, thereby using an
-element of one member of the family to build an element of another.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153334Z" creationid="tlqk35" creationdate="20220528T153334Z">
-        <seg>&lt;g1&gt;cons&lt;/g1&gt; 생성자는 &lt;g2&gt;Vector α n&lt;/g2&gt;의 원소를 받고 &lt;g3&gt;Vector α (n+1)&lt;/g3&gt;의 원소를 반환합니다. 그러므로 군의 한 구성원의 원소를 다른 원소를 만드는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8016,14 +6842,6 @@ be inferred, Lean assumes, by default, that it is a natural number.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Objects</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181844Z" creationid="tlqk35" creationdate="20220528T181844Z">
-        <seg>대상(개체, 객체)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Of course, a fundamental property of equality is that it is an equivalence relation:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175431Z" creationid="tlqk35" creationdate="20220321T175431Z">
@@ -8066,25 +6884,6 @@ identifiers.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150448Z" creationid="tlqk35" creationdate="20220321T150448Z">
         <seg>짧은 식별자로 접근하기 위해서 종종 여러분이 모듈을 가져오기(import) 할 때, 모듈이 담은 다수의 이름공간을 열기 원할 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>On this basis, the
-standard library provides a default element, &lt;g6&gt;defaulty&lt;/g6&gt;, of
-any inhabited type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165808Z" creationid="tlqk3" creationdate="20220529T165808Z">
-        <seg>이 기초로부터 표준 라이브러리는 임의의 거주 유형에 대해 기본 원소 &lt;g6&gt;defaulty&lt;/g6&gt;를 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Once
-again, we can use arithmetic notation, as in the version below.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162448Z" creationid="tlqk3" creationdate="20220529T162448Z">
-        <seg>다시 한 번 우리는 산술적 기호를 아래 버전에서 처럼 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8188,16 +6987,6 @@ writing &lt;g3&gt;(e : T)&lt;/g3&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>One can show that the type
-&lt;g2&gt;TreeList α&lt;/g2&gt; is &lt;g3&gt;isomorphic&lt;/g3&gt; to &lt;g4&gt;List (Tree α)&lt;/g4&gt;, but translating
-results back and forth along this isomorphism is tedious.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170238Z" creationid="tlqk35" creationdate="20220528T170238Z">
-        <seg>어떤 이는 &lt;g2&gt;TreeList α&lt;/g2&gt;형이 &lt;g4&gt;List (Tree α)&lt;/g4&gt;과 &lt;g3&gt;i동형(somorphic)&lt;/g3&gt;임을 보일 수 있습니다. 그러나 이 동형을 따라 결과를 앞뒤로 번역하는 것은 번거롭습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>One can similarly infer the argument in &lt;g6&gt;Lst.nil Nat&lt;/g6&gt;, not
 from anything else in that expression, but from the fact that it is
 sent as an argument to the function &lt;g7&gt;Lst.cons&lt;/g7&gt;, which expects an element
@@ -8214,16 +7003,6 @@ double-negation elimination:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165753Z" creationid="tlqk35" creationdate="20220321T165753Z">
         <seg>배중률의 한 결과는 이중 부정 제거의 원리입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>One example is the
-definition of &lt;g5&gt;Vector α n&lt;/g5&gt;, the type of vectors of elements of &lt;g6&gt;α&lt;/g6&gt;
-of length &lt;g7&gt;n&lt;/g7&gt;:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153211Z" creationid="tlqk35" creationdate="20220528T153211Z">
-        <seg>한 예제는 길이 &lt;g7&gt;n&lt;/g7&gt;의  &lt;g6&gt;α&lt;/g6&gt;를 원소로 하는 벡터 유형 &lt;g5&gt;Vector α n&lt;/g5&gt;의 정의입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8364,40 +7143,6 @@ to multiple goals, but there are other ways to do this.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Pattern Matching</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160553Z" creationid="tlqk3" creationdate="20220529T160553Z">
-        <seg>패턴 매칭</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Pattern matching
-provides an approach that is more convenient, and familiar to users of
-functional programming languages.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161048Z" creationid="tlqk3" creationdate="20220529T161048Z">
-        <seg>패턴 매칭은 더 편리한 접근법과 함수형 프로그래밍 언어의 사용자에게 친숙한 접근법을 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Pattern matching can also be used to destruct inductively defined propositions:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161658Z" creationid="tlqk3" creationdate="20220529T161658Z">
-        <seg>패턴 매칭은 재귀적으로 정의된 명제를 파괴하는 데에도 사용될 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Pattern matching works with any inductive type, such as products and option types:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161546Z" creationid="tlqk3" creationdate="20220529T161546Z">
-        <seg>패턴 매칭은 곱과 옵션 유형 같은 임의의 재귀형과 동작합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Placeholders without precedence default to &lt;g1&gt;0&lt;/g1&gt;, i.e. they accept notations of any precedence in their place.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T123851Z" creationid="tlqk3" creationdate="20220526T123851Z">
@@ -8475,14 +7220,6 @@ Quantifier section as you can.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Prove some properties, such as the following:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171355Z" creationid="tlqk35" creationdate="20220528T171355Z">
-        <seg>다음과 같은 몇 가지 성질을 증명하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Prove that this is a contradiction:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183839Z" creationid="tlqk35" creationdate="20220321T183839Z">
@@ -8552,26 +7289,6 @@ the types &lt;g7&gt;α&lt;/g7&gt; and &lt;g8&gt;β&lt;/g8&gt; to belong to any u
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Recall from the &lt;g1&gt;Conjunction section&lt;/g1&gt; if &lt;g2&gt;p&lt;/g2&gt;
-has type &lt;g3&gt;Point&lt;/g3&gt;, the expression &lt;g4&gt;p.foo&lt;/g4&gt; is interpreted as
-&lt;g5&gt;Point.foo p&lt;/g5&gt;, assuming that the first non-implicit argument to
-&lt;g6&gt;foo&lt;/g6&gt; has type &lt;g7&gt;Point&lt;/g7&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174736Z" creationid="tlqk35" creationdate="20220528T174736Z">
-        <seg>&lt;g1&gt;결합 섹션(Conjunction section)&lt;/g1&gt;에서 &lt;g6&gt;foo&lt;/g6&gt;에 대한 첫 번째 비암시적인 인수가 &lt;g7&gt;Point&lt;/g7&gt;형을 갖는다고 가정했을 때 만약 &lt;g2&gt;p&lt;/g2&gt;가 &lt;g3&gt;Point&lt;/g3&gt;형이면 표현식 &lt;g4&gt;p.foo&lt;/g4&gt;는 &lt;g5&gt;Point.foo p&lt;/g5&gt;으로 해석됨을 기억하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Recall that a non-recursive inductive type that contains only one
-constructor is called a &lt;g1&gt;structure&lt;/g1&gt; or &lt;g2&gt;record&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172548Z" creationid="tlqk35" creationdate="20220528T172548Z">
-        <seg>한 생성자만을 포함한 비 재귀적인 유도형은 &lt;g1&gt;구조체(structure)&lt;/g1&gt; 혹은 &lt;g2&gt;레코드(record)&lt;/g2&gt;라고 불린다는 것을 떠올려보세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Recall that terms in the
 Calculus of Constructions have a computational interpretation, and
 that the logical framework treats terms with a common reduct as the
@@ -8629,14 +7346,6 @@ the argument is implicit, and should be filled in automatically.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T170438Z" creationid="tlqk35" creationdate="20220321T170438Z">
         <seg>이것이 린에게 인수가 암시적이고 자동적으로 채우게 함을 의미한다는 것을 기억하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Recursively define a function that evaluates any such term with respect to an assignment of values to the variables.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171517Z" creationid="tlqk35" creationdate="20220528T171517Z">
-        <seg>변수에 값을 할당한 것에 대한 항으로 계산하는 재귀적으로 함수를 정의하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8827,18 +7536,6 @@ all, only as the "target" of the dependent arrow type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Roughly, an element of &lt;g3&gt;Inhabited α&lt;/g3&gt; is a witness to the fact
-that there is an element of &lt;g4&gt;α&lt;/g4&gt;; in the &lt;g5&gt;Chapter Type Classes&lt;/g5&gt;
-we will see that Lean can be instructed that suitable
-base types are inhabited, and can automatically infer that other
-constructed types are inhabited.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165706Z" creationid="tlqk3" creationdate="20220529T165706Z">
-        <seg>대략적으로 &lt;g3&gt;Inhabited α&lt;/g3&gt;의 원소는 &lt;g4&gt;α&lt;/g4&gt;의 원소가 있다는 사실의 목격자입니다. &lt;g5&gt;유형 클래스 장&lt;/g5&gt;에서 우리는 린이 적절한 기반 유형이 머물러 있고, 자동적으로 다른 생성 유형이 머물러 있는지 추론하는 것을 배울 수 있음을 볼 예정입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Run &lt;g1&gt;mdbook test&lt;/g1&gt; to test all &lt;g2&gt;lean&lt;/g2&gt; code blocks.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172249Z" creationid="tlqk35" creationdate="20220321T172249Z">
@@ -8939,17 +7636,6 @@ that &lt;g13&gt;x&lt;/g13&gt; is related to &lt;g14&gt;y&lt;/g14&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Similarly, define the type of propositional formulas, as well as
-functions on the type of such formulas: an evaluation function,
-functions that measure the complexity of a formula, and a function
-that substitutes another formula for a given variable.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172021Z" creationid="tlqk35" creationdate="20220528T172021Z">
-        <seg>비슷하게 계산 함수와 공식의 복잡도를 측정하는 함수 및 제시한 변수로 다른 식에 대입하는 함수와 마찬가지인 명제 논리식의 유형을 정의하세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Similarly, if you use an &lt;g4&gt;open&lt;/g4&gt; command within a
 namespace, its effects disappear when the namespace is closed.</seg>
       </tuv>
@@ -9023,44 +7709,6 @@ depend on &lt;g14&gt;x&lt;/g14&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Since an inductive type lives in &lt;g1&gt;Sort u&lt;/g1&gt; for some &lt;g2&gt;u&lt;/g2&gt;, it is
-reasonable to ask &lt;g3&gt;which&lt;/g3&gt; universe levels &lt;g4&gt;u&lt;/g4&gt; can be instantiated
-to.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160840Z" creationid="tlqk35" creationdate="20220528T160840Z">
-        <seg>유도형이 어떤 &lt;g2&gt;u&lt;/g2&gt;에 대해 &lt;g1&gt;Sort u&lt;/g1&gt;에 속해 있기 때문에, &lt;g3&gt;어느&lt;/g3&gt;세계의 수준에 &lt;g4&gt;u&lt;/g4&gt;가 개체화 될 수 있는지 묻는 것은 합리적입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Since many of these are already defined in Lean's core library, you
-should work within a namespace named &lt;g1&gt;Hidden&lt;/g1&gt;, or something like
-that, in order to avoid name clashes.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171252Z" creationid="tlqk35" creationdate="20220528T171252Z">
-        <seg>이미 이들 중 다수가 이미 린의 중앙 라이브러리에 정의되어 있기에 여러분은 &lt;g1&gt;Hidden&lt;/g1&gt; 혹은 이름 충돌을 피할 수 있는 것으로 이름지은 이름공간에서 작업해야만 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Since the values of &lt;g1&gt;m&lt;/g1&gt; and &lt;g2&gt;n&lt;/g2&gt; are not needed, we can just as well use wildcard patterns instead.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165005Z" creationid="tlqk3" creationdate="20220529T165005Z">
-        <seg>&lt;g1&gt;m&lt;/g1&gt;과 &lt;g2&gt;n&lt;/g2&gt;의 값은 필요하지 않으므로 우리는 와일드카드 패턴을 대신 사용하여도 됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Singleton elimination is also used with
-heterogeneous equality and well-founded recursion, which will be
-discussed in a later chapter.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164330Z" creationid="tlqk35" creationdate="20220528T164330Z">
-        <seg>한 번에 하나씩 제거는 동일하지 않은 동등석과 잘 세워진 제귀에도 사용됩니다. 이것은 이후에 논의할 예정입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>So
 the expressions in the first two &lt;g1&gt;#check&lt;/g1&gt; commands below are
 elaborated in the same way, whereas the third &lt;g2&gt;#check&lt;/g2&gt; command
@@ -9085,16 +7733,6 @@ element &lt;g8&gt;t : p&lt;/g8&gt; tells us that &lt;g9&gt;p&lt;/g9&gt; is indee
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160102Z" creationid="tlqk35" creationdate="20220321T160102Z">
         <seg>그러므로 원소 &lt;g8&gt;t : p&lt;/g8&gt;을 생성하는 것은 &lt;g9&gt;p&lt;/g9&gt;가 사실이라고 우리에게 알립니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>So far, you have seen that Lean allows you to
-introduce inductive types with any number of recursive
-constructors.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152303Z" creationid="tlqk35" creationdate="20220528T152303Z">
-        <seg>지금까지 여러분은 린이 여러분에게 재귀적인 생성자에 대한 임의의 수로 유도형을 도입하게 해줌을 보았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9155,15 +7793,6 @@ propositions and data.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T070154Z" creationid="tlqk35" creationdate="20220522T070154Z">
         <seg>몇 가지 추가적인 전략들은 명제와 데이터를 생성하고 파괴하는데 유용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Some functional programming languages support &lt;g1&gt;incomplete
-patterns&lt;/g1&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165238Z" creationid="tlqk3" creationdate="20220529T165238Z">
-        <seg>어떤 함수형 프로그래밍 언어는 &lt;g1&gt;불완전한 패턴&lt;/g1&gt; 기능을 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9253,22 +7882,6 @@ used to replace both at once.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Structural Recursion and Induction</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170313Z" creationid="tlqk3" creationdate="20220529T170313Z">
-        <seg>구조적 재귀와 귀납</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Structures and Records</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172114Z" creationid="tlqk35" creationdate="20220528T172114Z">
-        <seg>구조체와 레코드</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Structuring Tactic Proofs</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T142401Z" creationid="tlqk35" creationdate="20220524T142401Z">
@@ -9283,25 +7896,6 @@ function is &lt;g3&gt;polymorphic&lt;/g3&gt;: you expect the &lt;g4&gt;cons&lt;/
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151118Z" creationid="tlqk35" creationdate="20220321T151118Z">
         <seg>이러한 함수는 &lt;g3&gt;polymorphic&lt;/g3&gt;입니다. 여러분은 &lt;g4&gt;cons&lt;/g4&gt;는  &lt;g5&gt;Nat&lt;/g5&gt;, &lt;g6&gt;Bool&lt;/g6&gt; 혹은 임의의 유형  &lt;g7&gt;α&lt;/g7&gt;에 대해 동일한 방식으로 동작해야 한다고 기대합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Such examples of &lt;g1&gt;dependent pattern matching&lt;/g1&gt; are
-considered in the &lt;g2&gt;Section Dependent Pattern Matching&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164606Z" creationid="tlqk3" creationdate="20220529T164606Z">
-        <seg>그런 &lt;g1&gt;종속적인 패턴 매칭&lt;/g1&gt;의 예제는 &lt;g2&gt;종속적인 패턴 매칭 섹션&lt;/g2&gt;에서 다뤄집니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Such parameters
-are simply added to the local context before the definition is
-processed.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173510Z" creationid="tlqk3" creationdate="20220529T173510Z">
-        <seg>그런 매개변수들은 단순히 정의가 처리되기 전에 지역 상황에 추가됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9495,16 +8089,6 @@ like these.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>The
-&lt;g2&gt;structure&lt;/g2&gt; command also allows us to define new structures based on
-previously defined ones.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173304Z" creationid="tlqk35" creationdate="20220528T173304Z">
-        <seg>또 &lt;g2&gt;structure&lt;/g2&gt;  명령은 이전에 정의한 구조체에 기반한 새 구조체를 정의하도록 허용합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The
 canonical way to prove &lt;g2&gt;∀ y : α, p y&lt;/g2&gt; is to take an arbitrary &lt;g3&gt;y&lt;/g3&gt;,
 and prove &lt;g4&gt;p y&lt;/g4&gt;.</seg>
       </tuv>
@@ -9528,16 +8112,6 @@ constructors all live in the &lt;g3&gt;Weekday&lt;/g3&gt; namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T145312Z" creationid="tlqk3" creationdate="20220526T145312Z">
         <seg>생성자는 모두 &lt;g3&gt;Weekday&lt;/g3&gt; 이름공간에 살고 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The
-definition of equality is atypical, however; see the discussion in the
-next section.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154200Z" creationid="tlqk35" creationdate="20220528T154200Z">
-        <seg>하지만 동등성의 정의는 전형적이지 않습니다. 다음 섹션의 논의를 보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9915,16 +8489,6 @@ provides an object of any data type at all.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The &lt;g1&gt;structure&lt;/g1&gt;
-command, available in Lean, provides infrastructure to support this
-process.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173150Z" creationid="tlqk35" creationdate="20220528T173150Z">
-        <seg> 린에서 사용할 수 있는 &lt;g1&gt;structure&lt;/g1&gt; 명령은 이 절차를 지원하는 기반구조를 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The &lt;g1&gt;structure&lt;/g1&gt; command is especially useful for defining algebraic
 structures, and Lean provides substantial infrastructure to support
 working with them.</seg>
@@ -10116,16 +8680,6 @@ types with forall-expressions in this way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The Lean standard library contains
-many instances of inductive types (e.g., &lt;g1&gt;Nat&lt;/g1&gt;, &lt;g2&gt;Prod&lt;/g2&gt;, &lt;g3&gt;List&lt;/g3&gt;),
-and even the logical connectives are defined using inductive types.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172440Z" creationid="tlqk35" creationdate="20220528T172440Z">
-        <seg>린 표준 라이브러리는 유도형의 만은 개체(예 &lt;g1&gt;Nat&lt;/g1&gt;, &lt;g2&gt;Prod&lt;/g2&gt;, &lt;g3&gt;List&lt;/g3&gt;)들을 담고 있습니다. 그리고 심지어 논리 결합자도 유도형을 사용해 정의됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The Universal Quantifier</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172601Z" creationid="tlqk35" creationdate="20220321T172601Z">
@@ -10162,16 +8716,6 @@ examples of inductive type constructions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The appearances of constructors prompt case splits, with
-the arguments to the constructors represented by the given
-variables.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171318Z" creationid="tlqk3" creationdate="20220529T171318Z">
-        <seg>생성자의 출현은 제시된 변수로 표현된 생성자에 대한 인수로 경우를 신속히 나눕니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The arbitrary fact, &lt;g1&gt;q&lt;/g1&gt;, that follows from falsity is an implicit
 argument in &lt;g2&gt;False.elim&lt;/g2&gt; and is inferred automatically.</seg>
       </tuv>
@@ -10186,15 +8730,6 @@ construct, and it is a function because it may depend on the pair.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T154004Z" creationid="tlqk3" creationdate="20220526T154004Z">
         <seg>인자 &lt;g1&gt;motive&lt;/g1&gt;는 여러분이 생성하기 원하는 대상의 유형을 명시하는데 사용됩니다. 그리고 이것은 쌍에 의존할 수 있기에 함수입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The argument &lt;g3&gt;α : Type&lt;/g3&gt;
-is a parameter and occurs before the colon to indicate it does not participate in the pattern matching.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163822Z" creationid="tlqk3" creationdate="20220529T163822Z">
-        <seg>인수 &lt;g3&gt;α : Type&lt;/g3&gt;은 매개변수이고 패턴 매칭에 참여하지 않음을 지칭하는 콜론 앞에 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10353,24 +8888,6 @@ some &lt;g11&gt;u&lt;/g11&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The dot notation is convenient not just for accessing the projections
-of a record, but also for applying functions defined in a namespace
-with the same name.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174503Z" creationid="tlqk35" creationdate="20220528T174503Z">
-        <seg>점 기호는 레코드의 투영에 접근하는데에만 편리한 게 아니라 같은 이름인 이름공간에 정의된 함수를 적용하는데에도 편리합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The elimination principle generated by Lean is as follows:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T153959Z" creationid="tlqk35" creationdate="20220528T153959Z">
-        <seg>린에 의해 생성된 제거 원리는 다음과 같습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The elimination principle, &lt;g5&gt;Weekday.rec&lt;/g5&gt;, is defined
 along with the type &lt;g6&gt;Weekday&lt;/g6&gt; and its constructors.</seg>
       </tuv>
@@ -10388,58 +8905,6 @@ along with the type &lt;g6&gt;Weekday&lt;/g6&gt; and its constructors.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The equation
-compiler generates such theorems internally.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173101Z" creationid="tlqk3" creationdate="20220529T173101Z">
-        <seg>방정식 컴파일러는 그런 정리를 내부적으로 생성합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The equation compiler
-tries to ensure that this holds whenever possible, as is the case with
-straightforward structural induction.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172804Z" creationid="tlqk3" creationdate="20220529T172804Z">
-        <seg>방정식 컴파일러는 직관적인 구조적 재귀와 같은 한 언제든 이것이 성립함을 보장하려고 시도합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The equation compiler can process multiple arguments sequentially.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162851Z" creationid="tlqk3" creationdate="20220529T162851Z">
-        <seg>이 방정식 컴파일러는 다수의 인수를 순차적으로 처리할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The equation compiler first splits on cases as to whether the input is
-&lt;g1&gt;zero&lt;/g1&gt; or of the form &lt;g2&gt;succ x&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161958Z" creationid="tlqk3" creationdate="20220529T161958Z">
-        <seg>방정식 컴파일러는 우선 입력이 &lt;g1&gt;zero&lt;/g1&gt;인지 &lt;g2&gt;succ x&lt;/g2&gt;의 꼴인지에 따라 경우를 나눕니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The equation compiler is clever.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170053Z" creationid="tlqk3" creationdate="20220529T170053Z">
-        <seg>방정식 컴파일러는 영리합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The equations used to define these function hold definitionally:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161255Z" creationid="tlqk3" creationdate="20220529T161255Z">
-        <seg>방정식들은 정의상으로 성립하는 이 함수들을 정의하는데 사용됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The example above shows
 that &lt;g12&gt;Nat.add 3&lt;/g12&gt; has type &lt;g13&gt;Nat → Nat&lt;/g13&gt;, that is, &lt;g14&gt;Nat.add 3&lt;/g14&gt; returns a
 function that "waits" for a second argument, &lt;g15&gt;n&lt;/g15&gt;, which is then
@@ -10447,15 +8912,6 @@ equivalent to writing &lt;g16&gt;Nat.add 3 n&lt;/g16&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T185245Z" creationid="tlqk35" creationdate="20220321T140932Z">
         <seg>위의 예제에서 &lt;g12&gt;Nat.add 3&lt;/g12&gt;는 &lt;g13&gt;Nat → Nat&lt;/g13&gt;유형을 가짐을  보였습니다. 즉 &lt;g14&gt;Nat.add 3&lt;/g14&gt;은 두번째 인자 &lt;g15&gt;n&lt;/g15&gt;을 "기다리는" 함수를 반환하는 것입니다. 이것은 &lt;g16&gt;Nat.add 3 n&lt;/g16&gt;로 쓰는 것과 동등합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The example above shows that the defining equations for &lt;g1&gt;add&lt;/g1&gt; hold
-definitionally, and the same is true of &lt;g2&gt;mul&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172548Z" creationid="tlqk3" creationdate="20220529T172548Z">
-        <seg>위 예제에서 &lt;g1&gt;add&lt;/g1&gt;에 대해 정의한 방정식은 정의로부터 성립함을 보여줍니다. 그리고 &lt;g2&gt;mul&lt;/g2&gt;에서 같은 방식으로 참이 됨을 보입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10533,15 +8989,6 @@ produces a proof of &lt;g6&gt;p → q&lt;/g6&gt; from &lt;g7&gt;h : p ↔ q&lt;/
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164712Z" creationid="tlqk35" creationdate="20220321T164712Z">
         <seg>표현식 &lt;g5&gt;Iff.mp h&lt;/g5&gt;는 &lt;g7&gt;h : p ↔ q&lt;/g7&gt;으로부터 &lt;g6&gt;p → q&lt;/g6&gt;의 증명을 생성합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The expression &lt;g8&gt;p.add q&lt;/g8&gt; is therefore
-shorthand for &lt;g9&gt;Point.add p q&lt;/g9&gt; in the example below.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174808Z" creationid="tlqk35" creationdate="20220528T174808Z">
-        <seg>표현식 &lt;g8&gt;p.add q&lt;/g8&gt;는 그러므로 아래 예제에서 &lt;g9&gt;Point.add p q&lt;/g9&gt;에 대한 축약 표현입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10647,14 +9094,6 @@ written for Lean 2, and the Lean 3 version is is available
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The first, &lt;g1&gt;Acc&lt;/g1&gt;, is an inductively defined predicate.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173930Z" creationid="tlqk3" creationdate="20220529T173930Z">
-        <seg>우선 &lt;g1&gt;Acc&lt;/g1&gt;은 귀납적으로 정의된 술어입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The following calls a given function twice passing the output of the
 first invocation to the second:</seg>
       </tuv>
@@ -10672,29 +9111,11 @@ first invocation to the second:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The following example defines
-the &lt;g2&gt;tail&lt;/g2&gt; function using pattern matching.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163649Z" creationid="tlqk3" creationdate="20220529T163649Z">
-        <seg>다음 예제는 패턴 매칭을 사용해 &lt;g2&gt;tail&lt;/g2&gt; 함수를 정의합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The following example defines the prefix relation on lists,
 proves that this relation is reflexive, and assigns the &lt;g3&gt;[simp]&lt;/g3&gt; attribute to that theorem.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T183037Z" creationid="tlqk3" creationdate="20220525T182849Z">
         <seg>다음 예제에서는 리스트에 대한 접두사 관계를 정의하고, 이 관계는 반사적임을 증명하고, 그 정리에 &lt;g3&gt;[simp]&lt;/g3&gt; 특성을 부여합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The following example demonstrates
-both approaches.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170043Z" creationid="tlqk3" creationdate="20220529T170043Z">
-        <seg>다음 예제는 두 접근법을 보여줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10809,23 +9230,6 @@ according to whether &lt;g12&gt;b&lt;/g12&gt; is true or false.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The functions &lt;g6&gt;prod.fst&lt;/g6&gt; and &lt;g7&gt;prod.snd&lt;/g7&gt;, which return the
-first and second elements of a pair, are examples of such projections.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173026Z" creationid="tlqk35" creationdate="20220528T173026Z">
-        <seg>순서쌍의 첫 번째와 두 번째 원소를 반환하는 함수 &lt;g6&gt;prod.fst&lt;/g6&gt;와 &lt;g7&gt;prod.snd&lt;/g7&gt;는 그런 투영의 예입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The general form is as follows:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173640Z" creationid="tlqk35" creationdate="20220528T173640Z">
-        <seg>일반적인 형태는 다음과 같습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The general form of a definition is &lt;g1&gt;def foo : α := bar&lt;/g1&gt; where
 &lt;g2&gt;α&lt;/g2&gt; is the type returned from the expression &lt;g3&gt;bar&lt;/g3&gt;.</seg>
       </tuv>
@@ -10875,26 +9279,6 @@ foundational systems.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>The idea is
-that they are structurally smaller, and hence appear in the inductive
-type at an earlier stage.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172147Z" creationid="tlqk3" creationdate="20220529T172147Z">
-        <seg>아이디어는 이들이 구조적으로 더 작고 그러므로 앞 단에서 귀납형으로 나타날 수 있다는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The idea is
-that we can define two (or more) inductive types at the same time,
-where each one refers to the other(s).</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165132Z" creationid="tlqk35" creationdate="20220528T165132Z">
-        <seg>아이디어는 각각이 서로 다른 이들을 참조하면서 우리가 둘(혹은 그 이상의) 유도형을 동시에 정의할 수 있다는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The idea is
 that we can prove &lt;g2&gt;r&lt;/g2&gt; from &lt;g3&gt;p ∨ q&lt;/g3&gt;, by showing that &lt;g4&gt;r&lt;/g4&gt; follows
 from &lt;g5&gt;p&lt;/g5&gt; and that &lt;g6&gt;r&lt;/g6&gt; follows from &lt;g7&gt;q&lt;/g7&gt;.</seg>
       </tuv>
@@ -10908,15 +9292,6 @@ from &lt;g5&gt;p&lt;/g5&gt; and that &lt;g6&gt;r&lt;/g6&gt; follows from &lt;g7&
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T174605Z" creationid="tlqk35" creationdate="20220321T174605Z">
         <seg>아이디어는 다음과 같습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The idea is to return &lt;g2&gt;some a&lt;/g2&gt; for the provided patterns, and use
-&lt;g3&gt;none&lt;/g3&gt; for the incomplete cases.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165957Z" creationid="tlqk3" creationdate="20220529T165957Z">
-        <seg>이 아이디어는 제공받은 패턴에 대해 &lt;g2&gt;some a&lt;/g2&gt;를 반환하는 것입니다. 그리고 불완전한 경우에 대해 &lt;g3&gt;none&lt;/g3&gt;을 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10952,15 +9327,6 @@ corresponding recursor unpacks the data and acts on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175555Z" creationid="tlqk35" creationdate="20220321T175555Z">
         <seg>접두사 &lt;g1&gt;.{u}&lt;/g1&gt;은 린에게 세계변수 &lt;g2&gt;u&lt;/g2&gt;로 상수를 개체화하라고 말해줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The interpretation of schematic patterns is the first step of the
-compilation process.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160640Z" creationid="tlqk3" creationdate="20220529T160640Z">
-        <seg>도식적인 패턴의 해석은 컴파일 과정의 첫 단계입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11001,16 +9367,6 @@ objects of &lt;g1&gt;Foo&lt;/g1&gt;, possibly from previously constructed values
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T142725Z" creationid="tlqk3" creationdate="20220526T142725Z">
         <seg>직관적인 설명은 아마 이전에 구성된 값으로부터 각 생성자가 &lt;g1&gt;Foo&lt;/g1&gt;의 새로운 대상을 만드는 방식을 지정한다는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The intuition is that in this case the
-elimination does not make use of any information that is not already
-given by the mere fact that the type of argument is inhabited.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T163733Z" creationid="tlqk35" creationdate="20220528T163733Z">
-        <seg>이 경우에 대한 직관적인 설명은 제거가 단순히 인수 유형이 존재한다는 사실에 의해 이미 제공되는 정보를 쓰지 않는다는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11067,16 +9423,6 @@ that there is a &lt;g6&gt;Type n&lt;/g6&gt; for every natural number &lt;g7&gt;n
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141719Z" creationid="tlqk35" creationdate="20220321T141719Z">
         <seg>모든 자연수 &lt;g6&gt;n&lt;/g6&gt;에 대해 &lt;g7&gt;Type n&lt;/g7&gt;가 있어서 이런 리스트를 무한히 나열할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The list of subtrees is represented by the type &lt;g3&gt;TreeList α&lt;/g3&gt;,
-which is defined to be either the empty list, &lt;g4&gt;nil&lt;/g4&gt;, or the
-&lt;g5&gt;cons&lt;/g5&gt; of a tree and an element of &lt;g6&gt;TreeList α&lt;/g6&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165935Z" creationid="tlqk35" creationdate="20220528T165935Z">
-        <seg>하위 트리의 리스트는 &lt;g3&gt;TreeList α&lt;/g3&gt;형으로 표현됩니다. 이것은 빈 리스트 &lt;g4&gt;nil&lt;/g4&gt;이거나 트리의 &lt;g5&gt;cons&lt;/g5&gt;과 &lt;g6&gt;TreeList α&lt;/g6&gt;의 원소로 정의될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11404,15 +9750,6 @@ which takes two arguments.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The product type is a
-structure, as is the dependent product (Sigma) type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172704Z" creationid="tlqk35" creationdate="20220528T172704Z">
-        <seg>곱 형은 의존적 곱 (시그마) 형과 마찬가지로 구조체입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The proof above
 is functionally equivalent to the following:</seg>
       </tuv>
@@ -11422,36 +9759,10 @@ is functionally equivalent to the following:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The proof of &lt;g1&gt;zero_add&lt;/g1&gt; makes it clear that proof by induction is
-really a form of recursion in Lean.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172430Z" creationid="tlqk3" creationdate="20220529T172430Z">
-        <seg>&lt;g1&gt;zero_add&lt;/g1&gt;의 증명은 귀납적 증명은 실제로 린에서 재귀의 한 형태라는 점을 명확히 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The propositional connectives come with the following notation:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161840Z" creationid="tlqk35" creationdate="20220321T161840Z">
         <seg>명제 연결사는 다음 기호로 따라온다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The recursor &lt;g1&gt;Eq.rec&lt;/g1&gt; is also used to define substitution:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154226Z" creationid="tlqk35" creationdate="20220528T154226Z">
-        <seg>재귀자 &lt;g1&gt;Eq.rec&lt;/g1&gt;도 대입을 정의하는데 사용됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The requirement is that if the latter is present at all, it
-occurs only &lt;g3&gt;strictly positively&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160402Z" creationid="tlqk35" creationdate="20220528T160402Z">
-        <seg>요구사항은 만약 후자가 전부 나타났다면 이것은 &lt;g3&gt;엄격하게 긍정적으로&lt;/g3&gt;만 일어납니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11562,49 +9873,12 @@ code, and instructions for building Lean, are available at
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The statement that &lt;g1&gt;r&lt;/g1&gt; is well founded, denoted &lt;g2&gt;WellFounded r&lt;/g2&gt;,
-is exactly the statement that every element of the type is
-accessible.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T175121Z" creationid="tlqk3" creationdate="20220529T174746Z">
-        <seg>&lt;g2&gt;WellFounded r&lt;/g2&gt;로 표시되어 잘 세워진 명제 &lt;g1&gt;r&lt;/g1&gt;는 바로 그 유형의 모든 원소가 접근 가능한 명제입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The structure command also generates useful recursors and
-theorems.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173919Z" creationid="tlqk35" creationdate="20220528T173919Z">
-        <seg>또 구조체 명령은 유용한 재귀자와 정리들을 생성합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The structure command is essentially a "front end" for defining
-inductive data types.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173413Z" creationid="tlqk35" creationdate="20220528T173413Z">
-        <seg>구조체 명령은 본질적은 유도 데이터형을 정의하기 위한 "최전선"입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>The style of writing proofs is most effective when it is used in
 conjunction with the &lt;g1&gt;simp&lt;/g1&gt; and &lt;g2&gt;rewrite&lt;/g2&gt; tactics, which are
 discussed in greater detail in the next chapter.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180349Z" creationid="tlqk35" creationdate="20220321T180349Z">
         <seg>증명 작성 스타일은 &lt;g1&gt;simp&lt;/g1&gt;와 &lt;g2&gt;rewrite&lt;/g2&gt; 전략을 결합해 사용되었을 때 가장 효과적입니다. 이것들은 다음 장에서 상세히 논할 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>The suffix &lt;g1&gt;: structure-type&lt;/g1&gt; can be omitted whenever the name of
-the structure can be inferred from the expected type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T182148Z" creationid="tlqk35" creationdate="20220528T182148Z">
-        <seg>접미사 &lt;g1&gt;: structure-type&lt;/g1&gt;은 언제든지 구조체의 이름이 기대되는 유형으로부터 추론될 수 있는 한 생략될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11772,16 +10046,6 @@ assertion that "for every &lt;g2&gt;x : α&lt;/g2&gt;, &lt;g3&gt;p x&lt;/g3&gt;"
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>The use of underscores for wildcards is
-common in functional programming languages, and so Lean adopts that
-notation.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163403Z" creationid="tlqk3" creationdate="20220529T163403Z">
-        <seg>와일드카드에 대한 밑줄 문자의 사용은 함수형 프로그래밍 언어에서 흔합니다. 그래서 린은 이 표기를 채택합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Then
 &lt;g6&gt;(x : α) → β&lt;/g6&gt; is an element of &lt;g7&gt;Sort (imax i j)&lt;/g7&gt;, where &lt;g8&gt;imax i j&lt;/g8&gt; is the
 maximum of &lt;g9&gt;i&lt;/g9&gt; and &lt;g10&gt;j&lt;/g10&gt; if &lt;g11&gt;j&lt;/g11&gt; is not 0, and 0 otherwise.</seg>
@@ -11834,25 +10098,6 @@ until no more remain.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171829Z" creationid="tlqk35" creationdate="20220524T160355Z">
         <seg>그 뒤 새로운 가정 &lt;g4&gt;a = 0&lt;/g4&gt; 가 목표를 &lt;g5&gt;f 0 = f 0&lt;/g5&gt;으로 다시 쓰도록 사용됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Then the universe level &lt;g3&gt;u&lt;/g3&gt; is
-constrained to satisfy the following:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161907Z" creationid="tlqk35" creationdate="20220528T161907Z">
-        <seg>그러면 세계 수준 &lt;g3&gt;u&lt;/g3&gt;는 다음을 만족하도록 제한됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Then try proving some
-of their basic properties, building on the theorems we have already
-proved.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171132Z" creationid="tlqk35" creationdate="20220528T171127Z">
-        <seg>그 뒤 그들의 기본 성질 몇 가지를 증명해보세요. 우리가 이미 증명한 정리를 세워보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12030,17 +10275,6 @@ brackets, &lt;g1&gt;[&lt;/g1&gt; and &lt;g2&gt;]&lt;/g2&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>There is an exception to this last rule: we are allowed to eliminate
-from an inductively defined &lt;g1&gt;Prop&lt;/g1&gt; to an arbitrary &lt;g2&gt;Sort&lt;/g2&gt; when
-there is only one constructor and each constructor argument is either
-in &lt;g3&gt;Prop&lt;/g3&gt; or an index.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T163129Z" creationid="tlqk35" creationdate="20220528T163129Z">
-        <seg>이 마지막 규칙에 예외가 있습니다. 우리는 재귀적으로 정의된 &lt;g1&gt;Prop&lt;/g1&gt;에서 임의의 &lt;g2&gt;Sort&lt;/g2&gt;이르기까지 오직 한 생성자와 각 생성자 인수가 &lt;g3&gt;Prop&lt;/g3&gt;에 있거나 한 색인으로 있을 때 제거할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>There is only one
 anonymous namespace at the root level.</seg>
       </tuv>
@@ -12073,24 +10307,6 @@ types vary depending on the first argument, &lt;g11&gt;α&lt;/g11&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163322Z" creationid="tlqk35" creationdate="20220321T163322Z">
         <seg>이 꺽긴 괄호는 &lt;g1&gt;\&lt;&lt;/g1&gt;과 &lt;g2&gt;\&gt;&lt;/g2&gt;을 각각 치는 것으로 쓸 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>These are called "inaccessible patterns" for
-that reason.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171552Z" creationid="tlqk3" creationdate="20220529T171552Z">
-        <seg>이들은 이런 이유로 "접근할 수 없는 패턴"으로 불립니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>These are not
-supported by Lean.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155106Z" creationid="tlqk35" creationdate="20220528T155106Z">
-        <seg>이것들은 린에서 지원되지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12186,16 +10402,6 @@ with applicative terms, that is, terms of form &lt;g2&gt;s t&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175843Z" creationid="tlqk35" creationdate="20220321T175843Z">
         <seg>이들은 응용 항을 다루기 위해 설계되었습니다. 즉,  &lt;g2&gt;s t&lt;/g2&gt; 꼴의 항입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>They are not meant to be
-used directly by the user; rather, the &lt;g4&gt;simp&lt;/g4&gt; tactic
-is configured to use them when necessary.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173308Z" creationid="tlqk3" creationdate="20220529T173308Z">
-        <seg>이들은 사용자로부터 직접 사용되기 위한 것이 아니라 오히려 &lt;g4&gt;simp&lt;/g4&gt; 전략이 필요할 때 사용되도록 설정됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12311,15 +10517,6 @@ quite common, and is represented by &lt;g3&gt;absurd&lt;/g3&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This
-special case is known as &lt;g4&gt;singleton elimination&lt;/g4&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T163850Z" creationid="tlqk35" creationdate="20220528T163850Z">
-        <seg>이 특별한 경우는 &lt;g4&gt;한번에 한 제거(singleton elimination)&lt;/g4&gt;로도 알려져 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This annotation can also be
 written using as &lt;g6&gt;⦃y : Nat⦄&lt;/g6&gt;, where the unicode brackets are entered
 as &lt;g7&gt;\{{&lt;/g7&gt; and &lt;g8&gt;\}}&lt;/g8&gt;, respectively.</seg>
@@ -12376,14 +10573,6 @@ type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This definition is inconvenient to work with, however.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170351Z" creationid="tlqk35" creationdate="20220528T165954Z">
-        <seg>이그러나  정의는 작업하기에 불편합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This definition of &lt;g1&gt;ident&lt;/g1&gt; here has the same effect as the one
 above.</seg>
       </tuv>
@@ -12419,15 +10608,6 @@ type annotation of the function &lt;g5&gt;List&lt;/g5&gt;:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141932Z" creationid="tlqk35" creationdate="20220321T141932Z">
         <seg>이는 &lt;g5&gt;List&lt;/g5&gt;함수의 유형 표기를 설명합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>This feature
-allows us to simulate a form of &lt;g2&gt;inheritance&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180648Z" creationid="tlqk35" creationdate="20220528T180648Z">
-        <seg>이 기능은 우리가 &lt;g2&gt;상속(inheritance)&lt;/g2&gt;의 형태를 모사하도록 허용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12582,14 +10762,6 @@ consistent with the interpretation in the last paragraph.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This is known as a &lt;g1&gt;nested&lt;/g1&gt; inductive type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170330Z" creationid="tlqk35" creationdate="20220528T170330Z">
-        <seg>이것은 &lt;g1&gt;중첩된(nested)&lt;/g1&gt; 유도형으로 알려져 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This is necessary because these types are part
 of the Lean "prelude" that is automatically imported when the system
 is started.)</seg>
@@ -12699,18 +10871,6 @@ output of the second matches the input of the first.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This means simply that any argument
-to the constructor in which it occurs is a dependent arrow type in which the
-inductive type under definition occurs only as the resulting type,
-where the indices are given in terms of constants and previous
-arguments.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160716Z" creationid="tlqk35" creationdate="20220528T160716Z">
-        <seg>이 의미는 단순히 그것이 발생하는 생성자에서 임의의 인자가 유도형이 정의 하에서 결과적인 유형으로써만 일어나는 의존 화살표 유형임을 의미합니다. 여기서 색인은 상수와 이전의 인수에 대해서 제시됩니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This means that the system maintains an internal ordering
 of terms, and only applies the identity if doing so decreases the
 order.</seg>
@@ -12749,28 +10909,11 @@ a quick and convenient way to begin experimenting with the system.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This provides a compact way of unpacking hypotheses that make use of logical connectives.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161750Z" creationid="tlqk3" creationdate="20220529T161750Z">
-        <seg>이것은 논리연결사가 사용된 가정을 펼치는 간소한 방식을 제공합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This provides a convenient way of accessing functions without opening
 a namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163410Z" creationid="tlqk35" creationdate="20220321T163410Z">
         <seg>이는 이름공간을 열지 않고 함수에 접근하는 편리한 방법을 줍니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>This provides a convenient way of accessing the fields
-of a structure.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174414Z" creationid="tlqk35" creationdate="20220528T174414Z">
-        <seg>이것은 구조체의 필드에 접근하는 편리한 방법을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12790,15 +10933,6 @@ falso sequitur quodlibet&lt;/g4&gt;), or the &lt;g5&gt;principle of explosion&lt
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164428Z" creationid="tlqk35" creationdate="20220321T164428Z">
         <seg>이 규칙은 때때로 &lt;g3&gt;ex falso&lt;/g3&gt; (라틴어 &lt;g4&gt;ex falso sequitur quodlibet&lt;/g4&gt;을 줄인 것), 또는 &lt;g5&gt;폭발의 원리(principle of explosion)&lt;/g5&gt;라고 불립니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>This section provides additional information for those
-interested in the axiomatic foundations.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155229Z" creationid="tlqk35" creationdate="20220528T155229Z">
-        <seg>이 섹션은 공리적 기초에 대해 흥미로워하는 이들을 위한 추가 정보를 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12860,15 +10994,6 @@ elements in the vector (&lt;g9&gt;α : Type&lt;/g9&gt;) and the length of the ve
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>This underscore is
-known as a &lt;g1&gt;wildcard pattern&lt;/g1&gt;, or an &lt;g2&gt;anonymous variable&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164641Z" creationid="tlqk3" creationdate="20220529T163226Z">
-        <seg>이 밑줄 문자는 &lt;g1&gt;와일드카드 패턴(wildcard pattern)&lt;/g1&gt;혹은 &lt;g2&gt;익명 변수(anonymous variable)&lt;/g2&gt;로 알려져 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>This version of the text assumes you’re using Lean 4.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T171351Z" creationid="tlqk35" creationdate="20220321T171351Z">
@@ -12890,15 +11015,6 @@ coding trick.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134728Z" creationid="tlqk35" creationdate="20220321T134728Z">
         <seg>이 교재에서 여러분은 아래와 같은 린 코드 예제를 보게 될 겁니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Thus both of the following
-proofs of &lt;g5&gt;zero_add&lt;/g5&gt; work:</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173354Z" creationid="tlqk3" creationdate="20220529T173354Z">
-        <seg>따라서 &lt;g5&gt;zero_add&lt;/g5&gt;의 다음 증명들은 모두 작동합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13199,17 +11315,6 @@ and prove that it behaves as expected (for example, &lt;g2&gt;length (append as 
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Try defining other operations on the natural numbers, such as
-multiplication, the predecessor function (with &lt;g1&gt;pred 0 = 0&lt;/g1&gt;),
-truncated subtraction (with &lt;g2&gt;n - m = 0&lt;/g2&gt; when &lt;g3&gt;m&lt;/g3&gt; is greater
-than or equal to &lt;g4&gt;n&lt;/g4&gt;), and exponentiation.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T171042Z" creationid="tlqk35" creationdate="20220528T171042Z">
-        <seg>자연수에 대해 곱셈, 선행자 함수 (&lt;g1&gt;pred 0 = 0&lt;/g1&gt;으로), 절단된 뺄셈( &lt;g3&gt;m&lt;/g3&gt; 이  &lt;g4&gt;n&lt;/g4&gt;)보다 크거나 같을 때 &lt;g2&gt;n - m = 0&lt;/g2&gt;으로)와 거듭제곱 같은 다른 연산을 정의해보세요.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Try proving these (one direction of the second of these
 requires classical logic):</seg>
       </tuv>
@@ -13336,32 +11441,12 @@ libraries, or develop their own projects across multiple files.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Using the recursor or &lt;g1&gt;match&lt;/g1&gt; with &lt;g2&gt;h₁ : a = b&lt;/g2&gt;, we may assume &lt;g3&gt;a&lt;/g3&gt; and &lt;g4&gt;b&lt;/g4&gt; are the same,
-in which case, &lt;g5&gt;p b&lt;/g5&gt; and &lt;g6&gt;p a&lt;/g6&gt; are the same.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154537Z" creationid="tlqk35" creationdate="20220528T154537Z">
-        <seg>재귀자나 &lt;g1&gt;match&lt;/g1&gt;를 &lt;g2&gt;h₁ : a = b&lt;/g2&gt;과 사용하면, 우리는 &lt;g3&gt;a&lt;/g3&gt;와 &lt;g4&gt;b&lt;/g4&gt;가 같다고 가정할 수 있습니다. 그 경우 &lt;g5&gt;p b&lt;/g5&gt;와 &lt;g6&gt;p a&lt;/g6&gt;는 동일합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>Using the various gadgets described in this chapter --- the match
 statement, anonymous constructors, and the &lt;g1&gt;rewrite&lt;/g1&gt; tactic, we can
 write this proof concisely as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183003Z" creationid="tlqk35" creationdate="20220321T183003Z">
         <seg>여기서 설명한 다양한 도구-match 구문, 익명 생성자,  &lt;g1&gt;다시쓰기&lt;/g1&gt;전략-를 사용하여 다음과 같이 이 증명을 간결하게 쓸 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Values of type &lt;g1&gt;Point&lt;/g1&gt; are created using &lt;g2&gt;Point.mk a b&lt;/g2&gt;, and the
-fields of a point &lt;g3&gt;p&lt;/g3&gt; are accessed using &lt;g4&gt;Point.x p&lt;/g4&gt; and
-&lt;g5&gt;Point.y p&lt;/g5&gt; (but &lt;g6&gt;p.x&lt;/g6&gt; and &lt;g7&gt;p.y&lt;/g7&gt; also work, see below).</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173857Z" creationid="tlqk35" creationdate="20220528T173857Z">
-        <seg>&lt;g1&gt;Point&lt;/g1&gt;형의 값은&lt;g2&gt;Point.mk a b&lt;/g2&gt;를 사용하여 만들어집니다. 그리고 포인트 &lt;g3&gt;p&lt;/g3&gt;의 필드는 &lt;g4&gt;Point.x p&lt;/g4&gt;와
-&lt;g5&gt;Point.y p&lt;/g5&gt;를 사용해서 접근할 수 있습니다. (그러나 g6&gt;p.x&lt;/g6&gt; and &lt;g7&gt;p.y&lt;/g7&gt;도 동작함, 아래를 참고)</seg>
       </tuv>
     </tu>
     <tu>
@@ -13430,15 +11515,6 @@ then allowed to use the shorter name when we open the namespace.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>We are almost done describing the full range of inductive definitions
-accepted by Lean.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152114Z" creationid="tlqk35" creationdate="20220528T152114Z">
-        <seg>우리는 거의 린이 허용하는 귀납 정의의 대부분을 설명했습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>We are currently using a
 &lt;g2&gt;fork&lt;/g2&gt; of it for the following additional features:</seg>
       </tuv>
@@ -13485,14 +11561,6 @@ then read &lt;g6&gt;t : p&lt;/g6&gt; as the assertion that &lt;g7&gt;t&lt;/g7&gt
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>We can &lt;g1&gt;extend&lt;/g1&gt; existing structures by adding new fields.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T180813Z" creationid="tlqk35" creationdate="20220528T180813Z">
-        <seg>우리는 새 필드를 추가하여 존재하는 구조체를&lt;g1&gt;확장&lt;/g1&gt;할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>We can also
 think of such a type as a "record" or a "structure".</seg>
       </tuv>
@@ -13525,14 +11593,6 @@ comma instead of &lt;g4&gt;|&lt;/g4&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175615Z" creationid="tlqk35" creationdate="20220321T175615Z">
         <seg>또 우리는 투영 기호(인덱싱 기호)를 사용할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We can also use the type &lt;g1&gt;Option α&lt;/g1&gt; to simulate incomplete patterns.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165857Z" creationid="tlqk3" creationdate="20220529T165857Z">
-        <seg>우리는 불완전한 패턴을 모사하려고 &lt;g1&gt;Option α&lt;/g1&gt;형을 사용할 수도 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13624,32 +11684,11 @@ expression introduced in this way using the keyword &lt;g1&gt;this&lt;/g1&gt;:</
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>We can simulate
-the arbitrary value approach using the &lt;g2&gt;Inhabited&lt;/g2&gt; type
-class.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165405Z" creationid="tlqk3" creationdate="20220529T165405Z">
-        <seg>우리는 &lt;g2&gt;Inhabited&lt;/g2&gt; 유형 클래스를 사용하여 임의값 접근법을 모사할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>We can therefore
 rewrite the sample proof above conveniently as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163453Z" creationid="tlqk35" creationdate="20220321T163453Z">
         <seg>우리는 다음과 같이 위의 예시 증명을 간단히 줄여 쓸  수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We can use an element &lt;g2&gt;h : Eq a b&lt;/g2&gt; to cast an element
-&lt;g3&gt;t' : p a&lt;/g3&gt; to &lt;g4&gt;p b&lt;/g4&gt; even when &lt;g5&gt;p a&lt;/g5&gt; and &lt;g6&gt;p b&lt;/g6&gt; are arbitrary types,
-because the cast does not produce new data; it only reinterprets the
-data we already have.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164229Z" creationid="tlqk35" creationdate="20220528T164229Z">
-        <seg>우리는 원소 &lt;g2&gt;h : Eq a b&lt;/g2&gt;를 심지어 &lt;g5&gt;p a&lt;/g5&gt;과 &lt;g6&gt;p b&lt;/g6&gt;가 임의의 유형일 때에도 원소 &lt;g3&gt;t' : p a&lt;/g3&gt;에서 &lt;g4&gt;p b&lt;/g4&gt;로 변환하는데 사용할 수 있습니다. 왜냐하면 변환은 새로운 데이터를 만들지 않고 이미 가진 데이터를 재해석하기만 하기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13751,49 +11790,12 @@ chosen a nontraditional name here only to avoid a clash of names.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>We have already seen singleton elimination at play in applications of
-&lt;g1&gt;Eq.rec&lt;/g1&gt;, the eliminator for the inductively defined equality
-type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164009Z" creationid="tlqk35" creationdate="20220528T164009Z">
-        <seg>우리는 재귀적으로 정의된 동등 유형에 대한 제거자인&lt;g1&gt;Eq.rec&lt;/g1&gt;의 활용에서 한번에 하나씩 제거되는 것을 보았습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We have been using constructors to create elements of a structure
-type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T181910Z" creationid="tlqk35" creationdate="20220528T181910Z">
-        <seg>우리는 구조체 형의 원소를 생성하는데 생성자를 사용했습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We have described inductive types and their syntax through
-examples.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155146Z" creationid="tlqk35" creationdate="20220528T155146Z">
-        <seg>우리는 유도형과 그들의 문법을 예제를 통해 설명했습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>We have seen that Lean's formal foundation includes basic types,
 &lt;g1&gt;Prop, Type 0, Type 1, Type 2, ...&lt;/g1&gt;, and allows for the formation of
 dependent function types, &lt;g2&gt;(x : α) → β&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T141800Z" creationid="tlqk3" creationdate="20220526T141800Z">
         <seg>우리는 린의 형식적인 기초가 기본형 &lt;g1&gt;Prop, Type 0, Type 1, Type 2, ...&lt;/g1&gt;을 포합하고 의존 함수형 &lt;g2&gt;(x : α) → β&lt;/g2&gt;의 형성을 가능하게 함을 보았습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We have seen that Lean's foundational system includes inductive
-types.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172149Z" creationid="tlqk35" creationdate="20220528T172149Z">
-        <seg>우리는 유도형을 포함해 린의 기초적인 체계를 보았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13808,53 +11810,10 @@ informal mathematical proofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>We have seen that the &lt;g1&gt;casesOn&lt;/g1&gt; recursor can
-be used to define functions and prove theorems by cases, according to
-the constructors involved in an inductively defined type.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160841Z" creationid="tlqk3" creationdate="20220529T160841Z">
-        <seg>재귀적으로 정의된 유형에 연관된 생성자를 따라 우리는 &lt;g1&gt;casesOn&lt;/g1&gt; 재귀자가 함수를 정의하고 경우를 나눠 정리를 증명하는데 사용될 수 있음을 보았습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We have seen that the constructor to an inductive type takes
-&lt;g1&gt;parameters&lt;/g1&gt; --- intuitively, the arguments that remain fixed
-throughout the inductive construction --- and &lt;g2&gt;indices&lt;/g2&gt;, the arguments
-parameterizing the family of types that is simultaneously under
-construction.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155749Z" creationid="tlqk35" creationdate="20220528T155749Z">
-        <seg>우리는 유도형에서 생성자는 &lt;g1&gt;매개변수(parameters)&lt;/g1&gt;-- 직관적으로 재귀 생성 동안 고정된 상태로 남는 인수 --와 동시에 생성중인 유형의 군을 매개변수화하는 인수 &lt;g2&gt;indices&lt;/g2&gt;를 받는 것을 보았습니다.  </seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>We have used &lt;g1&gt;.&lt;/g1&gt; to create nested tactic blocks.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T144734Z" creationid="tlqk35" creationdate="20220524T144734Z">
         <seg>우리는 중첩된 전략 블럭을 만드는데 &lt;g1&gt;.&lt;/g1&gt;를 사용해왔습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We have, moreover, noted that it is a remarkable fact that it
-is possible to construct a substantial edifice of mathematics based on
-nothing more than the type universes, dependent arrow types, and inductive types;
-everything else follows from those.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172353Z" creationid="tlqk35" creationdate="20220528T172353Z">
-        <seg>게다가 우리는 유형 세계, 의존 화살표 유형, 유도형과 이들로부터 따라나온 모든 것 외에는 기반하지 않는 수학의 엄청난 구조물을 세울 수 있는 가능성을 발견한 사실은 주목할만 합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>We now consider two generalizations of inductive types that are often
-useful, which Lean supports by "compiling" them down to the more
-primitive kinds of inductive types described above.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164633Z" creationid="tlqk35" creationdate="20220528T164633Z">
-        <seg>이제 우리는 유도형의 종종 유용한 두 가지 일반화를 고려했습니다. 린은 이들을 위에서 설명한 유도형의 더 기초적인 종류로 "컴파일"해나감으로써 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14066,14 +12025,6 @@ to the natural numbers:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>Well-Founded Recursion and Induction</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173659Z" creationid="tlqk3" creationdate="20220529T173659Z">
-        <seg>잘 세워진 재귀와 귀납</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>What characterizes the examples we consider in this
 section is that this is not the case: each constructor relies only on
 previously specified types.</seg>
@@ -14111,30 +12062,11 @@ chapter, now proved using tactics.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>What makes recursion and
-induction possible is that they can also involve recursive calls to
-&lt;g3&gt;foo&lt;/g3&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171946Z" creationid="tlqk3" creationdate="20220529T171946Z">
-        <seg>재귀와 귀납을 가능하게 만드는 것은 이들이 &lt;g3&gt;foo&lt;/g3&gt;에 대한 재귀적인 호출을 포함할 수 있다는 점 입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>What makes simple type theory powerful is that you can build new types
 out of others.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135919Z" creationid="tlqk35" creationdate="20220321T135919Z">
         <seg>단순 유형론을 강력하게 만드는 것은 기본형 외의 여러분만의 새로운 유형을 만들 수 있다는 점입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>What makes the equation compiler powerful is that it also supports
-recursive definitions.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170356Z" creationid="tlqk3" creationdate="20220529T170356Z">
-        <seg>방정식 컴파일러를 강력하게 만드는 것은 재귀적인 정의를 지원한다는 점입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14217,15 +12149,6 @@ the proof by writing &lt;g1&gt;by assumption&lt;/g1&gt;:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>When the inductive type is specified to land in &lt;g1&gt;Prop&lt;/g1&gt;, there are no
-constraints on the universe levels of the constructor arguments.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162358Z" creationid="tlqk35" creationdate="20220528T162358Z">
-        <seg>유도형이 &lt;g1&gt;Prop&lt;/g1&gt;에서 머무른다고 명시되어 있을 때, 생성자 인수의 세계 수준에 대한 제한이 없습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>When the section is closed, the variables go out of scope, and cannot
 be referenced any more.</seg>
       </tuv>
@@ -14241,15 +12164,6 @@ example, the expression &lt;g5&gt;β a&lt;/g5&gt; in the previous paragraph),
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151941Z" creationid="tlqk35" creationdate="20220321T151941Z">
         <seg>&lt;g3&gt;β&lt;/g3&gt;의 값이 &lt;g4&gt;a&lt;/g4&gt;에 의존할 때(예를 들어 앞 단락에서 식 &lt;g5&gt;β a&lt;/g5&gt;처럼), &lt;g6&gt;(a : α) → β&lt;/g6&gt;는 의존적 함수 유형을 나타냅니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>When we define a structure using this command, Lean
-automatically generates all the projection functions.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173227Z" creationid="tlqk35" creationdate="20220528T173227Z">
-        <seg>우리가 이 명령을 사용해 구조체를 정의할 때, 린은 자동적으로 모든 투영함수를 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14282,15 +12196,6 @@ identifier may be ambiguous.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>When writing programs or formalizing mathematics, it is not uncommon
-to define structures containing many fields.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T173114Z" creationid="tlqk35" creationdate="20220528T173114Z">
-        <seg>프로그램을 작성하거나 수학을 공식화할 때 만은 필드를 포함한 구조체를 정의하는 것은 흔합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>When you declare that you are working in the namespace &lt;g1&gt;Foo&lt;/g1&gt;, every
 identifier you declare has a full name with prefix "&lt;g2&gt;Foo.&lt;/g2&gt;".</seg>
       </tuv>
@@ -14318,14 +12223,6 @@ field succinctly in code.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T120711Z" creationid="tlqk3" creationdate="20220526T120711Z">
         <seg>새로운 기호를 도입하는 것은 프로그래밍 언어에서 상대적으로 흔치 않은 특징이고 때떄로는 그것이 잠재적으로 코드를 모호하게 하여 종종 난처하게 함에도 이는 세워진 관행들과 각 분야의 기호를 코드에서 간결하게 표현하는 것에 대한 형식화에 있어서 귀중한 도구입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>Wildcards and Overlapping Patterns</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164617Z" creationid="tlqk3" creationdate="20220529T164617Z">
-        <seg>와일드카드와 중복되는 패턴</seg>
       </tuv>
     </tu>
     <tu>
@@ -14385,16 +12282,6 @@ parsed as &lt;g11&gt;f 7 _ 3&lt;/g11&gt;, just as it would be with the strong an
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T185631Z" creationid="tlqk3" creationdate="20220525T185631Z">
         <seg>이 주석으로 표현식 &lt;g9&gt;f 7&lt;/g9&gt;은 이대로 구문분석 될 수 있습니다. 반면 &lt;g10&gt;f 7 3&lt;/g10&gt;은 강한 주석을 쓸 때처럼 &lt;g11&gt;f 7 _ 3&lt;/g11&gt;으로 구문분석될 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>With this definition, one can construct an element of &lt;g1&gt;Tree α&lt;/g1&gt; by
-giving an element of &lt;g2&gt;α&lt;/g2&gt; together with a list of subtrees, possibly
-empty.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165745Z" creationid="tlqk35" creationdate="20220528T165745Z">
-        <seg>이 정의를 갖고 대게는 빈 하위 트리의 리스트와 &lt;g2&gt;α&lt;/g2&gt;의 원소를 줌으로써 &lt;g1&gt;Tree α&lt;/g1&gt;의 원소를 생성할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14547,27 +12434,10 @@ preferred way of testing your functions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>You can also avoid the parentheses around field
-names if you add a line break between each field.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T174133Z" creationid="tlqk35" creationdate="20220528T174133Z">
-        <seg>여러분이 각 필드 사이에 줄 바꿈 문자를 추가하면 여러분은 필드 이름 주위에 괄호를 쓰지 않을 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>You can also declare new constants for types:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141350Z" creationid="tlqk35" creationdate="20220321T141350Z">
         <seg>여러분은 유형들에 대해 새 상수를 선언할 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>You can also define &lt;g1&gt;subst&lt;/g1&gt; using &lt;g2&gt;match&lt;/g2&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T154304Z" creationid="tlqk35" creationdate="20220528T154304Z">
-        <seg>여러분도 &lt;g2&gt;match&lt;/g2&gt;을 사용해 &lt;g1&gt;subst&lt;/g1&gt;을 정의할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14665,14 +12535,6 @@ subgoal produced by tactic &lt;g3&gt;tac1&lt;/g3&gt;</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>You can also write the example above using &lt;g1&gt;match&lt;/g1&gt;.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173558Z" creationid="tlqk3" creationdate="20220529T173558Z">
-        <seg>여러분은 &lt;g1&gt;match&lt;/g1&gt;를 사용해 위의 예제를 쓸 수도 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>You can avoid the &lt;g1&gt;universe&lt;/g1&gt; command by providing the universe parameters when defining &lt;g2&gt;compose&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T134439Z" creationid="tlqk3" creationdate="20220526T134439Z">
@@ -14693,15 +12555,6 @@ subgoal produced by tactic &lt;g3&gt;tac1&lt;/g3&gt;</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T142112Z" creationid="tlqk35" creationdate="20220321T142112Z">
         <seg>여러분은 F를 정의할 때 universe 매개변수를 제공하는 것으로 universe 명령을 쓰지 않을 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>You can check that this definition of &lt;g1&gt;foo&lt;/g1&gt; satisfies the same
-definitional identities as before.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165148Z" creationid="tlqk3" creationdate="20220529T165148Z">
-        <seg>여러분은 &lt;g1&gt;foo&lt;/g1&gt;의 정의가 이전처럼 같은 정의 항등식을 만족하는 것을 확인할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14963,15 +12816,6 @@ dependent pair.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>You can write &lt;g1&gt;#print sub2&lt;/g1&gt; to see how the function was compiled to
-recursors.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162607Z" creationid="tlqk3" creationdate="20220529T162607Z">
-        <seg>여러분은 &lt;g1&gt;#print sub2&lt;/g1&gt;를 써 어떻게 함수가 재귀자로부터 컴파일되었는지 볼 수 있습니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>You can write a tactic script incrementally.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T055516Z" creationid="tlqk35" creationdate="20220522T055516Z">
@@ -15229,14 +13073,6 @@ interpreted relative to the Lean &lt;g2&gt;search path&lt;/g2&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
-        <seg>mutually recursive definitions</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170453Z" creationid="tlqk3" creationdate="20220529T170448Z">
-        <seg>상호적으로 재귀적인 정의</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
         <seg>notation "‹" p "›" =&gt; show p by assumption</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183620Z" creationid="tlqk35" creationdate="20220321T183620Z">
@@ -15269,14 +13105,6 @@ example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
 
 -- 고전 추론을 필요로 하는 예제
 example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>structurally recursive definitions</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170432Z" creationid="tlqk3" creationdate="20220529T170432Z">
-        <seg>구조적으로 재귀적인 정의</seg>
       </tuv>
     </tu>
     <tu>
@@ -15355,25 +13183,6 @@ example : (¬p ∨ q) → (p → q) := sorry
 example : p ∨ False ↔ p := sorry
 example : p ∧ False ↔ False := sorry
 example : (p → q) → (¬q → ¬p) := sorry</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>well-founded recursive definitions</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170451Z" creationid="tlqk3" creationdate="20220529T170438Z">
-        <seg>잘 세워진 재귀적 정의</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="en-US">
-        <seg>where &lt;g1&gt;a&lt;/g1&gt; is a sequence of data type parameters, &lt;g2&gt;b&lt;/g2&gt; is the
-sequence of arguments to the constructors, and &lt;g3&gt;p[a, b]&lt;/g3&gt; are the
-indices, which determine which element of the inductive family the
-construction inhabits.</seg>
-      </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161227Z" creationid="tlqk35" creationdate="20220528T161227Z">
-        <seg>여기서 &lt;g1&gt;a&lt;/g1&gt;는 데이터 유형 매개변수의 나열이고 &lt;g2&gt;b&lt;/g2&gt;는 생성자에 대한 인수의 나열이고 &lt;g3&gt;p[a, b]&lt;/g3&gt; 는 유도군의 어떤 원소가 생성자를 어디에 머무르게 할지 결정하는  색인입니다.</seg>
       </tuv>
     </tu>
     <tu>

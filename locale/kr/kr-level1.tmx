@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.2" segtype="sentence" srclang="en-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-5.7.0" segtype="sentence" srclang="en-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -83,6 +83,16 @@ associated type.</seg>
 #check λ (x : Nat) =&gt; x + 5     --  λ 와 fun 같은 의미를 가집니다.
 #check fun x : Nat =&gt; x + 5     --  Nat으로 추론됩니다.
 #check λ x : Nat =&gt; x + 5       --  Nat으로 추론됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>(Lean will tell you that sub2 has been defined in terms
+of an internal auxiliary function, sub2.match_1, but you can print
+that out too.) Lean uses these auxiliary functions to compile match expressions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162747Z" creationid="tlqk3" creationdate="20220529T162747Z">
+        <seg>(린은 여러분에게 sub2가 내부의 보조 함수 sub2.match_1에 대해서 정의되었다고 말할 것입니다. 그러나 여러분은 그것도 출력해볼 수 있습니다.) 린은 이 보조 함수를 match 표현식을 컴파일하는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -426,6 +436,16 @@ which contains Type 1 as an element.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Section wildcards and overlapping patterns
+expands on the notion of a wildcard, and Section Inaccessible Patterns explains how
+you can use implicit arguments in patterns as well.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163535Z" creationid="tlqk3" creationdate="20220529T163535Z">
+        <seg>와일드카드와 중복된 패턴 섹션은 와일드카드에 대한 개념을 넓히고 접근할 수 없는 패턴 섹션은 여러분이 어떻게 패턴속에서도 암시적인 인수를 사용할 수 있는지 설명합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Prop has some special
 features, but like the other type universes, it is closed under the
 arrow constructor: if we have p q : Prop, then p → q : Prop.</seg>
@@ -550,6 +570,14 @@ an element h : α followed by a list t : List α.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>A more interesting example of structural recursion is given by the Fibonacci function fib.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173634Z" creationid="tlqk3" creationdate="20220529T173634Z">
+        <seg>구조적 재귀의 더 흥미로운 예제는 피보나치 함수 fib로부터 제시됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>A mutual inductive definition can also be used to define the notation
 of a finite tree with nodes labelled by elements of α:</seg>
       </tuv>
@@ -622,6 +650,16 @@ arguments can depend on the type of the initial argument.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>According to
+its definition, Acc r x is equivalent to
+∀ y, r y x → Acc r y.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174000Z" creationid="tlqk3" creationdate="20220529T174000Z">
+        <seg>이것의 정의에 따르면 Acc r x는 ∀ y, r y x → Acc r y과 동등합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Acknowledgments</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135000Z" creationid="tlqk35" creationdate="20220321T135000Z">
@@ -635,6 +673,14 @@ Eq.rec.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T154402Z" creationid="tlqk35" creationdate="20220528T154402Z">
         <seg>실제로, 린은 match 표현식을 Eq.rec에 기반한 정의를 사용해 컴파일합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Actually, the definition above is expanded to</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162811Z" creationid="tlqk3" creationdate="20220529T162811Z">
+        <seg>실제로 위 정의는 다음과 같이 확장됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -793,6 +839,16 @@ simultaneous induction of the following form:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162058Z" creationid="tlqk35" creationdate="20220321T162058Z">
         <seg>논리곱</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>And, indeed,
+we do: the standard library defines WellFounded.fix, which serves
+exactly that purpose.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T175108Z" creationid="tlqk3" creationdate="20220529T174953Z">
+        <seg>그리고 물론 우리는 이를 갖습니다. 표준 라이브러리는 바로 그 목적을 담당하는 WellFounded.fix를 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1052,6 +1108,15 @@ of (n : nat) → motive n for some motive : Nat → Sort u.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As described in Chapter Inductive Types,
+inductive data types can depend on parameters.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163609Z" creationid="tlqk3" creationdate="20220529T163609Z">
+        <seg>재귀형 장에서 설명했다시피 재귀 데이터형은 매개변수에 의존합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As exercises, we encourage you to develop a notion of composition for
 partial functions from α to β and β to γ, and show
 that it behaves as expected.</seg>
@@ -1144,6 +1209,28 @@ interpretation now comes into play.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As we
+have seen, a pattern is either a variable, a constructor applied to
+other patterns, or an expression that normalizes to something of that
+form (where the non-constructors are marked with the [matchPattern]
+attribute).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171023Z" creationid="tlqk3" creationdate="20220529T171023Z">
+        <seg>우리가 봤던 것처럼 패턴은 생성자가 다른 패턴을 적용한 변수이거나 그 형태를 무언가로 정규화한 표현식입니다. (여기서 비생성자는 [matchPattern] 속성으로 표시되었습니다.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As we saw in the last section, the terms t₁, ..., tₙ can make use
+of any of the parameters a, as well as any of the variables that
+are introduced in the corresponding patterns.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171859Z" creationid="tlqk3" creationdate="20220529T171859Z">
+        <seg>우리가 지난 섹션에서 보았듯이, 항 t₁, ..., tₙ은 대응되는 패턴에서 도입된 임의의 변수 뿐만 아니라 임의의 매개변수 a를 사용할 수 있게 만듭니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As we will discuss further in
 Attributes, one can limit the scope of an attribute to the
 current file or section using the local modifier:</seg>
@@ -1179,6 +1266,15 @@ compound expressions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171814Z" creationid="tlqk35" creationdate="20220524T161708Z">
         <seg>rw처럼 여러분은 키워드 at으로 가정을 간단히 하는데 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As with definition by pattern matching, parameters to a structural
+recursion or induction may appear before the colon.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173445Z" creationid="tlqk3" creationdate="20220529T173445Z">
+        <seg>패턴 매칭의 정의에서처럼 구조적 재귀나 귀납에 대한 매개변수는 콜론 앞에 나타날 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1369,6 +1465,15 @@ constructor notation.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Because addition and the zero notation have been assigned the
+[matchPattern] attribute, they can be used in pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161406Z" creationid="tlqk3" creationdate="20220529T161406Z">
+        <seg>왜냐하면 덧셈과 0 기호는 [matchPattern] 특성이 할당되어 있기에 그들은 패턴 매칭에 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Because equational reasoning is so common and important, Lean provides
 a number of mechanisms to carry it out more effectively.</seg>
       </tuv>
@@ -1392,6 +1497,18 @@ the type Nat as an argument repeatedly.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T152448Z" creationid="tlqk35" creationdate="20220321T152448Z">
         <seg>생성자들이 유형에 대해 다형적이기 때문에, 우리는 유형 Nat를 인수로써 반복적으로 삽입해야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Behind the scenes, these descriptions are
+"compiled" down to primitive recursors, using a procedure that we
+refer to as the "equation compiler." The equation compiler is not part
+of the trusted code base; its output consists of terms that are
+checked independently by the kernel.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160547Z" creationid="tlqk3" creationdate="20220529T160547Z">
+        <seg>막의 뒤에서 이 설명은 "방정식 컴파일러"라고 부르는 절차를 사용하여 기초적인 재귀자로 "컴파일되어" 내려갑니다. 방정식 컴파일러는 신뢰받는 코드 기반의 일부가 아닙니다. 그것의 출력은 커널에 의해 독립적으로 검증된 항으로 구성됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1422,6 +1539,16 @@ expression, Exists (fun x : α =&gt; p x), defined in Lean's library.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180843Z" creationid="tlqk35" creationdate="20220321T180843Z">
         <seg>두 버전 다 린의 라이브러리에 정의된 길고 장황한 표현식 Exists (fun x : α =&gt; p x)을 위한 기호적으로 편리한 약어입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But
+complicated definitions may use several nested casesOn
+applications, and may be hard to read and understand.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160949Z" creationid="tlqk3" creationdate="20220529T160949Z">
+        <seg>그러나 복잡해진 정의는 몇 단계로 중첩하여 casesOn를 사용할 수도 있습니다. 그리고 읽고 이해하기 어렵게 될 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1474,6 +1601,16 @@ context that depend on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T064249Z" creationid="tlqk35" creationdate="20220522T064249Z">
         <seg>그러나 revert는 맥락 속 요소들 뿐만 아니라 그에 의존하는 맥락의 뒤에 올 모든 요소를 되돌려 놓는 다는 점에서 아주 영리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But Lean handles
+the ambiguity by using the first applicable equation, so in this example
+the net result is the same.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164859Z" creationid="tlqk3" creationdate="20220529T164859Z">
+        <seg>그러나 린은 활용할 수 있는 첫 방정식을 사용하여 모호성을 해소합니다. 그래서 이 예제에서 최종 결과는 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1630,6 +1767,15 @@ Or.elim h:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>But we will not need to use such inaccessible patterns
+before Section Dependent Pattern Matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171645Z" creationid="tlqk3" creationdate="20220529T171645Z">
+        <seg>그러나 우리는 의존적인 패턴 매칭 섹션 전까지 그런 접근할 수 없는 패턴을 사용할 필요는 없을 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>But what type should cons have?</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151314Z" creationid="tlqk35" creationdate="20220321T151314Z">
@@ -1714,11 +1860,30 @@ Lean.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>By the above considerations, if r is a well-founded
+relation on a type α, we should have a principle of well-founded
+recursion on α, with respect to the relation r.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174959Z" creationid="tlqk3" creationdate="20220529T174926Z">
+        <seg>위의 고려로부터 만약 r이 α형에 대해 잘 세워진 관계이면, 우리는 관계 r에 대해서 α에 대해 잘 세워진 재귀의 원리를 가져야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>By the end
 of this chapter, you will understand much of what this means.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135143Z" creationid="tlqk35" creationdate="20220321T135143Z">
         <seg>2장의 끝에서 여러분은 이것의 의미하는 바의 대부분을 이해하게 될 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>By the propositions-as-types correspondence,
+this means that induction is the fundamental method of proof.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160040Z" creationid="tlqk3" creationdate="20220529T160040Z">
+        <seg>유형으로써 명제 대응에 따르면 이것은 귀납은 증명의 기초적인 방식임을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1818,6 +1983,14 @@ expected type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Consider one of the examples from the last section:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164710Z" creationid="tlqk3" creationdate="20220529T164705Z">
+        <seg>지난 섹션의 예제 중 하나를 고려해 봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Consider the "barber paradox," that is, the claim that in a certain
 town there is a (male) barber that shaves all and only the men who
 do not shave themselves.</seg>
@@ -1841,6 +2014,14 @@ sum type in the library:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145126Z" creationid="tlqk35" creationdate="20220321T145126Z">
         <seg>다음 세 함수 정의를 생각해보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Consider the inductively defined type of natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161107Z" creationid="tlqk3" creationdate="20220529T161107Z">
+        <seg>자연수의 재귀적으로 정의된 유형을 고려해보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2015,6 +2196,25 @@ natural and uniform way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Dependent type theory is powerful enough to encode and justify
+well-founded recursion.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173719Z" creationid="tlqk3" creationdate="20220529T173719Z">
+        <seg>종속 유형론은 잘 세워진 재귀를 부호화하고 정당화하기에 충분히 강력합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Despite the different placement of the parameter α in these two
+examples, in both cases it treated in the same way, in that it does
+not participate in a case split.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164316Z" creationid="tlqk3" creationdate="20220529T164316Z">
+        <seg>이 두 예제에서 매개변수 α의 다른 배치에도 불구하고 두 경우 모두 같은 방식으로 다뤄집니다. 그러므로 이것은 경우 분할에 참여하지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Determining that an expression t is a correct proof of assertion p would then
 simply be a matter of checking that t has type Proof p.</seg>
       </tuv>
@@ -2091,6 +2291,15 @@ constructs an element of some member of the family.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T153107Z" creationid="tlqk35" creationdate="20220528T153107Z">
         <seg>그럼 각 생성자는 군의 일부 구성원의 원소를 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Each line should
+contain the same number of patterns, one for each element of β.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170842Z" creationid="tlqk3" creationdate="20220529T170842Z">
+        <seg>각 줄은 β의 각 원소에 대해 한 개씩 같은 수의 패턴을 포함해야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2184,6 +2393,17 @@ goal.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T152715Z" creationid="tlqk3" creationdate="20220527T152715Z">
         <seg>심지어 존재 한정기호도 유도적으로 정의됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Every
+natural number is either zero or succ x, and so you can define
+a function from the natural numbers to an arbitrary type by specifying
+a value in each of those cases:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161213Z" creationid="tlqk3" creationdate="20220529T161213Z">
+        <seg>모든 자연수는 zero이거나 succ x입니다. 그래서 여러분은 각 경우에 대한 값을 나타내줌으로써 자연수에서 임의의 유형으로 가는 함수를 정의할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2347,6 +2567,16 @@ e)).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162247Z" creationid="tlqk35" creationdate="20220321T162247Z">
         <seg>예를 들어 a ∧ b → c ∨ d ∧ e은 (a ∧ b) → (c ∨ (d ∧ e))을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For
+example, it would be more natural to define the previous example as a
+function of two arguments:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162924Z" creationid="tlqk3" creationdate="20220529T162924Z">
+        <seg>예를 들어 이전 예제를 두 인수를 받는 함수로 정의하는 것이 더 자연스럽습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2621,6 +2851,15 @@ expressions automatically.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T132252Z" creationid="tlqk35" creationdate="20220321T132252Z">
         <seg>예를 들어, 항을 다시 쓰기(rewriting)와 Lean의 자동화된 항과 식의 단순화(simplifying) 기법</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, the definition of addition may also be written
+as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173532Z" creationid="tlqk3" creationdate="20220529T173532Z">
+        <seg>예를 들어 덧셈의 정의는 다음과 같이 작성될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2923,6 +3162,14 @@ motive of the elimination rule is required to be in Prop.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Generally speaking, the equation compiler processes input of the following form:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170517Z" creationid="tlqk3" creationdate="20220529T170517Z">
+        <seg>폭넓게 말하자면, 방정식 컴파일러는 다음 형태의 입력을 처리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Given p : Point Nat, the dot notation p.x is shorthand for
 Point.x p.</seg>
       </tuv>
@@ -2980,6 +3227,16 @@ arguments), the notation e.bar is shorthand for Foo.bar e.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163400Z" creationid="tlqk35" creationdate="20220321T163400Z">
         <seg>(아마 몇 가지 인수를 적용한) 유도형이 Foo인 표현식 e에 대해 e.bar과 같은 표기는 Foo.bar e의 약식 표현입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Given any type α,
+we should be able to assign a value to each accessible element of
+α, recursively, by assigning values to all its predecessors first.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174522Z" creationid="tlqk3" creationdate="20220529T174522Z">
+        <seg>임의의 유형 α에 대해서 우리는 그것의 모든 전임자들을 우선으로 값을 할당하여 α의 각 접근 가능한 원소에 값을 재귀적으로 할당할 수 있어야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3057,6 +3314,16 @@ is an example:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Here (a : α) is a sequence of parameters, (b : β) is the
+sequence of arguments on which pattern matching takes place, and γ
+is any type, which can depend on a and b.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170647Z" creationid="tlqk3" creationdate="20220529T170647Z">
+        <seg>여기서 (a : α)는 매개변수의 나열입니다. 패턴 매칭이 일어나는 (b : β)은 인수의 나열입니다. 그리고 γ는 a와 b에 의존할 수 있는 임의의 유형입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Here u_1 is a variable ranging over type levels.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141951Z" creationid="tlqk35" creationdate="20220321T141951Z">
@@ -3099,6 +3366,16 @@ check their types.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Here are some examples of structural
+recursion from the last chapter, now defined using the equation
+compiler:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172301Z" creationid="tlqk3" creationdate="20220529T172301Z">
+        <seg>이제 방정식 컴파일러를 사용해 정의될 마지막 장의 구조적 재귀에 대한 몇 가지 예제가 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Here are some examples:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180921Z" creationid="tlqk35" creationdate="20220321T180921Z">
@@ -3120,6 +3397,14 @@ with lists:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T161527Z" creationid="tlqk35" creationdate="20220524T161430Z">
         <seg>여기 추가 예제가 리스트와 함께 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here are some more examples of nested pattern matching:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162836Z" creationid="tlqk3" creationdate="20220529T162836Z">
+        <seg>여기 중첩된 패턴 매칭에 대한 몇 가지 추가 예제가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3284,6 +3569,15 @@ identity in the opposite direction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180724Z" creationid="tlqk35" creationdate="20220321T180724Z">
         <seg>Nat.add_assoc 앞의 왼쪽 화살표는 항등식을 반대 방향으로 사용해 다시쓰라고 말합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here we use it not only to define a function, but also to carry out a
+proof by cases:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161634Z" creationid="tlqk3" creationdate="20220529T161634Z">
+        <seg>여기서 우리는 이것을 함수를 정의하는 것과 경우에 따른 증명을 수행하는데에도 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3711,6 +4005,26 @@ your file manager.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>If you leave out any of the cases in
+the following definition, the error message will let you know what has
+not been covered.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170200Z" creationid="tlqk3" creationdate="20220529T170200Z">
+        <seg>여러분이 다음 정의에서 어떤 경우라도 빠트리면, 오류 메시지가 어떤 것이 다뤄지지 못했는지 알릴 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If you think of r y x as denoting a kind of order relation
+y ≺ x, then Acc r x says that x is accessible from below,
+in the sense that all its predecessors are accessible.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174213Z" creationid="tlqk3" creationdate="20220529T174213Z">
+        <seg>여러분이 r y x을 순서 관계 y ≺ x의 일종으로 나타났다고 생각한다면 Acc r x는 x가 아래로부터 접근가능하다고 말합니다. 이 관점으로부터 그것의 모든 전임자들은 접근가능합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>If you want
 to specify a witness to the existential quantifier explicitly, you can
 use the exists tactic instead:</seg>
@@ -3760,6 +4074,15 @@ Lean 4, we generalize this notation using · As a placeholder.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T140130Z" creationid="tlqk3" creationdate="20220526T140130Z">
         <seg>린 4에서 우리는 ·를 자리차지자로 사용하여  이 표기를 일반화합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In
+either case, the defining equations hold definitionally.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162526Z" creationid="tlqk3" creationdate="20220529T162516Z">
+        <seg>각 경우에서 정의한 방정식들은 정의로 인해 성립합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3840,6 +4163,17 @@ t₁ is applied to the current goal, and then t₂ is applied to all the resulti
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T150229Z" creationid="tlqk35" creationdate="20220524T150229Z">
         <seg>t₁ &lt;;&gt; t₂에서 &lt;;&gt; 연산자는 순차 연산의 버전에 대해 parallel을 제공합니다.
 t₁는 현재 목표에 적용되고 그 후  t₂은 출력되는 하위목표 all에 적용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In Section Dependent Pattern Matching,
+we will see that it is sometimes necessary to include explicit terms in patterns that
+are needed to make an expression type check, though they do not play a
+role in pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171529Z" creationid="tlqk3" creationdate="20220529T171529Z">
+        <seg>이들이 패턴 매칭에 핵심 역할을 하지 않더라도 의존적인 패턴 매칭 섹션에서 우리는 이것이 때때로 표현식 유형 확인을 만드는데 필요한 패턴에 대해 명시적으로 포함될 필요가 있음을 볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4032,6 +4366,15 @@ imports the one in which the declaration occurs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In all these examples, pattern matching was used to carry out a single
+case distinction.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161820Z" creationid="tlqk3" creationdate="20220529T161820Z">
+        <seg>이 모든 에제에서 패턴 매칭은 한 경우의 구별을 수행하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In any case, all that really matters is the bottom line.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160455Z" creationid="tlqk35" creationdate="20220321T160455Z">
@@ -4046,6 +4389,16 @@ term.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171713Z" creationid="tlqk35" creationdate="20220524T163318Z">
         <seg>어떤 경우에 항을 간단히 하는데 사용되는 항등식의 모임에 추가 규칙이 더해질 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In contrast
+to usage outside the equation compiler, here the underscore does not
+indicate an implicit argument.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163315Z" creationid="tlqk3" creationdate="20220529T163315Z">
+        <seg>방정식 컴파일러 밖에서의 사용과 대조적으로 여기서 밑줄 문자는 암시적인 인수를 지칭하지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4116,6 +4469,16 @@ file, you need to open the namespaces you wish to use.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T130944Z" creationid="tlqk3" creationdate="20220526T130944Z">
         <seg>각 파일에서 여러분은 여러분이 사용하려는 이름공간을 열어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In each of the following examples, splitting occurs on only the first
+argument, even though the others are included among the list of
+patterns.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163048Z" creationid="tlqk3" creationdate="20220529T163048Z">
+        <seg>다른 인수들도 패턴의 리스트 사이에 포함되어 있음에도 다음의 각 예제에서 분할은 첫 번째 인수에만 일어납니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4390,6 +4753,16 @@ is a proof instead of a piece of data.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In other situations, however,
+reductions hold only propositionally, which is to say, they are
+equational theorems that must be applied explicitly.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173048Z" creationid="tlqk3" creationdate="20220529T173048Z">
+        <seg>하지만 다른 상황에서 축약은 명제적으로만 성립합니다. 즉, 명시적으로 적용해야 하는 등식 정리입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In other words,
 True is simply true, and has a canonical proof, True.intro.</seg>
       </tuv>
@@ -4536,6 +4909,15 @@ can interpret p as a type, namely, the type of its proofs.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>In particular,
+if x has no predecessors, it is accessible.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T174242Z" creationid="tlqk3" creationdate="20220529T174242Z">
+        <seg>특히 x의 전임자가 없다면 그것은 접근가능합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In particular,
 we can define predicates on α by quantifying over all predicates
 on α, which is exactly the type of circularity that was once
 considered problematic.</seg>
@@ -4552,6 +4934,15 @@ namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150731Z" creationid="tlqk35" creationdate="20220321T150731Z">
         <seg>특히, 이름공간 안에서 variable 명령을 사용한다면 그것의 범위는 이름공간으로 제한될 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In particular, the following equations hold
+definitionally:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164916Z" creationid="tlqk3" creationdate="20220529T164916Z">
+        <seg>특히 다음 방정식은 정의로부터 성립합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5064,6 +5455,24 @@ and then define an object using objects of the parent structures.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the next three sections, we will describe,
+respectively:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170420Z" creationid="tlqk3" creationdate="20220529T170420Z">
+        <seg>다음 세 섹션에서 우리는 개별적으로 설명할 예정입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the previous chapter, we saw that inductive definitions provide a
+powerful means of introducing new types in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T155925Z" creationid="tlqk3" creationdate="20220529T155925Z">
+        <seg>이전 장에서 우리는 귀납적 정의가 린의 새 유형을 도입하는 강력한 수단을 제공함을 보았습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the previous section, we have shown how implicit arguments make functions more convenient to use.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T134206Z" creationid="tlqk3" creationdate="20220526T134206Z">
@@ -5111,6 +5520,15 @@ List.nil:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the second presentation, the patterns overlap; for example, the
+pair of arguments 0 0 matches all three cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164755Z" creationid="tlqk3" creationdate="20220529T164755Z">
+        <seg>두 번째 나타남에서 패턴은 겹칩니다. 예를 들어 인수의 쌍 0 0은 세 경우 모두 일치합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the section after next we will see what happens when the
 constructor of an inductive type takes arguments from the inductive
 type itself.</seg>
@@ -5136,6 +5554,15 @@ induction-recursion and induction-induction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T155053Z" creationid="tlqk35" creationdate="20220528T155053Z">
         <seg>유형론 교재에서는 재귀적 정의의 더 일반화 예를 들어 induction-recursion과 induction-induction의 원리가 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In these languages, the interpreter produces an exception
+or returns an arbitrary value for incomplete cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165322Z" creationid="tlqk3" creationdate="20220529T165322Z">
+        <seg>이 언어들에서 인터프리터는 예외을 만들거나 불완전한 경우에 대한 임의의 값을 반환합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5261,6 +5688,16 @@ additional features of the proof language that are often convenient.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In this section, we will deal with structural recursion, in
+which the arguments to foo occurring on the right-hand side of the
+:= are subterms of the patterns on the left-hand side.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172050Z" creationid="tlqk3" creationdate="20220529T172050Z">
+        <seg>이 섹션에서 우리는 구조적 재귀를 다룰 예정입니다. 여기서 foo에 대한 인수는 좌변에 대한 패턴의 부분항인 :=의 우변에서 나타납니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In this section, we will describe and explain
 the various extension points.</seg>
       </tuv>
@@ -5334,6 +5771,14 @@ is just notation for (a : α) → β when β does not depend on a.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T152055Z" creationid="tlqk35" creationdate="20220321T152055Z">
         <seg>물론, 종속 유형론에서(그리고 Lean에서) α → β는 β가 a에 의존하지 않을 때 (a : α) → β에 대한 표기일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Induction and Recursion</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T155833Z" creationid="tlqk3" creationdate="20220529T155833Z">
+        <seg>귀납과 재귀</seg>
       </tuv>
     </tu>
     <tu>
@@ -5416,6 +5861,14 @@ documentation pages.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T180657Z" creationid="tlqk35" creationdate="20220528T180657Z">
         <seg>상속(Inheritance)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Instead of zero and succ, we can use more familiar notation:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161323Z" creationid="tlqk3" creationdate="20220529T161323Z">
+        <seg>zero과 succ 대신 우리는 더 친숙한 기호를 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5534,6 +5987,17 @@ w.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It allows you to
+define a function by specifying equations that it should satisfy, and
+it allows you to prove a theorem by specifying how to handle various
+cases that can arise.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160321Z" creationid="tlqk3" creationdate="20220529T160321Z">
+        <seg>이는 여러분이 그것이 만족해야 하는 방정식을 명시함으로써 함수를 정의하도록 해줍니다. 그리고 이것은 일어날 수 있는 다양한 경우를 어떻게 다뤄야 하는지 나타내줌으로써 여러분이 정리를 증명하게 해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It also makes proofs more readable.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183644Z" creationid="tlqk35" creationdate="20220321T183644Z">
@@ -5564,6 +6028,16 @@ that sorry has been used.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T065446Z" creationid="tlqk35" creationdate="20220522T065446Z">
         <seg>이것은 현재 목표를 마무리 짓고, sorry를 사용했을 때처럼 경고를 만듭니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It determines
+the necessary case splits from the patterns that are presented to it,
+and raises an error if the patterns fail to exhaust the cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162407Z" creationid="tlqk3" creationdate="20220529T162226Z">
+        <seg>이것은 그것에 제시된 패턴에 필요한 경우를 나누는 것을 결정하고, 패턴이 경우를 처리하는데 실패하면 오류를 발생시킵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5935,6 +6409,15 @@ mode.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It then does a case split on
+whether x is of the form zero or succ x.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162124Z" creationid="tlqk3" creationdate="20220529T162124Z">
+        <seg>그 뒤 x가 zero인지 succ x의 꼴인지에 따라 경우를 나눕니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It then reduces the
 goal to cases in which x is replaced by each of the constructions.</seg>
       </tuv>
@@ -5971,6 +6454,14 @@ enclosing them in blocks and indenting.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T145433Z" creationid="tlqk35" creationdate="20220524T145421Z">
         <seg>구조화된 증명에 인덴트를 사용하는 것은 유용합니다. 매번 전략은 한 개 이상의 하위 목표를 남겨두므로 
 우리는 블럭과 인덴트로 그들을 담아  남은 하위목표와 분리할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It will also use an "if ... then ... else" instead of a casesOn in appropriate situations.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170258Z" creationid="tlqk3" creationdate="20220529T170258Z">
+        <seg>이것은 적절한 상황에서 casesOn 대신  "if ... then ... else"을 사용할 수도 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6091,6 +6582,16 @@ constructor or the return type, and makes them implicit in that case.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>Lean
+simply normalizes these expressions until the constructors zero
+and succ are exposed.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161455Z" creationid="tlqk3" creationdate="20220529T161455Z">
+        <seg>린은 단순히 이 표현식들을 생성자 zero과 succ이 드러날 때까지 정규화합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean
 therefore provides Or.inr and Or.inl which can be viewed as
 shorthand for Or.intro_right _ and Or.intro_left _.</seg>
       </tuv>
@@ -6135,6 +6636,14 @@ with a show statement.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161051Z" creationid="tlqk35" creationdate="20220321T161051Z">
         <seg>린은 여러분에게 마지막 항 hp을 명시적으로 show 문장으로 유형을 명시하는 것을 허용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean also allows parameters to occur after :, but it cannot pattern match on them.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163915Z" creationid="tlqk3" creationdate="20220529T163915Z">
+        <seg>린은 매개변수가 : 뒤에서 나타나는 것도 허용합니다. 그러나 이들에 대해 패턴 매칭은 할 수 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6219,6 +6728,16 @@ explicitly.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T144144Z" creationid="tlqk35" creationdate="20220321T144144Z">
         <seg>Lean은 α의 유형을 추론할 수 있습니다. 그러나 이를 명백히 적는 것이 좋습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean can also handle more complex forms of pattern matching, in which
+arguments to dependent types pose additional constraints on the
+various cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164517Z" creationid="tlqk3" creationdate="20220529T164517Z">
+        <seg>린은 인수가 다양한 경우에 대해 추가적인 제약을 의존 유형에 부여하는 것 같은 패턴 매칭의 더 복잡한 형태도 다룰 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6356,6 +6875,15 @@ quantifier with the match expression:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163333Z" creationid="tlqk35" creationdate="20220321T163333Z">
         <seg>린은 또 다른 유용한 문법적 도구를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean provides natural ways of defining recursive functions, performing
+pattern matching, and writing inductive proofs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160113Z" creationid="tlqk3" creationdate="20220529T160113Z">
+        <seg>린은 재귀적인 함수를 정의하는 자연스러운 방법을 제공하고, 패턴 매치를 수행하고, 귀납적 정의를 작성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6500,6 +7028,16 @@ your own.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Lean's standard library defines two predicates, Acc r a and
+WellFounded r, where r is a binary relation on a type α,
+and a is an element of type α.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173905Z" creationid="tlqk3" creationdate="20220529T173905Z">
+        <seg>린의 표준 라이브러리는 두 술어 Acc r a과 WellFounded r을 정의합니다. 여기서 r은 α형에 대한 이항 관계이고 a는 α형 원소입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Lean's syntax can be extended and customized by users at every level,
 ranging from basic "mixfix" notations to custom elaborators.</seg>
       </tuv>
@@ -6559,6 +7097,15 @@ Lean's library, namely, the equality relation.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175313Z" creationid="tlqk35" creationdate="20220321T175313Z">
         <seg>이제 주로 동등 관계라고 하는 린의 라이브러리에 정의된 가장 기초적인 관계 중 하나로 가봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Let us start with the logical background that
+is needed to understand how it works.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173742Z" creationid="tlqk3" creationdate="20220529T173742Z">
+        <seg>우선 이것이 어떻게 동작하는지 이해하는데 필요한 논리적 배경으로 시작합시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6677,6 +7224,15 @@ Lean documentation pages.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>More interestingly, patterns can involve nested
+constructors, as in the following examples.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161918Z" creationid="tlqk3" creationdate="20220529T161905Z">
+        <seg>더 흥미롭게도 패턴은 다음 예제에 있는 중첩된 생성자에도 관여할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>More on Implicit Arguments</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T184142Z" creationid="tlqk3" creationdate="20220525T184142Z">
@@ -6782,6 +7338,16 @@ since automated procedures are themselves tactics.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184343Z" creationid="tlqk35" creationdate="20220321T184343Z">
         <seg>게다가 자동화된 절차 자체가 전략이기 때문에 전략은 Lean의 자동화를 사용하기 위한 관문을 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Moreover, the
+constructors and the recursors provide the only means of defining
+functions on these types.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160006Z" creationid="tlqk3" creationdate="20220529T160006Z">
+        <seg>게다가 생성자와 재귀자는 이 유형에 대한 함수 정의의 유일한 수단을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7136,6 +7702,14 @@ application; we could equally well have written ⟨w, ⟨hw.right, hw.left⟩⟩
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Note that the patterns are separated by commas.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162942Z" creationid="tlqk3" creationdate="20220529T162942Z">
+        <seg>패턴이 콤마로 나뉜 것에 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Note that the syntax is similar to the one used in match expressions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T070416Z" creationid="tlqk35" creationdate="20220522T070416Z">
@@ -7181,6 +7755,15 @@ binary operation like and using match:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T152449Z" creationid="tlqk3" creationdate="20220526T152449Z">
         <seg>여러분이  and같은 이항 연산을 match를 사용해 정의할 수 있다는 것을 보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Notice also that, when the value of an argument is not needed in the
+definition, you can use an underscore instead.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163136Z" creationid="tlqk3" creationdate="20220529T163136Z">
+        <seg>인수의 값은 정의에서 필요하지 않음도 주목하세요. 여러분은 대신 밑줄 문자를 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7487,6 +8070,25 @@ identifiers.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>On this basis, the
+standard library provides a default element, defaulty, of
+any inhabited type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165808Z" creationid="tlqk3" creationdate="20220529T165808Z">
+        <seg>이 기초로부터 표준 라이브러리는 임의의 거주 유형에 대해 기본 원소 defaulty를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Once
+again, we can use arithmetic notation, as in the version below.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162448Z" creationid="tlqk3" creationdate="20220529T162448Z">
+        <seg>다시 한 번 우리는 산술적 기호를 아래 버전에서 처럼 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Once again, cases will revert, split, and then reintroduce depedencies in the context.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T165113Z" creationid="tlqk3" creationdate="20220527T165113Z">
@@ -7758,6 +8360,40 @@ to multiple goals, but there are other ways to do this.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T152200Z" creationid="tlqk35" creationdate="20220524T152200Z">
         <seg>병렬은 이를 배열하는 한 방법이므로 하나의 전략이 다수의 목표에 적용될 수 있습니다. 
 그러나 이를 할 수 있는 다른 방식들이 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Pattern Matching</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160553Z" creationid="tlqk3" creationdate="20220529T160553Z">
+        <seg>패턴 매칭</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Pattern matching
+provides an approach that is more convenient, and familiar to users of
+functional programming languages.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161048Z" creationid="tlqk3" creationdate="20220529T161048Z">
+        <seg>패턴 매칭은 더 편리한 접근법과 함수형 프로그래밍 언어의 사용자에게 친숙한 접근법을 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Pattern matching can also be used to destruct inductively defined propositions:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161658Z" creationid="tlqk3" creationdate="20220529T161658Z">
+        <seg>패턴 매칭은 재귀적으로 정의된 명제를 파괴하는 데에도 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Pattern matching works with any inductive type, such as products and option types:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161546Z" creationid="tlqk3" creationdate="20220529T161546Z">
+        <seg>패턴 매칭은 곱과 옵션 유형 같은 임의의 재귀형과 동작합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8191,6 +8827,18 @@ p x, we can give it a name, say, w.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Roughly, an element of Inhabited α is a witness to the fact
+that there is an element of α; in the Chapter Type Classes
+we will see that Lean can be instructed that suitable
+base types are inhabited, and can automatically infer that other
+constructed types are inhabited.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165706Z" creationid="tlqk3" creationdate="20220529T165706Z">
+        <seg>대략적으로 Inhabited α의 원소는 α의 원소가 있다는 사실의 목격자입니다. 유형 클래스 장에서 우리는 린이 적절한 기반 유형이 머물러 있고, 자동적으로 다른 생성 유형이 머물러 있는지 추론하는 것을 배울 수 있음을 볼 예정입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Run mdbook test to test all lean code blocks.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172249Z" creationid="tlqk35" creationdate="20220321T172249Z">
@@ -8395,6 +9043,14 @@ that, in order to avoid name clashes.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Since the values of m and n are not needed, we can just as well use wildcard patterns instead.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165005Z" creationid="tlqk3" creationdate="20220529T165005Z">
+        <seg>m과 n의 값은 필요하지 않으므로 우리는 와일드카드 패턴을 대신 사용하여도 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Singleton elimination is also used with
 heterogeneous equality and well-founded recursion, which will be
 discussed in a later chapter.</seg>
@@ -8503,6 +9159,15 @@ propositions and data.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Some functional programming languages support incomplete
+patterns.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165238Z" creationid="tlqk3" creationdate="20220529T165238Z">
+        <seg>어떤 함수형 프로그래밍 언어는 불완전한 패턴 기능을 지원합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Some mathematically common examples of operations of functions can be
 described in terms of lambda abstraction:</seg>
       </tuv>
@@ -8588,6 +9253,14 @@ sorry to fill in subproofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Structural Recursion and Induction</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170313Z" creationid="tlqk3" creationdate="20220529T170313Z">
+        <seg>구조적 재귀와 귀납</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Structures and Records</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T172114Z" creationid="tlqk35" creationdate="20220528T172114Z">
@@ -8610,6 +9283,25 @@ Nat, Bool, or an arbitrary type α to behave the same way.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151118Z" creationid="tlqk35" creationdate="20220321T151118Z">
         <seg>이러한 함수는 polymorphic입니다. 여러분은 cons는  Nat, Bool 혹은 임의의 유형  α에 대해 동일한 방식으로 동작해야 한다고 기대합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Such examples of dependent pattern matching are
+considered in the Section Dependent Pattern Matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164606Z" creationid="tlqk3" creationdate="20220529T164606Z">
+        <seg>그런 종속적인 패턴 매칭의 예제는 종속적인 패턴 매칭 섹션에서 다뤄집니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Such parameters
+are simply added to the local context before the definition is
+processed.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173510Z" creationid="tlqk3" creationdate="20220529T173510Z">
+        <seg>그런 매개변수들은 단순히 정의가 처리되기 전에 지역 상황에 추가됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9470,6 +10162,16 @@ examples of inductive type constructions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The appearances of constructors prompt case splits, with
+the arguments to the constructors represented by the given
+variables.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171318Z" creationid="tlqk3" creationdate="20220529T171318Z">
+        <seg>생성자의 출현은 제시된 변수로 표현된 생성자에 대한 인수로 경우를 신속히 나눕니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The arbitrary fact, q, that follows from falsity is an implicit
 argument in False.elim and is inferred automatically.</seg>
       </tuv>
@@ -9484,6 +10186,15 @@ construct, and it is a function because it may depend on the pair.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T154004Z" creationid="tlqk3" creationdate="20220526T154004Z">
         <seg>인자 motive는 여러분이 생성하기 원하는 대상의 유형을 명시하는데 사용됩니다. 그리고 이것은 쌍에 의존할 수 있기에 함수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The argument α : Type
+is a parameter and occurs before the colon to indicate it does not participate in the pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163822Z" creationid="tlqk3" creationdate="20220529T163822Z">
+        <seg>인수 α : Type은 매개변수이고 패턴 매칭에 참여하지 않음을 지칭하는 콜론 앞에 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9677,6 +10388,58 @@ along with the type Weekday and its constructors.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The equation
+compiler generates such theorems internally.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173101Z" creationid="tlqk3" creationdate="20220529T173101Z">
+        <seg>방정식 컴파일러는 그런 정리를 내부적으로 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler
+tries to ensure that this holds whenever possible, as is the case with
+straightforward structural induction.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172804Z" creationid="tlqk3" creationdate="20220529T172804Z">
+        <seg>방정식 컴파일러는 직관적인 구조적 재귀와 같은 한 언제든 이것이 성립함을 보장하려고 시도합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler can process multiple arguments sequentially.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162851Z" creationid="tlqk3" creationdate="20220529T162851Z">
+        <seg>이 방정식 컴파일러는 다수의 인수를 순차적으로 처리할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler first splits on cases as to whether the input is
+zero or of the form succ x.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161958Z" creationid="tlqk3" creationdate="20220529T161958Z">
+        <seg>방정식 컴파일러는 우선 입력이 zero인지 succ x의 꼴인지에 따라 경우를 나눕니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler is clever.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170053Z" creationid="tlqk3" creationdate="20220529T170053Z">
+        <seg>방정식 컴파일러는 영리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equations used to define these function hold definitionally:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161255Z" creationid="tlqk3" creationdate="20220529T161255Z">
+        <seg>방정식들은 정의상으로 성립하는 이 함수들을 정의하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The example above shows
 that Nat.add 3 has type Nat → Nat, that is, Nat.add 3 returns a
 function that "waits" for a second argument, n, which is then
@@ -9684,6 +10447,15 @@ equivalent to writing Nat.add 3 n.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T185245Z" creationid="tlqk35" creationdate="20220321T140932Z">
         <seg>위의 예제에서 Nat.add 3는 Nat → Nat유형을 가짐을  보였습니다. 즉 Nat.add 3은 두번째 인자 n을 "기다리는" 함수를 반환하는 것입니다. 이것은 Nat.add 3 n로 쓰는 것과 동등합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The example above shows that the defining equations for add hold
+definitionally, and the same is true of mul.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172548Z" creationid="tlqk3" creationdate="20220529T172548Z">
+        <seg>위 예제에서 add에 대해 정의한 방정식은 정의로부터 성립함을 보여줍니다. 그리고 mul에서 같은 방식으로 참이 됨을 보입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9875,6 +10647,14 @@ here.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The first, Acc, is an inductively defined predicate.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173930Z" creationid="tlqk3" creationdate="20220529T173930Z">
+        <seg>우선 Acc은 귀납적으로 정의된 술어입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The following calls a given function twice passing the output of the
 first invocation to the second:</seg>
       </tuv>
@@ -9892,11 +10672,29 @@ first invocation to the second:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The following example defines
+the tail function using pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163649Z" creationid="tlqk3" creationdate="20220529T163649Z">
+        <seg>다음 예제는 패턴 매칭을 사용해 tail 함수를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The following example defines the prefix relation on lists,
 proves that this relation is reflexive, and assigns the [simp] attribute to that theorem.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T183037Z" creationid="tlqk3" creationdate="20220525T182849Z">
         <seg>다음 예제에서는 리스트에 대한 접두사 관계를 정의하고, 이 관계는 반사적임을 증명하고, 그 정리에 [simp] 특성을 부여합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The following example demonstrates
+both approaches.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170043Z" creationid="tlqk3" creationdate="20220529T170043Z">
+        <seg>다음 예제는 두 접근법을 보여줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10077,6 +10875,16 @@ foundational systems.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>The idea is
+that they are structurally smaller, and hence appear in the inductive
+type at an earlier stage.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172147Z" creationid="tlqk3" creationdate="20220529T172147Z">
+        <seg>아이디어는 이들이 구조적으로 더 작고 그러므로 앞 단에서 귀납형으로 나타날 수 있다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The idea is
 that we can define two (or more) inductive types at the same time,
 where each one refers to the other(s).</seg>
       </tuv>
@@ -10100,6 +10908,15 @@ from p and that r follows from q.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T174605Z" creationid="tlqk35" creationdate="20220321T174605Z">
         <seg>아이디어는 다음과 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The idea is to return some a for the provided patterns, and use
+none for the incomplete cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165957Z" creationid="tlqk3" creationdate="20220529T165957Z">
+        <seg>이 아이디어는 제공받은 패턴에 대해 some a를 반환하는 것입니다. 그리고 불완전한 경우에 대해 none을 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10135,6 +10952,15 @@ corresponding recursor unpacks the data and acts on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175555Z" creationid="tlqk35" creationdate="20220321T175555Z">
         <seg>접두사 .{u}은 린에게 세계변수 u로 상수를 개체화하라고 말해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The interpretation of schematic patterns is the first step of the
+compilation process.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160640Z" creationid="tlqk3" creationdate="20220529T160640Z">
+        <seg>도식적인 패턴의 해석은 컴파일 과정의 첫 단계입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10596,6 +11422,15 @@ is functionally equivalent to the following:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The proof of zero_add makes it clear that proof by induction is
+really a form of recursion in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T172430Z" creationid="tlqk3" creationdate="20220529T172430Z">
+        <seg>zero_add의 증명은 귀납적 증명은 실제로 린에서 재귀의 한 형태라는 점을 명확히 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The propositional connectives come with the following notation:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161840Z" creationid="tlqk35" creationdate="20220321T161840Z">
@@ -10723,6 +11558,16 @@ https://github.com/leanprover/lean4/.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131946Z" creationid="tlqk35" creationdate="20220321T131946Z">
         <seg>Lean을 만든 소스코드와  명령어들은 https://github.com/leanprover/lean4/에서 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The statement that r is well founded, denoted WellFounded r,
+is exactly the statement that every element of the type is
+accessible.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T175121Z" creationid="tlqk3" creationdate="20220529T174746Z">
+        <seg>WellFounded r로 표시되어 잘 세워진 명제 r는 바로 그 유형의 모든 원소가 접근 가능한 명제입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10923,6 +11768,16 @@ assertion that "for every x : α, p x" holds.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172839Z" creationid="tlqk35" creationdate="20220321T172839Z">
         <seg>전칭 한정기호 ∀ x : α, p x 은 "모든 x : α에 대해  p x"가 성립한다는 주장을 가리켜야 할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The use of underscores for wildcards is
+common in functional programming languages, and so Lean adopts that
+notation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T163403Z" creationid="tlqk3" creationdate="20220529T163403Z">
+        <seg>와일드카드에 대한 밑줄 문자의 사용은 함수형 프로그래밍 언어에서 흔합니다. 그래서 린은 이 표기를 채택합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11222,6 +12077,15 @@ types vary depending on the first argument, α.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>These are called "inaccessible patterns" for
+that reason.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171552Z" creationid="tlqk3" creationdate="20220529T171552Z">
+        <seg>이들은 이런 이유로 "접근할 수 없는 패턴"으로 불립니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>These are not
 supported by Lean.</seg>
       </tuv>
@@ -11322,6 +12186,16 @@ with applicative terms, that is, terms of form s t.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175843Z" creationid="tlqk35" creationdate="20220321T175843Z">
         <seg>이들은 응용 항을 다루기 위해 설계되었습니다. 즉,  s t 꼴의 항입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>They are not meant to be
+used directly by the user; rather, the simp tactic
+is configured to use them when necessary.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173308Z" creationid="tlqk3" creationdate="20220529T173308Z">
+        <seg>이들은 사용자로부터 직접 사용되기 위한 것이 아니라 오히려 simp 전략이 필요할 때 사용되도록 설정됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11875,6 +12749,14 @@ a quick and convenient way to begin experimenting with the system.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This provides a compact way of unpacking hypotheses that make use of logical connectives.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T161750Z" creationid="tlqk3" creationdate="20220529T161750Z">
+        <seg>이것은 논리연결사가 사용된 가정을 펼치는 간소한 방식을 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This provides a convenient way of accessing functions without opening
 a namespace.</seg>
       </tuv>
@@ -11978,6 +12860,15 @@ n : Nat.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This underscore is
+known as a wildcard pattern, or an anonymous variable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164641Z" creationid="tlqk3" creationdate="20220529T163226Z">
+        <seg>이 밑줄 문자는 와일드카드 패턴(wildcard pattern)혹은 익명 변수(anonymous variable)로 알려져 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This version of the text assumes you’re using Lean 4.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T171351Z" creationid="tlqk35" creationdate="20220321T171351Z">
@@ -11999,6 +12890,15 @@ coding trick.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134728Z" creationid="tlqk35" creationdate="20220321T134728Z">
         <seg>이 교재에서 여러분은 아래와 같은 린 코드 예제를 보게 될 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus both of the following
+proofs of zero_add work:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173354Z" creationid="tlqk3" creationdate="20220529T173354Z">
+        <seg>따라서 zero_add의 다음 증명들은 모두 작동합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12629,6 +13529,14 @@ comma instead of |.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can also use the type Option α to simulate incomplete patterns.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165857Z" creationid="tlqk3" creationdate="20220529T165857Z">
+        <seg>우리는 불완전한 패턴을 모사하려고 Option α형을 사용할 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can also use this device in function
 definitions:</seg>
       </tuv>
@@ -12712,6 +13620,16 @@ expression introduced in this way using the keyword this:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183322Z" creationid="tlqk35" creationdate="20220321T183322Z">
         <seg>이렇게 도입된 마지막 표현식을 키워드  this를 사용하여 참조할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We can simulate
+the arbitrary value approach using the Inhabited type
+class.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165405Z" creationid="tlqk3" creationdate="20220529T165405Z">
+        <seg>우리는 Inhabited 유형 클래스를 사용하여 임의값 접근법을 모사할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12886,6 +13804,16 @@ informal mathematical proofs.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183255Z" creationid="tlqk35" creationdate="20220321T183255Z">
         <seg>우리는 fun과 have,show와 같은 키워드가 비형식적인 수학적 증명의 구조를 반영하는 형식적 증명 용어를 쓸 수 있게 만든 것을 보았습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We have seen that the casesOn recursor can
+be used to define functions and prove theorems by cases, according to
+the constructors involved in an inductively defined type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T160841Z" creationid="tlqk3" creationdate="20220529T160841Z">
+        <seg>재귀적으로 정의된 유형에 연관된 생성자를 따라 우리는 casesOn 재귀자가 함수를 정의하고 경우를 나눠 정리를 증명하는데 사용될 수 있음을 보았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13138,6 +14066,14 @@ to the natural numbers:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Well-Founded Recursion and Induction</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173659Z" creationid="tlqk3" creationdate="20220529T173659Z">
+        <seg>잘 세워진 재귀와 귀납</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>What characterizes the examples we consider in this
 section is that this is not the case: each constructor relies only on
 previously specified types.</seg>
@@ -13175,11 +14111,30 @@ chapter, now proved using tactics.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>What makes recursion and
+induction possible is that they can also involve recursive calls to
+foo.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T171946Z" creationid="tlqk3" creationdate="20220529T171946Z">
+        <seg>재귀와 귀납을 가능하게 만드는 것은 이들이 foo에 대한 재귀적인 호출을 포함할 수 있다는 점 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>What makes simple type theory powerful is that you can build new types
 out of others.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135919Z" creationid="tlqk35" creationdate="20220321T135919Z">
         <seg>단순 유형론을 강력하게 만드는 것은 기본형 외의 여러분만의 새로운 유형을 만들 수 있다는 점입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>What makes the equation compiler powerful is that it also supports
+recursive definitions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170356Z" creationid="tlqk3" creationdate="20220529T170356Z">
+        <seg>방정식 컴파일러를 강력하게 만드는 것은 재귀적인 정의를 지원한다는 점입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13363,6 +14318,14 @@ field succinctly in code.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T120711Z" creationid="tlqk3" creationdate="20220526T120711Z">
         <seg>새로운 기호를 도입하는 것은 프로그래밍 언어에서 상대적으로 흔치 않은 특징이고 때떄로는 그것이 잠재적으로 코드를 모호하게 하여 종종 난처하게 함에도 이는 세워진 관행들과 각 분야의 기호를 코드에서 간결하게 표현하는 것에 대한 형식화에 있어서 귀중한 도구입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Wildcards and Overlapping Patterns</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T164617Z" creationid="tlqk3" creationdate="20220529T164617Z">
+        <seg>와일드카드와 중복되는 패턴</seg>
       </tuv>
     </tu>
     <tu>
@@ -13702,6 +14665,14 @@ subgoal produced by tactic tac1</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can also write the example above using match.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T173558Z" creationid="tlqk3" creationdate="20220529T173558Z">
+        <seg>여러분은 match를 사용해 위의 예제를 쓸 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can avoid the universe command by providing the universe parameters when defining compose.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T134439Z" creationid="tlqk3" creationdate="20220526T134439Z">
@@ -13722,6 +14693,15 @@ subgoal produced by tactic tac1</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T142112Z" creationid="tlqk35" creationdate="20220321T142112Z">
         <seg>여러분은 F를 정의할 때 universe 매개변수를 제공하는 것으로 universe 명령을 쓰지 않을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can check that this definition of foo satisfies the same
+definitional identities as before.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T165148Z" creationid="tlqk3" creationdate="20220529T165148Z">
+        <seg>여러분은 foo의 정의가 이전처럼 같은 정의 항등식을 만족하는 것을 확인할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13983,6 +14963,15 @@ dependent pair.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can write #print sub2 to see how the function was compiled to
+recursors.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T162607Z" creationid="tlqk3" creationdate="20220529T162607Z">
+        <seg>여러분은 #print sub2를 써 어떻게 함수가 재귀자로부터 컴파일되었는지 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can write a tactic script incrementally.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T055516Z" creationid="tlqk35" creationdate="20220522T055516Z">
@@ -14240,6 +15229,14 @@ interpreted relative to the Lean search path.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>mutually recursive definitions</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170453Z" creationid="tlqk3" creationdate="20220529T170448Z">
+        <seg>상호적으로 재귀적인 정의</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>notation "‹" p "›" =&gt; show p by assumption</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183620Z" creationid="tlqk35" creationdate="20220321T183620Z">
@@ -14272,6 +15269,14 @@ example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
 
 -- 고전 추론을 필요로 하는 예제
 example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>structurally recursive definitions</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170432Z" creationid="tlqk3" creationdate="20220529T170432Z">
+        <seg>구조적으로 재귀적인 정의</seg>
       </tuv>
     </tu>
     <tu>
@@ -14350,6 +15355,14 @@ example : (¬p ∨ q) → (p → q) := sorry
 example : p ∨ False ↔ p := sorry
 example : p ∧ False ↔ False := sorry
 example : (p → q) → (¬q → ¬p) := sorry</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>well-founded recursive definitions</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220529T170451Z" creationid="tlqk3" creationdate="20220529T170438Z">
+        <seg>잘 세워진 재귀적 정의</seg>
       </tuv>
     </tu>
     <tu>

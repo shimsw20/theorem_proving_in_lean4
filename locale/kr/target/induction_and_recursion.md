@@ -1,38 +1,16 @@
-Induction and Recursion
+귀납과 재귀
 =======================
 
-In the previous chapter, we saw that inductive definitions provide a
-powerful means of introducing new types in Lean. Moreover, the
-constructors and the recursors provide the only means of defining
-functions on these types. By the propositions-as-types correspondence,
-this means that induction is the fundamental method of proof.
+이전 장에서 우리는 귀납적 정의가 린의 새 유형을 도입하는 강력한 수단을 제공함을 보았습니다. 게다가 생성자와 재귀자는 이 유형에 대한 함수 정의의 유일한 수단을 제공합니다. 유형으로써 명제 대응에 따르면 이것은 귀납은 증명의 기초적인 방식임을 의미합니다.
 
-Lean provides natural ways of defining recursive functions, performing
-pattern matching, and writing inductive proofs. It allows you to
-define a function by specifying equations that it should satisfy, and
-it allows you to prove a theorem by specifying how to handle various
-cases that can arise. Behind the scenes, these descriptions are
-"compiled" down to primitive recursors, using a procedure that we
-refer to as the "equation compiler." The equation compiler is not part
-of the trusted code base; its output consists of terms that are
-checked independently by the kernel.
+린은 재귀적인 함수를 정의하는 자연스러운 방법을 제공하고, 패턴 매치를 수행하고, 귀납적 정의를 작성합니다. 이는 여러분이 그것이 만족해야 하는 방정식을 명시함으로써 함수를 정의하도록 해줍니다. 그리고 이것은 일어날 수 있는 다양한 경우를 어떻게 다뤄야 하는지 나타내줌으로써 여러분이 정리를 증명하게 해줍니다. 막의 뒤에서 이 설명은 "방정식 컴파일러"라고 부르는 절차를 사용하여 기초적인 재귀자로 "컴파일되어" 내려갑니다. 방정식 컴파일러는 신뢰받는 코드 기반의 일부가 아닙니다. 그것의 출력은 커널에 의해 독립적으로 검증된 항으로 구성됩니다.
 
-Pattern Matching
+패턴 매칭
 ----------------
 
-The interpretation of schematic patterns is the first step of the
-compilation process. We have seen that the ``casesOn`` recursor can
-be used to define functions and prove theorems by cases, according to
-the constructors involved in an inductively defined type. But
-complicated definitions may use several nested ``casesOn``
-applications, and may be hard to read and understand. Pattern matching
-provides an approach that is more convenient, and familiar to users of
-functional programming languages.
+도식적인 패턴의 해석은 컴파일 과정의 첫 단계입니다. 재귀적으로 정의된 유형에 연관된 생성자를 따라 우리는 ``casesOn`` 재귀자가 함수를 정의하고 경우를 나눠 정리를 증명하는데 사용될 수 있음을 보았습니다. 그러나 복잡해진 정의는 몇 단계로 중첩하여 ``casesOn``를 사용할 수도 있습니다. 그리고 읽고 이해하기 어렵게 될 것입니다. 패턴 매칭은 더 편리한 접근법과 함수형 프로그래밍 언어의 사용자에게 친숙한 접근법을 제공합니다.
 
-Consider the inductively defined type of natural numbers. Every
-natural number is either ``zero`` or ``succ x``, and so you can define
-a function from the natural numbers to an arbitrary type by specifying
-a value in each of those cases:
+자연수의 재귀적으로 정의된 유형을 고려해보세요. 모든 자연수는 ``zero``이거나 ``succ x``입니다. 그래서 여러분은 각 경우에 대한 값을 나타내줌으로써 자연수에서 임의의 유형으로 가는 함수를 정의할 수 있습니다.
 
 ```lean
 open Nat
@@ -46,7 +24,7 @@ def isZero : Nat → Bool
   | succ x => false
 ```
 
-The equations used to define these function hold definitionally:
+방정식들은 정의상으로 성립하는 이 함수들을 정의하는데 사용됩니다.
 
 ```lean
 # open Nat
@@ -66,7 +44,7 @@ example : sub1 7 = 6 := rfl
 example (x : Nat) : isZero (x + 3) = false := rfl
 ```
 
-Instead of ``zero`` and ``succ``, we can use more familiar notation:
+``zero``과 ``succ`` 대신 우리는 더 친숙한 기호를 사용할 수 있습니다.
 
 ```lean
 def sub1 : Nat → Nat
@@ -78,12 +56,9 @@ def isZero : Nat → Bool
   | x+1 => false
 ```
 
-Because addition and the zero notation have been assigned the
-``[matchPattern]`` attribute, they can be used in pattern matching. Lean
-simply normalizes these expressions until the constructors ``zero``
-and ``succ`` are exposed.
+왜냐하면 덧셈과 0 기호는 ``[matchPattern]`` 특성이 할당되어 있기에 그들은 패턴 매칭에 사용될 수 있습니다. 린은 단순히 이 표현식들을 생성자 ``zero``과 ``succ``이 드러날 때까지 정규화합니다.
 
-Pattern matching works with any inductive type, such as products and option types:
+패턴 매칭은 곱과 옵션 유형 같은 임의의 재귀형과 동작합니다.
 
 ```lean
 def swap : α × β → β × α
@@ -97,8 +72,7 @@ def bar : Option Nat → Nat
   | none   => 0
 ```
 
-Here we use it not only to define a function, but also to carry out a
-proof by cases:
+여기서 우리는 이것을 함수를 정의하는 것과 경우에 따른 증명을 수행하는데에도 사용합니다.
 
 ```lean
 # namespace Hidden
@@ -112,7 +86,7 @@ theorem not_not : ∀ (b : Bool), not (not b) = b
 # end Hidden
 ```
 
-Pattern matching can also be used to destruct inductively defined propositions:
+패턴 매칭은 재귀적으로 정의된 명제를 파괴하는 데에도 사용될 수 있습니다.
 
 ```lean
 example (p q : Prop) : p ∧ q → q ∧ p
@@ -123,11 +97,9 @@ example (p q : Prop) : p ∨ q → q ∨ p
   | Or.inr hq => Or.inl hq
 ```
 
-This provides a compact way of unpacking hypotheses that make use of logical connectives.
+이것은 논리연결사가 사용된 가정을 펼치는 간소한 방식을 제공합니다.
 
-In all these examples, pattern matching was used to carry out a single
-case distinction. More interestingly, patterns can involve nested
-constructors, as in the following examples.
+이 모든 에제에서 패턴 매칭은 한 경우의 구별을 수행하는데 사용됩니다. 더 흥미롭게도 패턴은 다음 예제에 있는 중첩된 생성자에도 관여할 수 있습니다.
 
 ```lean
 def sub2 : Nat → Nat
@@ -136,13 +108,7 @@ def sub2 : Nat → Nat
   | x+2 => x
 ```
 
-The equation compiler first splits on cases as to whether the input is
-``zero`` or of the form ``succ x``.  It then does a case split on
-whether ``x`` is of the form ``zero`` or ``succ x``.  It determines
-the necessary case splits from the patterns that are presented to it,
-and raises an error if the patterns fail to exhaust the cases. Once
-again, we can use arithmetic notation, as in the version below. In
-either case, the defining equations hold definitionally.
+방정식 컴파일러는 우선 입력이 ``zero``인지 ``succ x``의 꼴인지에 따라 경우를 나눕니다.  그 뒤 ``x``가 ``zero``인지 ``succ x``의 꼴인지에 따라 경우를 나눕니다.  이것은 그것에 제시된 패턴에 필요한 경우를 나누는 것을 결정하고, 패턴이 경우를 처리하는데 실패하면 오류를 발생시킵니다. 다시 한 번 우리는 산술적 기호를 아래 버전에서 처럼 사용할 수 있습니다. 각 경우에서 정의한 방정식들은 정의로 인해 성립합니다.
 
 ```lean
 # def sub2 : Nat → Nat
@@ -156,11 +122,8 @@ example : sub2 (x+2) = x := rfl
 example : sub2 5 = 3 := rfl
 ```
 
-You can write ``#print sub2`` to see how the function was compiled to
-recursors. (Lean will tell you that ``sub2`` has been defined in terms
-of an internal auxiliary function, ``sub2.match_1``, but you can print
-that out too.) Lean uses these auxiliary functions to compile `match` expressions.
-Actually, the definition above is expanded to
+여러분은 ``#print sub2``를 써 어떻게 함수가 재귀자로부터 컴파일되었는지 볼 수 있습니다. (린은 여러분에게 ``sub2``가 내부의 보조 함수 ``sub2.match_1``에 대해서 정의되었다고 말할 것입니다. 그러나 여러분은 그것도 출력해볼 수 있습니다.) 린은 이 보조 함수를 `match` 표현식을 컴파일하는데 사용합니다.
+실제로 위 정의는 다음과 같이 확장됩니다.
 
 ```lean
 def sub2 : Nat → Nat :=
@@ -171,7 +134,7 @@ def sub2 : Nat → Nat :=
     | x+2 => x
 ```
 
-Here are some more examples of nested pattern matching:
+여기 중첩된 패턴 매칭에 대한 몇 가지 추가 예제가 있습니다.
 
 ```lean
 example (p q : α → Prop)
@@ -185,9 +148,7 @@ def foo : Nat × Nat → Nat
   | (m+1, n+1) => 2
 ```
 
-The equation compiler can process multiple arguments sequentially. For
-example, it would be more natural to define the previous example as a
-function of two arguments:
+이 방정식 컴파일러는 다수의 인수를 순차적으로 처리할 수 있습니다. 예를 들어 이전 예제를 두 인수를 받는 함수로 정의하는 것이 더 자연스럽습니다.
 
 ```lean
 def foo : Nat → Nat → Nat
@@ -206,11 +167,9 @@ def bar : List Nat → List Nat → Nat
   | a :: as, b :: bs => a + b
 ```
 
-Note that the patterns are separated by commas.
+패턴이 콤마로 나뉜 것에 주목하세요.
 
-In each of the following examples, splitting occurs on only the first
-argument, even though the others are included among the list of
-patterns.
+다른 인수들도 패턴의 리스트 사이에 포함되어 있음에도 다음의 각 예제에서 분할은 첫 번째 인수에만 일어납니다.
 
 ```lean
 # namespace Hidden
@@ -228,21 +187,10 @@ def cond : Bool → α → α → α
 # end Hidden
 ```
 
-Notice also that, when the value of an argument is not needed in the
-definition, you can use an underscore instead. This underscore is
-known as a *wildcard pattern*, or an *anonymous variable*. In contrast
-to usage outside the equation compiler, here the underscore does *not*
-indicate an implicit argument. The use of underscores for wildcards is
-common in functional programming languages, and so Lean adopts that
-notation. [Section wildcards and overlapping patterns](#wildcards_and_overlapping_patterns)
-expands on the notion of a wildcard, and [Section Inaccessible Patterns](#inaccessible_terms) explains how
-you can use implicit arguments in patterns as well.
+인수의 값은 정의에서 필요하지 않음도 주목하세요. 여러분은 대신 밑줄 문자를 쓸 수 있습니다. 이 밑줄 문자는 *와일드카드 패턴(wildcard pattern)*혹은 *익명 변수(anonymous variable)*로 알려져 있습니다. 방정식 컴파일러 밖에서의 사용과 대조적으로 여기서 밑줄 문자는 암시적인 인수를 지칭하지 *않습니다.* 와일드카드에 대한 밑줄 문자의 사용은 함수형 프로그래밍 언어에서 흔합니다. 그래서 린은 이 표기를 채택합니다. [와일드카드와 중복된 패턴 섹션](#wildcards_and_overlapping_patterns)은 와일드카드에 대한 개념을 넓히고 [접근할 수 없는 패턴 섹션](#inaccessible_terms)은 여러분이 어떻게 패턴속에서도 암시적인 인수를 사용할 수 있는지 설명합니다.
 
-As described in [Chapter Inductive Types](./inductive_types.md),
-inductive data types can depend on parameters. The following example defines
-the ``tail`` function using pattern matching. The argument ``α : Type``
-is a parameter and occurs before the colon to indicate it does not participate in the pattern matching.
-Lean also allows parameters to occur after ``:``, but it cannot pattern match on them.
+[재귀형 장](./inductive_types.md)에서 설명했다시피 재귀 데이터형은 매개변수에 의존합니다. 다음 예제는 패턴 매칭을 사용해 ``tail`` 함수를 정의합니다. 인수 ``α : Type``은 매개변수이고 패턴 매칭에 참여하지 않음을 지칭하는 콜론 앞에 있습니다.
+린은 매개변수가 ``:`` 뒤에서 나타나는 것도 허용합니다. 그러나 이들에 대해 패턴 매칭은 할 수 없습니다.
 
 ```lean
 def tail1 {α : Type u} : List α → List α
@@ -254,19 +202,14 @@ def tail2 : {α : Type u} → List α → List α
   | α, a :: as => as
 ```
 
-Despite the different placement of the parameter ``α`` in these two
-examples, in both cases it treated in the same way, in that it does
-not participate in a case split.
+이 두 예제에서 매개변수 ``α``의 다른 배치에도 불구하고 두 경우 모두 같은 방식으로 다뤄집니다. 그러므로 이것은 경우 분할에 참여하지 않습니다.
 
-Lean can also handle more complex forms of pattern matching, in which
-arguments to dependent types pose additional constraints on the
-various cases. Such examples of *dependent pattern matching* are
-considered in the [Section Dependent Pattern Matching](#dependent_pattern_matching).
+린은 인수가 다양한 경우에 대해 추가적인 제약을 의존 유형에 부여하는 것 같은 패턴 매칭의 더 복잡한 형태도 다룰 수 있습니다. 그런 *종속적인 패턴 매칭*의 예제는 [종속적인 패턴 매칭 섹션](#dependent_pattern_matching)에서 다뤄집니다.
 
-Wildcards and Overlapping Patterns
+와일드카드와 중복되는 패턴
 ----------------------------------
 
-Consider one of the examples from the last section:
+지난 섹션의 예제 중 하나를 고려해 봅시다.
 
 ```lean
 def foo : Nat → Nat → Nat
@@ -282,11 +225,7 @@ def foo : Nat → Nat → Nat
   | m, n => 2
 ```
 
-In the second presentation, the patterns overlap; for example, the
-pair of arguments ``0 0`` matches all three cases. But Lean handles
-the ambiguity by using the first applicable equation, so in this example
-the net result is the same. In particular, the following equations hold
-definitionally:
+두 번째 나타남에서 패턴은 겹칩니다. 예를 들어 인수의 쌍 ``0 0``은 세 경우 모두 일치합니다. 그러나 린은 활용할 수 있는 첫 방정식을 사용하여 모호성을 해소합니다. 그래서 이 예제에서 최종 결과는 같습니다. 특히 다음 방정식은 정의로부터 성립합니다.
 
 ```lean
 # def foo : Nat → Nat → Nat
@@ -299,7 +238,7 @@ example : foo (m+1) 0     = 1 := rfl
 example : foo (m+1) (n+1) = 2 := rfl
 ```
 
-Since the values of ``m`` and ``n`` are not needed, we can just as well use wildcard patterns instead.
+``m``과 ``n``의 값은 필요하지 않으므로 우리는 와일드카드 패턴을 대신 사용하여도 됩니다.
 
 ```lean
 def foo : Nat → Nat → Nat
@@ -308,25 +247,12 @@ def foo : Nat → Nat → Nat
   | _, _ => 2
 ```
 
-You can check that this definition of ``foo`` satisfies the same
-definitional identities as before.
+여러분은 ``foo``의 정의가 이전처럼 같은 정의 항등식을 만족하는 것을 확인할 수 있습니다.
 
-Some functional programming languages support *incomplete
-patterns*. In these languages, the interpreter produces an exception
-or returns an arbitrary value for incomplete cases. We can simulate
-the arbitrary value approach using the ``Inhabited`` type
-class. Roughly, an element of ``Inhabited α`` is a witness to the fact
-that there is an element of ``α``; in the [Chapter Type Classes](./type_classes.md)
-we will see that Lean can be instructed that suitable
-base types are inhabited, and can automatically infer that other
-constructed types are inhabited. On this basis, the
-standard library provides a default element, ``defaulty``, of
-any inhabited type.
+어떤 함수형 프로그래밍 언어는 *불완전한 패턴* 기능을 지원합니다. 이 언어들에서 인터프리터는 예외을 만들거나 불완전한 경우에 대한 임의의 값을 반환합니다. 우리는 ``Inhabited`` 유형 클래스를 사용하여 임의값 접근법을 모사할 수 있습니다. 대략적으로 ``Inhabited α``의 원소는 ``α``의 원소가 있다는 사실의 목격자입니다. [유형 클래스 장](./type_classes.md)에서 우리는 린이 적절한 기반 유형이 머물러 있고, 자동적으로 다른 생성 유형이 머물러 있는지 추론하는 것을 배울 수 있음을 볼 예정입니다. 이 기초로부터 표준 라이브러리는 임의의 거주 유형에 대해 기본 원소 ``defaulty``를 제공합니다.
 
-We can also use the type ``Option α`` to simulate incomplete patterns.
-The idea is to return ``some a`` for the provided patterns, and use
-``none`` for the incomplete cases. The following example demonstrates
-both approaches.
+우리는 불완전한 패턴을 모사하려고 ``Option α``형을 사용할 수도 있습니다.
+이 아이디어는 제공받은 패턴에 대해 ``some a``를 반환하는 것입니다. 그리고 불완전한 경우에 대해 ``none``을 사용합니다. 다음 예제는 두 접근법을 보여줍니다.
 
 ```lean
 def f1 : Nat → Nat → Nat
@@ -350,9 +276,7 @@ example : f2 (a+1) 0     = some 2 := rfl
 example : f2 (a+1) (b+1) = none   := rfl
 ```
 
-The equation compiler is clever. If you leave out any of the cases in
-the following definition, the error message will let you know what has
-not been covered.
+방정식 컴파일러는 영리합니다. 여러분이 다음 정의에서 어떤 경우라도 빠트리면, 오류 메시지가 어떤 것이 다뤄지지 못했는지 알릴 것입니다.
 
 ```lean
 def bar : Nat → List Nat → Bool → Nat
@@ -364,7 +288,7 @@ def bar : Nat → List Nat → Bool → Nat
   | a+1, b :: _, _     => a + b
 ```
 
-It will also use an "if ... then ... else" instead of a ``casesOn`` in appropriate situations.
+이것은 적절한 상황에서 ``casesOn`` 대신  "if ... then ... else"을 사용할 수도 있습니다.
 
 ```lean
 def foo : Char → Nat
@@ -375,18 +299,16 @@ def foo : Char → Nat
 #print foo.match_1
 ```
 
-Structural Recursion and Induction
+구조적 재귀와 귀납
 ----------------------------------
 
-What makes the equation compiler powerful is that it also supports
-recursive definitions. In the next three sections, we will describe,
-respectively:
+방정식 컴파일러를 강력하게 만드는 것은 재귀적인 정의를 지원한다는 점입니다. 다음 세 섹션에서 우리는 개별적으로 설명할 예정입니다.
 
-- structurally recursive definitions
-- well-founded recursive definitions
-- mutually recursive definitions
+- 구조적으로 재귀적인 정의
+- 잘 세워진 재귀적 정의
+- 상호적으로 재귀적인 정의
 
-Generally speaking, the equation compiler processes input of the following form:
+폭넓게 말하자면, 방정식 컴파일러는 다음 형태의 입력을 처리합니다.
 
 ```
 def foo (a : α) : (b : β) → γ
@@ -395,33 +317,9 @@ def foo (a : α) : (b : β) → γ
   | [patternsₙ] => tₙ
 ```
 
-Here ``(a : α)`` is a sequence of parameters, ``(b : β)`` is the
-sequence of arguments on which pattern matching takes place, and ``γ``
-is any type, which can depend on ``a`` and ``b``. Each line should
-contain the same number of patterns, one for each element of ``β``. As we
-have seen, a pattern is either a variable, a constructor applied to
-other patterns, or an expression that normalizes to something of that
-form (where the non-constructors are marked with the ``[matchPattern]``
-attribute). The appearances of constructors prompt case splits, with
-the arguments to the constructors represented by the given
-variables. In [Section Dependent Pattern Matching](#dependent_pattern_matching),
-we will see that it is sometimes necessary to include explicit terms in patterns that
-are needed to make an expression type check, though they do not play a
-role in pattern matching. These are called "inaccessible patterns" for
-that reason. But we will not need to use such inaccessible patterns
-before [Section Dependent Pattern Matching](#dependent_pattern_matching).
+여기서 ``(a : α)``는 매개변수의 나열입니다. 패턴 매칭이 일어나는 ``(b : β)``은 인수의 나열입니다. 그리고 ``γ``는 ``a``와 ``b``에 의존할 수 있는 임의의 유형입니다. 각 줄은 ``β``의 각 원소에 대해 한 개씩 같은 수의 패턴을 포함해야 합니다. 우리가 봤던 것처럼 패턴은 생성자가 다른 패턴을 적용한 변수이거나 그 형태를 무언가로 정규화한 표현식입니다. (여기서 비생성자는 ``[matchPattern]`` 속성으로 표시되었습니다.) 생성자의 출현은 제시된 변수로 표현된 생성자에 대한 인수로 경우를 신속히 나눕니다. 이들이 패턴 매칭에 핵심 역할을 하지 않더라도 [의존적인 패턴 매칭 섹션](#dependent_pattern_matching)에서 우리는 이것이 때때로 표현식 유형 확인을 만드는데 필요한 패턴에 대해 명시적으로 포함될 필요가 있음을 볼 것입니다. 이들은 이런 이유로 "접근할 수 없는 패턴"으로 불립니다. 그러나 우리는 [의존적인 패턴 매칭 섹션](#dependent_pattern_matching) 전까지 그런 접근할 수 없는 패턴을 사용할 필요는 없을 것입니다.
 
-As we saw in the last section, the terms ``t₁, ..., tₙ`` can make use
-of any of the parameters ``a``, as well as any of the variables that
-are introduced in the corresponding patterns. What makes recursion and
-induction possible is that they can also involve recursive calls to
-``foo``. In this section, we will deal with *structural recursion*, in
-which the arguments to ``foo`` occurring on the right-hand side of the
-``:=`` are subterms of the patterns on the left-hand side. The idea is
-that they are structurally smaller, and hence appear in the inductive
-type at an earlier stage. Here are some examples of structural
-recursion from the last chapter, now defined using the equation
-compiler:
+우리가 지난 섹션에서 보았듯이, 항 ``t₁, ..., tₙ``은 대응되는 패턴에서 도입된 임의의 변수 뿐만 아니라 임의의 매개변수 ``a``를 사용할 수 있게 만듭니다. 재귀와 귀납을 가능하게 만드는 것은 이들이 ``foo``에 대한 재귀적인 호출을 포함할 수 있다는 점 입니다. 이 섹션에서 우리는 *구조적 재귀*를 다룰 예정입니다. 여기서 ``foo``에 대한 인수는 좌변에 대한 패턴의 부분항인 ``:=``의 우변에서 나타납니다. 아이디어는 이들이 구조적으로 더 작고 그러므로 앞 단에서 귀납형으로 나타날 수 있다는 것입니다. 이제 방정식 컴파일러를 사용해 정의될 마지막 장의 구조적 재귀에 대한 몇 가지 예제가 있습니다.
 
 ```lean
 open Nat
@@ -441,19 +339,9 @@ def mul : Nat → Nat → Nat
   | n, succ m => add (mul n m) n
 ```
 
-The proof of ``zero_add`` makes it clear that proof by induction is
-really a form of recursion in Lean.
+``zero_add``의 증명은 귀납적 증명은 실제로 린에서 재귀의 한 형태라는 점을 명확히 합니다.
 
-The example above shows that the defining equations for ``add`` hold
-definitionally, and the same is true of ``mul``. The equation compiler
-tries to ensure that this holds whenever possible, as is the case with
-straightforward structural induction. In other situations, however,
-reductions hold only *propositionally*, which is to say, they are
-equational theorems that must be applied explicitly. The equation
-compiler generates such theorems internally. They are not meant to be
-used directly by the user; rather, the `simp` tactic
-is configured to use them when necessary. Thus both of the following
-proofs of `zero_add` work:
+위 예제에서 ``add``에 대해 정의한 방정식은 정의로부터 성립함을 보여줍니다. 그리고 ``mul``에서 같은 방식으로 참이 됨을 보입니다. 방정식 컴파일러는 직관적인 구조적 재귀와 같은 한 언제든 이것이 성립함을 보장하려고 시도합니다. 하지만 다른 상황에서 축약은 *명제적으로*만 성립합니다. 즉, 명시적으로 적용해야 하는 등식 정리입니다. 방정식 컴파일러는 그런 정리를 내부적으로 생성합니다. 이들은 사용자로부터 직접 사용되기 위한 것이 아니라 오히려 `simp` 전략이 필요할 때 사용되도록 설정됩니다. 따라서 `zero_add`의 다음 증명들은 모두 작동합니다.
 
 ```lean
 open Nat
@@ -496,11 +384,7 @@ definitional reductions only, to carry out the first step.
     end hidden
 -->
 
-As with definition by pattern matching, parameters to a structural
-recursion or induction may appear before the colon. Such parameters
-are simply added to the local context before the definition is
-processed. For example, the definition of addition may also be written
-as follows:
+패턴 매칭의 정의에서처럼 구조적 재귀나 귀납에 대한 매개변수는 콜론 앞에 나타날 수 있습니다. 그런 매개변수들은 단순히 정의가 처리되기 전에 지역 상황에 추가됩니다. 예를 들어 덧셈의 정의는 다음과 같이 작성될 수 있습니다.
 
 ```lean
 open Nat
@@ -509,7 +393,7 @@ def add (m : Nat) : Nat → Nat
   | succ n => succ (add m n)
 ```
 
-You can also write the example above using `match`.
+여러분은 `match`를 사용해 위의 예제를 쓸 수도 있습니다.
 
 ```lean
 open Nat
@@ -519,7 +403,7 @@ def add (m n : Nat) : Nat :=
   | succ n => succ (add m n)
 ```
 
-A more interesting example of structural recursion is given by the Fibonacci function ``fib``.
+구조적 재귀의 더 흥미로운 예제는 피보나치 함수 ``fib``로부터 제시됩니다.
 
 ```lean
 def fib : Nat → Nat
@@ -627,16 +511,12 @@ def listAdd [Add α] : List α → List α → List α
 
 You are encouraged to experiment with similar examples in the exercises below.
 
-Well-Founded Recursion and Induction
+잘 세워진 재귀와 귀납
 ------------------------------------
 
-Dependent type theory is powerful enough to encode and justify
-well-founded recursion. Let us start with the logical background that
-is needed to understand how it works.
+종속 유형론은 잘 세워진 재귀를 부호화하고 정당화하기에 충분히 강력합니다. 우선 이것이 어떻게 동작하는지 이해하는데 필요한 논리적 배경으로 시작합시다.
 
-Lean's standard library defines two predicates, ``Acc r a`` and
-``WellFounded r``, where ``r`` is a binary relation on a type ``α``,
-and ``a`` is an element of type ``α``.
+린의 표준 라이브러리는 두 술어 ``Acc r a``과 ``WellFounded r``을 정의합니다. 여기서 ``r``은 ``α``형에 대한 이항 관계이고 ``a``는 ``α``형 원소입니다.
 
 ```lean
 variable (α : Sort u)
@@ -646,22 +526,9 @@ variable (r : α → α → Prop)
 #check (WellFounded r : Prop)
 ```
 
-The first, ``Acc``, is an inductively defined predicate. According to
-its definition, ``Acc r x`` is equivalent to
-``∀ y, r y x → Acc r y``. If you think of ``r y x`` as denoting a kind of order relation
-``y ≺ x``, then ``Acc r x`` says that ``x`` is accessible from below,
-in the sense that all its predecessors are accessible. In particular,
-if ``x`` has no predecessors, it is accessible. Given any type ``α``,
-we should be able to assign a value to each accessible element of
-``α``, recursively, by assigning values to all its predecessors first.
+우선 ``Acc``은 귀납적으로 정의된 술어입니다. 이것의 정의에 따르면 ``Acc r x``는 ``∀ y, r y x → Acc r y``과 동등합니다. 여러분이 ``r y x``을 순서 관계 ``y ≺ x``의 일종으로 나타났다고 생각한다면 ``Acc r x``는 ``x``가 아래로부터 접근가능하다고 말합니다. 이 관점으로부터 그것의 모든 전임자들은 접근가능합니다. 특히 ``x``의 전임자가 없다면 그것은 접근가능합니다. 임의의 유형 ``α``에 대해서 우리는 그것의 모든 전임자들을 우선으로 값을 할당하여 ``α``의 각 접근 가능한 원소에 값을 재귀적으로 할당할 수 있어야 합니다.
 
-The statement that ``r`` is well founded, denoted ``WellFounded r``,
-is exactly the statement that every element of the type is
-accessible. By the above considerations, if ``r`` is a well-founded
-relation on a type ``α``, we should have a principle of well-founded
-recursion on ``α``, with respect to the relation ``r``. And, indeed,
-we do: the standard library defines ``WellFounded.fix``, which serves
-exactly that purpose.
+``WellFounded r``로 표시되어 잘 세워진 명제 ``r``는 바로 그 유형의 모든 원소가 접근 가능한 명제입니다. 위의 고려로부터 만약 ``r``이 ``α``형에 대해 잘 세워진 관계이면, 우리는 관계 ``r``에 대해서 ``α``에 대해 잘 세워진 재귀의 원리를 가져야 합니다. 그리고 물론 우리는 이를 갖습니다. 표준 라이브러리는 바로 그 목적을 담당하는 ``WellFounded.fix``를 정의합니다.
 
 ```lean
 set_option codegen false
@@ -732,7 +599,7 @@ convenient. It accepts the following:
 
     namespace hidden
     open nat
-
+    
     -- BEGIN
     def div : ℕ → ℕ → ℕ
     | x y :=
@@ -743,7 +610,7 @@ convenient. It accepts the following:
       else
         0
     -- END
-
+    
     end hidden
 
 When the equation compiler encounters a recursive definition, it first
@@ -765,7 +632,7 @@ will loop if you apply it blindly, but ``rewrite`` will do the trick.
 
     namespace hidden
     open nat
-
+    
     def div : ℕ → ℕ → ℕ
     | x y :=
       if h : 0 < y ∧ y ≤ x then
@@ -774,17 +641,17 @@ will loop if you apply it blindly, but ``rewrite`` will do the trick.
         div (x - y) y + 1
       else
         0
-
+    
     -- BEGIN
     example (x y : ℕ) :
       div x y = if 0 < y ∧ y ≤ x then div (x - y) y + 1 else 0 :=
     by rw [div]
-
+    
     example (x y : ℕ) (h : 0 < y ∧ y ≤ x) :
       div x y = div (x - y) y + 1 :=
     by rw [div, if_pos h]
     -- END
-
+    
     end hidden
 
 The following example is similar: it converts any natural number to a
@@ -802,7 +669,7 @@ successfully.
     | (n + 2) :=
       have (n + 2) / 2 < n + 2, from sorry,
       nat_to_bin ((n + 2) / 2) ++ [n % 2]
-
+    
     #eval nat_to_bin 1234567
 
 As a final example, we observe that Ackermann's function can be
@@ -815,7 +682,7 @@ the lexicographic order on the natural numbers.
     | 0     y     := y+1
     | (x+1) 0     := ack x 1
     | (x+1) (y+1) := ack x (ack (x+1) y)
-
+    
     #eval ack 3 5
 
 Lean's mechanisms for guessing a well-founded relation and then
@@ -845,13 +712,13 @@ Lean also supports mutual recursive definitions. The syntax is similar to that f
     with odd : nat → bool
     | 0     := ff
     | (a+1) := even a
-
+    
     example (a : nat) : even (a + 1) = odd a :=
     by simp [even]
-
+    
     example (a : nat) : odd (a + 1) = even a :=
     by simp [odd]
-
+    
     lemma even_eq_not_odd : ∀ a, even a = bnot (odd a) :=
     begin
       intro a, induction a,
@@ -882,12 +749,12 @@ The constructors, ``even_zero``, ``even_succ``, and ``odd_succ`` provide positiv
     | even_succ : ∀ n, odd n → even (n + 1)
     with odd : ℕ → Prop
     | odd_succ : ∀ n, even n → odd (n + 1)
-
+    
     -- BEGIN
     open even odd
-
+    
     theorem not_odd_zero : ¬ odd 0.
-
+    
     mutual theorem even_of_odd_succ, odd_of_even_succ
     with even_of_odd_succ : ∀ n, odd (n + 1) → even n
     | _ (odd_succ n h) := h
@@ -910,10 +777,10 @@ We can then use a mutual recursive definition to count the number of constants o
     inductive term
     | const : string → term
     | app   : string → list term → term
-
+    
     -- BEGIN
     open term
-
+    
     mutual def num_consts, num_consts_lst
     with num_consts : term → nat
     | (term.const n)  := 1
@@ -921,9 +788,9 @@ We can then use a mutual recursive definition to count the number of constants o
     with num_consts_lst : list term → nat
     | []      := 0
     | (t::ts) := num_consts t + num_consts_lst ts
-
+    
     def sample_term := app "f" [app "g" [const "x"], const "y"]
-
+    
     #eval num_consts sample_term
     -- END
 
