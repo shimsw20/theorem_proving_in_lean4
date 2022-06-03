@@ -418,12 +418,7 @@ example : fib (n + 2) = fib (n + 1) + fib n := rfl
 example : fib 7 = 21 := rfl
 ```
 
-Here, the value of the ``fib`` function at ``n + 2`` (which is
-definitionally equal to ``succ (succ n)``) is defined in terms of the
-values at ``n + 1`` (which is definitionally equivalent to ``succ n``)
-and the value at ``n``. This is a notoriously inefficient way of
-computing the fibonacci function, however, with an execution time that
-is exponential in ``n``. Here is a better way:
+여기서 (정의로 인해 ``succ (succ n)``과 같은)``n + 2``에서 ``fib``의 함수값은 (``succ n``와 정의로 인해 동등한)``n + 1`` 에서의 값과 ``n``에서 값에 대하여 정의되었다. 이것은 계산 시간이 ``n``에 대해 지수적인 피보나치 함수를 계산하는 악명높게 비효율적인 방식이지만 여기 더 나은 방식이 있습니다.
 
 ```lean
 def fibFast (n : Nat) : Nat :=
@@ -436,7 +431,7 @@ where
 #eval fibFast 100
 ```
 
-Here is the same definition using a `let rec` instead of a `where`.
+`where` 대신 `let rec`을 사용한 같은 정의가 있습니다.
 
 ```lean
 def fibFast (n : Nat) : Nat :=
@@ -446,13 +441,9 @@ def fibFast (n : Nat) : Nat :=
   (loop n).1
 ```
 
-In both cases, Lean generates the auxiliary function `fibFast.loop`.
+두 경우 모두에 대해 린은 부가 함수 `fibFast.loop`를 만듭니다.
 
-To handle structural recursion, the equation compiler uses
-*course-of-values* recursion, using constants ``below`` and ``brecOn``
-that are automatically generated with each inductively defined
-type. You can get a sense of how it works by looking at the types of
-``Nat.below`` and ``Nat.brecOn``:
+구조적 재귀를 다루려고 방정식 컴파일러는 각 귀납적으로 정의된 유형으로부터 자동적으로 생성된 상수 ``below``와 ``brecOn``을 사용하여 *course-of-values*재귀를 사용합니다. 여러분은 ``Nat.below``과 ``Nat.brecOn``의 유형을 봄으로써 이것이 어떻게 동작하는지에 대해 감을 얻을 수 있습니다.
 
 ```lean
 variable (C : Nat → Type u)
@@ -464,16 +455,11 @@ variable (C : Nat → Type u)
 #check (@Nat.brecOn C : (n : Nat) → ((n : Nat) → @Nat.below C n → C n) → C n)
 ```
 
-The type ``@Nat.below C (3 : nat)`` is a data structure that stores elements of ``C 0``, ``C 1``, and ``C 2``.
-The course-of-values recursion is implemented by ``Nat.brecOn``. It enables us to define the value of a dependent
-function of type ``(n : Nat) → C n`` at a particular input ``n`` in terms of all the previous values of the function,
-presented as an element of ``@Nat.below C n``.
+``@Nat.below C (3 : nat)``형은 ``C 0``, ``C 1``과 ``C 2``의 원소를 저장하는 데이터 구조입니다.
+course-of-values 재귀는 ``Nat.brecOn``로 구현됩니다. 이것은 ``@Nat.below C n``의 원소로 나타났던 함수의 모든 이전의 값들로 특정 입력 ``n``에 대해 ``(n : Nat) → C n``형의 종속함수의 값을 정의할 수 있게 해줍니다. 
 
-The use of course-of-values recursion is one of the techniques the equation compiler uses to justify to
-the Lean kernel that a function terminates. It does not affect the code generator which compiles recursive
-functions as other functional programming language compilers. Recall that `#eval fib <n>` is exponential on `<n>`.
-On the other hand, `#reduce fib <n>` is efficient because it uses the definition sent to the kernel that
-is based on the `brecOn` construction.
+course-of-values 재귀의 사용은 방정식 컴파일러가 함수를 끝내는 린 커널을 정당화하는데 사용하는 한 기법입니다. 다른 함수형 프로그래밍 언어의 컴파일러와 마찬가지로 이것은 재귀 함수를 컴파일하는 코드 생성기에 영향을 끼치지 않습니다. `#eval fib <n>`가 `<n>`에 대해 지수적이었음을 기억하세요.
+다른 한편 `#reduce fib <n>`는 `brecOn` 생성자에 기반한 커널에 보내져 정의를 사용하기 때문에 효율적입니다.
 
 ```lean
 def fib : Nat → Nat
@@ -487,7 +473,7 @@ def fib : Nat → Nat
 #print fib
 ```
 
-Another good example of a recursive definition is the list ``append`` function.
+재귀적 정의의 또 다른 좋은 예제는 리스트 ``append`` 함수입니다.
 
 ```lean
 def append : List α → List α → List α
@@ -497,7 +483,7 @@ def append : List α → List α → List α
 example : append [1, 2, 3] [4, 5] = [1, 2, 3, 4, 5] := rfl
 ```
 
-Here is another: it adds elements of the first list to elements of the second list, until one of the two lists runs out.
+여기 또 다른 것이 있습니다. 이것은 둘 중의 한 리스트의 원소가 소진될 때까지 첫 리스트의 원소를 두 번째 리스트의 원소와 더합니다.
 
 ```lean
 def listAdd [Add α] : List α → List α → List α
@@ -509,7 +495,7 @@ def listAdd [Add α] : List α → List α → List α
 -- [5, 7, 9]
 ```
 
-You are encouraged to experiment with similar examples in the exercises below.
+여러분은 아래 연습에서 비슷한 예제로 실험해보길 권유합니다.
 
 잘 세워진 재귀와 귀납
 ------------------------------------
@@ -540,30 +526,15 @@ def f {α : Sort u}
       : (x : α) → C x := WellFounded.fix h F
 ```
 
-There is a long cast of characters here, but the first block we have
-already seen: the type, ``α``, the relation, ``r``, and the
-assumption, ``h``, that ``r`` is well founded. The variable ``C``
-represents the motive of the recursive definition: for each element
-``x : α``, we would like to construct an element of ``C x``. The
-function ``F`` provides the inductive recipe for doing that: it tells
-us how to construct an element ``C x``, given elements of ``C y`` for
-each predecessor ``y`` of ``x``.
+여기 문자의 긴 캐스트가 있지만 우리는 이미 유형 ``α``, 관계 ``r`` 그리고 가정 ``h``으로 된 첫 블럭을 봤습니다. 여기서 ``r``은 잘 세워진 것입니다. 변수 ``C``는 재귀적 정의의 동기를 나타냅니다. 각 원소 ``x : α``에 대하여 우리는 ``C x``의 원소를 생성하고자 합니다. 함수 ``F``는 그것을 하는데 귀납적인 요리법을 제공합니다. 이것은 ``x``의 각 선행자 ``y``에 대해``C y``의  원소가 주어진 경우 원소 ``C x``를 생성하는 법을 우리에게 말해줍니다.
 
-Note that ``WellFounded.fix`` works equally well as an induction
-principle. It says that if ``≺`` is well founded and you want to prove
-``∀ x, C x``, it suffices to show that for an arbitrary ``x``, if we
-have ``∀ y ≺ x, C y``, then we have ``C x``.
+``WellFounded.fix``는 귀납 원리와 같이 동등하게 동작함을 주목하세요. 이것은 만약 ``≺``이 잘 세워졌고 여러분이 ``∀ x, C x``을 증명하기 원한다고 말하면, 이는 임의의  ``x``에 대해 우리가 ``∀ y ≺ x, C y``이면 ``C x``임을 보이는 것으로 충분합니다.
 
-In the example above we set the option `codegen` to false because the code
-generator currently does not support `WellFounded.fix`. The function
-`WellFounded.fix` is another tool Lean uses to justify that a function
-terminates.
+위의 예제에서 우리는 옵션 `codegen`이 실패하도록 설정했습니다. 왜냐하면 코드 생성기는 현재  `WellFounded.fix`를 지원하지 않기 때문입니다. 함수 `WellFounded.fix`은 린이 함수 종료를 정당화하는데 사용하는 또 다른 도구입니다.
 
-Lean knows that the usual order ``<`` on the natural numbers is well
-founded. It also knows a number of ways of constructing new well
-founded orders from others, for example, using lexicographic order.
+린은 자연수에 대한 평상시 순서 ``<``가 잘 세워졌다는 것을 압니다. 이것도 다른 것으로부터 새로운 잘 세워진 순서를 생성하는 많은 방법을 알고 있습니다. 예를 들어 사전적 순서를 사용하는 것입니다.
 
-Here is essentially the definition of division on the natural numbers that is found in the standard library.
+여기 있는 것은 본질적으로 표준 라이브러리에서 찾을 수 있는 자연수에 대한 나눗셈 정의입니다.
 
 ```lean
 open Nat
@@ -583,17 +554,11 @@ def div := WellFounded.fix (measure id).wf div.F
 #reduce div 8 2 -- 4
 ```
 
-The definition is somewhat inscrutable. Here the recursion is on
-``x``, and ``div.F x f : Nat → Nat`` returns the "divide by ``y``"
-function for that fixed ``x``. You have to remember that the second
-argument to ``div.F``, the recipe for the recursion, is a function
-that is supposed to return the divide by ``y`` function for all values
-``x₁`` smaller than ``x``.
+정의는 무언가 헤아리기가 어렵습니다. 여기서 재귀는 ``x``에 있습니다. 그리고 ``div.F x f : Nat → Nat``는 고정된 ``x``에 대해 "``y``로 나눔" 함수를 반환합니다. 여러분은 재귀를 위한 요리법인 ``div.F``의 두 번째 인수가 ``x``보다 작은 모든 ``x₁``값에 대한 ``y`` 함수로 나눠진 것을 반환하기로 한 함수임을 기억해야만 합니다.
 
-The equation compiler is designed to make definitions like this more
-convenient. It accepts the following:
+방정식 컴파일러는 이 같은 정의를 만드는 데 더 편리하도록 설계되었습니다. 이것은 다음을 받습니다.
 
-**TODO: waiting for well-founded support in Lean 4**
+**할 것: 린4가 지원하는 잘 세워진 식을 대기하기**
 
 .. code-block:: lean
 
@@ -613,20 +578,9 @@ convenient. It accepts the following:
     
     end hidden
 
-When the equation compiler encounters a recursive definition, it first
-tries structural recursion, and only when that fails, does it fall
-back on well-founded recursion. In this case, detecting the
-possibility of well-founded recursion on the natural numbers, it uses
-the usual lexicographic ordering on the pair ``(x, y)``. The equation
-compiler in and of itself is not clever enough to derive that ``x -
-y`` is less than ``x`` under the given hypotheses, but we can help it
-out by putting this fact in the local context. The equation compiler
-looks in the local context for such information, and, when it finds
-it, puts it to good use.
+방정식 컴파일러가 재귀적 정의를 만날 때, 는 처음 구조적 재귀를 시도하고 그게 실패했을 때 잘 세워진 재귀로 대체됩니다. 이 경우 자연수에 대한 잘 세워진 재귀의 가능성을 감지하여 순서쌍 ``(x, y)``에 대해 평범한 사전적 순서를 사용합니다. 방정식 컴파일러의 속과 그 자체는 주어진 가정 하에서 ``x -y``가 ``x``보다 작다는 것을 유도할만큼 영리하지 않습니다. 그러나 우리는 그것을 지역 맥락에 이 사실을 넣음으로써 도울 수 있습니다. 방정식 컴파일러는 그런 정보에 대해 지역 맥락에서 보고 그것을 찾을 때 사용하기 좋게 둡니다.
 
-The defining equation for ``div`` does *not* hold definitionally, but
-the equation is available to ``rewrite`` and ``simp``. The simplifier
-will loop if you apply it blindly, but ``rewrite`` will do the trick.
+``div`` 로 방정식을 정의하는 것은 정의로부터 성립하지 *않습니다.* 그래도 방정식은 ``rewrite``와 ``simp``를 사용할 수 있습니다.  단순화기는 여러분이 맹목적으로 적용한다면 무한루프를 돌 것입니다. 그러나 ``rewrite``는 트릭을 씁니다.
 
 .. code-block:: lean
 
@@ -654,12 +608,7 @@ will loop if you apply it blindly, but ``rewrite`` will do the trick.
     
     end hidden
 
-The following example is similar: it converts any natural number to a
-binary expression, represented as a list of 0's and 1's. We have to
-provide the equation compiler with evidence that the recursive call is
-decreasing, which we do here with a ``sorry``. The ``sorry`` does not
-prevent the bytecode evaluator from evaluating the function
-successfully.
+다음 예제는 이것이 어떤 자연수를 이진 표현식으로 바꾸고 0과 1의 리스트로 나타낸다는 점에서 비슷합니다. 우리는 방정식 컴파일러에게 재귀호출이 감소한다는 증거를 주어야 합니다. 여기서 우리는 ``sorry``로 했습니다. ``sorry``는 바이트코드 평가기가 함수를 성공적으로 평가하는 것을 막지 못합니다.
 
 .. code-block:: lean
 
@@ -672,9 +621,7 @@ successfully.
     
     #eval nat_to_bin 1234567
 
-As a final example, we observe that Ackermann's function can be
-defined directly, because it is justified by the well foundedness of
-the lexicographic order on the natural numbers.
+마지막 예제로 우리는 Ackermann 함수가 직접적으로 정의되는 것을 관찰합니다. 왜냐하면 이것은 자연수에 대해 사전적 순서로 잘 세워짐으로 정당활 될 수 있기 때문입니다.
 
 .. code-block:: lean
 
@@ -685,23 +632,18 @@ the lexicographic order on the natural numbers.
     
     #eval ack 3 5
 
-Lean's mechanisms for guessing a well-founded relation and then
-proving that recursive calls decrease are still in a rudimentary
-state. They will be improved over time. When they work, they provide a
-much more convenient way of defining functions than using
-``WellFounded.fix`` manually. When they don't, the latter is always
-available as a backup.
+린의 잘 세워진 관계식을 추론하는 메커니즘과 재귀적인 호출이 줄어든다는 증명은 여전히 기초적인 상태입니다. 그들은 시간이 지나면서 개선될 것입니다. 그들이 동작할 때, 그들은 수동적으로 ``WellFounded.fix``를 사용하는 것보다 함수를 정의하는 훨씬 더 편리한 방법을 제공합니다. 그들이 동작하지 않을 때 후자는 백업으로 항상 사용할 수 있습니다.
 
-.. TO DO: eventually, describe using_well_founded.
+.. 할 것: 결국, 잘 세워진을 사용하는 것을 기술하기.
 
-.. nested_and_mutual_recursion:
+.. 중접되고 상호적인 재귀
 
-Mutual Recursion
+상호적인 재귀
 ----------------
 
-**TODO: waiting for well-founded support in Lean 4**
+**할 것: 린4가 지원하는 잘 세워진 식을 대기하기**
 
-Lean also supports mutual recursive definitions. The syntax is similar to that for mutual inductive types, as described in :numref:`mutual_and_nested_inductive_types`. 여기 예제가 있습니다.
+린도 상호적인 재귀적 정의를 지원합니다. numref`상호적이고 재귀적인 귀납형`에서 기술한 바처럼 문법은 상호 귀납적인 유형에 대한 것과 비슷합니다. 여기 예제가 있습니다.
 
 .. code-block:: lean
 
@@ -726,9 +668,9 @@ Lean also supports mutual recursive definitions. The syntax is similar to that f
       simp [*, even, odd]
     end
 
-What makes this a mutual definition is that ``even`` is defined recursively in terms of ``odd``, while ``odd`` is defined recursively in terms of ``even``. Under the hood, this is compiled as a single recursive definition. The internally defined function takes, as argument, an element of a sum type, either an input to ``even``, or an input to ``odd``. It then returns an output appropriate to the input. To define that function, Lean uses a suitable well-founded measure. The internals are meant to be hidden from users; the canonical way to make use of such definitions is to use ``rewrite`` or ``simp``, as we did above.
+이를 상호적인 정의로 만드는 것은 ``even``이``odd``에 대해 재귀적으로 정의되었고, 한편 ``odd``는 ``even``에 대해 재귀적으로 정의되었다는 점이다. 후드 아래에서 이것은 단일 재귀적 정의로 컴파일된다. 내부적으로 정의된 함수는 인수로써 ``even``의 입력으로나 ``odd``의 입력으로 합 유형의 원소로 받습니다. 그럼 이것은 입력에 대한 적절한 출력을 반환합니다. 이런 함수를 정의하려면 린은 적절히 잘 세워진 척도를 사용합니다. 내부는 사용자로부터 숨겨지도록 의도되었습니다. 그런 정의를 만들어 사용하는 정식 방법은 ``rewrite``나 ``simp``를 우리가 위에서 했던 것처럼 사용하는 것입니다.
 
-Mutual recursive definitions also provide natural ways of working with mutual and nested inductive types, as described in :numref:`mutual_and_nested_inductive_types`. Recall the definition of ``even`` and ``odd`` as mutual inductive predicates, as presented as an example there:
+상호적으로 재귀적인 정의도 :numref:`상호적이고 중첩된 재귀형`에서 설명한 것처럼 상호적이고  중첩된 귀납형을 다루는 자연스러운 방식을 제공합니다.  ``even``과 ``odd``을 상호적으로 귀납적인 술어의 정의로 호출한다면 다음 예제와 같이 나타날 것입니다.
 
 .. code-block:: lean
 
@@ -739,7 +681,7 @@ Mutual recursive definitions also provide natural ways of working with mutual an
     with odd : ℕ → Prop
     | odd_succ : ∀ n, even n → odd (n + 1)
 
-The constructors, ``even_zero``, ``even_succ``, and ``odd_succ`` provide positive means for showing that a number is even or odd. We need to use the fact that the inductive type is generated by these constructors to know that the zero is not odd, and that the latter two implications reverse. As usual, the constructors are kept in a namespace that is named after the type being defined, and the command ``open even odd`` allows us to access them move conveniently.
+생성자 ``even_zero``, ``even_succ``과 ``odd_succ``은 수가 짝수인지 홀수인지 보이는데 긍정적인 수단을 제공한다. 우리는 귀납형이 0은 홀수가 아니다는 것, 그리고 후자는 두 함의의 역이라는 것이 생성자들에 의해 만들어졌다는 사실을 이용할 필요가 있습니다. 평소처럼, 생성자는 유형이 정의된 이름을 딴 이름공간에 남아있고, 명령  ``open even odd``는 우리가 그들에게 더 편리하게 접근하도록 해줍니다.
 
 .. code-block:: lean
 
@@ -762,7 +704,7 @@ The constructors, ``even_zero``, ``even_succ``, and ``odd_succ`` provide positiv
     | _ (even_succ n h) := h
     -- END
 
-For another example, suppose we use a nested inductive type to define a set of terms inductively, so that a term is either a constant (with a name given by a string), or the result of applying a constant to a list of constants.
+또 다른 예제에서 우리가 중접된 귀납형을 재귀적으로 항들의 집합을 정의하고자 사용한다고 합시다. 그러면 항은 (문자열로 이름이 주어진)상수이거나 상수의 리스트에 상수를 적용한 결과입니다.
 
 .. code-block:: lean
 
@@ -770,7 +712,7 @@ For another example, suppose we use a nested inductive type to define a set of t
     | const : string → term
     | app   : string → list term → term
 
-We can then use a mutual recursive definition to count the number of constants occurring in a term, as well as the number occurring in a list of terms.
+그럼 우리는 상호적으로 재귀적인 정의를 항의 리스트에서 나타나는 수 뿐만 아니라 항 속의 상수의 수를 세는데 사용할 수 있습니다.
 
 .. code-block:: lean
 
@@ -795,20 +737,10 @@ We can then use a mutual recursive definition to count the number of constants o
     -- END
 
 
-Dependent Pattern Matching
+의존적 패턴 매칭
 --------------------------
 
-All the examples of pattern matching we considered in
-:numref:`pattern_matching` can easily be written using ``cases_on``
-and ``rec_on``. However, this is often not the case with indexed
-inductive families such as ``vector α n``, since case splits impose
-constraints on the values of the indices. Without the equation
-compiler, we would need a lot of boilerplate code to define very
-simple functions such as ``map``, ``zip``, and ``unzip`` using
-recursors. To understand the difficulty, consider what it would take
-to define a function ``tail`` which takes a vector
-``v : vector α (succ n)`` and deletes the first element. A first thought might be to
-use the ``casesOn`` function:
+패턴 매칭의 모든 예제로부터 우리는 :numref:`패턴 매칭`에서 ``cases_on``과 ``rec_on``를 사용해 쉽게 쓸 수 있음을 고려했습니다. 하지만 이것은 ``vector α n`` 같이 인덱스된 귀납형 군의 경우에는 적용이 안됩니다. 왜냐하면 경우를 나누기는 인덱스의 값에 제약을 부과하기 때문입니다. 방정식 컴파일러가 없다면 우리는 ``map``, ``zip``과 ``unzip``같은 아주 단순한 함수를 재귀자를 사용해서 정의하려면 아주 많은 보일러 플레이트 코드가 필요할 것입니다. 어려움을 이해하려면 벡터 ``v : vector α (succ n)``를 받고 첫 번째 원소를 삭제하는 함수 ``tail``를 정의하는데 무엇이 필요한지 고려해보세요. 첫 고려사항은 ``casesOn`` 함수를 사용하는 것입니다.
 
 ```lean
 inductive Vector (α : Type u) : Nat → Type u
@@ -830,11 +762,9 @@ namespace Vector
 end Vector
 ```
 
-But what value should we return in the ``nil`` case? Something funny
-is going on: if ``v`` has type ``Vector α (succ n)``, it *can't* be
-nil, but it is not clear how to tell that to ``casesOn``.
+그러나 ``nil`` 경우에 우리가 돌려줘야 하는 값은 무엇인가요? 무언가 재밌는 일이 일어나고 있습니다. 만약  ``v``가 ``Vector α (succ n)``형이고 그것은 nil일 *일 수 없습니다.* 그러나 ``casesOn``에 대해 구별하는 법이 명확하지 않습니다.
 
-One solution is to define an auxiliary function:
+우리의 방법은 부가적인 함수를 정의하는 것입니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -853,21 +783,13 @@ def tail (v : Vector α (n+1)) : Vector α n :=
 # end Vector
 ```
 
-In the ``nil`` case, ``m`` is instantiated to ``0``, and
-``noConfusion`` makes use of the fact that ``0 = succ n`` cannot
-occur.  Otherwise, ``v`` is of the form ``a :: w``, and we can simply
-return ``w``, after casting it from a vector of length ``m`` to a
-vector of length ``n``.
+``nil`` 경우에서 ``m``은 ``0``으로 개체화되고 ``noConfusion``은 ``0 = succ n``이 일어날 수 없다는 사실을 사용하게 만듭니다.  그렇지 않으면 ``v``는 ``a :: w``꼴이고 길이 ``m``의 벡터에서 길이 ``n``의 벡터로 이를 바꾼 후에 우리는 단순히 ``w``를 반환할 수 있습니다.
 
-The difficulty in defining ``tail`` is to maintain the relationships between the indices.
-The hypothesis ``e : m = n + 1`` in ``tailAux`` is used to communicate the relationship
-between ``n`` and the index associated with the minor premise.
-Moreover, the ``zero = n + 1`` case is unreachable, and the canonical way to discard such
-a case is to use ``noConfusion``.
+``tail``을 정의하는데 어려움은 인덱스 사이의 관계를 유지해야 한다는 것입니다.
+ ``tailAux``의 가정 ``e : m = n + 1``은 ``n``과 작은 전제와 연관된 인덱스 사이의 관계를 소통하는데 사용됩니다.
+게다가 ``zero = n + 1`` 경우는 도달할 수 없고 정식 방법으로 이 경우를 버리려면 ``noConfusion``을 사용합니다.
 
-The ``tail`` function is, however, easy to define using recursive
-equations, and the equation compiler generates all the boilerplate
-code automatically for us. Here are a number of similar examples:
+하지만 ``tail`` 함수는 재귀적인 방정식을 사용해 정의하기 쉽습니다. 그리고 방정식 컴파일러는 모든 보일러 플레이트 코드를 우리를 위해 자동적으로 만들어 줍니다. 여기 비슷한 예제가 많이 있습니다.
 
 
 ```lean
@@ -894,9 +816,7 @@ def zip : {n : Nat} → Vector α n → Vector β n → Vector (α × β) n
 # end Vector
 ```
 
-Note that we can omit recursive equations for "unreachable" cases such
-as ``head nil``. The automatically generated definitions for indexed
-families are far from straightforward. 예를 들어
+우리는 재귀 방정식을 ``head nil`` 같이 "도달할 수 없는" 경우에 대해 생략할 수 있음을 주목하세요. 인덱스된 군을 위한 자동적으로 생성된 정의는 직관과는 거리가 멉니다. 예를 들어
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -912,11 +832,9 @@ def map (f : α → β → γ) : {n : Nat} → Vector α n → Vector β n → V
 # end Vector
 ```
 
-The ``map`` function is even more tedious to define by hand than the
-``tail`` function. We encourage you to try it, using ``recOn``,
-``casesOn`` and ``noConfusion``.
+심지어 ``map`` 함수는 ``tail`` 함수보다 손으로 정의하기에는 더 번거롭습니다. 우리는 여러분이 이를 ``recOn``, ``casesOn``과 ``noConfusion``을 사용해 시도해보길 권합니다.
 
-Inaccessible Patterns
+접근할 수 없는 패턴
 ------------------
 
 Sometimes an argument in a dependent matching pattern is not essential
@@ -1090,11 +1008,10 @@ def zip : Vector α n → Vector β n → Vector (α × β) n
 # end Vector
 ```
 
-Match Expressions
+매치 표현식
 -----------------
 
-Lean also provides a compiler for *match-with* expressions found in
-many functional languages.
+린도 많은 함수형 언어에서 발견되다시피 컴파일러에게 *match-with* 표현식을 줍니다.
 
 ```lean
 def isNotZero (m : Nat) : Bool :=
@@ -1103,9 +1020,7 @@ def isNotZero (m : Nat) : Bool :=
   | n+1 => true
 ```
 
-This does not look very different from an ordinary pattern matching
-definition, but the point is that a ``match`` can be used anywhere in
-an expression, and with arbitrary arguments.
+이것은 평범한 패턴 매칭 정의와 아주 달라보이지 않지만 ``match``가 임의의 인수로 표현식의 어디서든 사용될 수 있다는 점이 다릅니다.
 
 ```lean
 def isNotZero (m : Nat) : Bool :=
@@ -1138,8 +1053,8 @@ def foo (n : Nat) (b c : Bool) :=
 example : foo 7 true false = 9 := rfl
 ```
 
-Lean uses the ``match`` construct internally to implement pattern-matching in all parts of the system.
-Thus, all four of these definitions have the same net effect.
+린은 시스템의 모든 부분에서 내부적으로 패턴 매칭을 구현하고자 ``match`` 생성을 사용합니다.
+따라서 이 모든 네 정의들은 동일한 알짜 효과를 갖습니다.
 
 ```lean
 def bar₁ : Nat × Nat → Nat
@@ -1156,7 +1071,7 @@ def bar₄ (p : Nat × Nat) : Nat :=
   let (m, n) := p; m + n
 ```
 
-These variations are equally useful for destructing propositions:
+이 변수들은 명제를 파괴하는데 똑같이 유용합니다.
 
 ```lean
 variable (p q : Nat → Prop)
@@ -1180,10 +1095,10 @@ example (h₀ : ∃ x, p x) (h₁ : ∃ y, q y)
   ⟨x, y, px, qy⟩
 ```
 
-Local recursive declarations
+지역적인 재귀 선언
 ---------
 
-You can define local recursive declarations using the `let rec` keyword.
+여러분은 지역적으로 재귀 선언을 `let rec` 키워드를 사용해 정의할 수 있습니다.
 
 ```lean
 def replicate (n : Nat) (a : α) : List α :=
@@ -1196,13 +1111,10 @@ def replicate (n : Nat) (a : α) : List α :=
 -- {α : Type} → α → Nat → List α → List α
 ```
 
-Lean creates an auxiliary declaration for each `let rec`. In the example above,
-it created the declaration `replicate.loop` for the `let rec loop` occurring at `replicate`.
-Note that, Lean "closes" the declaration by adding any local variable occurring in the
-`let rec` declaration as additional parameters. For example, the local variable `a` occurs
-at `let rec loop`.
+린은 각 `let rec`에 대해 부가 선언을 만듭니다. 위 예제에서 `replicate`에서 생긴 `let rec loop`에 대해 `replicate.loop` 선언을 만듭니다.
+린이 추가적인 매개변수로 `let rec` 선언에서 생긴 임의의 지역변수를 추가함으로써 선언이 닫힌다는 점을 주목하세요. 예를 들어 지역변수 `a`는 `let rec loop`에 나타납니다.
 
-You can also use `let rec` in tactic mode and for creating proofs by induction.
+여러분도 전략 모드에서 귀납법으로 증명을 만들 때에 `let rec`을 사용할 수 있습니다.
 
 ```lean
 # def replicate (n : Nat) (a : α) : List α :=
@@ -1219,8 +1131,8 @@ theorem length_replicate (n : Nat) (a : α) : (replicate n a).length = n := by
   exact aux n []
 ```
 
-You can also introduce auxiliary recursive declarations using `where` clause after your definition.
-Lean converts them into a `let rec`.
+여러분도 부가적인 재귀 선언을 여러분의 정의 뒤에 `where` 절을 사용해서 도입할 수 있습니다.
+린은 그들을 `let rec`으로 바꿉니다.
 
 ```lean
 def replicate (n : Nat) (a : α) : List α :=
@@ -1243,27 +1155,16 @@ where
 연습문제
 ---------
 
-1. Open a namespace ``Hidden`` to avoid naming conflicts, and use the
-   equation compiler to define addition, multiplication, and
-   exponentiation on the natural numbers. Then use the equation
-   compiler to derive some of their basic properties.
+1. 이름공간``Hidden``을 열어 이름 충돌을 피하세요. 그리고 방정식 컴파일러로 덧셈, 곱셈 그리고 거듭제곱을 자연수에 대해 정의하세요. 그 뒤 방정식 컴파일러를 그들의 기본 성질 몇 가지를 유도하는데 사용하세요.
 
-2. Similarly, use the equation compiler to define some basic
-   operations on lists (like the ``reverse`` function) and prove
-   theorems about lists by induction (such as the fact that
-   ``reverse (reverse xs) = xs`` for any list ``xs``).
+2. 마찬가지로 방정식 컴파일러를 리스트에 대한 몇 가지 기본 연산(``reverse`` 함수 같은)을 정의하는데 사용하세요. 그리고 귀납법으로 리스트에 대한 정리(임의의 리스트 ``xs``에 대해 ``reverse (reverse xs) = xs``이라는 사실 같은 것)를 증명하세요.
 
-3. Define your own function to carry out course-of-value recursion on
-   the natural numbers. Similarly, see if you can figure out how to
-   define ``WellFounded.fix`` on your own.
+3. 자연수에 대해 재귀의 과정(course-of-value recursion)을 수행하는 여러분만의 함수를 정의하세요. 마찬가지로 여러분은 여러분 스스로 ``WellFounded.fix``을 정의하는 법을 알아낼 수 있는지 볼 것입니다.
 
-4. Following the examples in [Section Dependent Pattern Matching](#dependent_pattern_matching),
-   define a function that will append two vectors.
-   This is tricky; you will have to define an auxiliary function.
+4. [종속 패턴 매칭 섹션](#dependent_pattern_matching)의 다음 예제는 벡터에 벡터를 추가하는 함수를 정의합니다.
+   이것은 교활해서 여러분은 부가함수를 정의해야만 할 것입니다.
 
-5. Consider the following type of arithmetic expressions. The idea is
-   that ``var n`` is a variable, ``vₙ``, and ``const n`` is the
-   constant whose value is ``n``.
+5. 다음의 산술적 표현식 유형을 고려하세요. 이해를 돕자면 ``var n``는 변수, ``vₙ``와 ``const n``은 값이 ``n``인 상수이다.
 
 ```lean
 inductive Expr where
@@ -1279,9 +1180,9 @@ def sampleExpr : Expr :=
   plus (times (var 0) (const 7)) (times (const 2) (var 1))
 ```
 
-Here ``sampleExpr`` represents ``(v₀ * 7) + (2 * v₁)``.
+여기서 ``sampleExpr``이 ``(v₀ * 7) + (2 * v₁)``을 나타냅니다.
 
-Write a function that evaluates such an expression, evaluating each ``var n`` to ``v n``.
+각 ``var n``을 ``v n``으로 계산하는 표현식을 계산하는 함수를 작성하세요.
 
 ```lean
 # inductive Expr where
@@ -1304,15 +1205,11 @@ def sampleVal : Nat → Nat
   | 1 => 6
   | _ => 0
 
--- Try it out. You should get 47 here.
+-- 시도해 보세요. 여러분은 여기서 47을 얻어야 합니다.
 -- #eval eval sampleVal sampleExpr
 ```
 
-Implement "constant fusion," a procedure that simplifies subterms like
-``5 + 7`` to ``12``. Using the auxiliary function ``simpConst``,
-define a function "fuse": to simplify a plus or a times, first
-simplify the arguments recursively, and then apply ``simpConst`` to
-try to simplify the result.
+"상수 융합,"의 구현은 ``5 + 7`` to ``12``같은 부분항을 단순화하는 절차이다. 보조 함수 ``simpConst``를 사용하여 함수 "fuse"를 정의하세요. 더하기와 곱하기를 간단히 하기 위해서 인수를 재귀적으로 단순화하세요. 그 뒤 ``simpConst``을 결과를 단순화하는데 적용하세요.
 
 ```lean
 # inductive Expr where
@@ -1343,4 +1240,4 @@ theorem fuse_eq (v : Nat → Nat)
   sorry
 ```
 
-The last two theorems show that the definitions preserve the value.
+마지막 두 정리는 정의가 값을 보존함을 보이는 것입니다.

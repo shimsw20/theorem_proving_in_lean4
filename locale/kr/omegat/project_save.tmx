@@ -340,6 +340,14 @@ old one.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>&lt;g1&gt;TODO: waiting for well-founded support in Lean 4&lt;/g1&gt;</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171705Z" creationid="tlqk3" creationdate="20220603T171705Z">
+        <seg>&lt;g1&gt;할 것: 린4가 지원하는 잘 세워진 식을 대기하기&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>&lt;g1&gt;Tactic combinators&lt;/g1&gt; are operations that form new tactics from old
 ones.</seg>
       </tuv>
@@ -553,6 +561,15 @@ whereas it should refer to the argument of type &lt;g6&gt;Type&lt;/g6&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>A first thought might be to
+use the &lt;g10&gt;casesOn&lt;/g10&gt; function:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175820Z" creationid="tlqk3" creationdate="20220603T175820Z">
+        <seg>첫 고려사항은 &lt;g10&gt;casesOn&lt;/g10&gt; 함수를 사용하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>A list of elements of type &lt;g1&gt;α&lt;/g1&gt; is either the empty list, &lt;g2&gt;nil&lt;/g2&gt;, or
 an element &lt;g3&gt;h : α&lt;/g3&gt; followed by a list &lt;g4&gt;t : List α&lt;/g4&gt;.</seg>
       </tuv>
@@ -741,6 +758,16 @@ declaration of the variables.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>All the examples of pattern matching we considered in
+:numref:&lt;g1&gt;pattern_matching&lt;/g1&gt; can easily be written using &lt;g2&gt;cases_on&lt;/g2&gt;
+and &lt;g3&gt;rec_on&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175350Z" creationid="tlqk3" creationdate="20220603T175350Z">
+        <seg>패턴 매칭의 모든 예제로부터 우리는 :numref:&lt;g1&gt;패턴 매칭&lt;/g1&gt;에서 &lt;g2&gt;cases_on&lt;/g2&gt;과 &lt;g3&gt;rec_on&lt;/g3&gt;를 사용해 쉽게 쓸 수 있음을 고려했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>All you need to do is to provide a
 label, and &lt;g7&gt;generalize&lt;/g7&gt; uses it to store the assignment in the local
 context:</seg>
@@ -861,6 +888,14 @@ exactly that purpose.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Another good example of a recursive definition is the list &lt;g1&gt;append&lt;/g1&gt; function.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165213Z" creationid="tlqk3" creationdate="20220603T165213Z">
+        <seg>재귀적 정의의 또 다른 좋은 예제는 리스트 &lt;g1&gt;append&lt;/g1&gt; 함수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Another tactic that is sometimes useful is the &lt;g1&gt;revert&lt;/g1&gt; tactic,
 which is, in a sense, an inverse to &lt;g2&gt;intro&lt;/g2&gt;.</seg>
       </tuv>
@@ -947,6 +982,16 @@ result, we can also prove the theorem as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T172409Z" creationid="tlqk3" creationdate="20220527T172409Z">
         <seg>편리하기에 패턴 매칭은 &lt;g1&gt;intro&lt;/g1&gt;와 &lt;g2&gt;funext&lt;/g2&gt; 같은 전략에 합쳐졌습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As a final example, we observe that Ackermann's function can be
+defined directly, because it is justified by the well foundedness of
+the lexicographic order on the natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172925Z" creationid="tlqk3" creationdate="20220603T172925Z">
+        <seg>마지막 예제로 우리는 Ackermann 함수가 직접적으로 정의되는 것을 관찰합니다. 왜냐하면 이것은 자연수에 대해 사전적 순서로 잘 세워짐으로 정당활 될 수 있기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1187,6 +1232,14 @@ form &lt;g3&gt;fun x =&gt; e&lt;/g3&gt;).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T173201Z" creationid="tlqk3" creationdate="20220527T173201Z">
         <seg>두 번째 예제가 보여주다시피 &lt;g1&gt;contradiction&lt;/g1&gt; 전략도 이 형태의 모순을 감지합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As usual, the constructors are kept in a namespace that is named after the type being defined, and the command &lt;g4&gt;open even odd&lt;/g4&gt; allows us to access them move conveniently.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174833Z" creationid="tlqk3" creationdate="20220603T174833Z">
+        <seg>평소처럼, 생성자는 유형이 정의된 이름을 딴 이름공간에 남아있고, 명령  &lt;g4&gt;open even odd&lt;/g4&gt;는 우리가 그들에게 더 편리하게 접근하도록 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1784,6 +1837,14 @@ before &lt;g9&gt;Section Dependent Pattern Matching&lt;/g9&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>But what value should we return in the &lt;g1&gt;nil&lt;/g1&gt; case?</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175854Z" creationid="tlqk3" creationdate="20220603T175854Z">
+        <seg>그러나 &lt;g1&gt;nil&lt;/g1&gt; 경우에 우리가 돌려줘야 하는 값은 무엇인가요?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>But you can replace an arbitrary
 expression in the goal by a fresh variable using the &lt;g2&gt;generalize&lt;/g2&gt;
 tactic.</seg>
@@ -2018,6 +2079,14 @@ sum type in the library:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Consider the following type of arithmetic expressions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181654Z" creationid="tlqk3" creationdate="20220603T181654Z">
+        <seg>다음의 산술적 표현식 유형을 고려하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Consider the inductively defined type of natural numbers.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T161107Z" creationid="tlqk3" creationdate="20220529T161107Z">
@@ -2143,6 +2212,15 @@ with the system.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Define your own function to carry out course-of-value recursion on
+the natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181350Z" creationid="tlqk3" creationdate="20220603T181350Z">
+        <seg>자연수에 대해 재귀의 과정(course-of-value recursion)을 수행하는 여러분만의 함수를 정의하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Defining the Natural Numbers</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T153647Z" creationid="tlqk3" creationdate="20220527T153647Z">
@@ -2163,6 +2241,14 @@ with the system.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143811Z" creationid="tlqk35" creationdate="20220321T143811Z">
         <seg>정의(Definitions)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Dependent Pattern Matching</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175146Z" creationid="tlqk3" creationdate="20220603T175146Z">
+        <seg>의존적 패턴 매칭</seg>
       </tuv>
     </tu>
     <tu>
@@ -2551,6 +2637,15 @@ goal of &lt;g3&gt;q ∧ p&lt;/g3&gt; with the additional hypothesis &lt;g4&gt;hq
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Following the examples in &lt;g1&gt;Section Dependent Pattern Matching&lt;/g1&gt;,
+define a function that will append two vectors.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181535Z" creationid="tlqk3" creationdate="20220603T181535Z">
+        <seg>&lt;g1&gt;종속 패턴 매칭 섹션&lt;/g1&gt;의 다음 예제는 벡터에 벡터를 추가하는 함수를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>For
 any type, &lt;g1&gt;α&lt;/g1&gt;, the type &lt;g2&gt;List α&lt;/g2&gt; of lists of elements of &lt;g3&gt;α&lt;/g3&gt; is
 defined in the library.</seg>
@@ -2657,6 +2752,14 @@ length &lt;g7&gt;n&lt;/g7&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T161843Z" creationid="tlqk3" creationdate="20220527T161843Z">
         <seg>다른 예제에서 덧셈의 결합성 &lt;g1&gt;∀ m n k, m + n + k = m + (n + k)&lt;/g1&gt;을 증명해 봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For another example, suppose we use a nested inductive type to define a set of terms inductively, so that a term is either a constant (with a name given by a string), or the result of applying a constant to a list of constants.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175018Z" creationid="tlqk3" creationdate="20220603T175018Z">
+        <seg>또 다른 예제에서 우리가 중접된 귀납형을 재귀적으로 항들의 집합을 정의하고자 사용한다고 합시다. 그러면 항은 (문자열로 이름이 주어진)상수이거나 상수의 리스트에 상수를 적용한 결과입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2890,6 +2993,15 @@ thing:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163416Z" creationid="tlqk35" creationdate="20220321T163416Z">
         <seg>예를 들어 다음 두 표현식은 같은 것을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, the local variable &lt;g6&gt;a&lt;/g6&gt; occurs
+at &lt;g7&gt;let rec loop&lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182235Z" creationid="tlqk3" creationdate="20220603T182235Z">
+        <seg>예를 들어 지역변수 &lt;g6&gt;a&lt;/g6&gt;는 &lt;g7&gt;let rec loop&lt;/g7&gt;에 나타납니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3324,6 +3436,14 @@ is any type, which can depend on &lt;g4&gt;a&lt;/g4&gt; and &lt;g5&gt;b&lt;/g5&g
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Here &lt;g1&gt;sampleExpr&lt;/g1&gt; represents &lt;g2&gt;(v₀ * 7) + (2 * v₁)&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180630Z" creationid="tlqk3" creationdate="20220603T180630Z">
+        <seg>여기서 &lt;g1&gt;sampleExpr&lt;/g1&gt;이 &lt;g2&gt;(v₀ * 7) + (2 * v₁)&lt;/g2&gt;을 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Here &lt;g1&gt;u_1&lt;/g1&gt; is a variable ranging over type levels.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141951Z" creationid="tlqk35" creationdate="20220321T141951Z">
@@ -3337,6 +3457,14 @@ few examples</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T135638Z" creationid="tlqk3" creationdate="20220526T135638Z">
         <seg>여기 몇 가지 예제가 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here are a number of similar examples:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183548Z" creationid="tlqk3" creationdate="20220603T183548Z">
+        <seg>여기 비슷한 예제가 많이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3423,6 +3551,14 @@ constructions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T174230Z" creationid="tlqk35" creationdate="20220528T174230Z">
         <seg>여기 만들어진 생성자를 사용하는 몇 가지 간단한 정리와 표현식이 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here is a better way:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T163733Z" creationid="tlqk3" creationdate="20220603T163733Z">
+        <seg>여기 더 나은 방식이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3547,10 +3683,34 @@ denotes the type of lists of elements of type &lt;g3&gt;α&lt;/g3&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Here is another: it adds elements of the first list to elements of the second list, until one of the two lists runs out.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165331Z" creationid="tlqk3" creationdate="20220603T165331Z">
+        <seg>여기 또 다른 것이 있습니다. 이것은 둘 중의 한 리스트의 원소가 소진될 때까지 첫 리스트의 원소를 두 번째 리스트의 원소와 더합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here is essentially the definition of division on the natural numbers that is found in the standard library.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170545Z" creationid="tlqk3" creationdate="20220603T170545Z">
+        <seg>여기 있는 것은 본질적으로 표준 라이브러리에서 찾을 수 있는 자연수에 대한 나눗셈 정의입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Here is the example from the link above using Lean 4 implicit lambdas.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T135457Z" creationid="tlqk3" creationdate="20220526T135457Z">
         <seg>링크 위로부터 린 4의 암시적인 람다를 사용하는 에제가 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here is the same definition using a &lt;g1&gt;let rec&lt;/g1&gt; instead of a &lt;g2&gt;where&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T163823Z" creationid="tlqk3" creationdate="20220603T163817Z">
+        <seg>&lt;g2&gt;where&lt;/g2&gt; 대신 &lt;g1&gt;let rec&lt;/g1&gt;을 사용한 같은 정의가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3569,6 +3729,16 @@ identity in the opposite direction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180724Z" creationid="tlqk35" creationdate="20220321T180724Z">
         <seg>&lt;g1&gt;Nat.add_assoc&lt;/g1&gt; 앞의 왼쪽 화살표는 항등식을 반대 방향으로 사용해 다시쓰라고 말합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Here the recursion is on
+&lt;g1&gt;x&lt;/g1&gt;, and &lt;g2&gt;div.F x f : Nat → Nat&lt;/g2&gt; returns the "divide by &lt;g3&gt;y&lt;/g3&gt;"
+function for that fixed &lt;g4&gt;x&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171241Z" creationid="tlqk3" creationdate="20220603T171241Z">
+        <seg>여기서 재귀는 &lt;g1&gt;x&lt;/g1&gt;에 있습니다. 그리고 &lt;g2&gt;div.F x f : Nat → Nat&lt;/g2&gt;는 고정된 &lt;g4&gt;x&lt;/g4&gt;에 대해 "&lt;g3&gt;y&lt;/g3&gt;로 나눔" 함수를 반환합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3655,6 +3825,17 @@ existential assertion, the value of &lt;g2&gt;x&lt;/g2&gt;, implicit.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Here, the value of the &lt;g1&gt;fib&lt;/g1&gt; function at &lt;g2&gt;n + 2&lt;/g2&gt; (which is
+definitionally equal to &lt;g3&gt;succ (succ n)&lt;/g3&gt;) is defined in terms of the
+values at &lt;g4&gt;n + 1&lt;/g4&gt; (which is definitionally equivalent to &lt;g5&gt;succ n&lt;/g5&gt;)
+and the value at &lt;g6&gt;n&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T163613Z" creationid="tlqk3" creationdate="20220603T163613Z">
+        <seg>여기서 (정의로 인해 &lt;g3&gt;succ (succ n)&lt;/g3&gt;과 같은)&lt;g2&gt;n + 2&lt;/g2&gt;에서 &lt;g1&gt;fib&lt;/g1&gt;의 함수값은 (&lt;g5&gt;succ n&lt;/g5&gt;와 정의로 인해 동등한)&lt;g4&gt;n + 1&lt;/g4&gt; 에서의 값과 &lt;g6&gt;n&lt;/g6&gt;에서 값에 대하여 정의되었다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>How can we prove the general theorem that &lt;g1&gt;next (previous d) = d&lt;/g1&gt;
 for any Weekday &lt;g2&gt;d&lt;/g2&gt;?</seg>
       </tuv>
@@ -3699,6 +3880,16 @@ of the current file.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T182533Z" creationid="tlqk3" creationdate="20220525T182533Z">
         <seg>하지만 이런 명령은 종종 이들이 현재 &lt;g3&gt;section&lt;/g3&gt;이나 &lt;g4&gt;namespace&lt;/g4&gt;이 닫힐 때까지 혹은 현재 파일의 끝까지만 유효하다는 것을 가리키는 &lt;g2&gt;local&lt;/g2&gt; 수정자를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>However, this is often not the case with indexed
+inductive families such as &lt;g4&gt;vector α n&lt;/g4&gt;, since case splits impose
+constraints on the values of the indices.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175450Z" creationid="tlqk3" creationdate="20220603T175450Z">
+        <seg>하지만 이것은 &lt;g4&gt;vector α n&lt;/g4&gt; 같이 인덱스된 귀납형 군의 경우에는 적용이 안됩니다. 왜냐하면 경우를 나누기는 인덱스의 값에 제약을 부과하기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4041,6 +4232,15 @@ manually, via an &lt;g1&gt;import&lt;/g1&gt; statement at the beginning of a fil
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T174028Z" creationid="tlqk35" creationdate="20220524T174028Z">
         <seg>그러나 여러분이 추가 파일을 사용하길 원한다면 파일의 시작에서 &lt;g1&gt;import&lt;/g1&gt; 구문을 통해 수동으로 불러와야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Implement "constant fusion," a procedure that simplifies subterms like
+&lt;g1&gt;5 + 7&lt;/g1&gt; to &lt;g2&gt;12&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180528Z" creationid="tlqk3" creationdate="20220603T180528Z">
+        <seg>"상수 융합,"의 구현은 &lt;g1&gt;5 + 7&lt;/g1&gt; to &lt;g2&gt;12&lt;/g2&gt;같은 부분항을 단순화하는 절차이다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4389,6 +4589,14 @@ term.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171713Z" creationid="tlqk35" creationdate="20220524T163318Z">
         <seg>어떤 경우에 항을 간단히 하는데 사용되는 항등식의 모임에 추가 규칙이 더해질 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In both cases, Lean generates the auxiliary function &lt;g1&gt;fibFast.loop&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T163904Z" creationid="tlqk3" creationdate="20220603T163904Z">
+        <seg>두 경우 모두에 대해 린은 부가 함수 &lt;g1&gt;fibFast.loop&lt;/g1&gt;를 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5057,6 +5265,16 @@ we define &lt;g7&gt;add m (succ n)&lt;/g7&gt; to be &lt;g8&gt;succ (add m n)&lt;
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the &lt;g1&gt;nil&lt;/g1&gt; case, &lt;g2&gt;m&lt;/g2&gt; is instantiated to &lt;g3&gt;0&lt;/g3&gt;, and
+&lt;g4&gt;noConfusion&lt;/g4&gt; makes use of the fact that &lt;g5&gt;0 = succ n&lt;/g5&gt; cannot
+occur.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183325Z" creationid="tlqk3" creationdate="20220603T183325Z">
+        <seg>&lt;g1&gt;nil&lt;/g1&gt; 경우에서 &lt;g2&gt;m&lt;/g2&gt;은 &lt;g3&gt;0&lt;/g3&gt;으로 개체화되고 &lt;g4&gt;noConfusion&lt;/g4&gt;은 &lt;g5&gt;0 = succ n&lt;/g5&gt;이 일어날 수 없다는 사실을 사용하게 만듭니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the base case, we set &lt;g4&gt;add m zero&lt;/g4&gt; to &lt;g5&gt;m&lt;/g5&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T160058Z" creationid="tlqk3" creationdate="20220527T160058Z">
@@ -5110,6 +5328,24 @@ in the first branch, and &lt;g8&gt;h : succ m ≠ 0&lt;/g8&gt; in the second.</s
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T164821Z" creationid="tlqk3" creationdate="20220527T164821Z">
         <seg>아래 예제에서 가정 &lt;g6&gt;h : n ≠ 0&lt;/g6&gt;이  첫 분기에서 &lt;g7&gt;h : 0 ≠ 0&lt;/g7&gt;이 되고 두 번째 분기에서 &lt;g8&gt;h : succ m ≠ 0&lt;/g8&gt;이 됨을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the example above we set the option &lt;g1&gt;codegen&lt;/g1&gt; to false because the code
+generator currently does not support &lt;g2&gt;WellFounded.fix&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170134Z" creationid="tlqk3" creationdate="20220603T170134Z">
+        <seg>위의 예제에서 우리는 옵션 &lt;g1&gt;codegen&lt;/g1&gt;이 실패하도록 설정했습니다. 왜냐하면 코드 생성기는 현재  &lt;g2&gt;WellFounded.fix&lt;/g2&gt;를 지원하지 않기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the example above,
+it created the declaration &lt;g2&gt;replicate.loop&lt;/g2&gt; for the &lt;g3&gt;let rec loop&lt;/g3&gt; occurring at &lt;g4&gt;replicate&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182104Z" creationid="tlqk3" creationdate="20220603T182104Z">
+        <seg>위 예제에서 &lt;g4&gt;replicate&lt;/g4&gt;에서 생긴 &lt;g3&gt;let rec loop&lt;/g3&gt;에 대해 &lt;g2&gt;replicate.loop&lt;/g2&gt; 선언을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5584,6 +5820,16 @@ section and the next, we discuss them in greater detail.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In this case, detecting the
+possibility of well-founded recursion on the natural numbers, it uses
+the usual lexicographic ordering on the pair &lt;g1&gt;(x, y)&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172039Z" creationid="tlqk3" creationdate="20220603T172039Z">
+        <seg>이 경우 자연수에 대한 잘 세워진 재귀의 가능성을 감지하여 순서쌍 &lt;g1&gt;(x, y)&lt;/g1&gt;에 대해 평범한 사전적 순서를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In this case, each can be used to reduce the proof to:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T164208Z" creationid="tlqk3" creationdate="20220527T161300Z">
@@ -5722,6 +5968,14 @@ input and returns a natural number as output.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T140842Z" creationid="tlqk35" creationdate="20220321T140842Z">
         <seg>유형론에서 보통 &lt;g10&gt;Nat.add&lt;/g10&gt;과 같이 쓰는 것이 자연수 쌍을 입력으로 받고 자연수를 출력으로 하는 함수로 쓰는 것보다 더 편리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Inaccessible Patterns</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183215Z" creationid="tlqk3" creationdate="20220603T183215Z">
+        <seg>접근할 수 없는 패턴</seg>
       </tuv>
     </tu>
     <tu>
@@ -5987,6 +6241,14 @@ showing that &lt;g5&gt;q&lt;/g5&gt; follows from &lt;g6&gt;p w&lt;/g6&gt; for an
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It accepts the following:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171635Z" creationid="tlqk3" creationdate="20220603T171635Z">
+        <seg>이것은 다음을 받습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It allows you to
 define a function by specifying equations that it should satisfy, and
 it allows you to prove a theorem by specifying how to handle various
@@ -5994,6 +6256,15 @@ cases that can arise.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T160321Z" creationid="tlqk3" creationdate="20220529T160321Z">
         <seg>이는 여러분이 그것이 만족해야 하는 방정식을 명시함으로써 함수를 정의하도록 해줍니다. 그리고 이것은 일어날 수 있는 다양한 경우를 어떻게 다뤄야 하는지 나타내줌으로써 여러분이 정리를 증명하게 해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It also knows a number of ways of constructing new well
+founded orders from others, for example, using lexicographic order.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170430Z" creationid="tlqk3" creationdate="20220603T170430Z">
+        <seg>이것도 다른 것으로부터 새로운 잘 세워진 순서를 생성하는 많은 방법을 알고 있습니다. 예를 들어 사전적 순서를 사용하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6038,6 +6309,25 @@ and raises an error if the patterns fail to exhaust the cases.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T162407Z" creationid="tlqk3" creationdate="20220529T162226Z">
         <seg>이것은 그것에 제시된 패턴에 필요한 경우를 나누는 것을 결정하고, 패턴이 경우를 처리하는데 실패하면 오류를 발생시킵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It does not affect the code generator which compiles recursive
+functions as other functional programming language compilers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165033Z" creationid="tlqk3" creationdate="20220603T164937Z">
+        <seg>다른 함수형 프로그래밍 언어의 컴파일러와 마찬가지로 이것은 재귀 함수를 컴파일하는 코드 생성기에 영향을 끼치지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It enables us to define the value of a dependent
+function of type &lt;g6&gt;(n : Nat) → C n&lt;/g6&gt; at a particular input &lt;g7&gt;n&lt;/g7&gt; in terms of all the previous values of the function,
+presented as an element of &lt;g8&gt;@Nat.below C n&lt;/g8&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165017Z" creationid="tlqk3" creationdate="20220603T164635Z">
+        <seg>이것은 &lt;g8&gt;@Nat.below C n&lt;/g8&gt;의 원소로 나타났던 함수의 모든 이전의 값들로 특정 입력 &lt;g7&gt;n&lt;/g7&gt;에 대해 &lt;g6&gt;(n : Nat) → C n&lt;/g6&gt;형의 종속함수의 값을 정의할 수 있게 해줍니다. </seg>
       </tuv>
     </tu>
     <tu>
@@ -6399,6 +6689,16 @@ these elements, does the split, and reintroduces them.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It says that if &lt;g2&gt;≺&lt;/g2&gt; is well founded and you want to prove
+&lt;g3&gt;∀ x, C x&lt;/g3&gt;, it suffices to show that for an arbitrary &lt;g4&gt;x&lt;/g4&gt;, if we
+have &lt;g5&gt;∀ y ≺ x, C y&lt;/g5&gt;, then we have &lt;g6&gt;C x&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170038Z" creationid="tlqk3" creationdate="20220603T170038Z">
+        <seg>이것은 만약 &lt;g2&gt;≺&lt;/g2&gt;이 잘 세워졌고 여러분이 &lt;g3&gt;∀ x, C x&lt;/g3&gt;을 증명하기 원한다고 말하면, 이는 임의의  &lt;g4&gt;x&lt;/g4&gt;에 대해 우리가 &lt;g5&gt;∀ y ≺ x, C y&lt;/g5&gt;이면 &lt;g6&gt;C x&lt;/g6&gt;임을 보이는 것으로 충분합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It simply declares the type of the
 goal that is about to be solved, while remaining in tactic
 mode.</seg>
@@ -6423,6 +6723,14 @@ goal to cases in which &lt;g3&gt;x&lt;/g3&gt; is replaced by each of the constru
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T164131Z" creationid="tlqk3" creationdate="20220527T164131Z">
         <seg>그 뒤 이것은 목표를 &lt;g3&gt;x&lt;/g3&gt;는 생성자의 각각으로 대체되는 경우로 바꿉니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It then returns an output appropriate to the input.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174027Z" creationid="tlqk3" creationdate="20220603T174027Z">
+        <seg>그럼 이것은 입력에 대한 적절한 출력을 반환합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6686,6 +6994,15 @@ the "bullet" notation &lt;g1&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Lean also provides a compiler for &lt;g1&gt;match-with&lt;/g1&gt; expressions found in
+many functional languages.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182836Z" creationid="tlqk3" creationdate="20220603T182836Z">
+        <seg>린도 많은 함수형 언어에서 발견되다시피 컴파일러에게 &lt;g1&gt;match-with&lt;/g1&gt; 표현식을 줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Lean also provides a complementary &lt;g2&gt;case&lt;/g2&gt; tactic, which allows you to focus on goal
 assign variable names.</seg>
       </tuv>
@@ -6709,6 +7026,14 @@ mathematics.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165224Z" creationid="tlqk35" creationdate="20220321T165224Z">
         <seg>린은 또 구조화된 목표로부터 후방향 추론 방식을 지원합니다. 이것은 일상 수학에서 "보여주기에 충분하다" 구성을 모델링 한 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean also supports mutual recursive definitions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173339Z" creationid="tlqk3" creationdate="20220603T173339Z">
+        <seg>린도 상호적인 재귀적 정의를 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6747,6 +7072,22 @@ mathematical assertions in dependent type theory, but it also can be used as a l
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T132153Z" creationid="tlqk35" creationdate="20220321T132120Z">
         <seg>린은 수학적 대상들을 정의하고 수학적 주장을 의존 유형론으로 진술할 수 있고 증명을 작성하는 언어로써 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean converts them into a &lt;g2&gt;let rec&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182525Z" creationid="tlqk3" creationdate="20220603T182525Z">
+        <seg>린은 그들을 &lt;g2&gt;let rec&lt;/g2&gt;으로 바꿉니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean creates an auxiliary declaration for each &lt;g1&gt;let rec&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182022Z" creationid="tlqk3" creationdate="20220603T182022Z">
+        <seg>린은 각 &lt;g1&gt;let rec&lt;/g1&gt;에 대해 부가 선언을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6830,6 +7171,15 @@ explicitly or implicitly in a definition.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145931Z" creationid="tlqk35" creationdate="20220321T145931Z">
         <seg>Lean은 정의에서 명시적으로나 암시적으로 사용된 변수를 구분하기에 충분히 똑똑합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean knows that the usual order &lt;g1&gt;&lt;&lt;/g1&gt; on the natural numbers is well
+founded.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170249Z" creationid="tlqk3" creationdate="20220603T170249Z">
+        <seg>린은 자연수에 대한 평상시 순서 &lt;g1&gt;&lt;&lt;/g1&gt;가 잘 세워졌다는 것을 압니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6963,6 +7313,14 @@ context to infer which one is appropriate.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Lean uses the &lt;g1&gt;match&lt;/g1&gt; construct internally to implement pattern-matching in all parts of the system.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182640Z" creationid="tlqk3" creationdate="20220603T182640Z">
+        <seg>린은 시스템의 모든 부분에서 내부적으로 패턴 매칭을 구현하고자 &lt;g1&gt;match&lt;/g1&gt; 생성을 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Lean will even allow us to use an implicit &lt;g2&gt;match&lt;/g2&gt;
 in the &lt;g3&gt;fun&lt;/g3&gt; expression:</seg>
       </tuv>
@@ -6997,6 +7355,16 @@ is discussed in the next section.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T131843Z" creationid="tlqk3" creationdate="20220526T131843Z">
         <seg>린의 라이브러리 개발자는 여러분이 필요한 정리의 이름을 추측하기 더 쉽게 일반적인 이름짓기 규칙을 따릅니다. 혹은 린 모드인 편집기의 탭 완성 지원 기능으로 그것을 찾도록 돕습니다. 탭 완성은 다음 섹션에서 얘기합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean's mechanisms for guessing a well-founded relation and then
+proving that recursive calls decrease are still in a rudimentary
+state.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173121Z" creationid="tlqk3" creationdate="20220603T173121Z">
+        <seg>린의 잘 세워진 관계식을 추론하는 메커니즘과 재귀적인 호출이 줄어든다는 증명은 여전히 기초적인 상태입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7152,6 +7520,14 @@ are opened.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Local recursive declarations</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181922Z" creationid="tlqk3" creationdate="20220603T181922Z">
+        <seg>지역적인 재귀 선언</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Logical Equivalence</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164609Z" creationid="tlqk35" creationdate="20220321T164609Z">
@@ -7184,6 +7560,14 @@ corrections, suggestions, examples, and text.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134821Z" creationid="tlqk35" creationdate="20220321T134821Z">
         <seg>많은 사람들이 오타 정정, 제안, 예제, 본분을 제공하는 등의 노력으로 기여했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Match Expressions</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182731Z" creationid="tlqk3" creationdate="20220603T182731Z">
+        <seg>매치 표현식</seg>
       </tuv>
     </tu>
     <tu>
@@ -7361,6 +7745,15 @@ output indicates that the first argument is implicit.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Moreover, the &lt;g5&gt;zero = n + 1&lt;/g5&gt; case is unreachable, and the canonical way to discard such
+a case is to use &lt;g6&gt;noConfusion&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183800Z" creationid="tlqk3" creationdate="20220603T183800Z">
+        <seg>게다가 &lt;g5&gt;zero = n + 1&lt;/g5&gt; 경우는 도달할 수 없고 정식 방법으로 이 경우를 버리려면 &lt;g6&gt;noConfusion&lt;/g6&gt;을 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Moreover, you can use a "wildcard" asterisk to simplify all the hypotheses and the goal:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T161754Z" creationid="tlqk35" creationdate="20220524T161754Z">
@@ -7423,10 +7816,26 @@ which is just shorthand for &lt;g2&gt;rw t_1; ...; rw t_n&lt;/g2&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Mutual Recursion</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173321Z" creationid="tlqk3" creationdate="20220603T173321Z">
+        <seg>상호적인 재귀</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Mutual and Nested Inductive Types</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T164349Z" creationid="tlqk35" creationdate="20220528T164349Z">
         <seg>상호적이고 중첩된 유도형</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Mutual recursive definitions also provide natural ways of working with mutual and nested inductive types, as described in :numref:&lt;g1&gt;mutual_and_nested_inductive_types&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174350Z" creationid="tlqk3" creationdate="20220603T174350Z">
+        <seg>상호적으로 재귀적인 정의도 :numref:&lt;g1&gt;상호적이고 중첩된 재귀형&lt;/g1&gt;에서 설명한 것처럼 상호적이고  중첩된 귀납형을 다루는 자연스러운 방식을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7630,6 +8039,15 @@ for &lt;g3&gt;Nat.left_distrib&lt;/g3&gt; and &lt;g4&gt;Nat.right_distrib&lt;/g4
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Note that &lt;g1&gt;WellFounded.fix&lt;/g1&gt; works equally well as an induction
+principle.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165846Z" creationid="tlqk3" creationdate="20220603T165846Z">
+        <seg>&lt;g1&gt;WellFounded.fix&lt;/g1&gt;는 귀납 원리와 같이 동등하게 동작함을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Note that Lean hides the other goals inside the &lt;g1&gt;case&lt;/g1&gt; block.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T061427Z" creationid="tlqk35" creationdate="20220522T061427Z">
@@ -7750,11 +8168,29 @@ for conjunction and disjunction.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Note that we can omit recursive equations for "unreachable" cases such
+as &lt;g1&gt;head nil&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T184000Z" creationid="tlqk3" creationdate="20220603T184000Z">
+        <seg>우리는 재귀 방정식을 &lt;g1&gt;head nil&lt;/g1&gt; 같이 "도달할 수 없는" 경우에 대해 생략할 수 있음을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Note that you can define a
 binary operation like &lt;g5&gt;and&lt;/g5&gt; using &lt;g6&gt;match&lt;/g6&gt;:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T152449Z" creationid="tlqk3" creationdate="20220526T152449Z">
         <seg>여러분이  &lt;g5&gt;and&lt;/g5&gt;같은 이항 연산을 &lt;g6&gt;match&lt;/g6&gt;를 사용해 정의할 수 있다는 것을 보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Note that, Lean "closes" the declaration by adding any local variable occurring in the
+&lt;g5&gt;let rec&lt;/g5&gt; declaration as additional parameters.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182210Z" creationid="tlqk3" creationdate="20220603T182210Z">
+        <seg>린이 추가적인 매개변수로 &lt;g5&gt;let rec&lt;/g5&gt; 선언에서 생긴 임의의 지역변수를 추가함으로써 선언이 닫힌다는 점을 주목하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8070,6 +8506,15 @@ identifiers.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>On the other hand, &lt;g3&gt;#reduce fib &lt;n&gt;&lt;/g3&gt; is efficient because it uses the definition sent to the kernel that
+is based on the &lt;g4&gt;brecOn&lt;/g4&gt; construction.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165140Z" creationid="tlqk3" creationdate="20220603T165140Z">
+        <seg>다른 한편 &lt;g3&gt;#reduce fib &lt;n&gt;&lt;/g3&gt;는 &lt;g4&gt;brecOn&lt;/g4&gt; 생성자에 기반한 커널에 보내져 정의를 사용하기 때문에 효율적입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>On this basis, the
 standard library provides a default element, &lt;g6&gt;defaulty&lt;/g6&gt;, of
 any inhabited type.</seg>
@@ -8228,6 +8673,14 @@ of length &lt;g7&gt;n&lt;/g7&gt;:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>One solution is to define an auxiliary function:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180121Z" creationid="tlqk3" creationdate="20220603T180121Z">
+        <seg>우리의 방법은 부가적인 함수를 정의하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>One strategy for proving assertions about objects defined in the
 language of dependent type theory is to layer an assertion language
 and a proof language on top of the definition language.</seg>
@@ -8274,6 +8727,16 @@ objects.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T141313Z" creationid="tlqk35" creationdate="20220321T141313Z">
         <seg>린의 종속 유형론이 단순 유형론을 확장시키는 한 방법은 ---&lt;g1&gt;Nat&lt;/g1&gt;과 &lt;g2&gt;Bool&lt;/g2&gt;같은 개체는 그들 그 자체로 대상인 일등 시민 ---으로 두는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Open a namespace &lt;g1&gt;Hidden&lt;/g1&gt; to avoid naming conflicts, and use the
+equation compiler to define addition, multiplication, and
+exponentiation on the natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180856Z" creationid="tlqk3" creationdate="20220603T180856Z">
+        <seg>이름공간&lt;g1&gt;Hidden&lt;/g1&gt;을 열어 이름 충돌을 피하세요. 그리고 방정식 컴파일러로 덧셈, 곱셈 그리고 거듭제곱을 자연수에 대해 정의하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8340,6 +8803,16 @@ such as linear or nonlinear expressions over the integers or the real numbers.</
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131328Z" creationid="tlqk35" creationdate="20220321T131328Z">
         <seg>다른 시스템들은 특정 언어와 영역에 대한 선형 혹은 비선형 식(가령 정수나 실수에 대해 정의된)들에 탐색 절차과 결정 절차를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Otherwise, &lt;g6&gt;v&lt;/g6&gt; is of the form &lt;g7&gt;a :: w&lt;/g7&gt;, and we can simply
+return &lt;g8&gt;w&lt;/g8&gt;, after casting it from a vector of length &lt;g9&gt;m&lt;/g9&gt; to a
+vector of length &lt;g10&gt;n&lt;/g10&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183522Z" creationid="tlqk3" creationdate="20220603T183522Z">
+        <seg>그렇지 않으면 &lt;g6&gt;v&lt;/g6&gt;는 &lt;g7&gt;a :: w&lt;/g7&gt;꼴이고 길이 &lt;g9&gt;m&lt;/g9&gt;의 벡터에서 길이 &lt;g10&gt;n&lt;/g10&gt;의 벡터로 이를 바꾼 후에 우리는 단순히 &lt;g8&gt;w&lt;/g8&gt;를 반환할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8563,6 +9036,14 @@ has type &lt;g3&gt;Point&lt;/g3&gt;, the expression &lt;g4&gt;p.foo&lt;/g4&gt; i
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Recall that &lt;g1&gt;#eval fib &lt;n&gt;&lt;/g1&gt; is exponential on &lt;g2&gt;&lt;n&gt;&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165004Z" creationid="tlqk3" creationdate="20220603T165004Z">
+        <seg>&lt;g1&gt;#eval fib &lt;n&gt;&lt;/g1&gt;가 &lt;g2&gt;&lt;n&gt;&lt;/g2&gt;에 대해 지수적이었음을 기억하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Recall that a non-recursive inductive type that contains only one
 constructor is called a &lt;g1&gt;structure&lt;/g1&gt; or &lt;g2&gt;record&lt;/g2&gt;.</seg>
       </tuv>
@@ -8620,6 +9101,14 @@ function spaces, we could interpret &lt;g7&gt;α → β&lt;/g7&gt; as the specia
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T173603Z" creationid="tlqk35" creationdate="20220321T173603Z">
         <seg>평범한 함수공간의 경우에 대해 우리는 &lt;g7&gt;α → β&lt;/g7&gt;을 &lt;g8&gt;(x : α) → β&lt;/g8&gt;의 특별한 경우로 해석할 수 있음을 생각해보세요. 이때  &lt;g9&gt;β&lt;/g9&gt;는 &lt;g10&gt;x&lt;/g10&gt;에 의존하지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall the definition of &lt;g2&gt;even&lt;/g2&gt; and &lt;g3&gt;odd&lt;/g3&gt; as mutual inductive predicates, as presented as an example there:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174449Z" creationid="tlqk3" creationdate="20220603T174449Z">
+        <seg> &lt;g2&gt;even&lt;/g2&gt;과 &lt;g3&gt;odd&lt;/g3&gt;을 상호적으로 귀납적인 술어의 정의로 호출한다면 다음 예제와 같이 나타날 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8976,6 +9465,15 @@ flexible forms of algebraic reasoning.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Similarly, see if you can figure out how to
+define &lt;g1&gt;WellFounded.fix&lt;/g1&gt; on your own.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181426Z" creationid="tlqk3" creationdate="20220603T181426Z">
+        <seg>마찬가지로 여러분은 여러분 스스로 &lt;g1&gt;WellFounded.fix&lt;/g1&gt;을 정의하는 법을 알아낼 수 있는지 볼 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Similarly, the
 expression &lt;g5&gt;hnp hp&lt;/g5&gt; produces a proof of &lt;g6&gt;False&lt;/g6&gt; from &lt;g7&gt;hp : p&lt;/g7&gt;
 and &lt;g8&gt;hnp : ¬p&lt;/g8&gt;.</seg>
@@ -8991,6 +9489,17 @@ the line contains a comment that is also ignored.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135543Z" creationid="tlqk35" creationdate="20220321T135543Z">
         <seg>마찬가지로 두 개의 대시 &lt;g3&gt;--&lt;/g3&gt;는 이 줄의 나머지는 주석을 포함함을 나타내고 이 또한 무시됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Similarly, use the equation compiler to define some basic
+operations on lists (like the &lt;g1&gt;reverse&lt;/g1&gt; function) and prove
+theorems about lists by induction (such as the fact that
+&lt;g2&gt;reverse (reverse xs) = xs&lt;/g2&gt; for any list &lt;g3&gt;xs&lt;/g3&gt;).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181206Z" creationid="tlqk3" creationdate="20220603T181206Z">
+        <seg>마찬가지로 방정식 컴파일러를 리스트에 대한 몇 가지 기본 연산(&lt;g1&gt;reverse&lt;/g1&gt; 함수 같은)을 정의하는데 사용하세요. 그리고 귀납법으로 리스트에 대한 정리(임의의 리스트 &lt;g3&gt;xs&lt;/g3&gt;에 대해 &lt;g2&gt;reverse (reverse xs) = xs&lt;/g2&gt;이라는 사실 같은 것)를 증명하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9190,6 +9699,16 @@ universes.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T155224Z" creationid="tlqk35" creationdate="20220321T155224Z">
         <seg>하지만 몇 가지 단순화는 가능합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Something funny
+is going on: if &lt;g2&gt;v&lt;/g2&gt; has type &lt;g3&gt;Vector α (succ n)&lt;/g3&gt;, it &lt;g4&gt;can't&lt;/g4&gt; be
+nil, but it is not clear how to tell that to &lt;g5&gt;casesOn&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180106Z" creationid="tlqk3" creationdate="20220603T180106Z">
+        <seg>무언가 재밌는 일이 일어나고 있습니다. 만약  &lt;g2&gt;v&lt;/g2&gt;가 &lt;g3&gt;Vector α (succ n)&lt;/g3&gt;형이고 그것은 nil일 &lt;g4&gt;일 수 없습니다.&lt;/g4&gt; 그러나 &lt;g5&gt;casesOn&lt;/g5&gt;에 대해 구별하는 법이 명확하지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9403,6 +9922,14 @@ is of &lt;g10&gt;Sort 0&lt;/g10&gt;, that is, an element of &lt;g11&gt;Prop&lt;/
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>TO DO: eventually, describe using_well_founded.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173305Z" creationid="tlqk3" creationdate="20220603T173305Z">
+        <seg>할 것: 결국, 잘 세워진을 사용하는 것을 기술하기.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Tactic commands can take compound expressions, not just single
 identifiers.</seg>
       </tuv>
@@ -9559,6 +10086,17 @@ which includes, as a special case, a principle of induction as well.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T144552Z" creationid="tlqk3" creationdate="20220526T144552Z">
         <seg>제거 규칙은 유형의 재귀의 원리를 제공합니다. 이것은 특별한 경우로서 귀납의 원리도 포합합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The
+function &lt;g8&gt;F&lt;/g8&gt; provides the inductive recipe for doing that: it tells
+us how to construct an element &lt;g9&gt;C x&lt;/g9&gt;, given elements of &lt;g10&gt;C y&lt;/g10&gt; for
+each predecessor &lt;g11&gt;y&lt;/g11&gt; of &lt;g12&gt;x&lt;/g12&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165813Z" creationid="tlqk3" creationdate="20220603T165813Z">
+        <seg>함수 &lt;g8&gt;F&lt;/g8&gt;는 그것을 하는데 귀납적인 요리법을 제공합니다. 이것은 &lt;g12&gt;x&lt;/g12&gt;의 각 선행자 &lt;g11&gt;y&lt;/g11&gt;에 대해&lt;g10&gt;C y&lt;/g10&gt;의  원소가 주어진 경우 원소 &lt;g9&gt;C x&lt;/g9&gt;를 생성하는 법을 우리에게 말해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9797,6 +10335,15 @@ case, it chooses names and introduces as many variables as it can.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The &lt;g1&gt;map&lt;/g1&gt; function is even more tedious to define by hand than the
+&lt;g2&gt;tail&lt;/g2&gt; function.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T184127Z" creationid="tlqk3" creationdate="20220603T184127Z">
+        <seg>심지어 &lt;g1&gt;map&lt;/g1&gt; 함수는 &lt;g2&gt;tail&lt;/g2&gt; 함수보다 손으로 정의하기에는 더 번거롭습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The &lt;g1&gt;match&lt;/g1&gt; expression is part of Lean's function definition system,
 which provides convenient and expressive ways of defining complex
 functions.</seg>
@@ -9935,6 +10482,16 @@ working with them.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The &lt;g1&gt;tail&lt;/g1&gt; function is, however, easy to define using recursive
+equations, and the equation compiler generates all the boilerplate
+code automatically for us.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183906Z" creationid="tlqk3" creationdate="20220603T183906Z">
+        <seg>하지만 &lt;g1&gt;tail&lt;/g1&gt; 함수는 재귀적인 방정식을 사용해 정의하기 쉽습니다. 그리고 방정식 컴파일러는 모든 보일러 플레이트 코드를 우리를 위해 자동적으로 만들어 줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The &lt;g1&gt;variable&lt;/g1&gt; command instructs Lean to insert the declared
 variables as bound variables in definitions that refer to them by
 name.</seg>
@@ -9992,6 +10549,16 @@ to prove the proposition.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182639Z" creationid="tlqk35" creationdate="20220321T182639Z">
         <seg>&lt;g2&gt;match&lt;/g2&gt; 구문은 존재 주장 속 성분인 &lt;g3&gt;w&lt;/g3&gt;와 &lt;g4&gt;hw&lt;/g4&gt;로 '파괴'합니다.  이들은 명제를 증명하기 위해 문장의 몸체에서 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The &lt;g2&gt;sorry&lt;/g2&gt; does not
+prevent the bytecode evaluator from evaluating the function
+successfully.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172814Z" creationid="tlqk3" creationdate="20220603T172814Z">
+        <seg>&lt;g2&gt;sorry&lt;/g2&gt;는 바이트코드 평가기가 함수를 성공적으로 평가하는 것을 막지 못합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10207,6 +10774,15 @@ is a parameter and occurs before the colon to indicate it does not participate i
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The automatically generated definitions for indexed
+families are far from straightforward.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T184037Z" creationid="tlqk3" creationdate="20220603T184037Z">
+        <seg>인덱스된 군을 위한 자동적으로 생성된 정의는 직관과는 거리가 멉니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The classical axioms also give you access to additional patterns of
 proof that can be justified by appeal to &lt;g1&gt;em&lt;/g1&gt;.</seg>
       </tuv>
@@ -10277,6 +10853,39 @@ contradiction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164351Z" creationid="tlqk35" creationdate="20220321T164351Z">
         <seg>연결사 &lt;g1&gt;False&lt;/g1&gt;은 하나의 제거 규칙 &lt;g2&gt;False.elim&lt;/g2&gt;을 갖습니다. 이것은 모순으로부터 어떤 것이든 도출된다는 사실을 표현합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The constructors, &lt;g1&gt;even_zero&lt;/g1&gt;, &lt;g2&gt;even_succ&lt;/g2&gt;, and &lt;g3&gt;odd_succ&lt;/g3&gt; provide positive means for showing that a number is even or odd.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174551Z" creationid="tlqk3" creationdate="20220603T174551Z">
+        <seg>생성자 &lt;g1&gt;even_zero&lt;/g1&gt;, &lt;g2&gt;even_succ&lt;/g2&gt;과 &lt;g3&gt;odd_succ&lt;/g3&gt;은 수가 짝수인지 홀수인지 보이는데 긍정적인 수단을 제공한다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The course-of-values recursion is implemented by &lt;g5&gt;Nat.brecOn&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165008Z" creationid="tlqk3" creationdate="20220603T164419Z">
+        <seg>course-of-values 재귀는 &lt;g5&gt;Nat.brecOn&lt;/g5&gt;로 구현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The defining equation for &lt;g1&gt;div&lt;/g1&gt; does &lt;g2&gt;not&lt;/g2&gt; hold definitionally, but
+the equation is available to &lt;g3&gt;rewrite&lt;/g3&gt; and &lt;g4&gt;simp&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172430Z" creationid="tlqk3" creationdate="20220603T172430Z">
+        <seg>&lt;g1&gt;div&lt;/g1&gt; 로 방정식을 정의하는 것은 정의로부터 성립하지 &lt;g2&gt;않습니다.&lt;/g2&gt; 그래도 방정식은 &lt;g3&gt;rewrite&lt;/g3&gt;와 &lt;g4&gt;simp&lt;/g4&gt;를 사용할 수 있습니다. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The definition is somewhat inscrutable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171046Z" creationid="tlqk3" creationdate="20220603T171046Z">
+        <seg>정의는 무언가 헤아리기가 어렵습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10353,6 +10962,14 @@ some &lt;g11&gt;u&lt;/g11&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The difficulty in defining &lt;g1&gt;tail&lt;/g1&gt; is to maintain the relationships between the indices.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183617Z" creationid="tlqk3" creationdate="20220603T183617Z">
+        <seg>&lt;g1&gt;tail&lt;/g1&gt;을 정의하는데 어려움은 인덱스 사이의 관계를 유지해야 한다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The dot notation is convenient not just for accessing the projections
 of a record, but also for applying functions defined in a namespace
 with the same name.</seg>
@@ -10397,6 +11014,27 @@ compiler generates such theorems internally.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The equation
+compiler in and of itself is not clever enough to derive that &lt;g2&gt;x -
+y&lt;/g2&gt; is less than &lt;g3&gt;x&lt;/g3&gt; under the given hypotheses, but we can help it
+out by putting this fact in the local context.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172220Z" creationid="tlqk3" creationdate="20220603T172212Z">
+        <seg>방정식 컴파일러의 속과 그 자체는 주어진 가정 하에서 &lt;g2&gt;x -y&lt;/g2&gt;가 &lt;g3&gt;x&lt;/g3&gt;보다 작다는 것을 유도할만큼 영리하지 않습니다. 그러나 우리는 그것을 지역 맥락에 이 사실을 넣음으로써 도울 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler
+looks in the local context for such information, and, when it finds
+it, puts it to good use.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172313Z" creationid="tlqk3" creationdate="20220603T172313Z">
+        <seg>방정식 컴파일러는 그런 정보에 대해 지역 맥락에서 보고 그것을 찾을 때 사용하기 좋게 둡니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The equation compiler
 tries to ensure that this holds whenever possible, as is the case with
 straightforward structural induction.</seg>
@@ -10428,6 +11066,15 @@ straightforward structural induction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T170053Z" creationid="tlqk3" creationdate="20220529T170053Z">
         <seg>방정식 컴파일러는 영리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The equation compiler is designed to make definitions like this more
+convenient.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171624Z" creationid="tlqk3" creationdate="20220603T171624Z">
+        <seg>방정식 컴파일러는 이 같은 정의를 만드는 데 더 편리하도록 설계되었습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10699,6 +11346,15 @@ both approaches.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The following example is similar: it converts any natural number to a
+binary expression, represented as a list of 0's and 1's.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172628Z" creationid="tlqk3" creationdate="20220603T172628Z">
+        <seg>다음 예제는 이것이 어떤 자연수를 이진 표현식으로 바꾸고 0과 1의 리스트로 나타낸다는 점에서 비슷합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The following example uses the &lt;g1&gt;intros&lt;/g1&gt; command to introduce the three variables and two hypotheses automatically:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T063054Z" creationid="tlqk35" creationdate="20220522T063054Z">
@@ -10770,6 +11426,16 @@ reasoning are discussed in &lt;g1&gt;Axioms and Computations&lt;/g1&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T170049Z" creationid="tlqk35" creationdate="20220321T170049Z">
         <seg>고전 추론을 지원하기 위해 린에서 사용된 모든 공리의 리스트는 &lt;g1&gt;공리와 계산&lt;/g1&gt;에서 다뤄집니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The function
+&lt;g3&gt;WellFounded.fix&lt;/g3&gt; is another tool Lean uses to justify that a function
+terminates.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T170212Z" creationid="tlqk3" creationdate="20220603T170212Z">
+        <seg>함수 &lt;g3&gt;WellFounded.fix&lt;/g3&gt;은 린이 함수 종료를 정당화하는데 사용하는 또 다른 도구입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10874,6 +11540,25 @@ foundational systems.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The hypothesis &lt;g2&gt;e : m = n + 1&lt;/g2&gt; in &lt;g3&gt;tailAux&lt;/g3&gt; is used to communicate the relationship
+between &lt;g4&gt;n&lt;/g4&gt; and the index associated with the minor premise.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183709Z" creationid="tlqk3" creationdate="20220603T183709Z">
+        <seg> &lt;g3&gt;tailAux&lt;/g3&gt;의 가정 &lt;g2&gt;e : m = n + 1&lt;/g2&gt;은 &lt;g4&gt;n&lt;/g4&gt;과 작은 전제와 연관된 인덱스 사이의 관계를 소통하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The idea is
+that &lt;g1&gt;var n&lt;/g1&gt; is a variable, &lt;g2&gt;vₙ&lt;/g2&gt;, and &lt;g3&gt;const n&lt;/g3&gt; is the
+constant whose value is &lt;g4&gt;n&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181818Z" creationid="tlqk3" creationdate="20220603T181818Z">
+        <seg>이해를 돕자면 &lt;g1&gt;var n&lt;/g1&gt;는 변수, &lt;g2&gt;vₙ&lt;/g2&gt;와 &lt;g3&gt;const n&lt;/g3&gt;은 값이 &lt;g4&gt;n&lt;/g4&gt;인 상수이다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The idea is
 that they are structurally smaller, and hence appear in the inductive
 type at an earlier stage.</seg>
@@ -10952,6 +11637,22 @@ corresponding recursor unpacks the data and acts on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175555Z" creationid="tlqk35" creationdate="20220321T175555Z">
         <seg>접두사 &lt;g1&gt;.{u}&lt;/g1&gt;은 린에게 세계변수 &lt;g2&gt;u&lt;/g2&gt;로 상수를 개체화하라고 말해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The internally defined function takes, as argument, an element of a sum type, either an input to &lt;g5&gt;even&lt;/g5&gt;, or an input to &lt;g6&gt;odd&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174007Z" creationid="tlqk3" creationdate="20220603T174007Z">
+        <seg>내부적으로 정의된 함수는 인수로써 &lt;g5&gt;even&lt;/g5&gt;의 입력으로나 &lt;g6&gt;odd&lt;/g6&gt;의 입력으로 합 유형의 원소로 받습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The internals are meant to be hidden from users; the canonical way to make use of such definitions is to use &lt;g7&gt;rewrite&lt;/g7&gt; or &lt;g8&gt;simp&lt;/g8&gt;, as we did above.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174208Z" creationid="tlqk3" creationdate="20220603T174208Z">
+        <seg>내부는 사용자로부터 숨겨지도록 의도되었습니다. 그런 정의를 만들어 사용하는 정식 방법은 &lt;g7&gt;rewrite&lt;/g7&gt;나 &lt;g8&gt;simp&lt;/g8&gt;를 우리가 위에서 했던 것처럼 사용하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11039,6 +11740,14 @@ and &lt;g5&gt;f : α → β&lt;/g5&gt;, and returns the composition of &lt;g6&gt
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143241Z" creationid="tlqk35" creationdate="20220321T143241Z">
         <seg>마지막 표현식은 세 유형 &lt;g1&gt;α&lt;/g1&gt;, &lt;g2&gt;β&lt;/g2&gt;, &lt;g3&gt;γ&lt;/g3&gt;과 두 함수 &lt;g4&gt;g : β → γ&lt;/g4&gt;과 &lt;g5&gt;f : α → β&lt;/g5&gt;을 받고 &lt;g6&gt;g&lt;/g6&gt;과 &lt;g7&gt;f&lt;/g7&gt;의 합성을 반환하는 함수를 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The last two theorems show that the definitions preserve the value.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180218Z" creationid="tlqk3" creationdate="20220603T180218Z">
+        <seg>마지막 두 정리는 정의가 값을 보존함을 보이는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11536,6 +12245,15 @@ in Lean.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The simplifier
+will loop if you apply it blindly, but &lt;g5&gt;rewrite&lt;/g5&gt; will do the trick.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172531Z" creationid="tlqk3" creationdate="20220603T172531Z">
+        <seg>단순화기는 여러분이 맹목적으로 적용한다면 무한루프를 돌 것입니다. 그러나 &lt;g5&gt;rewrite&lt;/g5&gt;는 트릭을 씁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The simplifier then proves &lt;g1&gt;isPrefix [1, 2, 3] [1, 2, 3]&lt;/g1&gt; by rewriting it to &lt;g2&gt;True&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T182954Z" creationid="tlqk3" creationdate="20220525T182954Z">
@@ -11613,6 +12331,14 @@ the structure can be inferred from the expected type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T125701Z" creationid="tlqk3" creationdate="20220526T125701Z">
         <seg>그렇게 하는 문법은 다음과 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The syntax is similar to that for mutual inductive types, as described in :numref:&lt;g1&gt;mutual_and_nested_inductive_types&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173612Z" creationid="tlqk3" creationdate="20220603T173612Z">
+        <seg>numref&lt;g1&gt;상호적이고 재귀적인 귀납형&lt;/g1&gt;에서 기술한 바처럼 문법은 상호 귀납적인 유형에 대한 것과 비슷합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11725,6 +12451,14 @@ propositions-as-types paradigm differ in a fundamental way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The type &lt;g1&gt;@Nat.below C (3 : nat)&lt;/g1&gt; is a data structure that stores elements of &lt;g2&gt;C 0&lt;/g2&gt;, &lt;g3&gt;C 1&lt;/g3&gt;, and &lt;g4&gt;C 2&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165012Z" creationid="tlqk3" creationdate="20220603T164349Z">
+        <seg>&lt;g1&gt;@Nat.below C (3 : nat)&lt;/g1&gt;형은 &lt;g2&gt;C 0&lt;/g2&gt;, &lt;g3&gt;C 1&lt;/g3&gt;과 &lt;g4&gt;C 2&lt;/g4&gt;의 원소를 저장하는 데이터 구조입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The type algebra &lt;g2&gt;β → γ&lt;/g2&gt; and &lt;g3&gt;α → β&lt;/g3&gt; means it is a requirement
 that the type of the output of the second function must match the
 type of the input to the first function - which makes sense, otherwise
@@ -11772,12 +12506,31 @@ assertion that "for every &lt;g2&gt;x : α&lt;/g2&gt;, &lt;g3&gt;p x&lt;/g3&gt;"
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The use of course-of-values recursion is one of the techniques the equation compiler uses to justify to
+the Lean kernel that a function terminates.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165021Z" creationid="tlqk3" creationdate="20220603T164834Z">
+        <seg>course-of-values 재귀의 사용은 방정식 컴파일러가 함수를 끝내는 린 커널을 정당화하는데 사용하는 한 기법입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The use of underscores for wildcards is
 common in functional programming languages, and so Lean adopts that
 notation.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T163403Z" creationid="tlqk3" creationdate="20220529T163403Z">
         <seg>와일드카드에 대한 밑줄 문자의 사용은 함수형 프로그래밍 언어에서 흔합니다. 그래서 린은 이 표기를 채택합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The variable &lt;g5&gt;C&lt;/g5&gt;
+represents the motive of the recursive definition: for each element
+&lt;g6&gt;x : α&lt;/g6&gt;, we would like to construct an element of &lt;g7&gt;C x&lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165547Z" creationid="tlqk3" creationdate="20220603T165547Z">
+        <seg>변수 &lt;g5&gt;C&lt;/g5&gt;는 재귀적 정의의 동기를 나타냅니다. 각 원소 &lt;g6&gt;x : α&lt;/g6&gt;에 대하여 우리는 &lt;g7&gt;C x&lt;/g7&gt;의 원소를 생성하고자 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11861,6 +12614,15 @@ proved.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172040Z" creationid="tlqk35" creationdate="20220321T172040Z">
         <seg>루트 폴더에서 &lt;g1&gt;&lt;g2&gt;mdbook watch&lt;/g2&gt;&lt;/g1&gt;을 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Then use the equation
+compiler to derive some of their basic properties.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180954Z" creationid="tlqk3" creationdate="20220603T180954Z">
+        <seg>그 뒤 방정식 컴파일러를 그들의 기본 성질 몇 가지를 유도하는데 사용하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12000,6 +12762,16 @@ information in this way can sometimes make a proof harder to read.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163506Z" creationid="tlqk35" creationdate="20220321T163506Z">
         <seg>간결함과 가독성 사이에 미세찬 차이가 있고 이런 식으로 정보를 생략하는 것은 때때로 증명을 읽기 더 어렵게 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>There is a long cast of characters here, but the first block we have
+already seen: the type, &lt;g1&gt;α&lt;/g1&gt;, the relation, &lt;g2&gt;r&lt;/g2&gt;, and the
+assumption, &lt;g3&gt;h&lt;/g3&gt;, that &lt;g4&gt;r&lt;/g4&gt; is well founded.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171011Z" creationid="tlqk3" creationdate="20220603T165459Z">
+        <seg>여기 문자의 긴 캐스트가 있지만 우리는 이미 유형 &lt;g1&gt;α&lt;/g1&gt;, 관계 &lt;g2&gt;r&lt;/g2&gt; 그리고 가정 &lt;g3&gt;h&lt;/g3&gt;으로 된 첫 블럭을 봤습니다. 여기서 &lt;g4&gt;r&lt;/g4&gt;은 잘 세워진 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12146,6 +12918,14 @@ or software, network protocols, and mechanical and hybrid systems meet their spe
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>These variations are equally useful for destructing propositions:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181905Z" creationid="tlqk3" creationdate="20220603T181905Z">
+        <seg>이 변수들은 명제를 파괴하는데 똑같이 유용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>They
 are commonly known as the right and left &lt;g6&gt;and-elimination&lt;/g6&gt; rules.</seg>
       </tuv>
@@ -12215,6 +12995,14 @@ in which you decompose a proof and work on goals one step at a time.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184311Z" creationid="tlqk35" creationdate="20220321T184311Z">
         <seg>그들은 증명을 분해하고 한 번에 한 단계씩 목표를 달성하는 점진적인 스타일의 증명을 자연스럽게 지원합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>They will be improved over time.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173133Z" creationid="tlqk3" creationdate="20220603T173133Z">
+        <seg>그들은 시간이 지나면서 개선될 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12393,6 +13181,16 @@ above.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This does not look very different from an ordinary pattern matching
+definition, but the point is that a &lt;g1&gt;match&lt;/g1&gt; can be used anywhere in
+an expression, and with arbitrary arguments.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T183000Z" creationid="tlqk3" creationdate="20220603T183000Z">
+        <seg>이것은 평범한 패턴 매칭 정의와 아주 달라보이지 않지만 &lt;g1&gt;match&lt;/g1&gt;가 임의의 인수로 표현식의 어디서든 사용될 수 있다는 점이 다릅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This example is similar to the previous one, but now an input to
 &lt;g1&gt;sum_example&lt;/g1&gt; is implicitly either of the form &lt;g2&gt;inl n&lt;/g2&gt; or &lt;g3&gt;inr n&lt;/g3&gt;.</seg>
       </tuv>
@@ -12511,6 +13309,16 @@ introduces an auxiliary subgoal in a proof.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T153355Z" creationid="tlqk3" creationdate="20220527T153355Z">
         <seg>여기서 또 다른 유도형 &lt;g2&gt;∃ x : α, P&lt;/g2&gt;과 &lt;g3&gt;Σ x : α, P&lt;/g3&gt;이 섞인 &lt;g1&gt;{x : α // p}&lt;/g1&gt;으로 나타낸 유도형을 얘기하기 좋은 곳 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is a notoriously inefficient way of
+computing the fibonacci function, however, with an execution time that
+is exponential in &lt;g7&gt;n&lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T163724Z" creationid="tlqk3" creationdate="20220603T163724Z">
+        <seg>이것은 계산 시간이 &lt;g7&gt;n&lt;/g7&gt;에 대해 지수적인 피보나치 함수를 계산하는 악명높게 비효율적인 방식이지만</seg>
       </tuv>
     </tu>
     <tu>
@@ -12650,6 +13458,14 @@ hence in Lean as well.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T173809Z" creationid="tlqk35" creationdate="20220321T173809Z">
         <seg>이것은 도입 규칙입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is tricky; you will have to define an auxiliary function.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181617Z" creationid="tlqk3" creationdate="20220603T181617Z">
+        <seg>이것은 교활해서 여러분은 부가함수를 정의해야만 할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12972,6 +13788,14 @@ number.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus, all four of these definitions have the same net effect.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182726Z" creationid="tlqk3" creationdate="20220603T182726Z">
+        <seg>따라서 이 모든 네 정의들은 동일한 알짜 효과를 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus, for example, we can specialize the example from the previous section to the equality relation:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175602Z" creationid="tlqk35" creationdate="20220321T175602Z">
@@ -13037,6 +13861,14 @@ declare universe variables explicitly using the &lt;g1&gt;universe&lt;/g1&gt; co
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To define that function, Lean uses a suitable well-founded measure.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174058Z" creationid="tlqk3" creationdate="20220603T174058Z">
+        <seg>이런 함수를 정의하려면 린은 적절히 잘 세워진 척도를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To each proposition &lt;g1&gt;p&lt;/g1&gt; we associate a type that is
 empty if &lt;g2&gt;p&lt;/g2&gt; is false and has a single element, say &lt;g3&gt;*&lt;/g3&gt;, if &lt;g4&gt;p&lt;/g4&gt;
 is true.</seg>
@@ -13062,6 +13894,17 @@ exercises at the end of this section.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T174413Z" creationid="tlqk35" creationdate="20220321T174413Z">
         <seg>전칭 한정기호 사용에 익숙해지기 위해서 여러분은 이 섹션 끝의 연습문제들을 풀어보아야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To handle structural recursion, the equation compiler uses
+&lt;g1&gt;course-of-values&lt;/g1&gt; recursion, using constants &lt;g2&gt;below&lt;/g2&gt; and &lt;g3&gt;brecOn&lt;/g3&gt;
+that are automatically generated with each inductively defined
+type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T164135Z" creationid="tlqk3" creationdate="20220603T164135Z">
+        <seg>구조적 재귀를 다루려고 방정식 컴파일러는 각 귀납적으로 정의된 유형으로부터 자동적으로 생성된 상수 &lt;g2&gt;below&lt;/g2&gt;와 &lt;g3&gt;brecOn&lt;/g3&gt;을 사용하여 &lt;g1&gt;course-of-values&lt;/g1&gt;재귀를 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13141,6 +13984,16 @@ checker, there is no difference between the two.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160850Z" creationid="tlqk35" creationdate="20220321T160850Z">
         <seg>커널 유형 확인기에서 둘 사이의 차이는 없습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To understand the difficulty, consider what it would take
+to define a function &lt;g8&gt;tail&lt;/g8&gt; which takes a vector
+&lt;g9&gt;v : vector α (succ n)&lt;/g9&gt; and deletes the first element.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175752Z" creationid="tlqk3" creationdate="20220603T175752Z">
+        <seg>어려움을 이해하려면 벡터 &lt;g9&gt;v : vector α (succ n)&lt;/g9&gt;를 받고 첫 번째 원소를 삭제하는 함수 &lt;g8&gt;tail&lt;/g8&gt;를 정의하는데 무엇이 필요한지 고려해보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13262,6 +14115,14 @@ will depend on &lt;g6&gt;x : α&lt;/g6&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Under the hood, this is compiled as a single recursive definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173844Z" creationid="tlqk3" creationdate="20220603T173844Z">
+        <seg>후드 아래에서 이것은 단일 재귀적 정의로 컴파일된다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Unicode</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162031Z" creationid="tlqk35" creationdate="20220321T161850Z">
@@ -13332,6 +14193,17 @@ libraries, or develop their own projects across multiple files.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T160612Z" creationid="tlqk35" creationdate="20220524T160612Z">
         <seg>단순화기를 사용하기</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Using the auxiliary function &lt;g3&gt;simpConst&lt;/g3&gt;,
+define a function "fuse": to simplify a plus or a times, first
+simplify the arguments recursively, and then apply &lt;g4&gt;simpConst&lt;/g4&gt; to
+try to simplify the result.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180419Z" creationid="tlqk3" creationdate="20220603T180419Z">
+        <seg>보조 함수 &lt;g3&gt;simpConst&lt;/g3&gt;를 사용하여 함수 "fuse"를 정의하세요. 더하기와 곱하기를 간단히 하기 위해서 인수를 재귀적으로 단순화하세요. 그 뒤 &lt;g4&gt;simpConst&lt;/g4&gt;을 결과를 단순화하는데 적용하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13634,6 +14506,14 @@ class.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can then use a mutual recursive definition to count the number of constants occurring in a term, as well as the number occurring in a list of terms.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175133Z" creationid="tlqk3" creationdate="20220603T175133Z">
+        <seg>그럼 우리는 상호적으로 재귀적인 정의를 항의 리스트에서 나타나는 수 뿐만 아니라 항 속의 상수의 수를 세는데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can therefore
 rewrite the sample proof above conveniently as follows:</seg>
       </tuv>
@@ -13734,6 +14614,15 @@ tactic.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We encourage you to try it, using &lt;g3&gt;recOn&lt;/g3&gt;,
+&lt;g4&gt;casesOn&lt;/g4&gt; and &lt;g5&gt;noConfusion&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T184219Z" creationid="tlqk3" creationdate="20220603T184219Z">
+        <seg>우리는 여러분이 이를 &lt;g3&gt;recOn&lt;/g3&gt;, &lt;g4&gt;casesOn&lt;/g4&gt;과 &lt;g5&gt;noConfusion&lt;/g5&gt;을 사용해 시도해보길 권합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We have
 chosen a nontraditional name here only to avoid a clash of names.</seg>
       </tuv>
@@ -13830,6 +14719,16 @@ construction.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We have to
+provide the equation compiler with evidence that the recursive call is
+decreasing, which we do here with a &lt;g1&gt;sorry&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T172727Z" creationid="tlqk3" creationdate="20220603T172727Z">
+        <seg>우리는 방정식 컴파일러에게 재귀호출이 감소한다는 증거를 주어야 합니다. 여기서 우리는 &lt;g1&gt;sorry&lt;/g1&gt;로 했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We have used &lt;g1&gt;.&lt;/g1&gt; to create nested tactic blocks.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T144734Z" creationid="tlqk35" creationdate="20220524T144734Z">
@@ -13845,6 +14744,14 @@ everything else follows from those.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T172353Z" creationid="tlqk35" creationdate="20220528T172353Z">
         <seg>게다가 우리는 유형 세계, 의존 화살표 유형, 유도형과 이들로부터 따라나온 모든 것 외에는 기반하지 않는 수학의 엄청난 구조물을 세울 수 있는 가능성을 발견한 사실은 주목할만 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We need to use the fact that the inductive type is generated by these constructors to know that the zero is not odd, and that the latter two implications reverse.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T174723Z" creationid="tlqk3" creationdate="20220603T174723Z">
+        <seg>우리는 귀납형이 0은 홀수가 아니다는 것, 그리고 후자는 두 함의의 역이라는 것이 생성자들에 의해 만들어졌다는 사실을 이용할 필요가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14139,6 +15046,14 @@ recursive definitions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>What makes this a mutual definition is that &lt;g1&gt;even&lt;/g1&gt; is defined recursively in terms of &lt;g2&gt;odd&lt;/g2&gt;, while &lt;g3&gt;odd&lt;/g3&gt; is defined recursively in terms of &lt;g4&gt;even&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173758Z" creationid="tlqk3" creationdate="20220603T173758Z">
+        <seg>이를 상호적인 정의로 만드는 것은 &lt;g1&gt;even&lt;/g1&gt;이&lt;g2&gt;odd&lt;/g2&gt;에 대해 재귀적으로 정의되었고, 한편 &lt;g3&gt;odd&lt;/g3&gt;는 &lt;g4&gt;even&lt;/g4&gt;에 대해 재귀적으로 정의되었다는 점이다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>What type should &lt;g2&gt;cons&lt;/g2&gt; have?</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151029Z" creationid="tlqk35" creationdate="20220321T151029Z">
@@ -14208,6 +15123,16 @@ Lean to generate a fuction that converts &lt;g2&gt;Weekday&lt;/g2&gt; objects in
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>When the equation compiler encounters a recursive definition, it first
+tries structural recursion, and only when that fails, does it fall
+back on well-founded recursion.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171912Z" creationid="tlqk3" creationdate="20220603T171912Z">
+        <seg>방정식 컴파일러가 재귀적 정의를 만날 때, 는 처음 구조적 재귀를 시도하고 그게 실패했을 때 잘 세워진 재귀로 대체됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>When the goal can be inferred, we can also ask Lean instead to fill in
 the proof by writing &lt;g1&gt;by assumption&lt;/g1&gt;:</seg>
       </tuv>
@@ -14241,6 +15166,25 @@ example, the expression &lt;g5&gt;β a&lt;/g5&gt; in the previous paragraph),
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151941Z" creationid="tlqk35" creationdate="20220321T151941Z">
         <seg>&lt;g3&gt;β&lt;/g3&gt;의 값이 &lt;g4&gt;a&lt;/g4&gt;에 의존할 때(예를 들어 앞 단락에서 식 &lt;g5&gt;β a&lt;/g5&gt;처럼), &lt;g6&gt;(a : α) → β&lt;/g6&gt;는 의존적 함수 유형을 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>When they don't, the latter is always
+available as a backup.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173241Z" creationid="tlqk3" creationdate="20220603T173241Z">
+        <seg>그들이 동작하지 않을 때 후자는 백업으로 항상 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>When they work, they provide a
+much more convenient way of defining functions than using
+&lt;g1&gt;WellFounded.fix&lt;/g1&gt; manually.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173220Z" creationid="tlqk3" creationdate="20220603T173220Z">
+        <seg>그들이 동작할 때, 그들은 수동적으로 &lt;g1&gt;WellFounded.fix&lt;/g1&gt;를 사용하는 것보다 함수를 정의하는 훨씬 더 편리한 방법을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14426,10 +15370,29 @@ but once you end the namespace, you have to use the longer names.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Without the equation
+compiler, we would need a lot of boilerplate code to define very
+simple functions such as &lt;g5&gt;map&lt;/g5&gt;, &lt;g6&gt;zip&lt;/g6&gt;, and &lt;g7&gt;unzip&lt;/g7&gt; using
+recursors.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T175627Z" creationid="tlqk3" creationdate="20220603T175627Z">
+        <seg>방정식 컴파일러가 없다면 우리는 &lt;g5&gt;map&lt;/g5&gt;, &lt;g6&gt;zip&lt;/g6&gt;과 &lt;g7&gt;unzip&lt;/g7&gt;같은 아주 단순한 함수를 재귀자를 사용해서 정의하려면 아주 많은 보일러 플레이트 코드가 필요할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Working with Propositions as Types</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160548Z" creationid="tlqk35" creationdate="20220321T160548Z">
         <seg>유형으로써 명제로 작업하기</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Write a function that evaluates such an expression, evaluating each &lt;g1&gt;var n&lt;/g1&gt; to &lt;g2&gt;v n&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180800Z" creationid="tlqk3" creationdate="20220603T180800Z">
+        <seg>각 &lt;g1&gt;var n&lt;/g1&gt;을 &lt;g2&gt;v n&lt;/g2&gt;으로 계산하는 표현식을 계산하는 함수를 작성하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14486,6 +15449,14 @@ will see an example of this in a moment.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T062825Z" creationid="tlqk35" creationdate="20220522T062806Z">
         <seg>어느 때에 여러분은 이에 대한 예를 볼 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You are encouraged to experiment with similar examples in the exercises below.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T165407Z" creationid="tlqk3" creationdate="20220603T165407Z">
+        <seg>여러분은 아래 연습에서 비슷한 예제로 실험해보길 권유합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14580,6 +15551,14 @@ names if you add a line break between each field.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can also introduce auxiliary recursive declarations using &lt;g1&gt;where&lt;/g1&gt; clause after your definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182452Z" creationid="tlqk3" creationdate="20220603T182452Z">
+        <seg>여러분도 부가적인 재귀 선언을 여러분의 정의 뒤에 &lt;g1&gt;where&lt;/g1&gt; 절을 사용해서 도입할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can also pass types as parameters:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143154Z" creationid="tlqk35" creationdate="20220321T143154Z">
@@ -14608,6 +15587,14 @@ names if you add a line break between each field.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T165651Z" creationid="tlqk3" creationdate="20220527T165651Z">
         <seg>여러분은 임의의 표현식에 &lt;g1&gt;cases&lt;/g1&gt;를 사용할 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can also use &lt;g1&gt;let rec&lt;/g1&gt; in tactic mode and for creating proofs by induction.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T182401Z" creationid="tlqk3" creationdate="20220603T182401Z">
+        <seg>여러분도 전략 모드에서 귀납법으로 증명을 만들 때에 &lt;g1&gt;let rec&lt;/g1&gt;을 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14730,6 +15717,14 @@ definitional identities as before.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can define local recursive declarations using the &lt;g1&gt;let rec&lt;/g1&gt; keyword.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T181948Z" creationid="tlqk3" creationdate="20220603T181948Z">
+        <seg>여러분은 지역적으로 재귀 선언을 &lt;g1&gt;let rec&lt;/g1&gt; 키워드를 사용해 정의할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can enter the unicode
 arrow &lt;g1&gt;→&lt;/g1&gt; by typing &lt;g2&gt;\to&lt;/g2&gt; or &lt;g3&gt;\r&lt;/g3&gt; or &lt;g4&gt;\-&gt;&lt;/g4&gt;.</seg>
       </tuv>
@@ -14743,6 +15738,15 @@ arrow &lt;g1&gt;→&lt;/g1&gt; by typing &lt;g2&gt;\to&lt;/g2&gt; or &lt;g3&gt;\
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T142224Z" creationid="tlqk35" creationdate="20220321T142224Z">
         <seg>여러분은 필요한 매개변수를 람다 함수에 넘겨줌으로써 값을 평가할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can get a sense of how it works by looking at the types of
+&lt;g4&gt;Nat.below&lt;/g4&gt; and &lt;g5&gt;Nat.brecOn&lt;/g5&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T164255Z" creationid="tlqk3" creationdate="20220603T164255Z">
+        <seg>여러분은 &lt;g4&gt;Nat.below&lt;/g4&gt;과 &lt;g5&gt;Nat.brecOn&lt;/g5&gt;의 유형을 봄으로써 이것이 어떻게 동작하는지에 대해 감을 얻을 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15043,6 +16047,17 @@ type &lt;g6&gt;Nat × Nat&lt;/g6&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You have to remember that the second
+argument to &lt;g5&gt;div.F&lt;/g5&gt;, the recipe for the recursion, is a function
+that is supposed to return the divide by &lt;g6&gt;y&lt;/g6&gt; function for all values
+&lt;g7&gt;x₁&lt;/g7&gt; smaller than &lt;g8&gt;x&lt;/g8&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T171543Z" creationid="tlqk3" creationdate="20220603T171543Z">
+        <seg>여러분은 재귀를 위한 요리법인 &lt;g5&gt;div.F&lt;/g5&gt;의 두 번째 인수가 &lt;g8&gt;x&lt;/g8&gt;보다 작은 모든 &lt;g7&gt;x₁&lt;/g7&gt;값에 대한 &lt;g6&gt;y&lt;/g6&gt; 함수로 나눠진 것을 반환하기로 한 함수임을 기억해야만 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You may
 also provide the value for an implicit parameter when Lean failed to
 infer it.</seg>
@@ -15070,6 +16085,14 @@ necessary.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183807Z" creationid="tlqk35" creationdate="20220321T183807Z">
         <seg>여러분은 왜 명제의 역이 마지막 예제에서 불가능한지 이해하려고 시도해봐야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You should get 47 here.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180544Z" creationid="tlqk3" creationdate="20220603T180544Z">
+        <seg>여러분은 여기서 47을 얻어야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15237,6 +16260,14 @@ interpreted relative to the Lean &lt;g2&gt;search path&lt;/g2&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>nested_and_mutual_recursion:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T173315Z" creationid="tlqk3" creationdate="20220603T173315Z">
+        <seg>중접되고 상호적인 재귀</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>notation "‹" p "›" =&gt; show p by assumption</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183620Z" creationid="tlqk35" creationdate="20220321T183620Z">
@@ -15391,6 +16422,18 @@ Lean's parser will default to right associativity.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T155255Z" creationid="tlqk3" creationdate="20220527T155255Z">
         <seg>여러분은 다음을 발견합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>| _ =&gt; 0
+
+-- Try it out.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220603T180555Z" creationid="tlqk3" creationdate="20220603T180555Z">
+        <seg>| _ =&gt; 0
+
+-- 시도해 보세요.</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->
