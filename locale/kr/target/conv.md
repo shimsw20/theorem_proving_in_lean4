@@ -1,24 +1,12 @@
-The Conversion Tactic Mode
+전략 모드로 전환
 =========================
 
-Inside a tactic block, one can use the keyword `conv` to enter
-conversion mode. This mode allows to travel inside assumptions and
-goals, even inside function abstractions and dependent arrows, to apply rewriting or
-simplifying steps.
+전략 블록 안에서 `conv` 키워드를 사용하여 전환 모드로 들어갈 수 있습니다. 이 모드를 사용하면 가정과 목표 속과 심지어 함수 추상화 및 종속 화살표 내부를 이동하여 다시쓰기 또는 단순화 단계를 적용할 수 있습니다.
 
-Basic navigation and rewriting
+기본 탐색 및 다시쓰기
 -------
 
-As a first example, let us prove example
-`(a b c : Nat) : a * (b * c) = a * (c * b)`
-(examples in this file are somewhat artificial since
-other tactics could finish them immediately). The naive
-first attempt is to enter tactic mode and try `rw [Nat.mul_comm]`. But this
-transforms the goal into `b * c * a = a * (c * b)`, after commuting the
-very first multiplication appearing in the term. There are several
-ways to fix this issue, and one way is to use a more precise tool :
-the conversion mode. The following code block shows the current target
-after each line.
+첫 번째 예로서 `(a b c : Nat) : a * (b * c) = a * (c * b)` 예제를 증명해 봅시다. (다른 전술로 이 예제를 즉시 끝낼 수 있기에 이것은 다소 인위적입니다.) 첫 순진한 시도는 전략 모드로 들어가 `rw [Nat.mul_comm]`을 시도하는 것입니다. 그러나 이것은 항에 나타나는 맨 처음 곱셈을 교환한 뒤 목표를 `b * c * a = a * (c * b)`로 바꿉니다. 이 문제를 해결하는 방법에는 여러 가지가 있으며 한 가지 방법은 보다 정밀한 도구인 전환 모드를 사용하는 것입니다. 다음 코드 블록은 각 줄 뒤에 있는 현재 대상을 보여줍니다.
 
 ```lean
 example (a b c : Nat) : a * (b * c) = a * (c * b) := by
@@ -33,30 +21,25 @@ example (a b c : Nat) : a * (b * c) = a * (c * b) := by
     rw [Nat.mul_comm]
 ```
 
-The above snippet show three navigation commands:
+위의 자투리는 세 가지 탐색 명령을 보여줍니다.
 
-- `lhs` navigates to the left hand side of a relation (here equality), there is also a `rhs` navigating to the right hand side.
-- `congr` creates as many targets as there are (nondependent and explicit) arguments to the current head function
-   (here the head function is multiplication).
-- `skip` goes to the next target.
+- `lhs`는 관계식의 좌변으로 이동하고(여기서는 등호), 우변으로 이동하는 `rhs`도 있습니다.
+- `congr`은 현재 머리 함수 (여기서 머리 함수은 곱셈)에 대한 (비의존적 및 명시적) 인수만큼 많은 대상을 생성합니다.
+- `skip`는 다음 대상으로 이동합니다.
 
-Once arrived at the relevant target, we can use `rw` as in normal
-tactic mode.
+일단 연관된 대상에 도달하면 일반 전략 모드처럼 `rw`를 사용할 수 있습니다.
 
-The second main reason to use conversion mode is to rewrite under
-binders. Suppose we want to prove example
-`(fun x : Nat => 0 + x) = (fun x => x)`.
-The naive first attempt is to enter tactic mode and try
-`rw [zero_add]`. But this fails with a frustrating
+전환 모드를 사용하는 두 번째 주요 이유는 결합자 아래에서 다시쓰기 위한 것입니다. 예제 `(fun x : Nat => 0 + x) = (fun x => x)`을 증명하고 싶다고 해봅시다.
+첫 순진한 시도는 전략 모드로 들어가 `rw [zero_add]`를 시도하는 것입니다. 그러나 이것은 좌절과 함께 실패합니다.
 
 ```
-error: tactic 'rewrite' failed, did not find instance of the pattern
-       in the target expression
+오류: '다시 쓰기' 전술이 실패했습니다. 패턴의 개체를 찾지 못했습니다.(error: tactic 'rewrite' failed, did not find instance of the pattern)
+       대상 표현식에서
   0 + ?n
 ⊢ (fun x => 0 + x) = fun x => x
 ```
 
-The solution is:
+해결책은
 
 ```lean
 example : (fun x : Nat => 0 + x) = (fun x => x) := by
@@ -66,34 +49,34 @@ example : (fun x : Nat => 0 + x) = (fun x => x) := by
     rw [Nat.zero_add]
 ```
 
-where `intro x` is the navigation command entering inside the `fun` binder.
-Note that this example is somewhat artificial, one could also do:
+여기서 `intro x`는 `fun` 결합자 내부로 들어가는 탐색 명령입니다.
+이 예제는 다소 인위적이며 누군가는 다음과 같이 할 수 있음을 보세요.
 
 ```lean
 example : (fun x : Nat => 0 + x) = (fun x => x) := by
   funext x; rw [Nat.zero_add]
 ```
 
-or just
+아니면 그냥
 
 ```lean
 example : (fun x : Nat => 0 + x) = (fun x => x) := by
   simp
 ```
 
-All this is also available to rewrite an hypothesis `h` from the local context using `conv at h`.
+이 모든 것은 `conv at h`를 사용하여 지역 상황에서 가정 `h`를 다시쓰기 하는 데에도 이용할 수 있습니다.
 
-Pattern matching
+패턴 매칭
 -------
 
-Navigation using the above commands can be tedious. One can shortcut it using pattern matching as follows:
+위 명령을 사용한 탐색은 지루할 수 있습니다. 누군가는 다음과 같이 패턴 매칭을 사용하여 그것을 손쉽게 할 수 있습니다.
 
 ```lean
 example (a b c : Nat) : a * (b * c) = a * (c * b) := by
   conv in b * c => rw [Nat.mul_comm]
 ```
 
-which is just syntax sugar for
+이것은 다음에 대한 문법적 설탕입니다.
 
 ```lean
 example (a b c : Nat) : a * (b * c) = a * (c * b) := by
@@ -102,17 +85,17 @@ example (a b c : Nat) : a * (b * c) = a * (c * b) := by
     rw [Nat.mul_comm]
 ```
 
-Of course, wildcards are allowed:
+당연히 와일드카드도 허용됩니다.
 
 ```lean
 example (a b c : Nat) : a * (b * c) = a * (c * b) := by
   conv in _ * c => rw [Nat.mul_comm]
 ```
 
-Structuring conversion tactics
+전환 전술 구조화하기
 -------
 
-Curly brackets and `.` can also be used in `conv` mode to structure tactics.
+중괄호와 `.`은 전략을 구조화하기위해 `conv` 모드에서도 사용될 수 있습니다.
 
 ```lean
 example (a b c : Nat) : (0 + a) * (b * c) = a * (c * b) := by
@@ -123,10 +106,10 @@ example (a b c : Nat) : (0 + a) * (b * c) = a * (c * b) := by
     . rw [Nat.mul_comm]
 ```
 
-Other tactics inside conversion mode
+전환 모드 속 다른 전략
 ----------
 
-- `arg i` enter the `i`-th nondependent explicit argument of an application.
+- `arg i`는 적용의 `i`번째 비의존적인 명시적 인수를 입력합니다.
 
 ```lean
 example (a b c : Nat) : a * (b * c) = a * (c * b) := by
@@ -139,9 +122,9 @@ example (a b c : Nat) : a * (b * c) = a * (c * b) := by
     rw [Nat.mul_comm]
 ```
 
-- `args` alternative name for `congr`
+- `args` `congr`의 대체 이름
 
-- `simp` applies the simplifier to the current goal. It supports the same options available in regular tactic mode.
+- `simp`는 현재 목표에 단순화기를 적용합니다. 보통의 전략 모드에서 사용할 수 있는 것과 동일한 옵션을 지원합니다.
 
 ```lean
 def f (x : Nat) :=
@@ -154,7 +137,7 @@ example (g : Nat → Nat) (h₁ : g x = x + 1) (h₂ : x > 0) : g x = f x := by
   exact h₁
 ```
 
-- `enter [1, x, 2, y]` iterate `arg` and `intro` with the given arguments. It is just the macro.
+- `enter [1, x, 2, y]` 주어진 인수로 `arg` 및 `intro`를 반복합니다. 이것은 그저 매크로입니다.
 
 ```
 syntax enterArg := ident <|> num
@@ -165,15 +148,13 @@ macro_rules
   | `(conv| enter [$arg:enterArg, $args,*]) => `(conv| (enter [$arg]; enter [$args,*]))
 ```
 
-- `done` fail if there are unsolved goals.
+- 미해결 목표가 있으면 `done`이 실패합니다.
 
-- `traceState` display the current tactic state.
+- `traceState`는 현재 전략 상태를 표시합니다.
 
-- `whnf` put term in weak head normal form.
+- `whnf`은 항를 약한 머리 정규 형식에 둡니다.
 
-- `tactic => <tactic sequence>` go back to regular tactic mode. This
-   is useful for discharging goals not supported by `conv` mode, and
-   applying custom congruence and extensionality lemmas.
+- ` tactic => <tactic sequence>`는 보통의 전략 모드로 되돌아갑니다. 이는 `conv` 모드에서 지원되지 않는 목표를 실행하고 사용자 정의 합동 및 확장 보조정리를 적용하는 데 유용합니다.
 
 ```lean
 example (g : Nat → Nat → Nat)
@@ -191,7 +172,7 @@ example (g : Nat → Nat → Nat)
     . tactic => exact h₂
 ```
 
-- `apply <term>` is syntax sugar for `tactic => apply <term>`
+- `apply <term>`은 `tactic => apply <term>`에 대한 문법 설탕입니다.
 
 ```lean
 example (g : Nat → Nat → Nat)

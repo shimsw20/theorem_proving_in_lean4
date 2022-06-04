@@ -837,29 +837,9 @@ def map (f : α → β → γ) : {n : Nat} → Vector α n → Vector β n → V
 접근할 수 없는 패턴
 ------------------
 
-Sometimes an argument in a dependent matching pattern is not essential
-to the definition, but nonetheless has to be included to specialize
-the type of the expression appropriately. Lean allows users to mark
-such subterms as *inaccessible* for pattern matching. These
-annotations are essential, for example, when a term occurring in the
-left-hand side is neither a variable nor a constructor application,
-because these are not suitable targets for pattern matching. We can
-view such inaccessible patterns as "don't care" components of the
-patterns. You can declare a subterm inaccessible by writing
-``.(t)``. If the inaccessible pattern can be inferred, you can also write
-``_``.
+떄때로 종속 매칭 패턴에서 인수는 정의에 반드시 필요하지 않습니다. 그럼에도 표현식의 유형을 적절하게 특수화하는데 포함될 필요가 있습니다. 린은 사용자가 그런 부분항을 패턴 매칭에 대해 *inaccessible*으로 표시하도록 허용합니다. 이 주석은 필수적입니다. 예를 들어 좌변에서 나타나는 항이 변수도 생성자 적용도 아닐 때, 이들은 패턴 매칭에 적적한 대상이 아니기 때문입니다. 우리는 그런 접속불가한 패턴을 패턴의 "신경쓰지 않는" 성분의 관점으로 볼 수 있습니다. 여러분은 ``.(t)``와 같이 작성하여 접근불가한 부분항을 선언할 수 있습니다. 만약 접근불가능한 패턴이 추론될 수 있다면 ``_``와 같이 쓸 수 있습니다.
 
-The following example, we declare an inductive type that defines the
-property of "being in the image of ``f``". You can view an element of
-the type ``ImageOf f b`` as evidence that ``b`` is in the image of
-``f``, whereby the constructor ``imf`` is used to build such
-evidence. We can then define any function ``f`` with an "inverse"
-which takes anything in the image of ``f`` to an element that is
-mapped to it. The typing rules forces us to write ``f a`` for the
-first argument, but this term is neither a variable nor a constructor
-application, and plays no role in the pattern-matching definition. To
-define the function ``inverse`` below, we *have to* mark ``f a``
-inaccessible.
+다음 예제에서 우리는 "``f``의 이미지에 있음" 속성을 정의하는 귀납형을 선언합니다. 여러분은 ``ImageOf f b``형 원소를 ``b``가 ``f``의 이미지에 있다는 증거로 볼 수 있습니다. 이로써 생성자 ``imf``는 그런 증거를 만드는데 사용됩니다. 그런 다음 ``f``의 이미지에서 매핑된 요소로 가져오는 "역"함수가 있는 임의의 함수 ``f``를 정의할 수 있습니다. 입력 규칙은 우리가 첫 인수에 대해 ``f a``로 쓰도록 합니다. 그러나 이 항은 변수도 생성자 적용도 아닙니다. 그리고 패턴 매칭 정의에서 어떤 역할도 하지 않습니다. 아래에서 함수 ``inverse``를 정의하려면 우리는 ``f a``를 접근 불가한 것으로 표시*해야만* 합니다.
 
 ```lean
 inductive ImageOf {α β : Type u} (f : α → β) : β → Type u where
@@ -874,14 +854,9 @@ def inverse' {f : α → β} : (b : β) → ImageOf f b → α
   | _, imf a => a
 ```
 
-In the example above, the inaccessible annotation makes it clear that
-``f`` is *not* a pattern matching variable.
+위 예제에서 접근불가 주석은 ``f``가 패턴 매칭 변수가 *아님*을 명확히 합니다.
 
-Inaccessible patterns can be used to clarify and control definitions that
-make use of dependent pattern matching. Consider the following
-definition of the function ``Vector.add,`` which adds two vectors of
-elements of a type, assuming that type has an associated addition
-function:
+접근불가한 패턴은 명확성과 종속 패턴 매칭을 활용하는 정의 제어를 위해 사용될 수 있습니다. 유형의 원소의 두 벡터를 더하는 함수 ``Vector.add,``의 다음 정의를 고려해보세요. 그 유형은 연관된 덧셈함수를 가지고 있다고 가정합니다.
 
 ```lean
 inductive Vector (α : Type u) : Nat → Type u
@@ -897,19 +872,9 @@ def add [Add α] : {n : Nat} → Vector α n → Vector α n → Vector α n
 end Vector
 ```
 
-The argument ``{n : Nat}`` appear after the colon, because it cannot
-be held fixed throughout the definition.  When implementing this
-definition, the equation compiler starts with a case distinction as to
-whether the first argument is ``0`` or of the form ``n+1``.  This is
-followed by nested case splits on the next two arguments, and in each
-case the equation compiler rules out the cases are not compatible with
-the first pattern.
+인수``{n : Nat}`` 은 콜론 뒤에 나타납니다. 왜냐하면 이것은 정의 전체에 대해 고정될 수 없기 때문입니다.  이 정의를 구현할 때 방정식 컴파일러는 첫 번째 인수가 ``0``이거나 ``n+1``의 꼴인지를 구분하도록 경우를 구분하는 것으로 시작합니다.  이것은 다음 두 인수에 대한 중첩된 경우 분할을 따르고 각 경우에서 방정식 컴파일러는 첫 번째 패턴과 적합하지 않은 경우를 배제합니다.
 
-But, in fact, a case split is not required on the first argument; the
-``casesOn`` eliminator for ``Vector`` automatically abstracts this
-argument and replaces it by ``0`` and ``n + 1`` when we do a case
-split on the second argument. Using inaccessible patterns, we can prompt
-the equation compiler to avoid the case split on ``n``
+그러나 사실 경우 분할은 첫 번째 인수에 대해 필요하지 않습니다. 두 번째 인수에 대해 경우를 나누었을 때 ``Vector``를 위한 ``casesOn`` 제거자가 자동적으로 이 인수를 추출하고 그것을 ``0``과 ``n + 1``으로 대체합니다.  접근 불가한 패턴을 사용하여 우리는 방정식 컴파일러가 ``n``에 대해 경우를 나누는 것을 즉시 막도록 할 수 있습니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -924,13 +889,9 @@ def add [Add α] : {n : Nat} → Vector α n → Vector α n → Vector α n
 # end Vector
 ```
 
-Marking the position as an inaccessible pattern tells the
-equation compiler first, that the form of the argument should be
-inferred from the constraints posed by the other arguments, and,
-second, that the first argument should *not* participate in pattern
-matching.
+접근 불가한 패턴으로 위치를 표시하는 것은 우선 방정식 컴파일러에게 인수의 모양이 다른 인수에 부과된 제약으로부터 추론될 수 있어야 한다고 말합니다. 그리고 두 번째로 첫 인수가 패턴 매칭에 참여하지 *않아야* 합니다.
 
-The inaccessible pattern `.(_)` can be written as `_` for convenience.
+접근 불가한 패턴 `.(_)`은 편의상 `_`로 쓸 수 있습니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -945,12 +906,7 @@ def add [Add α] : {n : Nat} → Vector α n → Vector α n → Vector α n
 # end Vector
 ```
 
-As we mentioned above, the argument ``{n : Nat}`` is part of the
-pattern matching, because it cannot be held fixed throughout the
-definition. In previous Lean versions, users often found it cumbersome
-to have to include these extra discriminants. Thus, Lean 4
-implements a new feature, *discriminant refinement*, which includes
-these extra discriminants automatically for us.
+위에서 언급했듯이 인수 ``{n : Nat}``은 패턴 매칭의 일부입니다. 왜냐하면 이것은 정의 전체에 대해 고정될 수 없기 때문입니다. 린의 이전 버전에서 사용자는 이 별도의 구별자를 포함시켜야 하는 것이 종종 성가신 일임을 알았습니다. 따라서 린4에서 별도의 구별자를 자동적으로 포함시켜주는 새로운 기능 *discriminant refinement*을 구현했습니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -965,8 +921,7 @@ def add [Add α] {n : Nat} : Vector α n → Vector α n → Vector α n
 # end Vector
 ```
 
-When combined with the *auto bound implicits* feature, you can simplify
-the declare further and write:
+*암시적인 자동 결합(auto bound implicits)* 기능과 결합할 때 여러분은 선언을 더 단순화 해 작성할 수 있습니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u
@@ -981,8 +936,7 @@ def add [Add α] : Vector α n → Vector α n → Vector α n
 # end Vector
 ```
 
-Using these new features, you can write the other vector functions defined
-in the previous sections more compactly as follows:
+이 새로운 기능을 사용하면 여러분은 이전에 정의한 다른 벡터 함수들을 다음과 같이 더 간결하게 쓸 수 있습니다.
 
 ```lean
 # inductive Vector (α : Type u) : Nat → Type u

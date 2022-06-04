@@ -496,7 +496,7 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := by
       | intro hp hr => constructor; exact hp; apply Or.inr; exact hr
 ```
 
-[유도형 장](./inductive_types.md)에서 이 전략들은 꽤나 일반적임을 볼 것입니다. ``cases`` 전략은 유도적으로 정의된 유형의 임의의 원소를 분해하는데 사용될 수 있습니다.
+[귀납형 장](./inductive_types.md)에서 이 전략들은 꽤나 일반적임을 볼 것입니다. ``cases`` 전략은 유도적으로 정의된 유형의 임의의 원소를 분해하는데 사용될 수 있습니다.
 ``constructor``는 항상 유도적으로 정의된 유형의 처음으로 활용할 수 있는 생성자에 적용할 수 있습니다.
 예를 들어, 여러분은``cases``와 ``constructor``을 존재 정량자와 사용할 수 있습니다.
 

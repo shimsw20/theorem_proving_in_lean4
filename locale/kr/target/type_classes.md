@@ -1,11 +1,6 @@
-# Type classes
+# 유형 클래스
 
-Type classes were introduced as a principled way of enabling
-ad-hoc polymorphism in functional programming languages. We first observe that it
-would be easy to implement an ad-hoc polymorphic function (such as addition) if the
-function simply took the type-specific implementation of addition as an argument
-and then called that implementation on the remaining arguments. For example,
-suppose we declare a structure in Lean to hold implementations of addition
+유형 클래스는 함수형 프로그래밍 언어에서 특수 목적(ad-hoc)의 다형성을 활성화하는 원칙적인 방법으로 도입되었습니다. 우리는 먼저 함수가 단순히 덧셈의 특정 유형에 대한 구현을 덧셈의 인수로 취한 다음 나머지 인수에 대해 그 구현을 호출하면 임시 다형적 함수(덧셈 같은)를 구현하는 것이 쉽다는 것을 관찰했습니다. 예를 들어 덧셈의 구현을 유지하기 위해 린에 구조체를 선언한다고 해봅시다.
 ```lean
 # namespace Ex
 structure Add (a : Type) where
@@ -15,10 +10,8 @@ structure Add (a : Type) where
 -- Add.add : {a : Type} → Add a → a → a → a
 # end Ex
 ```
-In the above Lean code, the field `add` has type
-`Add.add : {α : Type} → Add α → α → α → α`
-where the curly braces around the type `a` mean that it is an implicit argument.
-We could implement `double` by
+위의 린 코드에서 `add`은 `Add.add : {α : Type} → Add α → α → α → α`형 입니다. 여기서 유형 `a` 주위의 중괄호는 이것이 암시적인 인수임을 의미합니다.
+우리는 `double`을 아래와 같이 구현할 수 있습니다.
 ```lean
 # namespace Ex
 # structure Add (a : Type) where
@@ -37,16 +30,11 @@ def double (s : Add a) (x : a) : a :=
 
 # end Ex
 ```
-Note that you can double a natural number `n` by `double { add := Nat.add } n`.
-Of course, it would be highly cumbersome for users to manually pass the
-implementations around in this way.
-Indeed, it would defeat most of the potential benefits of ad-hoc
-polymorphism.
+여러분은 자연수 `n`을 `double { add := Nat.add } n`으로 두 배로 할 수 있습니다.
+당연히 이처럼 구현을 수동적으로 넘겨야 한다면 사용자에게 아주 성가실 것 입니다.
+물론 이는 특수 목적 다형성의 잠재적 이점의 대부분을 좌절시킬 것입니다.
 
-The main idea behind type classes is to make arguments such as `Add a` implicit,
-and to use a database of user-defined instances to synthesize the desired instances
-automatically through a process known as typeclass resolution. In Lean, by changing
-`structure` to `class` in the example above, the type of `Add.add` becomes
+유형 클래스 뒤편의 주요 아이디어는 `Add a` 같은 인수를 암시적으로 만드는 것이고 사용자 정의 개체들의 데이터베이스를 사용해 유형 클래스 해결책으로 알려진 과정을 통해 원하는 개체를 자동적으로 합성하는 것입니다. 린에서 위 예제에서`structure`를 `class`로 바꿈으로 `Add.add`형이 됩니다.
 ```lean
 # namespace Ex
 class Add (a : Type) where
@@ -56,10 +44,8 @@ class Add (a : Type) where
 -- Add.add : {a : Type} → [self : Add a] → a → a → a
 # end Ex
 ```
-where the square brackets indicate that the argument of type `Add a` is *instance implicit*,
-i.e. that it should be synthesized using typeclass resolution. This version of
-`add` is the Lean analogue of the Haskell term `add :: Add a => a -> a -> a`.
-Similarly, we can register an instance by
+여기서 대괄호는 `Add a`의 유형이 *instance implicit*임을 가리킵니다. 즉, 이것은 유형클래스 해결책을 사용해 합성되어야 합니다. `add`의 이 버전은 하스켈 항 `add :: Add a => a -> a -> a`의 린 닮은꼴입니다.
+마찬가지로 우리는 개체를 다음과 같이 등록할 수 있습니다.
 ```lean
 # namespace Ex
 # class Add (a : Type) where
@@ -69,11 +55,7 @@ instance : Add Nat where
 
 # end Ex
 ```
-Then for `n : Nat` and `m : Nat`, the term `Add.add n m` triggers typeclass resolution with the goal
-of `Add Nat`, and typeclass resolution will synthesize the instance above. In
-general, instances may depend on other instances in complicated ways. For example,
-you can declare an (anonymous) instance stating that if `a` has addition, then `Array a`
-has addition:
+그런 다음 `n : Nat` 및 `m : Nat`에 대해 항 `Add.add n m`는 `Add Nat`의 목표를 유형 클래스 해결책으로 만듭니다. 그리고 유형 클래스 해결책은 위의 개체를 합성합니다. 일반적으로 개체는 다른 개체에 복잡한 방식으로 종속될 수 있습니다. 예를 들어 여러분이 (익명) 개체를 `a`가 덧셈을 갖는다면 `Array a`도 덧셈을 갖는다고 서술해 선언할 수 있습니다.
 ```lean
 instance [Add a] : Add (Array a) where
   add x y := Array.zipWith x y (. + .)
@@ -84,18 +66,16 @@ instance [Add a] : Add (Array a) where
 #eval #[1, 2] + #[3, 4]
 -- #[4, 6]
 ```
-Note that `x + y` is notation for `Add.add x y` in Lean.
+ `x + y`는 린에서 `Add.add x y`에 대한 기호임을 주의하세요.
 
-The example above demonstrates how type classes are used to overload notation.
-Now, we explore another application. We often need an arbitrary element of a given type.
-Recall that types may not have any elements in Lean.
-It often happens that we would like a definition to return an arbitrary element in a "corner case."
-For example, we may like the expression ``head xs`` to be of type ``a`` when ``xs`` is of type ``List a``.
-Similarly, many theorems hold under the additional assumption that a type is not empty.
-For example, if ``a`` is a type, ``exists x : a, x = x`` is true only if ``a`` is not empty.
-The standard library defines a type class ``Inhabited`` to enable type class inference to infer a
-"default" element of an inhabited type.
-Let us start with the first step of the program above, declaring an appropriate class:
+위의 예제는 어떻게 유형 클래스가 기호를 중복(overload)시키는데 사용되는지 시연합니다.
+여기서 우리는 다른 적용을 탐색합니다. 우린 종종 주어진 유형의 임의의 원소를 필요로 합니다.
+유형은 린에서 임의의 원소가 아닐 수 있음을 기억하세요.
+우리는 정의가 "막다른 경우"에 대해 임의의 원소를 반환하게 만들고 싶은 상황이 종종 있습니다. 예를 들어 ``xs``가 ``List a``형일 때 표현식 ``head xs``가 ``a``형이 되길 좋아합니다.
+마찬가지로 많은 정리는 유형이 비어 있지 않을 때 덧셈 가정에  대해서 성립합니다.
+예를 들어 ``a``가 유형이면 ``exists x : a, x = x``은 ``a``가 비어있지 않을 때에만 참입니다.
+표준 라이브러리는 유형 클래스 추론이 내재된 유형의 "기본" 원소를 유추할 수 있도록 유형 클래스 ``Inhabited``를 정의합니다.
+위 프로그램의 첫 단계인 적절한 클래스를 선언하는 것부터 시작합시다.
 
 ```lean
 # namespace Ex
@@ -106,11 +86,11 @@ class Inhabited (a : Type u) where
 -- Inhabited.default : {a : Type u} → [self : Inhabited a] → a
 # end Ex
 ```
-Note `Inhabited.default` doesn't have any explicit argument.
+`Inhabited.default`가 어떤 명시적인 인수도 갖지 않음을 주목하세요.
 
-An element of the class ``Inhabited a`` is simply an expression of the form ``Inhabited.mk x``, for some element ``x : a``.
-The projection ``Inhabited.default`` will allow us to "extract" such an element of ``a`` from an element of ``Inhabited a``.
-Now we populate the class with some instances:
+클래스 ``Inhabited a``의 원소는 단순히 어떤 원소 ``x : a``에 대한 ``Inhabited.mk x``꼴의 표현식입니다.
+투영 ``Inhabited.default``은 ``Inhabited a``의 원소로부터 ``a``의 원소 같은 것을 "추출"하도록 해줄 것입니다.
+이제 몇몇 개체로 클래스를 채우겠습니다.
 
 ```lean
 # namespace Ex
@@ -135,7 +115,7 @@ instance : Inhabited Prop where
 -- true
 # end Ex
 ```
-You can use the command `export` to create the alias `default` for `Inhabited.default`
+여러분은 g1>export` 명령으로 `Inhabited.default`에 대한 `기본` 별명을 만들 수 있습니다.
 ```lean
 # namespace Ex
 # class Inhabited (a : Type _) where
@@ -158,20 +138,18 @@ export Inhabited (default)
 # end Ex
 ```
 
-## Chaining Instances
+## 연결 개체
 
-If that were the extent of type class inference, it would not be all that impressive;
-it would be simply a mechanism of storing a list of instances for the elaborator to find in a lookup table.
-What makes type class inference powerful is that one can *chain* instances. That is,
-an instance declaration can in turn depend on an implicit instance of a type class.
-This causes class inference to chain through instances recursively, backtracking when necessary, in a Prolog-like search.
+그것이 유형 클래스 추론의 확장이라면 그리 인상적이지 않을 것 입니다. 이것은 협력기가 룩업 테이블에서 찾는 데 쓰는 단순히 개체의 리스트를 저장하는 메커니즘일 것입니다.
+유형 클래스 추론을 강력하게 만드는 것은 *chain* 개체입니다. 즉, 개체 선언은 유형 클래스의 암시적인 개체에 차례로 의존하게 할 수 있습니다.
+Prolog 같은 탐색에서 필요할 때 역추적하는데 개체를 통한 클래스 추론이 재귀적으로 연결되게 합니다.
 
-For example, the following definition shows that if two types ``a`` and ``b`` are inhabited, then so is their product:
+예를 들어 다음 정의는 만약 두 유형 ``a``와 ``b``가 내재되었다면 그들의 곱도 그렇다는 것을 보여줍니다.
 ```lean
 instance [Inhabited a] [Inhabited b] : Inhabited (a × b) where
   default := (default, default)
 ```
-With this added to the earlier instance declarations, type class instance can infer, for example, a default element of ``Nat × Bool``:
+더 이전에 개체 선언에 이것을 추가하여 유형 클래스 개체는 예를 들어 ``Nat × Bool``의 기본 원소를 추론할 수 있습니다.
 ```lean
 # namespace Ex
 # class Inhabited (a : Type u) where
@@ -189,15 +167,14 @@ instance [Inhabited a] [Inhabited b] : Inhabited (a × b) where
 -- (0, true)
 # end Ex
 ```
-Similarly, we can inhabit type function with suitable constant functions:
+마찬가지로 우리는 유형 함수를 적절한 상수 함수로 내재시킬 수 있습니다.
 ```lean
 instance [Inhabited b] : Inhabited (a -> b) where
   default := fun _ => default
 ```
-As an exercise, try defining default instances for other types, such as `List` and `Sum` types.
+연습으로 `List`형과 `Sum`형 같은 다른 유형에 대한 기본 개체를 정의해보세요.
 
-The Lean standard library contains the definition `inferInstance`. It has type `{α : Sort u} → [i : α] → α`,
-and is useful for triggering the type class resolution procedure when the expected type is an instance.
+린 표준 라이브러리는 `inferInstance` 정의를 포함합니다. 이것은 `{α : Sort u} → [i : α] → α`형이고 예상 유형이 개체일 때 유형 클래스 해결 절차를 일으키는데 유용합니다.
 ```lean
 #check (inferInstance : Inhabited Nat) -- Inhabited Nat
 
@@ -207,16 +184,14 @@ def foo : Inhabited (Nat × Nat) :=
 theorem ex : foo.default = (default, default) :=
   rfl
 ```
-You can use the command `#print` to inspect how simple `inferInstance` is.
+여러분은 `#print` 명령으로 `inferInstance`가 얼마나 단순한지 검사할 수 있습니다.
 ```lean
 #print inferInstance
 ```
 
 ## ToString
 
-The polymorphic method `toString` has type `{α : Type u} → [ToString α] → α → String`. You implement the instance
-for your own types and use chaining to convert complex values into strings. Lean comes with `ToString` instances
-for most builtin types.
+다형적인 방법 `toString`은 `{α : Type u} → [ToString α] → α → String`형 입니다. 여러분은 여러분의 유형을 위한 개체를 구현하고 문자열로 복잡한 값에서 문자열로 연결하기를 사용합니다. 린은 대다수의 내장된 유형에 대한 `ToString`와 함께 나옵니다.
 ```lean
 structure Person where
   name : String
@@ -228,10 +203,9 @@ instance : ToString Person where
 #eval toString { name := "Leo", age := 542 : Person }
 #eval toString ({ name := "Daniel", age := 18 : Person }, "hello")
 ```
-## Numerals
+## 수치값(Numerals)
 
-Numerals are polymorphic in Lean. You can use a numeral (e.g., `2`) to denote an element of any type that implements
-the type class `OfNat`.
+수치값들은 린에서 다형적입니다. 여러분은 수치값(예를 들어 `2`)을 유형클래스 `OfNat`을 구현하는 임의의 유형의 원소를 표시하는데 사용할 수 있습니다.
 ```lean
 structure Rational where
   num : Int
@@ -249,18 +223,17 @@ instance : ToString Rational where
 #check (2 : Rational) -- Rational
 #check (2 : Nat)      -- Nat
 ```
-Lean elaborates the terms `(2 : Nat)` and `(2 : Rational)` as
-`OfNat.ofNat Nat 2 (instOfNatNat 2)` and
-`OfNat.ofNat Rational 2 (instOfNatRational 2)` respectively.
-We say the numerals `2` occurring in the elaborated terms are *raw* natural numbers.
-You can input the raw natural number `2` using the macro `nat_lit 2`.
+린은 항 `(2 : Nat)`과 `(2 : Rational)`을 각각 `OfNat.ofNat Nat 2 (instOfNatNat 2)`과
+`OfNat.ofNat Rational 2 (instOfNatRational 2)`으로 만듭니다.
+동화된 항에서 나타나는 수치값 `2`가 *생* 자연수라고 말합니다.
+여러분은 생 자연수 `2`를 매크로 `nat_lit 2`을 사용해 입력할 수 있습니다.
 ```lean
 #check nat_lit 2  -- Nat
 ```
-Raw natural numbers are *not* polymorphic.
+생 자연수는 다형적이지 *않습니다.*
 
-The `OfNat` instance is parametric on the numeral. So, you can define instances for particular numerals.
-The second argument is often a variable as in the example above, or a *raw* natural number.
+`OfNat` 개체는 수치에 대해 매개적입니다. 그래서 여러분은 특정 수치에 대해 개체를 정의할 수 있습니다.
+두 번째 인수는 종종 위의 예제의 것처럼 변수이거나 *생(raw)* 자연수입니다.
 ```lean
 class Monoid (α : Type u) where
   unit : α
@@ -273,19 +246,16 @@ def getUnit [Monoid α] : α :=
   1
 ```
 
-## Output parameters
+## 출력 매개변수
 
-By default, Lean only tries to synthesize an instance `Inhabited T` when the term `T` is known and does not
-contain missing parts. The following command produces the error
-"failed to create type class instance for `Inhabited (Nat × ?m.1499)`" because the type has a missing part (i.e., the `_`).
+항 `T`는 알려져 있고 모르는 부분이 없을 때 기본적으로 린은 `Inhabited T` 개체만 합성하려고 합니다. 다음 명령은 "`Inhabited (Nat × ?m.1499)`에 대한 유형 클래스 개체를 생성하는데 실패했다(failed to create type class instance for `Inhabited (Nat × ?m.1499)`)"는 오류를 일으킵니다. 왜냐하면 유형에 모르는 부분(즉, `_`)이 있기 때문입니다.
 ```lean
 #check_failure (inferInstance : Inhabited (Nat × _))
 ```
-You can view the parameter of the type class `Inhabited` as an *input* value for the type class synthesizer.
-When a type class has multiple parameters, you can mark some of them as output parameters.
-Lean will start type class synthesizer even when these parameters have missing parts.
-In the following example, we use output parameters to define a *heterogeneous* polymorphic
-multiplication.
+여러분은 유형 클래스 합성기에 대한 *입력*값으로써 유형 클래스 `Inhabited`의 매개변수를 볼 수 있습니다.
+유형 클래스가 다수의 매개변수를 가질 때, 여러분은 출력 매개변수로 그들 중 몇을 표시할 수 있습니다.
+이들의 매개변수에 모르는 부분이 있을 지라도 린은 유형 클래스 합성기를 시작할 것입니다.
+다음 예제에서 우리는 출력 매개변수를 *이질적인* 다형적 곱셈을 정의하는데 사용합니다.
 ```lean
 # namespace Ex
 class HMul (α : Type u) (β : Type v) (γ : outParam (Type w)) where
@@ -303,12 +273,10 @@ instance : HMul Nat (Array Nat) (Array Nat) where
 #eval hMul 4 #[2, 3, 4]  -- #[8, 12, 16]
 # end Ex
 ```
-The parameters `α` and `β` are considered input parameters and `γ` an output one.
-Given an application `hMul a b`, after types of `a` and `b` are known, the type class
-synthesizer is invoked, and the resulting type is obtained from the output parameter `γ`.
-In the example above, we defined two instances. The first one is the homogeneous
-multiplication for natural numbers. The second is the scalar multiplication for arrays.
-Note that you chain instances and generalize the second instance.
+매개변수 `α`와 `β`는 입력 매개변수로 `γ`는 출력 매개변수 입니다.
+활용 `hMul a b`에 대해서 `a`와 `b`의 유형이 알려진 뒤에 유형 클래스 합성기가 호출됩니다. 그리고 결과 유형은 출력 매개변수 `γ`로부터 얻어집니다.
+위의 예제에서 우리는 두 개체를 정의 했습니다. 처음 것은 자연수에 대한 동형 곱셈입니다. 두 번째 것은 배열에 대한 스칼라 곱셈입니다.
+여러분은 개체를 연결하고 두 번째 개체를 일반화함을 주목하세요.
 ```lean
 # namespace Ex
 class HMul (α : Type u) (β : Type v) (γ : outParam (Type w)) where
@@ -331,15 +299,13 @@ instance [HMul α β γ] : HMul α (Array β) (Array γ) where
 #eval hMul 2 #[#[2, 3], #[0, 4]]  -- #[#[4, 6], #[0, 8]]
 # end Ex
 ```
-You can use our new scalar array multiplication instance on arrays of type `Array β`
-with a scalar of type `α` whenever you have an instance `HMul α β γ`.
-In the last `#eval`, note that the instance was used twice on an array of arrays.
+여러분은 `HMul α β γ` 개체를 갖는 언제든지 우리의 새 스칼라 배열 곱셈 개체를 유형 `α`의 스칼라와 `Array β`형의 배열에 대해 사용할 수 있습니다.
+지난 `#eval`에서 배열의 배열에 대해 개체가 두 번 사용되었음을 주목하세요.
 
-## Default instances
+## 기본 개체
 
-In the class `HMul`, the parameters `α` and `β` are treated as input values.
-Thus, type class synthesis only starts after these two types are known. This may often
-be too restrictive.
+클래스 `HMul`에서 매개변수 `α`와 `β`는 입력값으로 취급됩니다.
+따라서 유형 클래스 합성은 이 두 유형이 알려진 뒤에야 시작합니다. 이것은 종종 너무 제한적일 수 있습니다.
 ```lean
 # namespace Ex
 class HMul (α : Type u) (β : Type v) (γ : outParam (Type w)) where
@@ -356,9 +322,8 @@ def xs : List Int := [1, 2, 3]
 #check_failure fun y => xs.map (fun x => hMul x y)
 # end Ex
 ```
-The instance `HMul` is not synthesized by Lean because the type of `y` has not been provided.
-However, it is natural to assume that the type of `y` and `x` should be the same in
-this kind of situation. We can achieve exactly that using *default instances*.
+`y`형으로 제공되지 않았으므로 개체 `HMul`은 린으로부터 생성되지 않습니다.
+그러나 이 같은 상황에서 `y`형과 `x`형은 동일하다고 가정하는 것이 자연스럽습니다. 우리는 정확히 이를 *default instances*으로 달성할 수 있습니다.
 ```lean
 # namespace Ex
 class HMul (α : Type u) (β : Type v) (γ : outParam (Type w)) where
@@ -375,13 +340,10 @@ def xs : List Int := [1, 2, 3]
 #check fun y => xs.map (fun x => hMul x y)  -- Int -> List Int
 # end Ex
 ```
-By tagging the instance above with the attribute `defaultInstance`, we are instructing Lean
-to use this instance on pending type class synthesis problems.
-The actual Lean implementation defines homogeneous and heterogeneous classes for arithmetical operators.
-Moreover, `a+b`, `a*b`, `a-b`, `a/b`, and `a%b` are notations for the heterogeneous versions.
-The instance `OfNat Nat n` is the default instance (with priority 100) for the `OfNat` class. This is why the numeral
-`2` has type `Nat` when the expected type is not known. You can define default instances with higher
-priority to override the builtin ones.
+`defaultInstance` 속성으로 위의 개체를 표시함으로써 우리는 린에게 유형 클래스 합성 문제로 보류 중인 이 개체를 사용하라고 가르킵니다.
+실제 린에서 구현은 산술 연산자에 대한 동형과 이형 클래스를 정의합니다.
+게다가 `a+b`, `a*b`, `a-b`, `a/b`과 `a%b`은 이형 버전에 대한 표기입니다.
+개체 `OfNat Nat n`은 `OfNat` 클래스에 대한 (우선순위 100의) 기본 개체입니다. 이것이 기대되는 유형을 모를 때 수치값 `2`가 `Nat`형이 되는 이유입니다. 여러분은 내장된 것보다 우세하여 더 높은 우선순위를 갖는 기본 개체를 정의할 수 있습니다.
 ```lean
 structure Rational where
   num : Int
@@ -397,11 +359,9 @@ instance : ToString Rational where
 
 #check 2 -- Rational
 ```
-Priorities are also useful to control the interaction between different default instances.
-For example, suppose `xs` has type `α`, when elaboration `xs.map (fun x => 2 * x)`, we want the homogeneous instance for multiplication
-to have higher priority than the default instance for `OfNat`. This is particularly important when we have implemented only the instance
-`HMul α α α`, and did not implement `HMul Nat α α`.
-Now, we reveal how the notation `a*b` is defined in Lean.
+우선 순위는 다른 기본 개체들 간의 상호작용을 제어하는 데에도 유용합니다.
+예를 들어 `xs.map (fun x => 2 * x)`으로 해석될 때 `xs`가 `α`형이라고 가정합시다. 우리는 `OfNat`에 대한 기본 개체보다 더 높은 우선 순위를 갖는 곱셈에 대한 동형 개체를 원합니다. 이것은 우리가 개체 `HMul α α α`만 구현하고 `HMul Nat α α`을 구현하지 않았을 때 특히 중요합니다.
+이제 우리는 린에서 기호 `a*b`이 어떻게 정의되는지 드러냅니다.
 ```lean
 # namespace Ex
 class OfNat (α : Type u) (n : Nat) where
@@ -424,14 +384,11 @@ instance [Mul α] : HMul α α α where
 infixl:70 " * "  => HMul.hMul
 # end Ex
 ```
-The `Mul` class is convenient for types that only implement the homogeneous multiplication.
+`Mul` 클래스는 동형 곱셈만 구현된 유형에 대해 편리합니다.
 
-## Local Instances
+## 지역 개체
 
-Type classes are implemented using attributes in Lean. Thus, you can
-use the `local` modifier to indicate that they only have effect until
-the current ``section`` or ``namespace`` is closed, or until the end
-of the current file.
+유형 클래스는 린의 속성을 사용해 구현됩니다. 따라서 여러분은 `local` 수정자로 그들이 오직 현재 닫힌``section``이나 ``namespace``까지만 혹은 현재 파일의 끝까지만 유효함을 나타내는데 사용할 수 있습니다.
 
 ```lean
 structure Point where
@@ -452,9 +409,7 @@ end -- instance `Add Point` is not active anymore
 --  p + p + p  -- Error: failed to synthesize instance
 ```
 
-You can also temporarily disable an instance using the `attribute` command
-until the current ``section`` or ``namespace`` is closed, or until the end
-of the current file.
+여러분은 일시적으로 `attribute` 명령으로 현재 닫힌 ``section``이나 ``namespace``까지 혹은 현재 파일의 끝까지 개체를 사용 해제 할 수 있습니다.
 
 ```lean
 structure Point where
@@ -473,12 +428,11 @@ attribute [-instance] addPoint
 --  p + p + p  -- Error: failed to synthesize instance
 ```
 
-We recommend you only use this command to diagnose problems.
+우리는 이 명령을 여러분이 문제를 진단하는 데에만 사용하는 것을 권장합니다.
 
-## Scoped Instances
+## 범위가 지정된 개체
 
-You can also declare scoped instances in namespaces. This kind of instance is
-only active when you are inside of the namespace or open the namespace.
+여러분은 이름공간에서 범위가 지정된 개체를 선언할 수 있습니다. 이런 종류의 개체는 여러분이 이름공간 안에 있거나 이름공간을 개방했을 때에만 활동적입니다.
 
 ```lean
 structure Point where
@@ -508,8 +462,7 @@ open Point -- activates instance `Add Point`
 #check fun (p : Point) => p + p + p
 ```
 
-You can use the command `open scoped <namespace>` to activate scoped attributes but will
-not "open" the names from the namespace.
+여러분은 `open scoped <namespace>` 명령으로 범위가 지정된 속정을 활성화할 수 있습니다. 그러나 이름공간으로부터 이름들을 "개방"하지는 않습니다.
 
 ```lean
 structure Point where
@@ -532,23 +485,11 @@ open scoped Point -- activates instance `Add Point`
 -- #check fun (p : Point) => double p -- Error: unknown identifier 'double'
 ```
 
-## Decidable Propositions
+## 결정 가능한 명제
 
-Let us consider another example of a type class defined in the
-standard library, namely the type class of ``Decidable``
-propositions. Roughly speaking, an element of ``Prop`` is said to be
-decidable if we can decide whether it is true or false. The
-distinction is only useful in constructive mathematics; classically,
-every proposition is decidable. But if we use the classical principle,
-say, to define a function by cases, that function will not be
-computable. Algorithmically speaking, the ``Decidable`` type class can
-be used to infer a procedure that effectively determines whether or
-not the proposition is true. As a result, the type class supports such
-computational definitions when they are possible while at the same
-time allowing a smooth transition to the use of classical definitions
-and classical reasoning.
+표준 라이브러리에 정의된 유형 클래스의 다른 예 즉, ``결정 가능한`` 명제 유형 클래스를 고려해 봅시다. 대략적으로 말하면 ``Prop``의 원소는 그것이 참인지 거짓인지 결정할 수 있다면 결정 가능하다고 합니다. 이 구별은 직관주의적 수학에서만 유용합니다. 고전적으로 모든 명제는 결정 가능합니다. 그러나 우리가 고전 원리를 사용해 경우에 따라 함수를 정의하면 그 함수는 계산 불가일 겁니다. 알고리즘적으로 말하자면 ``Decidable`` 유형 클래스는 명제가 참인지 여부를 효과적으로 결정하는 절차를 추론하는데 사용될 수 있습니다. 결과적으로 유형 클래스는 그들이 가능할 때 그런 계산적 정의를 지원하는 동시에 고전적 정의와 고전 추론의 사용으로 원활히 넘어가는 것을 허용합니다.
 
-In the standard library, ``Decidable`` is defined formally as follows:
+표준 라이브러리에서 ``Decidable``은 다음과 같이 형식적으로 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -558,12 +499,7 @@ class inductive Decidable (p : Prop) where
 # end Hidden
 ```
 
-Logically speaking, having an element ``t : Decidable p`` is stronger
-than having an element ``t : p ∨ ¬p``; it enables us to define values
-of an arbitrary type depending on the truth value of ``p``. For
-example, for the expression ``if p then a else b`` to make sense, we
-need to know that ``p`` is decidable. That expression is syntactic
-sugar for ``ite p a b``, where ``ite`` is defined as follows:
+논리적으로 말하자면 원소 ``t : Decidable p``를 갖는 것은 원소 ``t : p ∨ ¬p``을 갖는 것보다 강합니다. 이는 우리가 ``p``의 진리값에 의존하는 임의의 유형의 값을 정의할 수 있게 합니다. 예를 들어 표현식 ``if p then a else b``를 이해하려면 우리는 ``p``가 결정 가능인지 알 필요가 있습니다. 그 표현식은 ``ite p a b``에 대한 문법적 설탕입니다. 여기서 ``ite`` 다음과 같이 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -572,9 +508,7 @@ def ite {α : Sort u} (c : Prop) [h : Decidable c] (t e : α) : α :=
 # end Hidden
 ```
 
-The standard library also contains a variant of ``ite`` called
-``dite``, the dependent if-then-else expression. It is defined as
-follows:
+표준 라이브러리는 또 ``dite (the dependent if-then-else expression)``라는 ``ite``의 변종을 갖습니다. 이것은 다음과 같이 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -583,17 +517,9 @@ def dite {α : Sort u} (c : Prop) [h : Decidable c] (t : c → α) (e : Not c �
 # end Hidden
 ```
 
-That is, in ``dite c t e``, we can assume ``hc : c`` in the "then"
-branch, and ``hnc : ¬ c`` in the "else" branch. To make ``dite`` more
-convenient to use, Lean allows us to write ``if h : c then t else e``
-instead of ``dite c (λ h : c, t) (λ h : ¬ c, e)``.
+즉, ``dite c t e``에서 우리는 ``hc : c``를 "then" 분기 그리고 "else" 분기에서 ``hnc : ¬ c``라고 가정할 수 있습니다. ``dite``를 사용하기 더 편리하게 만들기 위해 린은 우리가 ``dite c (λ h : c, t) (λ h : ¬ c, e)`` 대신 ``if h : c then t else e``로 쓸 수 있게 해줍니다.
 
-Without classical logic, we cannot prove that every proposition is
-decidable. But we can prove that *certain* propositions are
-decidable. For example, we can prove the decidability of basic
-operations like equality and comparisons on the natural numbers and
-the integers. Moreover, decidability is preserved under propositional
-connectives:
+고전 논리가 없으면 우리는 모든 명제가 결정 가능임을 증명할 수 없습니다. 그래도 우리는 *특정* 명제가 결정 가능임을 증명할 수 있습니다. 예를 들어 우리는 자연수와 정수에 대한 등식과 부등식 같은 기본 연산의 결정 가능성을 증명할 수 있습니다. 게다가 결정 가능성은 명제 연결사 하에 보존됩니다.
 
 ```lean
 #check @instDecidableAnd
@@ -603,8 +529,7 @@ connectives:
 #check @instDecidableNot
 ```
 
-Thus we can carry out definitions by cases on decidable predicates on
-the natural numbers:
+따라서 우리는 자연수에 대해 결정가능 술어에 대한 각 경우에 대해 정의를 이끌어 냅니다.
 
 ```lean
 def step (a b x : Nat) : Nat :=
@@ -614,26 +539,16 @@ set_option pp.explicit true
 #print step
 ```
 
-Turning on implicit arguments shows that the elaborator has inferred
-the decidability of the proposition ``x < a ∨ x > b``, simply by
-applying appropriate instances.
+단순히 적절한 개체를 적용함으로써 암시적인 인수을 여는 것은 협력기가 명제 ``x < a ∨ x > b``의 결정가능성을 추론함을 보일 수 있습니다.
 
-With the classical axioms, we can prove that every proposition is
-decidable. You can import the classical axioms and make the generic
-instance of decidability available by opening the `Classical` namespace.
+고전적 공리로 우리는 모든 명제가 결정 가능임을 증명할 수 있습니다. `Classical`  이름공간을 여는 것으로 여러분은 고전적 공리를 불러올 수 있고 결정가능성의 일반적 개체를 만들 수 있습니다.
 
 ```lean
 open Classical
 ```
 
-Thereafter ``decidable p`` has an instance for every ``p``.
-Thus all theorems in the library
-that rely on decidability assumptions are freely available when you
-want to reason classically. In [Chapter Axioms and Computation](./axioms_and_computation.md),
-we will see that using the law of the
-excluded middle to define functions can prevent them from being used
-computationally. Thus, the standard library assigns a low priority to
-the `propDecidable` instance.
+그 후에 ``decidable p``는 모든 ``p``에 대해 개체를 갖습니다.
+따라서 결정가능성 가정에 의존하는 라이브러리 속 모든 정리는 여러분이 고전적으로 추론하는 것을 원할 때 자유롭게 이용할 수 있습니다. [공리와 계산 장](./axioms_and_computation.md)에서 우리는 배중률을 사용해 함수를 정의하는 것은 그들이 계산적으로 사용되는 것을 막을 수 있음을 볼 것입니다. 따라서 표준 라이브러리는 `propDecidable` 개체에 낮은 우선 순위를 할당합니다.
 
 ```lean
 # namespace Hidden
@@ -646,13 +561,9 @@ instance (priority := low) propDecidable (a : Prop) : Decidable a :=
 # end Hidden
 ```
 
-This guarantees that Lean will favor other instances and fall back on
-``propDecidable`` only after other attempts to infer decidability have
-failed.
+이렇게 하면 린이 다른 개체를 선호하고 결정가능성을 추론하려는 다른 시도가 실패한 후에만 ``propDecidable``으로 후퇴함을 보장합니다.
 
-The ``Decidable`` type class also provides a bit of small-scale
-automation for proving theorems. The standard library introduces the
-tactic `decide` that uses the `Decidable` instance to solve simple goals.
+``Decidable`` 유형 클래스는 정리 증명에 대한 아주 작은 소규모의 자동화도 제공합니다. 표준 라이브러리는 단순한 목표를 풀기 위해 `Decidable` 개체를 사용하는 `decide` 전략을 도입합니다.
 
 ```lean
 example : 10 < 5 ∨ 1 > 0 := by
@@ -678,23 +589,14 @@ theorem ex : True ∧ 2 = 1+1 := by
 -- (p : Prop) → [Decidable p] → Bool
 ```
 
-They work as follows. The expression ``decide p`` tries to infer a
-decision procedure for ``p``, and, if it is successful, evaluates to
-either ``true`` or ``false``. In particular, if ``p`` is a true closed
-expression, ``decide p`` will reduce definitionally to the Boolean ``true``.
-On the assumption that ``decide p = true`` holds, ``of_decide_eq_true``
-produces a proof of ``p``. The tactic ``decide`` puts it all together: to
-prove a target ``p``. By the previous observations,
-``decide`` will succeed any time the inferred decision procedure
-for ``c`` has enough information to evaluate, definitionally, to the ``isTrue`` case.
+이는 다음과 같이 동작합니다. 표현식 ``decide p``는 ``p``에 대한 결정 절차를 추론하려고 하고, 성공하면 ``true``나 ``false ``로 평가됩니다. 특히, ``p``가 정말로 닫힌 표현식이라면 ``decide p``는 정의로부터 불리언 ``true``로 축소됩니다.
+``decide p = true``가 성립한다고 가정하면 ``of_decide_eq_true``는 ``p``의 증명을 생성합니다. ``decide`` 전략은 목표 ``p``를 증명하기 위해 모든 것을 한데 모읍니다. 전의 관찰로부터 ``decide``는 ``c``에 대한 추론된 결정 절차가 ``isTrue`` 사례에 대해 정의로부터 평가하기에 충분한 정보를 가질 때마다 성공할 것입니다.
 
 
-Managing Type Class Inference
+유형 클래스 추론 관리하기
 -----------------------------
 
-If you are ever in a situation where you need to supply an expression
-that Lean can infer by type class inference, you can ask Lean to carry
-out the inference using `inferInstance`:
+린이 유형 클래스 추론으로 유추할 수 있는 표현식을 여러분이 제공해야 하는 상황에 있어 봤다면 여러분은 `inferInstance`를 사용해 린에게 추론을 이끌어내도록 요청할 수 있습니다.
 
 ```lean
 def foo : Add Nat := inferInstance
@@ -704,14 +606,13 @@ def bar : Inhabited (Nat → Nat) := inferInstance
 -- {α : Sort u} → [α] → α
 ```
 
-In fact, you can use Lean's ``(t : T)`` notation to specify the class whose instance you are looking for,
-in a concise manner:
+사실 여러분은 린의 ``(t : T)`` 기호로 여러분이 찾는 개체의 클래스를 엄밀하게 명시할 수 있습니다.
 
 ```lean
 #check (inferInstance : Add Nat)
 ```
 
-You can also use the auxiliary definition `inferInstanceAs`:
+여러분은 부가 정의 `inferInstanceAs`도 사용할 수 있습니다.
 
 ```lean
 #check inferInstanceAs (Add Nat)
@@ -721,10 +622,7 @@ You can also use the auxiliary definition `inferInstanceAs`:
 ```
 
 
-Sometimes Lean can't find an instance because the class is buried
-under a definition. For example, Lean cannot
-find an instance of ``Inhabited (Set α)``. We can declare one
-explicitly:
+때때로 린은 클래스가 정의에 묻혀 있어 개채를 찾지 못할 수 있습니다. 예를 들어 ``Inhabited (Set α)``의 개체를 찾을 수 없습니다. 여러분은 명시적으로 이를 선언할 수 있습니다.
 
 ```lean
 
@@ -738,51 +636,28 @@ instance : Inhabited (Set α) :=
   inferInstanceAs (Inhabited (α → Prop))
 ```
 
-At times, you may find that the type class inference fails to find an
-expected instance, or, worse, falls into an infinite loop and times
-out. To help debug in these situations, Lean enables you to request a
-trace of the search:
+때때로 유형 클래스 추론이 예상한 인스턴스를 찾지 못하거나 더 심하게는 무한 루프에 빠져 시간이 초과되는 것을 발견할 수 있습니다. 이러한 상황에서 디버그를 돕기 위해 Lean을 사용하면 검색 추적을 요청할 수 있습니다.
 
 ```
 set_option trace.Meta.synthInstance true
 ```
 
-If you are using VS Code, you can read the results by hovering over
-the relevant theorem or definition, or opening the messages window
-with ``Ctrl-Shift-Enter``. In Emacs, you can use ``C-c C-x`` to run an
-independent Lean process on your file, and the output buffer will show
-a trace every time the type class resolution procedure is subsequently
-triggered.
+VS Code를 사용하는 경우 관련 정리 또는 정의 위로 마우스를 이동하거나 ``Ctrl-Shift-Enter``로 메시지 창을 열어 결과를 읽을 수 있습니다. Emacs에서 ``C-c C-x``를 사용하여 파일에서 독립적인 린 프로세스를 실행할 수 있으며 출력 버퍼는 유형 클래스 해결 절차가 이후에 사용될 때마다 추적을 표시합니다.
 
-You can also limit the search using the following options:
+다음 옵션을 사용하여 검색을 제한할 수도 있습니다.
 ```
 set_option synthInstance.maxHeartbeats 10000
 set_option synthInstance.maxSize 400
 ```
 
-Option `synthInstance.maxHeartbeats` specifies the maximum amount of
-heartbeats per typeclass resolution problem. A heartbeat is the number of
-(small) memory allocations (in thousands), 0 means there is no limit.
-Option `synthInstance.maxSize` is the maximum number of instances used
-to construct a solution in the type class instance synthesis procedure.
+`synthInstance.maxHeartbeats` 옵션은 유형 클래스 해결 문제 당 최대 심박수 양을 지정합니다. 심박수는 (작은) 메모리 할당(천 단위)의 수이고, 0은 제한이 없음을 의미합니다.
+`synthInstance.maxSize` 옵션은 유형 클래스 개체 합성 절차에서 해을 만드는 데 사용되는 최대 개체수입니다.
 
-Remember also that in both the VS Code and Emacs editor modes, tab
-completion works in ``set_option``, to help you find suitable options.
+또한 VS Code 및 Emacs 편집기 모드에서 탭 완성 기능은 ``set_option``에서 동작하므로 적절한 옵션을 찾는 데 도움이 됨을 기억하세요.
 
-As noted above, the type class instances in a given context represent
-a Prolog-like program, which gives rise to a backtracking search. Both
-the efficiency of the program and the solutions that are found can
-depend on the order in which the system tries the instance. Instances
-which are declared last are tried first. Moreover, if instances are
-declared in other modules, the order in which they are tried depends
-on the order in which namespaces are opened. Instances declared in
-namespaces which are opened later are tried earlier.
+위에서 언급했듯이 주어진 상황의 유형 클래스 개체는 역추적 검색을 발생시키는 Prolog와 유사한 프로그램을 나타냅니다. 프로그램의 효율성과 발견된 해결책은 모두 시스템이 개체를 시도하는 순서에 따라 달라질 수 있습니다. 마지막에 선언된 개체가 가장 먼저 시도됩니다. 또한 개체가 다른 모듈에서 선언된 경우 시도되는 순서는 이름공간이 열린 순서에 의존합니다. 이름공간에 선언된 개체는 나중에 열린 것이 더 일찍 시도됩니다.
 
-You can change the order that type classes instances are tried by
-assigning them a *priority*. When an instance is declared, it is
-assigned a default priority value. You can assign other priorities
-when defining an instance. The following example illustrates how this
-is done:
+유형 클래스 개체에 *우선순위*를 할당하여 그들이 시도되는 순서를 변경할 수 있습니다. 개체가 선언되면 기본 우선 순위 값이 할당됩니다. 개체를 정의할 때 다른 우선 순위를 할당할 수 있습니다. 다음 예제는 이것이 어떻게 이뤄지는지 보여줍니다.
 
 ```lean
 class Foo where

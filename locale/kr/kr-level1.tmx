@@ -113,8 +113,8 @@ universe level of C fall into two cases, depending on whether or
 not the inductive type is specified to land in Prop (that is,
 Sort 0).</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161743Z" creationid="tlqk35" creationdate="20220528T161743Z">
-        <seg>(그들의 의존성이 성립되는 한 인자가 생성자에 임의의 순서로 나타날 수 있다는 점에서 이 설명은 약간 오해로 이끌 수 있습니다.) C의 세계 수준에서 유도형이 Prop (즉, Sort 0)에 머무른다고 나타나져 있는지 아닌지에 따라 제약은 두 경우로 나누어 떨어집니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152233Z" creationid="tlqk35" creationdate="20220528T161743Z">
+        <seg>(그들의 의존성이 성립되는 한 인자가 생성자에 임의의 순서로 나타날 수 있다는 점에서 이 설명은 약간 오해로 이끌 수 있습니다.) C의 세계 수준에서 귀납형이 Prop (즉, Sort 0)에 머무른다고 나타나져 있는지 아닌지에 따라 제약은 두 경우로 나누어 떨어집니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -284,8 +284,8 @@ precise mathematical terms.</seg>
       <tuv lang="en-US">
         <seg>Inductive Types</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T171056Z" creationid="tlqk35" creationdate="20220321T171056Z">
-        <seg>유도형(Inductive Types)</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151626Z" creationid="tlqk35" creationdate="20220321T171056Z">
+        <seg>귀납형(Inductive Types)</seg>
       </tuv>
     </tu>
     <tu>
@@ -360,8 +360,8 @@ ones.</seg>
         <seg>Tactics for Inductive Types below will introduce additional
 tactics that are specifically designed to make use of inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T151619Z" creationid="tlqk3" creationdate="20220526T151619Z">
-        <seg>유도형을 위한 전략 아래에서 유도형의 사용을 위해 특별히 고안된 추가 전략들을 도입할 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152003Z" creationid="tlqk3" creationdate="20220526T151619Z">
+        <seg>귀납형을 위한 전략 아래에서 귀납형의 사용을 위해 특별히 고안된 추가 전략들을 도입할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -392,8 +392,32 @@ tactics that are specifically designed to make use of inductive types.</seg>
       <tuv lang="en-US">
         <seg>Type Classes</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T171124Z" creationid="tlqk35" creationdate="20220321T171124Z">
-        <seg>유형 계층(Type Classes)</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152603Z" creationid="tlqk35" creationdate="20220321T171124Z">
+        <seg>유형 클래스(Type Classes)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>apply &lt;term&gt; is syntax sugar for tactic =&gt; apply &lt;term&gt;</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184838Z" creationid="tlqk3" creationdate="20220604T184838Z">
+        <seg>apply &lt;term&gt;은 tactic =&gt; apply &lt;term&gt;에 대한 문법 설탕입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>arg i enter the i-th nondependent explicit argument of an application.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184113Z" creationid="tlqk3" creationdate="20220604T184113Z">
+        <seg>arg i는 적용의 i번째 비의존적인 명시적 인수를 입력합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>args alternative name for congr</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184152Z" creationid="tlqk3" creationdate="20220604T184152Z">
+        <seg>args congr의 대체 이름</seg>
       </tuv>
     </tu>
     <tu>
@@ -426,10 +450,83 @@ first function (locally named g).</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>congr creates as many targets as there are (nondependent and explicit) arguments to the current head function
+(here the head function is multiplication).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182800Z" creationid="tlqk3" creationdate="20220604T182800Z">
+        <seg>congr은 현재 머리 함수 (여기서 머리 함수은 곱셈)에 대한 (비의존적 및 명시적) 인수만큼 많은 대상을 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>def can take multiple input parameters.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T144242Z" creationid="tlqk35" creationdate="20220321T144242Z">
         <seg>def는 다수의 입력 매개변수를 받을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>done fail if there are unsolved goals.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184417Z" creationid="tlqk3" creationdate="20220604T184417Z">
+        <seg>미해결 목표가 있으면 done이 실패합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>enter [1, x, 2, y] iterate arg and intro with the given arguments.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184319Z" creationid="tlqk3" creationdate="20220604T184319Z">
+        <seg>enter [1, x, 2, y] 주어진 인수로 arg 및 intro를 반복합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>lhs navigates to the left hand side of a relation (here equality), there is also a rhs navigating to the right hand side.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182652Z" creationid="tlqk3" creationdate="20220604T182639Z">
+        <seg>lhs는 관계식의 좌변으로 이동하고(여기서는 등호), 우변으로 이동하는 rhs도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>simp applies the simplifier to the current goal.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184216Z" creationid="tlqk3" creationdate="20220604T184216Z">
+        <seg>simp는 현재 목표에 단순화기를 적용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>skip goes to the next target.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182819Z" creationid="tlqk3" creationdate="20220604T182819Z">
+        <seg>skip는 다음 대상으로 이동합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>tactic =&gt; &lt;tactic sequence&gt; go back to regular tactic mode.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184602Z" creationid="tlqk3" creationdate="20220604T184602Z">
+        <seg> tactic =&gt; &lt;tactic sequence&gt;는 보통의 전략 모드로 되돌아갑니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>traceState display the current tactic state.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184431Z" creationid="tlqk3" creationdate="20220604T184431Z">
+        <seg>traceState는 현재 전략 상태를 표시합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>whnf put term in weak head normal form.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184527Z" creationid="tlqk3" creationdate="20220604T184527Z">
+        <seg>whnf은 항를 약한 머리 정규 형식에 둡니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -566,6 +663,15 @@ use the casesOn function:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T175820Z" creationid="tlqk3" creationdate="20220603T175820Z">
         <seg>첫 고려사항은 casesOn 함수를 사용하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>A heartbeat is the number of
+(small) memory allocations (in thousands), 0 means there is no limit.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180827Z" creationid="tlqk3" creationdate="20220604T180827Z">
+        <seg>심박수는 (작은) 메모리 할당(천 단위)의 수이고, 0은 제한이 없음을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -749,6 +855,16 @@ this operator should be translated to after the arrow =&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Algorithmically speaking, the Decidable type class can
+be used to infer a procedure that effectively determines whether or
+not the proposition is true.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171745Z" creationid="tlqk3" creationdate="20220604T171745Z">
+        <seg>알고리즘적으로 말하자면 Decidable 유형 클래스는 명제가 참인지 여부를 효과적으로 결정하는 절차를 추론하는데 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>All that has changed are the braces around α : Type u in the
 declaration of the variables.</seg>
       </tuv>
@@ -764,6 +880,14 @@ and rec_on.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T175350Z" creationid="tlqk3" creationdate="20220603T175350Z">
         <seg>패턴 매칭의 모든 예제로부터 우리는 :numref:패턴 매칭에서 cases_on과 rec_on를 사용해 쉽게 쓸 수 있음을 고려했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>All this is also available to rewrite an hypothesis h from the local context using conv at h.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183515Z" creationid="tlqk3" creationdate="20220604T183515Z">
+        <seg>이 모든 것은 conv at h를 사용하여 지역 상황에서 가정 h를 다시쓰기 하는 데에도 이용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -828,8 +952,8 @@ constant of such a type.</seg>
 include both features, by having any number of constructors, each of
 which takes any number of arguments.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T160551Z" creationid="tlqk3" creationdate="20220526T160235Z">
-        <seg>임의의 유도형은 다수의 생성자를 갖거나 각각이 다수의 인수를 받게 함으로써 양쪽의 특징을 모두 포함할 수 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152027Z" creationid="tlqk3" creationdate="20220526T160235Z">
+        <seg>임의의 귀납형은 다수의 생성자를 갖거나 각각이 다수의 인수를 받게 함으로써 양쪽의 특징을 모두 포함할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -839,6 +963,14 @@ there is an element of α.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T151406Z" creationid="tlqk3" creationdate="20220527T150730Z">
         <seg>Inhabited α의 원소는 단지 α의 원소가 있다는 사실에 대한 증인입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>An element of the class Inhabited a is simply an expression of the form Inhabited.mk x, for some element x : a.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160235Z" creationid="tlqk3" creationdate="20220604T160235Z">
+        <seg>클래스 Inhabited a의 원소는 단순히 어떤 원소 x : a에 대한 Inhabited.mk x꼴의 표현식입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -856,8 +988,8 @@ different contexts.</seg>
         <seg>An inductive family is an indexed family of types defined by a
 simultaneous induction of the following form:</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152742Z" creationid="tlqk35" creationdate="20220528T152723Z">
-        <seg>유도군은 다음 형태를 따르는 동시 재귀로 정의되는 유형의 색인된 군입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152145Z" creationid="tlqk35" creationdate="20220528T152723Z">
+        <seg>귀납군은 다음 형태를 따르는 동시 재귀로 정의되는 유형의 색인된 군입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -996,6 +1128,17 @@ the lexicographic order on the natural numbers.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As a first example, let us prove example
+(a b c : Nat) : a * (b * c) = a * (c * b)
+(examples in this file are somewhat artificial since
+other tactics could finish them immediately).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182230Z" creationid="tlqk3" creationdate="20220604T182230Z">
+        <seg>첫 번째 예로서 (a b c : Nat) : a * (b * c) = a * (c * b) 예제를 증명해 봅시다. (다른 전술로 이 예제를 즉시 끝낼 수 있기에 이것은 다소 인위적입니다.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As a further exercise, we
 suggest defining boolean operations and, or, not on the
 Bool type, and verifying common identities.</seg>
@@ -1073,6 +1216,17 @@ implication.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As a result, the type class supports such
+computational definitions when they are possible while at the same
+time allowing a smooth transition to the use of classical definitions
+and classical reasoning.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172056Z" creationid="tlqk3" creationdate="20220604T172056Z">
+        <seg>결과적으로 유형 클래스는 그들이 가능할 때 그런 계산적 정의를 지원하는 동시에 고전적 정의와 고전 추론의 사용으로 원활히 넘어가는 것을 허용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As a theorem of propositional logic, what does t2 say?</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161756Z" creationid="tlqk35" creationdate="20220321T161756Z">
@@ -1093,6 +1247,14 @@ implication.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T163244Z" creationid="tlqk3" creationdate="20220527T163244Z">
         <seg>연습으로 다음을 증명하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As an exercise, try defining default instances for other types, such as List and Sum types.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161618Z" creationid="tlqk3" creationdate="20220604T161618Z">
+        <seg>연습으로 List형과 Sum형 같은 다른 유형에 대한 기본 개체를 정의해보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1197,6 +1359,15 @@ arbitrary mixfix syntax freely mixing tokens and placeholders.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As noted above, the type class instances in a given context represent
+a Prolog-like program, which gives rise to a backtracking search.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181125Z" creationid="tlqk3" creationdate="20220604T181125Z">
+        <seg>위에서 언급했듯이 주어진 상황의 유형 클래스 개체는 역추적 검색을 발생시키는 Prolog와 유사한 프로그램을 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As observed above, the induction principle is just a special case of the recursion principle,
 when the codomain motive n is an element of Prop.</seg>
       </tuv>
@@ -1270,6 +1441,16 @@ attribute).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T171023Z" creationid="tlqk3" creationdate="20220529T171023Z">
         <seg>우리가 봤던 것처럼 패턴은 생성자가 다른 패턴을 적용한 변수이거나 그 형태를 무언가로 정규화한 표현식입니다. (여기서 비생성자는 [matchPattern] 속성으로 표시되었습니다.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As we mentioned above, the argument {n : Nat} is part of the
+pattern matching, because it cannot be held fixed throughout the
+definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T150906Z" creationid="tlqk3" creationdate="20220604T150906Z">
+        <seg>위에서 언급했듯이 인수 {n : Nat}은 패턴 매칭의 일부입니다. 왜냐하면 이것은 정의 전체에 대해 고정될 수 없기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1393,8 +1574,8 @@ introduction rules, which show how to construct an element of the
 type, and elimination rules, which show how to "use" an element of the
 type in another construction.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144324Z" creationid="tlqk3" creationdate="20220526T144324Z">
-        <seg>논리 연결사와 마찬가지로 모든 유도형은 유형의 원소를 어떻게 생성하는지 보여주는 도입 규칙과 또다른 생성에서 유형의 원소를 어떻게 "사용"하는지 보여주는 제거 규칙을 동반합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151833Z" creationid="tlqk3" creationdate="20220526T144324Z">
+        <seg>논리 연결사와 마찬가지로 모든 귀납형은 유형의 원소를 어떻게 생성하는지 보여주는 도입 규칙과 또다른 생성에서 유형의 원소를 어떻게 "사용"하는지 보여주는 제거 규칙을 동반합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1452,6 +1633,16 @@ reflexivity to finish it off.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>At times, you may find that the type class inference fails to find an
+expected instance, or, worse, falls into an infinite loop and times
+out.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180351Z" creationid="tlqk3" creationdate="20220604T180351Z">
+        <seg>때때로 유형 클래스 추론이 예상한 인스턴스를 찾지 못하거나 더 심하게는 무한 루프에 빠져 시간이 초과되는 것을 발견할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Attributes</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T181632Z" creationid="tlqk3" creationdate="20220525T181632Z">
@@ -1484,10 +1675,26 @@ reflexivity to finish it off.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Axioms and Computation</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184902Z" creationid="tlqk3" creationdate="20220604T184902Z">
+        <seg>공리와 계산</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Basic Tactics</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T061845Z" creationid="tlqk35" creationdate="20220522T061845Z">
         <seg>기본 전략들</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Basic navigation and rewriting</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182034Z" creationid="tlqk3" creationdate="20220604T182034Z">
+        <seg>기본 탐색 및 다시쓰기</seg>
       </tuv>
     </tu>
     <tu>
@@ -1572,6 +1779,16 @@ contents of the library directly is often unavoidable.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T131223Z" creationid="tlqk3" creationdate="20220526T131223Z">
         <seg>아래에서 우리는 린의 편집기 모드는 여러분이 필요한 것을 찾도록 돕는 것을 봅니다. 그러나 라이브러리의 내용을 공부하는 것은 대게 불가피합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Both
+the efficiency of the program and the solutions that are found can
+depend on the order in which the system tries the instance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181235Z" creationid="tlqk3" creationdate="20220604T181235Z">
+        <seg>프로그램의 효율성과 발견된 해결책은 모두 시스템이 개체를 시도하는 순서에 따라 달라질 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1672,8 +1889,18 @@ the net result is the same.</seg>
 notion of an inductive type is so fundamental, we feel it is important
 to start with a low-level, hands-on understanding.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144954Z" creationid="tlqk3" creationdate="20220526T144954Z">
-        <seg>그러나 유도형의 개념은 너무 근본적이라 우리는 저수준의 실습 이해부터 시작하는 것이 중요하다고 느낍니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151908Z" creationid="tlqk3" creationdate="20220526T144954Z">
+        <seg>그러나 귀납형의 개념은 너무 근본적이라 우리는 저수준의 실습 이해부터 시작하는 것이 중요하다고 느낍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But if we use the classical principle,
+say, to define a function by cases, that function will not be
+computable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171539Z" creationid="tlqk3" creationdate="20220604T171539Z">
+        <seg>그러나 우리가 고전 원리를 사용해 경우에 따라 함수를 정의하면 그 함수는 계산 불가일 겁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1769,6 +1996,24 @@ write.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>But this
+transforms the goal into b * c * a = a * (c * b), after commuting the
+very first multiplication appearing in the term.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182352Z" creationid="tlqk3" creationdate="20220604T182352Z">
+        <seg>그러나 이것은 항에 나타나는 맨 처음 곱셈을 교환한 뒤 목표를 b * c * a = a * (c * b)로 바꿉니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But this fails with a frustrating</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183040Z" creationid="tlqk3" creationdate="20220604T183040Z">
+        <seg>그러나 이것은 좌절과 함께 실패합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>But this information is
 redundant: one can infer the argument α in
 Lst.cons Nat 5 (Lst.nil Nat) from the fact that the second argument, 5, has
@@ -1807,6 +2052,15 @@ case split in a computable function.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T171702Z" creationid="tlqk3" creationdate="20220527T171702Z">
         <seg>그러나 유형 클래스 추론을 사용하여 (유형 클래스 장 참조), 린이 실제로 연관된 결정 절차를 찾을 수 있다. 이 말은 여러분이 셀 수 있는 함수에 대해 경우를 나누는 것이 가능하다는 의미이다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But we can prove that certain propositions are
+decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172923Z" creationid="tlqk3" creationdate="20220604T172923Z">
+        <seg>그래도 우리는 특정 명제가 결정 가능임을 증명할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1855,6 +2109,17 @@ tactic.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>But, in fact, a case split is not required on the first argument; the
+casesOn eliminator for Vector automatically abstracts this
+argument and replaces it by 0 and n + 1 when we do a case
+split on the second argument.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T150511Z" creationid="tlqk3" creationdate="20220604T150321Z">
+        <seg>그러나 사실 경우 분할은 첫 번째 인수에 대해 필요하지 않습니다. 두 번째 인수에 대해 경우를 나누었을 때 Vector를 위한 casesOn 제거자가 자동적으로 이 인수를 추출하고 그것을 0과 n + 1으로 대체합니다. </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>But, more importantly, equational
 reasoning is supported by a term rewriter, a simplifier, and other
 kinds of automation.</seg>
@@ -1885,6 +2150,15 @@ right-hand side.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>By default, Lean only tries to synthesize an instance Inhabited T when the term T is known and does not
+contain missing parts.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163214Z" creationid="tlqk3" creationdate="20220604T163214Z">
+        <seg>항 T는 알려져 있고 모르는 부분이 없을 때 기본적으로 린은 Inhabited T 개체만 합성하려고 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>By default, it includes the standard library directory, and (in some contexts)
 the root of the user's local project.</seg>
       </tuv>
@@ -1906,8 +2180,8 @@ the root of the user's local project.</seg>
 generated, which is to say, the constructors are injective and have
 disjoint ranges.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T172827Z" creationid="tlqk3" creationdate="20220527T172827Z">
-        <seg>설계하면서 유도형의 원소는 자유롭게 생성됩니다. 그말은 생성자는 주입적이고 분리된 범위를 갖습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152129Z" creationid="tlqk3" creationdate="20220527T172827Z">
+        <seg>설계하면서 귀납형의 원소는 자유롭게 생성됩니다. 그말은 생성자는 주입적이고 분리된 범위를 갖습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1917,6 +2191,15 @@ Lean.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T154758Z" creationid="tlqk35" creationdate="20220321T154758Z">
         <seg>지금까지, 여러분들은 린에서 객체와 함수를 정의하는 몇가지 방법을 배웠습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>By tagging the instance above with the attribute defaultInstance, we are instructing Lean
+to use this instance on pending type class synthesis problems.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165239Z" creationid="tlqk3" creationdate="20220604T165239Z">
+        <seg>defaultInstance 속성으로 위의 개체를 표시함으로써 우리는 린에게 유형 클래스 합성 문제로 보류 중인 이 개체를 사용하라고 가르킵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1940,6 +2223,16 @@ of this chapter, you will understand much of what this means.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>By the previous observations,
+decide will succeed any time the inferred decision procedure
+for c has enough information to evaluate, definitionally, to the isTrue case.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T175600Z" creationid="tlqk3" creationdate="20220604T175600Z">
+        <seg>전의 관찰로부터 decide는 c에 대한 추론된 결정 절차가 isTrue 사례에 대해 정의로부터 평가하기에 충분한 정보를 가질 때마다 성공할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>By the propositions-as-types correspondence,
 this means that induction is the fundamental method of proof.</seg>
       </tuv>
@@ -1953,6 +2246,14 @@ this means that induction is the fundamental method of proof.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180228Z" creationid="tlqk35" creationdate="20220321T180228Z">
         <seg>계산 증명</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Chaining Instances</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160614Z" creationid="tlqk3" creationdate="20220604T160614Z">
+        <seg>연결 개체</seg>
       </tuv>
     </tu>
     <tu>
@@ -2071,6 +2372,17 @@ sum type in the library:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Consider the following
+definition of the function Vector.add, which adds two vectors of
+elements of a type, assuming that type has an associated addition
+function:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145437Z" creationid="tlqk3" creationdate="20220604T145437Z">
+        <seg>유형의 원소의 두 벡터를 더하는 함수 Vector.add,의 다음 정의를 고려해보세요. 그 유형은 연관된 덧셈함수를 가지고 있다고 가정합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Consider the following three function definitions:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145126Z" creationid="tlqk35" creationdate="20220321T145126Z">
@@ -2169,6 +2481,22 @@ lambda abstraction.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Curly brackets and . can also be used in conv mode to structure tactics.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183851Z" creationid="tlqk3" creationdate="20220604T183851Z">
+        <seg>중괄호와 .은 전략을 구조화하기위해 conv 모드에서도 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Decidable Propositions</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171113Z" creationid="tlqk3" creationdate="20220604T171113Z">
+        <seg>결정 가능한 명제</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Declaring Structures</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T173333Z" creationid="tlqk35" creationdate="20220528T173333Z">
@@ -2191,6 +2519,14 @@ with the system.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135914Z" creationid="tlqk35" creationdate="20220321T135914Z">
         <seg>이처럼 새로운 대상을 선언하는 것은 시스템을 실험해보는 좋은 방식입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Default instances</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164532Z" creationid="tlqk3" creationdate="20220604T164532Z">
+        <seg>기본 개체</seg>
       </tuv>
     </tu>
     <tu>
@@ -2355,8 +2691,8 @@ to proving ¬¬p.</seg>
         <seg>Each constructor c in the definition of a family C of
 inductive types is of the form</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160951Z" creationid="tlqk35" creationdate="20220528T160951Z">
-        <seg>유도형의 C 군의 정의에서 각 생성자 c는 다음 형태와 같습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152226Z" creationid="tlqk35" creationdate="20220528T160951Z">
+        <seg>귀납형의 C 군의 정의에서 각 생성자 c는 다음 형태와 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2366,8 +2702,8 @@ argument types are built up from previously defined types, the
 parameter and index types, and the inductive family currently being
 defined.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160242Z" creationid="tlqk35" creationdate="20220528T160242Z">
-        <seg>각 생성자는 이전에 정의된 유형, 매개변수와 색인 유형, 현재 정의 중인 유도군으로 만들어져서 유형을 가져야만 합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152204Z" creationid="tlqk35" creationdate="20220528T160242Z">
+        <seg>각 생성자는 이전에 정의된 유형, 매개변수와 색인 유형, 현재 정의 중인 귀납군으로 만들어져서 유형을 가져야만 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2434,8 +2770,8 @@ inferred by Lean, and we want to avoid a sequence of _s.</seg>
         <seg>Enumerated types are a very special case of inductive types, in which
 the constructors take no arguments at all.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T152727Z" creationid="tlqk3" creationdate="20220526T152727Z">
-        <seg>열거 유형은 유도형의 아주 특별한 경우 입니다. 이들의 생성자는 인수를 전혀 받지 않습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152011Z" creationid="tlqk3" creationdate="20220526T152727Z">
+        <seg>열거 유형은 귀납형의 아주 특별한 경우 입니다. 이들의 생성자는 인수를 전혀 받지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2603,8 +2939,8 @@ with the system, and the mechanisms Lean offers for managing complex theories an
       <tuv lang="en-US">
         <seg>First, Lean supports mutually defined inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165028Z" creationid="tlqk35" creationdate="20220528T165028Z">
-        <seg>우선 린은 유도형의 상호적으로 정의됨(mutually defined)을 지원합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152347Z" creationid="tlqk35" creationdate="20220528T165028Z">
+        <seg>우선 린은 귀납형의 상호적으로 정의됨(mutually defined)을 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2662,6 +2998,16 @@ e)).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162247Z" creationid="tlqk35" creationdate="20220321T162247Z">
         <seg>예를 들어 a ∧ b → c ∨ d ∧ e은 (a ∧ b) → (c ∨ (d ∧ e))을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For
+example, for the expression if p then a else b to make sense, we
+need to know that p is decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172410Z" creationid="tlqk3" creationdate="20220604T172410Z">
+        <seg>예를 들어 표현식 if p then a else b를 이해하려면 우리는 p가 결정 가능인지 알 필요가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2819,12 +3165,31 @@ all_goals t applies t to all open goals:</seg>
     <tu>
       <tuv lang="en-US">
         <seg>For example,
+suppose we declare a structure in Lean to hold implementations of addition</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153142Z" creationid="tlqk3" creationdate="20220604T153142Z">
+        <seg>예를 들어 덧셈의 구현을 유지하기 위해 린에 구조체를 선언한다고 해봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example,
 using the hypothesis p, it rewrites p ∧ q to q and p ∨
 q to true, which it then proves trivially.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171702Z" creationid="tlqk35" creationdate="20220524T163946Z">
         <seg>예를 들어 가정 p를 사용하여 이것은 p ∧ q을 q으로 그리고 p ∨
 q을 true으로 다시 쓴다.  그럼 이를 명백하게 증명합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example,
+you can declare an (anonymous) instance stating that if a has addition, then Array a
+has addition:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154932Z" creationid="tlqk3" creationdate="20220604T154932Z">
+        <seg>예를 들어 여러분이 (익명) 개체를 a가 덧셈을 갖는다면 Array a도 덧셈을 갖는다고 서술해 선언할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2861,6 +3226,15 @@ asserting a concrete or general equation.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>For example, Lean cannot
+find an instance of Inhabited (Set α).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180140Z" creationid="tlqk3" creationdate="20220604T180140Z">
+        <seg>예를 들어 Inhabited (Set α)의 개체를 찾을 수 없습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>For example, Lean groups definitions and theorems involving lists into
 a namespace List.</seg>
       </tuv>
@@ -2877,6 +3251,14 @@ with an element of b, also known as the Cartesian product.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T140041Z" creationid="tlqk35" creationdate="20220321T140041Z">
         <seg>예를 들어 a와 b가 유형이라면 a -&gt; b는 a 에서 b로 가는 함수 유형을 나타냅니다. 그리고 a × b 는 a의 원소와 b의 원소로 이뤄진 쌍을 원소로 갖는 유형을 나타냅니다. 이것을 카테시안 곱이라 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, if a is a type, exists x : a, x = x is true only if a is not empty.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155621Z" creationid="tlqk3" creationdate="20220604T155621Z">
+        <seg>예를 들어 a가 유형이면 exists x : a, x = x은 a가 비어있지 않을 때에만 참입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2938,6 +3320,15 @@ above brings h along with it:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>For example, suppose xs has type α, when elaboration xs.map (fun x =&gt; 2 * x), we want the homogeneous instance for multiplication
+to have higher priority than the default instance for OfNat.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165937Z" creationid="tlqk3" creationdate="20220604T165937Z">
+        <seg>예를 들어 xs.map (fun x =&gt; 2 * x)으로 해석될 때 xs가 α형이라고 가정합시다. 우리는 OfNat에 대한 기본 개체보다 더 높은 우선 순위를 갖는 곱셈에 대한 동형 개체를 원합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>For example, suppose we
 define a list operation that symmetrizes its input by appending its
 reversal:</seg>
@@ -2973,6 +3364,14 @@ p q : Prop, hp : p and hq : q:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184434Z" creationid="tlqk35" creationdate="20220321T184434Z">
         <seg>예를 들어 , 다음은 p ∧ q ∧ p형의 항을 상수 p q : Prop과 hp : p,hq : q가 있는 현재 상황에 대해 생성하는 목표를 만듭니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, the following definition shows that if two types a and b are inhabited, then so is their product:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161309Z" creationid="tlqk3" creationdate="20220604T161309Z">
+        <seg>예를 들어 다음 정의는 만약 두 유형 a와 b가 내재되었다면 그들의 곱도 그렇다는 것을 보여줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3053,6 +3452,16 @@ same point.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T165616Z" creationid="tlqk3" creationdate="20220527T165616Z">
         <seg>예를 들어 우리는 위의 목표를 반대 순서로 채울 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For example, we can prove the decidability of basic
+operations like equality and comparisons on the natural numbers and
+the integers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173008Z" creationid="tlqk3" creationdate="20220604T173008Z">
+        <seg>예를 들어 우리는 자연수와 정수에 대한 등식과 부등식 같은 기본 연산의 결정 가능성을 증명할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3268,8 +3677,8 @@ theory.</seg>
         <seg>Generally speaking, for an inductive type in Prop, the
 motive of the elimination rule is required to be in Prop.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162615Z" creationid="tlqk35" creationdate="20220528T162615Z">
-        <seg>쉽게 말하자면 Prop에 대한 유도형에 대해 제거 규칙의 동기는 Prop에 있어야 함을 요구합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152305Z" creationid="tlqk35" creationdate="20220528T162615Z">
+        <seg>쉽게 말하자면 Prop에 대한 귀납형에 대해 제거 규칙의 동기는 Prop에 있어야 함을 요구합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3333,12 +3742,21 @@ a : α.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Given an application hMul a b, after types of a and b are known, the type class
+synthesizer is invoked, and the resulting type is obtained from the output parameter γ.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164147Z" creationid="tlqk3" creationdate="20220604T164104Z">
+        <seg>활용 hMul a b에 대해서 a와 b의 유형이 알려진 뒤에 유형 클래스 합성기가 호출됩니다. 그리고 결과 유형은 출력 매개변수 γ로부터 얻어집니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Given an expression
 e of an inductive type Foo (possibly applied to some
 arguments), the notation e.bar is shorthand for Foo.bar e.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T163400Z" creationid="tlqk35" creationdate="20220321T163400Z">
-        <seg>(아마 몇 가지 인수를 적용한) 유도형이 Foo인 표현식 e에 대해 e.bar과 같은 표기는 Foo.bar e의 약식 표현입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151723Z" creationid="tlqk35" creationdate="20220321T163400Z">
+        <seg>(아마 몇 가지 인수를 적용한) 귀납형이 Foo인 표현식 e에 대해 e.bar과 같은 표기는 Foo.bar e의 약식 표현입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3873,6 +4291,15 @@ file.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>However, it is natural to assume that the type of y and x should be the same in
+this kind of situation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164934Z" creationid="tlqk3" creationdate="20220604T164934Z">
+        <seg>그러나 이 같은 상황에서 y형과 x형은 동일하다고 가정하는 것이 자연스럽습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>However, such commands often support the local modifier,
 which indicates that they only have effect until
 the current section or namespace is closed, or until the end
@@ -4050,6 +4477,15 @@ subterm.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>If that were the extent of type class inference, it would not be all that impressive;
+it would be simply a mechanism of storing a list of instances for the elaborator to find in a lookup table.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160856Z" creationid="tlqk3" creationdate="20220604T160856Z">
+        <seg>그것이 유형 클래스 추론의 확장이라면 그리 인상적이지 않을 것 입니다. 이것은 협력기가 룩업 테이블에서 찾는 데 쓰는 단순히 개체의 리스트를 저장하는 메커니즘일 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>If the constructor name is not provided, then a constructor is named
 mk by default.</seg>
       </tuv>
@@ -4074,6 +4510,15 @@ prints the type of the symbol, and its definition.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T125436Z" creationid="tlqk3" creationdate="20220526T125436Z">
         <seg>만약 식별자가 정의나 정리를 의미한다면 린은 기호의 유형과 그것의 정의를 출력합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If the inaccessible pattern can be inferred, you can also write
+_.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143925Z" creationid="tlqk3" creationdate="20220604T143925Z">
+        <seg>만약 접근불가능한 패턴이 추론될 수 있다면 _와 같이 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4142,6 +4587,16 @@ don't want that to happen, you have to write @t instead.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>If you are ever in a situation where you need to supply an expression
+that Lean can infer by type class inference, you can ask Lean to carry
+out the inference using inferInstance:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T175851Z" creationid="tlqk3" creationdate="20220604T175851Z">
+        <seg>린이 유형 클래스 추론으로 유추할 수 있는 표현식을 여러분이 제공해야 하는 상황에 있어 봤다면 여러분은 inferInstance를 사용해 린에게 추론을 이끌어내도록 요청할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>If you are not used to thinking constructively, it may take some time
 for you to get a sense of where classical reasoning is used.</seg>
       </tuv>
@@ -4156,6 +4611,16 @@ Lean editor, and copies the example with enough surrounding context to make the 
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134929Z" creationid="tlqk35" creationdate="20220321T134929Z">
         <seg>여러분이 온라인으로 책을 읽는다면 "실행해보기"라 적힌 버튼을 볼 것입니다. 버튼을 누르면 린 편집기 탭이 열리면서 코드가 올바르게 컴파일되도록 주변 맥락을 포함해 예제를 복사합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If you are using VS Code, you can read the results by hovering over
+the relevant theorem or definition, or opening the messages window
+with Ctrl-Shift-Enter.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180458Z" creationid="tlqk3" creationdate="20220604T180458Z">
+        <seg>VS Code를 사용하는 경우 관련 정리 또는 정의 위로 마우스를 이동하거나 Ctrl-Shift-Enter로 메시지 창을 열어 결과를 읽을 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4288,6 +4753,15 @@ either case, the defining equations hold definitionally.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>In
+general, instances may depend on other instances in complicated ways.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154832Z" creationid="tlqk3" creationdate="20220604T154832Z">
+        <seg>일반적으로 개체는 다른 개체에 복잡한 방식으로 종속될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In
 principle, two terms that reduce to the same value are called
 definitionally equal.</seg>
       </tuv>
@@ -4319,8 +4793,8 @@ this case, however, apply would work just as well.</seg>
         <seg>In Chapter Inductive Types,
 we will explain how equality is defined from the primitives of Lean's logical framework.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T175415Z" creationid="tlqk35" creationdate="20220321T175415Z">
-        <seg>유도형 장에서 우리는 어떻게 동등이 린의 기초적인 논리 프레임워크로부터 정의되는지 설명할 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151729Z" creationid="tlqk35" creationdate="20220321T175415Z">
+        <seg>귀납형 장에서 우리는 어떻게 동등이 린의 기초적인 논리 프레임워크로부터 정의되는지 설명할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4367,6 +4841,17 @@ t₁는 현재 목표에 적용되고 그 후  t₂은 출력되는 하위목표
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In Chapter Axioms and Computation,
+we will see that using the law of the
+excluded middle to define functions can prevent them from being used
+computationally.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174024Z" creationid="tlqk3" creationdate="20220604T174024Z">
+        <seg>공리와 계산 장에서 우리는 배중률을 사용해 함수를 정의하는 것은 그들이 계산적으로 사용되는 것을 막을 수 있음을 볼 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In Section Dependent Pattern Matching,
 we will see that it is sometimes necessary to include explicit terms in patterns that
 are needed to make an expression type check, though they do not play a
@@ -4386,6 +4871,17 @@ the last tactic.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T055948Z" creationid="tlqk35" creationdate="20220522T055823Z">
         <seg>Emacs에서 여러분은 임의의 줄의 끝에서 C-c C-g을 눌러 목표를 볼 수 있습니다. 
 아니면 마지막 전략의 첫 문자 뒤에 커서를 놓으면 불완전한 증명에 대한 나머지 목표를 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In Emacs, you can use C-c C-x to run an
+independent Lean process on your file, and the output buffer will show
+a trace every time the type class resolution procedure is subsequently
+triggered.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180620Z" creationid="tlqk3" creationdate="20220604T180620Z">
+        <seg>Emacs에서 C-c C-x를 사용하여 파일에서 독립적인 린 프로세스를 실행할 수 있으며 출력 버퍼는 유형 클래스 해결 절차가 이후에 사용될 때마다 추적을 표시합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4426,6 +4922,15 @@ calc, and has the following syntax:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In Lean, by changing
+structure to class in the example above, the type of Add.add becomes</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154117Z" creationid="tlqk3" creationdate="20220604T154117Z">
+        <seg>린에서 위 예제에서structure를 class로 바꿈으로 Add.add형이 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In Lean, identifiers are given by hierarchical names like
 Foo.Bar.baz.</seg>
       </tuv>
@@ -4457,8 +4962,8 @@ theorem command introduces a new theorem:</seg>
 keyword structure can be used to define such an inductive type as
 well as its projections, at the same time.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T161714Z" creationid="tlqk3" creationdate="20220526T161714Z">
-        <seg>린에에서 키워드 structure는 그것의 투영 뿐만 아니라 유도형 같은 것을 동시에 정의하는데 사용될 수 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152034Z" creationid="tlqk3" creationdate="20220526T161714Z">
+        <seg>린에에서 키워드 structure는 그것의 투영 뿐만 아니라 귀납형 같은 것을 동시에 정의하는데 사용될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4712,8 +5217,8 @@ the expression denotes the same function as fun (u : β) (z : α) =&gt; u.</seg>
       <tuv lang="en-US">
         <seg>In fact, Lean allows us to define the inductive type we really want:</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170342Z" creationid="tlqk35" creationdate="20220528T170256Z">
-        <seg>사실 린은 우리가 원하는 유도형을 정의하도록 해줍니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152400Z" creationid="tlqk35" creationdate="20220528T170256Z">
+        <seg>사실 린은 우리가 원하는 귀납형을 정의하도록 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4732,8 +5237,8 @@ another.</seg>
         <seg>In fact, a single inductive definition can introduce an
 indexed family of inductive types, in a manner we now describe.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T152751Z" creationid="tlqk35" creationdate="20220528T152510Z">
-        <seg>사실 단일 재귀적 정의는 이제 우리가 설명할 방식으로 유도형의 색인된 family를 도입할 수 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152140Z" creationid="tlqk35" creationdate="20220528T152510Z">
+        <seg>사실 단일 재귀적 정의는 이제 우리가 설명할 방식으로 귀납형의 색인된 family를 도입할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4846,6 +5351,15 @@ the new fact is introduced with the label this.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T144138Z" creationid="tlqk35" creationdate="20220524T144138Z">
         <seg>사실 이 기호와 관련해서 여러분은 심지어 유형과 레이블 모두 생략할 수 있습니다. 
 그 경우 새로운 사실은 this 레이블로 도입됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In fact, you can use Lean's (t : T) notation to specify the class whose instance you are looking for,
+in a concise manner:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180028Z" creationid="tlqk3" creationdate="20220604T180028Z">
+        <seg>사실 여러분은 린의 (t : T) 기호로 여러분이 찾는 개체의 클래스를 엄밀하게 명시할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4985,8 +5499,8 @@ Lean parses the more general definitions, defines auxiliary inductive
 types based on them, and then uses the auxiliary types to define the
 ones we really want.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164744Z" creationid="tlqk35" creationdate="20220528T164744Z">
-        <seg>다시 말하면, 린은 더 일반적인 정의를 구문분석해 이들이 기반하는 부가적인 유도형을 정의하고, 그 뒤 부가적인 유형을 우리가 원하는 것을 정의하는데 사용합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152331Z" creationid="tlqk35" creationdate="20220528T164744Z">
+        <seg>다시 말하면, 린은 더 일반적인 정의를 구문분석해 이들이 기반하는 부가적인 귀납형을 정의하고, 그 뒤 부가적인 유형을 우리가 원하는 것을 정의하는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5136,6 +5650,15 @@ considered problematic.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In particular, if p is a true closed
+expression, decide p will reduce definitionally to the Boolean true.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174914Z" creationid="tlqk3" creationdate="20220604T174914Z">
+        <seg>특히, p가 정말로 닫힌 표현식이라면 decide p는 정의로부터 불리언 true로 축소됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In particular, if you use the
 variable command within a namespace, its scope is limited to the
 namespace.</seg>
@@ -5171,6 +5694,15 @@ as to their correctness becomes a form of theorem proving.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131208Z" creationid="tlqk35" creationdate="20220321T131208Z">
         <seg>실제로 수학의 일부를 식별하는 것과 시스템의 명확성을 식별하는 것 사이에 명확한 구분이 없습니다. 형식 증명은 하드웨어와 소프트웨어 시스템을 수학적 항으로 묘사하기를 요구합니다. 그리고 그때 그들의 올바름에 대한 주장을 세우는 것은 정리 증명의 형태가 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In previous Lean versions, users often found it cumbersome
+to have to include these extra discriminants.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151059Z" creationid="tlqk3" creationdate="20220604T151059Z">
+        <seg>린의 이전 버전에서 사용자는 이 별도의 구별자를 포함시켜야 하는 것이 종종 성가신 일임을 알았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5275,6 +5807,16 @@ occur.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the above Lean code, the field add has type
+Add.add : {α : Type} → Add α → α → α → α
+where the curly braces around the type a mean that it is an implicit argument.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153306Z" creationid="tlqk3" creationdate="20220604T153306Z">
+        <seg>위의 린 코드에서 add은 Add.add : {α : Type} → Add α → α → α → α형 입니다. 여기서 유형 a 주위의 중괄호는 이것이 암시적인 인수임을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the base case, we set add m zero to m.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T160058Z" creationid="tlqk3" creationdate="20220527T160058Z">
@@ -5299,6 +5841,14 @@ for building proofs involving the universal quantifier.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T173157Z" creationid="tlqk35" creationdate="20220321T173157Z">
         <seg>p x는 Prop형을 갖는 이 경우에 대해, 우리가  (x : α) → β x을 ∀ x : α, p x으로 대체한다면, 우리는 이것들을 전칭 한정기호를 포함한 증명을 만드는데 옳바른 규칙이라고 읽을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the class HMul, the parameters α and β are treated as input values.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164628Z" creationid="tlqk3" creationdate="20220604T164628Z">
+        <seg>클래스 HMul에서 매개변수 α와 β는 입력값으로 취급됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5374,6 +5924,23 @@ subgoals:</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T154134Z" creationid="tlqk35" creationdate="20220524T154134Z">
         <seg>다음 예제에서 rw의 첫 번째 사용은 목표 f k = 0에서 
 k를 0으로 대체합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the example above, the inaccessible annotation makes it clear that
+f is not a pattern matching variable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145048Z" creationid="tlqk3" creationdate="20220604T145048Z">
+        <seg>위 예제에서 접근불가 주석은 f가 패턴 매칭 변수가 아님을 명확히 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the example above, we defined two instances.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164131Z" creationid="tlqk3" creationdate="20220604T164131Z">
+        <seg>위의 예제에서 우리는 두 개체를 정의 했습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5578,11 +6145,28 @@ Or.elim to prove p ∨ q → q ∨ p.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the following example, we use output parameters to define a heterogeneous polymorphic
+multiplication.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163825Z" creationid="tlqk3" creationdate="20220604T163825Z">
+        <seg>다음 예제에서 우리는 출력 매개변수를 이질적인 다형적 곱셈을 정의하는데 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the following examples, we illustrate the interaction between named
 and default arguments.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T141010Z" creationid="tlqk3" creationdate="20220526T141010Z">
         <seg>다음 예제에서 우리는 이름 지어진 것과 기본 인자 사이의 상호작용을 설명합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the last #eval, note that the instance was used twice on an array of arrays.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164525Z" creationid="tlqk3" creationdate="20220604T164525Z">
+        <seg>지난 #eval에서 배열의 배열에 대해 개체가 두 번 사용되었음을 주목하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5626,8 +6210,8 @@ these examples.</seg>
 package, which provides even more convenient ways to define functions
 on inductive types and carry out inductive proofs.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144637Z" creationid="tlqk3" creationdate="20220526T144637Z">
-        <seg>다음 장에서 우리는 린의 정의 패키지를 설명합니다. 이 패키지는 함수와 유도형과 유도 증명을 수행하는 심지어 더 편리한 방법을 제공합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151904Z" creationid="tlqk3" creationdate="20220526T144637Z">
+        <seg>다음 장에서 우리는 린의 정의 패키지를 설명합니다. 이 패키지는 함수와 귀납형과 귀납 증명을 수행하는 심지어 더 편리한 방법을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5769,8 +6353,8 @@ pair of arguments 0 0 matches all three cases.</seg>
 constructor of an inductive type takes arguments from the inductive
 type itself.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T160535Z" creationid="tlqk3" creationdate="20220526T155651Z">
-        <seg>이 섹션 다음에 우리는 유도형의 생성자가 자기 자신의 유도형으로부터 인수를 받을 때 무슨 일이 생기는지 알아볼 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152021Z" creationid="tlqk3" creationdate="20220526T155651Z">
+        <seg>이 섹션 다음에 우리는 귀납형의 생성자가 자기 자신의 귀납형으로부터 인수를 받을 때 무슨 일이 생기는지 알아볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5780,6 +6364,14 @@ of a partial function.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T150031Z" creationid="tlqk3" creationdate="20220527T150031Z">
         <seg>의존 유형론의 의미론에서 부분 함수의 내장 개념은 없습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the standard library, Decidable is defined formally as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172138Z" creationid="tlqk3" creationdate="20220604T172103Z">
+        <seg>표준 라이브러리에서 Decidable은 다음과 같이 형식적으로 정의됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5980,6 +6572,15 @@ input and returns a natural number as output.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Inaccessible patterns can be used to clarify and control definitions that
+make use of dependent pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145319Z" creationid="tlqk3" creationdate="20220604T145319Z">
+        <seg>접근불가한 패턴은 명확성과 종속 패턴 매칭을 활용하는 정의 제어를 위해 사용될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Incidentally, just as False has only an elimination rule, True
 has only an introduction rule, True.intro : true.</seg>
       </tuv>
@@ -6029,6 +6630,15 @@ is just notation for (a : α) → β when β does not depend on a.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Indeed, it would defeat most of the potential benefits of ad-hoc
+polymorphism.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153655Z" creationid="tlqk3" creationdate="20220604T153655Z">
+        <seg>물론 이는 특수 목적 다형성의 잠재적 이점의 대부분을 좌절시킬 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Induction and Recursion</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T155833Z" creationid="tlqk3" creationdate="20220529T155833Z">
@@ -6039,16 +6649,16 @@ is just notation for (a : α) → β when β does not depend on a.</seg>
       <tuv lang="en-US">
         <seg>Inductive Families</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T173226Z" creationid="tlqk3" creationdate="20220527T173226Z">
-        <seg>유도군</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152503Z" creationid="tlqk3" creationdate="20220527T173226Z">
+        <seg>귀납군</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en-US">
         <seg>Inductive Types</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T141517Z" creationid="tlqk3" creationdate="20220526T141517Z">
-        <seg>유도형</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151746Z" creationid="tlqk3" creationdate="20220526T141517Z">
+        <seg>귀납형</seg>
       </tuv>
     </tu>
     <tu>
@@ -6115,6 +6725,33 @@ documentation pages.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T180657Z" creationid="tlqk35" creationdate="20220528T180657Z">
         <seg>상속(Inheritance)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Inside a tactic block, one can use the keyword conv to enter
+conversion mode.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181847Z" creationid="tlqk3" creationdate="20220604T181847Z">
+        <seg>전략 블록 안에서 conv 키워드를 사용하여 전환 모드로 들어갈 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Instances
+which are declared last are tried first.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181321Z" creationid="tlqk3" creationdate="20220604T181302Z">
+        <seg>마지막에 선언된 개체가 가장 먼저 시도됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Instances declared in
+namespaces which are opened later are tried earlier.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181445Z" creationid="tlqk3" creationdate="20220604T181445Z">
+        <seg>이름공간에 선언된 개체는 나중에 열린 것이 더 일찍 시도됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6195,8 +6832,8 @@ and applying succ repeatedly.</seg>
         <seg>Intuitively, an inductive type is built up from a specified list of
 constructors.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T142221Z" creationid="tlqk3" creationdate="20220526T142221Z">
-        <seg>당연히 유도형은 생성자의 명시된 리스트로부터 만들어집니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151759Z" creationid="tlqk3" creationdate="20220526T142221Z">
+        <seg>당연히 귀납형은 생성자의 명시된 리스트로부터 만들어집니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6338,8 +6975,8 @@ because Tree does not occur strictly positively among the
 arguments to mk, but, rather, nested inside the List type
 constructor.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170602Z" creationid="tlqk35" creationdate="20220528T170602Z">
-        <seg>이것은 마지막 섹션에서 제시된 유도형의 엄격한 명세를 바깥으로 빠져나옵니다. 왜냐하면 Tree는 mk에 대한 인수 사이에서 엄격하게 긍정적으로 일어나지 않고 대신  List형 생성자의 중첩된 안쪽에서 일어나기 때문입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152413Z" creationid="tlqk35" creationdate="20220528T170602Z">
+        <seg>이것은 마지막 섹션에서 제시된 귀납형의 엄격한 명세를 바깥으로 빠져나옵니다. 왜냐하면 Tree는 mk에 대한 인수 사이에서 엄격하게 긍정적으로 일어나지 않고 대신  List형 생성자의 중첩된 안쪽에서 일어나기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6369,6 +7006,15 @@ the input is of the form succ n for some n : Nat.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T155021Z" creationid="tlqk3" creationdate="20220527T155021Z">
         <seg>이것은 입력이 zero인 경우와  입력이 어떤 n : Nat에 대해 succ n 꼴인 입력에 대한 경우 두가지를 다뤄야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It has type {α : Sort u} → [i : α] → α,
+and is useful for triggering the type class resolution procedure when the expected type is an instance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161742Z" creationid="tlqk3" creationdate="20220604T161742Z">
+        <seg>이것은 {α : Sort u} → [i : α] → α형이고 예상 유형이 개체일 때 유형 클래스 해결 절차를 일으키는데 유용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6489,6 +7135,15 @@ and we will use it often.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It is defined as
+follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172605Z" creationid="tlqk3" creationdate="20220604T172605Z">
+        <seg>이것은 다음과 같이 정의됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It is good form to use
 it in a tactic proof, since its failure signals that something has
 gone wrong.</seg>
@@ -6496,6 +7151,14 @@ gone wrong.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T055131Z" creationid="tlqk35" creationdate="20220522T055131Z">
         <seg>전략 증명모드에서 이것은 사용하기에 좋은 형태입니다. 
 왜냐하면 그것의 실패는 무언가 잘못되었음을 알려주기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It is just the macro.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184404Z" creationid="tlqk3" creationdate="20220604T184404Z">
+        <seg>이것은 그저 매크로입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6550,8 +7213,8 @@ it is possible to construct a substantial edifice of mathematics based
 on nothing more than the type universes, dependent arrow types, and inductive
 types; everything else follows from those.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T142541Z" creationid="tlqk3" creationdate="20220526T142541Z">
-        <seg>유형 세계, 의존 화살표 유형과 유도형과 그들로부터 나라 나온 모든 것 외에는 아무것도 기반으로 하지 않는 수학의 실질적인 구조를 구성하는 것이 가능하다는 것은 주목할 만합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151752Z" creationid="tlqk3" creationdate="20220526T142541Z">
+        <seg>유형 세계, 의존 화살표 유형과 귀납형과 그들로부터 나라 나온 모든 것 외에는 아무것도 기반으로 하지 않는 수학의 실질적인 구조를 구성하는 것이 가능하다는 것은 주목할 만합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6670,6 +7333,15 @@ beyond the fact that p is true.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It often happens that we would like a definition to return an arbitrary element in a "corner case."
+For example, we may like the expression head xs to be of type a when xs is of type List a.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155459Z" creationid="tlqk3" creationdate="20220604T155459Z">
+        <seg>우리는 정의가 "막다른 경우"에 대해 임의의 원소를 반환하게 만들고 싶은 상황이 종종 있습니다. 예를 들어 xs가 List a형일 때 표현식 head xs가 a형이 되길 좋아합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It represents the familiar
 pattern of an inductive proof: to prove ∀ n, motive n, first prove motive 0,
 and then, for arbitrary n, assume ih : motive n and prove motive (succ n).</seg>
@@ -6705,6 +7377,14 @@ mode.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T143405Z" creationid="tlqk35" creationdate="20220524T143405Z">
         <seg>전략모드에 남아있는 동안 이것는 단순히 막 풀리려고 하는 목표의 유형을 선언합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It supports the same options available in regular tactic mode.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184243Z" creationid="tlqk3" creationdate="20220604T184243Z">
+        <seg>보통의 전략 모드에서 사용할 수 있는 것과 동일한 옵션을 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6921,8 +7601,17 @@ shorthand for Or.intro_right _ and Or.intro_left _.</seg>
 ⟨arg1, arg2, ...⟩ in situations like these, when the relevant type is an
 inductive type and can be inferred from the context.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T163229Z" creationid="tlqk35" creationdate="20220321T163229Z">
-        <seg>연관된 유형이 유도형이고 맥락으로부터 추리할 수 있는 상황에서 린은 익명 생성자 표기 ⟨arg1, arg2, ...⟩를 쓸 수 있게 해줍니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151715Z" creationid="tlqk35" creationdate="20220321T163229Z">
+        <seg>연관된 유형이 귀납형이고 맥락으로부터 추리할 수 있는 상황에서 린은 익명 생성자 표기 ⟨arg1, arg2, ...⟩를 쓸 수 있게 해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean allows users to mark
+such subterms as inaccessible for pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143653Z" creationid="tlqk3" creationdate="20220604T143653Z">
+        <seg>린은 사용자가 그런 부분항을 패턴 매칭에 대해 inaccessible으로 표시하도록 허용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7076,6 +7765,15 @@ mathematical assertions in dependent type theory, but it also can be used as a l
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Lean comes with ToString instances
+for most builtin types.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162130Z" creationid="tlqk3" creationdate="20220604T162130Z">
+        <seg>린은 대다수의 내장된 유형에 대한 ToString와 함께 나옵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Lean converts them into a let rec.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T182525Z" creationid="tlqk3" creationdate="20220603T182525Z">
@@ -7105,6 +7803,17 @@ hp : p as a premise.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161613Z" creationid="tlqk35" creationdate="20220321T161613Z">
         <seg>린은 hp를 사용하는 증명을 감지하고 자동적으로 hp : p를 전제로 추가합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Lean elaborates the terms (2 : Nat) and (2 : Rational) as
+OfNat.ofNat Nat 2 (instOfNatNat 2) and
+OfNat.ofNat Rational 2 (instOfNatRational 2) respectively.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162615Z" creationid="tlqk3" creationdate="20220604T162615Z">
+        <seg>린은 항 (2 : Nat)과 (2 : Rational)을 각각 OfNat.ofNat Nat 2 (instOfNatNat 2)과
+OfNat.ofNat Rational 2 (instOfNatRational 2)으로 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7150,8 +7859,8 @@ expression if not y then x + 1 else x + 2.</seg>
 theory known as the Calculus of Constructions, with a countable
 hierarchy of non-cumulative universes and inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T135135Z" creationid="tlqk35" creationdate="20220321T135135Z">
-        <seg>린은  직관주의 계산법이라고 하는 가산적인 비축적적 세계(Universe)와 유도형이 있는 의존 유형론 버전을 기반합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151640Z" creationid="tlqk35" creationdate="20220321T135135Z">
+        <seg>린은  직관주의 계산법이라고 하는 가산적인 비축적적 세계(Universe)와 귀납형이 있는 의존 유형론 버전을 기반합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7330,6 +8039,14 @@ in the fun expression:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Lean will start type class synthesizer even when these parameters have missing parts.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163641Z" creationid="tlqk3" creationdate="20220604T163641Z">
+        <seg>이들의 매개변수에 모르는 부분이 있을 지라도 린은 유형 클래스 합성기를 시작할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Lean's equation compiler, described in the next
 chapter, is needed to make use of these types
 effectively.</seg>
@@ -7443,6 +8160,16 @@ language.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Let us consider another example of a type class defined in the
+standard library, namely the type class of Decidable
+propositions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171306Z" creationid="tlqk3" creationdate="20220604T171306Z">
+        <seg>표준 라이브러리에 정의된 유형 클래스의 다른 예 즉, 결정 가능한 명제 유형 클래스를 고려해 봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Let us consider some more examples of inductively defined types.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T162833Z" creationid="tlqk3" creationdate="20220527T162833Z">
@@ -7454,8 +8181,8 @@ language.</seg>
         <seg>Let us first consider the case where the inductive type is not
 specified to land in Prop.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161836Z" creationid="tlqk35" creationdate="20220528T161836Z">
-        <seg>우선 유도형이 Prop에 머무른다고 명시되지않은경우를 생각해봅시다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152243Z" creationid="tlqk35" creationdate="20220528T161836Z">
+        <seg>우선 귀납형이 Prop에 머무른다고 명시되지않은경우를 생각해봅시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7465,6 +8192,14 @@ Lean's library, namely, the equality relation.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175313Z" creationid="tlqk35" creationdate="20220321T175313Z">
         <seg>이제 주로 동등 관계라고 하는 린의 라이브러리에 정의된 가장 기초적인 관계 중 하나로 가봅시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Let us start with the first step of the program above, declaring an appropriate class:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160105Z" creationid="tlqk3" creationdate="20220604T160105Z">
+        <seg>위 프로그램의 첫 단계인 적절한 클래스를 선언하는 것부터 시작합시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7520,6 +8255,14 @@ are opened.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Local Instances</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170215Z" creationid="tlqk3" creationdate="20220604T170215Z">
+        <seg>지역 개체</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Local recursive declarations</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T181922Z" creationid="tlqk3" creationdate="20220603T181922Z">
@@ -7532,6 +8275,16 @@ are opened.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164609Z" creationid="tlqk35" creationdate="20220321T164609Z">
         <seg>논리적 동등성</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Logically speaking, having an element t : Decidable p is stronger
+than having an element t : p ∨ ¬p; it enables us to define values
+of an arbitrary type depending on the truth value of p.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172304Z" creationid="tlqk3" creationdate="20220604T172304Z">
+        <seg>논리적으로 말하자면 원소 t : Decidable p를 갖는 것은 원소 t : p ∨ ¬p을 갖는 것보다 강합니다. 이는 우리가 p의 진리값에 의존하는 임의의 유형의 값을 정의할 수 있게 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7555,11 +8308,31 @@ correct.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Managing Type Class Inference</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T175611Z" creationid="tlqk3" creationdate="20220604T175611Z">
+        <seg>유형 클래스 추론 관리하기</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Many people have contributed to the effort, providing
 corrections, suggestions, examples, and text.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134821Z" creationid="tlqk35" creationdate="20220321T134821Z">
         <seg>많은 사람들이 오타 정정, 제안, 예제, 본분을 제공하는 등의 노력으로 기여했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Marking the position as an inaccessible pattern tells the
+equation compiler first, that the form of the argument should be
+inferred from the constraints posed by the other arguments, and,
+second, that the first argument should not participate in pattern
+matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T150734Z" creationid="tlqk3" creationdate="20220604T150734Z">
+        <seg>접근 불가한 패턴으로 위치를 표시하는 것은 우선 방정식 컴파일러에게 인수의 모양이 다른 인수에 부과된 제약으로부터 추론될 수 있어야 한다고 말합니다. 그리고 두 번째로 첫 인수가 패턴 매칭에 참여하지 않아야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7664,8 +8437,8 @@ precedence allows), not stopping after b but parsing ~ c as well.</seg>
         <seg>More specifically, Lean is based on a version of a system
 known as the Calculus of Constructions with inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220321T132056Z" creationid="tlqk35" creationdate="20220321T132056Z">
-        <seg>더 구체적으로 Lean은 유도형(inductive types)의 직관주의적 계산법(calculus of Construction)으로 알려진 시스템에 기반한 버전입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151634Z" creationid="tlqk35" creationdate="20220321T132056Z">
+        <seg>더 구체적으로 Lean은 귀납형(inductive types)의 직관주의적 계산법(calculus of Construction)으로 알려진 시스템에 기반한 버전입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7675,6 +8448,14 @@ reasoning about the functions that the programs compute.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131607Z" creationid="tlqk35" creationdate="20220321T131607Z">
         <seg>더욱이 이것은 정밀한 의미를 갖는 편집프로그램이나 프로그램이 계산하는 함수에 대한 추론 프로그램으로도 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Moreover, a+b, a*b, a-b, a/b, and a%b are notations for the heterogeneous versions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165345Z" creationid="tlqk3" creationdate="20220604T165345Z">
+        <seg>게다가 a+b, a*b, a-b, a/b과 a%b은 이형 버전에 대한 표기입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7703,6 +8484,25 @@ for defining instances of a given structure.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T173328Z" creationid="tlqk35" creationdate="20220528T173328Z">
         <seg>게다가 린은 주어진 구조체의 개체를 정의하는데 편리한 기호를 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Moreover, decidability is preserved under propositional
+connectives:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173052Z" creationid="tlqk3" creationdate="20220604T173052Z">
+        <seg>게다가 결정 가능성은 명제 연결사 하에 보존됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Moreover, if instances are
+declared in other modules, the order in which they are tried depends
+on the order in which namespaces are opened.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181419Z" creationid="tlqk3" creationdate="20220604T181419Z">
+        <seg>또한 개체가 다른 모듈에서 선언된 경우 시도되는 순서는 이름공간이 열린 순서에 의존합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7826,8 +8626,8 @@ which is just shorthand for rw t_1; ...; rw t_n.</seg>
       <tuv lang="en-US">
         <seg>Mutual and Nested Inductive Types</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164349Z" creationid="tlqk35" creationdate="20220528T164349Z">
-        <seg>상호적이고 중첩된 유도형</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152315Z" creationid="tlqk35" creationdate="20220528T164349Z">
+        <seg>상호적으로 중첩된 귀납형</seg>
       </tuv>
     </tu>
     <tu>
@@ -7899,6 +8699,14 @@ in definitions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150550Z" creationid="tlqk35" creationdate="20220321T150550Z">
         <seg>닫힌 이름공간은 심지어 다른 파일일지라도 나중에 다시 열릴 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Navigation using the above commands can be tedious.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183548Z" creationid="tlqk3" creationdate="20220604T183548Z">
+        <seg>위 명령을 사용한 탐색은 지루할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8003,6 +8811,14 @@ that × is a Unicode symbol.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Note Inhabited.default doesn't have any explicit argument.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160148Z" creationid="tlqk3" creationdate="20220604T160148Z">
+        <seg>Inhabited.default가 어떤 명시적인 인수도 갖지 않음을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Note that
 if we used notation directly to introduce an infix notation like</seg>
       </tuv>
@@ -8044,6 +8860,14 @@ principle.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T165846Z" creationid="tlqk3" creationdate="20220603T165846Z">
         <seg>WellFounded.fix는 귀납 원리와 같이 동등하게 동작함을 주목하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Note that x + y is notation for Add.add x y in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155014Z" creationid="tlqk3" creationdate="20220604T155014Z">
+        <seg> x + y는 린에서 Add.add x y에 대한 기호임을 주의하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8093,8 +8917,8 @@ this example.</seg>
         <seg>Note that the match expression is compiled using the recursor Weekday.rec generated when
 you declare the inductive type.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T150557Z" creationid="tlqk3" creationdate="20220526T150557Z">
-        <seg>match 표현식은 여러분이 유도형을 선언할 때 생성한 recursor Weekday.rec을 사용하여 컴파일 됩니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151947Z" creationid="tlqk3" creationdate="20220526T150557Z">
+        <seg>match 표현식은 여러분이 귀납형을 선언할 때 생성한 recursor Weekday.rec을 사용하여 컴파일 됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8156,6 +8980,14 @@ but the order they are listed is rigid.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Note that this example is somewhat artificial, one could also do:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183357Z" creationid="tlqk3" creationdate="20220604T183357Z">
+        <seg>이 예제는 다소 인위적이며 누군가는 다음과 같이 할 수 있음을 보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Note that up to the names we have chosen for the variables, the
 definitions are identical to the proofs of the analogous propositions
 for conjunction and disjunction.</seg>
@@ -8182,6 +9014,22 @@ binary operation like and using match:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T152449Z" creationid="tlqk3" creationdate="20220526T152449Z">
         <seg>여러분이  and같은 이항 연산을 match를 사용해 정의할 수 있다는 것을 보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Note that you can double a natural number n by double { add := Nat.add } n.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153447Z" creationid="tlqk3" creationdate="20220604T153447Z">
+        <seg>여러분은 자연수 n을 double { add := Nat.add } n으로 두 배로 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Note that you chain instances and generalize the second instance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164254Z" creationid="tlqk3" creationdate="20220604T164254Z">
+        <seg>여러분은 개체를 연결하고 두 번째 개체를 일반화함을 주목하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8433,6 +9281,14 @@ are like type parameters:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Now we populate the class with some instances:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160433Z" creationid="tlqk3" creationdate="20220604T160433Z">
+        <seg>이제 몇몇 개체로 클래스를 채우겠습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Now, given that
 h has type ∀ x : α, p x ∧ q x, the expression h y has type
 p y ∧ q y.</seg>
@@ -8443,11 +9299,43 @@ p y ∧ q y.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Now, we explore another application.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155131Z" creationid="tlqk3" creationdate="20220604T155131Z">
+        <seg>여기서 우리는 다른 적용을 탐색합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Now, we reveal how the notation a*b is defined in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170133Z" creationid="tlqk3" creationdate="20220604T170133Z">
+        <seg>이제 우리는 린에서 기호 a*b이 어떻게 정의되는지 드러냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Numerals</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162145Z" creationid="tlqk3" creationdate="20220604T162145Z">
+        <seg>수치값(Numerals)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Numerals are overloaded in Lean, but when the type of a numeral cannot
 be inferred, Lean assumes, by default, that it is a natural number.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T153644Z" creationid="tlqk35" creationdate="20220321T153644Z">
         <seg>수치들은 Lean에 매우 많이 있습니다. 그러나 수치 유형이 추론되지 못할 때, 린은 기본적으로 그걸 자연수라고 가정합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Numerals are polymorphic in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162157Z" creationid="tlqk3" creationdate="20220604T162157Z">
+        <seg>수치값들은 린에서 다형적입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8479,6 +9367,23 @@ which depend on it.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Of course, it would be highly cumbersome for users to manually pass the
+implementations around in this way.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153552Z" creationid="tlqk3" creationdate="20220604T153552Z">
+        <seg>당연히 이처럼 구현을 수동적으로 넘겨야 한다면 사용자에게 아주 성가실 것 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Of course, wildcards are allowed:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183731Z" creationid="tlqk3" creationdate="20220604T183731Z">
+        <seg>당연히 와일드카드도 허용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Often proofs move from one fact to the next, so this can be effective
 in eliminating the clutter of lots of labels.</seg>
       </tuv>
@@ -8502,6 +9407,15 @@ identifiers.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150448Z" creationid="tlqk35" creationdate="20220321T150448Z">
         <seg>짧은 식별자로 접근하기 위해서 종종 여러분이 모듈을 가져오기(import) 할 때, 모듈이 담은 다수의 이름공간을 열기 원할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>On the assumption that decide p = true holds, of_decide_eq_true
+produces a proof of p.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174937Z" creationid="tlqk3" creationdate="20220604T174937Z">
+        <seg>decide p = true가 성립한다고 가정하면 of_decide_eq_true는 p의 증명을 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8578,6 +9492,15 @@ abbreviations enhance or diminish readability.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Once arrived at the relevant target, we can use rw as in normal
+tactic mode.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182903Z" creationid="tlqk3" creationdate="20220604T182903Z">
+        <seg>일단 연관된 대상에 도달하면 일반 전략 모드처럼 rw를 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Once the attribute is applied, however, there is no way to permanently
 remove it; it persists in any file that imports the one where the
 attribute is assigned.</seg>
@@ -8629,6 +9552,14 @@ writing (e : T).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T153518Z" creationid="tlqk35" creationdate="20220321T153518Z">
         <seg>누군가는 표현식 e의 유형 T를 (e : T)와 같이 씀으로써 항상 명시할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>One can shortcut it using pattern matching as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183652Z" creationid="tlqk3" creationdate="20220604T183652Z">
+        <seg>누군가는 다음과 같이 패턴 매칭을 사용하여 그것을 손쉽게 할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8741,6 +9672,24 @@ exponentiation on the natural numbers.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Option synthInstance.maxHeartbeats specifies the maximum amount of
+heartbeats per typeclass resolution problem.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180749Z" creationid="tlqk3" creationdate="20220604T180749Z">
+        <seg>synthInstance.maxHeartbeats 옵션은 유형 클래스 해결 문제 당 최대 심박수 양을 지정합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Option synthInstance.maxSize is the maximum number of instances used
+to construct a solution in the type class instance synthesis procedure.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180921Z" creationid="tlqk3" creationdate="20220604T180921Z">
+        <seg>synthInstance.maxSize 옵션은 유형 클래스 개체 합성 절차에서 해을 만드는 데 사용되는 최대 개체수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Or</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162105Z" creationid="tlqk35" creationdate="20220321T162105Z">
@@ -8807,12 +9756,28 @@ such as linear or nonlinear expressions over the integers or the real numbers.</
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Other tactics inside conversion mode</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183901Z" creationid="tlqk3" creationdate="20220604T183901Z">
+        <seg>전환 모드 속 다른 전략</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Otherwise, v is of the form a :: w, and we can simply
 return w, after casting it from a vector of length m to a
 vector of length n.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T183522Z" creationid="tlqk3" creationdate="20220603T183522Z">
         <seg>그렇지 않으면 v는 a :: w꼴이고 길이 m의 벡터에서 길이 n의 벡터로 이를 바꾼 후에 우리는 단순히 w를 반환할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Output parameters</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163056Z" creationid="tlqk3" creationdate="20220604T163056Z">
+        <seg>출력 매개변수</seg>
       </tuv>
     </tu>
     <tu>
@@ -8840,6 +9805,14 @@ to multiple goals, but there are other ways to do this.</seg>
         <seg>Pattern Matching</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T160553Z" creationid="tlqk3" creationdate="20220529T160553Z">
+        <seg>패턴 매칭</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Pattern matching</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183519Z" creationid="tlqk3" creationdate="20220604T183519Z">
         <seg>패턴 매칭</seg>
       </tuv>
     </tu>
@@ -8903,6 +9876,14 @@ exactly the same effect.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145220Z" creationid="tlqk35" creationdate="20220321T145220Z">
         <seg>이것을 출력하는 것은 세 정의 그룹이 정확히 동일한 효과를 가짐을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Priorities are also useful to control the interaction between different default instances.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165813Z" creationid="tlqk3" creationdate="20220604T165813Z">
+        <seg>우선 순위는 다른 기본 개체들 간의 상호작용을 제어하는 데에도 유용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9015,6 +9996,14 @@ proposition in question is true.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Raw natural numbers are not polymorphic.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162858Z" creationid="tlqk3" creationdate="20220604T162858Z">
+        <seg>생 자연수는 다형적이지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Recall also from Dependent Type Theory
 that to give these definitions the greatest generality possible, we allow
 the types α and β to belong to any universe.</seg>
@@ -9047,8 +10036,8 @@ foo has type Point.</seg>
         <seg>Recall that a non-recursive inductive type that contains only one
 constructor is called a structure or record.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172548Z" creationid="tlqk35" creationdate="20220528T172548Z">
-        <seg>한 생성자만을 포함한 비 재귀적인 유도형은 구조체(structure) 혹은 레코드(record)라고 불린다는 것을 떠올려보세요.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152455Z" creationid="tlqk35" creationdate="20220528T172548Z">
+        <seg>한 생성자만을 포함한 비 재귀적인 귀납형은 구조체(structure) 혹은 레코드(record)라고 불린다는 것을 떠올려보세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9083,6 +10072,14 @@ from Bar are available to you as well.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T130820Z" creationid="tlqk3" creationdate="20220526T130820Z">
         <seg>파일의 시작에서  import 명령은 다른 파일로부터 이전에 컴파일된 결과를 불러오고 그 불러오기는 추이적임을 기억하세요. 만약 여러분이 Foo를 가져오고 Foo가 Bar를 가져오면 Bar에서 이용가능한 정의와 정리도 여러분이 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall that types may not have any elements in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155209Z" creationid="tlqk3" creationdate="20220604T155209Z">
+        <seg>유형은 린에서 임의의 원소가 아닐 수 있음을 기억하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9134,6 +10131,15 @@ the argument is implicit, and should be filled in automatically.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175629Z" creationid="tlqk35" creationdate="20220321T175629Z">
         <seg>대칭성은 보기 보다 더 강력합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Remember also that in both the VS Code and Emacs editor modes, tab
+completion works in set_option, to help you find suitable options.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181023Z" creationid="tlqk3" creationdate="20220604T181023Z">
+        <seg>또한 VS Code 및 Emacs 편집기 모드에서 탭 완성 기능은 set_option에서 동작하므로 적절한 옵션을 찾는 데 도움이 됨을 기억하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9291,8 +10297,17 @@ shortened to this:</seg>
 speaking, what characterizes inductive types in Prop is that one
 can only eliminate to other types in Prop.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T152242Z" creationid="tlqk3" creationdate="20220527T152242Z">
-        <seg>대략적으로 말하면, Prop에서 유도형을 특징짓는 것은 Prop의 다른 유형으로만 제거할 수 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152059Z" creationid="tlqk3" creationdate="20220527T152242Z">
+        <seg>대략적으로 말하면, Prop에서 귀납형을 특징짓는 것은 Prop의 다른 유형으로만 제거할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Roughly speaking, an element of Prop is said to be
+decidable if we can decide whether it is true or false.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171347Z" creationid="tlqk3" creationdate="20220604T171347Z">
+        <seg>대략적으로 말하면 Prop의 원소는 그것이 참인지 거짓인지 결정할 수 있다면 결정 가능하다고 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9332,6 +10347,14 @@ constructed types are inhabited.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172249Z" creationid="tlqk35" creationdate="20220321T172249Z">
         <seg>모든  lean의 코드 블록을 테스트하려면 mdbook test을 실행하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Scoped Instances</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170657Z" creationid="tlqk3" creationdate="20220604T170657Z">
+        <seg>범위가 지정된 개체</seg>
       </tuv>
     </tu>
     <tu>
@@ -9448,6 +10471,14 @@ namespace, its effects disappear when the namespace is closed.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Similarly, many theorems hold under the additional assumption that a type is not empty.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155540Z" creationid="tlqk3" creationdate="20220604T155540Z">
+        <seg>마찬가지로 많은 정리는 유형이 비어 있지 않을 때 덧셈 가정에  대해서 성립합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Similarly, methods of elaboration and type inference, which can be used to support
 flexible forms of algebraic reasoning.</seg>
       </tuv>
@@ -9515,6 +10546,22 @@ depend on x.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Similarly, we can inhabit type function with suitable constant functions:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161529Z" creationid="tlqk3" creationdate="20220604T161529Z">
+        <seg>마찬가지로 우리는 유형 함수를 적절한 상수 함수로 내재시킬 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Similarly, we can register an instance by</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154431Z" creationid="tlqk3" creationdate="20220604T154431Z">
+        <seg>마찬가지로 우리는 개체를 다음과 같이 등록할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Simple Type Theory</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T135147Z" creationid="tlqk35" creationdate="20220321T135147Z">
@@ -9536,8 +10583,8 @@ k is a good guess, and once we make that choice the proof almost writes itself:<
 reasonable to ask which universe levels u can be instantiated
 to.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160840Z" creationid="tlqk35" creationdate="20220528T160840Z">
-        <seg>유도형이 어떤 u에 대해 Sort u에 속해 있기 때문에, 어느세계의 수준에 u가 개체화 될 수 있는지 묻는 것은 합리적입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152221Z" creationid="tlqk35" creationdate="20220528T160840Z">
+        <seg>귀납형이 어떤 u에 대해 Sort u에 속해 있기 때문에, 어느세계의 수준에 u가 개체화 될 수 있는지 묻는 것은 합리적입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9659,6 +10706,14 @@ focus (all_goals t)은 t와 같은 효과를 갖습니다.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>So, you can define instances for particular numerals.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162934Z" creationid="tlqk3" creationdate="20220604T162934Z">
+        <seg>그래서 여러분은 특정 수치에 대해 개체를 정의할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Some additional tactics are useful for constructing and destructing
 propositions and data.</seg>
       </tuv>
@@ -9709,6 +10764,25 @@ nil, but it is not clear how to tell that to casesOn.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T180106Z" creationid="tlqk3" creationdate="20220603T180106Z">
         <seg>무언가 재밌는 일이 일어나고 있습니다. 만약  v가 Vector α (succ n)형이고 그것은 nil일 일 수 없습니다. 그러나 casesOn에 대해 구별하는 법이 명확하지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Sometimes Lean can't find an instance because the class is buried
+under a definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180121Z" creationid="tlqk3" creationdate="20220604T180121Z">
+        <seg>때때로 린은 클래스가 정의에 묻혀 있어 개채를 찾지 못할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Sometimes an argument in a dependent matching pattern is not essential
+to the definition, but nonetheless has to be included to specialize
+the type of the expression appropriately.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143611Z" creationid="tlqk3" creationdate="20220604T143611Z">
+        <seg>떄때로 종속 매칭 패턴에서 인수는 정의에 반드시 필요하지 않습니다. 그럼에도 표현식의 유형을 적절하게 특수화하는데 포함될 필요가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9792,6 +10866,14 @@ sorry to fill in subproofs.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T142401Z" creationid="tlqk35" creationdate="20220524T142401Z">
         <seg>전략 증명 구조화하기</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Structuring conversion tactics</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183749Z" creationid="tlqk3" creationdate="20220604T183749Z">
+        <seg>전환 전술 구조화하기</seg>
       </tuv>
     </tu>
     <tu>
@@ -9881,6 +10963,15 @@ expression β may depend on a variable x : α.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T162301Z" creationid="tlqk3" creationdate="20220527T162301Z">
         <seg>우리가 덧셈에 교환성을 증명하려고 한다 가정합시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Suppose we want to prove example
+(fun x : Nat =&gt; 0 + x) = (fun x =&gt; x).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183009Z" creationid="tlqk3" creationdate="20220604T183009Z">
+        <seg>예제 (fun x : Nat =&gt; 0 + x) = (fun x =&gt; x)을 증명하고 싶다고 해봅시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10001,12 +11092,39 @@ assigning an [instance] attribute to the associated definition.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>That expression is syntactic
+sugar for ite p a b, where ite is defined as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172449Z" creationid="tlqk3" creationdate="20220604T172449Z">
+        <seg>그 표현식은 ite p a b에 대한 문법적 설탕입니다. 여기서 ite 다음과 같이 정의됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>That is,
+an instance declaration can in turn depend on an implicit instance of a type class.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161013Z" creationid="tlqk3" creationdate="20220604T161013Z">
+        <seg>즉, 개체 선언은 유형 클래스의 암시적인 개체에 차례로 의존하게 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>That is, given h1 : a = b and h2 : p a, we
 can construct a proof for p b using substitution:
 Eq.subst h1 h2.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175735Z" creationid="tlqk35" creationdate="20220321T175735Z">
         <seg>즉, h1 : a = b과 h2 : p a에 대해 p b에 대한 증명을 Eq.subst h1 h2과 같은 대체를 사용하여 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>That is, in dite c t e, we can assume hc : c in the "then"
+branch, and hnc : ¬ c in the "else" branch.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172752Z" creationid="tlqk3" creationdate="20220604T172752Z">
+        <seg>즉, dite c t e에서 우리는 hc : c를 "then" 분기 그리고 "else" 분기에서 hnc : ¬ c라고 가정할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10076,6 +11194,16 @@ p × q : Type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162937Z" creationid="tlqk35" creationdate="20220321T162937Z">
         <seg>차이는 hp : p와 hq : q가 주어졌을 때 And.intro hp hq는 p ∧ q : Prop형을 갖는 한편 Prod hp hq는 p × q : Type형을 갖는다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The
+distinction is only useful in constructive mathematics; classically,
+every proposition is decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171429Z" creationid="tlqk3" creationdate="20220604T171429Z">
+        <seg>이 구별은 직관주의적 수학에서만 유용합니다. 고전적으로 모든 명제는 결정 가능합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10155,6 +11283,15 @@ enumerated type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The Decidable type class also provides a bit of small-scale
+automation for proving theorems.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174505Z" creationid="tlqk3" creationdate="20220604T174505Z">
+        <seg>Decidable 유형 클래스는 정리 증명에 대한 아주 작은 소규모의 자동화도 제공합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The Lean Theorem Prover aims to bridge the gap between interactive and automated theorem proving, by situating
 automated tools and methods in a framework that supports user interaction and the construction of fully specified
 axiomatic proofs.</seg>
@@ -10173,10 +11310,26 @@ axiomatic proofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The Mul class is convenient for types that only implement the homogeneous multiplication.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170211Z" creationid="tlqk3" creationdate="20220604T170211Z">
+        <seg>Mul 클래스는 동형 곱셈만 구현된 유형에 대해 편리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The Nat.recOn is similar to Nat.rec but the major premise occurs before the minor premises.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T155858Z" creationid="tlqk3" creationdate="20220527T155858Z">
         <seg>Nat.recOn은 Nat.rec과 비슷하지만 주요 전제는 사소한 전제보다 먼저 일어납니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The OfNat instance is parametric on the numeral.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162918Z" creationid="tlqk3" creationdate="20220604T162918Z">
+        <seg>OfNat 개체는 수치에 대해 매개적입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10675,6 +11828,14 @@ types with forall-expressions in this way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The Conversion Tactic Mode</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181748Z" creationid="tlqk3" creationdate="20220604T181748Z">
+        <seg>전략 모드로 전환</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The Existential Quantifier</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T180810Z" creationid="tlqk35" creationdate="20220321T180810Z">
@@ -10687,8 +11848,16 @@ types with forall-expressions in this way.</seg>
 many instances of inductive types (e.g., Nat, Prod, List),
 and even the logical connectives are defined using inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172440Z" creationid="tlqk35" creationdate="20220528T172440Z">
-        <seg>린 표준 라이브러리는 유도형의 만은 개체(예 Nat, Prod, List)들을 담고 있습니다. 그리고 심지어 논리 결합자도 유도형을 사용해 정의됩니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152435Z" creationid="tlqk35" creationdate="20220528T172440Z">
+        <seg>린 표준 라이브러리는 귀납형의 만은 개체(예 Nat, Prod, List)들을 담고 있습니다. 그리고 심지어 논리 결합자도 귀납형을 사용해 정의됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The Lean standard library contains the definition inferInstance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161642Z" creationid="tlqk3" creationdate="20220604T161642Z">
+        <seg>린 표준 라이브러리는 inferInstance 정의를 포함합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10697,6 +11866,22 @@ and even the logical connectives are defined using inductive types.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172601Z" creationid="tlqk35" creationdate="20220321T172601Z">
         <seg>전칭 한정기호</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The above snippet show three navigation commands:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183247Z" creationid="tlqk3" creationdate="20220604T182550Z">
+        <seg>위의 자투리는 세 가지 탐색 명령을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The actual Lean implementation defines homogeneous and heterogeneous classes for arithmetical operators.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165312Z" creationid="tlqk3" creationdate="20220604T165312Z">
+        <seg>실제 린에서 구현은 산술 연산자에 대한 동형과 이형 클래스를 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10723,8 +11908,8 @@ in the order the constructors were declared.</seg>
 should not come as a surprise; as we will see below, they, too, are
 examples of inductive type constructions.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144423Z" creationid="tlqk3" creationdate="20220526T144423Z">
-        <seg>논리 연결사와 유사점은 놀라움으로 오지 말아야 합니다. 우리가 아래에서 보듯이 그들도 유도형 생성의 예제입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151842Z" creationid="tlqk3" creationdate="20220526T144423Z">
+        <seg>논리 연결사와 유사점은 놀라움으로 오지 말아야 합니다. 우리가 아래에서 보듯이 그들도 귀납형 생성의 예제입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10753,6 +11938,15 @@ construct, and it is a function because it may depend on the pair.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T154004Z" creationid="tlqk3" creationdate="20220526T154004Z">
         <seg>인자 motive는 여러분이 생성하기 원하는 대상의 유형을 명시하는데 사용됩니다. 그리고 이것은 쌍에 의존할 수 있기에 함수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The argument {n : Nat} appear after the colon, because it cannot
+be held fixed throughout the definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145544Z" creationid="tlqk3" creationdate="20220604T145544Z">
+        <seg>인수{n : Nat} 은 콜론 뒤에 나타납니다. 왜냐하면 이것은 정의 전체에 대해 고정될 수 없기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11087,6 +12281,14 @@ convenient.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The example above demonstrates how type classes are used to overload notation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155114Z" creationid="tlqk3" creationdate="20220604T155114Z">
+        <seg>위의 예제는 어떻게 유형 클래스가 기호를 중복(overload)시키는데 사용되는지 시연합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The example above shows
 that Nat.add 3 has type Nat → Nat, that is, Nat.add 3 returns a
 function that "waits" for a second argument, n, which is then
@@ -11161,6 +12363,16 @@ from a proof hp : p.</seg>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163602Z" creationid="tlqk35" creationdate="20220321T163602Z">
         <seg>표현식 Or.intro_left q hp은 hp : p의 증명으로부터 p ∨ q의 증명을 만듭니다.
 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The expression decide p tries to infer a
+decision procedure for p, and, if it is successful, evaluates to
+either true or false.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174814Z" creationid="tlqk3" creationdate="20220604T174814Z">
+        <seg>표현식 decide p는 p에 대한 결정 절차를 추론하려고 하고, 성공하면 true나 false 로 평가됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11267,6 +12479,15 @@ Prod.fst and Prod.snd, project the two elements.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The first one is the homogeneous
+multiplication for natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164217Z" creationid="tlqk3" creationdate="20220604T164217Z">
+        <seg>처음 것은 자연수에 대한 동형 곱셈입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The first step, rw [Nat.add_zero] at h, rewrites the hypothesis a + 0 = 0 to a = 0.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T171833Z" creationid="tlqk35" creationdate="20220524T160308Z">
@@ -11311,6 +12532,24 @@ first invocation to the second:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The following code block shows the current target
+after each line.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182517Z" creationid="tlqk3" creationdate="20220604T182517Z">
+        <seg>다음 코드 블록은 각 줄 뒤에 있는 현재 대상을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The following command produces the error
+"failed to create type class instance for Inhabited (Nat × ?m.1499)" because the type has a missing part (i.e., the _).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163405Z" creationid="tlqk3" creationdate="20220604T163405Z">
+        <seg>다음 명령은 "Inhabited (Nat × ?m.1499)에 대한 유형 클래스 개체를 생성하는데 실패했다(failed to create type class instance for Inhabited (Nat × ?m.1499))"는 오류를 일으킵니다. 왜냐하면 유형에 모르는 부분(즉, _)이 있기 때문입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The following definition</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T180122Z" creationid="tlqk35" creationdate="20220524T180033Z">
@@ -11346,6 +12585,15 @@ both approaches.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The following example illustrates how this
+is done:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181719Z" creationid="tlqk3" creationdate="20220604T181719Z">
+        <seg>다음 예제는 이것이 어떻게 이뤄지는지 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The following example is similar: it converts any natural number to a
 binary expression, represented as a list of 0's and 1's.</seg>
       </tuv>
@@ -11359,6 +12607,15 @@ binary expression, represented as a list of 0's and 1's.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T063054Z" creationid="tlqk35" creationdate="20220522T063054Z">
         <seg>다음 예제는 intros 명령을 사용해 세 개의 변수와 두 개의 가정을 자동으로 도입합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The following example, we declare an inductive type that defines the
+property of "being in the image of f".</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T144108Z" creationid="tlqk3" creationdate="20220604T144108Z">
+        <seg>다음 예제에서 우리는 "f의 이미지에 있음" 속성을 정의하는 귀납형을 선언합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11573,8 +12830,8 @@ type at an earlier stage.</seg>
 that we can define two (or more) inductive types at the same time,
 where each one refers to the other(s).</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T165132Z" creationid="tlqk35" creationdate="20220528T165132Z">
-        <seg>아이디어는 각각이 서로 다른 이들을 참조하면서 우리가 둘(혹은 그 이상의) 유도형을 동시에 정의할 수 있다는 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152353Z" creationid="tlqk35" creationdate="20220528T165132Z">
+        <seg>아이디어는 각각이 서로 다른 이들을 참조하면서 우리가 둘(혹은 그 이상의) 귀납형을 동시에 정의할 수 있다는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11623,6 +12880,14 @@ can form propositions that quantify over α → Prop.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The inaccessible pattern .(_) can be written as _ for convenience.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T150800Z" creationid="tlqk3" creationdate="20220604T150800Z">
+        <seg>접근 불가한 패턴 .(_)은 편의상 _로 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The inductively defined types we have seen so far are "flat":
 constructors wrap data and insert it into a type, and the
 corresponding recursor unpacks the data and acts on it.</seg>
@@ -11637,6 +12902,22 @@ corresponding recursor unpacks the data and acts on it.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T175555Z" creationid="tlqk35" creationdate="20220321T175555Z">
         <seg>접두사 .{u}은 린에게 세계변수 u로 상수를 개체화하라고 말해줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The instance HMul is not synthesized by Lean because the type of y has not been provided.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164848Z" creationid="tlqk3" creationdate="20220604T164848Z">
+        <seg>y형으로 제공되지 않았으므로 개체 HMul은 린으로부터 생성되지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The instance OfNat Nat n is the default instance (with priority 100) for the OfNat class.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165422Z" creationid="tlqk3" creationdate="20220604T165422Z">
+        <seg>개체 OfNat Nat n은 OfNat 클래스에 대한 (우선순위 100의) 기본 개체입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11691,8 +12972,8 @@ suitable term t and a proof of p t.</seg>
 type is exhaustively generated by the constructors, and has no
 elements beyond those they construct.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T150231Z" creationid="tlqk3" creationdate="20220526T150231Z">
-        <seg>직관적인 설명은 유도형은 생성자에 의해 철저히 생성된다는 점입니다. 그래서 이들 없이 생긴 원소는 없습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151940Z" creationid="tlqk3" creationdate="20220526T150231Z">
+        <seg>직관적인 설명은 귀납형은 생성자에 의해 철저히 생성된다는 점입니다. 그래서 이들 없이 생긴 원소는 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11810,6 +13091,16 @@ stored in the environment for later use.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The main idea behind type classes is to make arguments such as Add a implicit,
+and to use a database of user-defined instances to synthesize the desired instances
+automatically through a process known as typeclass resolution.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153933Z" creationid="tlqk3" creationdate="20220604T153933Z">
+        <seg>유형 클래스 뒤편의 주요 아이디어는 Add a 같은 인수를 암시적으로 만드는 것이고 사용자 정의 개체들의 데이터베이스를 사용해 유형 클래스 해결책으로 알려진 과정을 통해 원하는 개체를 자동적으로 합성하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The mnemonic in the notation above is that you are generalizing the
 goal by setting 3 to an arbitrary variable x.</seg>
       </tuv>
@@ -11844,6 +13135,24 @@ ensure your tactic proofs do not rely on automatically generated names, and are 
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T063300Z" creationid="tlqk35" creationdate="20220522T063247Z">
         <seg>그 이유는 여러분의 전략 증명이 자동으로 생성된 이름에 의존하지 않도록 보장하기 위함입니다. 그리고 그 결과로 증명은 더 튼튼하게 됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The naive
+first attempt is to enter tactic mode and try rw [Nat.mul_comm].</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182310Z" creationid="tlqk3" creationdate="20220604T182310Z">
+        <seg>첫 순진한 시도는 전략 모드로 들어가 rw [Nat.mul_comm]을 시도하는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The naive first attempt is to enter tactic mode and try
+rw [zero_add].</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183032Z" creationid="tlqk3" creationdate="20220604T183032Z">
+        <seg>첫 순진한 시도는 전략 모드로 들어가 rw [zero_add]를 시도하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12041,11 +13350,27 @@ that the implicit arguments are unspecified in this case.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The parameters α and β are considered input parameters and γ an output one.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164137Z" creationid="tlqk3" creationdate="20220604T163904Z">
+        <seg>매개변수 α와 β는 입력 매개변수로 γ는 출력 매개변수 입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The parentheses
 around h hq are not necessary, but we have added them for clarity.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T154419Z" creationid="tlqk35" creationdate="20220524T154419Z">
         <seg>h hq 주위의 괄호는 필요하지 않습니다만 우리는 명황성을 이해 이들을 추가했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The polymorphic method toString has type {α : Type u} → [ToString α] → α → String.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161846Z" creationid="tlqk3" creationdate="20220604T161846Z">
+        <seg>다형적인 방법 toString은 {α : Type u} → [ToString α] → α → String형 입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12118,6 +13443,14 @@ structure, as is the dependent product (Sigma) type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T172704Z" creationid="tlqk35" creationdate="20220528T172704Z">
         <seg>곱 형은 의존적 곱 (시그마) 형과 마찬가지로 구조체입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The projection Inhabited.default will allow us to "extract" such an element of a from an element of Inhabited a.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160343Z" creationid="tlqk3" creationdate="20220604T160343Z">
+        <seg>투영 Inhabited.default은 Inhabited a의 원소로부터 a의 원소 같은 것을 "추출"하도록 해줄 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12201,6 +13534,31 @@ which carry out more explicit substitutions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The second argument is often a variable as in the example above, or a raw natural number.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163030Z" creationid="tlqk3" creationdate="20220604T163030Z">
+        <seg>두 번째 인수는 종종 위의 예제의 것처럼 변수이거나 생(raw) 자연수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The second is the scalar multiplication for arrays.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164232Z" creationid="tlqk3" creationdate="20220604T164232Z">
+        <seg>두 번째 것은 배열에 대한 스칼라 곱셈입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The second main reason to use conversion mode is to rewrite under
+binders.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182953Z" creationid="tlqk3" creationdate="20220604T182953Z">
+        <seg>전환 모드를 사용하는 두 번째 주요 이유는 결합자 아래에서 다시쓰기 위한 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The second way to use Lean is to install and run it natively on your computer.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131857Z" creationid="tlqk35" creationdate="20220321T131857Z">
@@ -12239,8 +13597,8 @@ in Lean.</seg>
       <tuv lang="en-US">
         <seg>The simplest kind of inductive type is simply a type with a finite, enumerated list of elements.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T145214Z" creationid="tlqk3" creationdate="20220526T145214Z">
-        <seg>가장 간단한 유도형은 원소의 리스트를 유한하게 열거한 유형입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151926Z" creationid="tlqk3" creationdate="20220526T145214Z">
+        <seg>가장 간단한 귀납형은 원소의 리스트를 유한하게 열거한 유형입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12270,12 +13628,47 @@ will loop if you apply it blindly, but rewrite will do the trick.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The solution is:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183135Z" creationid="tlqk3" creationdate="20220604T183135Z">
+        <seg>해결책은</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The source
 code, and instructions for building Lean, are available at
 https://github.com/leanprover/lean4/.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131946Z" creationid="tlqk35" creationdate="20220321T131946Z">
         <seg>Lean을 만든 소스코드와  명령어들은 https://github.com/leanprover/lean4/에서 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The standard library also contains a variant of ite called
+dite, the dependent if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172553Z" creationid="tlqk3" creationdate="20220604T172553Z">
+        <seg>표준 라이브러리는 또 dite (the dependent if-then-else expression)라는 ite의 변종을 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The standard library defines a type class Inhabited to enable type class inference to infer a
+"default" element of an inhabited type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160029Z" creationid="tlqk3" creationdate="20220604T160029Z">
+        <seg>표준 라이브러리는 유형 클래스 추론이 내재된 유형의 "기본" 원소를 유추할 수 있도록 유형 클래스 Inhabited를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The standard library introduces the
+tactic decide that uses the Decidable instance to solve simple goals.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174558Z" creationid="tlqk3" creationdate="20220604T174558Z">
+        <seg>표준 라이브러리는 단순한 목표를 풀기 위해 Decidable 개체를 사용하는 decide 전략을 도입합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12356,6 +13749,15 @@ argument can only be a term in the local context.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T165312Z" creationid="tlqk3" creationdate="20220527T165312Z">
         <seg>with의 문법은 구조화된 증명을 작성하는데 편리합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The tactic decide puts it all together: to
+prove a target p.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T175044Z" creationid="tlqk3" creationdate="20220604T175044Z">
+        <seg>decide 전략은 목표 p를 증명하기 위해 모든 것을 한데 모읍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12488,6 +13890,16 @@ hp := h.left과 have hqr := h.right을 쓸 수 있습니다.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The typing rules forces us to write f a for the
+first argument, but this term is neither a variable nor a constructor
+application, and plays no role in the pattern-matching definition.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T144852Z" creationid="tlqk3" creationdate="20220604T144852Z">
+        <seg>입력 규칙은 우리가 첫 인수에 대해 f a로 쓰도록 합니다. 그러나 이 항은 변수도 생성자 적용도 아닙니다. 그리고 패턴 매칭 정의에서 어떤 역할도 하지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The unicode symbol × for the Cartesian product
 is entered as \times.</seg>
       </tuv>
@@ -12549,6 +13961,15 @@ maximum of i and j if j is not 0, and 0 otherwise.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T185956Z" creationid="tlqk3" creationdate="20220525T185956Z">
         <seg>그런 뒤 th3는 이 두 결과를 결합합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Then for n : Nat and m : Nat, the term Add.add n m triggers typeclass resolution with the goal
+of Add Nat, and typeclass resolution will synthesize the instance above.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154807Z" creationid="tlqk3" creationdate="20220604T154807Z">
+        <seg>그런 다음 n : Nat 및 m : Nat에 대해 항 Add.add n m는 Add Nat의 목표를 유형 클래스 해결책으로 만듭니다. 그리고 유형 클래스 해결책은 위의 개체를 합성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12735,8 +14156,18 @@ types.</seg>
 govern what the eliminator of an inductive type can eliminate to,
 that is, what kinds of types can be the target of a recursor.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T151944Z" creationid="tlqk3" creationdate="20220527T151944Z">
-        <seg>유도형의 제거자가 제거할 수 있는 것, 즉 유형의 어느 종류가 재귀자의 대상이 될 수 있는가를 다루는 규칙이 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152054Z" creationid="tlqk3" creationdate="20220527T151944Z">
+        <seg>귀납형의 제거자가 제거할 수 있는 것, 즉 유형의 어느 종류가 재귀자의 대상이 될 수 있는가를 다루는 규칙이 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>There are several
+ways to fix this issue, and one way is to use a more precise tool :
+the conversion mode.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182439Z" creationid="tlqk3" creationdate="20220604T182439Z">
+        <seg>이 문제를 해결하는 방법에는 여러 가지가 있으며 한 가지 방법은 보다 정밀한 도구인 전환 모드를 사용하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12779,8 +14210,8 @@ assumption, h, that r is well founded.</seg>
         <seg>There is a small exception to this rule, however, which we
 will discuss below, in the section on inductive families.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T152622Z" creationid="tlqk3" creationdate="20220527T152622Z">
-        <seg>그러나 이 규칙에 우리가 아래에서 논의할 작은 예외가 유도군의 섹션에 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152109Z" creationid="tlqk3" creationdate="20220527T152622Z">
+        <seg>그러나 이 규칙에 우리가 아래에서 논의할 작은 예외가 귀납군의 섹션에 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12818,6 +14249,25 @@ anonymous namespace at the root level.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150427Z" creationid="tlqk35" creationdate="20220321T150427Z">
         <seg>root 계층에서만 익명 이름 공간이 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thereafter decidable p has an instance for every p.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173818Z" creationid="tlqk3" creationdate="20220604T173818Z">
+        <seg>그 후에 decidable p는 모든 p에 대해 개체를 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>These
+annotations are essential, for example, when a term occurring in the
+left-hand side is neither a variable nor a constructor application,
+because these are not suitable targets for pattern matching.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143757Z" creationid="tlqk3" creationdate="20220604T143757Z">
+        <seg>이 주석은 필수적입니다. 예를 들어 좌변에서 나타나는 항이 변수도 생성자 적용도 아닐 때, 이들은 패턴 매칭에 적적한 대상이 아니기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13007,6 +14457,14 @@ in which you decompose a proof and work on goals one step at a time.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>They work as follows.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174610Z" creationid="tlqk3" creationdate="20220604T174610Z">
+        <seg>이는 다음과 같이 동작합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Things get
 much more interesting when the constructors act on elements of the
 very type being defined.</seg>
@@ -13090,6 +14548,16 @@ is not a trivial affair.</seg>
     <tu>
       <tuv lang="en-US">
         <seg>This
+is useful for discharging goals not supported by conv mode, and
+applying custom congruence and extensionality lemmas.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T184746Z" creationid="tlqk3" creationdate="20220604T184746Z">
+        <seg>이는 conv 모드에서 지원되지 않는 목표를 실행하고 사용자 정의 합동 및 확장 보조정리를 적용하는 데 유용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This
 pattern, deriving an arbitrary fact from contradictory hypotheses, is
 quite common, and is represented by absurd.</seg>
       </tuv>
@@ -13154,6 +14622,14 @@ tactic.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This causes class inference to chain through instances recursively, backtracking when necessary, in a Prolog-like search.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161229Z" creationid="tlqk3" creationdate="20220604T161229Z">
+        <seg>Prolog 같은 탐색에서 필요할 때 역추적하는데 개체를 통한 클래스 추론이 재귀적으로 연결되게 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This clarifies your intention, and Lean will flag an
 error if the right-hand side of the definition does not have a matching
 type.</seg>
@@ -13205,8 +14681,8 @@ its constructor, mk, the usual eliminators (rec and
 recOn), as well as the projections, fst and snd, as
 defined above.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T161853Z" creationid="tlqk3" creationdate="20220526T161853Z">
-        <seg>이 예제는 동시에 유도형 Prod과 그것의 생성자 mk, 평범한 제거자 (rec과
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152041Z" creationid="tlqk3" creationdate="20220526T161853Z">
+        <seg>이 예제는 동시에 귀납형 Prod과 그것의 생성자 mk, 평범한 제거자 (rec과
 recOn) 뿐만 아니라 위에서 정의한 대로 투영 fst과 snd을 도입합니다.</seg>
       </tuv>
     </tu>
@@ -13264,12 +14740,33 @@ its two components.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This guarantees that Lean will favor other instances and fall back on
+propDecidable only after other attempts to infer decidability have
+failed.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174346Z" creationid="tlqk3" creationdate="20220604T174346Z">
+        <seg>이렇게 하면 린이 다른 개체를 선호하고 결정가능성을 추론하려는 다른 시도가 실패한 후에만 propDecidable으로 후퇴함을 보장합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This instructs Lean's elaborator to use the value
 T as the type of e when trying to resolve implicit
 arguments.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T153538Z" creationid="tlqk35" creationdate="20220321T153538Z">
         <seg>이것은 린의 협력기가 암시적 인수를 해결하려고 시도할 때 e의 유형으로 T값을 사용하라고 지시합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is
+followed by nested case splits on the next two arguments, and in each
+case the equation compiler rules out the cases are not compatible with
+the first pattern.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145940Z" creationid="tlqk3" creationdate="20220604T145940Z">
+        <seg>이것은 다음 두 인수에 대한 중첩된 경우 분할을 따르고 각 경우에서 방정식 컴파일러는 첫 번째 패턴과 적합하지 않은 경우를 배제합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13307,8 +14804,8 @@ introduces an auxiliary subgoal in a proof.</seg>
 {x : α // p}, which is sort of a hybrid between
 ∃ x : α, P and Σ x : α, P.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T153355Z" creationid="tlqk3" creationdate="20220527T153355Z">
-        <seg>여기서 또 다른 유도형 ∃ x : α, P과 Σ x : α, P이 섞인 {x : α // p}으로 나타낸 유도형을 얘기하기 좋은 곳 같습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152123Z" creationid="tlqk3" creationdate="20220527T153355Z">
+        <seg>여기서 또 다른 귀납형 ∃ x : α, P과 Σ x : α, P이 섞인 {x : α // p}으로 나타낸 귀납형을 얘기하기 좋은 곳 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13392,8 +14889,8 @@ consistent with the interpretation in the last paragraph.</seg>
       <tuv lang="en-US">
         <seg>This is known as a nested inductive type.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T170330Z" creationid="tlqk35" creationdate="20220528T170330Z">
-        <seg>이것은 중첩된(nested) 유도형으로 알려져 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152407Z" creationid="tlqk35" creationdate="20220528T170330Z">
+        <seg>이것은 중첩된(nested) 귀납형으로 알려져 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13421,6 +14918,15 @@ overloading of common names.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T163536Z" creationid="tlqk35" creationdate="20220321T163536Z">
         <seg>이것도 또한 종종 유용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is particularly important when we have implemented only the instance
+HMul α α α, and did not implement HMul Nat α α.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170048Z" creationid="tlqk3" creationdate="20220604T170048Z">
+        <seg>이것은 우리가 개체 HMul α α α만 구현하고 HMul Nat α α을 구현하지 않았을 때 특히 중요합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13470,6 +14976,24 @@ hence in Lean as well.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This is why the numeral
+2 has type Nat when the expected type is not known.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165601Z" creationid="tlqk3" creationdate="20220604T165601Z">
+        <seg>이것이 기대되는 유형을 모를 때 수치값 2가 Nat형이 되는 이유입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This kind of instance is
+only active when you are inside of the namespace or open the namespace.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170910Z" creationid="tlqk3" creationdate="20220604T170910Z">
+        <seg>이런 종류의 개체는 여러분이 이름공간 안에 있거나 이름공간을 개방했을 때에만 활동적입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This looks exactly like the definition of the constant function in the
 last chapter, the only difference being that the arguments are
 elements of Prop rather than Type.</seg>
@@ -13492,6 +15016,15 @@ elements of Prop rather than Type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T171705Z" creationid="tlqk35" creationdate="20220321T171705Z">
         <seg>이 메뉴얼은 mdBook으로 생성되었습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This may often
+be too restrictive.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164708Z" creationid="tlqk3" creationdate="20220604T164708Z">
+        <seg>이것은 종종 너무 제한적일 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13521,8 +15054,8 @@ inductive type under definition occurs only as the resulting type,
 where the indices are given in terms of constants and previous
 arguments.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T160716Z" creationid="tlqk35" creationdate="20220528T160716Z">
-        <seg>이 의미는 단순히 그것이 발생하는 생성자에서 임의의 인자가 유도형이 정의 하에서 결과적인 유형으로써만 일어나는 의존 화살표 유형임을 의미합니다. 여기서 색인은 상수와 이전의 인수에 대해서 제시됩니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152212Z" creationid="tlqk35" creationdate="20220528T160716Z">
+        <seg>이 의미는 단순히 그것이 발생하는 생성자에서 임의의 인자가 귀납형이 정의 하에서 결과적인 유형으로써만 일어나는 의존 화살표 유형임을 의미합니다. 여기서 색인은 상수와 이전의 인수에 대해서 제시됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13552,6 +15085,16 @@ other programming languages.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143905Z" creationid="tlqk35" creationdate="20220321T143905Z">
         <seg>다른 프로그래밍언어에서 함수가 어떻게 동작하는지 안다면 이게 여러분에게 더 친숙하게 보일지 모르겠습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This mode allows to travel inside assumptions and
+goals, even inside function abstractions and dependent arrows, to apply rewriting or
+simplifying steps.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T182024Z" creationid="tlqk3" creationdate="20220604T182024Z">
+        <seg>이 모드를 사용하면 가정과 목표 속과 심지어 함수 추상화 및 종속 화살표 내부를 이동하여 다시쓰기 또는 단순화 단계를 적용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13685,6 +15228,15 @@ known as a wildcard pattern, or an anonymous variable.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This version of
+add is the Lean analogue of the Haskell term add :: Add a =&gt; a -&gt; a -&gt; a.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154414Z" creationid="tlqk3" creationdate="20220604T154414Z">
+        <seg>add의 이 버전은 하스켈 항 add :: Add a =&gt; a -&gt; a -&gt; a의 린 닮은꼴입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This version of the text assumes you’re using Lean 4.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T171351Z" creationid="tlqk35" creationdate="20220321T171351Z">
@@ -13706,6 +15258,16 @@ coding trick.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T134728Z" creationid="tlqk35" creationdate="20220321T134728Z">
         <seg>이 교재에서 여러분은 아래와 같은 린 코드 예제를 보게 될 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus all theorems in the library
+that rely on decidability assumptions are freely available when you
+want to reason classically.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173904Z" creationid="tlqk3" creationdate="20220604T173904Z">
+        <seg>따라서 결정가능성 가정에 의존하는 라이브러리 속 모든 정리는 여러분이 고전적으로 추론하는 것을 원할 때 자유롭게 이용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13766,6 +15328,15 @@ has precedence one greater than the notation itself.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus we can carry out definitions by cases on decidable predicates on
+the natural numbers:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173246Z" creationid="tlqk3" creationdate="20220604T173246Z">
+        <seg>따라서 우리는 자연수에 대해 결정가능 술어에 대한 각 경우에 대해 정의를 이끌어 냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus we can think of an element f of the
 type α → Option β as being a partial function from α to β:
 for every a : α, f a either returns none, indicating the
@@ -13788,6 +15359,16 @@ number.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus, Lean 4
+implements a new feature, discriminant refinement, which includes
+these extra discriminants automatically for us.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151209Z" creationid="tlqk3" creationdate="20220604T151209Z">
+        <seg>따라서 린4에서 별도의 구별자를 자동적으로 포함시켜주는 새로운 기능 discriminant refinement을 구현했습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus, all four of these definitions have the same net effect.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T182726Z" creationid="tlqk3" creationdate="20220603T182726Z">
@@ -13804,11 +15385,49 @@ number.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus, the standard library assigns a low priority to
+the propDecidable instance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T174053Z" creationid="tlqk3" creationdate="20220604T174053Z">
+        <seg>따라서 표준 라이브러리는 propDecidable 개체에 낮은 우선 순위를 할당합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus, type class synthesis only starts after these two types are known.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164649Z" creationid="tlqk3" creationdate="20220604T164649Z">
+        <seg>따라서 유형 클래스 합성은 이 두 유형이 알려진 뒤에야 시작합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus, you can
+use the local modifier to indicate that they only have effect until
+the current section or namespace is closed, or until the end
+of the current file.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170416Z" creationid="tlqk3" creationdate="20220604T170416Z">
+        <seg>따라서 여러분은 local 수정자로 그들이 오직 현재 닫힌section이나 namespace까지만 혹은 현재 파일의 끝까지만 유효함을 나타내는데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus, you can disable it using
 the command set_option autoImplicit false.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T134943Z" creationid="tlqk3" creationdate="20220526T134943Z">
         <seg>따라서 여러분은 이것을 set_option autoImplicit false 명령을 써서 해제할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To
+define the function inverse below, we have to mark f a
+inaccessible.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T144951Z" creationid="tlqk3" creationdate="20220604T144951Z">
+        <seg>아래에서 함수 inverse를 정의하려면 우리는 f a를 접근 불가한 것으로 표시해야만 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13909,12 +15528,31 @@ type.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To help debug in these situations, Lean enables you to request a
+trace of the search:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180419Z" creationid="tlqk3" creationdate="20220604T180419Z">
+        <seg>이러한 상황에서 디버그를 돕기 위해 Lean을 사용하면 검색 추적을 요청할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To illustrate the difference, consider the following example, which
 shows that a reflexive euclidean relation is both symmetric and
 transitive.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T185734Z" creationid="tlqk3" creationdate="20220525T185734Z">
         <seg>차이를 설명하자면 유클리드 관계의 반사성은 모두 대칭적이고 추이적임을 보이는 다음 예제를 생각해보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To make dite more
+convenient to use, Lean allows us to write if h : c then t else e
+instead of dite c (λ h : c, t) (λ h : ¬ c, e).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172832Z" creationid="tlqk3" creationdate="20220604T172832Z">
+        <seg>dite를 사용하기 더 편리하게 만들기 위해 린은 우리가 dite c (λ h : c, t) (λ h : ¬ c, e) 대신 if h : c then t else e로 쓸 수 있게 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14072,6 +15710,16 @@ requires classical logic):</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Turning on implicit arguments shows that the elaborator has inferred
+the decidability of the proposition x &lt; a ∨ x &gt; b, simply by
+applying appropriate instances.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173546Z" creationid="tlqk3" creationdate="20220604T173546Z">
+        <seg>단순히 적절한 개체를 적용함으로써 암시적인 인수을 여는 것은 협력기가 명제 x &lt; a ∨ x &gt; b의 결정가능성을 추론함을 보일 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Two expressions that are equivalent up to
 associativity and commutativity are then rewritten to the same
 canonical form.</seg>
@@ -14084,8 +15732,33 @@ canonical form.</seg>
       <tuv lang="en-US">
         <seg>Two more examples of inductive types in the library are the following:</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220527T150000Z" creationid="tlqk3" creationdate="20220527T150000Z">
-        <seg>라이브러리에서 유도형의 둘 이상의 예제가 다음에 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152048Z" creationid="tlqk3" creationdate="20220527T150000Z">
+        <seg>라이브러리에서 귀납형의 둘 이상의 예제가 다음에 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Type classes</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152557Z" creationid="tlqk3" creationdate="20220604T152557Z">
+        <seg>유형 클래스</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Type classes are implemented using attributes in Lean.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170239Z" creationid="tlqk3" creationdate="20220604T170239Z">
+        <seg>유형 클래스는 린의 속성을 사용해 구현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Type classes were introduced as a principled way of enabling
+ad-hoc polymorphism in functional programming languages.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152812Z" creationid="tlqk3" creationdate="20220604T152812Z">
+        <seg>유형 클래스는 함수형 프로그래밍 언어에서 특수 목적(ad-hoc)의 다형성을 활성화하는 원칙적인 방법으로 도입되었습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14181,6 +15854,15 @@ libraries, or develop their own projects across multiple files.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Using inaccessible patterns, we can prompt
+the equation compiler to avoid the case split on n</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T150443Z" creationid="tlqk3" creationdate="20220604T150443Z">
+        <seg>접근 불가한 패턴을 사용하여 우리는 방정식 컴파일러가 n에 대해 경우를 나누는 것을 즉시 막도록 할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Using the Library</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T130428Z" creationid="tlqk3" creationdate="20220526T130428Z">
@@ -14223,6 +15905,15 @@ write this proof concisely as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T183003Z" creationid="tlqk35" creationdate="20220321T183003Z">
         <seg>여기서 설명한 다양한 도구-match 구문, 익명 생성자,  다시쓰기전략-를 사용하여 다음과 같이 이 증명을 간결하게 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Using these new features, you can write the other vector functions defined
+in the previous sections more compactly as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151546Z" creationid="tlqk3" creationdate="20220604T151546Z">
+        <seg>이 새로운 기능을 사용하면 여러분은 이전에 정의한 다른 벡터 함수들을 다음과 같이 더 간결하게 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14357,10 +16048,28 @@ then read t : p as the assertion that t is a proof of p.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can
+view such inaccessible patterns as "don't care" components of the
+patterns.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143832Z" creationid="tlqk3" creationdate="20220604T143832Z">
+        <seg>우리는 그런 접속불가한 패턴을 패턴의 "신경쓰지 않는" 성분의 관점으로 볼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can extend existing structures by adding new fields.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T180813Z" creationid="tlqk35" creationdate="20220528T180813Z">
         <seg>우리는 새 필드를 추가하여 존재하는 구조체를확장할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We can achieve exactly that using default instances.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165011Z" creationid="tlqk3" creationdate="20220604T165011Z">
+        <seg>우리는 정확히 이를 default instances으로 달성할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14423,6 +16132,15 @@ for greater clarity:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182644Z" creationid="tlqk35" creationdate="20220321T182644Z">
         <seg>우리는 더 명확함을 위해 match에서 사용되는 유형을 나타낼 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We can declare one
+explicitly:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180201Z" creationid="tlqk3" creationdate="20220604T180201Z">
+        <seg>여러분은 명시적으로 이를 선언할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14506,6 +16224,16 @@ class.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can then define any function f with an "inverse"
+which takes anything in the image of f to an element that is
+mapped to it.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T144753Z" creationid="tlqk3" creationdate="20220604T144753Z">
+        <seg>그런 다음 f의 이미지에서 매핑된 요소로 가져오는 "역"함수가 있는 임의의 함수 f를 정의할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can then use a mutual recursive definition to count the number of constants occurring in a term, as well as the number occurring in a list of terms.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T175133Z" creationid="tlqk3" creationdate="20220603T175133Z">
@@ -14581,6 +16309,14 @@ tactic.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We could implement double by</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153337Z" creationid="tlqk3" creationdate="20220604T153337Z">
+        <seg>우리는 double을 아래와 같이 구현할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We could render this as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T155138Z" creationid="tlqk35" creationdate="20220321T155138Z">
@@ -14619,6 +16355,17 @@ casesOn and noConfusion.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T184219Z" creationid="tlqk3" creationdate="20220603T184219Z">
         <seg>우리는 여러분이 이를 recOn, casesOn과 noConfusion을 사용해 시도해보길 권합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We first observe that it
+would be easy to implement an ad-hoc polymorphic function (such as addition) if the
+function simply took the type-specific implementation of addition as an argument
+and then called that implementation on the remaining arguments.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T153106Z" creationid="tlqk3" creationdate="20220604T153106Z">
+        <seg>우리는 먼저 함수가 단순히 덧셈의 특정 유형에 대한 구현을 덧셈의 인수로 취한 다음 나머지 인수에 대해 그 구현을 호출하면 임시 다형적 함수(덧셈 같은)를 구현하는 것이 쉽다는 것을 관찰했습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14662,8 +16409,8 @@ type.</seg>
         <seg>We have described inductive types and their syntax through
 examples.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155146Z" creationid="tlqk35" creationdate="20220528T155146Z">
-        <seg>우리는 유도형과 그들의 문법을 예제를 통해 설명했습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152151Z" creationid="tlqk35" creationdate="20220528T155146Z">
+        <seg>우리는 귀납형과 그들의 문법을 예제를 통해 설명했습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14681,8 +16428,8 @@ dependent function types, (x : α) → β.</seg>
         <seg>We have seen that Lean's foundational system includes inductive
 types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172149Z" creationid="tlqk35" creationdate="20220528T172149Z">
-        <seg>우리는 유도형을 포함해 린의 기초적인 체계를 보았습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152418Z" creationid="tlqk35" creationdate="20220528T172149Z">
+        <seg>우리는 귀납형을 포함해 린의 기초적인 체계를 보았습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14713,8 +16460,8 @@ throughout the inductive construction --- and indices, the arguments
 parameterizing the family of types that is simultaneously under
 construction.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T155749Z" creationid="tlqk35" creationdate="20220528T155749Z">
-        <seg>우리는 유도형에서 생성자는 매개변수(parameters)-- 직관적으로 재귀 생성 동안 고정된 상태로 남는 인수 --와 동시에 생성중인 유형의 군을 매개변수화하는 인수 indices를 받는 것을 보았습니다.  </seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152158Z" creationid="tlqk35" creationdate="20220528T155749Z">
+        <seg>우리는 귀납형에서 생성자는 매개변수(parameters)-- 직관적으로 재귀 생성 동안 고정된 상태로 남는 인수 --와 동시에 생성중인 유형의 군을 매개변수화하는 인수 indices를 받는 것을 보았습니다.  </seg>
       </tuv>
     </tu>
     <tu>
@@ -14742,8 +16489,8 @@ is possible to construct a substantial edifice of mathematics based on
 nothing more than the type universes, dependent arrow types, and inductive types;
 everything else follows from those.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T172353Z" creationid="tlqk35" creationdate="20220528T172353Z">
-        <seg>게다가 우리는 유형 세계, 의존 화살표 유형, 유도형과 이들로부터 따라나온 모든 것 외에는 기반하지 않는 수학의 엄청난 구조물을 세울 수 있는 가능성을 발견한 사실은 주목할만 합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152423Z" creationid="tlqk35" creationdate="20220528T172353Z">
+        <seg>게다가 우리는 유형 세계, 의존 화살표 유형, 귀납형과 이들로부터 따라나온 모든 것 외에는 기반하지 않는 수학의 엄청난 구조물을 세울 수 있는 가능성을 발견한 사실은 주목할만 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14760,8 +16507,16 @@ everything else follows from those.</seg>
 useful, which Lean supports by "compiling" them down to the more
 primitive kinds of inductive types described above.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T164633Z" creationid="tlqk35" creationdate="20220528T164633Z">
-        <seg>이제 우리는 유도형의 종종 유용한 두 가지 일반화를 고려했습니다. 린은 이들을 위에서 설명한 유도형의 더 기초적인 종류로 "컴파일"해나감으로써 지원합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152323Z" creationid="tlqk35" creationdate="20220528T164633Z">
+        <seg>이제 우리는 귀납형의 종종 유용한 두 가지 일반화를 고려했습니다. 린은 이들을 위에서 설명한 유도형의 더 기초적인 종류로 "컴파일"해나감으로써 지원합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We often need an arbitrary element of a given type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T155151Z" creationid="tlqk3" creationdate="20220604T155151Z">
+        <seg>우린 종종 주어진 유형의 임의의 원소를 필요로 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14793,6 +16548,14 @@ features, and then returning to it as necessary.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We recommend you only use this command to diagnose problems.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170630Z" creationid="tlqk3" creationdate="20220604T170630Z">
+        <seg>우리는 이 명령을 여러분이 문제를 진단하는 데에만 사용하는 것을 권장합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We saw in Namespaces that Lean provides
 mechanisms for working with hierarchical names.</seg>
       </tuv>
@@ -14811,6 +16574,14 @@ it is "focusing" on the selected goal.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We say the numerals 2 occurring in the elaborated terms are raw natural numbers.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162750Z" creationid="tlqk3" creationdate="20220604T162750Z">
+        <seg>동화된 항에서 나타나는 수치값 2가 생 자연수라고 말합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We start with zero : Nat; it takes
 no arguments, so we have it from the start.</seg>
       </tuv>
@@ -14824,8 +16595,8 @@ no arguments, so we have it from the start.</seg>
 consider slight generalizations of the scheme above, to mutually
 defined inductive types, and so-called inductive families.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144131Z" creationid="tlqk3" creationdate="20220526T143938Z">
-        <seg>우리는 유도형과 일명 유도군을 동시에 정의하도록 위의 계획의 약간의 일반화를 고려할 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151825Z" creationid="tlqk3" creationdate="20220526T143938Z">
+        <seg>우리는 귀납형과 일명 귀납군을 동시에 정의하도록 위의 계획의 약간의 일반화를 고려할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14886,8 +16657,8 @@ next chapter.</seg>
       <tuv lang="en-US">
         <seg>We will provide a number of examples of inductive types.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T143942Z" creationid="tlqk3" creationdate="20220526T143616Z">
-        <seg>우리는 다수의 유도형의 예제를 제공합니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151807Z" creationid="tlqk3" creationdate="20220526T143616Z">
+        <seg>우리는 다수의 귀납형의 예제를 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14958,8 +16729,8 @@ such contexts without relying on excluded middle.</seg>
 some basic examples of inductive types, and work our way up to more
 elaborate and complex examples.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T145124Z" creationid="tlqk3" creationdate="20220526T145124Z">
-        <seg>우리는 유도형의 몇 가지 기본적인 예제로 시작할 것입니다. 그리고 우리의 작업을 더 정교하고 복잡한 예제로 옮겨갈 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151915Z" creationid="tlqk3" creationdate="20220526T145124Z">
+        <seg>우리는 귀납형의 몇 가지 기본적인 예제로 시작할 것입니다. 그리고 우리의 작업을 더 정교하고 복잡한 예제로 옮겨갈 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15054,6 +16825,14 @@ recursive definitions.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>What makes type class inference powerful is that one can chain instances.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160923Z" creationid="tlqk3" creationdate="20220604T160923Z">
+        <seg>유형 클래스 추론을 강력하게 만드는 것은 chain 개체입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>What type should cons have?</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T151029Z" creationid="tlqk35" creationdate="20220321T151029Z">
@@ -15105,6 +16884,32 @@ default, be left implicit.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>When a type class has multiple parameters, you can mark some of them as output parameters.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163558Z" creationid="tlqk3" creationdate="20220604T163558Z">
+        <seg>유형 클래스가 다수의 매개변수를 가질 때, 여러분은 출력 매개변수로 그들 중 몇을 표시할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>When an instance is declared, it is
+assigned a default priority value.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181626Z" creationid="tlqk3" creationdate="20220604T181626Z">
+        <seg>개체가 선언되면 기본 우선 순위 값이 할당됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>When combined with the auto bound implicits feature, you can simplify
+the declare further and write:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151419Z" creationid="tlqk3" creationdate="20220604T151419Z">
+        <seg>암시적인 자동 결합(auto bound implicits) 기능과 결합할 때 여러분은 선언을 더 단순화 해 작성할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>When declared in this way, a variable stays in scope until the end of
 the file you are working on.</seg>
       </tuv>
@@ -15119,6 +16924,16 @@ Lean to generate a fuction that converts Weekday objects into text.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T150812Z" creationid="tlqk3" creationdate="20220526T150812Z">
         <seg>유도 데이터형을 선언할 때, 여러분은 린에게 Weekday의 대상을 텍스트로 바꾸는 함수를 생성하라고 지시하도록 deriving Repr을 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>When implementing this
+definition, the equation compiler starts with a case distinction as to
+whether the first argument is 0 or of the form n+1.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T145655Z" creationid="tlqk3" creationdate="20220604T145655Z">
+        <seg>이 정의를 구현할 때 방정식 컴파일러는 첫 번째 인수가 0이거나 n+1의 꼴인지를 구분하도록 경우를 구분하는 것으로 시작합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15145,8 +16960,8 @@ the proof by writing by assumption:</seg>
         <seg>When the inductive type is specified to land in Prop, there are no
 constraints on the universe levels of the constructor arguments.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T162358Z" creationid="tlqk35" creationdate="20220528T162358Z">
-        <seg>유도형이 Prop에서 머무른다고 명시되어 있을 때, 생성자 인수의 세계 수준에 대한 제한이 없습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152300Z" creationid="tlqk35" creationdate="20220528T162358Z">
+        <seg>귀납형이 Prop에서 머무른다고 명시되어 있을 때, 생성자 인수의 세계 수준에 대한 제한이 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15292,12 +17107,21 @@ is similar to a function that swaps the elements of a pair.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>With the classical axioms, we can prove that every proposition is
+decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173611Z" creationid="tlqk3" creationdate="20220604T173611Z">
+        <seg>고전적 공리로 우리는 모든 명제가 결정 가능임을 증명할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>With the propositions as types correspondence, logical connectives are
 also instances of inductive types, and so we tend to use dot notation
 for them as well:</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T134037Z" creationid="tlqk3" creationdate="20220526T134037Z">
-        <seg>유형으로써 명제 대응에서 논리 결합자도 유도형의 개체들입니다. 그리고 그들에 대해서도 점 표기를 사용하는 경향이 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151740Z" creationid="tlqk3" creationdate="20220526T134037Z">
+        <seg>유형으로써 명제 대응에서 논리 결합자도 귀납형의 개체들입니다. 그리고 그들에 대해서도 점 표기를 사용하는 경향이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15319,6 +17143,14 @@ example from the previous section can be rewritten as follows:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T071358Z" creationid="tlqk35" creationdate="20220522T071358Z">
         <seg>이 전략으로 이전 섹션의 예제를 다음과 같이 다시 쓸 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>With this added to the earlier instance declarations, type class instance can infer, for example, a default element of Nat × Bool:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161419Z" creationid="tlqk3" creationdate="20220604T161419Z">
+        <seg>더 이전에 개체 선언에 이것을 추가하여 유형 클래스 개체는 예를 들어 Nat × Bool의 기본 원소를 추론할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15366,6 +17198,15 @@ but once you end the namespace, you have to use the longer names.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T150359Z" creationid="tlqk35" creationdate="20220321T150359Z">
         <seg>이름공간 안에서 여러분은 식별자들을 그들의 약식 이름으로 부를 수 있습니다. 그러나 한번 이름공간에 끝에 오면 여러분은 더 긴 이름을 사용해야만 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Without classical logic, we cannot prove that every proposition is
+decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T172855Z" creationid="tlqk3" creationdate="20220604T172855Z">
+        <seg>고전 논리가 없으면 우리는 모든 명제가 결정 가능임을 증명할 수 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15535,6 +17376,14 @@ names if you add a line break between each field.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can also declare scoped instances in namespaces.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170759Z" creationid="tlqk3" creationdate="20220604T170759Z">
+        <seg>여러분은 이름공간에서 범위가 지정된 개체를 선언할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can also define subst using match.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T154304Z" creationid="tlqk35" creationdate="20220528T154304Z">
@@ -15559,6 +17408,14 @@ names if you add a line break between each field.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can also limit the search using the following options:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180641Z" creationid="tlqk3" creationdate="20220604T180641Z">
+        <seg>다음 옵션을 사용하여 검색을 제한할 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can also pass types as parameters:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143154Z" creationid="tlqk35" creationdate="20220321T143154Z">
@@ -15579,6 +17436,16 @@ names if you add a line break between each field.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T064409Z" creationid="tlqk35" creationdate="20220522T064409Z">
         <seg>여러분은 맥락 속 다수의 요소들을 한번에 되돌려 놓을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can also temporarily disable an instance using the attribute command
+until the current section or namespace is closed, or until the end
+of the current file.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T170531Z" creationid="tlqk3" creationdate="20220604T170531Z">
+        <seg>여러분은 일시적으로 attribute 명령으로 현재 닫힌 section이나 namespace까지 혹은 현재 파일의 끝까지 개체를 사용 해제 할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15642,6 +17509,14 @@ Nat mean the same thing.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can also use the auxiliary definition inferInstanceAs:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T180055Z" creationid="tlqk3" creationdate="20220604T180055Z">
+        <seg>여러분은 부가 정의 inferInstanceAs도 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can also use the combinator tac1 &lt;;&gt; tac2 to apply tac2 to each
 subgoal produced by tactic tac1</seg>
       </tuv>
@@ -15656,6 +17531,15 @@ subgoal produced by tactic tac1</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T173558Z" creationid="tlqk3" creationdate="20220529T173558Z">
         <seg>여러분은 match를 사용해 위의 예제를 쓸 수도 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can assign other priorities
+when defining an instance.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181650Z" creationid="tlqk3" creationdate="20220604T181650Z">
+        <seg>개체를 정의할 때 다른 우선 순위를 할당할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15680,6 +17564,15 @@ subgoal produced by tactic tac1</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T142112Z" creationid="tlqk35" creationdate="20220321T142112Z">
         <seg>여러분은 F를 정의할 때 universe 매개변수를 제공하는 것으로 universe 명령을 쓰지 않을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can change the order that type classes instances are tried by
+assigning them a priority.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T181553Z" creationid="tlqk3" creationdate="20220604T181553Z">
+        <seg>유형 클래스 개체에 우선순위를 할당하여 그들이 시도되는 순서를 변경할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15709,10 +17602,28 @@ definitional identities as before.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can declare a subterm inaccessible by writing
+.(t).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T143857Z" creationid="tlqk3" creationdate="20220604T143857Z">
+        <seg>여러분은 .(t)와 같이 작성하여 접근불가한 부분항을 선언할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can declare variables of any type, not just Type itself:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T145206Z" creationid="tlqk35" creationdate="20220321T145206Z">
         <seg>여러분은 Type 그 자체뿐만 아니라 임의의 유형의 변수를 선언할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can define default instances with higher
+priority to override the builtin ones.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T165720Z" creationid="tlqk3" creationdate="20220604T165720Z">
+        <seg>여러분은 내장된 것보다 우세하여 더 높은 우선순위를 갖는 기본 개체를 정의할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15751,10 +17662,27 @@ Nat.below and Nat.brecOn:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can import the classical axioms and make the generic
+instance of decidability available by opening the Classical namespace.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T173723Z" creationid="tlqk3" creationdate="20220604T173723Z">
+        <seg>Classical  이름공간을 여는 것으로 여러분은 고전적 공리를 불러올 수 있고 결정가능성의 일반적 개체를 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can input the raw natural number 2 using the macro nat_lit 2.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162833Z" creationid="tlqk3" creationdate="20220604T162833Z">
+        <seg>여러분은 생 자연수 2를 매크로 nat_lit 2을 사용해 입력할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can omit : Weekday when declaring the Weekday inductive type.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T145402Z" creationid="tlqk3" creationdate="20220526T145402Z">
-        <seg>여러분은  유도형 Weekday를 선언할 때 : Weekday을 생략할 수 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151932Z" creationid="tlqk3" creationdate="20220526T145402Z">
+        <seg>여러분은  귀납형 Weekday를 선언할 때 : Weekday을 생략할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15943,6 +17871,15 @@ dependent pair.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can use a numeral (e.g., 2) to denote an element of any type that implements
+the type class OfNat.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162337Z" creationid="tlqk3" creationdate="20220604T162337Z">
+        <seg>여러분은 수치값(예를 들어 2)을 유형클래스 OfNat을 구현하는 임의의 유형의 원소를 표시하는데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can use it to introduce several variables:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220522T062237Z" creationid="tlqk35" creationdate="20220522T062237Z">
@@ -15959,10 +17896,63 @@ dependent pair.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>You can use our new scalar array multiplication instance on arrays of type Array β
+with a scalar of type α whenever you have an instance HMul α β γ.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T164444Z" creationid="tlqk3" creationdate="20220604T164444Z">
+        <seg>여러분은 HMul α β γ 개체를 갖는 언제든지 우리의 새 스칼라 배열 곱셈 개체를 유형 α의 스칼라와 Array β형의 배열에 대해 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>You can use the match notation in tactics too:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T172314Z" creationid="tlqk3" creationdate="20220527T172314Z">
         <seg>여러분은 전략에서 match 기호도 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can use the command #print to inspect how simple inferInstance is.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T161816Z" creationid="tlqk3" creationdate="20220604T161816Z">
+        <seg>여러분은 #print 명령으로 inferInstance가 얼마나 단순한지 검사할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can use the command export to create the alias default for Inhabited.default</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T160544Z" creationid="tlqk3" creationdate="20220604T160544Z">
+        <seg>여러분은 g1&gt;export 명령으로 Inhabited.default에 대한 기본 별명을 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can use the command open scoped &lt;namespace&gt; to activate scoped attributes but will
+not "open" the names from the namespace.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T171041Z" creationid="tlqk3" creationdate="20220604T171041Z">
+        <seg>여러분은 open scoped &lt;namespace&gt; 명령으로 범위가 지정된 속정을 활성화할 수 있습니다. 그러나 이름공간으로부터 이름들을 "개방"하지는 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can view an element of
+the type ImageOf f b as evidence that b is in the image of
+f, whereby the constructor imf is used to build such
+evidence.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T144235Z" creationid="tlqk3" creationdate="20220604T144235Z">
+        <seg>여러분은 ImageOf f b형 원소를 b가 f의 이미지에 있다는 증거로 볼 수 있습니다. 이로써 생성자 imf는 그런 증거를 만드는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You can view the parameter of the type class Inhabited as an input value for the type class synthesizer.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T163519Z" creationid="tlqk3" creationdate="20220604T163519Z">
+        <seg>여러분은 유형 클래스 합성기에 대한 입력값으로써 유형 클래스 Inhabited의 매개변수를 볼 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16022,8 +18012,8 @@ Lean's typing system.</seg>
 introduction rules for an inductive type: they are just the
 constructors that are specified in the definition of the type.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220526T144511Z" creationid="tlqk3" creationdate="20220526T144511Z">
-        <seg>여러분은 유도형에 대한 도입규칙을 이미 봤었습니다. 그들은 그저 유형의 정의에서 명시된 생성자들일 뿐입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151848Z" creationid="tlqk3" creationdate="20220526T144511Z">
+        <seg>여러분은 귀납형에 대한 도입규칙을 이미 봤었습니다. 그들은 그저 유형의 정의에서 명시된 생성자들일 뿐입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16054,6 +18044,15 @@ x₁ smaller than x.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T171543Z" creationid="tlqk3" creationdate="20220603T171543Z">
         <seg>여러분은 재귀를 위한 요리법인 div.F의 두 번째 인수가 x보다 작은 모든 x₁값에 대한 y 함수로 나눠진 것을 반환하기로 한 함수임을 기억해야만 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>You implement the instance
+for your own types and use chaining to convert complex values into strings.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T162011Z" creationid="tlqk3" creationdate="20220604T162011Z">
+        <seg>여러분은 여러분의 유형을 위한 개체를 구현하고 문자열로 복잡한 값에서 문자열로 연결하기를 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16145,8 +18144,8 @@ theory.</seg>
         <seg>You will see in Chapter Inductive Types that
 these tactics are quite general.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220522T071625Z" creationid="tlqk35" creationdate="20220522T071625Z">
-        <seg>유도형 장에서 이 전략들은 꽤나 일반적임을 볼 것입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T151735Z" creationid="tlqk35" creationdate="20220522T071625Z">
+        <seg>귀납형 장에서 이 전략들은 꽤나 일반적임을 볼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16211,6 +18210,14 @@ available.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>error: tactic 'rewrite' failed, did not find instance of the pattern</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183115Z" creationid="tlqk3" creationdate="20220604T183115Z">
+        <seg>오류: '다시 쓰기' 전술이 실패했습니다. 패턴의 개체를 찾지 못했습니다.(error: tactic 'rewrite' failed, did not find instance of the pattern)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>fun x =&gt; id1 x
 
 -- In this example, implicit lambda introduction has been disabled
@@ -16232,6 +18239,14 @@ interpreted relative to the Lean search path.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T174156Z" creationid="tlqk35" creationdate="20220524T174156Z">
         <seg>린의 파일 search path에 상대적인 주소로 설명된 곳에서 Bar/Baz/Blah.olean을 불러옵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>in the target expression</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183124Z" creationid="tlqk3" creationdate="20220604T183124Z">
+        <seg>대상 표현식에서</seg>
       </tuv>
     </tu>
     <tu>
@@ -16286,6 +18301,14 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) :=</seg>
 
 -- 분배성
 example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) :=</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>or just</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183402Z" creationid="tlqk3" creationdate="20220604T183402Z">
+        <seg>아니면 그냥</seg>
       </tuv>
     </tu>
     <tu>
@@ -16403,8 +18426,16 @@ sequence of arguments to the constructors, and p[a, b] are the
 indices, which determine which element of the inductive family the
 construction inhabits.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk35" changedate="20220528T161227Z" creationid="tlqk35" creationdate="20220528T161227Z">
-        <seg>여기서 a는 데이터 유형 매개변수의 나열이고 b는 생성자에 대한 인수의 나열이고 p[a, b] 는 유도군의 어떤 원소가 생성자를 어디에 머무르게 할지 결정하는  색인입니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T152521Z" creationid="tlqk35" creationdate="20220528T161227Z">
+        <seg>여기서 a는 데이터 유형 매개변수의 나열이고 b는 생성자에 대한 인수의 나열이고 p[a, b] 는 귀납군의 어떤 원소가 생성자를 어디에 머무르게 할지 결정하는  색인입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>where intro x is the navigation command entering inside the fun binder.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183317Z" creationid="tlqk3" creationdate="20220604T183317Z">
+        <seg>여기서 intro x는 fun 결합자 내부로 들어가는 탐색 명령입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16414,6 +18445,23 @@ Lean's parser will default to right associativity.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T123304Z" creationid="tlqk3" creationdate="20220526T123304Z">
         <seg>여기서 우선순위는 결합성을 결정하기에 충분하지 않아서  린의 구문분석기는 오른쪽 결합성으로 기본설정을 할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>where the square brackets indicate that the argument of type Add a is instance implicit,
+i.e. that it should be synthesized using typeclass resolution.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T154241Z" creationid="tlqk3" creationdate="20220604T154241Z">
+        <seg>여기서 대괄호는 Add a의 유형이 instance implicit임을 가리킵니다. 즉, 이것은 유형클래스 해결책을 사용해 합성되어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>which is just syntax sugar for</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220604T183711Z" creationid="tlqk3" creationdate="20220604T183711Z">
+        <seg>이것은 다음에 대한 문법적 설탕입니다.</seg>
       </tuv>
     </tu>
     <tu>

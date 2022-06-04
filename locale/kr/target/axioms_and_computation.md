@@ -1,4 +1,4 @@
-Axioms and Computation
+공리와 계산
 ======================
 
 We have seen that the version of the Calculus of Constructions that

@@ -543,7 +543,7 @@ Once again, these attributes can be assigned and reassigned after an object is d
 
 첫 째는 쌍을 구성하는데 사용되며 반면 다음 둘은``Prod.fst``과 ``Prod.snd``은 두 원소를 투영(project)합니다. 마지막으로 ``Prod.rec``은 두 원소에 대한 함수에 대한 관점으로 곱에 대한 함수를 정의하는 또다른 방법을 제공합니다. ``Prod.rec``같은 이름은 *protected*입니다. 그말은 누군가가 ``Prod`` 이름공간을 개방했더라도 완전한 이름을 사용해야만 함을 의미합니다.
 
-유형으로써 명제 대응에서 논리 결합자도 유도형의 개체들입니다. 그리고 그들에 대해서도 점 표기를 사용하는 경향이 있습니다.
+유형으로써 명제 대응에서 논리 결합자도 귀납형의 개체들입니다. 그리고 그들에 대해서도 점 표기를 사용하는 경향이 있습니다.
 
 ```lean
 #check @And.intro
