@@ -1,155 +1,50 @@
 공리와 계산
 ======================
 
-We have seen that the version of the Calculus of Constructions that
-has been implemented in Lean includes dependent function types,
-inductive types, and a hierarchy of universes that starts with an
-impredicative, proof-irrelevant ``Prop`` at the bottom. In this
-chapter, we consider ways of extending the CIC with additional axioms
-and rules. Extending a foundational system in such a way is often
-convenient; it can make it possible to prove more theorems, as well as
-make it easier to prove theorems that could have been proved
-otherwise. But there can be negative consequences of adding additional
-axioms, consequences which may go beyond concerns about their
-correctness. In particular, the use of axioms bears on the
-computational content of definitions and theorems, in ways we will
-explore here.
+우리는 린에 구현된 직관주의적 계산의 버전이 의존 함수 유형, 귀납형, 맨 바닥에 증명과 무관한 ``Prop``과 비서술어를 갖는 유형세계 계층을 포함한 것을 봤습니다. 이 장에서 추가 공리와 규칙을 사용해 CIC를 확장하는 방벙을 고려합니다. 이런 식으로 기초 체계를 확장하는 것은 종종 편리합니다. 이는 더 많은 정리를 증명할 수 있게 만들 뿐 아니라 다른 방식으로 증명된 정리를 더 쉽게 증명하도록 만듭니다. 그러나 공리를 추가하는 것은 부정적인 결과가 될 수 있으며 그들의 정확성에 대한 우려를 넘을 수 있습니다. 특히 공리의 사용은 여기서 탐구할 정리와 공리의 계산적 내용에 영향을 미칩니다.
 
-Lean is designed to support both computational and classical
-reasoning. Users that are so inclined can stick to a "computationally
-pure" fragment, which guarantees that closed expressions in the system
-evaluate to canonical normal forms. In particular, any closed
-computationally pure expression of type ``Nat``, for example, will
-reduce to a numeral.
+린은 계산적 추론과 고전 추론 모두를 지원하도록 설계되었습니다. 그런 경향이 있는 사용자는 시스템의 닫힌 표현식이 표준 정규 형식으로 평가되도록 보장하는 "계산적으로 순수함" 면을 고수할 수 있습니다. 특히, 예를 들어 ``Nat``형의 임의의 닫힌 계산적으로 순수한 표현식 수치값으로 축약됩니다.
 
-Lean's standard library defines an additional axiom, propositional
-extensionality, and a quotient construction which in turn implies the
-principle of function extensionality. These extensions are used, for
-example, to develop theories of sets and finite sets. We will see
-below that using these theorems can block evaluation in Lean's kernel,
-so that closed terms of type ``Nat`` no longer evaluate to numerals. But
-Lean erases types and propositional information when compiling
-definitions to bytecode for its virtual machine evaluator, and since
-these axioms only add new propositions, they are compatible with that
-computational interpretation. Even computationally inclined users may
-wish to use the classical law of the excluded middle to reason about
-computation. This also blocks evaluation in the kernel, but it is
-compatible with compilation to bytecode.
+린의 표준 라이브러리는 부가적인 공리, 명제적 확장성과 함수 확장성의 원리를 차례로 함의하는 몫 구성을 정의합니다. 이 확장은 예를 들어 집합과 유한 집합의 이론을 만드는데 사용됩니다. 우리는 아래에서 이 정리들을 사용하여 린의 커널의 평가를 차단해 ``Nat``형의 닫힌 항이 더 이상 수치값으로 평가되지 않게 함을 볼 것입니다. 린의 가상 머신 평가기를 위해 정의를 바이트 코드로 컴파일 할 때 린은 유형과 명제 정보를 지웁니다. 왜냐하면 이런 공리는 새 명제를 더할 뿐이기 때문에 이들은 계산적 해석과도 호환됩니다. 심지어 계산적으로 편향된 사용자들도 계산에 대해 배중률을 포함한 고전 논리를 사용해 추론하기를 바랄 수 있습니다. 이것도 커널에서 평가를 차단하지만 바이트 코드로 컴파일하는 것과 호환됩니다.
 
-The standard library also defines a choice principle that is entirely
-antithetical to a computational interpretation, since it magically
-produces "data" from a proposition asserting its existence. Its use is
-essential to some classical constructions, and users can import it
-when needed. But expressions that use this construction to produce
-data do not have computational content, and in Lean we are required to
-mark such definitions as ``noncomputable`` to flag that fact.
+또한 표준 라이브러리는 마술처럼 선택 원리의 존재를 주장하는 명제로부터 "데이터"를 만들기 때문에 계산적 해석과 완전히 정반대인 선택 원리를 정의할 수 있습니다. 그 용도는 몇몇 고전적 생성에 필수적입니다. 그리고 사용자는 그것이 필요할 때 불러오기 할 수있습니다. 그러나 데이터를 만들기 위해 이 구성을 사용한 표현식은 계산적 내용을 없으며, 우리는 린에서 이러한 정의를 ``noncomputable``로 표시하여 해당 사실을 나타내도록 요구받습니다.
 
-Using a clever trick (known as Diaconescu's theorem), one can use
-propositional extensionality, function extensionality, and choice to
-derive the law of the excluded middle. As noted above, however, use of
-the law of the excluded middle is still compatible with bytecode
-compilation and code extraction, as are other classical principles, as
-long as they are not used to manufacture data.
+Diaconescu의 정리로 알려진 영리한 트릭을 사용하여 명제 확장성, 함수 확장성 및 배중률의 법칙을 유도하는 선택을 사용할 수 있습니다. 그러나 위에서 언급한 대로 여전히 배중률의 사용은 다른 고전 원리처럼 데이터를 만드는데 이들이 사용되지만 않는다면 바이트 코드 컴파일 및 코드 추출과 호환됩니다.
 
-To summarize, then, on top of the underlying framework of universes,
-dependent function types, and inductive types, the standard library
-adds three additional components:
+요약하자면 표준 라이브러리는 유형 세계, 종속 함수 유형과 귀납형의 기반 프레임워크 위에 세 가지 구성요소를 더합니다.
 
-- the axiom of propositional extensionality
-- a quotient construction, which implies function extensionality
-- a choice principle, which produces data from an existential proposition.
+- 명제 확장성 공리
+- 함수 확장성을 함의하는 몫 구성
+- 존재 명제로부터 데이터를 만들어내는 선택 원리
 
-The first two of these block normalization within Lean, but are
-compatible with bytecode evaluation, whereas the third is not amenable
-to computational interpretation. We will spell out the details more
-precisely below.
+이들 중 첫 두 개는 린에서 정규화를 막습니다. 그러나 바이트 코드 평가와 상용되며 반면 세 번째는 계산 해석으로 수정할 수 없습니다. 아래에서 상세한 부분을 더 자세히 말할 것입니다.
 
-Historical and Philosophical Context
+역사적이고 철학적인 맥락
 ------------------------------------
 
-For most of its history, mathematics was essentially computational:
-geometry dealt with constructions of geometric objects, algebra was
-concerned with algorithmic solutions to systems of equations, and
-analysis provided means to compute the future behavior of systems
-evolving over time. From the proof of a theorem to the effect that
-"for every ``x``, there is a ``y`` such that ...", it was generally
-straightforward to extract an algorithm to compute such a ``y`` given
-``x``.
+대부분의 역사에서 수학은 본래 계산적이었습니다. 기하학은 기하학적 물체의 구성을 다뤘고, 대수학은 연립방정식의 산술적 해에 관해서 그리고 해석학은 시간의 흐름에 따른 시스템의 향후 거동을 계산하는 수단을 제공했습니다. "모든 ``x``에 대해 ...인 ``y``가 있다"는 정리의 증명에서부터 효과까지, 주어진 ``x``에 대해 그런 ``y``를 계산하는 알고리즘을 추출하는 것은 보통 직관적이었습니다.
 
-In the nineteenth century, however, increases in the complexity of
-mathematical arguments pushed mathematicians to develop new styles of
-reasoning that suppress algorithmic information and invoke
-descriptions of mathematical objects that abstract away the details of
-how those objects are represented. The goal was to obtain a powerful
-"conceptual" understanding without getting bogged down in
-computational details, but this had the effect of admitting
-mathematical theorems that are simply *false* on a direct
-computational reading.
+그러나 19세기에 수학적 논쟁의 복잡성이 증가함에 따라 수학자들은 알고리즘적 정보를 억제하고 어떻게 이 대상이 표현되는지에 대한 상세함을 추상화시키고 수학적 대상의 설명을 일으키는 새로운 형식의 논리를 만들도록 몰아붙였습니다. 목표는 계산의 세부 사항에 얽매이지 않고 강력한 "개념적" 이해를 얻는 것이지만 직접 계산을 해석하는데 단지 *거짓*인 수학적 정리를 인정하는 효과가 있었습니다.
 
-There is still fairly uniform agreement today that computation is
-important to mathematics. But there are different views as to how best
-to address computational concerns. From a *constructive* point of
-view, it is a mistake to separate mathematics from its computational
-roots; every meaningful mathematical theorem should have a direct
-computational interpretation. From a *classical* point of view, it is
-more fruitful to maintain a separation of concerns: we can use one
-language and body of methods to write computer programs, while
-maintaining the freedom to use a nonconstructive theories and methods
-to reason about them. Lean is designed to support both of these
-approaches. Core parts of the library are developed constructively,
-but the system also provides support for carrying out classical
-mathematical reasoning.
+계산이 수학에 중요하다는 것에 오늘날에도 여전히 꽤 균등한 합의가 있습니다. 그러나 어떻게 계산적 문제를 가장 잘 다루는가에 대해서는 다양한 견해가 있습니다. *직관주의적* 관점에서, 수학을 그것의 계산적 뿌리로부터 나누는 것은 실수입니다. 모든 의미 있는 수학 정리는 직접적인 계산 해석을 가져야 합니다. *고전주의적* 관점에서 관심사를 나눠두는 것은 더 유익합니다. 비직관주의적 이론과 그들에 대한 추론 방법을 쓰는 자유는 내버려두면서 우리는 한 언어와 방법의 몸체를 사용해 컴퓨터 프로그램을 작성합니다. 린은 이 두 접근 모두 지원하도록 설계되었습니다. 라이브러리의 핵심 부분은 직관주의적으로 개발되었지만 시스템은 고전적인 수학추론을 수행하기 위한 지원도 제공합니다.
 
-Computationally, the purest part of dependent type theory avoids the
-use of ``Prop`` entirely. Inductive types and dependent function types
-can be viewed as data types, and terms of these types can be
-"evaluated" by applying reduction rules until no more rules can be
-applied. In principle, any closed term (that is, term with no free
-variables) of type ``Nat`` should evaluate to a numeral, ``succ
-(... (succ zero)...)``.
+계산적으로 종속 유형론의 가장 순수한 부분은 완전히 ``Prop``의 사용을 피합니다. 귀납형과 의존 함수 유형은 데이터 유형으로 볼 수 있고, 이들 유형의 항은 더 이상 적용할 규칙이 없을 때까지 제거 규칙을 적용함으로써 "평가"될 수 있습니다. 원리상 임의의 닫힌 항(즉, 자유 변수가 없는 항)의 유형 ``Nat``은 수치값 ``succ(... (succ zero)...)``으로 평가되어야 합니다.
 
-Introducing a proof-irrelevant ``Prop`` and marking theorems
-irreducible represents a first step towards separation of
-concerns. The intention is that elements of a type ``p : Prop`` should
-play no role in computation, and so the particular construction of a
-term ``t : p`` is "irrelevant" in that sense. One can still define
-computational objects that incorporate elements of type ``Prop``; the
-point is that these elements can help us reason about the effects of
-the computation, but can be ignored when we extract "code" from the
-term. Elements of type ``Prop`` are not entirely innocuous,
-however. They include equations ``s = t : α`` for any type ``α``, and
-such equations can be used as casts, to type check terms. Below, we
-will see examples of how such casts can block computation in the
-system. However, computation is still possible under an evaluation
-scheme that erases propositional content, ignores intermediate typing
-constraints, and reduces terms until they reach a normal form. This is
-precisely what Lean's virtual machine does.
+증명에 무관한 ``Prop``을 도입하는 것과 정리가 축약 불가함을 표시하는 것은 문제의 분리를 위한 첫 단계를 나타냅니다. 의도는 ``p : Prop``형의 원소가 계산에서 아무 역할도 하지 않아야 한다는 것입니다. 그래서 특히 항 ``t : p``의 생성은 이 관점에 의해 "무관"합니다. 어떤 이는 여전히 ``Prop``형 원소를 포함하는 계산적 대상을 정의할 수 있습니다. 요점은 이 원소는 계산의 효과에 대해 추론하는 것을 돕지만 항으로부터 "코드"를 추출할 때 무시될 수 있다는 것입니다. 하지만 ``Prop``형 원소는 완전히 무해하지 않습니다. 이들은 임의의 ``α``형에 대한 방정식 ``s = t : α``을 포함하고 그 방정식은 형변환 항의 유형 확인에 사용될 수 있습니다. 아래에서 우리는 어떻게 이런 형변환이 시스템에서 계산을 막을 수 있는지 볼 것입니다. 그러나 명제적 내용은 삭제하고, 중간의 작성된 제약을 무시하고, 이들이 평범한 형태에 도달할 때까지 항을 축소하는 평가 과정 하에서 계산은 여전히 가능합니다. 이는 정확히 린의 가상 머신이 하는 일입니다.
 
-Having adopted a proof-irrelevant ``Prop``, one might consider it
-legitimate to use, for example, the law of the excluded middle,
-``p ∨ ¬p``, where ``p`` is any proposition. Of course, this, too, can block
-computation according to the rules of CIC, but it does not block
-bytecode evaluation, as described above. It is only the choice
-principles discussed in :numref:`choice` that completely erase the
-distinction between the proof-irrelevant and data-relevant parts of
-the theory.
+증명 무관한 ``Prop``를 도입하였다면 어떤 이는 예를 들어 ``p`` 가 임의의 명제일 때 이것이 배중률 ``p ∨ ¬p``을 사용해도 적법한지 고려할 지 모릅니다. 당연히 이것도 CIC의 규칙에 따라 계산이 막힙니다. 그러나 위에서 설명했듯이 이것은 바이트 코드 평가를 막지 않습니다. 이론의 증명 무관함과 데이터 연관 부분 사이의 구별을 완전히 지우는 :numref:`선택`에서 논의된 선택 원리입니다.
 
-Propositional Extensionality
+명제 확장성
 ----------------------------
 
-Propositional extensionality is the following axiom:
+명제 확장성은 다음 공리입니다.
 ```lean
 # namespace Hidden
 axiom propext {a b : Prop} : (a ↔ b) → a = b
 # end Hidden
 ```
 
-It asserts that when two propositions imply one another, they are
-actually equal. This is consistent with set-theoretic interpretations
-in which any element ``a : Prop`` is either empty or the singleton set
-``{*}``, for some distinguished element ``*``. The axiom has the
-effect that equivalent propositions can be substituted for one another
-in any context:
+그것은 두 명제가 서로를 함의할 때 그들은 실제로 동등하다고 주장합니다. 이것은 어떤 원소 ``a : Prop``가 비었거나 어떤 구별된 원소 ``*``에 대한 단일 개체 집합 ``{*}``이라는 집합론적인 해석과 일관됩니다. 공리는 동등한 명제는 임의의 맥락 속에서 서로를 대체할 수 있다는 효과를 갖습니다.
 
 ```lean
 theorem thm₁ (a b c d e : Prop) (h : a ↔ b) : (c ∧ a ∧ d → e) ↔ (c ∧ b ∧ d → e) :=
@@ -186,12 +81,10 @@ axioms`` command to display the axioms it depends on.
     -- END
 -->
 
-Function Extensionality
+함수 확장성
 -----------------------
 
-Similar to propositional extensionality, function extensionality
-asserts that any two functions of type ``(x : α) → β x`` that agree on
-all their inputs are equal.
+명제 확장성과 비슷하게 함수 확장성은 그들의 모든 입력에 대해 동의하는 ``(x : α) → β x``형인 임의의 두 함수가 동일하다는 주장입니다.
 
 ```lean
 universe u v
@@ -205,27 +98,11 @@ universe u v
 #print funext
 ```
 
-From a classical, set-theoretic perspective, this is exactly what it
-means for two functions to be equal. This is known as an "extensional"
-view of functions. From a constructive perspective, however, it is
-sometimes more natural to think of functions as algorithms, or
-computer programs, that are presented in some explicit way. It is
-certainly the case that two computer programs can compute the same
-answer for every input despite the fact that they are syntactically
-quite different. In much the same way, you might want to maintain a
-view of functions that does not force you to identify two functions
-that have the same input / output behavior. This is known as an
-"intensional" view of functions.
+고전적인 집합론적 관점에서, 이것은 정확히 두 함수가 동일하다는 의미입니다. 이것을 함수의 "확장된" 관점이라 합니다. 그러나 직관주의적 관점에서 볼 때 함수를 명시적으로 제공되는 알고리즘 또는 컴퓨터 프로그램으로 생각하는 것이 더 자연스러운 경우가 있습니다. 두 개의 컴퓨터 프로그램이 구문론적으로 상당히 다르다는 사실에도 불구하고 모든 입력에 대해 동일한 답을 계산할 수 있는 경우가 확실히 있습니다. 거의 같은 방식으로 동일한 입력/출력 동작을 갖는 두 함수를 식별하도록 강요하지 않는 함수 관점를 유지하기를 원할 수 있습니다. 이것을 함수에 대한 "의도적" 관점이라 합니다.
 
-In fact, function extensionality follows from the existence of
-quotients, which we describe in the next section. In the Lean standard
-library, therefore, ``funext`` is thus
-[proved from the quotient construction](https://github.com/leanprover/lean4/blob/master/src/Init/Core.lean).
+사실, 함수 확장성은 다음 섹션에서 설명하는 몫의 존재에서 비롯됩니다. 그러므로 린 표준 라이브러리에서 ``funext``는 [몫 생성으로부터 증명됩니다.](https://github.com/leanprover/lean4/blob/master/src/Init/Core.lean)
 
-Suppose that for ``α : Type`` we define the ``Set α := α → Prop`` to
-denote the type of subsets of ``α``, essentially identifying subsets
-with predicates. By combining ``funext`` and ``propext``, we obtain an
-extensional theory of such sets:
+``α : Type``에 대해 본질적으로 술어를 갖는 부분집합을 식별하는 ``α``의 부분집합 유형을 나타내기 위해 ``Set α:= α → Prop``을 정의한다고 합시다. ``funext``와 ``propext``를 결합하여 이러한 집합의 확장 이론을 얻습니다.
 
 ```lean
 def Set (α : Type u) := α → Prop
@@ -242,8 +119,7 @@ theorem setext {a b : Set α} (h : ∀ x, x ∈ a ↔ x ∈ b) : a = b :=
 end Set
 ```
 
-We can then proceed to define the empty set and set intersection, for
-example, and prove set identities:
+그런 뒤 공집합과 교집합을 정의하고 집합 항등식을 증명해 나갈 수 있습니다.
 
 ```lean
 # def Set (α : Type u) := α → Prop
@@ -283,8 +159,7 @@ theorem inter.comm (a b : Set α) : a ∩ b = b ∩ a :=
 # end Set
 ```
 
-The following is an example of how function extensionality blocks
-computation inside the Lean kernel.
+다음은 어떻게 함수 확장이 린 커널 속에서 계산을 막는지에 대한 예입니다.
 
 ```lean
 def f (x : Nat) := x
@@ -303,18 +178,7 @@ def val : Nat :=
 #eval val
 ```
 
-First, we show that the two functions ``f`` and ``g`` are equal using
-function extensionality, and then we cast ``0`` of type ``Nat`` by
-replacing ``f`` by ``g`` in the type. Of course, the cast is
-vacuous, because ``Nat`` does not depend on ``f``. But that is enough
-to do the damage: under the computational rules of the system, we now
-have a closed term of ``Nat`` that does not reduce to a numeral. In this
-case, we may be tempted to reduce the expression to ``0``. But in
-nontrivial examples, eliminating cast changes the type of the term,
-which might make an ambient expression type incorrect. The virtual
-machine, however, has no trouble evaluating the expression to
-``0``. Here is a similarly contrived example that shows how
-``propext`` can get in the way.
+먼저 두 함수 ``f``와 ``g``가 함수 확장성을 사용하여 동일함을 보여주고 유형에서 ``f``를 ``g``로 대체하여 ``Nat``형의 ``0``을 형변환합니다. 물론 ``Nat``는 ``f``에 의존하지 않기 때문에 캐스트는 무의미합니다. 그러나 그것으로 피해를 입히기에 충분합니다. 우린 시스템의 계산 규칙에 따라 이제 숫치값으로 줄어들지 않는 ``Nat``의 닫힌 항을 갖습니다. 이 경우 식을 ``0``으로 줄이고 싶을 수 있습니다. 그러나 자명하지 않은 예에서 형변환를 제거하는 것은 항의 유형을 변경하여 표현식 주변의 유형이 올바르지 않을 수 있습니다. 하지만 가상 머신은 식을 ``0``으로 평가하는 데 문제가 없습니다. 다음은 마찬가지로 어떻게 ``propext``가 방해할 수 있는지를 보여주도록 고안된 예입니다.
 
 ```lean
 theorem tteq : (True ∧ True) = True :=
@@ -330,40 +194,16 @@ def val : Nat :=
 #eval val
 ```
 
-Current research programs, including work on *observational type
-theory* and *cubical type theory*, aim to extend type theory in ways
-that permit reductions for casts involving function extensionality,
-quotients, and more. But the solutions are not so clear cut, and the
-rules of Lean's underlying calculus do not sanction such reductions.
+*관찰 유형 이론* 및 *입방 유형 이론*에 대한 작업을 포함한 현재 연구 프로그램은 함수 확장성, 몫 등을 포함하는 형변환에 대한 축소를 허용하는 방식으로 유형론을 확장하는 것을 목표로 합니다. 그러나 해법은 그렇게 명확하지 않으며 Lean의 기반 계산 규칙은 그러한 축소를 승인하지 않습니다.
 
-In a sense, however, a cast does not change the meaning of an
-expression. Rather, it is a mechanism to reason about the expression's
-type. Given an appropriate semantics, it then makes sense to reduce
-terms in ways that preserve their meaning, ignoring the intermediate
-bookkeeping needed to make the reductions type correct. In that case,
-adding new axioms in ``Prop`` does not matter; by proof irrelevance,
-an expression in ``Prop`` carries no information, and can be safely
-ignored by the reduction procedures.
+그러나 어떤 의미에서 형변환는 표현식의 의미를 변경하지 않습니다. 오히려 표현식의 유형에 대해 추론하는 메커니즘입니다. 적절한 의미가 주어지면, 축소 유형을 올바르게 만드는 데 필요한 중간 장부를 무시하면서 항의 의미를 보존하는 방식으로 항를 줄이는 것이 합리적입니다. 이 경우 ``Prop``에 새로운 공리를 추가하는 것은 중요하지 않습니다. 증명 무관성에 의해 ``Prop``의 표현식은 정보를 전달하지 않으며 축소 절차에서 안전하게 무시될 수 있습니다.
 
-Quotients
+몫
 ---------
 
-Let ``α`` be any type, and let ``r`` be an equivalence relation on
-``α``. It is mathematically common to form the "quotient" ``α / r``,
-that is, the type of elements of ``α`` "modulo" ``r``. Set
-theoretically, one can view ``α / r`` as the set of equivalence
-classes of ``α`` modulo ``r``. If ``f : α → β`` is any function that
-respects the equivalence relation in the sense that for every
-``x y : α``, ``r x y`` implies ``f x = f y``, then ``f`` "lifts" to a function
-``f' : α / r → β`` defined on each equivalence class ``⟦x⟧`` by
-``f' ⟦x⟧ = f x``. Lean's standard library extends the Calculus of
-Constructions with additional constants that perform exactly these
-constructions, and installs this last equation as a definitional
-reduction rule.
+``α``를 임의의 유형이라고 하고 ``r``이 ``α``과 동등한 관계라고 합시다. "몫" ``α / r``, 즉 ``α`` "나머지 연산(modulo)" ``r``의 원소 유형을 형성하는 것은 수학적으로 흔합니다. 집합론적으로 ``α / r``을  ``α`` 모듈로 ``r``의 클래스와 동등한 집합으로 볼 수 있습니다. ``f : α → β``가 모든 ``x y : α``에 대해 ``r x y``가 ``f x = f y``를 함의하면 ``f``이다를 의미하는 등가 관계에 대한 함수인 경우, ``f' ⟦x⟧ = f x``에 의해 각 등가 클래스 ``⟦x⟧``에 정의된 함수 ``f': α / r → β``로 "상승"합니다. Lean의 표준 라이브러리는 이 생성을 정확히 수행하는 추가 상수로 직관주의적 계산을 확장하고 이 마지막 방정식을 정의로 인한 축소 규칙으로 설치합니다.
 
-In its most basic form, the quotient construction does not even
-require ``r`` to be an equivalence relation. The following constants
-are built into Lean:
+가장 기본적인 형태의 몫 생성은 ``r``이 등가 관계일 필요 조차 요구하지 않습니다. 다음 상수들은 린에 내장되었습니다.
 
 ```lean
 # namespace Hidden
@@ -383,19 +223,7 @@ axiom Quot.lift :
 # end Hidden
 ```
 
-The first one forms a type ``Quot r`` given a type ``α`` by any binary
-relation ``r`` on ``α``. The second maps ``α`` to ``Quot α``, so that
-if ``r : α → α → Prop`` and ``a : α``, then ``Quot.mk r a`` is an
-element of ``Quot r``. The third principle, ``Quot.ind``, says that
-every element of ``Quot.mk r a`` is of this form.  As for
-``Quot.lift``, given a function ``f : α → β``, if ``h`` is a proof
-that ``f`` respects the relation ``r``, then ``Quot.lift f h`` is the
-corresponding function on ``Quot r``. The idea is that for each
-element ``a`` in ``α``, the function ``Quot.lift f h`` maps
-``Quot.mk r a`` (the ``r``-class containing ``a``) to ``f a``, wherein ``h``
-shows that this function is well defined. In fact, the computation
-principle is declared as a reduction rule, as the proof below makes
-clear.
+첫 번째 것은 ``α``에 대한 ``r``과의 이항 관계에 의해 ``α``형이 주어지면 ``Quot r``형을 형성합니다. 두 번째는 ``α``를 ``Quot α``로 대응하여서 ``r : α → α → Prop`` 및 ``a : α``이면 , ``Quot.mk r a``는 ``Quot r``의 원소입니다.. 세 번째 원칙인 ``Quot.ind``는 ``Quot.mk r a``의 모든 원소가 이 같은 꼴이라고 말합니다.  ``Quot.lift``의 경우, 함수 ``f : α → β``가 주어지고 ``h``가 ``f`` 관계 ``r``에 대한 함수이면 ``Quot.lift f h``는 ``Quot r``로 대응하는 함수입니다. 아이디어는 ``α``의 각 원소 ``a``에 대해 함수 ``Quot.lift f h``가 ``Quot.mk r a`` (``a``를 포함하는 ``r``-클래스)를  ``f a``로 대응합니다. 여기서 ``h``는 이 함수가 잘 정의되었음을 나타냅니다. 사실, 계산 원리는 아래 증명이 명확하게 하는 것처럼 축소 규칙으로 선언됩니다.
 
 ```lean
 def mod7Rel (x y : Nat) : Prop :=
@@ -421,12 +249,7 @@ example (a : Nat) : Quot.lift f f_respects (Quot.mk mod7Rel a) = f a :=
   rfl
 ```
 
-The four constants, ``Quot``, ``Quot.mk``, ``Quot.ind``, and
-``Quot.lift`` in and of themselves are not very strong. You can check
-that the ``Quot.ind`` is satisfied if we take ``Quot r`` to be simply
-``α``, and take ``Quot.lift`` to be the identity function (ignoring
-``h``). For that reason, these four constants are not viewed as
-additional axioms:
+네 가지 상수 ``Quot``, ``Quot.mk``, ``Quot.ind`` 및 ``Quot.lift`` 자체는 그다지 매우 강하지 않습니다. ``Quot r``을 단순히 ``α``로 취하고 ``Quot.lift``을 항등함수로 취하면 (``h`` 무시) ``Quot.ind``가 만족되는지 확인할 수 있습니다. 이러한 이유로 다음 네 개의 상수는 추가적인 공리로 간주되지 않습니다.
 
 <!--
     variables α β : Type
@@ -440,11 +263,9 @@ additional axioms:
     -- END
 -->
 
-They are, like inductively defined types and the associated
-constructors and recursors, viewed as part of the logical framework.
+그것들은 귀납적으로 정의된 유형과 관련 생성자와 재귀자처럼 논리적 프레임워크의 일부로 간주됩니다.
 
-What makes the ``Quot`` construction into a bona fide quotient is the
-following additional axiom:
+``Quot`` 생성을 진정한 몫으로 만드는 것은 다음과 같은 추가 공리입니다.
 
 ```lean
 # namespace Hidden
@@ -455,27 +276,11 @@ axiom Quot.sound :
 # end Hidden
 ```
 
-This is the axiom that asserts that any two elements of ``α`` that are
-related by ``r`` become identified in the quotient. If a theorem or
-definition makes use of ``Quot.sound``, it will show up in the
-``#print axioms`` command.
+이것은 ``r``과 관련된 ``α``의 임의의 두 원소가 몫에서 식별된다는 것을 주장하는 공리입니다. 정리 또는 정의가 ``Quot.sound``를 사용하는 경우 ``#print axioms`` 명령 위에 표시됩니다.
 
-Of course, the quotient construction is most commonly used in
-situations when ``r`` is an equivalence relation. Given ``r`` as
-above, if we define ``r'`` according to the rule ``r' a b`` iff
-``Quot.mk r a = Quot.mk r b``, then it's clear that ``r'`` is an
-equivalence relation. Indeed, ``r'`` is the *kernel* of the function
-``a ↦ quot.mk r a``.  The axiom ``Quot.sound`` says that ``r a b``
-implies ``r' a b``. Using ``Quot.lift`` and ``Quot.ind``, we can show
-that ``r'`` is the smallest equivalence relation containing ``r``, in
-the sense that if ``r''`` is any equivalence relation containing
-``r``, then ``r' a b`` implies ``r'' a b``. In particular, if ``r``
-was an equivalence relation to start with, then for all ``a`` and
-``b`` we have ``r a b`` iff ``r' a b``.
+물론 몫 생성은 ``r``이 등가 관계인 상황에서 가장 흔히 사용됩니다. 위와 같이 ``r``이 주어지면 ``r' a b``이 ``Quot.mk r a = Quot.mk r b``와 동등관계라는 규칙에 따라 ``r'``을 정의하면, ``r'``이 등가 관계임이 분명합니다. 실제로 ``r'``은 함수 ``a ↦ quot.mk r a``의 *커널*입니다.  공리 ``Quot.sound``는 ``r a b``가 ``r' b``를 함의한다고 합니다. ``r''``이 ``r``을 포함하는 임의의 등가 관계이면 ``r' a b``는 ``r'' a b``를 함의한다는 점에서 ``Quot.lift`` 및 ``Quot.ind``를 사용하여 ``r'``이 ``r``을 포함하는 가장 작은 등가 관계임을 보여줄 수 있습니다. 특히, ``r``이 첫 등가 관계라면 모든 ``a``와 ``b``에 대해 ``r a b``는 ``r' b``와 동등하다가 있습니다.
 
-To support this common use case, the standard library defines the
-notion of a *setoid*, which is simply a type with an associated
-equivalence relation:
+이 일반적인 사용 사례를 지원하기 위해 표준 라이브러리는 단순히 연관된 등가 관계가 있는 유형인 *setoid* 개념을 정의합니다.
 
 ```lean
 # namespace Hidden
