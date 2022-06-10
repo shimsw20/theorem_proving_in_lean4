@@ -119,6 +119,15 @@ not the inductive type is specified to land in &lt;g5&gt;Prop&lt;/g5&gt; (that i
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>(See also the discussion in
+&lt;g14&gt;Section Decidable Propositions&lt;/g14&gt;).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191642Z" creationid="tlqk3" creationdate="20220610T191642Z">
+        <seg>(&lt;g14&gt;결정 ​​가능 명제 섹션&lt;/g14&gt;의 논의를 참조하세요.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>(The notation &lt;g2&gt;+&lt;/g2&gt;, as we have defined it, associates to the left, so &lt;g3&gt;m + n + k&lt;/g3&gt; is really &lt;g4&gt;(m + n) + k&lt;/g4&gt;.)
 The hardest part is figuring out which variable to do the induction on.</seg>
       </tuv>
@@ -261,6 +270,16 @@ def b2 : Bool := false
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T170939Z" creationid="tlqk35" creationdate="20220321T170939Z">
         <seg>&lt;g1&gt;의존 유형론(Dependent Type Theory)&lt;/g1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>&lt;g1&gt;Diaconescu's theorem&lt;/g1&gt; states
+that the axiom of choice is sufficient to derive the law of excluded
+middle.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184914Z" creationid="tlqk3" creationdate="20220610T184914Z">
+        <seg>&lt;g1&gt;디아코네스쿠의 정리(Diaconescu's theorem)&lt;/g1&gt;는 선택 공리가 배중률을 도출하기에 충분하다고 말합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -902,6 +921,16 @@ context:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Also in the &lt;g4&gt;Classical&lt;/g4&gt; namespace, the
+function &lt;g5&gt;choose&lt;/g5&gt; and the property &lt;g6&gt;choose_spec&lt;/g6&gt; decompose the two
+parts of the output of &lt;g7&gt;indefinite_description&lt;/g7&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184003Z" creationid="tlqk3" creationdate="20220610T184003Z">
+        <seg>또한 &lt;g4&gt;Classical&lt;/g4&gt; 이름공간에서 함수 &lt;g5&gt;choose&lt;/g5&gt;와 &lt;g6&gt;choose_spec&lt;/g6&gt; 성질은 &lt;g7&gt;indefinite_description&lt;/g7&gt; 출력의 두 부분을 분해합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Alternatively, you can
 define tactic blocks usind curly braces and semicolons.</seg>
       </tuv>
@@ -1159,6 +1188,14 @@ quantifier over &lt;g1&gt;x&lt;/g1&gt; to the hypothesis in the example above.</
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As a result, &lt;g1&gt;f₁&lt;/g1&gt; is equal to &lt;g2&gt;f₂&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182818Z" creationid="tlqk3" creationdate="20220610T182818Z">
+        <seg>결과적으로 &lt;g1&gt;f₁&lt;/g1&gt;는 &lt;g2&gt;f₂&lt;/g2&gt;와 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As a result, &lt;g4&gt;Eq.subst&lt;/g4&gt; doesn't always do what you want it
 to.</seg>
       </tuv>
@@ -1231,6 +1268,16 @@ and classical reasoning.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161756Z" creationid="tlqk35" creationdate="20220321T161756Z">
         <seg>명제 논리의 정리로써 &lt;g1&gt;t2&lt;/g1&gt;가 말하는 것은 무엇인가요?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As an example of classical reasoning, we use &lt;g1&gt;choose&lt;/g1&gt; to show that if
+&lt;g2&gt;f : α → β&lt;/g2&gt; is injective and &lt;g3&gt;α&lt;/g3&gt; is inhabited, then &lt;g4&gt;f&lt;/g4&gt; has a
+left inverse.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191022Z" creationid="tlqk3" creationdate="20220610T191022Z">
+        <seg>고전적 추론의 예로서 &lt;g1&gt;choose&lt;/g1&gt;를 사용하여 &lt;g2&gt;f : α → β&lt;/g2&gt;가 형용사이고 &lt;g3&gt;α&lt;/g3&gt;가 내제된 경우 &lt;g4&gt;f&lt;/g4&gt;는 왼쪽 역함수를 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1638,6 +1685,16 @@ variable, and case on that.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Assuming the ambient type &lt;g1&gt;α&lt;/g1&gt; is nonempty,
+&lt;g2&gt;strongIndefiniteDescription p&lt;/g2&gt; produces an element of &lt;g3&gt;α&lt;/g3&gt;
+satisfying &lt;g4&gt;p&lt;/g4&gt; if there is one.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184637Z" creationid="tlqk3" creationdate="20220610T184637Z">
+        <seg>주변 유형 &lt;g1&gt;α&lt;/g1&gt;가 비어 있지 않다고 가정하고, &lt;g2&gt;strongInReservationDescription p&lt;/g2&gt;는 원소가 하나가 있는 경우 &lt;g4&gt;p&lt;/g4&gt;를 충족하는 &lt;g3&gt;α&lt;/g3&gt;의 원소를 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>At that point, &lt;g2&gt;simp&lt;/g2&gt; applies
 reflexivity to finish it off.</seg>
       </tuv>
@@ -1738,6 +1795,14 @@ every generalization preserves the validity of the goal.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Because &lt;g1&gt;Nonempty α&lt;/g1&gt; has type &lt;g2&gt;Prop&lt;/g2&gt; and its constructor contains data, it can only eliminate to &lt;g3&gt;Prop&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183035Z" creationid="tlqk3" creationdate="20220610T183035Z">
+        <seg>&lt;g1&gt;Nonempty α&lt;/g1&gt;에는 &lt;g2&gt;Prop&lt;/g2&gt; 유형이 있고 생성자에 데이터가 포함되어 있기 때문에 &lt;g3&gt;Prop&lt;/g3&gt;으로만 제거할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Because &lt;g1&gt;Or&lt;/g1&gt; has two constructors, we cannot use anonymous
 constructor notation.</seg>
       </tuv>
@@ -1770,6 +1835,16 @@ fill in as many of the details as possible.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T132211Z" creationid="tlqk35" creationdate="20220321T132211Z">
         <seg>완전히 상세한 공리적 증명은 너무 복잡하기 때문에, 증명 보조기의 문제점은 컴퓨터에 가능한 많이 상세한 것들을 두어야 한다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Because it depends on &lt;g1&gt;choice&lt;/g1&gt;, Lean cannot generate bytecode for
+&lt;g2&gt;indefiniteDescription&lt;/g2&gt;, and so requires us to mark the definition
+as &lt;g3&gt;noncomputable&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184111Z" creationid="tlqk3" creationdate="20220610T183830Z">
+        <seg>&lt;g1&gt;선택(choice)&lt;/g1&gt;에 의존하기 때문에 린은 &lt;g2&gt;무한 설명(indefinite_Description)&lt;/g2&gt;에 대한 바이트 코드를 생성할 수 없으므로 &lt;g3&gt;(noncomputable)계산 불가능&lt;/g3&gt;으로 정의를 표시해야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1945,6 +2020,16 @@ mark such definitions as &lt;g1&gt;noncomputable&lt;/g1&gt; to flag that fact.</
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220605T163357Z" creationid="tlqk3" creationdate="20220605T163357Z">
         <seg>그러나 데이터를 만들기 위해 이 구성을 사용한 표현식은 계산적 내용을 없으며, 우리는 린에서 이러한 정의를 &lt;g1&gt;noncomputable&lt;/g1&gt;로 표시하여 해당 사실을 나타내도록 요구받습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But for every &lt;g8&gt;f&lt;/g8&gt;,
+&lt;g9&gt;extfun_app ⟦f⟧&lt;/g9&gt; is definitionally equal to &lt;g10&gt;fun x =&gt; f x&lt;/g10&gt;, which is
+in turn definitionally equal to &lt;g11&gt;f&lt;/g11&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182524Z" creationid="tlqk3" creationdate="20220610T182524Z">
+        <seg>그러나 모든 &lt;g8&gt;f&lt;/g8&gt;에 대해 &lt;g9&gt;extfun_app ⟦f⟧&lt;/g9&gt;는 정의상으로 &lt;g10&gt;fun x =&gt; f x&lt;/g10&gt;와 동일하며, 이는 다시 정의상으로 &lt;g11&gt;f&lt;/g11&gt;과 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2315,6 +2400,15 @@ to use this instance on pending type class synthesis problems.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>By the
+definition of &lt;g4&gt;u&lt;/g4&gt; and &lt;g5&gt;v&lt;/g5&gt;, this implies that they are equal as well.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190016Z" creationid="tlqk3" creationdate="20220610T190016Z">
+        <seg>&lt;g4&gt;u&lt;/g4&gt; 및 &lt;g5&gt;v&lt;/g5&gt;의 정의에 따르면, 이는 또한 동등함을 함의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>By the above considerations, if &lt;g3&gt;r&lt;/g3&gt; is a well-founded
 relation on a type &lt;g4&gt;α&lt;/g4&gt;, we should have a principle of well-founded
 recursion on &lt;g5&gt;α&lt;/g5&gt;, with respect to the relation &lt;g6&gt;r&lt;/g6&gt;.</seg>
@@ -2365,6 +2459,14 @@ this means that induction is the fundamental method of proof.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T160614Z" creationid="tlqk3" creationdate="20220604T160614Z">
         <seg>연결 개체</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Choice</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182826Z" creationid="tlqk3" creationdate="20220610T182826Z">
+        <seg>선택(Choice)</seg>
       </tuv>
     </tu>
     <tu>
@@ -2461,6 +2563,16 @@ expected type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162506Z" creationid="tlqk35" creationdate="20220321T162506Z">
         <seg>연결사</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Consequences of excluded middle include double-negation elimination,
+proof by cases, and proof by contradiction, all of which are described
+in the &lt;g1&gt;Section Classical Logic&lt;/g1&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190241Z" creationid="tlqk3" creationdate="20220610T190241Z">
+        <seg>배중률의 결과는 이중 부정 제거와 경우에 따른 증명 및 귀류법이 포함되며, 모두 &lt;g1&gt;고전 논리 섹션&lt;/g1&gt;에 설명되어 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2867,6 +2979,15 @@ contain the same number of patterns, one for each element of &lt;g6&gt;β&lt;/g6
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Each of &lt;g1&gt;U&lt;/g1&gt; and &lt;g2&gt;V&lt;/g2&gt; is a disjunction, so &lt;g3&gt;u_def&lt;/g3&gt; and &lt;g4&gt;v_def&lt;/g4&gt;
+represent four cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185805Z" creationid="tlqk3" creationdate="20220610T185805Z">
+        <seg>&lt;g1&gt;U&lt;/g1&gt;와 &lt;g2&gt;V&lt;/g2&gt;는 각각 논리합이므로 &lt;g3&gt;u_def&lt;/g3&gt;와 &lt;g4&gt;v_def&lt;/g4&gt;는 4가지 경우를 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Each style has its own advantages and disadvantages.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184324Z" creationid="tlqk35" creationdate="20220321T184324Z">
@@ -3125,12 +3246,50 @@ a function &lt;g1&gt;f&lt;/g1&gt; to a value &lt;g2&gt;x&lt;/g2&gt; is denoted &
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>First, we can use the notation &lt;g7&gt;a ≈ b&lt;/g7&gt; (entered
+with &lt;g8&gt;\approx&lt;/g8&gt;) for &lt;g9&gt;Setoid.r a b&lt;/g9&gt;, where the instance of
+&lt;g10&gt;Setoid&lt;/g10&gt; is implicit in the notation &lt;g11&gt;Setoid.r&lt;/g11&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174852Z" creationid="tlqk3" creationdate="20220610T174852Z">
+        <seg>먼저 &lt;g9&gt;Setoid.r a b&lt;/g9&gt;에 대해 &lt;g7&gt;a ≈ b&lt;/g7&gt;(&lt;g8&gt;\approx&lt;/g8&gt;로 입력) 표기법을 사용할 수 있습니다. 여기서 &lt;g10&gt;Setoid&lt;/g10&gt;의 개체는 &lt;g11&gt;Setoid.r&lt;/g11&gt; 표기법에 내포되어 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we define
+the relevant equivalence relation:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175759Z" creationid="tlqk3" creationdate="20220610T175759Z">
+        <seg>먼저 연관 등가 관계를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we define a similar
+proposition &lt;g6&gt;mem_fn a u&lt;/g6&gt; on (ordered) pairs; then we show that
+&lt;g7&gt;mem_fn&lt;/g7&gt; respects the equivalence relation &lt;g8&gt;eqv&lt;/g8&gt; with the lemma
+&lt;g9&gt;mem_respects&lt;/g9&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181243Z" creationid="tlqk3" creationdate="20220610T181243Z">
+        <seg>먼저 (순서 있는) 쌍에 대해 유사한 명제 &lt;g6&gt;mem_fn a u&lt;/g6&gt;를 정의합니다. 그 뒤 &lt;g7&gt;mem_fn&lt;/g7&gt;이 보조 정리 &lt;g9&gt;mem_respects&lt;/g9&gt;와 등가 관계 &lt;g8&gt;eqv&lt;/g8&gt;를 존중한다는 것을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>First, we have
 to show that it indeed suffices to show &lt;g2&gt;q&lt;/g2&gt;, by proving the original
 goal of &lt;g3&gt;q ∧ p&lt;/g3&gt; with the additional hypothesis &lt;g4&gt;hq : q&lt;/g4&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165620Z" creationid="tlqk35" creationdate="20220321T165620Z">
         <seg>우선, 우리는 원래 목표&lt;g2&gt;q ∧ p&lt;/g2&gt; 과 추가적인 가정 &lt;g4&gt;hq : q&lt;/g4&gt;으로 증명함으로써 &lt;g2&gt;q&lt;/g2&gt;임을 충분히 보일 수 있는 것을 보여야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we import the necessary axioms, and define two predicates &lt;g1&gt;U&lt;/g1&gt; and &lt;g2&gt;V&lt;/g2&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185111Z" creationid="tlqk3" creationdate="20220610T185111Z">
+        <seg>먼저 필요한 공리를 불러오고 두 개의 술어 &lt;g1&gt;U&lt;/g1&gt;와 &lt;g2&gt;V&lt;/g2&gt;를 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3304,6 +3463,16 @@ notation &lt;g2&gt;≤&lt;/g2&gt; to the &lt;g3&gt;isPrefix&lt;/g3&gt; relation.
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T183450Z" creationid="tlqk3" creationdate="20220525T183356Z">
         <seg>다른 예제에서 우리는 &lt;g1&gt;instance&lt;/g1&gt; 명령을 &lt;g3&gt;isPrefix&lt;/g3&gt;관계에 &lt;g2&gt;≤&lt;/g2&gt;기호를 부여하는 데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For convenience, the standard library also defines &lt;g1&gt;Quotient.lift₂&lt;/g1&gt;
+for lifting binary functions, and &lt;g2&gt;Quotient.ind₂&lt;/g2&gt; for induction on
+two variables.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181914Z" creationid="tlqk3" creationdate="20220610T181914Z">
+        <seg>편의를 위해 표준 라이브러리는 이진 함수를 들어 올리는 &lt;g1&gt;Quotient.lift₂&lt;/g1&gt;와 두 변수에 대한 귀납를 위한 &lt;g2&gt;Quotient.ind₂&lt;/g2&gt;도 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3872,6 +4041,14 @@ to reason about them.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>From a classical point of view, &lt;g1&gt;linv&lt;/g1&gt; is a function.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191652Z" creationid="tlqk3" creationdate="20220610T191652Z">
+        <seg>고전적인 관점에서 &lt;g1&gt;linv&lt;/g1&gt;는 함수입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>From a classical, set-theoretic perspective, this is exactly what it
 means for two functions to be equal.</seg>
       </tuv>
@@ -4016,6 +4193,16 @@ as a family of types over &lt;g6&gt;α&lt;/g6&gt;, that is, a type &lt;g7&gt;β 
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Given a type &lt;g1&gt;α&lt;/g1&gt;, a relation &lt;g2&gt;r&lt;/g2&gt; on &lt;g3&gt;α&lt;/g3&gt;, and a proof &lt;g4&gt;p&lt;/g4&gt;
+that &lt;g5&gt;r&lt;/g5&gt; is an equivalence relation, we can define &lt;g6&gt;Setoid.mk p&lt;/g6&gt;
+as an instance of the setoid class.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174417Z" creationid="tlqk3" creationdate="20220610T174417Z">
+        <seg>어떤 &lt;g1&gt;α&lt;/g1&gt;형에 대한 관계 &lt;g2&gt;r&lt;/g2&gt; 및 &lt;g5&gt;r&lt;/g5&gt;와 등가 관계인 증명 &lt;g4&gt;p&lt;/g4&gt;가 주어지면 &lt;g6&gt;Setoid.mk p&lt;/g6&gt;를 setoid 클래스의 개체로 정의할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Given an application &lt;g4&gt;hMul a b&lt;/g4&gt;, after types of &lt;g5&gt;a&lt;/g5&gt; and &lt;g6&gt;b&lt;/g6&gt; are known, the type class
 synthesizer is invoked, and the resulting type is obtained from the output parameter &lt;g7&gt;γ&lt;/g7&gt;.</seg>
       </tuv>
@@ -4051,6 +4238,15 @@ we should be able to assign a value to each accessible element of
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T174522Z" creationid="tlqk3" creationdate="20220529T174522Z">
         <seg>임의의 유형 &lt;g9&gt;α&lt;/g9&gt;에 대해서 우리는 그것의 모든 전임자들을 우선으로 값을 할당하여 &lt;g10&gt;α&lt;/g10&gt;의 각 접근 가능한 원소에 값을 재귀적으로 할당할 수 있어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Given only the assertion &lt;g1&gt;h&lt;/g1&gt; that &lt;g2&gt;α&lt;/g2&gt; is nonempty, &lt;g3&gt;choice h&lt;/g3&gt;
+magically produces an element of &lt;g4&gt;α&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183339Z" creationid="tlqk3" creationdate="20220610T183339Z">
+        <seg>&lt;g2&gt;α&lt;/g2&gt;가 비어 있지 않다는 주장 &lt;g1&gt;h&lt;/g1&gt;만 주어지면 &lt;g3&gt;choice h&lt;/g3&gt;는 마술처럼 &lt;g4&gt;α&lt;/g4&gt;의 원소를 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4752,12 +4948,28 @@ in cases where &lt;g4&gt;p&lt;/g4&gt; is a proposition.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>If &lt;g1&gt;p&lt;/g1&gt; is true, then every element of &lt;g2&gt;Prop&lt;/g2&gt; is in both &lt;g3&gt;U&lt;/g3&gt; and &lt;g4&gt;V&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185237Z" creationid="tlqk3" creationdate="20220610T185237Z">
+        <seg>&lt;g1&gt;p&lt;/g1&gt;가 참이면 &lt;g2&gt;Prop&lt;/g2&gt;의 모든 원소는 &lt;g3&gt;U&lt;/g3&gt;와 &lt;g4&gt;V&lt;/g4&gt; 둘 다에 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>If &lt;g2&gt;RH&lt;/g2&gt; represents the Riemann
 hypothesis, a classical mathematician is willing to assert
 &lt;g3&gt;RH ∨ ¬RH&lt;/g3&gt;, even though we cannot yet assert either disjunct.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165749Z" creationid="tlqk35" creationdate="20220321T165749Z">
         <seg>만약 &lt;g2&gt;RH&lt;/g2&gt;가 리만 가설을 나타낸다면 우리가 아직 어느쪽에 분리자를 주장하지 않았더라도 고전 수학자는 &lt;g3&gt;RH ∨ ¬RH&lt;/g3&gt;라고 기꺼이 주장할 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If &lt;g5&gt;p&lt;/g5&gt; is false, then &lt;g6&gt;U&lt;/g6&gt; is the singleton &lt;g7&gt;true&lt;/g7&gt;, and &lt;g8&gt;V&lt;/g8&gt; is the singleton &lt;g9&gt;false&lt;/g9&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185455Z" creationid="tlqk3" creationdate="20220610T185455Z">
+        <seg>&lt;g5&gt;p&lt;/g5&gt;가 거짓이면 &lt;g6&gt;U&lt;/g6&gt;는 &lt;g7&gt;true&lt;/g7&gt;를 단일 개체로 갖고 &lt;g8&gt;V&lt;/g8&gt;는 &lt;g9&gt;false&lt;/g9&gt;를 단일 개체로 갖습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5468,6 +5680,16 @@ indicate an implicit argument.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In contrast to &lt;g1&gt;p ∨ ¬ p&lt;/g1&gt;, which can only eliminate to &lt;g2&gt;Prop&lt;/g2&gt;, the
+type &lt;g3&gt;decidable p&lt;/g3&gt; is equivalent to the sum type &lt;g4&gt;Sum p (¬ p)&lt;/g4&gt;, which
+can eliminate to any type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190843Z" creationid="tlqk3" creationdate="20220610T190843Z">
+        <seg>&lt;g2&gt;Prop&lt;/g2&gt;만 제거할 수 있는 &lt;g1&gt;p ∨ ¬ p&lt;/g1&gt;와 달리 &lt;g3&gt;decidable p&lt;/g3&gt;형은 합계 유형 &lt;g4&gt;Sum p(¬ p)&lt;/g4&gt;과 동일합니다. 이는 임의의 유형을 제거할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In contrast to ordinary inductive definition, which constructs an
 element of some &lt;g1&gt;Sort u&lt;/g1&gt;, the more general version constructs a
 function &lt;g2&gt;... → Sort u&lt;/g2&gt;, where "&lt;g3&gt;...&lt;/g3&gt;" denotes a sequence of
@@ -5563,6 +5785,14 @@ the expression denotes the same function as &lt;g7&gt;fun (u : β) (z : α) =&gt
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143430Z" creationid="tlqk35" creationdate="20220321T143430Z">
         <seg>사실 표현식은  &lt;g7&gt;fun (u : β) (z : α) =&gt; u&lt;/g7&gt;처럼 같은 함수를 가리킵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In fact, &lt;g4&gt;Nonempty α&lt;/g4&gt; is equivalent to &lt;g5&gt;∃ x : α, True&lt;/g5&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183051Z" creationid="tlqk3" creationdate="20220610T183051Z">
+        <seg>실제로 &lt;g4&gt;Nonempty α&lt;/g4&gt;는 &lt;g5&gt;∃ x : α, True&lt;/g5&gt;와 동일합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5844,6 +6074,15 @@ proofs of that theorem are definitionally equal.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In one of these cases, &lt;g5&gt;u = True&lt;/g5&gt; and
+&lt;g6&gt;v = False&lt;/g6&gt;, and in all the other cases, &lt;g7&gt;p&lt;/g7&gt; is true.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185826Z" creationid="tlqk3" creationdate="20220610T185826Z">
+        <seg>이러한 경우 중 하나는 &lt;g5&gt;u = True&lt;/g5&gt; 및 &lt;g6&gt;v = False&lt;/g6&gt;이고 다른 모든 경우에는 &lt;g7&gt;p&lt;/g7&gt;가 참입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In other
 words, &lt;g7&gt;assuming&lt;/g7&gt; &lt;g8&gt;α : Type&lt;/g8&gt; is the first argument to the function,
 the type of the next two elements are &lt;g9&gt;α&lt;/g9&gt; and &lt;g10&gt;List α&lt;/g10&gt;.</seg>
@@ -6054,8 +6293,8 @@ reduce to a numeral.</seg>
 was an equivalence relation to start with, then for all &lt;g22&gt;a&lt;/g22&gt; and
 &lt;g23&gt;b&lt;/g23&gt; we have &lt;g24&gt;r a b&lt;/g24&gt; iff &lt;g25&gt;r' a b&lt;/g25&gt;.</seg>
       </tuv>
-      <tuv lang="ko" changeid="tlqk3" changedate="20220605T184616Z" creationid="tlqk3" creationdate="20220605T184616Z">
-        <seg>특히, &lt;g21&gt;r&lt;/g21&gt;이 시작하는 등가 관계라면 모든 &lt;g22&gt;a&lt;/g22&gt;와 &lt;g23&gt;b&lt;/g23&gt;에 대해 &lt;g24&gt;r a b&lt;/g24&gt;는 &lt;g25&gt;r' b&lt;/g25&gt;와 동등하다가 있습니다.</seg>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220605T184721Z" creationid="tlqk3" creationdate="20220605T184616Z">
+        <seg>특히, &lt;g21&gt;r&lt;/g21&gt;이 첫 등가 관계라면 모든 &lt;g22&gt;a&lt;/g22&gt;와 &lt;g23&gt;b&lt;/g23&gt;에 대해 &lt;g24&gt;r a b&lt;/g24&gt;는 &lt;g25&gt;r' b&lt;/g25&gt;와 동등하다가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6309,6 +6548,17 @@ how to "introduce" or establish an implication.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162426Z" creationid="tlqk35" creationdate="20220321T162426Z">
         <seg>지금 상황에서 그것은 "도입"을 어떻게 하는지 또는 함의를 어떻게 세우는지 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the definition
+of &lt;g8&gt;linv&lt;/g8&gt;, choice is used twice: first, to show that
+&lt;g9&gt;(∃ a : A, f a = b)&lt;/g9&gt; is "decidable," and then to choose an &lt;g10&gt;a&lt;/g10&gt; such that
+&lt;g11&gt;f a = b&lt;/g11&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191355Z" creationid="tlqk3" creationdate="20220610T191355Z">
+        <seg>&lt;g8&gt;linv&lt;/g8&gt;의 정의에서 선택은 두 번 사용됩니다. 먼저 &lt;g9&gt;(∃ a : A, f a = b)&lt;/g9&gt;가 "결정 가능"임을 보이는 데 그 뒤 &lt;g11&gt;f a = b&lt;/g11&gt;을 만족하는 &lt;g10&gt;a&lt;/g10&gt;를 선택하는데 사용됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6714,6 +6964,16 @@ and then define an object using objects of the parent structures.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T180616Z" creationid="tlqk35" creationdate="20220528T180616Z">
         <seg>다음 예제에서 우리는 다수의 상속을 사용한 구조체를 정의하고 그 후 부모 구조체의 대상을 사용하는 대상을 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the next section, we will see that &lt;g1&gt;propext&lt;/g1&gt;, &lt;g2&gt;funext&lt;/g2&gt;, and
+&lt;g3&gt;choice&lt;/g3&gt;, taken together, imply the law of the excluded middle and
+the decidability of all propositions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184430Z" creationid="tlqk3" creationdate="20220610T184430Z">
+        <seg>다음 섹션에서는 &lt;g1&gt;propext&lt;/g1&gt;, &lt;g2&gt;funext&lt;/g2&gt; 및 &lt;g3&gt;choice&lt;/g3&gt;가 함께 배중률과 모든 명제의 결정 가능성을 함의 한다는 것을 알 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7721,6 +7981,19 @@ denotes the collection of elements of &lt;g4&gt;α&lt;/g4&gt; that have property
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It is not hard to show
+that extensional equality on the &lt;g1&gt;(x : α) → β x&lt;/g1&gt; is an equivalence
+relation, and so we can consider the type &lt;g2&gt;extfun α β&lt;/g2&gt; of functions
+"up to equivalence." Of course, application respects that equivalence
+in the sense that if &lt;g3&gt;f₁&lt;/g3&gt; is equivalent to &lt;g4&gt;f₂&lt;/g4&gt;, then &lt;g5&gt;f₁ a&lt;/g5&gt; is
+equal to &lt;g6&gt;f₂ a&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182248Z" creationid="tlqk3" creationdate="20220610T182248Z">
+        <seg>&lt;g1&gt;(x : α) → β x&lt;/g1&gt;에 대한 확장적 동등성이 등가 관계임을 보여주는 것은 어렵지 않으므로  "동등할 때까지" 함수 &lt;g2&gt;extfun α β&lt;/g2&gt;형을 고려할 수 있습니다. 물론 함수 적용은 &lt;g3&gt;f₁&lt;/g3&gt;가 &lt;g4&gt;f₂&lt;/g4&gt;와 동등하면 &lt;g5&gt;f₁ a&lt;/g5&gt;가 &lt;g6&gt;f₂ a&lt;/g6&gt;와 같다는 의미에서 등가를 존중합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It is often possible to bring a component of a formula outside a
 universal quantifier, when it does not depend on the quantified
 variable.</seg>
@@ -7821,6 +8094,15 @@ types.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T174429Z" creationid="tlqk35" creationdate="20220321T174429Z">
         <seg>이것은 의존 화살표 유형에 대한 타자 규칙입니다. 특히 그리고 전칭 한정기호는 &lt;g1&gt;Prop&lt;/g1&gt; 과 다른 유형들을 구분합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It is this data that is needed to write an
+if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190931Z" creationid="tlqk3" creationdate="20220610T190931Z">
+        <seg>if-then-else 표현식을 작성하는 데 필요한 것은 이 데이터입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9044,6 +9326,15 @@ precedence allows), not stopping after &lt;g4&gt;b&lt;/g4&gt; but parsing &lt;g5
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>More precisely, it shows that the law of the excluded middle
+follows from &lt;g2&gt;Classical.choice&lt;/g2&gt;, &lt;g3&gt;propext&lt;/g3&gt;, and &lt;g4&gt;funext&lt;/g4&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185003Z" creationid="tlqk3" creationdate="20220610T185003Z">
+        <seg>보다 정확히 &lt;g2&gt;Classical.choice&lt;/g2&gt;, &lt;g3&gt;propext&lt;/g3&gt;, &lt;g4&gt;funext&lt;/g4&gt;로부터 배중률을 따른다는 것을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>More specifically, Lean is based on a version of a system
 known as the Calculus of Constructions with inductive types.</seg>
       </tuv>
@@ -9334,6 +9625,14 @@ obtain &lt;g3&gt;¬p&lt;/g3&gt; by deriving a contradiction from &lt;g4&gt;p&lt;
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164220Z" creationid="tlqk35" creationdate="20220321T164220Z">
         <seg>부정 &lt;g1&gt;¬p&lt;/g1&gt;은 실제로 &lt;g2&gt;p → False&lt;/g2&gt;로 정의되어 있습니다. 그래서 우리는 &lt;g4&gt;p&lt;/g4&gt;로부터 모순을 유도함으로써 &lt;g3&gt;¬p&lt;/g3&gt;를 얻습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Next, we use &lt;g1&gt;some&lt;/g1&gt; to choose an element from each of &lt;g2&gt;U&lt;/g2&gt; and &lt;g3&gt;V&lt;/g3&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185614Z" creationid="tlqk3" creationdate="20220610T185614Z">
+        <seg>다음으로 &lt;g1&gt;some&lt;/g1&gt;을 사용하여 &lt;g2&gt;U&lt;/g2&gt; 및 &lt;g3&gt;V&lt;/g3&gt; 각각으로부터 원소를 선택합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9671,6 +9970,15 @@ parameter to &lt;g2&gt;add&lt;/g2&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Notice that &lt;g12&gt;propDecidable&lt;/g12&gt; is a scoped instance and is activated
+by the &lt;g13&gt;open Classical&lt;/g13&gt; command.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191423Z" creationid="tlqk3" creationdate="20220610T191423Z">
+        <seg>&lt;g12&gt;propDecidable&lt;/g12&gt;은 범위가 지정된 개체이며 &lt;g13&gt;open Classical&lt;/g13&gt; 명령에 의해 활성화됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Notice that &lt;g1&gt;(a : α) → β&lt;/g1&gt; makes sense for any expression &lt;g2&gt;β :
 Type&lt;/g2&gt;.</seg>
       </tuv>
@@ -9856,6 +10164,15 @@ of the constructors.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Notice that we locally define the notation &lt;g1&gt;{a₁, a₂}&lt;/g1&gt; for ordered
+pairs as &lt;g2&gt;Quotient.mk (a₁, a₂)&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180451Z" creationid="tlqk3" creationdate="20220610T180451Z">
+        <seg>순서쌍에 대한 표기 &lt;g1&gt;{a₁, a₂}&lt;/g1&gt;을 지역적으로 &lt;g2&gt;Quotient.mk (a₁, a₂)&lt;/g2&gt;로 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Notice that, once again, when &lt;g1&gt;Nat.recOn&lt;/g1&gt; is used in the context of
 a proof, it is really the induction principle in disguise.</seg>
       </tuv>
@@ -9870,6 +10187,16 @@ use &lt;g1&gt;match&lt;/g1&gt; to prove theorems as well as define functions.</s
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T151724Z" creationid="tlqk3" creationdate="20220526T151724Z">
         <seg>유형으로써 명제 대응 하에서 우리는 합수를 정의하는 것 뿐만 아니라 정리를 증명하는데 &lt;g1&gt;match&lt;/g1&gt;를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Now that we have proved that &lt;g1&gt;eqv&lt;/g1&gt; is an equivalence relation, we
+can construct a &lt;g2&gt;Setoid (α × α)&lt;/g2&gt;, and use it to define the type
+&lt;g3&gt;UProd α&lt;/g3&gt; of unordered pairs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180310Z" creationid="tlqk3" creationdate="20220610T180310Z">
+        <seg>&lt;g1&gt;eqv&lt;/g1&gt;가 등가 관계임을 증명했으므로 &lt;g2&gt;Setoid(α × α)&lt;/g2&gt;를 구성하고 이를 사용하여 순서가 없는 쌍 &lt;g3&gt;UProd α&lt;/g3&gt;형을 정의할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10004,6 +10331,16 @@ situations when &lt;g1&gt;r&lt;/g1&gt; is an equivalence relation.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Of course, this blocks any
+meaningful computation: by the interpretation of &lt;g5&gt;Prop&lt;/g5&gt;, &lt;g6&gt;h&lt;/g6&gt;
+contains no information at all as to how to find such an element.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183430Z" creationid="tlqk3" creationdate="20220610T183430Z">
+        <seg>물론 이것은 의미 있는 계산을 막습니다. &lt;g5&gt;Prop&lt;/g5&gt;의 해석에 따르면 &lt;g6&gt;h&lt;/g6&gt;에는 그러한 원소를 찾는 방법에 대한 정보가 전혀 포함되어 있지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Of course, this, too, can block
 computation according to the rules of CIC, but it does not block
 bytecode evaluation, as described above.</seg>
@@ -10063,6 +10400,15 @@ is based on the &lt;g4&gt;brecOn&lt;/g4&gt; construction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T165140Z" creationid="tlqk3" creationdate="20220603T165140Z">
         <seg>다른 한편 &lt;g3&gt;#reduce fib &lt;n&gt;&lt;/g3&gt;는 &lt;g4&gt;brecOn&lt;/g4&gt; 생성자에 기반한 커널에 보내져 정의를 사용하기 때문에 효율적입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>On the other hand, if &lt;g1&gt;p&lt;/g1&gt; is true, then, by function extensionality
+and propositional extensionality, &lt;g2&gt;U&lt;/g2&gt; and &lt;g3&gt;V&lt;/g3&gt; are equal.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185934Z" creationid="tlqk3" creationdate="20220610T185934Z">
+        <seg>한편, &lt;g1&gt;p&lt;/g1&gt;가 참이면, 함수 확장성과 명제 확장성에 의해 &lt;g2&gt;U&lt;/g2&gt;와 &lt;g3&gt;V&lt;/g3&gt;는 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10424,6 +10770,14 @@ vector of length &lt;g10&gt;n&lt;/g10&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Our axiom of choice is now expressed simply as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183124Z" creationid="tlqk3" creationdate="20220610T183124Z">
+        <seg>우리의 선택 공리는 이제 다음과 같이 간단히 표현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Output parameters</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T163056Z" creationid="tlqk3" creationdate="20220604T163056Z">
@@ -10644,6 +10998,14 @@ with actual proofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Putting these last two facts together yields the desired conclusion:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190058Z" creationid="tlqk3" creationdate="20220610T190058Z">
+        <seg>이 마지막 두 가지 사실을 종합하면 원하는 결론을 얻을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Quantifiers and Equality</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172532Z" creationid="tlqk35" creationdate="20220321T172532Z">
@@ -10716,11 +11078,29 @@ has type &lt;g3&gt;Point&lt;/g3&gt;, the expression &lt;g4&gt;p.foo&lt;/g4&gt; i
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Recall that &lt;g6&gt;if h : c then t else e&lt;/g6&gt; is
+notation for &lt;g7&gt;dite c (fun  h : c =&gt; t) (fun h : ¬ c =&gt; e)&lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191159Z" creationid="tlqk3" creationdate="20220610T191159Z">
+        <seg>&lt;g6&gt;if h : c then t else e&lt;/g6&gt;는 &lt;g7&gt;dite c (fun h : c =&gt; t) (fun h : ¬ c =&gt; e)&lt;/g7&gt;에 대한 표기법임을 기억하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Recall that a non-recursive inductive type that contains only one
 constructor is called a &lt;g1&gt;structure&lt;/g1&gt; or &lt;g2&gt;record&lt;/g2&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T152455Z" creationid="tlqk35" creationdate="20220528T172548Z">
         <seg>한 생성자만을 포함한 비 재귀적인 귀납형은 &lt;g1&gt;구조체(structure)&lt;/g1&gt; 혹은 &lt;g2&gt;레코드(record)&lt;/g2&gt;라고 불린다는 것을 떠올려보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall that in the standard library, &lt;g1&gt;α × β&lt;/g1&gt; represents the
+Cartesian product of the types &lt;g2&gt;α&lt;/g2&gt; and &lt;g3&gt;β&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175533Z" creationid="tlqk3" creationdate="20220610T175533Z">
+        <seg>표준 라이브러리에서 &lt;g1&gt;α × β&lt;/g1&gt;는 &lt;g2&gt;α&lt;/g2&gt; 및 &lt;g3&gt;β&lt;/g3&gt; 형의 데카르트 곱을 나타냅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10755,6 +11135,15 @@ from &lt;g5&gt;Bar&lt;/g5&gt; are available to you as well.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T130820Z" creationid="tlqk3" creationdate="20220526T130820Z">
         <seg>파일의 시작에서  &lt;g1&gt;import&lt;/g1&gt; 명령은 다른 파일로부터 이전에 컴파일된 결과를 불러오고 그 불러오기는 추이적임을 기억하세요. 만약 여러분이 &lt;g2&gt;Foo&lt;/g2&gt;를 가져오고 &lt;g3&gt;Foo&lt;/g3&gt;가 &lt;g4&gt;Bar&lt;/g4&gt;를 가져오면 &lt;g5&gt;Bar&lt;/g5&gt;에서 이용가능한 정의와 정리도 여러분이 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall that the class of &lt;g1&gt;Decidable&lt;/g1&gt;
+propositions is defined as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190548Z" creationid="tlqk3" creationdate="20220610T190548Z">
+        <seg>&lt;g1&gt;Decidable(결정 가능)&lt;/g1&gt; 명제 클래스는 다음과 같이 정의됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11409,6 +11798,15 @@ the same effect as &lt;g5&gt;t&lt;/g5&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>So, when &lt;g12&gt;f₁&lt;/g12&gt; and &lt;g13&gt;f₂&lt;/g13&gt; are
+extensionally equal, we have the following chain of equalities:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182710Z" creationid="tlqk3" creationdate="20220610T182710Z">
+        <seg>그래서 &lt;g12&gt;f₁&lt;/g12&gt;와 &lt;g13&gt;f₂&lt;/g13&gt;가 외연적으로 동일할 때 다음과 같은 등식 연결을 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>So, you can define instances for particular numerals.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T162934Z" creationid="tlqk3" creationdate="20220604T162934Z">
@@ -11525,6 +11923,17 @@ Emacs offer powerful support for writing and debugging proofs, and is much bette
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131922Z" creationid="tlqk35" creationdate="20220321T131922Z">
         <seg>비주얼 스튜디오 코드(짧게는 VS code)에서 특정 모드와 Emacs는 강력한 편집 기능과 증명 디버깅 기능을 지원합니다. 그리고 진지한 사용을 생각한다면 이게 훨씬 적합합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Specifically with quotients we can use the
+generic notation &lt;g15&gt;⟦a⟧&lt;/g15&gt; for &lt;g16&gt;Quot.mk Setoid.r&lt;/g16&gt; where the instance
+of &lt;g17&gt;Setoid&lt;/g17&gt; is implicit in the notation &lt;g18&gt;Setoid.r&lt;/g18&gt;, as well as the
+theorem &lt;g19&gt;Quotient.exact&lt;/g19&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175147Z" creationid="tlqk3" creationdate="20220610T175147Z">
+        <seg>특히 몫과 함께 &lt;g16&gt;Quot.mk Setoid.r&lt;/g16&gt;에 대한 일반 표기법 &lt;g15&gt;⟦a⟧&lt;/g15&gt;를 사용할 수 있습니다. 여기서 &lt;g17&gt;Setoid&lt;/g17&gt;의 개체는 표기법 &lt;g18&gt;Setoid.r&lt;/g18&gt; 및 정리 &lt;g19&gt;Quotient.exact&lt;/g19&gt;에 암시되어 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12123,6 +12532,16 @@ the &lt;g3&gt;Tactics for Inductive Types&lt;/g3&gt; section.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The &lt;g1&gt;choice&lt;/g1&gt; principle also erases the distinction between the
+property of being &lt;g2&gt;Nonempty&lt;/g2&gt; and the more constructive property of
+being &lt;g3&gt;Inhabited&lt;/g3&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184236Z" creationid="tlqk3" creationdate="20220610T184236Z">
+        <seg>&lt;g1&gt;선택&lt;/g1&gt; 원리은 또 &lt;g2&gt;비어 있음&lt;/g2&gt; 속성과 보다 건설적인 &lt;g3&gt;내재&lt;/g3&gt; 속성 간의 구별을 지웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The &lt;g1&gt;contradiction&lt;/g1&gt; tactic searches for a contradiction among the hypotheses of the current goal:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T142215Z" creationid="tlqk35" creationdate="20220524T142215Z">
@@ -12557,6 +12976,14 @@ types with forall-expressions in this way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The Law of the Excluded Middle</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184721Z" creationid="tlqk3" creationdate="20220610T184721Z">
+        <seg>배중률(The Law of the Excluded Middle)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The Lean standard library contains
 many instances of inductive types (e.g., &lt;g1&gt;Nat&lt;/g1&gt;, &lt;g2&gt;Prod&lt;/g2&gt;, &lt;g3&gt;List&lt;/g3&gt;),
 and even the logical connectives are defined using inductive types.</seg>
@@ -12709,6 +13136,16 @@ in any context:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The choice principle is equivalent to
+the principle of &lt;g3&gt;indefinite description&lt;/g3&gt;, which can be expressed with
+subtypes as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183619Z" creationid="tlqk3" creationdate="20220610T183619Z">
+        <seg>선택 원리은 &lt;g3&gt;무한 설명&lt;/g3&gt;의 원리과 동일하며, 다음과 같이 하위 유형으로 표현될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The classical axioms also give you access to additional patterns of
 proof that can be justified by appeal to &lt;g1&gt;em&lt;/g1&gt;.</seg>
       </tuv>
@@ -12783,6 +13220,16 @@ contradiction.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The constants &lt;g1&gt;Quotient.mk&lt;/g1&gt;, &lt;g2&gt;Quotient.ind&lt;/g2&gt;, &lt;g3&gt;Quotient.lift&lt;/g3&gt;,
+and &lt;g4&gt;Quotient.sound&lt;/g4&gt; are nothing more than the specializations of
+the corresponding elements of &lt;g5&gt;Quot&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174655Z" creationid="tlqk3" creationdate="20220610T174655Z">
+        <seg>상수 &lt;g1&gt;Quotient.mk&lt;/g1&gt;, &lt;g2&gt;Quotient.ind&lt;/g2&gt;, &lt;g3&gt;Quotient.lift&lt;/g3&gt;와 &lt;g4&gt;Quotient.sound&lt;/g4&gt;는 &lt;g5&gt;Quot&lt;/g5&gt;의 언소에 대응하는 특수화일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The constructors, &lt;g1&gt;even_zero&lt;/g1&gt;, &lt;g2&gt;even_succ&lt;/g2&gt;, and &lt;g3&gt;odd_succ&lt;/g3&gt; provide positive means for showing that a number is even or odd.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T174551Z" creationid="tlqk3" creationdate="20220603T174551Z">
@@ -12795,6 +13242,15 @@ contradiction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T165008Z" creationid="tlqk3" creationdate="20220603T164419Z">
         <seg>course-of-values 재귀는 &lt;g5&gt;Nat.brecOn&lt;/g5&gt;로 구현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The data component of this
+definition is conventionally known as &lt;g5&gt;Hilbert's epsilon function&lt;/g5&gt;:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184712Z" creationid="tlqk3" creationdate="20220610T184712Z">
+        <seg>이 정의의 데이터 구성요소는 일반적으로 &lt;g5&gt;Hilbert의 엡실론 함수&lt;/g5&gt;로 알려져 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13145,6 +13601,16 @@ the &lt;g1&gt;Curry-Howard isomorphism&lt;/g1&gt;, sometimes known as the
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T155714Z" creationid="tlqk35" creationdate="20220321T155714Z">
         <seg>자연 추론을 위한 증명 보조기에서 함의에 대한 규칙이 함수 추상화와 함수 적용을 지배하는 규칙과 정확히 일치한다는 사실은 &lt;g1&gt;커리-하워드 동형론(Curry-Howard isomorphism) &lt;/g1&gt;의 한 예이며, 때때로 &lt;g2&gt;유형으로써 명제(propositions-as-types)&lt;/g2&gt; 패러다임으로 알려져 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The fact that type class
+inference can find the setoid associated to a type &lt;g6&gt;α&lt;/g6&gt; brings a
+number of benefits.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174728Z" creationid="tlqk3" creationdate="20220610T174728Z">
+        <seg>유형 클래스 추론이 &lt;g6&gt;α&lt;/g6&gt;형과 연관된 setoid를 찾을 수 있다는 사실은 많은 이점을 가져옵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13854,6 +14320,22 @@ product in terms of a function on the two components.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The law of the excluded middle and propositional extensionality imply propositional completeness:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190401Z" creationid="tlqk3" creationdate="20220610T190401Z">
+        <seg>배중률과 명제의 확장성은 명제의 완전성을 함의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The law of the excluded middle is the following</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184739Z" creationid="tlqk3" creationdate="20220610T184739Z">
+        <seg>배중률은 다음과 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The letter "f" is for "French," since the unicode
 symbols can also be used as French quotation marks.</seg>
       </tuv>
@@ -14036,6 +14518,16 @@ proof of &lt;g9&gt;(p → q) → ¬q → ¬p&lt;/g9&gt;.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164305Z" creationid="tlqk35" creationdate="20220321T164305Z">
         <seg>다음 예제는 &lt;g9&gt;(p → q) → ¬q → ¬p&lt;/g9&gt;의 증명을 만들기 위해 세 가지 규칙 모두를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The next step is to prove that &lt;g1&gt;eqv&lt;/g1&gt; is in fact an equivalence
+relation, which is to say, it is reflexive, symmetric and
+transitive.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175847Z" creationid="tlqk3" creationdate="20220610T175847Z">
+        <seg>다음 단계는 &lt;g1&gt;eqv&lt;/g1&gt;가 실제로 등가 관계, 즉 반사적, 대칭적, 추이적임을 증명하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15724,6 +16216,15 @@ is exponential in &lt;g7&gt;n&lt;/g7&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This is an idiom that is used extensively in the
+Lean standard library.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181319Z" creationid="tlqk3" creationdate="20220610T181319Z">
+        <seg>이것은 린 표준 라이브러리에서 광범위하게 사용되는 관용구입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This is an instance of a &lt;g1&gt;dependent function type&lt;/g1&gt;, or &lt;g2&gt;dependent
 arrow type&lt;/g2&gt;.</seg>
       </tuv>
@@ -15778,6 +16279,15 @@ construct above.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182820Z" creationid="tlqk35" creationdate="20220321T182820Z">
         <seg>이것은 본질적으로 위의 &lt;g1&gt;match&lt;/g1&gt; 생성을 위한 대체 기호일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is found in the &lt;g1&gt;Classical&lt;/g1&gt; namespace, so the full name of the
+theorem is &lt;g2&gt;Classical.choice&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183514Z" creationid="tlqk3" creationdate="20220610T183514Z">
+        <seg>이것은 &lt;g1&gt;Classical&lt;/g1&gt; 이름공간에서 발견되므로 정리의 완전한 이름은 &lt;g2&gt;Classical.choice&lt;/g2&gt;입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15913,6 +16423,17 @@ related by &lt;g2&gt;r&lt;/g2&gt; become identified in the quotient.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T181617Z" creationid="tlqk3" creationdate="20220603T181617Z">
         <seg>이것은 교활해서 여러분은 부가함수를 정의해야만 할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is useful for illustrative
+purposes, but it is not a good idea in general, since the notation
+will shadow other uses of curly brackets, such as for records and
+sets.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180600Z" creationid="tlqk3" creationdate="20220610T180600Z">
+        <seg>이것은 설명 목적으로 유용하지만 일반적으로 이 표기법이 레코드 및 집합 같은 중괄호의 다른 용도를 가리기 때문에 일반적으로 좋은 생각은 아닙니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16213,6 +16734,15 @@ want to reason classically.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus application gives rise to a function
+&lt;g7&gt;extfun_app : extfun α β → (x : α) → β x&lt;/g7&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182344Z" creationid="tlqk3" creationdate="20220610T182344Z">
+        <seg>따라서 함수 적용은 함수 &lt;g7&gt;extfun_app : extfun α β → (x : α) → β x&lt;/g7&gt;를 발생시킵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus both of the following
 proofs of &lt;g5&gt;zero_add&lt;/g5&gt; work:</seg>
       </tuv>
@@ -16285,6 +16815,14 @@ for every &lt;g12&gt;a : α&lt;/g12&gt;, &lt;g13&gt;f a&lt;/g13&gt; either retur
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T150624Z" creationid="tlqk3" creationdate="20220527T150624Z">
         <seg>따라서 우리는 &lt;g9&gt;α → Option β&lt;/g9&gt;형의 원소 &lt;g8&gt;f&lt;/g8&gt;를 모든 &lt;g12&gt;a : α&lt;/g12&gt;에 대한 &lt;g10&gt;α&lt;/g10&gt;에서 &lt;g11&gt;β&lt;/g11&gt;까지의 부분함수인 것으로 생각할 수 있습니다. &lt;g13&gt;f a&lt;/g13&gt; &lt;g15&gt;f a&lt;/g15&gt;가 "정의되지 않음"을 가리키는 &lt;g14&gt;none&lt;/g14&gt;을 반환하거나 &lt;g16&gt;some b&lt;/g16&gt;을 반환합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus we have:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185910Z" creationid="tlqk3" creationdate="20220610T185910Z">
+        <seg>따라서 우리는 다음을 가지고 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16390,6 +16928,16 @@ assertion, we need to exhibit a term &lt;g3&gt;t : p&lt;/g3&gt;.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To complete the example, given &lt;g1&gt;a : α&lt;/g1&gt; and &lt;g2&gt;u : uprod α&lt;/g2&gt;, we
+define the proposition &lt;g3&gt;a ∈ u&lt;/g3&gt; which should hold if &lt;g4&gt;a&lt;/g4&gt; is one of
+the elements of the unordered pair &lt;g5&gt;u&lt;/g5&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181106Z" creationid="tlqk3" creationdate="20220610T181106Z">
+        <seg>예제를 끝내기 위해 &lt;g1&gt;a : α&lt;/g1&gt; 및 &lt;g2&gt;u : uprod α&lt;/g2&gt;가 주어졌을 때, &lt;g4&gt;a&lt;/g4&gt;는 순서가 지정되지 않은 쌍 &lt;g5&gt;u&lt;/g5&gt;의 원소 중 하나이면 성립해야 하는 명제 &lt;g3&gt;a ∈ u&lt;/g3&gt;를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To define a function on &lt;g4&gt;Prod α β&lt;/g4&gt;, we
 can assume the input is of the form &lt;g5&gt;Prod.mk a b&lt;/g5&gt;, and we have to
 specify the output, in terms of &lt;g6&gt;a&lt;/g6&gt; and &lt;g7&gt;b&lt;/g7&gt;.</seg>
@@ -16425,6 +16973,15 @@ declare universe variables explicitly using the &lt;g1&gt;universe&lt;/g1&gt; co
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T174058Z" creationid="tlqk3" creationdate="20220603T174058Z">
         <seg>이런 함수를 정의하려면 린은 적절히 잘 세워진 척도를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To define the left inverse &lt;g5&gt;linv&lt;/g5&gt;, we use a dependent
+if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191127Z" creationid="tlqk3" creationdate="20220610T191127Z">
+        <seg>왼쪽 역함수 &lt;g5&gt;linv&lt;/g5&gt;를 정의하기 위해 종속적인 if-then-else 표현식을 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16484,6 +17041,16 @@ transitive.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T185734Z" creationid="tlqk3" creationdate="20220525T185734Z">
         <seg>차이를 설명하자면 유클리드 관계의 반사성은 모두 대칭적이고 추이적임을 보이는 다음 예제를 생각해보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To illustrate the use
+of quotients, let us define the type of &lt;g4&gt;unordered&lt;/g4&gt; pairs of elements
+of a type &lt;g5&gt;α&lt;/g5&gt; as a quotient of the type &lt;g6&gt;α × α&lt;/g6&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175735Z" creationid="tlqk3" creationdate="20220610T175735Z">
+        <seg>몫의 사용을 설명하기 위해 &lt;g5&gt;α&lt;/g5&gt; 형의 &lt;g4&gt;순서 없는&lt;/g4&gt; 순서쌍 유형을 &lt;g6&gt;α × α&lt;/g6&gt; 형의 몫으로 정의합시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16549,12 +17116,31 @@ theorem, and expressive enough to do it in a natural way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To state the final axiom defined in the standard library, we need the
+&lt;g1&gt;Nonempty&lt;/g1&gt; type, which is defined as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182923Z" creationid="tlqk3" creationdate="20220610T182923Z">
+        <seg>표준 라이브러리에 정의된 최종 공리를 기술하려면 다음과 같이 정의되는 &lt;g1&gt;Nonempty&lt;/g1&gt;형이 필요합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To summarize, then, on top of the underlying framework of universes,
 dependent function types, and inductive types, the standard library
 adds three additional components:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220605T163910Z" creationid="tlqk3" creationdate="20220605T163910Z">
         <seg>요약하자면 표준 라이브러리는 유형 세계, 종속 함수 유형과 귀납형의 기반 프레임워크 위에 세 가지 구성요소를 더합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To support this common use case, the standard library defines the
+notion of a &lt;g1&gt;setoid&lt;/g1&gt;, which is simply a type with an associated
+equivalence relation:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220605T184658Z" creationid="tlqk3" creationdate="20220605T184658Z">
+        <seg>이 일반적인 사용 사례를 지원하기 위해 표준 라이브러리는 단순히 연관된 등가 관계가 있는 유형인 &lt;g1&gt;setoid&lt;/g1&gt; 개념을 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16611,6 +17197,25 @@ principle, you have to open the classical namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165706Z" creationid="tlqk35" creationdate="20220321T165706Z">
         <seg>이 원리를 사용하기 위해서 여러분은 classical 이름공간을 열어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Together with &lt;g1&gt;Quotient.sound&lt;/g1&gt;, this implies that the elements of
+the quotient correspond exactly to the equivalence classes of elements
+in &lt;g2&gt;α&lt;/g2&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175511Z" creationid="tlqk3" creationdate="20220610T175511Z">
+        <seg>&lt;g1&gt;Quotient.sound&lt;/g1&gt;와 함께 이것은 몫의 요소가 &lt;g2&gt;α&lt;/g2&gt; 속 원소의 등가 클래스와 정확히 일치한다는 것을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Together with choice, we also get the stronger principle that every
+proposition is decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190434Z" creationid="tlqk3" creationdate="20220610T190434Z">
+        <seg>선택과 함께 우리는 또한 모든 명제가 결정 가능하다는 더 강력한 원리을 얻습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16900,6 +17505,15 @@ in the previous sections more compactly as follows:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Using those, one can strengthen
+the principle of indefinite description as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184347Z" creationid="tlqk3" creationdate="20220610T184347Z">
+        <seg>그것들을 사용하여 다음과 같이 무한 설명의 원리을 강화할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Values of type &lt;g1&gt;Point&lt;/g1&gt; are created using &lt;g2&gt;Point.mk a b&lt;/g2&gt;, and the
 fields of a point &lt;g3&gt;p&lt;/g3&gt; are accessed using &lt;g4&gt;Point.x p&lt;/g4&gt; and
 &lt;g5&gt;Point.y p&lt;/g5&gt; (but &lt;g6&gt;p.x&lt;/g6&gt; and &lt;g7&gt;p.y&lt;/g7&gt; also work, see below).</seg>
@@ -16942,6 +17556,15 @@ can make this more precise by looking at the commands the above unfold to:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T122256Z" creationid="tlqk3" creationdate="20220526T122256Z">
         <seg>우리는 위의 명령을 다음으로 펼쳐보는 것으로 이를 더 정확하게 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We
+sketch the proof that is found in the standard library.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185046Z" creationid="tlqk3" creationdate="20220610T185046Z">
+        <seg>표준 라이브러리에서 발견한 증명을 그립니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17135,6 +17758,15 @@ explicitly:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can easily prove that &lt;g1&gt;{a₁, a₂} = {a₂, a₁}&lt;/g1&gt; using &lt;g2&gt;quot.sound&lt;/g2&gt;,
+since we have &lt;g3&gt;(a₁, a₂) ~ (a₂, a₁)&lt;/g3&gt;.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180704Z" creationid="tlqk3" creationdate="20220610T180704Z">
+        <seg>&lt;g3&gt;(a₁, a₂) ~ (a₂, a₁)&lt;/g3&gt;를 갖기 때문에 &lt;g2&gt;quot.sound&lt;/g2&gt;을 사용해 &lt;g1&gt;{a₁, a₂} = {a₂, a₁}&lt;/g1&gt;을 쉽게 증명할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can even use the match statement to decompose the conjunction at the same time:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182705Z" creationid="tlqk35" creationdate="20220321T182705Z">
@@ -17172,6 +17804,17 @@ the implicit arguments (which are displayed here as metavariables).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T180742Z" creationid="tlqk35" creationdate="20220524T180742Z">
         <seg>우리느 더 짤은 별명이 생기는 것을 &lt;g1&gt;protected&lt;/g1&gt;  키워드를 사용하여 막을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We can prove these three facts in a convenient and
+readable way by using dependent pattern matching to perform
+case-analysis and break the hypotheses into pieces that are then
+reassembled to produce the conclusion.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180032Z" creationid="tlqk3" creationdate="20220610T180032Z">
+        <seg>종속 패턴 매칭를 사용하여 사례 분석을 수행하고 가정을 여러 부분으로 나눈 다음 재조합하여 결론을 도출함으로써 이 세 가지 사실을 편리하고 가독성 있는 방식으로 증명할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17253,6 +17896,16 @@ data we already have.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can use the
+generic theorems &lt;g12&gt;Setoid.refl&lt;/g12&gt;, &lt;g13&gt;Setoid.symm&lt;/g13&gt;, &lt;g14&gt;Setoid.trans&lt;/g14&gt; to
+reason about the relation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175037Z" creationid="tlqk3" creationdate="20220610T175037Z">
+        <seg>일반 정리 &lt;g12&gt;Setoid.refl&lt;/g12&gt;, &lt;g13&gt;Setoid.symm&lt;/g13&gt;, &lt;g14&gt;Setoid.trans&lt;/g14&gt;를 사용하여 관계를 추론할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can use the anonymous constructor notation &lt;g1&gt;⟨t, h⟩&lt;/g1&gt; for
 &lt;g2&gt;Exists.intro t h&lt;/g2&gt;, when the type is clear from the context.</seg>
       </tuv>
@@ -17296,6 +17949,15 @@ tactic.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T172649Z" creationid="tlqk3" creationdate="20220527T172649Z">
         <seg> 귀납형과 동작하는 걸 가능하도록 설계된 즉, &lt;g1&gt;injection&lt;/g1&gt; 전략으로 우리는 이 장을 이 마지막을 마칩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We close this section with some hints as to why the quotient
+construction implies function extenionality.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181939Z" creationid="tlqk3" creationdate="20220610T181939Z">
+        <seg>몫 구성이 함수 확장성을 의미하는 이유에 대한 몇 가지 힌트로 이 섹션을 마무리합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17589,6 +18251,15 @@ no arguments, so we have it from the start.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T154138Z" creationid="tlqk3" creationdate="20220527T154138Z">
         <seg>&lt;g1&gt;zero : Nat&lt;/g1&gt;으로 시작합니다. 이것은 아무 인수를 받지 않습니다. 그래서 우리는 시작부터 이것을 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We use this instance to justify
+the if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191502Z" creationid="tlqk3" creationdate="20220610T191502Z">
+        <seg>이 개체를 사용하여 if-then-else 표현식을 정당화합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -19535,6 +20206,19 @@ i.e. that it should be synthesized using typeclass resolution.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T155255Z" creationid="tlqk3" creationdate="20220527T155255Z">
         <seg>여러분은 다음을 발견합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>| (a₁, a₂) =&gt; a = a₁ ∨ a = a₂
+
+-- auxiliary lemma for proving mem_respects
+private theorem mem_swap {a : α} :</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181838Z" creationid="tlqk3" creationdate="20220610T181838Z">
+        <seg>| (a₁, a₂) =&gt; a = a₁ ∨ a = a₂
+
+--mem_respects를 증명하기 위한 보조 정리 mem_swap {a : α}:</seg>
       </tuv>
     </tu>
     <tu>

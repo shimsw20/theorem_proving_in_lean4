@@ -119,6 +119,15 @@ Sort 0).</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>(See also the discussion in
+Section Decidable Propositions).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191642Z" creationid="tlqk3" creationdate="20220610T191642Z">
+        <seg>(결정 ​​가능 명제 섹션의 논의를 참조하세요.)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>(The notation +, as we have defined it, associates to the left, so m + n + k is really (m + n) + k.)
 The hardest part is figuring out which variable to do the induction on.</seg>
       </tuv>
@@ -261,6 +270,16 @@ def b2 : Bool := false
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T170939Z" creationid="tlqk35" creationdate="20220321T170939Z">
         <seg>의존 유형론(Dependent Type Theory)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Diaconescu's theorem states
+that the axiom of choice is sufficient to derive the law of excluded
+middle.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184914Z" creationid="tlqk3" creationdate="20220610T184914Z">
+        <seg>디아코네스쿠의 정리(Diaconescu's theorem)는 선택 공리가 배중률을 도출하기에 충분하다고 말합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -902,6 +921,16 @@ context:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Also in the Classical namespace, the
+function choose and the property choose_spec decompose the two
+parts of the output of indefinite_description:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184003Z" creationid="tlqk3" creationdate="20220610T184003Z">
+        <seg>또한 Classical 이름공간에서 함수 choose와 choose_spec 성질은 indefinite_description 출력의 두 부분을 분해합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Alternatively, you can
 define tactic blocks usind curly braces and semicolons.</seg>
       </tuv>
@@ -1159,6 +1188,14 @@ quantifier over x to the hypothesis in the example above.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>As a result, f₁ is equal to f₂.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182818Z" creationid="tlqk3" creationdate="20220610T182818Z">
+        <seg>결과적으로 f₁는 f₂와 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>As a result, Eq.subst doesn't always do what you want it
 to.</seg>
       </tuv>
@@ -1231,6 +1268,16 @@ and classical reasoning.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T161756Z" creationid="tlqk35" creationdate="20220321T161756Z">
         <seg>명제 논리의 정리로써 t2가 말하는 것은 무엇인가요?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>As an example of classical reasoning, we use choose to show that if
+f : α → β is injective and α is inhabited, then f has a
+left inverse.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191022Z" creationid="tlqk3" creationdate="20220610T191022Z">
+        <seg>고전적 추론의 예로서 choose를 사용하여 f : α → β가 형용사이고 α가 내제된 경우 f는 왼쪽 역함수를 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1638,6 +1685,16 @@ variable, and case on that.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Assuming the ambient type α is nonempty,
+strongIndefiniteDescription p produces an element of α
+satisfying p if there is one.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184637Z" creationid="tlqk3" creationdate="20220610T184637Z">
+        <seg>주변 유형 α가 비어 있지 않다고 가정하고, strongInReservationDescription p는 원소가 하나가 있는 경우 p를 충족하는 α의 원소를 생성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>At that point, simp applies
 reflexivity to finish it off.</seg>
       </tuv>
@@ -1738,6 +1795,14 @@ every generalization preserves the validity of the goal.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Because Nonempty α has type Prop and its constructor contains data, it can only eliminate to Prop.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183035Z" creationid="tlqk3" creationdate="20220610T183035Z">
+        <seg>Nonempty α에는 Prop 유형이 있고 생성자에 데이터가 포함되어 있기 때문에 Prop으로만 제거할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Because Or has two constructors, we cannot use anonymous
 constructor notation.</seg>
       </tuv>
@@ -1770,6 +1835,16 @@ fill in as many of the details as possible.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T132211Z" creationid="tlqk35" creationdate="20220321T132211Z">
         <seg>완전히 상세한 공리적 증명은 너무 복잡하기 때문에, 증명 보조기의 문제점은 컴퓨터에 가능한 많이 상세한 것들을 두어야 한다는 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Because it depends on choice, Lean cannot generate bytecode for
+indefiniteDescription, and so requires us to mark the definition
+as noncomputable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184111Z" creationid="tlqk3" creationdate="20220610T183830Z">
+        <seg>선택(choice)에 의존하기 때문에 린은 무한 설명(indefinite_Description)에 대한 바이트 코드를 생성할 수 없으므로 (noncomputable)계산 불가능으로 정의를 표시해야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1945,6 +2020,16 @@ mark such definitions as noncomputable to flag that fact.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220605T163357Z" creationid="tlqk3" creationdate="20220605T163357Z">
         <seg>그러나 데이터를 만들기 위해 이 구성을 사용한 표현식은 계산적 내용을 없으며, 우리는 린에서 이러한 정의를 noncomputable로 표시하여 해당 사실을 나타내도록 요구받습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>But for every f,
+extfun_app ⟦f⟧ is definitionally equal to fun x =&gt; f x, which is
+in turn definitionally equal to f.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182524Z" creationid="tlqk3" creationdate="20220610T182524Z">
+        <seg>그러나 모든 f에 대해 extfun_app ⟦f⟧는 정의상으로 fun x =&gt; f x와 동일하며, 이는 다시 정의상으로 f과 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2315,6 +2400,15 @@ to use this instance on pending type class synthesis problems.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>By the
+definition of u and v, this implies that they are equal as well.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190016Z" creationid="tlqk3" creationdate="20220610T190016Z">
+        <seg>u 및 v의 정의에 따르면, 이는 또한 동등함을 함의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>By the above considerations, if r is a well-founded
 relation on a type α, we should have a principle of well-founded
 recursion on α, with respect to the relation r.</seg>
@@ -2365,6 +2459,14 @@ this means that induction is the fundamental method of proof.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T160614Z" creationid="tlqk3" creationdate="20220604T160614Z">
         <seg>연결 개체</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Choice</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182826Z" creationid="tlqk3" creationdate="20220610T182826Z">
+        <seg>선택(Choice)</seg>
       </tuv>
     </tu>
     <tu>
@@ -2461,6 +2563,16 @@ expected type.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T162506Z" creationid="tlqk35" creationdate="20220321T162506Z">
         <seg>연결사</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Consequences of excluded middle include double-negation elimination,
+proof by cases, and proof by contradiction, all of which are described
+in the Section Classical Logic.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190241Z" creationid="tlqk3" creationdate="20220610T190241Z">
+        <seg>배중률의 결과는 이중 부정 제거와 경우에 따른 증명 및 귀류법이 포함되며, 모두 고전 논리 섹션에 설명되어 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2867,6 +2979,15 @@ contain the same number of patterns, one for each element of β.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Each of U and V is a disjunction, so u_def and v_def
+represent four cases.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185805Z" creationid="tlqk3" creationdate="20220610T185805Z">
+        <seg>U와 V는 각각 논리합이므로 u_def와 v_def는 4가지 경우를 나타냅니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Each style has its own advantages and disadvantages.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T184324Z" creationid="tlqk35" creationdate="20220321T184324Z">
@@ -3125,12 +3246,50 @@ a function f to a value x is denoted f x (e.g., Nat.succ 2).</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>First, we can use the notation a ≈ b (entered
+with \approx) for Setoid.r a b, where the instance of
+Setoid is implicit in the notation Setoid.r.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174852Z" creationid="tlqk3" creationdate="20220610T174852Z">
+        <seg>먼저 Setoid.r a b에 대해 a ≈ b(\approx로 입력) 표기법을 사용할 수 있습니다. 여기서 Setoid의 개체는 Setoid.r 표기법에 내포되어 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we define
+the relevant equivalence relation:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175759Z" creationid="tlqk3" creationdate="20220610T175759Z">
+        <seg>먼저 연관 등가 관계를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we define a similar
+proposition mem_fn a u on (ordered) pairs; then we show that
+mem_fn respects the equivalence relation eqv with the lemma
+mem_respects.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181243Z" creationid="tlqk3" creationdate="20220610T181243Z">
+        <seg>먼저 (순서 있는) 쌍에 대해 유사한 명제 mem_fn a u를 정의합니다. 그 뒤 mem_fn이 보조 정리 mem_respects와 등가 관계 eqv를 존중한다는 것을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>First, we have
 to show that it indeed suffices to show q, by proving the original
 goal of q ∧ p with the additional hypothesis hq : q.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165620Z" creationid="tlqk35" creationdate="20220321T165620Z">
         <seg>우선, 우리는 원래 목표q ∧ p 과 추가적인 가정 hq : q으로 증명함으로써 q임을 충분히 보일 수 있는 것을 보여야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>First, we import the necessary axioms, and define two predicates U and V:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185111Z" creationid="tlqk3" creationdate="20220610T185111Z">
+        <seg>먼저 필요한 공리를 불러오고 두 개의 술어 U와 V를 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3304,6 +3463,16 @@ notation ≤ to the isPrefix relation.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220525T183450Z" creationid="tlqk3" creationdate="20220525T183356Z">
         <seg>다른 예제에서 우리는 instance 명령을 isPrefix관계에 ≤기호를 부여하는 데 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>For convenience, the standard library also defines Quotient.lift₂
+for lifting binary functions, and Quotient.ind₂ for induction on
+two variables.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181914Z" creationid="tlqk3" creationdate="20220610T181914Z">
+        <seg>편의를 위해 표준 라이브러리는 이진 함수를 들어 올리는 Quotient.lift₂와 두 변수에 대한 귀납를 위한 Quotient.ind₂도 정의합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3849,6 +4018,17 @@ same." Lean recognizes this equivalence.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>From a
+constructive point of view, it is unacceptable; because there is no
+way to implement such a function in general, the construction is not
+informative.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T192008Z" creationid="tlqk3" creationdate="20220610T192008Z">
+        <seg>일반적으로 그러한 기능을 구현할 방법이 없고 생성도 유익하지 않으므로 직관주의적인 관점에서 이는 허용되지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>From a constructive point of
 view, it is a mistake to separate mathematics from its computational
 roots; every meaningful mathematical theorem should have a direct
@@ -3868,6 +4048,14 @@ to reason about them.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220605T171017Z" creationid="tlqk3" creationdate="20220605T171017Z">
         <seg>고전주의적 관점에서 관심사를 나눠두는 것은 더 유익합니다. 비직관주의적 이론과 그들에 대한 추론 방법을 쓰는 자유는 내버려두면서 우리는 한 언어와 방법의 몸체를 사용해 컴퓨터 프로그램을 작성합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>From a classical point of view, linv is a function.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191652Z" creationid="tlqk3" creationdate="20220610T191652Z">
+        <seg>고전적인 관점에서 linv는 함수입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4016,6 +4204,16 @@ a : α.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Given a type α, a relation r on α, and a proof p
+that r is an equivalence relation, we can define Setoid.mk p
+as an instance of the setoid class.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174417Z" creationid="tlqk3" creationdate="20220610T174417Z">
+        <seg>어떤 α형에 대한 관계 r 및 r와 등가 관계인 증명 p가 주어지면 Setoid.mk p를 setoid 클래스의 개체로 정의할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Given an application hMul a b, after types of a and b are known, the type class
 synthesizer is invoked, and the resulting type is obtained from the output parameter γ.</seg>
       </tuv>
@@ -4051,6 +4249,15 @@ we should be able to assign a value to each accessible element of
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220529T174522Z" creationid="tlqk3" creationdate="20220529T174522Z">
         <seg>임의의 유형 α에 대해서 우리는 그것의 모든 전임자들을 우선으로 값을 할당하여 α의 각 접근 가능한 원소에 값을 재귀적으로 할당할 수 있어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Given only the assertion h that α is nonempty, choice h
+magically produces an element of α.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183339Z" creationid="tlqk3" creationdate="20220610T183339Z">
+        <seg>α가 비어 있지 않다는 주장 h만 주어지면 choice h는 마술처럼 α의 원소를 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4752,12 +4959,28 @@ in cases where p is a proposition.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>If p is true, then every element of Prop is in both U and V.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185237Z" creationid="tlqk3" creationdate="20220610T185237Z">
+        <seg>p가 참이면 Prop의 모든 원소는 U와 V 둘 다에 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>If RH represents the Riemann
 hypothesis, a classical mathematician is willing to assert
 RH ∨ ¬RH, even though we cannot yet assert either disjunct.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165749Z" creationid="tlqk35" creationdate="20220321T165749Z">
         <seg>만약 RH가 리만 가설을 나타낸다면 우리가 아직 어느쪽에 분리자를 주장하지 않았더라도 고전 수학자는 RH ∨ ¬RH라고 기꺼이 주장할 겁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>If p is false, then U is the singleton true, and V is the singleton false.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185455Z" creationid="tlqk3" creationdate="20220610T185455Z">
+        <seg>p가 거짓이면 U는 true를 단일 개체로 갖고 V는 false를 단일 개체로 갖습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5468,6 +5691,16 @@ indicate an implicit argument.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In contrast to p ∨ ¬ p, which can only eliminate to Prop, the
+type decidable p is equivalent to the sum type Sum p (¬ p), which
+can eliminate to any type.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190843Z" creationid="tlqk3" creationdate="20220610T190843Z">
+        <seg>Prop만 제거할 수 있는 p ∨ ¬ p와 달리 decidable p형은 합계 유형 Sum p(¬ p)과 동일합니다. 이는 임의의 유형을 제거할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In contrast to ordinary inductive definition, which constructs an
 element of some Sort u, the more general version constructs a
 function ... → Sort u, where "..." denotes a sequence of
@@ -5563,6 +5796,14 @@ the expression denotes the same function as fun (u : β) (z : α) =&gt; u.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T143430Z" creationid="tlqk35" creationdate="20220321T143430Z">
         <seg>사실 표현식은  fun (u : β) (z : α) =&gt; u처럼 같은 함수를 가리킵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In fact, Nonempty α is equivalent to ∃ x : α, True:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183051Z" creationid="tlqk3" creationdate="20220610T183051Z">
+        <seg>실제로 Nonempty α는 ∃ x : α, True와 동일합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5840,6 +6081,15 @@ proofs of that theorem are definitionally equal.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T160904Z" creationid="tlqk35" creationdate="20220321T160904Z">
         <seg>평범한 상황에서 증명 무연관에 의해 정리의 "정의"를 펼칠 필요는 절대 없습니다. 그리고 그 정리의 임의의 두 증명도 정의상으로 동등합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In one of these cases, u = True and
+v = False, and in all the other cases, p is true.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185826Z" creationid="tlqk3" creationdate="20220610T185826Z">
+        <seg>이러한 경우 중 하나는 u = True 및 v = False이고 다른 모든 경우에는 p가 참입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6313,6 +6563,17 @@ how to "introduce" or establish an implication.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>In the definition
+of linv, choice is used twice: first, to show that
+(∃ a : A, f a = b) is "decidable," and then to choose an a such that
+f a = b.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191355Z" creationid="tlqk3" creationdate="20220610T191355Z">
+        <seg>linv의 정의에서 선택은 두 번 사용됩니다. 먼저 (∃ a : A, f a = b)가 "결정 가능"임을 보이는 데 그 뒤 f a = b을 만족하는 a를 선택하는데 사용됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>In the editors, you can type the backwards arrow as
 \l.</seg>
       </tuv>
@@ -6714,6 +6975,16 @@ and then define an object using objects of the parent structures.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220528T180616Z" creationid="tlqk35" creationdate="20220528T180616Z">
         <seg>다음 예제에서 우리는 다수의 상속을 사용한 구조체를 정의하고 그 후 부모 구조체의 대상을 사용하는 대상을 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>In the next section, we will see that propext, funext, and
+choice, taken together, imply the law of the excluded middle and
+the decidability of all propositions.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184430Z" creationid="tlqk3" creationdate="20220610T184430Z">
+        <seg>다음 섹션에서는 propext, funext 및 choice가 함께 배중률과 모든 명제의 결정 가능성을 함의 한다는 것을 알 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7721,6 +7992,19 @@ denotes the collection of elements of α that have property p.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>It is not hard to show
+that extensional equality on the (x : α) → β x is an equivalence
+relation, and so we can consider the type extfun α β of functions
+"up to equivalence." Of course, application respects that equivalence
+in the sense that if f₁ is equivalent to f₂, then f₁ a is
+equal to f₂ a.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182248Z" creationid="tlqk3" creationdate="20220610T182248Z">
+        <seg>(x : α) → β x에 대한 확장적 동등성이 등가 관계임을 보여주는 것은 어렵지 않으므로  "동등할 때까지" 함수 extfun α β형을 고려할 수 있습니다. 물론 함수 적용은 f₁가 f₂와 동등하면 f₁ a가 f₂ a와 같다는 의미에서 등가를 존중합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>It is often possible to bring a component of a formula outside a
 universal quantifier, when it does not depend on the quantified
 variable.</seg>
@@ -7821,6 +8105,15 @@ types.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T174429Z" creationid="tlqk35" creationdate="20220321T174429Z">
         <seg>이것은 의존 화살표 유형에 대한 타자 규칙입니다. 특히 그리고 전칭 한정기호는 Prop 과 다른 유형들을 구분합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>It is this data that is needed to write an
+if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190931Z" creationid="tlqk3" creationdate="20220610T190931Z">
+        <seg>if-then-else 표현식을 작성하는 데 필요한 것은 이 데이터입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9044,6 +9337,15 @@ precedence allows), not stopping after b but parsing ~ c as well.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>More precisely, it shows that the law of the excluded middle
+follows from Classical.choice, propext, and funext.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185003Z" creationid="tlqk3" creationdate="20220610T185003Z">
+        <seg>보다 정확히 Classical.choice, propext, funext로부터 배중률을 따른다는 것을 보여줍니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>More specifically, Lean is based on a version of a system
 known as the Calculus of Constructions with inductive types.</seg>
       </tuv>
@@ -9334,6 +9636,14 @@ obtain ¬p by deriving a contradiction from p.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164220Z" creationid="tlqk35" creationdate="20220321T164220Z">
         <seg>부정 ¬p은 실제로 p → False로 정의되어 있습니다. 그래서 우리는 p로부터 모순을 유도함으로써 ¬p를 얻습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Next, we use some to choose an element from each of U and V:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185614Z" creationid="tlqk3" creationdate="20220610T185614Z">
+        <seg>다음으로 some을 사용하여 U 및 V 각각으로부터 원소를 선택합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9671,6 +9981,15 @@ parameter to add.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Notice that propDecidable is a scoped instance and is activated
+by the open Classical command.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191423Z" creationid="tlqk3" creationdate="20220610T191423Z">
+        <seg>propDecidable은 범위가 지정된 개체이며 open Classical 명령에 의해 활성화됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Notice that (a : α) → β makes sense for any expression β :
 Type.</seg>
       </tuv>
@@ -9856,6 +10175,15 @@ of the constructors.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Notice that we locally define the notation {a₁, a₂} for ordered
+pairs as Quotient.mk (a₁, a₂).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180451Z" creationid="tlqk3" creationdate="20220610T180451Z">
+        <seg>순서쌍에 대한 표기 {a₁, a₂}을 지역적으로 Quotient.mk (a₁, a₂)로 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Notice that, once again, when Nat.recOn is used in the context of
 a proof, it is really the induction principle in disguise.</seg>
       </tuv>
@@ -9870,6 +10198,16 @@ use match to prove theorems as well as define functions.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T151724Z" creationid="tlqk3" creationdate="20220526T151724Z">
         <seg>유형으로써 명제 대응 하에서 우리는 합수를 정의하는 것 뿐만 아니라 정리를 증명하는데 match를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Now that we have proved that eqv is an equivalence relation, we
+can construct a Setoid (α × α), and use it to define the type
+UProd α of unordered pairs.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180310Z" creationid="tlqk3" creationdate="20220610T180310Z">
+        <seg>eqv가 등가 관계임을 증명했으므로 Setoid(α × α)를 구성하고 이를 사용하여 순서가 없는 쌍 UProd α형을 정의할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10004,6 +10342,16 @@ situations when r is an equivalence relation.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Of course, this blocks any
+meaningful computation: by the interpretation of Prop, h
+contains no information at all as to how to find such an element.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183430Z" creationid="tlqk3" creationdate="20220610T183430Z">
+        <seg>물론 이것은 의미 있는 계산을 막습니다. Prop의 해석에 따르면 h에는 그러한 원소를 찾는 방법에 대한 정보가 전혀 포함되어 있지 않습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Of course, this, too, can block
 computation according to the rules of CIC, but it does not block
 bytecode evaluation, as described above.</seg>
@@ -10063,6 +10411,15 @@ is based on the brecOn construction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T165140Z" creationid="tlqk3" creationdate="20220603T165140Z">
         <seg>다른 한편 #reduce fib &lt;n&gt;는 brecOn 생성자에 기반한 커널에 보내져 정의를 사용하기 때문에 효율적입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>On the other hand, if p is true, then, by function extensionality
+and propositional extensionality, U and V are equal.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185934Z" creationid="tlqk3" creationdate="20220610T185934Z">
+        <seg>한편, p가 참이면, 함수 확장성과 명제 확장성에 의해 U와 V는 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10424,6 +10781,14 @@ vector of length n.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Our axiom of choice is now expressed simply as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183124Z" creationid="tlqk3" creationdate="20220610T183124Z">
+        <seg>우리의 선택 공리는 이제 다음과 같이 간단히 표현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Output parameters</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T163056Z" creationid="tlqk3" creationdate="20220604T163056Z">
@@ -10644,6 +11009,14 @@ with actual proofs.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Putting these last two facts together yields the desired conclusion:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190058Z" creationid="tlqk3" creationdate="20220610T190058Z">
+        <seg>이 마지막 두 가지 사실을 종합하면 원하는 결론을 얻을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Quantifiers and Equality</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T172532Z" creationid="tlqk35" creationdate="20220321T172532Z">
@@ -10716,11 +11089,29 @@ foo has type Point.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Recall that if h : c then t else e is
+notation for dite c (fun  h : c =&gt; t) (fun h : ¬ c =&gt; e).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191159Z" creationid="tlqk3" creationdate="20220610T191159Z">
+        <seg>if h : c then t else e는 dite c (fun h : c =&gt; t) (fun h : ¬ c =&gt; e)에 대한 표기법임을 기억하세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Recall that a non-recursive inductive type that contains only one
 constructor is called a structure or record.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T152455Z" creationid="tlqk35" creationdate="20220528T172548Z">
         <seg>한 생성자만을 포함한 비 재귀적인 귀납형은 구조체(structure) 혹은 레코드(record)라고 불린다는 것을 떠올려보세요.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall that in the standard library, α × β represents the
+Cartesian product of the types α and β.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175533Z" creationid="tlqk3" creationdate="20220610T175533Z">
+        <seg>표준 라이브러리에서 α × β는 α 및 β 형의 데카르트 곱을 나타냅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10755,6 +11146,15 @@ from Bar are available to you as well.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T130820Z" creationid="tlqk3" creationdate="20220526T130820Z">
         <seg>파일의 시작에서  import 명령은 다른 파일로부터 이전에 컴파일된 결과를 불러오고 그 불러오기는 추이적임을 기억하세요. 만약 여러분이 Foo를 가져오고 Foo가 Bar를 가져오면 Bar에서 이용가능한 정의와 정리도 여러분이 사용할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Recall that the class of Decidable
+propositions is defined as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190548Z" creationid="tlqk3" creationdate="20220610T190548Z">
+        <seg>Decidable(결정 가능) 명제 클래스는 다음과 같이 정의됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11409,6 +11809,15 @@ focus (all_goals t)은 t와 같은 효과를 갖습니다.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>So, when f₁ and f₂ are
+extensionally equal, we have the following chain of equalities:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182710Z" creationid="tlqk3" creationdate="20220610T182710Z">
+        <seg>그래서 f₁와 f₂가 외연적으로 동일할 때 다음과 같은 등식 연결을 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>So, you can define instances for particular numerals.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220604T162934Z" creationid="tlqk3" creationdate="20220604T162934Z">
@@ -11525,6 +11934,17 @@ Emacs offer powerful support for writing and debugging proofs, and is much bette
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T131922Z" creationid="tlqk35" creationdate="20220321T131922Z">
         <seg>비주얼 스튜디오 코드(짧게는 VS code)에서 특정 모드와 Emacs는 강력한 편집 기능과 증명 디버깅 기능을 지원합니다. 그리고 진지한 사용을 생각한다면 이게 훨씬 적합합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Specifically with quotients we can use the
+generic notation ⟦a⟧ for Quot.mk Setoid.r where the instance
+of Setoid is implicit in the notation Setoid.r, as well as the
+theorem Quotient.exact:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175147Z" creationid="tlqk3" creationdate="20220610T175147Z">
+        <seg>특히 몫과 함께 Quot.mk Setoid.r에 대한 일반 표기법 ⟦a⟧를 사용할 수 있습니다. 여기서 Setoid의 개체는 표기법 Setoid.r 및 정리 Quotient.exact에 암시되어 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12123,6 +12543,16 @@ Tactics for Inductive Types  섹션에서 더욱 상세히 논의될 예정입�
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The choice principle also erases the distinction between the
+property of being Nonempty and the more constructive property of
+being Inhabited:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184236Z" creationid="tlqk3" creationdate="20220610T184236Z">
+        <seg>선택 원리은 또 비어 있음 속성과 보다 건설적인 내재 속성 간의 구별을 지웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The contradiction tactic searches for a contradiction among the hypotheses of the current goal:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T142215Z" creationid="tlqk35" creationdate="20220524T142215Z">
@@ -12557,6 +12987,14 @@ types with forall-expressions in this way.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The Law of the Excluded Middle</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184721Z" creationid="tlqk3" creationdate="20220610T184721Z">
+        <seg>배중률(The Law of the Excluded Middle)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The Lean standard library contains
 many instances of inductive types (e.g., Nat, Prod, List),
 and even the logical connectives are defined using inductive types.</seg>
@@ -12709,6 +13147,16 @@ in any context:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The choice principle is equivalent to
+the principle of indefinite description, which can be expressed with
+subtypes as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183619Z" creationid="tlqk3" creationdate="20220610T183619Z">
+        <seg>선택 원리은 무한 설명의 원리과 동일하며, 다음과 같이 하위 유형으로 표현될 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The classical axioms also give you access to additional patterns of
 proof that can be justified by appeal to em.</seg>
       </tuv>
@@ -12783,6 +13231,16 @@ contradiction.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The constants Quotient.mk, Quotient.ind, Quotient.lift,
+and Quotient.sound are nothing more than the specializations of
+the corresponding elements of Quot.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174655Z" creationid="tlqk3" creationdate="20220610T174655Z">
+        <seg>상수 Quotient.mk, Quotient.ind, Quotient.lift와 Quotient.sound는 Quot의 언소에 대응하는 특수화일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The constructors, even_zero, even_succ, and odd_succ provide positive means for showing that a number is even or odd.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T174551Z" creationid="tlqk3" creationdate="20220603T174551Z">
@@ -12795,6 +13253,15 @@ contradiction.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T165008Z" creationid="tlqk3" creationdate="20220603T164419Z">
         <seg>course-of-values 재귀는 Nat.brecOn로 구현됩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The data component of this
+definition is conventionally known as Hilbert's epsilon function:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184712Z" creationid="tlqk3" creationdate="20220610T184712Z">
+        <seg>이 정의의 데이터 구성요소는 일반적으로 Hilbert의 엡실론 함수로 알려져 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13145,6 +13612,16 @@ propositions-as-types paradigm.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T155714Z" creationid="tlqk35" creationdate="20220321T155714Z">
         <seg>자연 추론을 위한 증명 보조기에서 함의에 대한 규칙이 함수 추상화와 함수 적용을 지배하는 규칙과 정확히 일치한다는 사실은 커리-하워드 동형론(Curry-Howard isomorphism) 의 한 예이며, 때때로 유형으로써 명제(propositions-as-types) 패러다임으로 알려져 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The fact that type class
+inference can find the setoid associated to a type α brings a
+number of benefits.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T174728Z" creationid="tlqk3" creationdate="20220610T174728Z">
+        <seg>유형 클래스 추론이 α형과 연관된 setoid를 찾을 수 있다는 사실은 많은 이점을 가져옵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13854,6 +14331,22 @@ product in terms of a function on the two components.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>The law of the excluded middle and propositional extensionality imply propositional completeness:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190401Z" creationid="tlqk3" creationdate="20220610T190401Z">
+        <seg>배중률과 명제의 확장성은 명제의 완전성을 함의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The law of the excluded middle is the following</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184739Z" creationid="tlqk3" creationdate="20220610T184739Z">
+        <seg>배중률은 다음과 같습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>The letter "f" is for "French," since the unicode
 symbols can also be used as French quotation marks.</seg>
       </tuv>
@@ -14036,6 +14529,16 @@ proof of (p → q) → ¬q → ¬p.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T164305Z" creationid="tlqk35" creationdate="20220321T164305Z">
         <seg>다음 예제는 (p → q) → ¬q → ¬p의 증명을 만들기 위해 세 가지 규칙 모두를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>The next step is to prove that eqv is in fact an equivalence
+relation, which is to say, it is reflexive, symmetric and
+transitive.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175847Z" creationid="tlqk3" creationdate="20220610T175847Z">
+        <seg>다음 단계는 eqv가 실제로 등가 관계, 즉 반사적, 대칭적, 추이적임을 증명하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15724,6 +16227,15 @@ is exponential in n.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>This is an idiom that is used extensively in the
+Lean standard library.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181319Z" creationid="tlqk3" creationdate="20220610T181319Z">
+        <seg>이것은 린 표준 라이브러리에서 광범위하게 사용되는 관용구입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>This is an instance of a dependent function type, or dependent
 arrow type.</seg>
       </tuv>
@@ -15778,6 +16290,15 @@ construct above.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182820Z" creationid="tlqk35" creationdate="20220321T182820Z">
         <seg>이것은 본질적으로 위의 match 생성을 위한 대체 기호일 뿐입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is found in the Classical namespace, so the full name of the
+theorem is Classical.choice.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T183514Z" creationid="tlqk3" creationdate="20220610T183514Z">
+        <seg>이것은 Classical 이름공간에서 발견되므로 정리의 완전한 이름은 Classical.choice입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15913,6 +16434,17 @@ related by r become identified in the quotient.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T181617Z" creationid="tlqk3" creationdate="20220603T181617Z">
         <seg>이것은 교활해서 여러분은 부가함수를 정의해야만 할 것입니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>This is useful for illustrative
+purposes, but it is not a good idea in general, since the notation
+will shadow other uses of curly brackets, such as for records and
+sets.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180600Z" creationid="tlqk3" creationdate="20220610T180600Z">
+        <seg>이것은 설명 목적으로 유용하지만 일반적으로 이 표기법이 레코드 및 집합 같은 중괄호의 다른 용도를 가리기 때문에 일반적으로 좋은 생각은 아닙니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16213,6 +16745,15 @@ want to reason classically.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Thus application gives rise to a function
+extfun_app : extfun α β → (x : α) → β x.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182344Z" creationid="tlqk3" creationdate="20220610T182344Z">
+        <seg>따라서 함수 적용은 함수 extfun_app : extfun α β → (x : α) → β x를 발생시킵니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Thus both of the following
 proofs of zero_add work:</seg>
       </tuv>
@@ -16285,6 +16826,14 @@ f a is "undefined", or some b.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T150624Z" creationid="tlqk3" creationdate="20220527T150624Z">
         <seg>따라서 우리는 α → Option β형의 원소 f를 모든 a : α에 대한 α에서 β까지의 부분함수인 것으로 생각할 수 있습니다. f a f a가 "정의되지 않음"을 가리키는 none을 반환하거나 some b을 반환합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Thus we have:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185910Z" creationid="tlqk3" creationdate="20220610T185910Z">
+        <seg>따라서 우리는 다음을 가지고 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16390,6 +16939,16 @@ assertion, we need to exhibit a term t : p.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To complete the example, given a : α and u : uprod α, we
+define the proposition a ∈ u which should hold if a is one of
+the elements of the unordered pair u.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181106Z" creationid="tlqk3" creationdate="20220610T181106Z">
+        <seg>예제를 끝내기 위해 a : α 및 u : uprod α가 주어졌을 때, a는 순서가 지정되지 않은 쌍 u의 원소 중 하나이면 성립해야 하는 명제 a ∈ u를 정의합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To define a function on Prod α β, we
 can assume the input is of the form Prod.mk a b, and we have to
 specify the output, in terms of a and b.</seg>
@@ -16425,6 +16984,15 @@ declare universe variables explicitly using the universe command:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220603T174058Z" creationid="tlqk3" creationdate="20220603T174058Z">
         <seg>이런 함수를 정의하려면 린은 적절히 잘 세워진 척도를 사용합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To define the left inverse linv, we use a dependent
+if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191127Z" creationid="tlqk3" creationdate="20220610T191127Z">
+        <seg>왼쪽 역함수 linv를 정의하기 위해 종속적인 if-then-else 표현식을 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16488,6 +17056,16 @@ transitive.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>To illustrate the use
+of quotients, let us define the type of unordered pairs of elements
+of a type α as a quotient of the type α × α.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175735Z" creationid="tlqk3" creationdate="20220610T175735Z">
+        <seg>몫의 사용을 설명하기 위해 α 형의 순서 없는 순서쌍 유형을 α × α 형의 몫으로 정의합시다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>To make dite more
 convenient to use, Lean allows us to write if h : c then t else e
 instead of dite c (λ h : c, t) (λ h : ¬ c, e).</seg>
@@ -16545,6 +17123,15 @@ theorem, and expressive enough to do it in a natural way.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T132047Z" creationid="tlqk35" creationdate="20220321T132047Z">
         <seg>먼저 여러분은 Lean이 기초하고 있는 논리 체계 즉 거의 모든 기존의 수학적 정리를 증명할 수 있을 만큼 강력하고 그것을 자연스럽게 할 수 있을 만큼 충분히 표현력이 뛰어난 의존유형론 버전을 배웁니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>To state the final axiom defined in the standard library, we need the
+Nonempty type, which is defined as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T182923Z" creationid="tlqk3" creationdate="20220610T182923Z">
+        <seg>표준 라이브러리에 정의된 최종 공리를 기술하려면 다음과 같이 정의되는 Nonempty형이 필요합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16621,6 +17208,25 @@ principle, you have to open the classical namespace.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T165706Z" creationid="tlqk35" creationdate="20220321T165706Z">
         <seg>이 원리를 사용하기 위해서 여러분은 classical 이름공간을 열어야 합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Together with Quotient.sound, this implies that the elements of
+the quotient correspond exactly to the equivalence classes of elements
+in α.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175511Z" creationid="tlqk3" creationdate="20220610T175511Z">
+        <seg>Quotient.sound와 함께 이것은 몫의 요소가 α 속 원소의 등가 클래스와 정확히 일치한다는 것을 의미합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>Together with choice, we also get the stronger principle that every
+proposition is decidable.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T190434Z" creationid="tlqk3" creationdate="20220610T190434Z">
+        <seg>선택과 함께 우리는 또한 모든 명제가 결정 가능하다는 더 강력한 원리을 얻습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16910,6 +17516,15 @@ in the previous sections more compactly as follows:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>Using those, one can strengthen
+the principle of indefinite description as follows:</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T184347Z" creationid="tlqk3" creationdate="20220610T184347Z">
+        <seg>그것들을 사용하여 다음과 같이 무한 설명의 원리을 강화할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>Values of type Point are created using Point.mk a b, and the
 fields of a point p are accessed using Point.x p and
 Point.y p (but p.x and p.y also work, see below).</seg>
@@ -16952,6 +17567,15 @@ can make this more precise by looking at the commands the above unfold to:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220526T122256Z" creationid="tlqk3" creationdate="20220526T122256Z">
         <seg>우리는 위의 명령을 다음으로 펼쳐보는 것으로 이를 더 정확하게 만들 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We
+sketch the proof that is found in the standard library.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T185046Z" creationid="tlqk3" creationdate="20220610T185046Z">
+        <seg>표준 라이브러리에서 발견한 증명을 그립니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17145,6 +17769,15 @@ explicitly:</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can easily prove that {a₁, a₂} = {a₂, a₁} using quot.sound,
+since we have (a₁, a₂) ~ (a₂, a₁).</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180704Z" creationid="tlqk3" creationdate="20220610T180704Z">
+        <seg>(a₁, a₂) ~ (a₂, a₁)를 갖기 때문에 quot.sound을 사용해 {a₁, a₂} = {a₂, a₁}을 쉽게 증명할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can even use the match statement to decompose the conjunction at the same time:</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220321T182705Z" creationid="tlqk35" creationdate="20220321T182705Z">
@@ -17182,6 +17815,17 @@ the implicit arguments (which are displayed here as metavariables).</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk35" changedate="20220524T180742Z" creationid="tlqk35" creationdate="20220524T180742Z">
         <seg>우리느 더 짤은 별명이 생기는 것을 protected  키워드를 사용하여 막을 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We can prove these three facts in a convenient and
+readable way by using dependent pattern matching to perform
+case-analysis and break the hypotheses into pieces that are then
+reassembled to produce the conclusion.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T180032Z" creationid="tlqk3" creationdate="20220610T180032Z">
+        <seg>종속 패턴 매칭를 사용하여 사례 분석을 수행하고 가정을 여러 부분으로 나눈 다음 재조합하여 결론을 도출함으로써 이 세 가지 사실을 편리하고 가독성 있는 방식으로 증명할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17263,6 +17907,16 @@ data we already have.</seg>
     </tu>
     <tu>
       <tuv lang="en-US">
+        <seg>We can use the
+generic theorems Setoid.refl, Setoid.symm, Setoid.trans to
+reason about the relation.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T175037Z" creationid="tlqk3" creationdate="20220610T175037Z">
+        <seg>일반 정리 Setoid.refl, Setoid.symm, Setoid.trans를 사용하여 관계를 추론할 수 있습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
         <seg>We can use the anonymous constructor notation ⟨t, h⟩ for
 Exists.intro t h, when the type is clear from the context.</seg>
       </tuv>
@@ -17306,6 +17960,15 @@ tactic.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T172649Z" creationid="tlqk3" creationdate="20220527T172649Z">
         <seg> 귀납형과 동작하는 걸 가능하도록 설계된 즉, injection 전략으로 우리는 이 장을 이 마지막을 마칩니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We close this section with some hints as to why the quotient
+construction implies function extenionality.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181939Z" creationid="tlqk3" creationdate="20220610T181939Z">
+        <seg>몫 구성이 함수 확장성을 의미하는 이유에 대한 몇 가지 힌트로 이 섹션을 마무리합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17599,6 +18262,15 @@ no arguments, so we have it from the start.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T154138Z" creationid="tlqk3" creationdate="20220527T154138Z">
         <seg>zero : Nat으로 시작합니다. 이것은 아무 인수를 받지 않습니다. 그래서 우리는 시작부터 이것을 갖습니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>We use this instance to justify
+the if-then-else expression.</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T191502Z" creationid="tlqk3" creationdate="20220610T191502Z">
+        <seg>이 개체를 사용하여 if-then-else 표현식을 정당화합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -19545,6 +20217,19 @@ i.e. that it should be synthesized using typeclass resolution.</seg>
       </tuv>
       <tuv lang="ko" changeid="tlqk3" changedate="20220527T155255Z" creationid="tlqk3" creationdate="20220527T155255Z">
         <seg>여러분은 다음을 발견합니다.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en-US">
+        <seg>| (a₁, a₂) =&gt; a = a₁ ∨ a = a₂
+
+-- auxiliary lemma for proving mem_respects
+private theorem mem_swap {a : α} :</seg>
+      </tuv>
+      <tuv lang="ko" changeid="tlqk3" changedate="20220610T181838Z" creationid="tlqk3" creationdate="20220610T181838Z">
+        <seg>| (a₁, a₂) =&gt; a = a₁ ∨ a = a₂
+
+--mem_respects를 증명하기 위한 보조 정리 mem_swap {a : α}:</seg>
       </tuv>
     </tu>
     <tu>

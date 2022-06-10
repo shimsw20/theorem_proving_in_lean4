@@ -308,9 +308,7 @@ end Setoid
 # end Hidden
 ```
 
-Given a type ``α``, a relation ``r`` on ``α``, and a proof ``p``
-that ``r`` is an equivalence relation, we can define ``Setoid.mk p``
-as an instance of the setoid class.
+어떤 ``α``형에 대한 관계 ``r`` 및 ``r``와 등가 관계인 증명 ``p``가 주어지면 ``Setoid.mk p``를 setoid 클래스의 개체로 정의할 수 있습니다.
 
 ```lean
 # namespace Hidden
@@ -319,18 +317,7 @@ def Quotient {α : Sort u} (s : Setoid α) :=
 # end Hidden
 ```
 
-The constants ``Quotient.mk``, ``Quotient.ind``, ``Quotient.lift``,
-and ``Quotient.sound`` are nothing more than the specializations of
-the corresponding elements of ``Quot``. The fact that type class
-inference can find the setoid associated to a type ``α`` brings a
-number of benefits. First, we can use the notation ``a ≈ b`` (entered
-with ``\approx``) for ``Setoid.r a b``, where the instance of
-``Setoid`` is implicit in the notation ``Setoid.r``. We can use the
-generic theorems ``Setoid.refl``, ``Setoid.symm``, ``Setoid.trans`` to
-reason about the relation. Specifically with quotients we can use the
-generic notation ``⟦a⟧`` for ``Quot.mk Setoid.r`` where the instance
-of ``Setoid`` is implicit in the notation ``Setoid.r``, as well as the
-theorem ``Quotient.exact``:
+상수 ``Quotient.mk``, ``Quotient.ind``, ``Quotient.lift``와 ``Quotient.sound``는 ``Quot``의 언소에 대응하는 특수화일 뿐입니다. 유형 클래스 추론이 ``α``형과 연관된 setoid를 찾을 수 있다는 사실은 많은 이점을 가져옵니다. 먼저 ``Setoid.r a b``에 대해 ``a ≈ b``(``\approx``로 입력) 표기법을 사용할 수 있습니다. 여기서 ``Setoid``의 개체는 ``Setoid.r`` 표기법에 내포되어 있습니다. 일반 정리 ``Setoid.refl``, ``Setoid.symm``, ``Setoid.trans``를 사용하여 관계를 추론할 수 있습니다. 특히 몫과 함께 ``Quot.mk Setoid.r``에 대한 일반 표기법 ``⟦a⟧``를 사용할 수 있습니다. 여기서 ``Setoid``의 개체는 표기법 ``Setoid.r`` 및 정리 ``Quotient.exact``에 암시되어 있습니다.
 
 ```lean
 # universe u
@@ -339,15 +326,9 @@ theorem ``Quotient.exact``:
            Quotient.mk s a = Quotient.mk s b → a ≈ b)
 ```
 
-Together with ``Quotient.sound``, this implies that the elements of
-the quotient correspond exactly to the equivalence classes of elements
-in ``α``.
+``Quotient.sound``와 함께 이것은 몫의 요소가 ``α`` 속 원소의 등가 클래스와 정확히 일치한다는 것을 의미합니다.
 
-Recall that in the standard library, ``α × β`` represents the
-Cartesian product of the types ``α`` and ``β``. To illustrate the use
-of quotients, let us define the type of *unordered* pairs of elements
-of a type ``α`` as a quotient of the type ``α × α``. First, we define
-the relevant equivalence relation:
+표준 라이브러리에서 ``α × β``는 ``α`` 및 ``β`` 형의 데카르트 곱을 나타냅니다. 몫의 사용을 설명하기 위해 ``α`` 형의 *순서 없는* 순서쌍 유형을 ``α × α`` 형의 몫으로 정의합시다. 먼저 연관 등가 관계를 정의합니다.
 
 ```lean
 private def eqv (p₁ p₂ : α × α) : Prop :=
@@ -356,12 +337,7 @@ private def eqv (p₁ p₂ : α × α) : Prop :=
 infix:50 " ~ " => eqv
 ```
 
-The next step is to prove that ``eqv`` is in fact an equivalence
-relation, which is to say, it is reflexive, symmetric and
-transitive. We can prove these three facts in a convenient and
-readable way by using dependent pattern matching to perform
-case-analysis and break the hypotheses into pieces that are then
-reassembled to produce the conclusion.
+다음 단계는 ``eqv``가 실제로 등가 관계, 즉 반사적, 대칭적, 추이적임을 증명하는 것입니다. 종속 패턴 매칭를 사용하여 사례 분석을 수행하고 가정을 여러 부분으로 나눈 다음 재조합하여 결론을 도출함으로써 이 세 가지 사실을 편리하고 가독성 있는 방식으로 증명할 수 있습니다.
 
 ```lean
 # private def eqv (p₁ p₂ : α × α) : Prop :=
@@ -390,9 +366,7 @@ private theorem is_equivalence : Equivalence (@eqv α) :=
    { refl := eqv.refl, symm := eqv.symm, trans := eqv.trans }
 ```
 
-Now that we have proved that ``eqv`` is an equivalence relation, we
-can construct a ``Setoid (α × α)``, and use it to define the type
-``UProd α`` of unordered pairs.
+``eqv``가 등가 관계임을 증명했으므로 ``Setoid(α × α)``를 구성하고 이를 사용하여 순서가 없는 쌍 ``UProd α``형을 정의할 수 있습니다.
 
 ```lean
 # private def eqv (p₁ p₂ : α × α) : Prop :=
@@ -433,14 +407,9 @@ notation "{ " a₁ ", " a₂ " }" => mk a₁ a₂
 end UProd
 ```
 
-Notice that we locally define the notation ``{a₁, a₂}`` for ordered
-pairs as ``Quotient.mk (a₁, a₂)``. This is useful for illustrative
-purposes, but it is not a good idea in general, since the notation
-will shadow other uses of curly brackets, such as for records and
-sets.
+순서쌍에 대한 표기 ``{a₁, a₂}``을 지역적으로 ``Quotient.mk (a₁, a₂)``로 정의합니다. 이것은 설명 목적으로 유용하지만 일반적으로 이 표기법이 레코드 및 집합 같은 중괄호의 다른 용도를 가리기 때문에 일반적으로 좋은 생각은 아닙니다.
 
-We can easily prove that ``{a₁, a₂} = {a₂, a₁}`` using ``quot.sound``,
-since we have ``(a₁, a₂) ~ (a₂, a₁)``.
+``(a₁, a₂) ~ (a₂, a₁)``를 갖기 때문에 ``quot.sound``을 사용해 ``{a₁, a₂} = {a₂, a₁}``을 쉽게 증명할 수 있습니다.
 
 ```lean
 # private def eqv (p₁ p₂ : α × α) : Prop :=
@@ -478,13 +447,7 @@ theorem mk_eq_mk (a₁ a₂ : α) : {a₁, a₂} = {a₂, a₁} :=
 # end UProd
 ```
 
-To complete the example, given ``a : α`` and ``u : uprod α``, we
-define the proposition ``a ∈ u`` which should hold if ``a`` is one of
-the elements of the unordered pair ``u``. First, we define a similar
-proposition ``mem_fn a u`` on (ordered) pairs; then we show that
-``mem_fn`` respects the equivalence relation ``eqv`` with the lemma
-``mem_respects``. This is an idiom that is used extensively in the
-Lean standard library.
+예제를 끝내기 위해 ``a : α`` 및 ``u : uprod α``가 주어졌을 때, ``a``는 순서가 지정되지 않은 쌍 ``u``의 원소 중 하나이면 성립해야 하는 명제 ``a ∈ u``를 정의합니다. 먼저 (순서 있는) 쌍에 대해 유사한 명제 ``mem_fn a u``를 정의합니다. 그 뒤 ``mem_fn``이 보조 정리 ``mem_respects``와 등가 관계 ``eqv``를 존중한다는 것을 보여줍니다. 이것은 린 표준 라이브러리에서 광범위하게 사용되는 관용구입니다.
 
 ```lean
 # private def eqv (p₁ p₂ : α × α) : Prop :=
@@ -523,8 +486,7 @@ Lean standard library.
 private def mem_fn (a : α) : α × α → Prop
   | (a₁, a₂) => a = a₁ ∨ a = a₂
 
--- auxiliary lemma for proving mem_respects
-private theorem mem_swap {a : α} :
+--mem_respects를 증명하기 위한 보조 정리 mem_swap {a : α}:
       ∀ {p : α × α}, mem_fn a p = mem_fn a (⟨p.2, p.1⟩)
   | (a₁, a₂) => by
     apply propext
@@ -558,33 +520,20 @@ theorem mem_or_mem_of_mem_mk {a b c : α} : c ∈ {a, b} → c = a ∨ c = b :=
 # end UProd
 ```
 
-For convenience, the standard library also defines ``Quotient.lift₂``
-for lifting binary functions, and ``Quotient.ind₂`` for induction on
-two variables.
+편의를 위해 표준 라이브러리는 이진 함수를 들어 올리는 ``Quotient.lift₂``와 두 변수에 대한 귀납를 위한 ``Quotient.ind₂``도 정의합니다.
 
-We close this section with some hints as to why the quotient
-construction implies function extenionality. It is not hard to show
-that extensional equality on the ``(x : α) → β x`` is an equivalence
-relation, and so we can consider the type ``extfun α β`` of functions
-"up to equivalence." Of course, application respects that equivalence
-in the sense that if ``f₁`` is equivalent to ``f₂``, then ``f₁ a`` is
-equal to ``f₂ a``. Thus application gives rise to a function
-``extfun_app : extfun α β → (x : α) → β x``. But for every ``f``,
-``extfun_app ⟦f⟧`` is definitionally equal to ``fun x => f x``, which is
-in turn definitionally equal to ``f``. So, when ``f₁`` and ``f₂`` are
-extensionally equal, we have the following chain of equalities:
+몫 구성이 함수 확장성을 의미하는 이유에 대한 몇 가지 힌트로 이 섹션을 마무리합니다. ``(x : α) → β x``에 대한 확장적 동등성이 등가 관계임을 보여주는 것은 어렵지 않으므로  "동등할 때까지" 함수 ``extfun α β``형을 고려할 수 있습니다. 물론 함수 적용은 ``f₁``가 ``f₂``와 동등하면 ``f₁ a``가 ``f₂ a``와 같다는 의미에서 등가를 존중합니다. 따라서 함수 적용은 함수 ``extfun_app : extfun α β → (x : α) → β x``를 발생시킵니다. 그러나 모든 ``f``에 대해 ``extfun_app ⟦f⟧``는 정의상으로 ``fun x => f x``와 동일하며, 이는 다시 정의상으로 ``f``과 같습니다. 그래서 ``f₁``와 ``f₂``가 외연적으로 동일할 때 다음과 같은 등식 연결을 갖습니다.
 
 ```
     f₁ = extfun_app ⟦f₁⟧ = extfun_app ⟦f₂⟧ = f₂
 ```
 
-As a result, ``f₁`` is equal to ``f₂``.
+결과적으로 ``f₁``는 ``f₂``와 같습니다.
 
-Choice
+선택(Choice)
 ------
 
-To state the final axiom defined in the standard library, we need the
-``Nonempty`` type, which is defined as follows:
+표준 라이브러리에 정의된 최종 공리를 기술하려면 다음과 같이 정의되는 ``Nonempty``형이 필요합니다.
 
 ```lean
 # namespace Hidden
@@ -593,15 +542,15 @@ class inductive Nonempty (α : Sort u) : Prop where
 # end Hidden
 ```
 
-Because ``Nonempty α`` has type ``Prop`` and its constructor contains data, it can only eliminate to ``Prop``.
-In fact, ``Nonempty α`` is equivalent to ``∃ x : α, True``:
+``Nonempty α``에는 ``Prop`` 유형이 있고 생성자에 데이터가 포함되어 있기 때문에 ``Prop``으로만 제거할 수 있습니다.
+실제로 ``Nonempty α``는 ``∃ x : α, True``와 동일합니다.
 
 ```lean
 example (α : Type u) : Nonempty α ↔ ∃ x : α, True :=
   Iff.intro (fun ⟨a⟩ => ⟨a, trivial⟩) (fun ⟨a, h⟩ => ⟨a⟩)
 ```
 
-Our axiom of choice is now expressed simply as follows:
+우리의 선택 공리는 이제 다음과 같이 간단히 표현됩니다.
 
 
 ```lean
@@ -611,15 +560,9 @@ axiom choice {α : Sort u} : Nonempty α → α
 # end Hidden
 ```
 
-Given only the assertion ``h`` that ``α`` is nonempty, ``choice h``
-magically produces an element of ``α``. Of course, this blocks any
-meaningful computation: by the interpretation of ``Prop``, ``h``
-contains no information at all as to how to find such an element.
+``α``가 비어 있지 않다는 주장 ``h``만 주어지면 ``choice h``는 마술처럼 ``α``의 원소를 생성합니다. 물론 이것은 의미 있는 계산을 막습니다. ``Prop``의 해석에 따르면 ``h``에는 그러한 원소를 찾는 방법에 대한 정보가 전혀 포함되어 있지 않습니다.
 
-This is found in the ``Classical`` namespace, so the full name of the
-theorem is ``Classical.choice``. The choice principle is equivalent to
-the principle of *indefinite description*, which can be expressed with
-subtypes as follows:
+이것은 ``Classical`` 이름공간에서 발견되므로 정리의 완전한 이름은 ``Classical.choice``입니다. 선택 원리은 *무한 설명*의 원리과 동일하며, 다음과 같이 하위 유형으로 표현될 수 있습니다.
 
 ```lean
 # namespace Hidden
@@ -631,11 +574,7 @@ noncomputable def indefiniteDescription {α : Sort u} (p : α → Prop)
 # end Hidden
 ```
 
-Because it depends on ``choice``, Lean cannot generate bytecode for
-``indefiniteDescription``, and so requires us to mark the definition
-as ``noncomputable``. Also in the ``Classical`` namespace, the
-function ``choose`` and the property ``choose_spec`` decompose the two
-parts of the output of ``indefinite_description``:
+``선택(choice)``에 의존하기 때문에 린은 ``무한 설명(indefinite_Description)``에 대한 바이트 코드를 생성할 수 없으므로 ``(noncomputable)계산 불가능``으로 정의를 표시해야 합니다. 또한 ``Classical`` 이름공간에서 함수 ``choose``와 ``choose_spec`` 성질은 ``indefinite_description`` 출력의 두 부분을 분해합니다.
 
 ```lean
 # open Classical
@@ -648,9 +587,7 @@ theorem choose_spec {α : Sort u} {p : α → Prop} (h : ∃ x, p x) : p (choose
 # end Hidden
 ```
 
-The ``choice`` principle also erases the distinction between the
-property of being ``Nonempty`` and the more constructive property of
-being ``Inhabited``:
+``선택`` 원리은 또 ``비어 있음`` 속성과 보다 건설적인 ``내재`` 속성 간의 구별을 지웁니다.
 
 ```lean
 # open Classical
@@ -658,10 +595,7 @@ theorem inhabited_of_nonempty :Nonempty α → Inhabited α :=
   fun h => choice (let ⟨a⟩ := h; ⟨⟨a⟩⟩)
 ```
 
-In the next section, we will see that ``propext``, ``funext``, and
-``choice``, taken together, imply the law of the excluded middle and
-the decidability of all propositions. Using those, one can strengthen
-the principle of indefinite description as follows:
+다음 섹션에서는 ``propext``, ``funext`` 및 ``choice``가 함께 배중률과 모든 명제의 결정 가능성을 함의 한다는 것을 알 수 있습니다. 그것들을 사용하여 다음과 같이 무한 설명의 원리을 강화할 수 있습니다.
 
 ```lean
 # open Classical
@@ -671,10 +605,7 @@ the principle of indefinite description as follows:
          → Nonempty α → {x // (∃ (y : α), p y) → p x})
 ```
 
-Assuming the ambient type ``α`` is nonempty,
-``strongIndefiniteDescription p`` produces an element of ``α``
-satisfying ``p`` if there is one. The data component of this
-definition is conventionally known as *Hilbert's epsilon function*:
+주변 유형 ``α``가 비어 있지 않다고 가정하고, ``strongInReservationDescription p``는 원소가 하나가 있는 경우 ``p``를 충족하는 ``α``의 원소를 생성합니다. 이 정의의 데이터 구성요소는 일반적으로 *Hilbert의 엡실론 함수*로 알려져 있습니다.
 
 ```lean
 # open Classical
@@ -688,10 +619,10 @@ definition is conventionally known as *Hilbert's epsilon function*:
             p (@epsilon _ (nonempty_of_exists hex) p))
 ```
 
-The Law of the Excluded Middle
+배중률(The Law of the Excluded Middle)
 ------------------------------
 
-The law of the excluded middle is the following
+배중률은 다음과 같습니다.
 
 ```lean
 open Classical
@@ -699,13 +630,9 @@ open Classical
 #check (@em : ∀ (p : Prop), p ∨ ¬p)
 ```
 
-[Diaconescu's theorem](http://en.wikipedia.org/wiki/Diaconescu%27s_theorem) states
-that the axiom of choice is sufficient to derive the law of excluded
-middle. More precisely, it shows that the law of the excluded middle
-follows from ``Classical.choice``, ``propext``, and ``funext``. We
-sketch the proof that is found in the standard library.
+[디아코네스쿠의 정리(Diaconescu's theorem)](http://en.wikipedia.org/wiki/Diaconescu%27s_theorem)는 선택 공리가 배중률을 도출하기에 충분하다고 말합니다. 보다 정확히 ``Classical.choice``, ``propext``, ``funext``로부터 배중률을 따른다는 것을 보여줍니다. 표준 라이브러리에서 발견한 증명을 그립니다.
 
-First, we import the necessary axioms, and define two predicates ``U`` and ``V``:
+먼저 필요한 공리를 불러오고 두 개의 술어 ``U``와 ``V``를 정의합니다.
 
 ```lean
 # namespace Hidden
@@ -720,10 +647,10 @@ theorem em (p : Prop) : p ∨ ¬p :=
 # end Hidden
 ```
 
-If ``p`` is true, then every element of ``Prop`` is in both ``U`` and ``V``.
-If ``p`` is false, then ``U`` is the singleton ``true``, and ``V`` is the singleton ``false``.
+``p``가 참이면 ``Prop``의 모든 원소는 ``U``와 ``V`` 둘 다에 있습니다.
+``p``가 거짓이면 ``U``는 ``true``를 단일 개체로 갖고 ``V``는 ``false``를 단일 개체로 갖습니다.
 
-Next, we use ``some`` to choose an element from each of ``U`` and ``V``:
+다음으로 ``some``을 사용하여 ``U`` 및 ``V`` 각각으로부터 원소를 선택합니다.
 
 ```lean
 # namespace Hidden
@@ -742,9 +669,7 @@ Next, we use ``some`` to choose an element from each of ``U`` and ``V``:
 # end Hidden
 ```
 
-Each of ``U`` and ``V`` is a disjunction, so ``u_def`` and ``v_def``
-represent four cases. In one of these cases, ``u = True`` and
-``v = False``, and in all the other cases, ``p`` is true. Thus we have:
+``U``와 ``V``는 각각 논리합이므로 ``u_def``와 ``v_def``는 4가지 경우를 나타냅니다. 이러한 경우 중 하나는 ``u = True`` 및 ``v = False``이고 다른 모든 경우에는 ``p``가 참입니다. 따라서 우리는 다음을 가지고 있습니다.
 
 ```lean
 # namespace Hidden
@@ -768,9 +693,7 @@ represent four cases. In one of these cases, ``u = True`` and
 #   sorry
 # end Hidden
 ```
-On the other hand, if ``p`` is true, then, by function extensionality
-and propositional extensionality, ``U`` and ``V`` are equal. By the
-definition of ``u`` and ``v``, this implies that they are equal as well.
+한편, ``p``가 참이면, 함수 확장성과 명제 확장성에 의해 ``U``와 ``V``는 같습니다. ``u`` 및 ``v``의 정의에 따르면, 이는 또한 동등함을 함의합니다.
 
 ```lean
 # namespace Hidden
@@ -807,7 +730,7 @@ definition of ``u`` and ``v``, this implies that they are equal as well.
 #   sorry
 # end Hidden
 ```
-Putting these last two facts together yields the desired conclusion:
+이 마지막 두 가지 사실을 종합하면 원하는 결론을 얻을 수 있습니다.
 
 ```lean
 # namespace Hidden
@@ -847,10 +770,8 @@ Putting these last two facts together yields the desired conclusion:
 # end Hidden
 ```
 
-Consequences of excluded middle include double-negation elimination,
-proof by cases, and proof by contradiction, all of which are described
-in the [Section Classical Logic](./propositions_and_proofs.md#classical_logic).
-The law of the excluded middle and propositional extensionality imply propositional completeness:
+배중률의 결과는 이중 부정 제거와 경우에 따른 증명 및 귀류법이 포함되며, 모두 [고전 논리 섹션](./propositions_and_proofs.md#classical_logic)에 설명되어 있습니다.
+배중률과 명제의 확장성은 명제의 완전성을 함의합니다.
 
 ```lean
 # namespace Hidden
@@ -862,9 +783,7 @@ theorem propComplete (a : Prop) : a = True ∨ a = False :=
 # end Hidden
 ```
 
-Together with choice, we also get the stronger principle that every
-proposition is decidable. Recall that the class of ``Decidable``
-propositions is defined as follows:
+선택과 함께 우리는 또한 모든 명제가 결정 가능하다는 더 강력한 원리을 얻습니다. ``Decidable(결정 가능)`` 명제 클래스는 다음과 같이 정의됩니다.
 
 ```lean
 # namespace Hidden
@@ -874,22 +793,9 @@ class inductive Decidable (p : Prop) where
 # end Hidden
 ```
 
-In contrast to ``p ∨ ¬ p``, which can only eliminate to ``Prop``, the
-type ``decidable p`` is equivalent to the sum type ``Sum p (¬ p)``, which
-can eliminate to any type. It is this data that is needed to write an
-if-then-else expression.
+``Prop``만 제거할 수 있는 ``p ∨ ¬ p``와 달리 ``decidable p``형은 합계 유형 ``Sum p(¬ p)``과 동일합니다. 이는 임의의 유형을 제거할 수 있습니다. if-then-else 표현식을 작성하는 데 필요한 것은 이 데이터입니다.
 
-As an example of classical reasoning, we use ``choose`` to show that if
-``f : α → β`` is injective and ``α`` is inhabited, then ``f`` has a
-left inverse. To define the left inverse ``linv``, we use a dependent
-if-then-else expression. Recall that ``if h : c then t else e`` is
-notation for ``dite c (fun  h : c => t) (fun h : ¬ c => e)``. In the definition
-of ``linv``, choice is used twice: first, to show that
-``(∃ a : A, f a = b)`` is "decidable," and then to choose an ``a`` such that
-``f a = b``. Notice that ``propDecidable`` is a scoped instance and is activated
-by the `open Classical` command. We use this instance to justify
-the if-then-else expression. (See also the discussion in
-[Section Decidable Propositions](./type_classes.md#decidable_propositions)).
+고전적 추론의 예로서 ``choose``를 사용하여 ``f : α → β``가 형용사이고 ``α``가 내제된 경우 ``f``는 왼쪽 역함수를 같습니다. 왼쪽 역함수 ``linv``를 정의하기 위해 종속적인 if-then-else 표현식을 사용합니다. ``if h : c then t else e``는 ``dite c (fun h : c => t) (fun h : ¬ c => e)``에 대한 표기법임을 기억하세요. ``linv``의 정의에서 선택은 두 번 사용됩니다. 먼저 ``(∃ a : A, f a = b)``가 "결정 가능"임을 보이는 데 그 뒤 ``f a = b``을 만족하는 ``a``를 선택하는데 사용됩니다. ``propDecidable``은 범위가 지정된 개체이며 `open Classical` 명령에 의해 활성화됩니다. 이 개체를 사용하여 if-then-else 표현식을 정당화합니다. ([결정 ​​가능 명제 섹션](./type_classes.md#decidable_propositions)의 논의를 참조하세요.)
 
 ```lean
 open Classical
@@ -908,7 +814,4 @@ theorem linv_comp_self {f : α → β} [Inhabited α]
 
 ```
 
-From a classical point of view, ``linv`` is a function. From a
-constructive point of view, it is unacceptable; because there is no
-way to implement such a function in general, the construction is not
-informative.
+고전적인 관점에서 ``linv``는 함수입니다. 일반적으로 그러한 기능을 구현할 방법이 없고 생성도 유익하지 않으므로 직관주의적인 관점에서 이는 허용되지 않습니다.
