@@ -1,0 +1,14 @@
+connective	연결사	논리의 용어로 연결사
+syntactic sugar	문법 설탕	프로그래밍 언어의 관점에서 사용
+abstraction	추상화	함수 추상화의 약어로 주로 사용
+application	적용	함수 적용의 관점에서 간단히 쓴 용어
+instance	사례	문법적으로 사례로 번역될 수 있음
+instance	인스턴스	추상적인 개체가 구체화 되는 것을 의미함
+close	마치다, 닫다, 달성하다.
+object	대상	객체라고 번역하곤 함
+dependent type theory	의존 유형론
+constructive	구성주의
+establish	입증하다
+pragmatic	실용적인
+hold	성립하다
+Conjunction	논리곱

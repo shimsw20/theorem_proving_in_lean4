@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx14.dtd">
 <tmx version="1.4">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-5.7.0" segtype="sentence" srclang="en-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="OmegaT-4.3.2" segtype="sentence" srclang="en-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -574,8 +574,8 @@ you can use implicit arguments in patterns as well.</seg>
 features, but like the other type universes, it is closed under the
 arrow constructor: if we have <bpt i="8" x="8">&lt;g8&gt;</bpt>p q : Prop<ept i="8">&lt;/g8&gt;</ept>, then <bpt i="9" x="9">&lt;g9&gt;</bpt>p → q : Prop<ept i="9">&lt;/g9&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155829Z" creationid="tlqk35" creationdate="20220321T155829Z">
-        <seg><bpt i="7" x="7">&lt;g7&gt;</bpt>Prop<ept i="7">&lt;/g7&gt;</ept>은 특별한 특징이 있습니다. 하지만 다른 유형 세계처럼, 화살표 생성자로 달성됩니다. 우리가 <bpt i="8" x="8">&lt;g8&gt;</bpt>p q : Prop<ept i="8">&lt;/g8&gt;</ept>갖는다면  <bpt i="9" x="9">&lt;g9&gt;</bpt>p → q : Prop<ept i="9">&lt;/g9&gt;</ept>입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105744Z" creationid="tlqk35" creationdate="20220321T155829Z">
+        <seg><bpt i="7" x="7">&lt;g7&gt;</bpt>Prop<ept i="7">&lt;/g7&gt;</ept>은 특별한 기능이 있습니다. 하지만 다른 유형 세계처럼, 화살표 생성자에 닫혀있습니다. 우리가 <bpt i="8" x="8">&lt;g8&gt;</bpt>p q : Prop<ept i="8">&lt;/g8&gt;</ept>갖는다면  <bpt i="9" x="9">&lt;g9&gt;</bpt>p → q : Prop<ept i="9">&lt;/g9&gt;</ept>입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -741,8 +741,8 @@ accepts only notations with precedence at least <bpt i="6" x="6">&lt;g6&gt;</bpt
         <seg>A proof of
 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept> is then simply an object <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept> of the right type.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155903Z" creationid="tlqk35" creationdate="20220321T155903Z">
-        <seg><bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 증명은 단순히 <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept> 오른쪽 유형의 객체입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T110519Z" creationid="tlqk35" creationdate="20220321T155903Z">
+        <seg>그러면 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 증명은 단순히 대상 <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept>의 오른쪽 유형입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -838,8 +838,8 @@ its definition, <bpt i="2" x="2">&lt;g2&gt;</bpt>Acc r x<ept i="2">&lt;/g2&gt;</
         <seg>Adding such extra information can improve the clarity of a proof and
 help detect errors when writing a proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161105Z" creationid="tlqk35" creationdate="20220321T161105Z">
-        <seg>그런 추가 정보를 더하는 것은 증명의 명확성을 개선하고 증명을 작성할 때 오류를 감지하도록 돕습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T120552Z" creationid="tlqk35" creationdate="20220321T161105Z">
+        <seg>이런 추가 정보를 더하는 것은 증명의 명확성을 높이고 증명을 작성할 때 오류를 발견하도록 돕습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -971,8 +971,8 @@ for some value <bpt i="7" x="7">&lt;g7&gt;</bpt>b : β<ept i="7">&lt;/g7&gt;</ep
         <seg>An "axiom" would be a
 constant of such a type.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154916Z" creationid="tlqk35" creationdate="20220321T154916Z">
-        <seg>"공리"는 그러한 유형의 상수입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102940Z" creationid="tlqk35" creationdate="20220321T154916Z">
+        <seg>"공리"는 그런 유형의 상수일 겁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1079,8 +1079,8 @@ ignored by Lean.</seg>
 viewed as an "elimination rule," showing how to "eliminate" or use an
 implication in a proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162433Z" creationid="tlqk35" creationdate="20220321T162433Z">
-        <seg>적용은 어떻게 "제거"하는지 증명에서 함의를 사용하는지를 보여주는 "제거 규칙"으로 볼 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124007Z" creationid="tlqk35" creationdate="20220321T162433Z">
+        <seg>적용은 어떻게 "제거"하는지 혹은 증명에서 함의를 어떻게사용하는지를 보여주는 "제거 규칙"으로 봅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1106,8 +1106,8 @@ it again yields <bpt i="6" x="6">&lt;g6&gt;</bpt>succ (succ zero) : Nat<ept i="6
 <bpt i="4" x="4">&lt;g4&gt;</bpt>t1 : p → q → p<ept i="4">&lt;/g4&gt;</ept> to the fact <bpt i="5" x="5">&lt;g5&gt;</bpt>hp : p<ept i="5">&lt;/g5&gt;</ept> that <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept> is true yields the theorem
 <bpt i="7" x="7">&lt;g7&gt;</bpt>t1 hp : q → p<ept i="7">&lt;/g7&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161351Z" creationid="tlqk35" creationdate="20220321T161351Z">
-        <seg>정리<bpt i="4" x="4">&lt;g4&gt;</bpt>t1 : p → q → p<ept i="4">&lt;/g4&gt;</ept>를 사실 <bpt i="5" x="5">&lt;g5&gt;</bpt>hp : p<ept i="5">&lt;/g5&gt;</ept>에 적용하는 것은 <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept>가 참임을 정리<bpt i="7" x="7">&lt;g7&gt;</bpt>t1 hp : q → p<ept i="7">&lt;/g7&gt;</ept>을 얻습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121529Z" creationid="tlqk35" creationdate="20220321T161351Z">
+        <seg>정리<bpt i="4" x="4">&lt;g4&gt;</bpt>t1 : p → q → p<ept i="4">&lt;/g4&gt;</ept>에 사실 <bpt i="5" x="5">&lt;g5&gt;</bpt>hp : p<ept i="5">&lt;/g5&gt;</ept>을 적용하는 것은 <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept>가 참임은 정리<bpt i="7" x="7">&lt;g7&gt;</bpt>t1 hp : q → p<ept i="7">&lt;/g7&gt;</ept>을 얻게 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1208,8 +1208,8 @@ to.</seg>
         <seg>As a result, given <bpt i="1" x="1">&lt;g1&gt;</bpt>h : p ∧ q<ept i="1">&lt;/g1&gt;</ept>, we can write <bpt i="2" x="2">&lt;g2&gt;</bpt>h.left<ept i="2">&lt;/g2&gt;</ept> for
 <bpt i="3" x="3">&lt;g3&gt;</bpt>And.left h<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>h.right<ept i="4">&lt;/g4&gt;</ept> for <bpt i="5" x="5">&lt;g5&gt;</bpt>And.right h<ept i="5">&lt;/g5&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163449Z" creationid="tlqk35" creationdate="20220321T163449Z">
-        <seg>결과적으로 <bpt i="1" x="1">&lt;g1&gt;</bpt>h : p ∧ q<ept i="1">&lt;/g1&gt;</ept>라면 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>h.left<ept i="2">&lt;/g2&gt;</ept>를 <bpt i="3" x="3">&lt;g3&gt;</bpt>And.left h<ept i="3">&lt;/g3&gt;</ept>을 나타내는데 그리고 <bpt i="4" x="4">&lt;g4&gt;</bpt>h.right<ept i="4">&lt;/g4&gt;</ept> 를 <bpt i="5" x="5">&lt;g5&gt;</bpt>And.right h<ept i="5">&lt;/g5&gt;</ept>을 나타내는데 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T133048Z" creationid="tlqk35" creationdate="20220321T163449Z">
+        <seg>따라서 <bpt i="1" x="1">&lt;g1&gt;</bpt>h : p ∧ q<ept i="1">&lt;/g1&gt;</ept>일 때 <bpt i="3" x="3">&lt;g3&gt;</bpt>And.left h<ept i="3">&lt;/g3&gt;</ept>를 <bpt i="2" x="2">&lt;g2&gt;</bpt>h.left<ept i="2">&lt;/g2&gt;</ept>로 그리고 <bpt i="5" x="5">&lt;g5&gt;</bpt>And.right h<ept i="5">&lt;/g5&gt;</ept>를 <bpt i="4" x="4">&lt;g4&gt;</bpt>h.right<ept i="4">&lt;/g4&gt;</ept> 로 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1247,8 +1247,8 @@ terms of <bpt i="13" x="13">&lt;g13&gt;</bpt>n<ept i="13">&lt;/g13&gt;</ept> and
 constructor <bpt i="8" x="8">&lt;g8&gt;</bpt>p → q<ept i="8">&lt;/g8&gt;</ept> from dependent type theory as our notion of
 implication.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155647Z" creationid="tlqk35" creationdate="20220321T155647Z">
-        <seg>결과적으로 연결사 <bpt i="7" x="7">&lt;g7&gt;</bpt>Implies<ept i="7">&lt;/g7&gt;</ept>의 도입은 완전히 중복됩니다. 그래서 우리는 의존 유형론의 함의에 대한 개념으로써 종종 함수 공간 생성자<bpt i="8" x="8">&lt;g8&gt;</bpt>p → q<ept i="8">&lt;/g8&gt;</ept>를 사용할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105042Z" creationid="tlqk35" creationdate="20220321T155647Z">
+        <seg>따라서 결합자 <bpt i="7" x="7">&lt;g7&gt;</bpt>Implies<ept i="7">&lt;/g7&gt;</ept>의 도입은 완전히 중복됩니다. 그래서 <bpt i="8" x="8">&lt;g8&gt;</bpt>p → q<ept i="8">&lt;/g8&gt;</ept>을 의존유형론에서 함의 개념으로 평소의 함수공간 생성자를 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1320,8 +1320,8 @@ why the definition of <bpt i="12" x="12">&lt;g12&gt;</bpt>foo<ept i="12">&lt;/g1
 try proving the converse, that is, showing that <bpt i="5" x="5">&lt;g5&gt;</bpt>em<ept i="5">&lt;/g5&gt;</ept> can be proved
 from <bpt i="6" x="6">&lt;g6&gt;</bpt>dne<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165907Z" creationid="tlqk35" creationdate="20220321T165846Z">
-        <seg>연습으로 여러분은 역을 증명해보세요, 즉 <bpt i="5" x="5">&lt;g5&gt;</bpt>em<ept i="5">&lt;/g5&gt;</ept>이 <bpt i="6" x="6">&lt;g6&gt;</bpt>dne<ept i="6">&lt;/g6&gt;</ept>로부터 증명될 수 있음을 보이세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163217Z" creationid="tlqk35" creationdate="20220321T165846Z">
+        <seg>연습으로 여러분은 그 역을 증명해보세요. 즉, <bpt i="5" x="5">&lt;g5&gt;</bpt>em<ept i="5">&lt;/g5&gt;</ept>이 <bpt i="6" x="6">&lt;g6&gt;</bpt>dne<ept i="6">&lt;/g6&gt;</ept>로부터 증명될 수 있음을 보이세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1612,8 +1612,8 @@ let you put named arguments to the constructors before the colon:</seg>
         <seg>As with ordinary definitions, we can move the lambda-abstracted
 variables to the left of the colon:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161130Z" creationid="tlqk35" creationdate="20220321T161130Z">
-        <seg>평범한 정의처럼 우리는 람다 추상화된 변수를 콜론의 왼쪽으로 옮길 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121000Z" creationid="tlqk35" creationdate="20220321T161130Z">
+        <seg>평범한 정의처럼 우리는 람다 추상화된 변수를 콜론(:)의 왼쪽으로 옮길 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1806,8 +1806,8 @@ every generalization preserves the validity of the goal.</seg>
         <seg>Because <bpt i="1" x="1">&lt;g1&gt;</bpt>Or<ept i="1">&lt;/g1&gt;</ept> has two constructors, we cannot use anonymous
 constructor notation.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164120Z" creationid="tlqk35" creationdate="20220321T164120Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Or<ept i="1">&lt;/g1&gt;</ept>은 두 개의 생성자가 있기 때문에 우리는 익명 생성자 표기를 사용할 수 없습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154252Z" creationid="tlqk35" creationdate="20220321T164120Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Or<ept i="1">&lt;/g1&gt;</ept>은 두 개의 생성자가 있기 때문에 익명 생성자 표기를 사용할 수 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1957,8 +1957,8 @@ for straightforward constructions like the one above, when the type of
 <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept> and the goal of the construction are salient, the notation is
 clean and effective.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163519Z" creationid="tlqk35" creationdate="20220321T163519Z">
-        <seg>위와 같은 간단한 구성의 경우 <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept>의 유형과 구성의 목표가 두드러질 때 이 표기법은 깨끗하고 효과적입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T133712Z" creationid="tlqk35" creationdate="20220321T163519Z">
+        <seg>위처럼 직관적인 구성의 경우 <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept>의 유형과 구성의 목표가 두드러질 때 이 표기법은 깨끗하고 효과적입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2158,8 +2158,8 @@ no reason to multiply languages in this way: dependent type theory is
 flexible and expressive, and there is no reason we cannot represent
 assertions and proofs in the same general framework.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154828Z" creationid="tlqk35" creationdate="20220321T154828Z">
-        <seg>그러나 의존유형론은 유연하고 표현력 있어 이런 식으로 언어들을 늘릴 이유는 없습니다. 그리고 주장과 증명은 한 동일한 일반적 프레임워크에서 표현하지 못할 이유도 없습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102441Z" creationid="tlqk35" creationdate="20220321T154828Z">
+        <seg>그러나 이런 식으로 언어를 늘릴 이유는 없습니다. 의존유형론은 유연하며 표현력 있습니다. 그리고 주장과 증명을 동일한 일반 프레임워크 안에서 표현하지 못 할 이유도 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2226,8 +2226,8 @@ it would be nice if users did not have to invoke it explicitly.</seg>
 type annotations in the longer version makes the proof more readable,
 and can help catch and debug errors.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164102Z" creationid="tlqk35" creationdate="20220321T164102Z">
-        <seg>하지만 더 긴 버전의 유형 주석을 사용하는 것은 증명을 더 가독성있게 하 에러를 잡고 고치는 걸 도와줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154233Z" creationid="tlqk35" creationdate="20220321T164102Z">
+        <seg>그러나 더 긴 버전의 유형 주석을 사용하면 증명을 더 가독성있게 하고 오류를 잡고 고치는 걸 도와줄 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2255,8 +2255,8 @@ decidable.</seg>
         <seg>But we can still write <bpt i="2" x="2">&lt;g2&gt;</bpt>h.elim<ept i="2">&lt;/g2&gt;</ept> instead of
 <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.elim h<ept i="3">&lt;/g3&gt;</ept>:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164139Z" creationid="tlqk35" creationdate="20220321T164135Z">
-        <seg>그러나 우리는 여전히 <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.elim h<ept i="3">&lt;/g3&gt;</ept>대신 <bpt i="2" x="2">&lt;g2&gt;</bpt>h.elim<ept i="2">&lt;/g2&gt;</ept>와 같이 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154307Z" creationid="tlqk35" creationdate="20220321T164135Z">
+        <seg>그래도 <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.elim h<ept i="3">&lt;/g3&gt;</ept>대신 <bpt i="2" x="2">&lt;g2&gt;</bpt>h.elim<ept i="2">&lt;/g2&gt;</ept>와 같이 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2561,8 +2561,8 @@ expected type.</seg>
       <tuv xml:lang="en-US">
         <seg>Conjunction</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162506Z" creationid="tlqk35" creationdate="20220321T162506Z">
-        <seg>연결사</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124210Z" creationid="tlqk35" creationdate="20220321T162506Z">
+        <seg>논리곱</seg>
       </tuv>
     </tu>
     <tu>
@@ -2761,8 +2761,8 @@ quotients, and more.</seg>
         <seg>Declaring an "axiom" <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept> is tantamount to declaring that <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>
 is true, as witnessed by <bpt i="3" x="3">&lt;g3&gt;</bpt>hp<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161252Z" creationid="tlqk35" creationdate="20220321T161252Z">
-        <seg>"공리" <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept>를 선언하는 것은 <bpt i="3" x="3">&lt;g3&gt;</bpt>hp<ept i="3">&lt;/g3&gt;</ept>에서 본 바와 같이 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>가 참이라고 선언하는 것과 마찬가지입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121415Z" creationid="tlqk35" creationdate="20220321T161252Z">
+        <seg>"공리" <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept>를 선언하는 것은 <bpt i="3" x="3">&lt;g3&gt;</bpt>hp<ept i="3">&lt;/g3&gt;</ept>에 의해 목격된 것처럼 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>가 참이라고 선언하는 것과 동등합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2893,16 +2893,16 @@ not participate in a case split.</seg>
         <seg>Determining that an expression <bpt i="1" x="1">&lt;g1&gt;</bpt>t<ept i="1">&lt;/g1&gt;</ept> is a correct proof of assertion <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept> would then
 simply be a matter of checking that <bpt i="3" x="3">&lt;g3&gt;</bpt>t<ept i="3">&lt;/g3&gt;</ept> has type <bpt i="4" x="4">&lt;g4&gt;</bpt>Proof p<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155215Z" creationid="tlqk35" creationdate="20220321T155215Z">
-        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>t<ept i="1">&lt;/g1&gt;</ept>는 주장 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 올바른 증명이다를 결정하는 것은 <bpt i="3" x="3">&lt;g3&gt;</bpt>t<ept i="3">&lt;/g3&gt;</ept>가 <bpt i="4" x="4">&lt;g4&gt;</bpt>Proof p<ept i="4">&lt;/g4&gt;</ept>형임을 확인하는 문제가 됩니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104011Z" creationid="tlqk35" creationdate="20220321T155215Z">
+        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>t<ept i="1">&lt;/g1&gt;</ept>가 주장 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 올바른 증명임을 결정하는 것은 <bpt i="3" x="3">&lt;g3&gt;</bpt>t<ept i="3">&lt;/g3&gt;</ept>가 <bpt i="4" x="4">&lt;g4&gt;</bpt>Proof p<ept i="4">&lt;/g4&gt;</ept>형임을 확인하는 문제가 됩니다.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
         <seg>Disjunction</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163542Z" creationid="tlqk35" creationdate="20220321T163542Z">
-        <seg>분리자</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T134601Z" creationid="tlqk35" creationdate="20220321T163542Z">
+        <seg>논리합</seg>
       </tuv>
     </tu>
     <tu>
@@ -2927,8 +2927,8 @@ simply be a matter of checking that <bpt i="3" x="3">&lt;g3&gt;</bpt>t<ept i="3"
 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>, by assuming <bpt i="2" x="2">&lt;g2&gt;</bpt>¬p<ept i="2">&lt;/g2&gt;</ept> and deriving <bpt i="3" x="3">&lt;g3&gt;</bpt>false<ept i="3">&lt;/g3&gt;</ept>, because that amounts
 to proving <bpt i="4" x="4">&lt;g4&gt;</bpt>¬¬p<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165828Z" creationid="tlqk35" creationdate="20220321T165828Z">
-        <seg>이중 부정 제거는 여러분에게 어떤 명제  <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>에 대해서 <bpt i="2" x="2">&lt;g2&gt;</bpt>¬p<ept i="2">&lt;/g2&gt;</ept>를 가정하면 <bpt i="4" x="4">&lt;g4&gt;</bpt>¬¬p<ept i="4">&lt;/g4&gt;</ept>의 증명을 고려하기 때문에 <bpt i="3" x="3">&lt;g3&gt;</bpt>false<ept i="3">&lt;/g3&gt;</ept>를 유도할 수 있게 허용해 줍니다.&lt;부분 1098 ¶&gt;</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163029Z" creationid="tlqk35" creationdate="20220321T165828Z">
+        <seg>이중 부정 제거는 <bpt i="4" x="4">&lt;g4&gt;</bpt>¬¬p<ept i="4">&lt;/g4&gt;</ept>를 증명하는 것과 같기 때문에 여러분이  <bpt i="2" x="2">&lt;g2&gt;</bpt>¬p<ept i="2">&lt;/g2&gt;</ept>를 가정하고 <bpt i="3" x="3">&lt;g3&gt;</bpt>false<ept i="3">&lt;/g3&gt;</ept>의 유도함으로써 어떤 명제  <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>의 증명할 수 있게 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3066,8 +3066,8 @@ the constructors take no arguments at all.</seg>
         <seg>Essentially, it just checks that the
 given term has the indicated type.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162706Z" creationid="tlqk35" creationdate="20220321T162706Z">
-        <seg>본질적으로 어떤 항이 가리키는 유형을 갖는 것을 확인합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124644Z" creationid="tlqk35" creationdate="20220321T162706Z">
+        <seg>기본적으로 이는 어떤 항이 지정된 유형을 가짐을 확인할 뿐입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3132,8 +3132,8 @@ at every input.</seg>
       <tuv xml:lang="en-US">
         <seg>Examples of Propositional Validities</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170104Z" creationid="tlqk35" creationdate="20220321T170104Z">
-        <seg>명제 유효성 예제</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164257Z" creationid="tlqk35" creationdate="20220321T170104Z">
+        <seg>명제적 유효성 예제</seg>
       </tuv>
     </tu>
     <tu>
@@ -3153,14 +3153,6 @@ otherwise.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk3" changedate="20220605T160652Z" creationid="tlqk3" creationdate="20220605T160652Z">
         <seg>이런 식으로 기초 체계를 확장하는 것은 종종 편리합니다. 이는 더 많은 정리를 증명할 수 있게 만들 뿐 아니라 다른 방식으로 증명된 정리를 더 쉽게 증명하도록 만듭니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en-US">
-        <seg>False</seg>
-      </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161944Z" creationid="tlqk35" creationdate="20220321T161944Z">
-        <seg>거짓</seg>
       </tuv>
     </tu>
     <tu>
@@ -3280,8 +3272,8 @@ proposition <bpt i="6" x="6">&lt;g6&gt;</bpt>mem_fn a u<ept i="6">&lt;/g6&gt;</e
 to show that it indeed suffices to show <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>, by proving the original
 goal of <bpt i="3" x="3">&lt;g3&gt;</bpt>q ∧ p<ept i="3">&lt;/g3&gt;</ept> with the additional hypothesis <bpt i="4" x="4">&lt;g4&gt;</bpt>hq : q<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165620Z" creationid="tlqk35" creationdate="20220321T165620Z">
-        <seg>우선, 우리는 원래 목표<bpt i="2" x="2">&lt;g2&gt;</bpt>q ∧ p<ept i="2">&lt;/g2&gt;</ept> 과 추가적인 가정 <bpt i="4" x="4">&lt;g4&gt;</bpt>hq : q<ept i="4">&lt;/g4&gt;</ept>으로 증명함으로써 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>임을 충분히 보일 수 있는 것을 보여야 합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T162116Z" creationid="tlqk35" creationdate="20220321T165620Z">
+        <seg>우선, 추가적인 가정 <bpt i="4" x="4">&lt;g4&gt;</bpt>hq : q<ept i="4">&lt;/g4&gt;</ept>으로 원래 목표<bpt i="2" x="2">&lt;g2&gt;</bpt>q ∧ p<ept i="2">&lt;/g2&gt;</ept>를 증명함으로써 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>임을 보이기에 충분함을 증명해야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3417,8 +3409,8 @@ has nothing to do with the constant <bpt i="6" x="6">&lt;g6&gt;</bpt>b<ept i="6"
 example, we can use it to postulate the empty type <bpt i="2" x="2">&lt;g2&gt;</bpt>False<ept i="2">&lt;/g2&gt;</ept> has an
 element.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161224Z" creationid="tlqk35" creationdate="20220321T161224Z">
-        <seg>예를 들어 우리는 그것을 빈 유형 <bpt i="2" x="2">&lt;g2&gt;</bpt>False<ept i="2">&lt;/g2&gt;</ept>이 원소를 갖는다고 가정하는데 사용할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121209Z" creationid="tlqk35" creationdate="20220321T161224Z">
+        <seg>예를 들어 우리는 이것을 빈 유형 <bpt i="2" x="2">&lt;g2&gt;</bpt>False<ept i="2">&lt;/g2&gt;</ept>가 원소를 갖는다고 가정하는데 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3499,8 +3491,8 @@ constructs a family of types <bpt i="3" x="3">&lt;g3&gt;</bpt>Eq a x<ept i="3">&
 to apply <bpt i="6" x="6">&lt;g6&gt;</bpt>And.intro<ept i="6">&lt;/g6&gt;</ept> to suitable arguments <bpt i="7" x="7">&lt;g7&gt;</bpt>hp : p<ept i="7">&lt;/g7&gt;</ept> and
 <bpt i="8" x="8">&lt;g8&gt;</bpt>hq : q<ept i="8">&lt;/g8&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163129Z" creationid="tlqk35" creationdate="20220321T163129Z">
-        <seg>모든 <bpt i="4" x="4">&lt;g4&gt;</bpt>p q : Prop<ept i="4">&lt;/g4&gt;</ept>에 대해 <bpt i="5" x="5">&lt;g5&gt;</bpt>p ∧ q<ept i="5">&lt;/g5&gt;</ept>가 예제입니다. 원소를 생성하는 정식 방법은 <bpt i="6" x="6">&lt;g6&gt;</bpt>And.intro<ept i="6">&lt;/g6&gt;</ept>를 적절한 인수 <bpt i="7" x="7">&lt;g7&gt;</bpt>hp : p<ept i="7">&lt;/g7&gt;</ept>과 <bpt i="8" x="8">&lt;g8&gt;</bpt>hq : q<ept i="8">&lt;/g8&gt;</ept>에 대해 적용하는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T125519Z" creationid="tlqk35" creationdate="20220321T163129Z">
+        <seg>모든 <bpt i="4" x="4">&lt;g4&gt;</bpt>p q : Prop<ept i="4">&lt;/g4&gt;</ept>에 대해 <bpt i="5" x="5">&lt;g5&gt;</bpt>p ∧ q<ept i="5">&lt;/g5&gt;</ept>는 예제입니다. 원소를 생성하는 정식 방법은 <bpt i="6" x="6">&lt;g6&gt;</bpt>And.intro<ept i="6">&lt;/g6&gt;</ept>를 적절한 인수 <bpt i="7" x="7">&lt;g7&gt;</bpt>hp : p<ept i="7">&lt;/g7&gt;</ept>과 <bpt i="8" x="8">&lt;g8&gt;</bpt>hq : q<ept i="8">&lt;/g8&gt;</ept>에 대해 적용하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3637,8 +3629,8 @@ numbers.</seg>
         <seg>For example, in many proof systems for
 propositional logic, we have the rule of modus ponens:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154940Z" creationid="tlqk35" creationdate="20220321T154940Z">
-        <seg>예를 들어 명제논리에 대한 많은 증명보조기들은 전건긍정(modus ponens)에 대한 규칙을 갖고 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103256Z" creationid="tlqk35" creationdate="20220321T154940Z">
+        <seg>예를 들어, 명제 논리를 위한 다수의 증명보조기는 그 속에 전건긍정(modus ponens) 규칙이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3655,8 +3647,8 @@ you to "partially apply" the function <bpt i="11" x="11">&lt;g11&gt;</bpt>Nat.ad
         <seg>For example, one can
 carry out a proof by cases:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165920Z" creationid="tlqk35" creationdate="20220321T165920Z">
-        <seg>예를 들어 누군가는 경우를 나눠 증명을 도출할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163518Z" creationid="tlqk35" creationdate="20220321T165920Z">
+        <seg>예를 들어 누군가는 경우를 나눠 증명을 수행할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3829,8 +3821,8 @@ the <bpt i="1" x="1">&lt;g1&gt;</bpt>numberOfDay<ept i="1">&lt;/g1&gt;</ept> fun
 propositions, and introduce constructors to build new propositions
 from others.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154846Z" creationid="tlqk35" creationdate="20220321T154843Z">
-        <seg>예를 들어, 우리는 새로운 유형 <bpt i="1" x="1">&lt;g1&gt;</bpt>Prop<ept i="1">&lt;/g1&gt;</ept>을 명제를 나타내기 위해 도입할 수 있습니다. 그리고 다른 유형으로부터 새로운 명제를 만드는 생성자를 도입할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102611Z" creationid="tlqk35" creationdate="20220321T154843Z">
+        <seg>예를 들어, 우리는 명제를 나타내는 새 유형 <bpt i="1" x="1">&lt;g1&gt;</bpt>Prop<ept i="1">&lt;/g1&gt;</ept>과 다른 유형으로부터 새로운 명제를 만드는 생성자를 도입할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -3927,8 +3919,8 @@ facts to rewrite an expression, as well as <bpt i="1" x="1">&lt;g1&gt;</bpt>left
         <seg>For reference, here are two sample proofs of validities taken from the
 list above.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170519Z" creationid="tlqk35" creationdate="20220321T170519Z">
-        <seg>참고로 여기 위쪽의 리스트에서 가져온 유효성의 증명 예시가 두 개 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165706Z" creationid="tlqk35" creationdate="20220321T170519Z">
+        <seg>참고로 위의 리스트에서 가져온 유효성의 증명 예시가 두 개 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4081,8 +4073,8 @@ computer programs, that are presented in some explicit way.</seg>
       <tuv xml:lang="en-US">
         <seg>From a proof of <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept> and a proof of <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>, we obtain a proof of <bpt i="3" x="3">&lt;g3&gt;</bpt>q<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155000Z" creationid="tlqk35" creationdate="20220321T155000Z">
-        <seg>증명 <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept>과 증명<bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>으로부터 우리는 증명 <bpt i="3" x="3">&lt;g3&gt;</bpt>q<ept i="3">&lt;/g3&gt;</ept>을 얻을 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103334Z" creationid="tlqk35" creationdate="20220321T155000Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept>의 증명과 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 증명으로부터 <bpt i="3" x="3">&lt;g3&gt;</bpt>q<ept i="3">&lt;/g3&gt;</ept>의 증명을 얻을 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4092,8 +4084,8 @@ constructive point of view, proofs are abstract mathematical objects
 that are <bpt i="1" x="1">&lt;g1&gt;</bpt>denoted<ept i="1">&lt;/g1&gt;</ept> by suitable expressions in dependent type
 theory.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160343Z" creationid="tlqk35" creationdate="20220321T160343Z">
-        <seg>직관주의자의 관점에서 증명은 의존 유형론의 적절한 표현식으로 <bpt i="1" x="1">&lt;g1&gt;</bpt>표기된<ept i="1">&lt;/g1&gt;</ept>추상적인 수학적 대상입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T112404Z" creationid="tlqk35" creationdate="20220321T160343Z">
+        <seg>구성주의적 관점에서 증명은 의존 유형론의 적절한 표현식으로 <bpt i="1" x="1">&lt;g1&gt;</bpt>표기된<ept i="1">&lt;/g1&gt;</ept>추상적인 수학적 대상입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4237,8 +4229,8 @@ bookkeeping needed to make the reductions type correct.</seg>
 <bpt i="1" x="1">&lt;g1&gt;</bpt>e<ept i="1">&lt;/g1&gt;</ept> of an inductive type <bpt i="2" x="2">&lt;g2&gt;</bpt>Foo<ept i="2">&lt;/g2&gt;</ept> (possibly applied to some
 arguments), the notation <bpt i="3" x="3">&lt;g3&gt;</bpt>e.bar<ept i="3">&lt;/g3&gt;</ept> is shorthand for <bpt i="4" x="4">&lt;g4&gt;</bpt>Foo.bar e<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk3" changedate="20220604T151723Z" creationid="tlqk35" creationdate="20220321T163400Z">
-        <seg>(아마 몇 가지 인수를 적용한) 귀납형이 <bpt i="2" x="2">&lt;g2&gt;</bpt>Foo<ept i="2">&lt;/g2&gt;</ept>인 표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>e<ept i="1">&lt;/g1&gt;</ept>에 대해 <bpt i="3" x="3">&lt;g3&gt;</bpt>e.bar<ept i="3">&lt;/g3&gt;</ept>과 같은 표기는 <bpt i="4" x="4">&lt;g4&gt;</bpt>Foo.bar e<ept i="4">&lt;/g4&gt;</ept>의 약식 표현입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T132757Z" creationid="tlqk35" creationdate="20220321T163400Z">
+        <seg>(아마 몇 인수에 적용한) 귀납형 <bpt i="2" x="2">&lt;g2&gt;</bpt>Foo<ept i="2">&lt;/g2&gt;</ept>의 표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>e<ept i="1">&lt;/g1&gt;</ept>에 대해 <bpt i="3" x="3">&lt;g3&gt;</bpt>e.bar<ept i="3">&lt;/g3&gt;</ept>과 같은 표기는 <bpt i="4" x="4">&lt;g4&gt;</bpt>Foo.bar e<ept i="4">&lt;/g4&gt;</ept>의 약식 표현입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4605,8 +4597,8 @@ denotes the type of lists of elements of type <bpt i="3" x="3">&lt;g3&gt;</bpt>�
       <tuv xml:lang="en-US">
         <seg>Here is another useful trick.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170408Z" creationid="tlqk35" creationdate="20220321T170408Z">
-        <seg>여기 또 유용한 트릭이 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165335Z" creationid="tlqk35" creationdate="20220321T170408Z">
+        <seg>여기 또 유용한 기법이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4738,8 +4730,8 @@ semigroup:</seg>
         <seg>Here, the <bpt i="1" x="1">&lt;g1&gt;</bpt>axiom<ept i="1">&lt;/g1&gt;</ept> declaration postulates the existence of an
 element of the given type and may compromise logical consistency.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161204Z" creationid="tlqk35" creationdate="20220321T161204Z">
-        <seg>여기서 <bpt i="1" x="1">&lt;g1&gt;</bpt>axiom<ept i="1">&lt;/g1&gt;</ept> 선언은 주어진 유형의 원소의 존재성을 가정하고 논리적 일관성을 타협할지도 모릅니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121143Z" creationid="tlqk35" creationdate="20220321T161204Z">
+        <seg>여기서 <bpt i="1" x="1">&lt;g1&gt;</bpt>axiom<ept i="1">&lt;/g1&gt;</ept> 선언은 주어진 유형의 원소의 존재성을 가정하고 논리적 일관성과 타협합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4882,8 +4874,8 @@ know how to synthesize placeholder," followed by the type of
 the term it is expecting, and all the objects and hypothesis available
 in the context.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170450Z" creationid="tlqk35" creationdate="20220321T170450Z">
-        <seg>만약 린이 그렇게 하려고 했는데 실패한다면 다음에 오는 항의 유형을 기대했다면서 "어떻게 자리 차지자를 동기화 해야할 지 모르겠다"는 오류 메시지를 반환합니다. 그리고 모든 객체와 가정들은 맥락에서 이용가능합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165559Z" creationid="tlqk35" creationdate="20220321T170450Z">
+        <seg>만약 린이 그렇게 하려고 했는데 실패한다면 다음에 오는 항의 유형을 기대했다면서 "어떻게 자리 차지자를 합성해야할 지 모르겠다"는 오류 메시지를 반환합니다. 그리고 모든 대상와 가정들은 맥락에서 이용가능합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4942,8 +4934,8 @@ an element of <bpt i="4" x="4">&lt;g4&gt;</bpt>Sort (max i j)<ept i="4">&lt;/g4&
         <seg>If <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept> have been declared as variables, Lean will
 generalize them for us automatically:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161522Z" creationid="tlqk35" creationdate="20220321T161522Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>가 변수로 선언되었다면 린은 우리를 위해 자동적으로 일반화시킬 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121848Z" creationid="tlqk35" creationdate="20220321T161522Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>가 변수로 선언되었다면 린은 이를 자동적으로 일반화시킬 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -4971,8 +4963,8 @@ in cases where <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept> is
 hypothesis, a classical mathematician is willing to assert
 <bpt i="3" x="3">&lt;g3&gt;</bpt>RH ∨ ¬RH<ept i="3">&lt;/g3&gt;</ept>, even though we cannot yet assert either disjunct.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165749Z" creationid="tlqk35" creationdate="20220321T165749Z">
-        <seg>만약 <bpt i="2" x="2">&lt;g2&gt;</bpt>RH<ept i="2">&lt;/g2&gt;</ept>가 리만 가설을 나타낸다면 우리가 아직 어느쪽에 분리자를 주장하지 않았더라도 고전 수학자는 <bpt i="3" x="3">&lt;g3&gt;</bpt>RH ∨ ¬RH<ept i="3">&lt;/g3&gt;</ept>라고 기꺼이 주장할 겁니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T162503Z" creationid="tlqk35" creationdate="20220321T165749Z">
+        <seg>만약 <bpt i="2" x="2">&lt;g2&gt;</bpt>RH<ept i="2">&lt;/g2&gt;</ept>가 리만 가설을 나타낸다면 우리가 아직 어느 논리합도 주장하지 않았더라도 고전 수학자는 <bpt i="3" x="3">&lt;g3&gt;</bpt>RH ∨ ¬RH<ept i="3">&lt;/g3&gt;</ept>라고 기꺼이 주장할 겁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5166,8 +5158,8 @@ out the inference using <bpt i="1" x="1">&lt;g1&gt;</bpt>inferInstance<ept i="1"
         <seg>If you are not used to thinking constructively, it may take some time
 for you to get a sense of where classical reasoning is used.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170002Z" creationid="tlqk35" creationdate="20220321T170002Z">
-        <seg>여러분이 직관적으로 생각하는데 익숙치 않다면 고전 추론이 사용되는 곳을 이해하는데 약간의 시간이 소요될지도 모릅니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164140Z" creationid="tlqk35" creationdate="20220321T170002Z">
+        <seg>여러분이 구성주의적 사고방식에 익숙하지 않다면 고전적 추론이 사용되어야 하는 곳이 어디인지를 아는데 시간이 걸릴지도 모릅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5631,8 +5623,8 @@ identifier.</seg>
         <seg>In all cases, the command <bpt i="3" x="3">&lt;g3&gt;</bpt>#print t1<ept i="3">&lt;/g3&gt;</ept> still yields
 <bpt i="4" x="4">&lt;g4&gt;</bpt>∀ p q : Prop, p → q → p<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161633Z" creationid="tlqk35" creationdate="20220321T161633Z">
-        <seg>모든 경우에 명령 <bpt i="3" x="3">&lt;g3&gt;</bpt>#print t1<ept i="3">&lt;/g3&gt;</ept>은 여전히 <bpt i="4" x="4">&lt;g4&gt;</bpt>∀ p q : Prop, p → q → p<ept i="4">&lt;/g4&gt;</ept>을 출력합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T122136Z" creationid="tlqk35" creationdate="20220321T161633Z">
+        <seg>모든 경우에 명령 <bpt i="3" x="3">&lt;g3&gt;</bpt>#print t1<ept i="3">&lt;/g3&gt;</ept>은 여전히 <bpt i="4" x="4">&lt;g4&gt;</bpt>∀ p q : Prop, p → q → p<ept i="4">&lt;/g4&gt;</ept>을 얻습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5657,8 +5649,8 @@ case distinction.</seg>
       <tuv xml:lang="en-US">
         <seg>In any case, all that really matters is the bottom line.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160455Z" creationid="tlqk35" creationdate="20220321T160455Z">
-        <seg>어떤 경우에는 가장 중요한 것은 아래의 문장입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114253Z" creationid="tlqk35" creationdate="20220321T160455Z">
+        <seg>어떤 경우든 가장 중요한 것은 아래의 문장입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5736,8 +5728,8 @@ proof in a suitable axiomatic foundation.</seg>
 described above, then the expressions themselves do not denote
 anything interesting.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160400Z" creationid="tlqk35" creationdate="20220321T160400Z">
-        <seg>반대로 위에서 설명한 코딩 트릭으로 생각한다면 표현식 그 자체는 어떤 흥미로운 것도 나타내지 않습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T112442Z" creationid="tlqk35" creationdate="20220321T160400Z">
+        <seg>대조적으로 위에서 설명한 코딩 트릭으로 생각한다면 표현식 그 자체는 어떤 흥미로운 것도 나타내지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5821,8 +5813,8 @@ able to process and check proofs in parallel, since assessing the
 correctness of one proof does not require knowing the details of
 another.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161001Z" creationid="tlqk35" creationdate="20220321T161001Z">
-        <seg>사실, 어떤 증명의 옳음에 접근하는 것은 다른 것의 상세를 알 필요가 없기 때문에 린은 일반적으로 증명의 검증과 처리를 병렬적으로 할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T115840Z" creationid="tlqk35" creationdate="20220321T161001Z">
+        <seg>사실, 어떤 증명의 옳음에 접근하는 것은 다른 증명의 세부사항 알기를 요구하지 않기에 린은 일반적으로 증명의 검증과 처리를 동시에 할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5839,8 +5831,8 @@ indexed <bpt i="1" x="1">&lt;g1&gt;</bpt>family<ept i="1">&lt;/g1&gt;</ept> of i
         <seg>In fact, by the propositions-as-types correspondence, we can declare
 the assumption <bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept> that <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept> holds, as another variable:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161547Z" creationid="tlqk35" creationdate="20220321T161547Z">
-        <seg>사실 유형으로써 명제 대응에 의해 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>를 가진 가정 <bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept>를을 또다른 변수로 선언할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121955Z" creationid="tlqk35" creationdate="20220321T161547Z">
+        <seg>사실 유형으로써 명제 대응에 의해 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>가 성립하는 가정 <bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept>를 또 다른 변수로 선언할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -5924,8 +5916,8 @@ clear.</seg>
 syntactic sugar for <bpt i="4" x="4">&lt;g4&gt;</bpt>Sort 0<ept i="4">&lt;/g4&gt;</ept>, the very bottom of the type hierarchy
 described in the last chapter.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155739Z" creationid="tlqk35" creationdate="20220321T155739Z">
-        <seg>사실 <bpt i="3" x="3">&lt;g3&gt;</bpt>Prop<ept i="3">&lt;/g3&gt;</ept>형은 <bpt i="4" x="4">&lt;g4&gt;</bpt>Sort 0<ept i="4">&lt;/g4&gt;</ept>에 대한 문법적 설탕입니다. 유형 계층의 최하층은 마지막 장에서 설명합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105432Z" creationid="tlqk35" creationdate="20220321T155739Z">
+        <seg>사실 <bpt i="3" x="3">&lt;g3&gt;</bpt>Prop<ept i="3">&lt;/g3&gt;</ept>형은 지난 장에서 설명한 유형 계층의 최하층인 <bpt i="4" x="4">&lt;g4&gt;</bpt>Sort 0<ept i="4">&lt;/g4&gt;</ept>에 대한 문법 설탕입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6041,8 +6033,8 @@ Lean tags proofs as <bpt i="1" x="1">&lt;g1&gt;</bpt>irreducible<ept i="1">&lt;/
 parser (more precisely, the <bpt i="2" x="2">&lt;g2&gt;</bpt>elaborator<ept i="2">&lt;/g2&gt;</ept>) that there is generally no
 need to unfold it when processing a file.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160948Z" creationid="tlqk35" creationdate="20220321T160948Z">
-        <seg>그 사실에 비춰보면 린의 증명을 <bpt i="1" x="1">&lt;g1&gt;</bpt>줄일 수 없는<ept i="1">&lt;/g1&gt;</ept> 것으로 태그한다. 그리고 그것은 파서(더 정확히는  <bpt i="2" x="2">&lt;g2&gt;</bpt>협력기<ept i="2">&lt;/g2&gt;</ept>)에게 파일을 처리할 때 증명을 펼칠 필요가 없다는 힌트를 주는 역할을 합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T115655Z" creationid="tlqk35" creationdate="20220321T160948Z">
+        <seg>그 사실로부터 린은 증명에 <bpt i="1" x="1">&lt;g1&gt;</bpt>축약할 수 없는(irreducible)<ept i="1">&lt;/g1&gt;</ept> 태그를 붙여 파서(parser)(더 정확히는  <bpt i="2" x="2">&lt;g2&gt;</bpt>협력기(elaborator)<ept i="2">&lt;/g2&gt;</ept>)가 파일을 처리할 때 대게 증명을 펼칠 필요가 없다는 힌트를 줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6059,8 +6051,8 @@ same as a <bpt i="2" x="2">&lt;g2&gt;</bpt>section ... end<ept i="2">&lt;/g2&gt;
         <seg>In most cases, the first argument of <bpt i="1" x="1">&lt;g1&gt;</bpt>Or.intro_right<ept i="1">&lt;/g1&gt;</ept> and
 <bpt i="2" x="2">&lt;g2&gt;</bpt>Or.intro_left<ept i="2">&lt;/g2&gt;</ept> can be inferred automatically by Lean.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163946Z" creationid="tlqk35" creationdate="20220321T163946Z">
-        <seg>대게의 경우  <bpt i="1" x="1">&lt;g1&gt;</bpt>Or.intro_right<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>Or.intro_left<ept i="2">&lt;/g2&gt;</ept>의 첫번째 인수는 린에 의해 자동적으로 추론될 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T153942Z" creationid="tlqk35" creationdate="20220321T163946Z">
+        <seg>대부분의 경우 <bpt i="1" x="1">&lt;g1&gt;</bpt>Or.intro_right<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>Or.intro_left<ept i="2">&lt;/g2&gt;</ept>의 첫 번 째 인수는 린에 의해 자동으로 추론됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6149,8 +6141,8 @@ ones we really want.</seg>
 <bpt i="5" x="5">&lt;g5&gt;</bpt>t<ept i="5">&lt;/g5&gt;</ept> is a proof of the desired conclusion assuming <bpt i="6" x="6">&lt;g6&gt;</bpt>h : p<ept i="6">&lt;/g6&gt;</ept>, and the
 two are combined by a lambda abstraction and application.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165203Z" creationid="tlqk35" creationdate="20220321T165203Z">
-        <seg>다시 말하자면 <bpt i="3" x="3">&lt;g3&gt;</bpt>s<ept i="3">&lt;/g3&gt;</ept>는 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>의 증명입니다. <bpt i="6" x="6">&lt;g6&gt;</bpt>h : p<ept i="6">&lt;/g6&gt;</ept>를 가정한 <bpt i="5" x="5">&lt;g5&gt;</bpt>t<ept i="5">&lt;/g5&gt;</ept>는 원하는 결론의 증명입니다. 그리고 이 둘은 람다 추상화와 적용으로 결합되어 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T161321Z" creationid="tlqk35" creationdate="20220321T165203Z">
+        <seg>다시 말하자면 <bpt i="3" x="3">&lt;g3&gt;</bpt>s<ept i="3">&lt;/g3&gt;</ept>는 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>의 증명입니다. <bpt i="5" x="5">&lt;g5&gt;</bpt>t<ept i="5">&lt;/g5&gt;</ept>는 <bpt i="6" x="6">&lt;g6&gt;</bpt>h : p<ept i="6">&lt;/g6&gt;</ept>를 가정했을 때 원하는 결론의 증명입니다. 그리고 이 둘은 람다 추상화와 적용으로 결합되어 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6168,8 +6160,8 @@ generally possible in constructive logic.</seg>
         <seg>In other words, for each unresolved placeholder, Lean
 reports the subgoal that needs to be filled at that point.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170458Z" creationid="tlqk35" creationdate="20220321T170458Z">
-        <seg>다시 말하자면 각 해결되지 않은 자리 차지자에 대해 린은 그 지점에서 채워져야 할 작은 목표를 보고합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165626Z" creationid="tlqk35" creationdate="20220321T170458Z">
+        <seg>다시 말하자면 각 해결되지 않은 자리 차지자에 대해 린은 그 지점에서 채워져야 할 하위 목표를 보고합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6208,8 +6200,8 @@ then you also have access to the contents of <bpt i="7" x="7">&lt;g7&gt;</bpt>Ba
 corresponds to having a function that takes any element of <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept> to an
 element of <bpt i="6" x="6">&lt;g6&gt;</bpt>q<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155625Z" creationid="tlqk35" creationdate="20220321T155625Z">
-        <seg>다시 말하면, 명제  <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>q<ept i="4">&lt;/g4&gt;</ept>사이의 함의는  <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>의 원소에서 <bpt i="6" x="6">&lt;g6&gt;</bpt>q<ept i="6">&lt;/g6&gt;</ept>의 원소로 가는 함수를 갖는 것에 대응된니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104651Z" creationid="tlqk35" creationdate="20220321T155625Z">
+        <seg>다시 말하면, 명제 <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>q<ept i="4">&lt;/g4&gt;</ept>사이의 함의는 어떤 <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>의 원소를 받아 어떤 <bpt i="6" x="6">&lt;g6&gt;</bpt>q<ept i="6">&lt;/g6&gt;</ept>의 원소로 가는 함수를 갖는 것에 대응됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6226,8 +6218,8 @@ proof by cases.</seg>
         <seg>In other words, the expressions
 <bpt i="2" x="2">&lt;g2&gt;</bpt>themselves<ept i="2">&lt;/g2&gt;</ept> are the proofs.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160431Z" creationid="tlqk35" creationdate="20220321T160431Z">
-        <seg>다시 말하자면 표현식 <bpt i="2" x="2">&lt;g2&gt;</bpt>그들 자체는<ept i="2">&lt;/g2&gt;</ept> 증명입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T113801Z" creationid="tlqk35" creationdate="20220321T160431Z">
+        <seg>다시 말하면 표현식 <bpt i="2" x="2">&lt;g2&gt;</bpt>그 자체는<ept i="2">&lt;/g2&gt;</ept> 증명입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6264,8 +6256,8 @@ to a constructor.</seg>
         <seg>In other words, whenever we have <bpt i="4" x="4">&lt;g4&gt;</bpt>p : Prop<ept i="4">&lt;/g4&gt;</ept>, we
 can interpret <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept> as a type, namely, the type of its proofs.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155450Z" creationid="tlqk35" creationdate="20220321T155450Z">
-        <seg>다시 말하자면, <bpt i="4" x="4">&lt;g4&gt;</bpt>p : Prop<ept i="4">&lt;/g4&gt;</ept>를 갖는한 우리는<bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>를 유형으로써 대게 그것의 증명형으로  해석할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104339Z" creationid="tlqk35" creationdate="20220321T155450Z">
+        <seg>다시 말하자면, <bpt i="4" x="4">&lt;g4&gt;</bpt>p : Prop<ept i="4">&lt;/g4&gt;</ept>를 갖는 한 우리는<bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>를 그것의 증명 유형으로 해석할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6557,8 +6549,8 @@ for building proofs involving the universal quantifier.</seg>
         <seg>In the current setting, it shows
 how to "introduce" or establish an implication.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162426Z" creationid="tlqk35" creationdate="20220321T162426Z">
-        <seg>지금 상황에서 그것은 "도입"을 어떻게 하는지 또는 함의를 어떻게 세우는지 보여줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T123849Z" creationid="tlqk35" creationdate="20220321T162426Z">
+        <seg>현재 상황에서 이는 함의를 어떻게 "도입"하거나 세우는지 보여줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6708,8 +6700,8 @@ ways of talking, at times saying that an expression "constructs" or
 "produces" or "returns" a proof of a proposition, and at other times
 simply saying that it "is" such a proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160439Z" creationid="tlqk35" creationdate="20220321T160439Z">
-        <seg>아래의 설명에서 우리는 두 말하기 방식 사이를 앞뒤로 다닐 것인데, 어떤 표현은 명제의 증명을 "구성" 또는 "생성", "반환"을 말하고, 어떤 표현은 단순히 "그것"이라고 말합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114055Z" creationid="tlqk35" creationdate="20220321T160439Z">
+        <seg>아래의 설명에서 우리는 이 두 말하기 방식 사이를 왔다갔다 할 것인데, 어떤 때에는 명제의 증명을 "구성" 또는 "생성", "반환"으로 표현해 말하고 또 다른 때에는 단순히 그런 증명이 "있다"고 말합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6718,8 +6710,8 @@ simply saying that it "is" such a proof.</seg>
 takes three arguments, <bpt i="10" x="10">&lt;g10&gt;</bpt>hpq : p ∨ q<ept i="10">&lt;/g10&gt;</ept>, <bpt i="11" x="11">&lt;g11&gt;</bpt>hpr : p → r<ept i="11">&lt;/g11&gt;</ept> and
 <bpt i="12" x="12">&lt;g12&gt;</bpt>hqr : q → r<ept i="12">&lt;/g12&gt;</ept>, and produces a proof of <bpt i="13" x="13">&lt;g13&gt;</bpt>r<ept i="13">&lt;/g13&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163854Z" creationid="tlqk35" creationdate="20220321T163854Z">
-        <seg>표현식 <bpt i="8" x="8">&lt;g8&gt;</bpt>Or.elim hpq hpr hqr<ept i="8">&lt;/g8&gt;</ept>과 <bpt i="9" x="9">&lt;g9&gt;</bpt>Or.elim<ept i="9">&lt;/g9&gt;</ept>은 세 인수 <bpt i="10" x="10">&lt;g10&gt;</bpt>hpq : p ∨ q<ept i="10">&lt;/g10&gt;</ept>, <bpt i="11" x="11">&lt;g11&gt;</bpt>hpr : p → r<ept i="11">&lt;/g11&gt;</ept> 그리고 <bpt i="12" x="12">&lt;g12&gt;</bpt>hqr : q → r<ept i="12">&lt;/g12&gt;</ept>를 받습니다. 그리고 <bpt i="13" x="13">&lt;g13&gt;</bpt>r<ept i="13">&lt;/g13&gt;</ept>의 증명을 만듭니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T153747Z" creationid="tlqk35" creationdate="20220321T163854Z">
+        <seg>표현식 <bpt i="8" x="8">&lt;g8&gt;</bpt>Or.elim hpq hpr hqr<ept i="8">&lt;/g8&gt;</ept>에서 <bpt i="9" x="9">&lt;g9&gt;</bpt>Or.elim<ept i="9">&lt;/g9&gt;</ept>은 세 인수 <bpt i="10" x="10">&lt;g10&gt;</bpt>hpq : p ∨ q<ept i="10">&lt;/g10&gt;</ept>와 <bpt i="11" x="11">&lt;g11&gt;</bpt>hpr : p → r<ept i="11">&lt;/g11&gt;</ept>, <bpt i="12" x="12">&lt;g12&gt;</bpt>hqr : q → r<ept i="12">&lt;/g12&gt;</ept>를 받습니다. 그리고 <bpt i="13" x="13">&lt;g13&gt;</bpt>r<ept i="13">&lt;/g13&gt;</ept>의 증명을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6843,8 +6835,8 @@ and then we show that the sum of two even numbers is an even number.</seg>
         <seg>In the following example, we use
 <bpt i="14" x="14">&lt;g14&gt;</bpt>Or.elim<ept i="14">&lt;/g14&gt;</ept> to prove <bpt i="15" x="15">&lt;g15&gt;</bpt>p ∨ q → q ∨ p<ept i="15">&lt;/g15&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163917Z" creationid="tlqk35" creationdate="20220321T163917Z">
-        <seg>다음 예제에서 우리는 <bpt i="14" x="14">&lt;g14&gt;</bpt>Or.elim<ept i="14">&lt;/g14&gt;</ept>을 <bpt i="15" x="15">&lt;g15&gt;</bpt>p ∨ q → q ∨ p<ept i="15">&lt;/g15&gt;</ept>을 증명하는데 사용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T153819Z" creationid="tlqk35" creationdate="20220321T163917Z">
+        <seg>다음 예제에서 <bpt i="14" x="14">&lt;g14&gt;</bpt>Or.elim<ept i="14">&lt;/g14&gt;</ept>로 <bpt i="15" x="15">&lt;g15&gt;</bpt>p ∨ q → q ∨ p<ept i="15">&lt;/g15&gt;</ept>을 증명합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6886,8 +6878,8 @@ and default arguments.</seg>
         <seg>In the last chapter we observed that lambda abstraction can be viewed
 as an "introduction rule" for <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162419Z" creationid="tlqk35" creationdate="20220321T162419Z">
-        <seg>지난 장에서 우리는 람다 추상화가 <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>에 대한 "도입 규칙"으로 본 적이 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T123710Z" creationid="tlqk35" creationdate="20220321T162419Z">
+        <seg>지난 장에서 람다 추상화가 <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>에 대한 "도입 규칙"이라고 봤습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6895,8 +6887,8 @@ as an "introduction rule" for <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt
         <seg>In the latter case, let us say that (the type associated
 with) <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept> is <bpt i="6" x="6">&lt;g6&gt;</bpt>inhabited<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160016Z" creationid="tlqk35" creationdate="20220321T160016Z">
-        <seg>후자의 경우에서 (연관된 유형)<bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>은 <bpt i="6" x="6">&lt;g6&gt;</bpt>머무른다<ept i="6">&lt;/g6&gt;</ept>고 말합시다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T110803Z" creationid="tlqk35" creationdate="20220321T160016Z">
+        <seg>후자의 경우 (연관된 유형)<bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>은 <bpt i="6" x="6">&lt;g6&gt;</bpt>머무른다(inhabited)<ept i="6">&lt;/g6&gt;</ept>고 말합시다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7038,8 +7030,8 @@ powerful means of introducing new types in Lean.</seg>
         <seg>In the propositions-as-types paradigm, theorems involving only <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>
 can be proved using lambda abstraction and application.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160637Z" creationid="tlqk35" creationdate="20220321T160637Z">
-        <seg>유형으로써 명제 패러다임에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>만을 포함하는 정리는 람다 추상화와 적용을 사용해 증명될 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114608Z" creationid="tlqk35" creationdate="20220321T160637Z">
+        <seg>유형으로써 명제 패러다임에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>→<ept i="1">&lt;/g1&gt;</ept>만을 포함하는 정리는 람다 추상화와 적용으로 증명될 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7214,8 +7206,8 @@ proofs, using <bpt i="1" x="1">&lt;g1&gt;</bpt>tactics<ept i="1">&lt;/g1&gt;</ep
 mathematical assertions and proofs in the language of dependent type
 theory as well.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154806Z" creationid="tlqk35" creationdate="20220321T154806Z">
-        <seg>지금까지, 여러분들은 린에서 객체와 함수를 정의하는 몇가지 방법을 배웠습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102113Z" creationid="tlqk35" creationdate="20220321T154806Z">
+        <seg>이 장에서 여러분에게 의존 유형론의 언어로 수학적 주장과 증명을 작성하는 법에 대해 설명하려고 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7367,8 +7359,8 @@ two elements <bpt i="2" x="2">&lt;g2&gt;</bpt>t1 t2 : p<ept i="2">&lt;/g2&gt;</e
 same way as it treats <bpt i="3" x="3">&lt;g3&gt;</bpt>(fun x =&gt; t) s<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>t[s/x]<ept i="4">&lt;/g4&gt;</ept> as
 definitionally equal.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160239Z" creationid="tlqk35" creationdate="20220321T160239Z">
-        <seg>물론 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>이 어떤 명제라면, 린의 커널은 임의의 두 원소 <bpt i="2" x="2">&lt;g2&gt;</bpt>t2 : p <ept i="2">&lt;/g2&gt;</ept>을 <bpt i="3" x="3">&lt;g3&gt;</bpt>(fun x = t) s<ept i="3">&lt;/g3&gt;</ept>와 <bpt i="4" x="4">&lt;g4&gt;</bpt>t[/x]<ept i="4">&lt;/g4&gt;</ept>를 정의상으로 동등하다고 같다는 것과 거의 같은 방식으로 정의상 동등하게 취급합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111433Z" creationid="tlqk35" creationdate="20220321T160239Z">
+        <seg>물론 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>가 어떤 명제라면, 린의 커널은 임의의 두 원소 <bpt i="2" x="2">&lt;g2&gt;</bpt>t1 t2 : p <ept i="2">&lt;/g2&gt;</ept>을 <bpt i="3" x="3">&lt;g3&gt;</bpt>(fun x = t) s<ept i="3">&lt;/g3&gt;</ept>와 <bpt i="4" x="4">&lt;g4&gt;</bpt>t[/x]<ept i="4">&lt;/g4&gt;</ept>를 다루는 것과 마찬가지로 정의상으로 동등하다 취급합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7577,8 +7569,8 @@ an underscore <bpt i="2" x="2">&lt;g2&gt;</bpt>_<ept i="2">&lt;/g2&gt;</ept> as 
       <tuv xml:lang="en-US">
         <seg>Introducing Auxiliary Subgoals</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165041Z" creationid="tlqk35" creationdate="20220321T165041Z">
-        <seg>부가적인 하위 목표를 도입하기</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T160510Z" creationid="tlqk35" creationdate="20220321T165041Z">
+        <seg>보조적인 하위 목표 도입하기</seg>
       </tuv>
     </tu>
     <tu>
@@ -7626,8 +7618,8 @@ constructors.</seg>
 hypothesis (trivially) to establish that the conclusion, <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept>, is
 true.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160813Z" creationid="tlqk35" creationdate="20220321T160813Z">
-        <seg>직관적으로  <bpt i="3" x="3">&lt;g3&gt;</bpt>p → q → p<ept i="3">&lt;/g3&gt;</ept>에 대한 우리의 증명은 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>와 <bpt i="5" x="5">&lt;g5&gt;</bpt>q<ept i="5">&lt;/g5&gt;</ept>가 참이라고 가정한다. 그리고 (명백히) 첫 번 째 가정을 <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept>가 참이라는 결론을 세우기 위해 사용한다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114859Z" creationid="tlqk35" creationdate="20220321T160813Z">
+        <seg>직관적으로  <bpt i="3" x="3">&lt;g3&gt;</bpt>p → q → p<ept i="3">&lt;/g3&gt;</ept>의 증명은 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>와 <bpt i="5" x="5">&lt;g5&gt;</bpt>q<ept i="5">&lt;/g5&gt;</ept>가 참이라고 가정합니다. 그리고 (뻔하게도) 첫 가정을 <bpt i="6" x="6">&lt;g6&gt;</bpt>p<ept i="6">&lt;/g6&gt;</ept>가 참이라는 결론을 입증하는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7635,8 +7627,8 @@ true.</seg>
         <seg>Intuitively, the constructive "Or" is very strong: asserting <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ q<ept i="1">&lt;/g1&gt;</ept>
 amounts to knowing which is the case.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165726Z" creationid="tlqk35" creationdate="20220321T165726Z">
-        <seg>직관적으로 구성자 "논리합"은 아주 강력합니다.  <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ q<ept i="1">&lt;/g1&gt;</ept>라 주장하는 것은 각 경우를 아는 것과 같습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T162341Z" creationid="tlqk35" creationdate="20220321T165726Z">
+        <seg>직관적으로 구성주의적 "논리합"은 아주 강력합니다. <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ q<ept i="1">&lt;/g1&gt;</ept>라 주장하는 것은 각 경우를 아는 것과 같습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7838,8 +7830,8 @@ needed in the following example because, from a constructive
 standpoint, knowing that <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept> are not both true does not
 necessarily tell you which one is false:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170025Z" creationid="tlqk35" creationdate="20220321T170025Z">
-        <seg>다음 예제에서 이게 필요한데 왜냐하면 직관주의적 관점에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept> 둘 다 참이 아니라는 것을 아는 것은 여러분에게 반드시 어떤 것이 거짓이라는 것을 말해줄 필요는 없기 때문입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163946Z" creationid="tlqk35" creationdate="20220321T170025Z">
+        <seg>다음 예제에서 이게 필요한데 왜냐하면 구성주의적 관점에서 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept> 둘 다 참이 아니라는 것을 아는 것이 반드시 이들 중 하나가 거짓임을 말하지 않기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7914,8 +7906,8 @@ effort, and much of the potential for automation will be realized only gradually
 to flatten nested constructors that associate to the right, so that
 these two proofs are equivalent:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163527Z" creationid="tlqk35" creationdate="20220321T163527Z">
-        <seg>"And"같은 반복적 생성은 흔합니다. 두 증명이 동등함을 보이기 위해 린은 여러분에게 오른쪽에 연관된 중첩된 생성자를 평평하게 만들도록 허용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T134537Z" creationid="tlqk35" creationdate="20220321T163527Z">
+        <seg>"And"같은 반복적 구성은 흔합니다. 두 증명이 동등함을 보이기 위해 린은 여러분이 오른쪽으로 결합한 중첩된 생성자로 꺽인 괄호 하나만 사용하는 것(flatten)을 허용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -7932,8 +7924,8 @@ which takes a list as its second non-implicit argument:</seg>
         <seg>It is convenient for illustration,
 and we will use it often.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162714Z" creationid="tlqk35" creationdate="20220321T162714Z">
-        <seg>이는 설명에 유용하고 예제 명령을 자주 사용할 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124707Z" creationid="tlqk35" creationdate="20220321T162714Z">
+        <seg>이는 설명에 편리하므로 이를 자주 사용할 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8130,8 +8122,8 @@ if-then-else expression.</seg>
 function application and abstraction can conveniently help us keep
 track of which elements of <bpt i="7" x="7">&lt;g7&gt;</bpt>Prop<ept i="7">&lt;/g7&gt;</ept> are inhabited.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160048Z" creationid="tlqk35" creationdate="20220321T160048Z">
-        <seg>함수 적용 및 추상화 규칙이 <bpt i="7" x="7">&lt;g7&gt;</bpt>Prop<ept i="7">&lt;/g7&gt;</ept>의 원소가 머무르는 것을 우리가 추적하는 것을 편리하게 도울 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111018Z" creationid="tlqk35" creationdate="20220321T160048Z">
+        <seg>함수 적용 및 추상화 규칙은 <bpt i="7" x="7">&lt;g7&gt;</bpt>Prop<ept i="7">&lt;/g7&gt;</ept>의 원소가 머무르는지를 추적하는 걸 돕는데 편리하게 해 줄 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8172,8 +8164,8 @@ that even though we can treat proofs <bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept 
 the language of dependent type theory, they carry no information
 beyond the fact that <bpt i="7" x="7">&lt;g7&gt;</bpt>p<ept i="7">&lt;/g7&gt;</ept> is true.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160316Z" creationid="tlqk35" creationdate="20220321T160316Z">
-        <seg>우리가 증명<bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept i="6">&lt;/g6&gt;</ept>을 의존 유형론 언어의 평범한 대상으로 다룰 수 있음에도 <bpt i="7" x="7">&lt;g7&gt;</bpt>p<ept i="7">&lt;/g7&gt;</ept>가 참이라는 사실 이상의 정보를 전달하지 않는다는 것을 의미합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111809Z" creationid="tlqk35" creationdate="20220321T160316Z">
+        <seg>이는 증명<bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept i="6">&lt;/g6&gt;</ept>을 의존 유형론 언어에 대해 평범한 대상으로 다룰 수 있음에도 <bpt i="7" x="7">&lt;g7&gt;</bpt>p<ept i="7">&lt;/g7&gt;</ept>가 참이라는 사실 외의 정보를 주지 않음을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8438,8 +8430,8 @@ and <bpt i="3" x="3">&lt;g3&gt;</bpt>succ<ept i="3">&lt;/g3&gt;</ept> are expose
 therefore provides <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.inr<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.inl<ept i="4">&lt;/g4&gt;</ept> which can be viewed as
 shorthand for <bpt i="5" x="5">&lt;g5&gt;</bpt>Or.intro_right _<ept i="5">&lt;/g5&gt;</ept> and <bpt i="6" x="6">&lt;g6&gt;</bpt>Or.intro_left _<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164016Z" creationid="tlqk35" creationdate="20220321T164016Z">
-        <seg>린은 그러므로  <bpt i="5" x="5">&lt;g5&gt;</bpt>Or.intro_right _<ept i="5">&lt;/g5&gt;</ept>과 <bpt i="6" x="6">&lt;g6&gt;</bpt>Or.intro_left _<ept i="6">&lt;/g6&gt;</ept>의 약식 표현으로 볼 수 있는 <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.inr<ept i="3">&lt;/g3&gt;</ept> 과 <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.inl<ept i="4">&lt;/g4&gt;</ept>을 제공합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154004Z" creationid="tlqk35" creationdate="20220321T164016Z">
+        <seg>그러므로 린은 <bpt i="5" x="5">&lt;g5&gt;</bpt>Or.intro_right _<ept i="5">&lt;/g5&gt;</ept>과 <bpt i="6" x="6">&lt;g6&gt;</bpt>Or.intro_left _<ept i="6">&lt;/g6&gt;</ept>의 약식 표현인 <bpt i="3" x="3">&lt;g3&gt;</bpt>Or.inr<ept i="3">&lt;/g3&gt;</ept> 과 <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.inl<ept i="4">&lt;/g4&gt;</ept>을 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8456,8 +8448,8 @@ shorthand for <bpt i="5" x="5">&lt;g5&gt;</bpt>Or.intro_right _<ept i="5">&lt;/g
 <bpt i="10" x="10">&lt;g10&gt;</bpt>⟨arg1, arg2, ...⟩<ept i="10">&lt;/g10&gt;</ept> in situations like these, when the relevant type is an
 inductive type and can be inferred from the context.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk3" changedate="20220604T151715Z" creationid="tlqk35" creationdate="20220321T163229Z">
-        <seg>연관된 유형이 귀납형이고 맥락으로부터 추리할 수 있는 상황에서 린은 <bpt i="9" x="9">&lt;g9&gt;</bpt>익명 생성자<ept i="9">&lt;/g9&gt;</ept> 표기 <bpt i="10" x="10">&lt;g10&gt;</bpt>⟨arg1, arg2, ...⟩<ept i="10">&lt;/g10&gt;</ept>를 쓸 수 있게 해줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T132439Z" creationid="tlqk35" creationdate="20220321T163229Z">
+        <seg>연관된 유형이 귀납형이고 맥락으로부터 추론할 수 있는 상황에서 린은 <bpt i="9" x="9">&lt;g9&gt;</bpt>익명 생성자<ept i="9">&lt;/g9&gt;</ept> 표기 <bpt i="10" x="10">&lt;g10&gt;</bpt>⟨arg1, arg2, ...⟩<ept i="10">&lt;/g10&gt;</ept>를 쓸 수 있게 해줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8486,8 +8478,8 @@ assignments.</seg>
 allows us to specify the type of the final term <bpt i="4" x="4">&lt;g4&gt;</bpt>hp<ept i="4">&lt;/g4&gt;</ept>, explicitly,
 with a <bpt i="5" x="5">&lt;g5&gt;</bpt>show<ept i="5">&lt;/g5&gt;</ept> statement.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161051Z" creationid="tlqk35" creationdate="20220321T161051Z">
-        <seg>린은 여러분에게 마지막 항 <bpt i="4" x="4">&lt;g4&gt;</bpt>hp<ept i="4">&lt;/g4&gt;</ept>을 명시적으로 <bpt i="5" x="5">&lt;g5&gt;</bpt>show<ept i="5">&lt;/g5&gt;</ept> 문장으로 유형을 명시하는 것을 허용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T120436Z" creationid="tlqk35" creationdate="20220321T161051Z">
+        <seg>여러분은 마지막 항 <bpt i="4" x="4">&lt;g4&gt;</bpt>hp<ept i="4">&lt;/g4&gt;</ept>을 <bpt i="5" x="5">&lt;g5&gt;</bpt>show<ept i="5">&lt;/g5&gt;</ept> 문장으로 유형을 명시적으로 나타낼 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8568,8 +8560,8 @@ assign variable names.</seg>
 goal, which models the "suffices to show" construction in ordinary
 mathematics.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165224Z" creationid="tlqk35" creationdate="20220321T165224Z">
-        <seg>린은 또 구조화된 목표로부터 후방향 추론 방식을 지원합니다. 이것은 일상 수학에서 "보여주기에 충분하다" 구성을 모델링 한 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T161710Z" creationid="tlqk35" creationdate="20220321T165224Z">
+        <seg>게다가 린은 목표로부터 구조화된 후방향 추론 방식을 지원합니다. 이것은 일상 수학 속 "~을 보이기에 충분하다" 구성을 본딴 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8805,8 +8797,8 @@ quantifier with the <bpt i="1" x="1">&lt;g1&gt;</bpt>match<ept i="1">&lt;/g1&gt;
       <tuv xml:lang="en-US">
         <seg>Lean provides another useful syntactic gadget.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163333Z" creationid="tlqk35" creationdate="20220321T163333Z">
-        <seg>린은 또 다른 유용한 문법적 도구를 제공합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T132646Z" creationid="tlqk35" creationdate="20220321T163333Z">
+        <seg>린은 또 다른 유용한 문법 도구를 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -8980,8 +8972,8 @@ library can be found online, on GitHub:</seg>
 propositional logic, all of which you are free to use in proofs of
 your own.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170114Z" creationid="tlqk35" creationdate="20220321T170114Z">
-        <seg>린의 표준 라이브러리는 명제 논리의 유효한 많은 진술들이 담겨있고 그 모든 것들은 여러분들의 주장을 증명하는데 자유롭게 사용될 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164414Z" creationid="tlqk35" creationdate="20220321T170114Z">
+        <seg>린의 표준 라이브러리는 명제 논리의 유효한 많은 진술들의 증명을 포함합니다. 그 모든 것들은 여러분들의 주장을 증명하는데 자유롭게 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9030,8 +9022,8 @@ ranging from basic "mixfix" notations to custom elaborators.</seg>
 proof assistant, is to help us to construct such a term, <bpt i="4" x="4">&lt;g4&gt;</bpt>t<ept i="4">&lt;/g4&gt;</ept>, and to
 verify that it is well-formed and has the correct type.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160545Z" creationid="tlqk35" creationdate="20220321T160545Z">
-        <seg>증명 보조기로써 린의 일은 그러한 항 <bpt i="4" x="4">&lt;g4&gt;</bpt>t<ept i="4">&lt;/g4&gt;</ept>를 생성하고 그것이 올바른 유형이고 잘 형성된 것을 검증하도록 돕는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114519Z" creationid="tlqk35" creationdate="20220321T160545Z">
+        <seg>증명 보조기로써 린의 일은 그런 항 <bpt i="4" x="4">&lt;g4&gt;</bpt>t<ept i="4">&lt;/g4&gt;</ept>를 생성하는 것을 돕는 것과 그것이 올바른 유형을 갖고 잘 형성된 것을 검증하는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9176,8 +9168,8 @@ are opened.</seg>
       <tuv xml:lang="en-US">
         <seg>Logical Equivalence</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164609Z" creationid="tlqk35" creationdate="20220321T164609Z">
-        <seg>논리적 동등성</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T160123Z" creationid="tlqk35" creationdate="20220321T164609Z">
+        <seg>논리적 동등</seg>
       </tuv>
     </tu>
     <tu>
@@ -9205,8 +9197,8 @@ other statements, if necessary.</seg>
 all the <bpt i="4" x="4">&lt;g4&gt;</bpt>sorry<ept i="4">&lt;/g4&gt;</ept>'s; if not, there are errors that you need to
 correct.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170349Z" creationid="tlqk35" creationdate="20220321T170349Z">
-        <seg>린이 모든 <bpt i="4" x="4">&lt;g4&gt;</bpt>sorry<ept i="4">&lt;/g4&gt;</ept>에 대한 말을 받아들이게 만드세요. 그렇지 않으면 여러분이 고쳐야 하는 에러가 생깁니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165258Z" creationid="tlqk35" creationdate="20220321T170349Z">
+        <seg>린이 모든 <bpt i="4" x="4">&lt;g4&gt;</bpt>sorry<ept i="4">&lt;/g4&gt;</ept>로 채워진 항을 받아들이게 하세요. 그렇지 않으면 여러분이 고쳐야 하는 에러가 생깁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9375,8 +9367,8 @@ reasoning about the functions that the programs compute.</seg>
         <seg>Moreover, <bpt i="5" x="5">&lt;g5&gt;</bpt>Type u<ept i="5">&lt;/g5&gt;</ept> is also just
 syntactic sugar for <bpt i="6" x="6">&lt;g6&gt;</bpt>Sort (u+1)<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155755Z" creationid="tlqk35" creationdate="20220321T155755Z">
-        <seg>게다가 <bpt i="5" x="5">&lt;g5&gt;</bpt>Type u<ept i="5">&lt;/g5&gt;</ept>도 <bpt i="6" x="6">&lt;g6&gt;</bpt>Sort (u+1)<ept i="6">&lt;/g6&gt;</ept>에 대한 문법적 설탕입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105430Z" creationid="tlqk35" creationdate="20220321T155755Z">
+        <seg>게다가 <bpt i="5" x="5">&lt;g5&gt;</bpt>Type u<ept i="5">&lt;/g5&gt;</ept>도 <bpt i="6" x="6">&lt;g6&gt;</bpt>Sort (u+1)<ept i="6">&lt;/g6&gt;</ept>에 대한 문법 설탕입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9423,8 +9415,8 @@ on the order in which namespaces are opened.</seg>
 show that we can pass back and forth between <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept> and
 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → q<ept i="2">&lt;/g2&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155550Z" creationid="tlqk35" creationdate="20220321T155550Z">
-        <seg>게다가 한번 우리가 이런 식별을 하면 함의 규칙은 <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → q<ept i="2">&lt;/g2&gt;</ept>의 앞뒤를 오갈 수 있다는 것을 보여줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104537Z" creationid="tlqk35" creationdate="20220321T155550Z">
+        <seg>더욱이 한 번 우리가 이런 식별을 하면 함의 규칙은 <bpt i="1" x="1">&lt;g1&gt;</bpt>Implies p q<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → q<ept i="2">&lt;/g2&gt;</ept>의 앞뒤를 오갈 수 있음을 보여줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9634,8 +9626,8 @@ in definitions.</seg>
         <seg>Negation, <bpt i="1" x="1">&lt;g1&gt;</bpt>¬p<ept i="1">&lt;/g1&gt;</ept>, is actually defined to be <bpt i="2" x="2">&lt;g2&gt;</bpt>p → False<ept i="2">&lt;/g2&gt;</ept>, so we
 obtain <bpt i="3" x="3">&lt;g3&gt;</bpt>¬p<ept i="3">&lt;/g3&gt;</ept> by deriving a contradiction from <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164220Z" creationid="tlqk35" creationdate="20220321T164220Z">
-        <seg>부정 <bpt i="1" x="1">&lt;g1&gt;</bpt>¬p<ept i="1">&lt;/g1&gt;</ept>은 실제로 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → False<ept i="2">&lt;/g2&gt;</ept>로 정의되어 있습니다. 그래서 우리는 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>로부터 모순을 유도함으로써 <bpt i="3" x="3">&lt;g3&gt;</bpt>¬p<ept i="3">&lt;/g3&gt;</ept>를 얻습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154507Z" creationid="tlqk35" creationdate="20220321T164220Z">
+        <seg>부정 <bpt i="1" x="1">&lt;g1&gt;</bpt>¬p<ept i="1">&lt;/g1&gt;</ept>은 사실 <bpt i="2" x="2">&lt;g2&gt;</bpt>p → False<ept i="2">&lt;/g2&gt;</ept>로 정의 되었습니다. 그래서 <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>로부터 모순을 유도하여 <bpt i="3" x="3">&lt;g3&gt;</bpt>¬p<ept i="3">&lt;/g3&gt;</ept>를 얻습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9664,14 +9656,6 @@ to name a section, which is to say, you can use an anonymous
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T150138Z" creationid="tlqk35" creationdate="20220321T150138Z">
         <seg>섹션에 이름을 줄 필요도 없습니다. 그말은 즉슨, 여러분은 익명의 <bpt i="1" x="1">&lt;g1&gt;</bpt>section<ept i="1">&lt;/g1&gt;</ept> / <bpt i="2" x="2">&lt;g2&gt;</bpt>end<ept i="2">&lt;/g2&gt;</ept> 쌍을 사용할 수 있다는 것입니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en-US">
-        <seg>Not</seg>
-      </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161954Z" creationid="tlqk35" creationdate="20220321T161954Z">
-        <seg>부정</seg>
       </tuv>
     </tu>
     <tu>
@@ -9820,8 +9804,8 @@ principle.</seg>
 entered as <bpt i="1" x="1">&lt;g1&gt;</bpt>\0<ept i="1">&lt;/g1&gt;</ept>, <bpt i="2" x="2">&lt;g2&gt;</bpt>\1<ept i="2">&lt;/g2&gt;</ept>, <bpt i="3" x="3">&lt;g3&gt;</bpt>\2<ept i="3">&lt;/g3&gt;</ept>, ..., for hypotheses, as we did in
 this example.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161817Z" creationid="tlqk35" creationdate="20220321T161817Z">
-        <seg>수치 유니코드 밑첨자를 사용하는 것은 종종 유용합니다. 이 예제에서 그런 것처럼 가정에 대해 <bpt i="1" x="1">&lt;g1&gt;</bpt>\0<ept i="1">&lt;/g1&gt;</ept>, <bpt i="2" x="2">&lt;g2&gt;</bpt>\1<ept i="2">&lt;/g2&gt;</ept>, <bpt i="3" x="3">&lt;g3&gt;</bpt>\2<ept i="3">&lt;/g3&gt;</ept>, ..., 으로 쳐서 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T122935Z" creationid="tlqk35" creationdate="20220321T161817Z">
+        <seg>수치 유니코드 밑첨자를 사용하는 것은 종종 유용합니다. 이 예제에서 그런 것처럼 가정에 대해 <bpt i="1" x="1">&lt;g1&gt;</bpt>\0<ept i="1">&lt;/g1&gt;</ept>, <bpt i="2" x="2">&lt;g2&gt;</bpt>\1<ept i="2">&lt;/g2&gt;</ept>, <bpt i="3" x="3">&lt;g3&gt;</bpt>\2<ept i="3">&lt;/g3&gt;</ept>, ..., 을 쳐서 입력할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -9848,8 +9832,8 @@ you declare the inductive type.</seg>
 correspondence, proving the theorem <bpt i="3" x="3">&lt;g3&gt;</bpt>p → q → p<ept i="3">&lt;/g3&gt;</ept> is really the same
 as defining an element of the associated type.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160842Z" creationid="tlqk35" creationdate="20220321T160842Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>theorem<ept i="1">&lt;/g1&gt;</ept> 명령은 <bpt i="2" x="2">&lt;g2&gt;</bpt>def<ept i="2">&lt;/g2&gt;</ept> 명령의 한 버전이라는 것을 주목하세요. 명제와 유형 대응 하에서 정리 <bpt i="3" x="3">&lt;g3&gt;</bpt>p → q → p<ept i="3">&lt;/g3&gt;</ept>의 증명하는 것은 연관된 유형의 원소를 증명하는 것과 정말 같습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T115053Z" creationid="tlqk35" creationdate="20220321T160842Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>theorem<ept i="1">&lt;/g1&gt;</ept> 명령은 <bpt i="2" x="2">&lt;g2&gt;</bpt>def<ept i="2">&lt;/g2&gt;</ept> 명령의 변종임을 보세요. 명제와 유형 대응 하에서 정리 <bpt i="3" x="3">&lt;g3&gt;</bpt>p → q → p<ept i="3">&lt;/g3&gt;</ept>를 증명하는 것은 연관된 유형의 원소를 정의하는 것과 동일합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10029,8 +10013,8 @@ type, as described in dependent types section.</seg>
         <seg>Notice that and-introduction and and-elimination are similar to the
 pairing and projection operations for the cartesian product.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162854Z" creationid="tlqk35" creationdate="20220321T162854Z">
-        <seg>and-도입과 and-제거는 카테시안 곱 연산의 순서쌍을 구성하는 것과 순서쌍에서 원소를 추출하는 연산과 비슷한 것을 보세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124938Z" creationid="tlqk35" creationdate="20220321T162854Z">
+        <seg>and-도입과 and-제거는 카테시안 곱 연산에 대해 순서쌍을 구성하는 것과 순서쌍에서 원소를 추출하는 연산과 유사합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10102,8 +10086,8 @@ that matters is whether it is of the form <bpt i="3" x="3">&lt;g3&gt;</bpt>0<ept
         <seg>Notice that the lambda abstractions <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>hq : q<ept i="2">&lt;/g2&gt;</ept> can be
 viewed as temporary assumptions in the proof of <bpt i="3" x="3">&lt;g3&gt;</bpt>t1<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161038Z" creationid="tlqk35" creationdate="20220321T161038Z">
-        <seg>람다 추상화 <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>hq : q<ept i="2">&lt;/g2&gt;</ept>은 <bpt i="3" x="3">&lt;g3&gt;</bpt>t1<ept i="3">&lt;/g3&gt;</ept>의 증명에서 일시적인 가정으로 보일 수 있음을 주목하세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T120244Z" creationid="tlqk35" creationdate="20220321T161038Z">
+        <seg>람다 추상화 <bpt i="1" x="1">&lt;g1&gt;</bpt>hp : p<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>hq : q<ept i="2">&lt;/g2&gt;</ept>는 <bpt i="3" x="3">&lt;g3&gt;</bpt>t1<ept i="3">&lt;/g3&gt;</ept>의 증명에서 일시적인 가정이라고 볼 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10160,8 +10144,8 @@ provides the context in which the substitution is to occur, has type
         <seg>Notice that there is enough information in the full expression for
 Lean to infer the types of <bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>hq<ept i="2">&lt;/g2&gt;</ept> as well.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164048Z" creationid="tlqk35" creationdate="20220321T164048Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>hq<ept i="2">&lt;/g2&gt;</ept>의 유형을 추론하기에 린에게 완전한 표현식에 충분한 정보가 있음을 보세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154135Z" creationid="tlqk35" creationdate="20220321T164048Z">
+        <seg>린이 <bpt i="1" x="1">&lt;g1&gt;</bpt>hp<ept i="1">&lt;/g1&gt;</ept>와 <bpt i="2" x="2">&lt;g2&gt;</bpt>hq<ept i="2">&lt;/g2&gt;</ept>의 유형을 추론하는데 전체 표현식 속에 충분한 정보가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10223,8 +10207,8 @@ are like type parameters:</seg>
       <tuv xml:lang="en-US">
         <seg>Now we can apply the theorem <bpt i="1" x="1">&lt;g1&gt;</bpt>t1<ept i="1">&lt;/g1&gt;</ept> just as a function application.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161146Z" creationid="tlqk35" creationdate="20220321T161146Z">
-        <seg>이제 우리는 정리 <bpt i="1" x="1">&lt;g1&gt;</bpt>t1<ept i="1">&lt;/g1&gt;</ept>을 함수 활용에 적용할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121050Z" creationid="tlqk35" creationdate="20220321T161146Z">
+        <seg>이제 우리는 정리 <bpt i="1" x="1">&lt;g1&gt;</bpt>t1<ept i="1">&lt;/g1&gt;</ept>을 함수 활용을 하는 것처럼 사용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10309,8 +10293,8 @@ as a proof method -- for example, you can use it to prove <bpt i="2" x="2">&lt;g
 and Lean produces severe warnings when files use or import theorems
 which depend on it.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170302Z" creationid="tlqk35" creationdate="20220321T170302Z">
-        <seg>물론 증명 방법으로 건전하지 않습니다. -- 예를 들어, 여러분은 <bpt i="2" x="2">&lt;g2&gt;</bpt>False<ept i="2">&lt;/g2&gt;</ept> 을 증명하는데 그것을 사용할 수 있습니다. --그러면 린은 그것에 의존하는 정리를 불러오거나 그런 파일을 사용할 때 심각한 경고를 보냅니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165144Z" creationid="tlqk35" creationdate="20220321T170302Z">
+        <seg>물론 증명 방법으로 불건전합니다. -- 예를 들어, 여러분은 <bpt i="2" x="2">&lt;g2&gt;</bpt>False<ept i="2">&lt;/g2&gt;</ept>을 증명하는데 그것을 사용할 수 있습니다. --그러면 린은 그것에 의존하는 정리를 불러오거나 그런 파일을 사용할 때 심각한 경고를 보냅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10464,8 +10448,8 @@ us to co-opt this mechanism for writing proofs as well.</seg>
 variable <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept> of type <bpt i="2" x="2">&lt;g2&gt;</bpt>r → s<ept i="2">&lt;/g2&gt;</ept> can be viewed as the hypothesis, or
 premise, that <bpt i="3" x="3">&lt;g3&gt;</bpt>r → s<ept i="3">&lt;/g3&gt;</ept> holds.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161724Z" creationid="tlqk35" creationdate="20220321T161724Z">
-        <seg>다시 한 번, 유형으로써 명제 대응을 사용하면 <bpt i="2" x="2">&lt;g2&gt;</bpt>r → s<ept i="2">&lt;/g2&gt;</ept>형의 변수 <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept>는 <bpt i="3" x="3">&lt;g3&gt;</bpt>r → s<ept i="3">&lt;/g3&gt;</ept>을 성립시키는 가정 또는 전제로 볼 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T122731Z" creationid="tlqk35" creationdate="20220321T161724Z">
+        <seg>다시 한 번, 유형으로써 명제 대응을 사용해 <bpt i="2" x="2">&lt;g2&gt;</bpt>r → s<ept i="2">&lt;/g2&gt;</ept>형의 변수 <bpt i="1" x="1">&lt;g1&gt;</bpt>h<ept i="1">&lt;/g1&gt;</ept>는 <bpt i="3" x="3">&lt;g3&gt;</bpt>r → s<ept i="3">&lt;/g3&gt;</ept>을 성립시키는 가정 또는 전제라고 볼 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10473,8 +10457,8 @@ premise, that <bpt i="3" x="3">&lt;g3&gt;</bpt>r → s<ept i="3">&lt;/g3&gt;</ep
         <seg>Once again, you should exercise judgment as to whether such
 abbreviations enhance or diminish readability.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164151Z" creationid="tlqk35" creationdate="20220321T164151Z">
-        <seg>다시 한 번, 여러분은 그러한 간략화가 가독성을 높이는지 낮추는지 판단을 시험해보셔야 합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154347Z" creationid="tlqk35" creationdate="20220321T164151Z">
+        <seg>한 번 더, 여러분은 그러한 간략화가 가독성을 높이는지 낮추는지 판단을 시험해봐야 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10511,8 +10495,8 @@ attribute is assigned.</seg>
 theorem is complete, typically we only need to know that the proof
 exists; it doesn't matter what the proof is.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160910Z" creationid="tlqk35" creationdate="20220321T160910Z">
-        <seg>한번 정리의 증명이 마쳐지면 우리는 증명이 존재한다는 것만 알면 됩니다. 증명이 무엇인지 아는 것은 중요하지 않습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T115332Z" creationid="tlqk35" creationdate="20220321T160910Z">
+        <seg>한 번 정리의 증명이 끝나면 보통 우리는 증명이 존재한다는 것만 알면 됩니다. 증명이 무엇인지 아는 것은 중요하지 않습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10623,8 +10607,8 @@ of length <bpt i="7" x="7">&lt;g7&gt;</bpt>n<ept i="7">&lt;/g7&gt;</ept>:</seg>
 language of dependent type theory is to layer an assertion language
 and a proof language on top of the definition language.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154820Z" creationid="tlqk35" creationdate="20220321T154820Z">
-        <seg>의존 유형론의 언어로 정의된 객체에 대해서 주장을 증명하는 한 전략은 주장 언어와 증명 언어를 정의언어의 꼭대기 층에 두는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102216Z" creationid="tlqk35" creationdate="20220321T154820Z">
+        <seg>의존 유형론의 언어로 정의된 대상에 대해서 주장을 증명하는 한 방법은 주장 언어와 증명 언어를 언어 정의의 꼭대기에 두는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10715,8 +10699,8 @@ to construct a solution in the type class instance synthesis procedure.</seg>
       <tuv xml:lang="en-US">
         <seg>Or you can carry out a proof by contradiction:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165949Z" creationid="tlqk35" creationdate="20220321T165949Z">
-        <seg>한편 여러분은 귀류법으로 증명을 도출할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163510Z" creationid="tlqk35" creationdate="20220321T165949Z">
+        <seg>한편 여러분은 귀류법으로 증명을 수행할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10748,8 +10732,8 @@ this the law of the excluded middle, <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∨ ¬p<
       <tuv xml:lang="en-US">
         <seg>Other properties:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170151Z" creationid="tlqk35" creationdate="20220321T170151Z">
-        <seg>다른 성질들:</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165835Z" creationid="tlqk35" creationdate="20220321T170151Z">
+        <seg>기타 성질들:</seg>
       </tuv>
     </tu>
     <tu>
@@ -10987,8 +10971,8 @@ with actual proofs.</seg>
       <tuv xml:lang="en-US">
         <seg>Prove the following identities, replacing the "sorry" placeholders with actual proofs.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170611Z" creationid="tlqk35" creationdate="20220321T170611Z">
-        <seg>다음 항등식을 증명하세요. "sorry"를 실제 증명으로 대체하세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165804Z" creationid="tlqk35" creationdate="20220321T170611Z">
+        <seg> "sorry"를 실제 증명으로 바꿔 다음 항등식을 증명하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11046,8 +11030,8 @@ type.</seg>
 down and check that they are well-typed that ensures that the
 proposition in question is true.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160408Z" creationid="tlqk35" creationdate="20220321T160408Z">
-        <seg>그것보다 우리가 표현식을 쓰고 잘 쓰여졌는지 확인할 수 있다는 사실은 의문의 명제가 참인지를 확실히 만듭니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T113744Z" creationid="tlqk35" creationdate="20220321T160408Z">
+        <seg>그보다 우리가 표현식을 쓸 수 있고 의문의 명제가 참이라고 보장하는 잘 입력됨을 검증할 수 있다는 것은 사실입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11196,8 +11180,8 @@ function spaces, we could interpret <bpt i="7" x="7">&lt;g7&gt;</bpt>α → β<e
         <seg>Recall this tells Lean that
 the argument is implicit, and should be filled in automatically.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170438Z" creationid="tlqk35" creationdate="20220321T170438Z">
-        <seg>이것이 린에게 인수가 암시적이고 자동적으로 채우게 함을 의미한다는 것을 기억하세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165437Z" creationid="tlqk35" creationdate="20220321T170438Z">
+        <seg>이것이 린에게 인수가 암시적임을 알리고 이를 자동적으로 채우게 함을 의미합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11298,8 +11282,8 @@ be written <bpt i="5" x="5">&lt;g5&gt;</bpt>∀ (p q : Prop) (hp : p) (hq :q), p
 denotes nothing more than an arrow type in which the target does not
 depend on the bound variable.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161645Z" creationid="tlqk35" creationdate="20220321T161645Z">
-        <seg>왜냐하면 화살표는 대상이 구속 변수에 의존하지 않는 화살표 유형만을 나타내기 때문에 이 유형은 <bpt i="5" x="5">&lt;g5&gt;</bpt>∀ (p q : Prop) (hp : p) (hq :q), p<ept i="5">&lt;/g5&gt;</ept>로 쓸 수 있게 함을 기억하세요. </seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T122250Z" creationid="tlqk35" creationdate="20220321T161645Z">
+        <seg>왜냐하면 화살표는 대상이 구속 변수에 의존하지 않는 화살표 유형만을 나타내기에 이 유형은 <bpt i="5" x="5">&lt;g5&gt;</bpt>∀ (p q : Prop) (hp : p) (hq :q), p<ept i="5">&lt;/g5&gt;</ept>로 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11528,8 +11512,8 @@ all their inputs are equal.</seg>
         <seg>Similarly, <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.intro_right p hq<ept i="4">&lt;/g4&gt;</ept> creates a
 proof for <bpt i="5" x="5">&lt;g5&gt;</bpt>p ∨ q<ept i="5">&lt;/g5&gt;</ept> using a proof <bpt i="6" x="6">&lt;g6&gt;</bpt>hq : q<ept i="6">&lt;/g6&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163629Z" creationid="tlqk35" creationdate="20220321T163629Z">
-        <seg>마찬가지로 <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.intro_right p hq<ept i="4">&lt;/g4&gt;</ept>는 <bpt i="6" x="6">&lt;g6&gt;</bpt>hq : q<ept i="6">&lt;/g6&gt;</ept>의 증명을 사용하여 <bpt i="5" x="5">&lt;g5&gt;</bpt>p ∨ q<ept i="5">&lt;/g5&gt;</ept> 의 증명을 만듭니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T134731Z" creationid="tlqk35" creationdate="20220321T163629Z">
+        <seg>비슷하게 <bpt i="4" x="4">&lt;g4&gt;</bpt>Or.intro_right p hq<ept i="4">&lt;/g4&gt;</ept>는 <bpt i="6" x="6">&lt;g6&gt;</bpt>hq : q<ept i="6">&lt;/g6&gt;</ept>의 증명을 사용해 <bpt i="5" x="5">&lt;g5&gt;</bpt>p ∨ q<ept i="5">&lt;/g5&gt;</ept> 의 증명을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11742,8 +11726,8 @@ interprets <bpt i="3" x="3">&lt;g3&gt;</bpt>2<ept i="3">&lt;/g3&gt;</ept> as an 
         <seg>So constructing an
 element <bpt i="8" x="8">&lt;g8&gt;</bpt>t : p<ept i="8">&lt;/g8&gt;</ept> tells us that <bpt i="9" x="9">&lt;g9&gt;</bpt>p<ept i="9">&lt;/g9&gt;</ept> is indeed true.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160102Z" creationid="tlqk35" creationdate="20220321T160102Z">
-        <seg>그러므로 원소 <bpt i="8" x="8">&lt;g8&gt;</bpt>t : p<ept i="8">&lt;/g8&gt;</ept>을 생성하는 것은 <bpt i="9" x="9">&lt;g9&gt;</bpt>p<ept i="9">&lt;/g9&gt;</ept>가 사실이라고 우리에게 알립니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111145Z" creationid="tlqk35" creationdate="20220321T160102Z">
+        <seg>그러므로 원소 <bpt i="8" x="8">&lt;g8&gt;</bpt>t : p<ept i="8">&lt;/g8&gt;</ept>을 생성하는 것은 <bpt i="9" x="9">&lt;g9&gt;</bpt>p<ept i="9">&lt;/g9&gt;</ept>가 당연히 사실임을 알립니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11864,8 +11848,8 @@ universes.</seg>
       <tuv xml:lang="en-US">
         <seg>Some simplifications are possible, however.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155224Z" creationid="tlqk35" creationdate="20220321T155224Z">
-        <seg>하지만 몇 가지 단순화는 가능합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104025Z" creationid="tlqk35" creationdate="20220321T155224Z">
+        <seg>하지만 몇 가지 단순화를 할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -11963,8 +11947,8 @@ used to replace both at once.</seg>
         <seg>Start writing the proof from the top down, using
 <bpt i="3" x="3">&lt;g3&gt;</bpt>sorry<ept i="3">&lt;/g3&gt;</ept> to fill in subproofs.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170320Z" creationid="tlqk35" creationdate="20220321T170320Z">
-        <seg>하향식으로 증명 작성을 하작하려면 보조 증명에 <bpt i="3" x="3">&lt;g3&gt;</bpt>sorry<ept i="3">&lt;/g3&gt;</ept>를 채워 사용하세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165219Z" creationid="tlqk35" creationdate="20220321T170320Z">
+        <seg>하향식 증명 작성을 시작하려면 보조 증명에 <bpt i="3" x="3">&lt;g3&gt;</bpt>sorry<ept i="3">&lt;/g3&gt;</ept>를 채워 사용하세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12059,8 +12043,8 @@ with predicates.</seg>
       <tuv xml:lang="en-US">
         <seg>Suppose that, assuming <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept> as a hypothesis, we have a proof of <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155118Z" creationid="tlqk35" creationdate="20220321T155118Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>를 가정으로 하면 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>의 증명을 가질 수 있다는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103601Z" creationid="tlqk35" creationdate="20220321T155118Z">
+        <seg>가설로 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>를 가정하면 <bpt i="2" x="2">&lt;g2&gt;</bpt>q<ept i="2">&lt;/g2&gt;</ept>의 증명을 가질 수 있다는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12140,8 +12124,8 @@ is of <bpt i="10" x="10">&lt;g10&gt;</bpt>Sort 0<ept i="10">&lt;/g10&gt;</ept>, 
       <tuv xml:lang="en-US">
         <seg>Systems of natural deduction for propositional logic also typically rely on the following rule:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155031Z" creationid="tlqk35" creationdate="20220321T155031Z">
-        <seg>명제논리의 자연 영역에 대한 체계은 주로 다음 규칙에 의존합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103444Z" creationid="tlqk35" creationdate="20220321T155031Z">
+        <seg>명제논리에 대한 자연 영역의 체계은 주로 다음 규칙에 의존합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12573,8 +12557,8 @@ working environment.</seg>
         <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>example<ept i="1">&lt;/g1&gt;</ept> command states a theorem without naming it or storing
 it in the permanent context.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162659Z" creationid="tlqk35" creationdate="20220321T162659Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>example<ept i="1">&lt;/g1&gt;</ept> 명령은 이름이 없이 영구적인 맥락으로 저장하지 않는 정리를 기술합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124601Z" creationid="tlqk35" creationdate="20220321T162659Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>example<ept i="1">&lt;/g1&gt;</ept> 명령은 이름이 없거나 영구적인 맥락 속에 그것을 저장한 정리를 기술합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12725,8 +12709,8 @@ efficient way of working with equality.</seg>
 nothing more than annotate the type, and, internally, all the
 presentations of <bpt i="2" x="2">&lt;g2&gt;</bpt>t1<ept i="2">&lt;/g2&gt;</ept> that we have seen produce the same term.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161127Z" creationid="tlqk35" creationdate="20220321T161127Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>show<ept i="1">&lt;/g1&gt;</ept> 명령은 유형에 주석을 달 뿐이고, 내부적으로 우리가 본 <bpt i="2" x="2">&lt;g2&gt;</bpt>t1<ept i="2">&lt;/g2&gt;</ept>의 모든 나타남이 동일한 용어를 생성할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T120851Z" creationid="tlqk35" creationdate="20220321T161127Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>show<ept i="1">&lt;/g1&gt;</ept> 명령은 유형에 주석을 달아줄 뿐 내부적으로 우리가 본 <bpt i="2" x="2">&lt;g2&gt;</bpt>t1<ept i="2">&lt;/g2&gt;</ept>의 모든 나타남이 같은 항을 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -12752,8 +12736,8 @@ term.</seg>
         <seg>The <bpt i="1" x="1">&lt;g1&gt;</bpt>sorry<ept i="1">&lt;/g1&gt;</ept> identifier magically produces a proof of anything, or
 provides an object of any data type at all.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170232Z" creationid="tlqk35" creationdate="20220321T170232Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>sorry<ept i="1">&lt;/g1&gt;</ept> 식별자는 어떤 증명이든 마법같이 만듭니다. 혹은 임의의 데이터 유형의 객체를 제공합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164641Z" creationid="tlqk35" creationdate="20220321T170232Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>sorry<ept i="1">&lt;/g1&gt;</ept> 식별자는 어떤 증명이든 마법같이 만듭니다. 혹은 임의 데이터 유형의 대상를 제공합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13078,8 +13062,8 @@ variables.</seg>
         <seg>The arbitrary fact, <bpt i="1" x="1">&lt;g1&gt;</bpt>q<ept i="1">&lt;/g1&gt;</ept>, that follows from falsity is an implicit
 argument in <bpt i="2" x="2">&lt;g2&gt;</bpt>False.elim<ept i="2">&lt;/g2&gt;</ept> and is inferred automatically.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164448Z" creationid="tlqk35" creationdate="20220321T164448Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>q<ept i="1">&lt;/g1&gt;</ept>가 어떤 거짓 명제로부터 나온다는 사실은 <bpt i="2" x="2">&lt;g2&gt;</bpt>False.elim<ept i="2">&lt;/g2&gt;</ept>에 대한 암시적 인수이며 자동적으로 추론됩니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T155650Z" creationid="tlqk35" creationdate="20220321T164448Z">
+        <seg>어떤 사실 <bpt i="1" x="1">&lt;g1&gt;</bpt>q<ept i="1">&lt;/g1&gt;</ept>가 어떤 거짓 명제로부터 도출됨은 <bpt i="2" x="2">&lt;g2&gt;</bpt>False.elim<ept i="2">&lt;/g2&gt;</ept>의 암시적 인수이며 자동적으로 추론됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13160,8 +13144,8 @@ subtypes as follows:</seg>
         <seg>The classical axioms also give you access to additional patterns of
 proof that can be justified by appeal to <bpt i="1" x="1">&lt;g1&gt;</bpt>em<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165913Z" creationid="tlqk35" creationdate="20220321T165852Z">
-        <seg>고전적 공리도 여러분에게 <bpt i="1" x="1">&lt;g1&gt;</bpt>em<ept i="1">&lt;/g1&gt;</ept>에 호소하여 정당화될 수 있는 추가적인 증명 패턴의 접근을 줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T163416Z" creationid="tlqk35" creationdate="20220321T165852Z">
+        <seg>고전적 공리는 추가로 여러분에게 <bpt i="1" x="1">&lt;g1&gt;</bpt>em<ept i="1">&lt;/g1&gt;</ept>에 호소하여 정당화할 수 있는 추가적인 증명 패턴 접근권한을 줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13532,8 +13516,8 @@ composition of <bpt i="6" x="6">&lt;g6&gt;</bpt>f<ept i="6">&lt;/g6&gt;</ept> an
         <seg>The expression <bpt i="1" x="1">&lt;g1&gt;</bpt>And.intro h1 h2<ept i="1">&lt;/g1&gt;</ept> builds a proof of <bpt i="2" x="2">&lt;g2&gt;</bpt>p ∧ q<ept i="2">&lt;/g2&gt;</ept> using
 proofs <bpt i="3" x="3">&lt;g3&gt;</bpt>h1 : p<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>h2 : q<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162538Z" creationid="tlqk35" creationdate="20220321T162538Z">
-        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>And.intro h1 h2<ept i="1">&lt;/g1&gt;</ept>은 <bpt i="2" x="2">&lt;g2&gt;</bpt>p ∧ q<ept i="2">&lt;/g2&gt;</ept>의 증명을 <bpt i="3" x="3">&lt;g3&gt;</bpt>h1 : p<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>h2 : q<ept i="4">&lt;/g4&gt;</ept>의 증명을 사용하여 만듭니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124230Z" creationid="tlqk35" creationdate="20220321T162538Z">
+        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>And.intro h1 h2<ept i="1">&lt;/g1&gt;</ept>은 <bpt i="2" x="2">&lt;g2&gt;</bpt>p ∧ q<ept i="2">&lt;/g2&gt;</ept>의 증명을 <bpt i="3" x="3">&lt;g3&gt;</bpt>h1 : p<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>h2 : q<ept i="4">&lt;/g4&gt;</ept>의 증명을 사용하여 세웁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13541,8 +13525,8 @@ proofs <bpt i="3" x="3">&lt;g3&gt;</bpt>h1 : p<ept i="3">&lt;/g3&gt;</ept> and <
         <seg>The expression <bpt i="1" x="1">&lt;g1&gt;</bpt>And.left h<ept i="1">&lt;/g1&gt;</ept> creates a proof of <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept> from a proof
 <bpt i="3" x="3">&lt;g3&gt;</bpt>h : p ∧ q<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162748Z" creationid="tlqk35" creationdate="20220321T162748Z">
-        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>And.left h<ept i="1">&lt;/g1&gt;</ept>는 <bpt i="3" x="3">&lt;g3&gt;</bpt>h : p ∧ q<ept i="3">&lt;/g3&gt;</ept>의 증명으로부터 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 증명을 만듭니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124740Z" creationid="tlqk35" creationdate="20220321T162748Z">
+        <seg>표현식 <bpt i="1" x="1">&lt;g1&gt;</bpt>And.left h<ept i="1">&lt;/g1&gt;</ept>는 증명 <bpt i="3" x="3">&lt;g3&gt;</bpt>h : p ∧ q<ept i="3">&lt;/g3&gt;</ept>으로부터 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>의 증명을 생성합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13610,8 +13594,8 @@ governing abstraction and application for functions is an instance of
 the <bpt i="1" x="1">&lt;g1&gt;</bpt>Curry-Howard isomorphism<ept i="1">&lt;/g1&gt;</ept>, sometimes known as the
 <bpt i="2" x="2">&lt;g2&gt;</bpt>propositions-as-types<ept i="2">&lt;/g2&gt;</ept> paradigm.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155714Z" creationid="tlqk35" creationdate="20220321T155714Z">
-        <seg>자연 추론을 위한 증명 보조기에서 함의에 대한 규칙이 함수 추상화와 함수 적용을 지배하는 규칙과 정확히 일치한다는 사실은 <bpt i="1" x="1">&lt;g1&gt;</bpt>커리-하워드 동형론(Curry-Howard isomorphism) <ept i="1">&lt;/g1&gt;</ept>의 한 예이며, 때때로 <bpt i="2" x="2">&lt;g2&gt;</bpt>유형으로써 명제(propositions-as-types)<ept i="2">&lt;/g2&gt;</ept> 패러다임으로 알려져 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105256Z" creationid="tlqk35" creationdate="20220321T155714Z">
+        <seg>자연 연역에 대한 증명 보조기에서 함의 규칙이 함수 추상화와 함수 적용을 지배하는 규칙과 정확히 일치한다는 사실은 <bpt i="1" x="1">&lt;g1&gt;</bpt>커리-하워드 동형론(Curry-Howard isomorphism) <ept i="1">&lt;/g1&gt;</ept>의 한 예이며, 때때로 <bpt i="2" x="2">&lt;g2&gt;</bpt>유형으로써 명제(propositions-as-types)<ept i="2">&lt;/g2&gt;</ept> 패러다임으로 알려져 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13902,8 +13886,8 @@ computation inside the Lean kernel.</seg>
       <tuv xml:lang="en-US">
         <seg>The following list includes a number of common identities.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170122Z" creationid="tlqk35" creationdate="20220321T170122Z">
-        <seg>다음 리스트는 흔히 사용되는 항등식들을 포함합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164520Z" creationid="tlqk35" creationdate="20220321T170122Z">
+        <seg>다음 리스트는 흔한 동치명제와 항진명제들을 포함합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -13936,8 +13920,8 @@ computation inside the Lean kernel.</seg>
         <seg>The full list of axioms that are used in Lean to support classical
 reasoning are discussed in <bpt i="1" x="1">&lt;g1&gt;</bpt>Axioms and Computations<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170049Z" creationid="tlqk35" creationdate="20220321T170049Z">
-        <seg>고전 추론을 지원하기 위해 린에서 사용된 모든 공리의 리스트는 <bpt i="1" x="1">&lt;g1&gt;</bpt>공리와 계산<ept i="1">&lt;/g1&gt;</ept>에서 다뤄집니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164239Z" creationid="tlqk35" creationdate="20220321T170049Z">
+        <seg>고전적 추론을 지원하는 린에서 사용된 모든 공리의 리스트는 <bpt i="1" x="1">&lt;g1&gt;</bpt>공리와 계산<ept i="1">&lt;/g1&gt;</ept>에서 다뤄집니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14107,8 +14091,8 @@ where each one refers to the other(s).</seg>
 that we can prove <bpt i="2" x="2">&lt;g2&gt;</bpt>r<ept i="2">&lt;/g2&gt;</ept> from <bpt i="3" x="3">&lt;g3&gt;</bpt>p ∨ q<ept i="3">&lt;/g3&gt;</ept>, by showing that <bpt i="4" x="4">&lt;g4&gt;</bpt>r<ept i="4">&lt;/g4&gt;</ept> follows
 from <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept> and that <bpt i="6" x="6">&lt;g6&gt;</bpt>r<ept i="6">&lt;/g6&gt;</ept> follows from <bpt i="7" x="7">&lt;g7&gt;</bpt>q<ept i="7">&lt;/g7&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163752Z" creationid="tlqk35" creationdate="20220321T163752Z">
-        <seg><bpt i="4" x="4">&lt;g4&gt;</bpt>r<ept i="4">&lt;/g4&gt;</ept>이 <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>로부터 나오고 <bpt i="6" x="6">&lt;g6&gt;</bpt>r<ept i="6">&lt;/g6&gt;</ept>이 <bpt i="7" x="7">&lt;g7&gt;</bpt>q<ept i="7">&lt;/g7&gt;</ept>로부터 나온다는 것을 보임으로써 우리가 <bpt i="3" x="3">&lt;g3&gt;</bpt>p ∨ q<ept i="3">&lt;/g3&gt;</ept>로부터 <bpt i="2" x="2">&lt;g2&gt;</bpt>r<ept i="2">&lt;/g2&gt;</ept>을 증명할 수 있다는 생각입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T140004Z" creationid="tlqk35" creationdate="20220321T163752Z">
+        <seg>아이디어는 <bpt i="4" x="4">&lt;g4&gt;</bpt>r<ept i="4">&lt;/g4&gt;</ept>이 <bpt i="5" x="5">&lt;g5&gt;</bpt>p<ept i="5">&lt;/g5&gt;</ept>로부터 그리고 <bpt i="6" x="6">&lt;g6&gt;</bpt>r<ept i="6">&lt;/g6&gt;</ept>이 <bpt i="7" x="7">&lt;g7&gt;</bpt>q<ept i="7">&lt;/g7&gt;</ept>로부터 도출됨을 보임으로써 우리가 <bpt i="3" x="3">&lt;g3&gt;</bpt>p ∨ q<ept i="3">&lt;/g3&gt;</ept>로부터 <bpt i="2" x="2">&lt;g2&gt;</bpt>r<ept i="2">&lt;/g2&gt;</ept>을 증명할 수 있다입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14240,8 +14224,8 @@ constructive, which is to say, they reflect a computational
 understanding of the logical connectives based on the
 propositions-as-types correspondence.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165648Z" creationid="tlqk35" creationdate="20220321T165648Z">
-        <seg>지금까지 우리가 본 도입과 제거 규칙은 모두 직관적입니다. 그 말은 그들은 유형으로써 명제 대응에 기반한 논리 연결사의 계산적인 이해를 반영하고 있다는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T162245Z" creationid="tlqk35" creationdate="20220321T165648Z">
+        <seg>지금까지 본 도입 규칙과 제거 규칙은 모두 구성주의적입니다. 그 말은 즉, 그들은 유형으로써 명제 대응에 기반한 논리적 연결사의 계산적인 이해를 반영한다는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14518,8 +14502,8 @@ a more natural and perspicuous way.</seg>
         <seg>The next example simply permutes the last two lines in
 the previous proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165230Z" creationid="tlqk35" creationdate="20220321T165230Z">
-        <seg>다음 예제는 이전 증명에서 마지막 두 줄을 단순히 바꾼 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T161805Z" creationid="tlqk35" creationdate="20220321T165230Z">
+        <seg>다음 예제는 이전 증명에서 마지막 두 줄의 순서만 바꾼 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14527,8 +14511,8 @@ the previous proof.</seg>
         <seg>The next example uses both these rules to produce a
 proof of <bpt i="9" x="9">&lt;g9&gt;</bpt>(p → q) → ¬q → ¬p<ept i="9">&lt;/g9&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164305Z" creationid="tlqk35" creationdate="20220321T164305Z">
-        <seg>다음 예제는 <bpt i="9" x="9">&lt;g9&gt;</bpt>(p → q) → ¬q → ¬p<ept i="9">&lt;/g9&gt;</ept>의 증명을 만들기 위해 세 가지 규칙 모두를 사용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154655Z" creationid="tlqk35" creationdate="20220321T164305Z">
+        <seg>다음 예제는 <bpt i="9" x="9">&lt;g9&gt;</bpt>(p → q) → ¬q → ¬p<ept i="9">&lt;/g9&gt;</ept>의 증명을 만드는 데 두 규칙 모두를 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14630,8 +14614,8 @@ defined in Lean's library in the file <bpt i="2" x="2">&lt;g2&gt;</bpt>Prelude.c
 hierarchy), and each connective comes with its canonical introduction
 and elimination rules.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162457Z" creationid="tlqk35" creationdate="20220321T162457Z">
-        <seg>다른 명제논리적 연결사들은  린의 라이브러리의 <bpt i="2" x="2">&lt;g2&gt;</bpt>Prelude.core<ept i="2">&lt;/g2&gt;</ept> 파일 속에 정의되 있습니다. (라이브러리 계층에 대한 더 많은 정보를 위해 <bpt i="3" x="3">&lt;g3&gt;</bpt>파일 불러오기<ept i="3">&lt;/g3&gt;</ept>를 보세요.) 그리고 각 연결사들마다 그것의 정식 도입, 제거 규칙이 딸려 나옵니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124138Z" creationid="tlqk35" creationdate="20220321T162457Z">
+        <seg>다른 명제 논리적 연결사들은 린의 라이브러리 속 <bpt i="2" x="2">&lt;g2&gt;</bpt>Prelude.core<ept i="2">&lt;/g2&gt;</ept> 파일에 정의되어 있습니다. (라이브러리 계층에 대한 더 많은 정보는 <bpt i="3" x="3">&lt;g3&gt;</bpt>파일 불러오기<ept i="3">&lt;/g3&gt;</ept>를 참고) 그리고 각 연결사들에 대해 그것의 정식 도입 및 제거 규칙이 딸려 나옵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14789,8 +14773,8 @@ really a form of recursion in Lean.</seg>
       <tuv xml:lang="en-US">
         <seg>The propositional connectives come with the following notation:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161840Z" creationid="tlqk35" creationdate="20220321T161840Z">
-        <seg>명제 연결사는 다음 기호로 따라온다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T123136Z" creationid="tlqk35" creationdate="20220321T161840Z">
+        <seg>명제 연결사는 다음 기호와 딸려 나온다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -14913,8 +14897,8 @@ of the Curry-Howard isomorphism, but in contrast to implication and
 the function space constructor, <bpt i="9" x="9">&lt;g9&gt;</bpt>∧<ept i="9">&lt;/g9&gt;</ept> and <bpt i="10" x="10">&lt;g10&gt;</bpt>×<ept i="10">&lt;/g10&gt;</ept> are treated separately
 in Lean.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163016Z" creationid="tlqk35" creationdate="20220321T163016Z">
-        <seg><bpt i="7" x="7">&lt;g7&gt;</bpt>∧<ept i="7">&lt;/g7&gt;</ept>과 <bpt i="8" x="8">&lt;g8&gt;</bpt>×<ept i="8">&lt;/g8&gt;</ept>의 유사성은 커리-하워드 동형론의 또다른 예입니다. 그러나 함의와 함수 공간 생성자와는 대조적으로  <bpt i="9" x="9">&lt;g9&gt;</bpt>∧<ept i="9">&lt;/g9&gt;</ept>과 <bpt i="10" x="10">&lt;g10&gt;</bpt>×<ept i="10">&lt;/g10&gt;</ept>은 린에서 별개로 다뤄집니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T125048Z" creationid="tlqk35" creationdate="20220321T163016Z">
+        <seg><bpt i="7" x="7">&lt;g7&gt;</bpt>∧<ept i="7">&lt;/g7&gt;</ept>과 <bpt i="8" x="8">&lt;g8&gt;</bpt>×<ept i="8">&lt;/g8&gt;</ept> 사이의 유사성은 커리-하워드 동형론의 또 다른 예입니다. 그러나 함의와 함수 공간 생성자와는 대조적으로  <bpt i="9" x="9">&lt;g9&gt;</bpt>∧<ept i="9">&lt;/g9&gt;</ept>과 <bpt i="10" x="10">&lt;g10&gt;</bpt>×<ept i="10">&lt;/g10&gt;</ept>은 린에서 별개로 다뤄집니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15190,8 +15174,8 @@ defining equations for addition now hold definitionally:</seg>
         <seg>The two ways we have suggested thinking about the
 propositions-as-types paradigm differ in a fundamental way.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160323Z" creationid="tlqk35" creationdate="20220321T160323Z">
-        <seg>우리가 제안한 유형별 명제 패러다임에 대해 생각하는 두 가지 방법은 근본적인 면에서 다릅니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111901Z" creationid="tlqk35" creationdate="20220321T160323Z">
+        <seg>앞서 제안한 유형으로써 명제 패러다임에 대한 두 사고 방식은 근본적인 면에서 다릅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15340,8 +15324,8 @@ which can easily be proved by unfolding the definition:</seg>
         <seg>Then go back and replace each <bpt i="5" x="5">&lt;g5&gt;</bpt>sorry<ept i="5">&lt;/g5&gt;</ept> with an actual proof,
 until no more remain.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170401Z" creationid="tlqk35" creationdate="20220321T170401Z">
-        <seg>그리고 다시 뒤로 돌아가 각각의 <bpt i="5" x="5">&lt;g5&gt;</bpt>sorry<ept i="5">&lt;/g5&gt;</ept>가 더 남지 않을 때까지 실제 증명으로 바꾸세요.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165326Z" creationid="tlqk35" creationdate="20220321T170401Z">
+        <seg>그런 뒤 다시 돌아가 각각의 <bpt i="5" x="5">&lt;g5&gt;</bpt>sorry<ept i="5">&lt;/g5&gt;</ept>가 더 남지 않을 때까지 이를 실제 증명으로 바꾸세요.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15483,8 +15467,8 @@ available in the current context.</seg>
         <seg>There are at least two ways of thinking about propositions as
 types.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155833Z" creationid="tlqk35" creationdate="20220321T155833Z">
-        <seg>유형으로써 명제에 대해 생각할 수 있는 최소한 두 가지 방법이 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105910Z" creationid="tlqk35" creationdate="20220321T155833Z">
+        <seg>유형으로써 명제에 대해 적어도 두 가지 사고 방식이 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15544,8 +15528,8 @@ the conversion mode.</seg>
         <seg>There is a fine line between brevity and obfuscation, and omitting
 information in this way can sometimes make a proof harder to read.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163506Z" creationid="tlqk35" creationdate="20220321T163506Z">
-        <seg>간결함과 가독성 사이에 미세찬 차이가 있고 이런 식으로 정보를 생략하는 것은 때때로 증명을 읽기 더 어렵게 만들 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T133506Z" creationid="tlqk35" creationdate="20220321T163506Z">
+        <seg>간결함과 난독화 사이에 미세한 선이 있고 이런 식으로 정보를 생략하는 것은 종종 증명을 읽기 더 어렵게 만듭니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15655,8 +15639,8 @@ types vary depending on the first argument, <bpt i="11" x="11">&lt;g11&gt;</bpt>
       <tuv xml:lang="en-US">
         <seg>These angle brackets are obtained by typing <bpt i="1" x="1">&lt;g1&gt;</bpt>\&lt;<ept i="1">&lt;/g1&gt;</ept> and <bpt i="2" x="2">&lt;g2&gt;</bpt>\&gt;<ept i="2">&lt;/g2&gt;</ept>, respectively.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163322Z" creationid="tlqk35" creationdate="20220321T163322Z">
-        <seg>이 꺽긴 괄호는 <bpt i="1" x="1">&lt;g1&gt;</bpt>\&lt;<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>\&gt;<ept i="2">&lt;/g2&gt;</ept>을 각각 치는 것으로 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T132605Z" creationid="tlqk35" creationdate="20220321T163322Z">
+        <seg>이 꺽긴 괄호는 각각 <bpt i="1" x="1">&lt;g1&gt;</bpt>\&lt;<ept i="1">&lt;/g1&gt;</ept>과 <bpt i="2" x="2">&lt;g2&gt;</bpt>\&gt;<ept i="2">&lt;/g2&gt;</ept>으로 입력해 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15717,16 +15701,16 @@ example, to develop theories of sets and finite sets.</seg>
       <tuv xml:lang="en-US">
         <seg>These require classical reasoning.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170708Z" creationid="tlqk35" creationdate="20220321T170708Z">
-        <seg>이것은 고전 추론 규칙이 필요합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165851Z" creationid="tlqk35" creationdate="20220321T170708Z">
+        <seg>이것은 고전적 추론이 필요합니다.</seg>
       </tuv>
     </tu>
     <tu>
       <tuv xml:lang="en-US">
         <seg>These require classical reasoning:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170211Z" creationid="tlqk35" creationdate="20220321T170211Z">
-        <seg>이것은 고전 추론 규칙이 필요합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164543Z" creationid="tlqk35" creationdate="20220321T170211Z">
+        <seg>이것은 고전적 추론이 필요합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15950,8 +15934,8 @@ applying custom congruence and extensionality lemmas.</seg>
 pattern, deriving an arbitrary fact from contradictory hypotheses, is
 quite common, and is represented by <bpt i="3" x="3">&lt;g3&gt;</bpt>absurd<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164500Z" creationid="tlqk35" creationdate="20220321T164500Z">
-        <seg>모순적인 가정들로부터 어떤 사실을 얻는 이런 패턴은 꽤 흔하고 <bpt i="3" x="3">&lt;g3&gt;</bpt>absurd<ept i="3">&lt;/g3&gt;</ept>로 표현됩니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T155729Z" creationid="tlqk35" creationdate="20220321T164500Z">
+        <seg>모순적인 가정들로부터 어떤 사실을 유도하는 이런 패턴은 꽤 흔하고 <bpt i="3" x="3">&lt;g3&gt;</bpt>absurd<ept i="3">&lt;/g3&gt;</ept>로 표현됩니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -15996,8 +15980,8 @@ explicitly.</seg>
       <tuv xml:lang="en-US">
         <seg>This approach would provide us with a reasonable way of building assertions and proofs.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155149Z" creationid="tlqk35" creationdate="20220321T155149Z">
-        <seg>이런 접근은 주장과 증명을 만드는 합리적인 방법을 우리에게 줍니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103847Z" creationid="tlqk35" creationdate="20220321T155149Z">
+        <seg>이런 접근법은 주장과 증명을 세우는 합리적인 방법을 줍니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16201,8 +16185,8 @@ from the context.</seg>
 structure long proofs, namely, the <bpt i="1" x="1">&lt;g1&gt;</bpt>have<ept i="1">&lt;/g1&gt;</ept> construct, which
 introduces an auxiliary subgoal in a proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165101Z" creationid="tlqk35" creationdate="20220321T165101Z">
-        <seg>이곳은 린이 긴 증명을 구조화하도록 돕는 또다른 장치를 도입하기에 적절합니다. 주로  <bpt i="1" x="1">&lt;g1&gt;</bpt>have<ept i="1">&lt;/g1&gt;</ept> 생성자인데 이는 증명의 보조적인 세부목표를 도입합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T160815Z" creationid="tlqk35" creationdate="20220321T165101Z">
+        <seg>여기는 린이 긴 증명을 구조화하도록 돕는 또 다른 장치를 도입하기에 적절한 곳 입니다. 주로  <bpt i="1" x="1">&lt;g1&gt;</bpt>have<ept i="1">&lt;/g1&gt;</ept> 구성은 증명의 보조적인 세부목표를 도입합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16316,8 +16300,8 @@ to ask Lean's pretty-printer to show the implicit arguments.</seg>
         <seg>This is known as <bpt i="5" x="5">&lt;g5&gt;</bpt>proof irrelevance,<ept i="5">&lt;/g5&gt;</ept> and is
 consistent with the interpretation in the last paragraph.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160256Z" creationid="tlqk35" creationdate="20220321T160256Z">
-        <seg>이것은 <bpt i="5" x="5">&lt;g5&gt;</bpt>증명 무연관<ept i="5">&lt;/g5&gt;</ept>으로 알려져 있고 이것은 마지막 문단에서 해석과 일관성이 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111526Z" creationid="tlqk35" creationdate="20220321T160256Z">
+        <seg>이것은 <bpt i="5" x="5">&lt;g5&gt;</bpt>증명 무연관(proof irrelevance)<ept i="5">&lt;/g5&gt;</ept>으로 알려져 있고 이것은 마지막 문단에서 해석과 일치합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16369,8 +16353,8 @@ overloading of common names.</seg>
       <tuv xml:lang="en-US">
         <seg>This is often useful as well.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163536Z" creationid="tlqk35" creationdate="20220321T163536Z">
-        <seg>이것도 또한 종종 유용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T134553Z" creationid="tlqk35" creationdate="20220321T163536Z">
+        <seg>이 또한 종종 유용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16390,8 +16374,8 @@ syntax and semantics by saying, at times, that a program "computes" a
 certain function, and at other times speaking as though the program
 "is" the function in question.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160449Z" creationid="tlqk35" creationdate="20220321T160449Z">
-        <seg>이것은 컴퓨터 과학자들이 때때로 프로그램이 특정 함수를 "계산"한다고 말함으로써 문법과 의미론의 구분을 모호하게 하는 방식과 유사합니다. 그리고 다른 때에는 프로그램이 문제의 함수인 것처럼 말합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114230Z" creationid="tlqk35" creationdate="20220321T160449Z">
+        <seg>이것은 컴퓨터 과학자들이 프로그램이 특정 함수를 "계산"한다고 말함으로써 문법과 의미론 사이의 구분을 때때로 모호하게 하는 방식과 유사합니다. 그리고 또 다른 때에는 프로그램이 문제의 함수인 것처럼 말합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16399,8 +16383,8 @@ certain function, and at other times speaking as though the program
         <seg>This is the approach followed in the Calculus of Constructions, and
 hence in Lean as well.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155654Z" creationid="tlqk35" creationdate="20220321T155654Z">
-        <seg>이는 직관주의적 계산법에 따른 접근법입니다. 그리고 이는 린에서도 마찬가지 입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T105151Z" creationid="tlqk35" creationdate="20220321T155654Z">
+        <seg>이는 린에서와 마찬가지로 구성주의적 계산법에 따른 접근법입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16471,8 +16455,8 @@ only active when you are inside of the namespace or open the namespace.</seg>
 last chapter, the only difference being that the arguments are
 elements of <bpt i="1" x="1">&lt;g1&gt;</bpt>Prop<ept i="1">&lt;/g1&gt;</ept> rather than <bpt i="2" x="2">&lt;g2&gt;</bpt>Type<ept i="2">&lt;/g2&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160711Z" creationid="tlqk35" creationdate="20220321T160711Z">
-        <seg>이는 지난 장에서 상수함수의 정의와 완전히 동일하게 보입니다. 유일한 차이는 인수는 <bpt i="1" x="1">&lt;g1&gt;</bpt>Prop<ept i="1">&lt;/g1&gt;</ept>의 원소 보다는 <bpt i="2" x="2">&lt;g2&gt;</bpt>Type<ept i="2">&lt;/g2&gt;</ept>의 원소라는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114745Z" creationid="tlqk35" creationdate="20220321T160711Z">
+        <seg>이는 지난 장에서의 상수함수의 정의와 완전히 동일하게 보입니다. 유일한 차이는 인수가 <bpt i="2" x="2">&lt;g2&gt;</bpt>Type<ept i="2">&lt;/g2&gt;</ept>보다 <bpt i="1" x="1">&lt;g1&gt;</bpt>Prop<ept i="1">&lt;/g1&gt;</ept>의 원소라는 점입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16620,8 +16604,8 @@ of propositions rather than data, and it is what makes <bpt i="19" x="19">&lt;g1
         <seg>This rule is sometimes called <bpt i="3" x="3">&lt;g3&gt;</bpt>ex falso<ept i="3">&lt;/g3&gt;</ept> (short for <bpt i="4" x="4">&lt;g4&gt;</bpt>ex
 falso sequitur quodlibet<ept i="4">&lt;/g4&gt;</ept>), or the <bpt i="5" x="5">&lt;g5&gt;</bpt>principle of explosion<ept i="5">&lt;/g5&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164428Z" creationid="tlqk35" creationdate="20220321T164428Z">
-        <seg>이 규칙은 때때로 <bpt i="3" x="3">&lt;g3&gt;</bpt>ex falso<ept i="3">&lt;/g3&gt;</ept> (라틴어 <bpt i="4" x="4">&lt;g4&gt;</bpt>ex falso sequitur quodlibet<ept i="4">&lt;/g4&gt;</ept>을 줄인 것), 또는 <bpt i="5" x="5">&lt;g5&gt;</bpt>폭발의 원리(principle of explosion)<ept i="5">&lt;/g5&gt;</ept>라고 불립니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154945Z" creationid="tlqk35" creationdate="20220321T164428Z">
+        <seg>이 규칙은 때때로 <bpt i="3" x="3">&lt;g3&gt;</bpt>ex falso<ept i="3">&lt;/g3&gt;</ept> (라틴어 <bpt i="4" x="4">&lt;g4&gt;</bpt>ex falso sequitur quodlibet<ept i="4">&lt;/g4&gt;</ept>을 줄인 것), 또는 <bpt i="5" x="5">&lt;g5&gt;</bpt>폭발 원리(principle of explosion)<ept i="5">&lt;/g5&gt;</ept>라고 합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16650,8 +16634,8 @@ device is extremely useful when it comes to structuring long proofs,
 since we can use intermediate <bpt i="7" x="7">&lt;g7&gt;</bpt>have<ept i="7">&lt;/g7&gt;</ept>'s as stepping stones leading to
 the final goal.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165215Z" creationid="tlqk35" creationdate="20220321T165215Z">
-        <seg>이 단순한 장치는 긴 증명을 구조화 해야 할 때 아주 유용합니다. 왜냐하면 우리는 간간히 <bpt i="7" x="7">&lt;g7&gt;</bpt>have<ept i="7">&lt;/g7&gt;</ept>를 최종 목표로 이끄는 주춧돌로써 쓰기 때문입다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T161539Z" creationid="tlqk35" creationdate="20220321T165215Z">
+        <seg>이 단순한 장치는 긴 증명을 구조화 할 때 엄청나게 유용합니다. 왜냐하면 우리는 간간히 <bpt i="7" x="7">&lt;g7&gt;</bpt>have<ept i="7">&lt;/g7&gt;</ept>를 최종 목표로 이끄는 주춧돌로써 쓰기 때문입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16786,8 +16770,8 @@ give you a way to manage names in your working environment.</seg>
         <seg>Thus the
 proof term above could be written more concisely:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164020Z" creationid="tlqk35" creationdate="20220321T164020Z">
-        <seg>따라서 위의 증명 항을 더 간결하게 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T154021Z" creationid="tlqk35" creationdate="20220321T164020Z">
+        <seg>따라서 위의 증명 항을 더 간결하게 작성할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -16925,8 +16909,8 @@ inaccessible.</seg>
         <seg>To <bpt i="2" x="2">&lt;g2&gt;</bpt>prove<ept i="2">&lt;/g2&gt;</ept> that
 assertion, we need to exhibit a term <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160530Z" creationid="tlqk35" creationdate="20220321T160530Z">
-        <seg>주장을 <bpt i="2" x="2">&lt;g2&gt;</bpt>증명<ept i="2">&lt;/g2&gt;</ept>하는 것은 <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept>의 항으로 나타낼 필요가 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114424Z" creationid="tlqk35" creationdate="20220321T160530Z">
+        <seg>주장을 <bpt i="2" x="2">&lt;g2&gt;</bpt>증명<ept i="2">&lt;/g2&gt;</ept>하기 위해 항 <bpt i="3" x="3">&lt;g3&gt;</bpt>t : p<ept i="3">&lt;/g3&gt;</ept>을 보일 필요가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17001,8 +16985,8 @@ if-then-else expression.</seg>
 empty if <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept> is false and has a single element, say <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>, if <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>
 is true.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155951Z" creationid="tlqk35" creationdate="20220321T155951Z">
-        <seg>각 명제 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>에 대해, 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>이 거짓이면 원소가 없고, <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>가 참이면 한 원소(예: <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>)가 있는 유형을 연관시킵니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T110654Z" creationid="tlqk35" creationdate="20220321T155951Z">
+        <seg>각 명제 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>에 대해, 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>p<ept i="2">&lt;/g2&gt;</ept>이 거짓이면 빈 유형, <bpt i="4" x="4">&lt;g4&gt;</bpt>p<ept i="4">&lt;/g4&gt;</ept>가 참이면 한 원소(말하자면: <bpt i="3" x="3">&lt;g3&gt;</bpt>*<ept i="3">&lt;/g3&gt;</ept>)를 갖는 유형과 연관시킵니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17011,8 +16995,8 @@ is true.</seg>
 express a mathematical assertion in the language of dependent type
 theory, we need to exhibit a term <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160507Z" creationid="tlqk35" creationdate="20220321T160507Z">
-        <seg>의존 유형론의 언어로 수학적 주장을 형식적으로 표현하기 위해 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>에 대한 항으로 나타낼 필요가 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T114340Z" creationid="tlqk35" creationdate="20220321T160507Z">
+        <seg>의존 유형론의 언어로 수학적 주장을 형식적으로 표현하기 위해 항 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>을 보일 필요가 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17092,8 +17076,8 @@ this is a faithful rendering of what it means to be a proposition: a
 proposition <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept> represents a sort of data type, namely, a
 specification of the type of data that constitutes a proof.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155851Z" creationid="tlqk35" creationdate="20220321T155851Z">
-        <seg>논리와 수학에 직관주의적 관점을 갖는 누군가에게 이것은 명제가 되는 것의 의미를 충실하게 표현합니다. 명제 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>은 일종의 데이터 유형을 나타냅니다. 주로 증명을 만드는 데이터 유형의 명세입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T110402Z" creationid="tlqk35" creationdate="20220321T155851Z">
+        <seg>논리학과 수학에 구성주의적 관점을 갖는 누군가에게 이것은 명제라는 것의 의미를 충실하게 구현한 것입니다. 명제 <bpt i="1" x="1">&lt;g1&gt;</bpt>p<ept i="1">&lt;/g1&gt;</ept>은 증명을 생성하는 일종의 데이터를 나타냅니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17102,8 +17086,8 @@ specification of the type of data that constitutes a proof.</seg>
 avoid writing the term <bpt i="1" x="1">&lt;g1&gt;</bpt>Proof<ept i="1">&lt;/g1&gt;</ept> repeatedly by conflating <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>
 with <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept> itself.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155247Z" creationid="tlqk35" creationdate="20220321T155247Z">
-        <seg>그렇기 위해 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>를 <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>를 같이 쓰는 것으로 <bpt i="1" x="1">&lt;g1&gt;</bpt>Proof<ept i="1">&lt;/g1&gt;</ept>에 대한 반복적인 사용을 피할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104232Z" creationid="tlqk35" creationdate="20220321T155247Z">
+        <seg>그러려면 <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>를 <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>로 부풀림으로써 항 <bpt i="1" x="1">&lt;g1&gt;</bpt>Proof<ept i="1">&lt;/g1&gt;</ept>를 반복해 쓰는 것을 피할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17168,8 +17152,8 @@ explicit description of the empty prefix.</seg>
         <seg>To the kernel type
 checker, there is no difference between the two.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160850Z" creationid="tlqk35" creationdate="20220321T160850Z">
-        <seg>커널 유형 확인기에서 둘 사이의 차이는 없습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T115108Z" creationid="tlqk35" creationdate="20220321T160850Z">
+        <seg>커널의 유형 확인기에서 둘 사이의 차이는 없습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17236,14 +17220,6 @@ Lean's defaults are generally sufficient for ordinary interactions.</seg>
       </tuv>
       <tuv xml:lang="ko" changeid="tlqk3" changedate="20220526T130421Z" creationid="tlqk3" creationdate="20220526T130421Z">
         <seg>너무 많은 정보에 압도할 수 있지만 린의 기본설정도 평범한 상호작용에 일반적으로 충분합니다.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en-US">
-        <seg>True</seg>
-      </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162001Z" creationid="tlqk35" creationdate="20220321T162001Z">
-        <seg>참</seg>
       </tuv>
     </tu>
     <tu>
@@ -17658,8 +17634,8 @@ then go on to define familiar notation in that namespace.</seg>
         <seg>We can
 then read <bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept i="6">&lt;/g6&gt;</ept> as the assertion that <bpt i="7" x="7">&lt;g7&gt;</bpt>t<ept i="7">&lt;/g7&gt;</ept> is a proof of <bpt i="8" x="8">&lt;g8&gt;</bpt>p<ept i="8">&lt;/g8&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155526Z" creationid="tlqk35" creationdate="20220321T155526Z">
-        <seg>우리는<bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept i="6">&lt;/g6&gt;</ept>를 <bpt i="7" x="7">&lt;g7&gt;</bpt>t<ept i="7">&lt;/g7&gt;</ept>는 <bpt i="8" x="8">&lt;g8&gt;</bpt>p<ept i="8">&lt;/g8&gt;</ept>의 증명이라는 주장으로써 읽을 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T104427Z" creationid="tlqk35" creationdate="20220321T155526Z">
+        <seg>그러면 <bpt i="6" x="6">&lt;g6&gt;</bpt>t : p<ept i="6">&lt;/g6&gt;</ept>를 <bpt i="7" x="7">&lt;g7&gt;</bpt>t<ept i="7">&lt;/g7&gt;</ept>는 <bpt i="8" x="8">&lt;g8&gt;</bpt>p<ept i="8">&lt;/g8&gt;</ept>의 증명이다라는 주장으로 읽을 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17797,8 +17773,8 @@ the implicit arguments (which are displayed here as metavariables).</seg>
       <tuv xml:lang="en-US">
         <seg>We can now prove <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∧ q → q ∧ p<ept i="1">&lt;/g1&gt;</ept> with the following proof term.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T162843Z" creationid="tlqk35" creationdate="20220321T162843Z">
-        <seg>이제 우리는 <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∧ q → q ∧ p<ept i="1">&lt;/g1&gt;</ept>를 따르는 증명 항으로 증명할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T124838Z" creationid="tlqk35" creationdate="20220321T162843Z">
+        <seg>이제 <bpt i="1" x="1">&lt;g1&gt;</bpt>p ∧ q → q ∧ p<ept i="1">&lt;/g1&gt;</ept>를 다음 증명 항으로 증명할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17835,8 +17811,8 @@ this as the assertion "for every pair of propositions <bpt i="3" x="3">&lt;g3&gt
 <bpt i="4" x="4">&lt;g4&gt;</bpt>p → q → p<ept i="4">&lt;/g4&gt;</ept>." For example, we can move all parameters to the right
 of the colon:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161457Z" creationid="tlqk35" creationdate="20220321T161457Z">
-        <seg>우리는 이를 "모든 명제쌍  <bpt i="3" x="3">&lt;g3&gt;</bpt>p q<ept i="3">&lt;/g3&gt;</ept>에 대해 <bpt i="4" x="4">&lt;g4&gt;</bpt>p → q → p<ept i="4">&lt;/g4&gt;</ept>이다."라고 주장한다고 읽을 수 있다. 예를 들어, 우리는 모든 매개변수들을 콜론의 오른쪽으로 옮길 수 있다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T121648Z" creationid="tlqk35" creationdate="20220321T161457Z">
+        <seg>우리는 이를 "모든 명제쌍  <bpt i="3" x="3">&lt;g3&gt;</bpt>p q<ept i="3">&lt;/g3&gt;</ept>에 대해 <bpt i="4" x="4">&lt;g4&gt;</bpt>p → q → p<ept i="4">&lt;/g4&gt;</ept>이다."라고 주장한다고 읽을 수 있습니다. 예를 들어, 우리는 모든 매개변수들을 콜론의 오른쪽으로 옮길 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17890,8 +17866,8 @@ example, and prove set identities:</seg>
         <seg>We can therefore
 rewrite the sample proof above conveniently as follows:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163453Z" creationid="tlqk35" creationdate="20220321T163453Z">
-        <seg>우리는 다음과 같이 위의 예시 증명을 간단히 줄여 쓸  수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T133255Z" creationid="tlqk35" creationdate="20220321T163453Z">
+        <seg>그러므로 다음과 같이 위의 증명 예시를 편리하게 다시 작성할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17930,8 +17906,8 @@ reason about the relation.</seg>
 <bpt i="1" x="1">&lt;g1&gt;</bpt>p ↔ q<ept i="1">&lt;/g1&gt;</ept> from proofs of the forward and backward directions, and we
 can also use <bpt i="2" x="2">&lt;g2&gt;</bpt>.<ept i="2">&lt;/g2&gt;</ept> notation with <bpt i="3" x="3">&lt;g3&gt;</bpt>mp<ept i="3">&lt;/g3&gt;</ept> and <bpt i="4" x="4">&lt;g4&gt;</bpt>mpr<ept i="4">&lt;/g4&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T164841Z" creationid="tlqk35" creationdate="20220321T164841Z">
-        <seg>우리는 앞과 뒷방향 증명으로부터 <bpt i="1" x="1">&lt;g1&gt;</bpt>p ↔ q<ept i="1">&lt;/g1&gt;</ept>의 증명을 구성하기 위해 익명 생성자 표기를 사용할 수 있습니다. 그리고 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>.<ept i="2">&lt;/g2&gt;</ept>와  <bpt i="3" x="3">&lt;g3&gt;</bpt>mp<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>mpr<ept i="4">&lt;/g4&gt;</ept>을 사용한 표기를 쓸 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T160344Z" creationid="tlqk35" creationdate="20220321T164841Z">
+        <seg>우리는 앞과 뒷방향 증명으로부터 <bpt i="1" x="1">&lt;g1&gt;</bpt>p ↔ q<ept i="1">&lt;/g1&gt;</ept>의 증명을 구성하는 익명 생성자 표기를 사용할 수 있습니다. 그리고 우리는 <bpt i="2" x="2">&lt;g2&gt;</bpt>.<ept i="2">&lt;/g2&gt;</ept>와 함께 쓴 <bpt i="3" x="3">&lt;g3&gt;</bpt>mp<ept i="3">&lt;/g3&gt;</ept>과 <bpt i="4" x="4">&lt;g4&gt;</bpt>mpr<ept i="4">&lt;/g4&gt;</ept>을 사용한 표기를 쓸 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -17983,8 +17959,8 @@ construction implies function extenionality.</seg>
       <tuv xml:lang="en-US">
         <seg>We could render this as follows:</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T155138Z" creationid="tlqk35" creationdate="20220321T155138Z">
-        <seg>이를 다음과 같이 얻을 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T103624Z" creationid="tlqk35" creationdate="20220321T155138Z">
+        <seg>이를 다음과 같이 유도할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18000,8 +17976,8 @@ construction implies function extenionality.</seg>
         <seg>We could then introduce, for each element <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>, another type
 <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>, for the type of proofs of <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T154913Z" creationid="tlqk35" creationdate="20220321T154913Z">
-        <seg>그러면 우리는 각각의 원소 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>와 또 다른 유형인 <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>을 <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>의 증명 유형으로 가져올 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T102820Z" creationid="tlqk35" creationdate="20220321T154913Z">
+        <seg>그뒤 각 원소 <bpt i="1" x="1">&lt;g1&gt;</bpt>p : Prop<ept i="1">&lt;/g1&gt;</ept>에 대해 또 다른 유형인 <bpt i="2" x="2">&lt;g2&gt;</bpt>Proof p<ept i="2">&lt;/g2&gt;</ept>을 <bpt i="3" x="3">&lt;g3&gt;</bpt>p<ept i="3">&lt;/g3&gt;</ept>의 증명 유형으로 도입할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18382,8 +18358,8 @@ types in Lean are <bpt i="2" x="2">&lt;g2&gt;</bpt>structures<ept i="2">&lt;/g2&
 with a single canonical <bpt i="3" x="3">&lt;g3&gt;</bpt>constructor<ept i="3">&lt;/g3&gt;</ept> which builds an element of the
 type from a sequence of suitable arguments.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163058Z" creationid="tlqk35" creationdate="20220321T163058Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>구조체와 레코드 장<ept i="1">&lt;/g1&gt;</ept>에서 보겠지만 린의 어떤 유형은 <bpt i="2" x="2">&lt;g2&gt;</bpt>구조체<ept i="2">&lt;/g2&gt;</ept>입니다. 그 말은 유형이 하나의 적절한 인수의 배열로부터 유형의 원소를 만드는 정식 <bpt i="3" x="3">&lt;g3&gt;</bpt>생성자<ept i="3">&lt;/g3&gt;</ept>로 정의된다는 것입니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T125446Z" creationid="tlqk35" creationdate="20220321T163058Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>구조체와 레코드 장<ept i="1">&lt;/g1&gt;</ept>에서 보겠지만 린의 어떤 유형은 <bpt i="2" x="2">&lt;g2&gt;</bpt>구조체<ept i="2">&lt;/g2&gt;</ept>입니다. 구조체는 그 유형이 적절한 인수의 배열로부터 유형의 원소를 만드는 정식 <bpt i="3" x="3">&lt;g3&gt;</bpt>생성자<ept i="3">&lt;/g3&gt;</ept> 한 개로 정의된다는 것입니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18405,8 +18381,8 @@ where principles like excluded middle and double-negation elimination
 are permissible, and Lean supports the use of classical reasoning in
 such contexts without relying on excluded middle.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170037Z" creationid="tlqk35" creationdate="20220321T170037Z">
-        <seg>우리는 나중에 <bpt i="1" x="1">&lt;g1&gt;</bpt>배중률과 이중 부정 제거와 같은 원칙이 허용되는 직관주의적 논리 <ept i="1">&lt;/g1&gt;</ept> 상황이 있음을 나중에 보게 될 것입니다. 그리고 린은 그런 맥락에서 배중률에 의존하지 않는 고전논리의 사용을 지원합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T164136Z" creationid="tlqk35" creationdate="20220321T170037Z">
+        <seg>우리는 나중에 <bpt i="1" x="1">&lt;g1&gt;</bpt>배중률과 이중 부정 제거와 같은 원칙이 허용되는 구성주의적 논리 <ept i="1">&lt;/g1&gt;</ept> 상황이 있음을 나중에 보게 될 것입니다. 그리고 린은 그런 맥락에서 배중률에 의존하지 않는 고전적 추론의 사용을 지원합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18729,8 +18705,8 @@ automatically generates all the projection functions.</seg>
 different pairs of propositions, to obtain different instances of the
 general theorem.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T161654Z" creationid="tlqk35" creationdate="20220321T161654Z">
-        <seg>우리가 <bpt i="1" x="1">&lt;g1&gt;</bpt>t1<ept i="1">&lt;/g1&gt;</ept>을 그런 식으로 일반화할 때, 그럼 우리는 일반 정리의 다른 예를 얻기 위해 다른 명제쌍에 대해서도 적용할 수 있습니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T122644Z" creationid="tlqk35" creationdate="20220321T161654Z">
+        <seg>우리가 <bpt i="1" x="1">&lt;g1&gt;</bpt>t1<ept i="1">&lt;/g1&gt;</ept>을 이런 식으로 일반화한다면 우리는 일반적인 정리의 다른 사례를 얻기 위해 다른 명제 쌍을 이에 적용할 수 있습니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18813,8 +18789,8 @@ natural and perspicuous way.</seg>
         <seg>With the analogy, however, the proof we have just constructed
 is similar to a function that swaps the elements of a pair.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T163021Z" creationid="tlqk35" creationdate="20220321T163021Z">
-        <seg>하지만 이 비유에도 우리가 막 만든 증명은 순서쌍의 원소를 바꾸는 함수와 비슷합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T125309Z" creationid="tlqk35" creationdate="20220321T163021Z">
+        <seg>그래도 우리가 방금 구성한 증명은 순서쌍의 원소를 바꾸는 함수와 유사합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -18952,8 +18928,8 @@ recursors.</seg>
       <tuv xml:lang="en-US">
         <seg>Writing <bpt i="1" x="1">&lt;g1&gt;</bpt>suffices hq : q<ept i="1">&lt;/g1&gt;</ept> leaves us with two goals.</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T165549Z" creationid="tlqk35" creationdate="20220321T165549Z">
-        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>suffices hq : q<ept i="1">&lt;/g1&gt;</ept>을 쓰는 것은 우리에게 두 목표를 남깁니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T162012Z" creationid="tlqk35" creationdate="20220321T165549Z">
+        <seg><bpt i="1" x="1">&lt;g1&gt;</bpt>suffices hq : q<ept i="1">&lt;/g1&gt;</ept>을 쓰는 것은 두 목표를 남깁니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -19551,8 +19527,8 @@ the inhabitant of <bpt i="10" x="10">&lt;g10&gt;</bpt>p<ept i="10">&lt;/g10&gt;<
 proof of <bpt i="12" x="12">&lt;g12&gt;</bpt>p → q<ept i="12">&lt;/g12&gt;</ept> uses "the fact that <bpt i="13" x="13">&lt;g13&gt;</bpt>p<ept i="13">&lt;/g13&gt;</ept> is true" to obtain "the
 fact that <bpt i="14" x="14">&lt;g14&gt;</bpt>q<ept i="14">&lt;/g14&gt;</ept> is true."</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T160148Z" creationid="tlqk35" creationdate="20220321T160148Z">
-        <seg><bpt i="10" x="10">&lt;g10&gt;</bpt>p<ept i="10">&lt;/g10&gt;</ept>의 머무름은 "<bpt i="11" x="11">&lt;g11&gt;</bpt>p<ept i="11">&lt;/g11&gt;</ept>가 참이라는 사실"이라 생각할 수 있습니다. <bpt i="12" x="12">&lt;g12&gt;</bpt>p → q<ept i="12">&lt;/g12&gt;</ept>의 증명은 "<bpt i="13" x="13">&lt;g13&gt;</bpt>p<ept i="13">&lt;/g13&gt;</ept>가 참이라는 사실"을 "<bpt i="14" x="14">&lt;g14&gt;</bpt>q<ept i="14">&lt;/g14&gt;</ept>이 참이라는 사실"을 얻기위해 사용합니다.</seg>
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T111240Z" creationid="tlqk35" creationdate="20220321T160148Z">
+        <seg><bpt i="10" x="10">&lt;g10&gt;</bpt>p<ept i="10">&lt;/g10&gt;</ept>의 머무름은 "<bpt i="11" x="11">&lt;g11&gt;</bpt>p<ept i="11">&lt;/g11&gt;</ept>가 참이라는 사실"로 생각할 수 있습니다. <bpt i="12" x="12">&lt;g12&gt;</bpt>p → q<ept i="12">&lt;/g12&gt;</ept>의 증명은 "<bpt i="13" x="13">&lt;g13&gt;</bpt>p<ept i="13">&lt;/g13&gt;</ept>가 참이라는 사실"로  "<bpt i="14" x="14">&lt;g14&gt;</bpt>q<ept i="14">&lt;/g14&gt;</ept>가 참이라는 사실"을 얻는데 사용합니다.</seg>
       </tuv>
     </tu>
     <tu>
@@ -20057,10 +20033,10 @@ example (p q r : Prop) : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) :=</seg>
 -- an example that requires classical reasoning
 example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170550Z" creationid="tlqk35" creationdate="20220321T170550Z">
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165722Z" creationid="tlqk35" creationdate="20220321T170550Z">
         <seg>show p ∧ (q ∨ r) from ⟨hp, Or.inr hr⟩))
 
--- 고전 추론을 필요로 하는 예제
+-- 고전적 추론을 필요로 하는 예제
 example (p q : Prop) : ¬(p ∧ ¬q) → (p → q) :=</seg>
       </tuv>
     </tu>
@@ -20129,7 +20105,7 @@ example : p ∨ False ↔ p := sorry
 example : p ∧ False ↔ False := sorry
 example : (p → q) → (¬q → ¬p) := sorry</seg>
       </tuv>
-      <tuv xml:lang="ko" changeid="tlqk35" changedate="20220321T170650Z" creationid="tlqk35" creationdate="20220321T170650Z">
+      <tuv xml:lang="ko" changeid="shimsw" changedate="20220811T165829Z" creationid="tlqk35" creationdate="20220321T170650Z">
         <seg>variable (p q r : Prop)
 
 -- ∧과 ∨의 교환성
@@ -20144,7 +20120,7 @@ example : (p ∨ q) ∨ r ↔ p ∨ (q ∨ r) := sorry
 example : p ∧ (q ∨ r) ↔ (p ∧ q) ∨ (p ∧ r) := sorry
 example : p ∨ (q ∧ r) ↔ (p ∨ q) ∧ (p ∨ r) := sorry
 
--- 다른 성질들
+-- 기타 성질들
 example : (p → (q → r)) ↔ (p ∧ q → r) := sorry
 example : ((p ∨ q) → r) ↔ (p → r) ∧ (q → r) := sorry
 example : ¬(p ∨ q) ↔ ¬p ∧ ¬q := sorry
