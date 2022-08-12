@@ -5,7 +5,7 @@
 - [소개(Introduction)](./introduction.md)
 - [의존 유형론(Dependent Type Theory)](./dependent_type_theory.md)
 - [명제와 증명(Propositions and Proofs)](./propositions_and_proofs.md)
-- [한정기호와 동등성(Quantifiers and Equality)](./quantifiers_and_equality.md)
+- [한정기호와 동등(Quantifiers and Equality)](./quantifiers_and_equality.md)
 - [전략(Tactics)](./tactics.md)
 - [린과 상호작용하기(Interacting with Lean)](./interacting_with_lean.md)
 - [귀납형(Inductive Types)](./inductive_types.md)

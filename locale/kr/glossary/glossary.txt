@@ -12,3 +12,7 @@ establish	입증하다
 pragmatic	실용적인
 hold	성립하다
 Conjunction	논리곱
+Equality	동등관계
+Quantifiers	한정기호
+applicative term	적용한 항
+co-opt	선임하다 끌어들이다
